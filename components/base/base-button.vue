@@ -1,13 +1,8 @@
 <template>
-  <button
-    class="text-base text-quaternary px-3 py-1 border rounded-full outline-none focus:outline-none "
-    :type="type"
-    style="transition: all 0.15s ease 0s"
-    @click="$emit('click', $event)"
-    :disabled="disabled"
-  >
+  <button class="text-base text-quaternary px-3 py-1 border rounded-full outline-none focus:outline-none " :type="type"
+    style="transition: all 0.15s ease 0s" @click="$emit('click', $event)" :disabled="disabled">
     <slot />
-    <base-icon icon="arrow-right-long" viewBox="0 0 512 512" width="12" height="12" color="gray"/>
+    <base-icon icon="arrow-right-long" viewBox="0 0 512 512" width="12" height="12" :color="arrow" />
   </button>
 </template>
 
@@ -24,6 +19,10 @@ export default {
     color: {
       type: String,
       default: 'primary',
+    },
+    arrow: {
+      type: String,
+      default: 'gray',
     },
     disabled: {
       type: Boolean,
