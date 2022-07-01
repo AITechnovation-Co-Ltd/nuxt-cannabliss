@@ -3,18 +3,21 @@
     <nav class="w-screen bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
       <div class="container h-16 flex flex-wrap justify-between items-center mx-auto">
         <nuxt-link to="/" class="flex items-center">
-          <span class="self-center text-xl font-semibold whitespace-nowrap">Cannabliss</span>
+          <img class="h-16" src="~/static/logo/Logo-CANABLISS.png" alt="">
+          <!-- <span class="self-center text-xl font-semibold whitespace-nowrap">Cannabliss</span> -->
         </nuxt-link>
         <div class="flex md:order-2">
           <div class="flex items-center">
-            <!-- <base-icon icon="heart" viewBox="0 0 30 41" size="40" color="#000" class="text-black bg-red-200 mx-2 sm:mx-4" />
-            <base-icon icon="magnifying-glass" viewBox="0 0 30 41" size="40" color="#000" class="text-black bg-red-200 mx-2 sm:mx-4" /> -->
-            <!-- <base-icon icon="appoint" viewBox="0 0 30 41" size="40" color="#fff" class="mx-2 sm:mx-4" /> -->
-            <p class="text-primary">O</p>
-            <p class="ml-4 text-primary">O</p>
+            <div class="notification">
+              <nuxt-link to="/favorite">
+                <base-icon icon="heart" viewBox="0 0 30 41" size="50" color="#000" class="text-black mx-2" />
+                <span class="badge">0</span>
+              </nuxt-link>
+            </div>
+            <base-icon icon="magnifying-glass" viewBox="0 0 30 41" size="50" color="#000" class="text-black mx-2" />
             <div class="vl mx-4"></div>
             <p id="dropdownDefault" data-dropdown-toggle="dropdown"
-                class="text-primary hover:cursor-pointer rounded-lg text-sm flex items-center"
+                class="text-primary text-lg ml-2 hover:cursor-pointer rounded-lg text-sm flex items-center"
                 type="button">EN<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor"
                   viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -106,5 +109,25 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.vl {
+  width: 1px;
+  height: 30px;
+  background: #000;
+}
+.notification {
+  text-decoration: none;
+  padding: 0px;
+  position: relative;
+  display: inline-block;
+}
+.notification .badge {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  padding: 2px 9px;
+  border-radius: 50%;
+  background: #000;
+  color: white;
+}
 </style>
