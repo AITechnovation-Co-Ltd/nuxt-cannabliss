@@ -1,6 +1,9 @@
 <template>
-  <div class="banner w-full flex justify-center items-center">
-    <h1 class="text-5xl">Ingredients Banner</h1>
+  <div class="relative bg w-screen">
+    <img class="w-full" src="~/static/images/IMG_03ingredients/Group1150@2x.png">
+    <div class="centered">
+      <h1 class="text-7xl text-primary">Ingredients</h1>
+    </div>
   </div>
 </template>
 
@@ -11,7 +14,15 @@ export default {
 </script>
 
 <style scoped>
-.banner {
-  height: 500px;
+.bg {
+  height: auto;
 }
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
 </style>
