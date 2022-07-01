@@ -2,7 +2,7 @@
   <div>
     <ProductBanner />
     <ProductDetail class="mt-20"/>
-    <ProductOther class="bg-red-300"/>
+    <ProductOther />
     <ProductReview class="bg-red-400"/>
     <Subscribe />
   </div>
