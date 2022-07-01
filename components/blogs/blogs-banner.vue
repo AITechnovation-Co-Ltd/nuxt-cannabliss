@@ -1,6 +1,6 @@
 <template>
   <div class="banner w-full flex justify-center items-center">
-    <h1 class="text-5xl">Ingredients Banner</h1>
+    <h1 class="text-5xl">Blogs Banner</h1>
   </div>
 </template>
 
