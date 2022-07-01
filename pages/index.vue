@@ -12,7 +12,7 @@
     <Ingredients class="bg-red-300" />
 
     <!-- Face -->
-    <face class="bg-red-400" />
+    <Face class="bg-red-400" />
 
     <!-- Video Review -->
     <VideoReview class="bg-red-500" />
@@ -36,9 +36,9 @@
 </template>
 
 <script>
-import Foot from '~/components/layout/foot.vue'
-import Navbar from '~/components/layout/navbar.vue'
-import Subscribe from '~/components/layout/subscribe.vue'
+import Foot from '../components/layout/foot.vue'
+import Navbar from '../components/layout/navbar.vue'
+import Subscribe from '../components/layout/subscribe.vue'
 import Carousel from '~/components/homepage/carousel.vue'
 import Product from '~/components/homepage/product.vue'
 import Ingredients from '~/components/homepage/ingredients'
