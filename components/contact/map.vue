@@ -1,7 +1,7 @@
 <template>
     <!-- Leaflet Street Map -->
     <div class="w-full flex justify-center">
-      <div id="map-wrap" class="w-full h-96 px-20 py-2">
+      <div id="map-wrap" class="w-full h-96 px-20 py-2  z-0">
         <client-only>
           <l-map @ready="ready" :zoom="16" :center="[13.7194164,100.5846806]" class="rounded-xl">
             <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
