@@ -1,12 +1,13 @@
 <template>
-    <div class="w-full flex flex-row justify-center">
+    <div class="w-full flex flex-row justify-center px-32">
         <!-- Categories -->
         <div class="w-3/12 flex flex-col items-center">
 
             <!-- Breadcrumb -->
             <div class="w-80">
                 <nav class="w-full flex justify-start items-center" aria-label="Breadcrumb">
-                    <ol class="text-quaternary text-base inline-flex items-center justify-center space-x-1 md:space-x-3">
+                    <ol
+                        class="text-quaternary text-base inline-flex items-center justify-center space-x-1 md:space-x-3">
                         <li class="inline-flex items-center">
                             <nuxt-link to="/" class="inline-flex items-center font-medium">
                                 <base-icon icon="angle-left" viewBox="0 0 30 41" size="20" class="mr-2" />
@@ -28,7 +29,7 @@
                     </ol>
                 </nav>
             </div>
-            
+
             <!-- List Categories -->
             <div class="w-80 mt-10">
                 <h1 class="text-3xl text-primary">Categories</h1>
@@ -71,23 +72,101 @@
             </div>
 
             <!-- Product card -->
-            <div class="w-full mt-20 grid grid-cols-3 gap-6">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+            <div class="w-full mt-20 grid grid-cols-3 gap-x-6 gap-y-10">
+                <div class="w-full" v-for="(product, index) in products" :key="index">
+                    <div class="relative">
+                        <img src="~/static/images/IMG_02products_detail/Path357@2x.png" alt="">
+                        <img class="centered w-full" src="~/static/images/IMG_02products_detail/Group669@2x.png" alt="">
+                        <span v-if="product.isNew"
+                            class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
+                        <base-icon icon="heart" viewBox="0 0 30 41" size="50"
+                            class="text-quaternary absolute top-8 right-8" />
+                        <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
+                    </div>
+                    <div class="text-quaternary text-xl">
+                        <p>{{ product.type }}</p>
+                        <p class="text-3xl font-medium">{{ product.name }}</p>
+                        <p class="mt-4">{{ product.datial }}</p>
+                        <button class="mt-4 px-8 py-2 border-2 border-quaternary rounded-full">View more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mt-20 flex justify-end items-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="inline-flex items-center space-x-3">
+                        <li>
+                            <div
+                                class="h-9 w-9 rounded-full flex justify-center items-center border border-quaternary hover:bg-primary hover:text-white hover:border-none hover:cursor-pointer">
+                                <a href="#" class="">
+                                    <!-- <span class="sr-only">Previous</span> -->
+                                    <svg class="w-5 h-5 text-quaternary" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div
+                                class="h-9 w-9 rounded-full flex justify-center items-center bg-primary hover:bg-primary hover:text-white hover:border-none hover:cursor-pointer">
+                                <a href="#" class="leading-tight rounded-full text-white">1</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div
+                                class="h-9 w-9 rounded-full flex justify-center items-center text-quaternary border border-quaternary hover:bg-primary hover:text-white hover:border-none hover:cursor-pointer">
+                                <a href="#" class="leading-tight rounded-full">2</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div
+                                class="h-9 w-9 rounded-full flex justify-center items-center text-quaternary border border-quaternary hover:bg-primary hover:text-white hover:border-none hover:cursor-pointer">
+                                <a href="#" class="leading-tight rounded-full">3</a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div
+                                class="h-9 w-9 rounded-full flex justify-center items-center border border-quaternary hover:bg-primary hover:text-white hover:border-none hover:cursor-pointer">
+                                <a href="#" class="">
+                                    <!-- <span class="sr-only">Next</span> -->
+                                    <svg class="w-5 h-5 text-quaternary" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import ProductCard from './product-card.vue';
 export default {
-    components: { ProductCard }
+    data() {
+        return {
+            products: [
+                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: true },
+                { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: true },
+                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false },
+                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false },
+                { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false },
+                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false },
+                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false },
+                { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false },
+                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false },
+            ]
+        }
+    }
 }
 </script>
 
@@ -95,5 +174,12 @@ export default {
 .vl {
     height: 15px;
     width: 1px;
+}
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 </style>
