@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="sticky top-0">
     <nav class="w-screen bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
       <div class="container h-16 flex flex-wrap justify-between items-center mx-auto">
         <nuxt-link to="/" class="flex items-center">
@@ -47,14 +47,14 @@
         <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
           <ul class="flex flex-col mt-4 md:flex-row md:space-x-16 md:mt-0 text-base">
             <li>
-
-              <p id="dropdownDefault" data-dropdown-toggle="multilang"
+              <nuxt-link to="/product" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Product</nuxt-link>
+              <!-- Dropdown menu -->
+              <!-- <p id="dropdownDefault" data-dropdown-toggle="multilang"
                 class="text-primary hover:cursor-pointer rounded-lg flex items-center"
                 type="button">Product <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor"
                   viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                 </svg></p>
-              <!-- Dropdown menu -->
               <div id="multilang"
                 class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 "
                 data-popper-placement="bottom"
@@ -77,20 +77,20 @@
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">list #4</a>
                   </li>
                 </ul>
-              </div>
+              </div> -->
 
             </li>
             <li>
-              <a href="#" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Ingredients</a>
+              <nuxt-link to="/ingredients" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Ingredients</nuxt-link>
             </li>
             <li>
-              <a href="#" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Blogs</a>
+              <nuxt-link to="" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Blogs</nuxt-link>
             </li>
             <li>
-              <a href="#" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Review</a>
+              <nuxt-link to="/review" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Review</nuxt-link>
             </li>
             <li>
-              <a href="#" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Contacts</a>
+              <nuxt-link to="/contact" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Contacts</nuxt-link>
             </li>
           </ul>
         </div>

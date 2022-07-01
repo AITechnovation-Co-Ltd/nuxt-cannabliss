@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>FAQ</h1>
+  <div  class="maincrs w-full flex justify-center items-center">
+    <h1 class="text-5xl">FAQ</h1>
   </div>
 </template>
 
@@ -10,6 +10,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.maincrs {
+  min-height: calc(100vh - 84px);
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div  class="maincrs w-full flex justify-center items-center">
-    <h1 class="text-5xl">Review</h1>
+    <h1 class="text-5xl">Partner</h1>
   </div>
 </template>
 
