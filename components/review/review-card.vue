@@ -10,7 +10,7 @@
             <!-- Name and Point-->
             <div class="flex justify-between">
                 <p class="text-xl ">Kimberly K.</p>
-                <base-icon icon="five-star" viewBox="0 0 980 166" width="100" />
+                <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-primary"/>
             </div>
             <!-- Comment -->
             <p class="my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium
