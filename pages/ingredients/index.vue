@@ -2,7 +2,7 @@
   <div>
     <IngredientsBanner />
     <IngredientsDetail class="mt-28 mb-20"/>
-    <IngredientsKnowledge class="bg-red-300"/>
+    <IngredientsKnowledge />
   </div>
 </template>
 

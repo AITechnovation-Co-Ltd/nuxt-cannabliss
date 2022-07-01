@@ -52,7 +52,7 @@
           <div class="vl-3 bg-primary"></div>
           <div class="w-2/5 flex flex-col items-center justify-center">
             <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-40" alt="">
-            <h1 class="text-xl font-bold">Leucojum Aestivum Bulb Extract ( Ibr - Snowflake * )</h1>
+            <h1 class="text-xl font-bold">Leucojum Aestivum Bulb Extract ( Ibr - Snowflake®)</h1>
             <p class="mt-2">Anti Aging To Make Skin Younger And Brighter</p>
             <p class="mt-8 text-center">Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua . Ut enim ad minim veniam , quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
           </div>
