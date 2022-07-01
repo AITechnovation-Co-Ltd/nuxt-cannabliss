@@ -41,6 +41,11 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // Simple usage
+    'nuxt-leaflet',
+
+    // With options
+    ['nuxt-leaflet', { /* module options */ }],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
