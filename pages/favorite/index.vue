@@ -1,19 +1,15 @@
 <template>
   <div>
-    <Navbar />
-    <FavoriteBanner />
-    <FavoriteContent />
-    <Foot />
+    <FavoriteBanner class="bg-red-100"/>
+    <FavoriteContent class="bg-red-200"/>
   </div>
 </template>
 
 <script>
-import Navbar from '../../components/layout/navbar.vue';
 import FavoriteBanner from '../../components/favorite/favorite-banner.vue';
 import FavoriteContent from '../../components/favorite/favorite-content.vue';
-import Foot from '../../components/layout/foot.vue';
 export default {
-    components: { Navbar, FavoriteBanner, FavoriteContent, Foot }
+    components: { FavoriteBanner, FavoriteContent }
 }
 </script>
 

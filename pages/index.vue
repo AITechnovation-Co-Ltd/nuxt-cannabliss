@@ -1,7 +1,5 @@
 <template>
   <div class="bg-secondary">
-    <Navbar />
-
     <!-- Carousel -->
     <Carousel class="bg-red-100" />
 
@@ -31,13 +29,10 @@
     <!-- Partner -->
     <Partner class="bg-red-900" />
 
-    <Foot />
   </div>
 </template>
 
 <script>
-import Foot from '../components/layout/foot.vue'
-import Navbar from '../components/layout/navbar.vue'
 import Subscribe from '../components/layout/subscribe.vue'
 import Carousel from '~/components/homepage/carousel.vue'
 import Product from '~/components/homepage/product.vue'
@@ -50,7 +45,7 @@ import VideoReview from '../components/homepage/video-review.vue'
 import Face from '~/components/homepage/face.vue'
 
 export default {
-  components: { Navbar, Foot, Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face },
+  components: {Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face },
 
 }
 </script>
