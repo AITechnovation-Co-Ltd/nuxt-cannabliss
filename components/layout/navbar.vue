@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky top-0">
+  <div class="sticky top-0 z-50">
     <nav class="w-screen bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
       <div class="container h-16 flex flex-wrap justify-between items-center mx-auto">
         <nuxt-link to="/" class="flex items-center">
@@ -10,12 +10,12 @@
           <div class="flex items-center">
             <div class="notification">
               <nuxt-link to="/favorite">
-                <base-icon icon="heart" viewBox="0 0 30 41" size="50" color="#000" class="text-black mx-2" />
-                <span class="badge">0</span>
+                <base-icon icon="heart" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
+                <span class="badge bg-primary">0</span>
               </nuxt-link>
             </div>
-            <base-icon icon="magnifying-glass" viewBox="0 0 30 41" size="50" color="#000" class="text-black mx-2" />
-            <div class="vl mx-4"></div>
+            <base-icon icon="magnifying-glass" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
+            <div class="vl mx-4 bg-primary"></div>
             <p id="dropdownDefault" data-dropdown-toggle="dropdown"
                 class="text-primary text-lg ml-2 hover:cursor-pointer rounded-lg text-sm flex items-center"
                 type="button">EN<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor"
@@ -50,9 +50,10 @@
         <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
           <ul class="flex flex-col mt-4 md:flex-row md:space-x-16 md:mt-0 text-base">
             <li>
-              <nuxt-link to="/product" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Product</nuxt-link>
+              <!-- <nuxt-link to="/product" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Product</nuxt-link> -->
+
               <!-- Dropdown menu -->
-              <!-- <p id="dropdownDefault" data-dropdown-toggle="multilang"
+              <p id="dropdownDefault" data-dropdown-toggle="multilang"
                 class="text-primary hover:cursor-pointer rounded-lg flex items-center"
                 type="button">Product <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor"
                   viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -64,23 +65,23 @@
                 style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
                 <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
                   <li>
-                    <a href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">list #1</a>
+                    <nuxt-link to="/product"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">All Products</nuxt-link>
                   </li>
                   <li>
-                    <a href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">list #2</a>
+                    <nuxt-link to="/product"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Hair</nuxt-link>
                   </li>
                   <li>
-                    <a href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">list #3</a>
+                    <nuxt-link to="/product"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Face</nuxt-link>
                   </li>
                   <li>
-                    <a href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">list #4</a>
+                    <nuxt-link to="/product"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Body</nuxt-link>
                   </li>
                 </ul>
-              </div> -->
+              </div>
 
             </li>
             <li>
@@ -113,7 +114,6 @@ export default {
 .vl {
   width: 1px;
   height: 30px;
-  background: #000;
 }
 .notification {
   text-decoration: none;
@@ -123,11 +123,10 @@ export default {
 }
 .notification .badge {
   position: absolute;
-  top: -3px;
-  right: -3px;
-  padding: 2px 9px;
+  top: -4px;
+  right: -2px;
+  padding: 0px 7px;
   border-radius: 50%;
-  background: #000;
   color: white;
 }
 </style>
