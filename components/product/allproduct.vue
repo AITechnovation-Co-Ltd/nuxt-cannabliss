@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex flex-row justify-center px-32">
+    <div class="w-full flex flex-row justify-center px-28">
         <!-- Categories -->
         <div class="w-3/12 flex flex-col items-center">
 
