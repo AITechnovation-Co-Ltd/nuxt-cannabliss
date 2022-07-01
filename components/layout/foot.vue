@@ -91,8 +91,8 @@
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
       <div class="flex items-center justify-center">
-        <span class="text-sm text-gray-500 sm:text-center">© 2022 <a href="https://flowbite.com/"
-            class="hover:underline">Flowbite™</a>. All Rights Reserved.
+        <span class="text-sm text-gray-500 sm:text-center">Copyright © 2021 <a href="#"
+            class="hover:underline">MorHello</a>. All rights reserved.
         </span>
       </div>
     </footer>
