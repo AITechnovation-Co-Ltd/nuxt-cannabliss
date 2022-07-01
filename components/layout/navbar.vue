@@ -84,7 +84,7 @@
               <nuxt-link to="/ingredients" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Ingredients</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Blogs</nuxt-link>
+              <nuxt-link to="/blogs" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Blogs</nuxt-link>
             </li>
             <li>
               <nuxt-link to="/review" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Review</nuxt-link>
