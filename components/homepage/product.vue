@@ -6,7 +6,7 @@
     </div>
     <div class="w-full mt-16 flex">
       <div class="w-1/6">
-        <ul class="decorate-none text-3xl text-primary space-y-8">
+        <ul class="decorate-none text-3xl text-primary font-light space-y-8">
           <li class="font-bold">
             <div class="flex items-center">
               <p>All</p>
