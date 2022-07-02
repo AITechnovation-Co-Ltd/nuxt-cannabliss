@@ -1,33 +1,33 @@
 <template>
   <div class="bg-secondary">
     <!-- Carousel -->
-    <Carousel class="bg-red-100" />
+    <Carousel />
 
     <!-- Products -->
-    <Product class="bg-red-200" />
+    <Product />
 
     <!-- Ingredients -->
-    <Ingredients class="bg-red-300" />
+    <Ingredients />
 
     <!-- Face -->
-    <Face class="bg-red-400" />
+    <Face />
 
     <!-- Video Review -->
-    <VideoReview class="bg-red-500" />
+    <VideoReview />
 
     <!-- Blogs -->
-    <Blogs class="bg-red-600" />
+    <Blogs />
 
     <!-- Review -->
-    <Review class="bg-red-700" />
+    <Review />
 
     <!-- FAQ -->
-    <Faq class="bg-red-800" />
+    <Faq />
 
     <Subscribe />
 
     <!-- Partner -->
-    <Partner class="bg-red-900" />
+    <Partner />
 
   </div>
 </template>
