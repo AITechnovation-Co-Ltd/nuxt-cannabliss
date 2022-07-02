@@ -3,7 +3,7 @@
     <ProductBanner />
     <ProductDetail class="mt-20"/>
     <ProductOther />
-    <ProductReview class="bg-red-400"/>
+    <ProductReview />
     <Subscribe />
   </div>
 </template>
