@@ -32,11 +32,11 @@
           <div class="bg-primary h-1.5 rounded-full" style="width: 25%"></div>
         </div>
       </div>
-      <div class="flex space-x-14 mt-12">
-        <a href=""><img class="h-10" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt=""></a>
-        <a href=""><img class="h-10" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt=""></a>
-        <a href=""><img class="h-10" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt=""></a>
-        <a href=""><img class="h-10" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt=""></a>
+      <div class="flex space-x-12 mt-12">
+        <a href=""><img class="w-12" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt=""></a>
+        <a href=""><img class="w-12" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt=""></a>
+        <a href=""><img class="w-12" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt=""></a>
+        <a href=""><img class="w-12" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt=""></a>
       </div>
     </div>
   </div>
@@ -52,12 +52,10 @@ export default {
 .bg {
   height: calc(100vh - 84px);
 }
-
 .vl {
   height: 145px;
   width: 15px;
 }
-
 .progres {
   width: 500px;
 }

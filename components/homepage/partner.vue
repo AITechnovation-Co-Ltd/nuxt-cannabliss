@@ -16,7 +16,4 @@ export default {
 </script>
 
 <style scoped>
-.maincrs {
-  min-height: calc(100vh - 84px);
-}
 </style>
