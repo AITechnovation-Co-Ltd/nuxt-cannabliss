@@ -4,7 +4,7 @@
       <div class="w-1/2 h-full flex items-center justify-center">
         <div class="flex h-full flex-col items-start justify-center">
           <h1 class="text-6xl text-quaternary">Canabliss Oasiz</h1>
-          <h2 class="mt-2 text-7xl text-primary">Red Fruit Overnight Mask</h2>
+          <h2 class="mt-2 text-7xl text-primary font-medium">Red Fruit Overnight Mask</h2>
           <div class="mt-8 w-full flex items-center">
             <div class="vl bg-primary mr-8"></div>
             <p class="text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit ,
@@ -22,11 +22,11 @@
         </div>
       </div>
       <div class="w-1/2 flex justify-center">
-        <img src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
+        <img class="w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
       </div>
     </div>
     <div class="w-full h-1/6 flex justify-between items-start">
-      <div>
+      <div class="w-full">
         <p class="text-4xl text-primary"><span class="font-bold">1</span>/4</p>
         <div class="progres mt-7 bg-primary rounded-full h-0.5 flex items-center">
           <div class="bg-primary h-1.5 rounded-full" style="width: 25%"></div>
