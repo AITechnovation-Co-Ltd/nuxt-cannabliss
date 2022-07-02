@@ -15,7 +15,7 @@
           <p>{{ product.type }}</p>
           <p class="text-3xl font-medium">{{ product.name }}</p>
           <p class="mt-4">{{ product.datial }}</p>
-          <button class="mt-4 px-8 py-2 border-2 border-quaternary rounded-full">View more</button>
+          <BaseButton>View more</BaseButton>
         </div>
       </div>
     </div>
@@ -31,17 +31,19 @@
 </template>
 
 <script>
+import BaseButton from '../base/base-button.vue'
 export default {
-  data() {
-    return {
-      products: [
-        { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: true, img:require("~/static/images/IMG_06fav/Group508@2x.png") },
-        { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img:require("~/static/images/IMG_02products_detail/Group669@2x.png") },
-        { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img:require("~/static/images/IMG_06fav/Group508@2x.png") },
-        { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img:require("~/static/images/IMG_02products_detail/Group669@2x.png") },
-      ]
-    }
-  }
+    data() {
+        return {
+            products: [
+                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: true, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
+                { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img: require("~/static/images/IMG_02products_detail/Group669@2x.png") },
+                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
+                { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img: require("~/static/images/IMG_02products_detail/Group669@2x.png") },
+            ]
+        };
+    },
+    components: { BaseButton }
 }
 </script>
 

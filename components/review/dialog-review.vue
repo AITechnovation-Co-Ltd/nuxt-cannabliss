@@ -1,51 +1,61 @@
 <template>
   <base-modal v-model="isShow">
-    <div class="px-2 py-4 bg-secondary">
+    <div class="px-2 py-12 bg-secondary rounded-3xl flex flex-col items-center">
       <!-- Title -->
-      <div class="text-xl text-center mb-4">
+      <div class="w-full text-7xl font-light text-primary text-center mb-4">
         Write a review
       </div>
+
       <!-- Star -->
-      <div class="flex items-center justify-center">
-        <svg @click="test(1)" class="w-5 h-5 text-gray-300" :class="{ 'text-yellow-300': s1 }" fill="currentColor"
+      <div class="w-full flex items-center justify-center">
+        <svg @click="test(1)" class="w-12 h-12 text-gray-300" :class="{ 'text-blue-400': s1 }" fill="currentColor"
           viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
           </path>
         </svg>
-        <svg @click="test(2)" class="w-5 h-5 text-gray-300" :class="{ 'text-yellow-300': s2 }" fill="currentColor"
+        <svg @click="test(2)" class="w-12 h-12 text-gray-300" :class="{ 'text-blue-400': s2 }" fill="currentColor"
           viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
           </path>
         </svg>
-        <svg @click="test(3)" class="w-5 h-5 text-gray-300" :class="{ 'text-yellow-300': s3 }" fill="currentColor"
+        <svg @click="test(3)" class="w-12 h-12 text-gray-300" :class="{ 'text-blue-400': s3 }" fill="currentColor"
           viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
           </path>
         </svg>
-        <svg @click="test(4)" class="w-5 h-5 text-gray-300" :class="{ 'text-yellow-300': s4 }" fill="currentColor"
+        <svg @click="test(4)" class="w-12 h-12 text-gray-300" :class="{ 'text-blue-400': s4 }" fill="currentColor"
           viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
           </path>
         </svg>
-        <svg @click="test(5)" class="w-5 h-5 text-gray-300" :class="{ 'text-yellow-300': s5 }" fill="currentColor"
+        <svg @click="test(5)" class="w-12 h-12 text-gray-300" :class="{ 'text-blue-400': s5 }" fill="currentColor"
           viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
           </path>
         </svg>
       </div>
+
       <!-- Form Review -->
-      <div class="mt-4 px-24 flex flex-col">
-        <base-input label='Name Lastname' class="my-2"/>
-        <base-input label='E-mail' class="my-2"/>
-        <base-input label='Please write your comment' class="my-2"/>
+      <div class="w-2/3 mt-4 px-24 flex flex-col text-gray-300">
+        <select id="underline_select"
+          class="block py-2.5 px-0 w-full text-sm font-light bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+          <option selected="">Please select products</option>
+          <option>list #1</option>
+          <option>list #2</option>
+          <option>list #3</option>
+          <option>list #4</option>
+        </select>
+        <base-input label='Name Lastname' class="text-quaternary my-2" />
+        <base-input label='E-mail' class="text-quaternary my-2" />
+        <base-input label='Please write your comment' class="text-quaternary my-2" />
       </div>
       <div class="mt-10 flex justify-center space-x-4">
-        <base-button @click="isShow=false" class="border-quaternary">Write a review</base-button>
+        <base-button @click="isShow = false" class="border-quaternary">Write a review</base-button>
       </div>
     </div>
   </base-modal>
@@ -88,7 +98,7 @@ export default {
     // Junk Code
     test(p) {
       if (p == 1) {
-        if (this.s1&!this.s2) {
+        if (this.s1 & !this.s2) {
           this.s1 = false
           this.s2 = false
           this.s3 = false

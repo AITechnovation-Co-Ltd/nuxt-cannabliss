@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full flex flex-row justify-center">
+  <div class="w-full flex flex-row justify-center px-28">
     <!-- Categories -->
-    <div class="w-3/12 flex flex-col items-center">
+    <div class="w-3/12 flex flex-col items-start">
       <!-- Breadcrumb -->
       <div class="w-80">
         <nav class="w-full flex justify-start items-center" aria-label="Breadcrumb">
@@ -41,11 +41,10 @@
     <div class="w-9/12">
       <!-- Write a review -->
       <div class="w-full flex justify-start py-4 px-4 mt-8 bg-tertiary ">
-        <base-button @click="$refs.uploadReviewRef.show()" arrow="white" class="text-white">Write a review</base-button>
+        <base-button @click="$refs.uploadReviewRef.show()" arrow="white" class="text-white border-white hover:border-white">Write a review</base-button>
       </div>
       <!-- Review card -->
       <div>
-        <review-card />
         <review-card />
         <review-card />
         <review-card />

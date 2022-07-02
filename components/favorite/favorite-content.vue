@@ -4,7 +4,7 @@
         <div class="w-3/12 flex flex-col items-center">
             <!-- Breadcrumb -->
             <div class="w-80">
-                <nav class="w-full flex justify-start items-center" aria-label="Breadcrumb">
+                <nav class="w-full my-8" aria-label="Breadcrumb">
                     <ol
                         class="text-quaternary text-base inline-flex items-center justify-center space-x-1 md:space-x-3">
                         <li class="inline-flex items-center">
@@ -13,10 +13,10 @@
                                 <p>Home</p>
                             </nuxt-link>
                         </li>
-                        <li>
+                        <li aria-current="page">
                             <div class="flex items-center">
                                 <div class="vl mx-1 bg-quaternary"></div>
-                                <p class="font-medium md:ml-2">Favorite</p>
+                                <p class="font-extrabold md:ml-2 ">Favorite</p>
                             </div>
                         </li>
                     </ol>
@@ -51,7 +51,8 @@
             <div class="w-full mt-20 grid grid-cols-3 gap-x-6 gap-y-10">
                 <div class="w-full" v-for="(product, index) in products" :key="index">
                     <div class="relative px-2 bg-card rounded-xl">
-                        <base-icon  icon="heart" viewBox="0 0 30 41" size="50" class="absolute text-quaternary top-0 right-0" />
+                        <base-icon icon="heart" viewBox="0 0 30 41" size="50"
+                            class="absolute text-quaternary top-0 right-0" />
                         <img class="w-full" :src="product.img">
                         <p align="end" class="bottom-8 right-8 font-light">{{ product.quantity }}</p>
                     </div>

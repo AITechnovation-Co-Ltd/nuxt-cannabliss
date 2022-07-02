@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-28 mb-40 text-quaternary flex flex-col justify-center items-center">
+  <div class="w-full px-28 text-quaternary flex flex-col justify-center items-center">
     <h1 class="text-5xl text-primary font-semibold text-center">What Is CBD?</h1>
     <p class="w-2/3 mt-12 text-center text-lg mb-28">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
       accusantium doloremque laudantium , totam rem aperiam , eaque ipsa quae ab illo inventore veritatis et quasi

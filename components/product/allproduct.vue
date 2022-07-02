@@ -33,7 +33,7 @@
             <!-- List Categories -->
             <div class="w-80 mt-10">
                 <h1 class="text-3xl text-primary">Categories</h1>
-                <hr class="w-full my-6 border-b-2 border-gray-200 flex flex-col justify-center items-center">
+                <hr class="w-full my-6 border-b border-gray-200 flex flex-col justify-center items-center">
                 <div>
                     <ul class="decoration-none text-primary text-lg space-y-4">
                         <li><span class="hover:font-bold hover:cursor-pointer">Best Seller</span></li>
@@ -87,7 +87,7 @@
                         <p>{{ product.type }}</p>
                         <p class="text-3xl font-medium">{{ product.name }}</p>
                         <p class="mt-4">{{ product.datial }}</p>
-                        <button class="mt-4 px-8 py-2 border-2 border-quaternary rounded-full">View more</button>
+                        <BaseButton>View more</BaseButton>
                     </div>
                 </div>
             </div>
@@ -151,22 +151,24 @@
 </template>
 
 <script>
+import BaseButton from '../base/base-button.vue'
 export default {
     data() {
         return {
             products: [
-                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: true, img:require("~/static/images/IMG_06fav/Group508@2x.png") },
-                { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: true, img:require("~/static/images/IMG_02products_detail/Group669@2x.png") },
-                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img:require("~/static/images/IMG_06fav/Group508@2x.png") },
-                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img:require("~/static/images/IMG_06fav/Group508@2x.png") },
-                { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img:require("~/static/images/IMG_02products_detail/Group669@2x.png") },
-                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img:require("~/static/images/IMG_06fav/Group508@2x.png") },
-                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img:require("~/static/images/IMG_06fav/Group508@2x.png") },
-                { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img:require("~/static/images/IMG_02products_detail/Group669@2x.png") },
-                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img:require("~/static/images/IMG_06fav/Group508@2x.png") },
+                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: true, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
+                { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: true, img: require("~/static/images/IMG_02products_detail/Group669@2x.png") },
+                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
+                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
+                { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img: require("~/static/images/IMG_02products_detail/Group669@2x.png") },
+                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
+                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
+                { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img: require("~/static/images/IMG_02products_detail/Group669@2x.png") },
+                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
             ]
-        }
-    }
+        };
+    },
+    components: { BaseButton }
 }
 </script>
 
@@ -175,7 +177,6 @@ export default {
     height: 15px;
     width: 1px;
 }
-
 .centered {
     position: absolute;
     top: 30%;

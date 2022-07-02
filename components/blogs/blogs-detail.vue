@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col px-20 ">
+  <div class="w-full flex flex-col px-20">
     <!-- -->
     <div class="w-80 my-12">
       <nav class="w-full flex justify-start items-center" aria-label="Breadcrumb">
@@ -73,7 +73,7 @@
       </div>
     </div>
     <!-- Benefis of cbd -->
-    <div class="w-full flex flex-col items-center mb-12">
+    <div class="w-full flex flex-col items-center">
       <p class="my-6 text-4xl text-primary">Benefits Of CBD For Acne</p>
       <div class="grid grid-cols-3 gap-4 text-quaternary">
         <div class="flex items-center" v-for="(data, i) in cbd" :key="i">

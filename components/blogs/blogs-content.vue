@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col px-20">
+  <div class="w-full flex flex-col px-28">
     <!-- Breadcrumb -->
     <div class="w-80 my-12">
       <nav class="w-full flex justify-start items-center" aria-label="Breadcrumb">

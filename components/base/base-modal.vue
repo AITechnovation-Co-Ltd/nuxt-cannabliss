@@ -1,7 +1,7 @@
 <template>
     <modal :name="makeid" :adaptive="true" :height="height" :width="width" :scrollable="true"
         @closed="$emit('update', false)">
-        <div class="bg-white rounded-md max-h-full overflow-y-auto" :class="{ 'overflow-y-scroll': scroll }">
+        <div class="rounded-3xl max-h-full overflow-y-auto" :class="{ 'overflow-y-scroll': scroll }">
             <slot />
         </div>
     </modal>
@@ -24,7 +24,7 @@ export default {
         },
         width: {
             type: Number,
-            default: 600,
+            default: 1400,
         },
         scroll: {
             type: Boolean,
