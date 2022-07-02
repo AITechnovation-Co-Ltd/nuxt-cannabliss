@@ -1,13 +1,14 @@
 <template>
-  <div class="maincrs w-full flex flex-col justify-center px-20">
-    <p class="font-medium text-primary text-4xl">FAQ</p>
+  <div class="w-full flex flex-col justify-center px-28">
+    <p class="text-primary text-7xl">FAQ</p>
     <div class="w-full flex my-6">
       <!-- Dropdown FQA -->
       <div class="w-1/2 flex flex-col">
+
         <!-- FQA 1-->
-        <base-dropdown class="my-4" dropdownClass="mt-2" @opened="checkDataOpen">
-          <div slot="toggle" class="flex items-center">
-            <p align="start" class="text-lg font-medium text-quaternary my-2 mr-28"
+        <base-dropdown class="my-6" dropdownClass="mt-2" @opened="checkDataOpen">
+          <div slot="toggle" class="flex items-center justify-between">
+            <p align="start" class="text-3xl font-medium text-quaternary my-2 mr-28"
               :class="{ 'text-primary': dropdown_data }">
               Sed Ut Perspiciatis Unde Omnis Iste Natus<br>Error Sit Voluptatem Accusantium</p>
 
@@ -19,17 +20,18 @@
           </div>
           <!-- Details -->
           <base-dropdown-item>
-            <p class="text-sm text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi
+            <p class="w-4/6 text-xl text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi
               provident optio magnam, commodi
               corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
               reprehenderit? Officia.</p>
           </base-dropdown-item>
-          <hr>
         </base-dropdown>
-        <!-- FQA 2-->
-        <base-dropdown class="my-4" dropdownClass="mt-2" @opened="checkDataOpen2">
+        <hr class="w-5/6 border-b border-gray-300">
+
+        <!-- FAQ 2-->
+        <base-dropdown class="my-6" dropdownClass="mt-2" @opened="checkDataOpen2">
           <div slot="toggle" class="flex items-center">
-            <p align="start" class="text-lg font-medium text-quaternary my-2 mr-28"
+            <p align="start" class="text-3xl font-medium text-quaternary my-2 mr-28"
               :class="{ 'text-primary': dropdown_data2 }">
               Sed Ut Perspiciatis Unde Omnis Iste Natus<br>Error Sit Voluptatem Accusantium</p>
 
@@ -41,17 +43,18 @@
           </div>
           <!-- Details -->
           <base-dropdown-item>
-            <p class="text-sm text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi
+            <p class="w-4/6 text-xl text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi
               provident optio magnam, commodi
               corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
               reprehenderit? Officia.</p>
           </base-dropdown-item>
-          <hr>
         </base-dropdown>
-        <!-- FQA 3 -->
-        <base-dropdown class="my-4" dropdownClass="mt-2" @opened="checkDataOpen3">
+        <hr class="w-5/6 border-b border-gray-300">
+
+        <!-- FAQ 3 -->
+        <base-dropdown class="my-6" dropdownClass="mt-2" @opened="checkDataOpen3">
           <div slot="toggle" class="flex items-center">
-            <p align="start" class="text-lg font-medium text-quaternary my-2 mr-28"
+            <p align="start" class="text-3xl font-medium text-quaternary my-2 mr-28"
               :class="{ 'text-primary': dropdown_data3 }">
               Sed Ut Perspiciatis Unde Omnis Iste Natus<br>Error Sit Voluptatem Accusantium</p>
 
@@ -63,17 +66,18 @@
           </div>
           <!-- Details -->
           <base-dropdown-item>
-            <p class="text-sm text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi
+            <p class="w-4/6 text-xl text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi
               provident optio magnam, commodi
               corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
               reprehenderit? Officia.</p>
           </base-dropdown-item>
-          <hr>
         </base-dropdown>
-        <!-- FQA 4 -->
-        <base-dropdown class="my-4" dropdownClass="mt-2" @opened="checkDataOpen4">
+        <hr class="w-5/6 border-b border-gray-300">
+
+        <!-- FAQ 4 -->
+        <base-dropdown class="my-6" dropdownClass="mt-2" @opened="checkDataOpen4">
           <div slot="toggle" class="flex items-center">
-            <p align="start" class="text-lg font-medium text-quaternary my-2 mr-28"
+            <p align="start" class="text-3xl font-medium text-quaternary my-2 mr-28"
               :class="{ 'text-primary': dropdown_data4 }">
               Sed Ut Perspiciatis Unde Omnis Iste Natus<br>Error Sit Voluptatem Accusantium</p>
             <base-icon icon="dropdown" :class="{
@@ -83,34 +87,36 @@
           </div>
           <!-- Details -->
           <base-dropdown-item>
-            <p class="text-sm text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi
+            <p class="w-4/6 text-xl text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi
               provident optio magnam, commodi
               corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
               reprehenderit? Officia.</p>
           </base-dropdown-item>
-          <hr>
         </base-dropdown>
+        <hr class="w-5/6 border-b border-gray-300">
       </div>
+
       <!-- Picture-->
       <div class="w-1/2 flex justify-center items-center">
-        <img src="@/static/images/IMG_01home/pages_01home/enecta.jpg" class="w-4/5 h-96 rounded-xl">
+        <img src="@/static/images/IMG_01home/pages_01home/enecta.jpg" class="rounded-3xl">
       </div>
     </div>
-    <div class="w-full flex text-quaternary ">
-      <div class="w-1/3 flex flex-col items-center ">
-        <base-icon icon="heart" viewBox="0 0 24 24" size="56" class="mb-4"/>
-        <p class="text-lg font-medium">24 Services</p>
-        <p>Consultations via email</p>
+
+    <div class="w-full my-28 flex justify-center text-quaternary space-x-60">
+      <div class="flex flex-col items-center ">
+        <base-icon icon="heart" viewBox="0 0 24 24" size="100" class="mb-8"/>
+        <p class="text-3xl mb-4 font-medium">24 Services</p>
+        <p class="text-xl">Consultations via email</p>
       </div>
-      <div class="w-1/3 flex flex-col items-center ">
-        <base-icon icon="heart" viewBox="0 0 24 24" size="56" class="mb-4" />
-        <p class="text-lg font-medium">30 Days Return</p>
-        <p>You have to 30 days to return</p>
+      <div class="flex flex-col items-center ">
+        <base-icon icon="heart" viewBox="0 0 24 24" size="100" class="mb-8" />
+        <p class="text-3xl mb-4 font-medium">30 Days Return</p>
+        <p class="text-xl">You have to 30 days to return</p>
       </div>
-      <div class="w-1/3 flex flex-col items-center ">
-        <base-icon icon="heart" viewBox="0 0 24 24" size="56" class="mb-4"/>
-        <p class="text-lg font-medium">Fast Delivery</p>
-        <p>On order above $ 50</p>
+      <div class="flex flex-col items-center ">
+        <base-icon icon="heart" viewBox="0 0 24 24" size="100" class="mb-8"/>
+        <p class="text-3xl mb-4 font-medium">Fast Delivery</p>
+        <p class="text-xl">On order above $ 50</p>
       </div>
     </div>
   </div>
@@ -145,7 +151,4 @@ export default {
 </script>
 
 <style scoped>
-.maincrs {
-  min-height: calc(100vh - 84px);
-}
 </style>
