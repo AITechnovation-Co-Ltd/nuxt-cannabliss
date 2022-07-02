@@ -1,8 +1,8 @@
 <template>
-  <button class="text-base text-quaternary px-3 py-1 border rounded-full outline-none focus:outline-none " :type="type"
+  <button class="text-2xl text-quaternary hover:text-white hover:bg-tertiary px-10 py-3 flex justify-between items-center border-2 hover:border-tertiary border-quaternary rounded-full outline-none focus:outline-none " :type="type"
     style="transition: all 0.15s ease 0s" @click="$emit('click', $event)" :disabled="disabled">
     <slot />
-    <base-icon icon="arrow-right-long" viewBox="0 0 512 512" width="12" height="12" :color="arrow" />
+    <base-icon class="ml-3" icon="arrow-right-long" viewBox="0 0 512 512" width="20" height="20" />
   </button>
 </template>
 

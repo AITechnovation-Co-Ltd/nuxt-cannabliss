@@ -2,10 +2,12 @@
   <div class="sticky top-0 z-50">
     <nav class="w-screen bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
       <div class="container h-16 flex flex-wrap justify-between items-center mx-auto">
+
+        <!-- Logo -->
         <nuxt-link to="/" class="flex items-center">
           <img class="h-16" src="~/static/logo/Logo-CANABLISS.png" alt="">
-          <!-- <span class="self-center text-xl font-semibold whitespace-nowrap">Cannabliss</span> -->
         </nuxt-link>
+
         <div class="flex md:order-2">
           <div class="flex items-center">
             <div class="notification">
