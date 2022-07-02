@@ -31,7 +31,7 @@
               <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
             </div>
             <div class="text-quaternary text-xl">
-              <p>{{ product.type }}</p>
+              <p class="mt-8">{{ product.type }}</p>
               <p class="text-3xl font-medium">{{ product.name }}</p>
               <p class="mt-4">{{ product.datial }}</p>
               <BaseButton class="mt-8">View more</BaseButton>
