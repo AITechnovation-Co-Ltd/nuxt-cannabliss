@@ -16,13 +16,13 @@
     <VideoReview class="bg-red-500" />
 
     <!-- Blogs -->
-    <Blogs class="bg-red-600" />
+    <Blogs/>
 
     <!-- Review -->
     <Review class="bg-red-700" />
 
     <!-- FAQ -->
-    <Faq class="bg-red-800" />
+    <Faq />
 
     <Subscribe />
 
