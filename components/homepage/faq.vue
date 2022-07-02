@@ -117,11 +117,7 @@
 </template>
 
 <script>
-import { throws } from 'assert'
-import baseIcon from '../base/base-icon.vue'
-
 export default {
-  components: { baseIcon },
   data() {
     return {
       dropdown_data: false,
@@ -132,7 +128,7 @@ export default {
   },
   methods: {
     checkDataOpen(toggle) {
-      console.log(toggle)
+      // console.log(toggle)
       this.dropdown_data = toggle
     },
     checkDataOpen2(toggle) {
