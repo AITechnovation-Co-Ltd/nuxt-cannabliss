@@ -17,7 +17,7 @@ export default {
     ],
     script: [
       { src: 'https://unpkg.com/flowbite@1.4.5/dist/flowbite.js' }
-  ]
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -27,6 +27,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/vuetify.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -35,6 +36,11 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxt/postcss8',
+    // Simple usage
+    '@nuxtjs/vuetify',
+
+    // With options
+    ['@nuxtjs/vuetify', { /* module options */ }]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
