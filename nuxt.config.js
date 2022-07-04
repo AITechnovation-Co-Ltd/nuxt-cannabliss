@@ -1,5 +1,5 @@
 export default {
-  mode: 'static',
+  target: 'static',
    router: {
       base: '/nuxt-cannabliss/'
    },
