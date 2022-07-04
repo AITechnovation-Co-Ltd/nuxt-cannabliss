@@ -11,7 +11,7 @@
               sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua .</p>
           </div>
-          <div class="w-full mt-20 flex items-center">
+          <div class="w-full mt-20 flex items-center hidden">
             <div class="h-28 w-28 mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
               <div class="h-24 w-24 bg-tertiary rounded-full flex items-center justify-center">
                 <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />

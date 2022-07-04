@@ -62,4 +62,9 @@ export default
   }
 </script>
 
-
+<style scoped>
+.vl {
+  height: 15px;
+  width: 1px;
+}
+</style>
