@@ -28,6 +28,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "@/plugins/base-component",
+    "@/plugins/modal",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -36,10 +37,16 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxt/postcss8',
+    "@nuxtjs/tailwindcss",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // Simple usage
+    'nuxt-leaflet',
+
+    // With options
+    ['nuxt-leaflet', { /* module options */ }],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

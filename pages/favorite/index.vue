@@ -1,7 +1,7 @@
 <template>
   <div>
-    <FavoriteBanner class="bg-red-100"/>
-    <FavoriteContent class="bg-red-200"/>
+    <FavoriteBanner />
+    <FavoriteContent class="my-6"/>
   </div>
 </template>
 

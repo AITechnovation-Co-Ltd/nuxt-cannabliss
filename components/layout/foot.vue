@@ -3,9 +3,9 @@
     <footer class="p-4 sm:p-6">
       <div class="md:flex md:justify-evenly">
         <div class="mb-6 md:mb-0">
-          <a href="" class="flex items-center">
-            <span class="self-center text-2xl font-semibold whitespace-nowrap">Cannabliss</span>
-          </a>
+          <nuxt-link to="/" class="flex items-center">
+          <img class="h-32" src="~/static/logo/Logo-CANABLISS.png" alt="">
+        </nuxt-link>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>

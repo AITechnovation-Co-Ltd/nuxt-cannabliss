@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <BlogsBanner class="bg-red-100"/>
-    <BlogsContent class="bg-red-200"/>
+  <div class="bg-secondary">
+    <BlogsBanner/>
+    <BlogsContent class="my-6"/>
   </div>
 </template>
 

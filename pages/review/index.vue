@@ -1,7 +1,7 @@
 <template>
-  <div class="">
-    <ReviewBanner class="bg-red-100"/>
-    <ReviewContent class="bg-red-200"/>
+  <div class="bg-secondary">
+    <ReviewBanner />
+    <ReviewContent class="my-6"/>
   </div>
 </template>
 

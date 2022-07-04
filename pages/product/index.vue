@@ -1,10 +1,10 @@
 <template>
   <div>
     <!-- Banner -->
-    <ProductBanner class="bg-red-100"/>
+    <ProductBanner />
 
     <!-- All Products -->
-    <AllProduct class="bg-red-200"/>
+    <AllProduct class="mt-32"/>
   </div>
 </template>
 

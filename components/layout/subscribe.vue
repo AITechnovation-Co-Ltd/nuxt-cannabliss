@@ -1,25 +1,25 @@
 <template>
   <div class="relative bg w-screen">
-    <img class="w-full" src="~/static/images/IMG_01home/pages_01home/Group1134.png">
+    <img class="w-full" src="~/static/images/IMG_01home/pages_01home/Group1134@2x.png">
     <div class="centered flex flex-col">
       <p class="text-quaternary text-5xl">Subscribe to receive grape News & Promotion</p>
       <div class="form-control">
-    <input type="value" required="">
-    <label>
-        <span style="transition-delay:0ms">Y</span>
-        <span style="transition-delay:50ms">o</span>
-        <span style="transition-delay:100ms">u</span>
-        <span style="transition-delay:150ms">r</span>
-        <span style="transition-delay:200ms"> </span>
-        <span style="transition-delay:250ms">E</span>
-        <span style="transition-delay:300ms">-</span>
-        <span style="transition-delay:350ms">m</span>
-        <span style="transition-delay:400ms">a</span>
-        <span style="transition-delay:450ms">i</span>
-        <span style="transition-delay:500ms">l</span>
+        <input type="value" required="">
+        <label>
+          <span style="transition-delay:0ms">Y</span>
+          <span style="transition-delay:50ms">o</span>
+          <span style="transition-delay:100ms">u</span>
+          <span style="transition-delay:150ms">r</span>
+          <span style="transition-delay:200ms"> </span>
+          <span style="transition-delay:250ms">E</span>
+          <span style="transition-delay:300ms">-</span>
+          <span style="transition-delay:350ms">m</span>
+          <span style="transition-delay:400ms">a</span>
+          <span style="transition-delay:450ms">i</span>
+          <span style="transition-delay:500ms">l</span>
 
-    </label>
-</div>
+        </label>
+      </div>
     </div>
   </div>
 </template>
@@ -34,12 +34,14 @@ export default {
 .bg {
   height: auto;
 }
+
 .centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -40%);
 }
+
 /* From uiverse.io by @liyaxu123 */
 .form-control {
   position: relative;

@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <BlogsBanner class="bg-red-100"/>
-    <BlogsDetail class="bg-red-200"/>
+  <div class="bg-secondary">
+    <BlogsBanner />
+    <BlogsDetail class="my-6" />
   </div>
 </template>
 
@@ -9,10 +9,9 @@
 import BlogsBanner from '../../../components/blogs/blogs-banner.vue';
 import BlogsDetail from '../../../components/blogs/blogs-detail.vue';
 export default {
-    components: { BlogsBanner, BlogsDetail }
+  components: { BlogsBanner, BlogsDetail }
 }
 </script>
 
 <style>
-
 </style>

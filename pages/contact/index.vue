@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <ContactBanner class="bg-red-100"/>
-    <ContactContent class="bg-red-200"/>
-    <Map class="bg-red-300"/>
+  <div class="bg-secondary">
+    <ContactBanner />
+    <ContactContent class="my-16"/>
+    <Map class="mb-8" />
   </div>
 </template>
 

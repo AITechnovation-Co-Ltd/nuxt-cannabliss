@@ -1,8 +1,8 @@
 <template>
   <div>
-    <IngredientsBanner class="bg-red-100"/>
-    <IngredientsDetail class="bg-red-200"/>
-    <IngredientsKnowledge class="bg-red-300"/>
+    <IngredientsBanner />
+    <IngredientsDetail class="mt-28 mb-20"/>
+    <IngredientsKnowledge />
   </div>
 </template>
 

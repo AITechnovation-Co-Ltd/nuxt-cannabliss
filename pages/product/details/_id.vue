@@ -1,10 +1,10 @@
 <template>
   <div>
-    <ProductBanner class="bg-red-100"/>
-    <ProductDetail class="bg-red-200"/>
-    <ProductOther class="bg-red-300"/>
-    <ProductReview class="bg-red-400"/>
-    <Subscribe />
+    <ProductBanner />
+    <ProductDetail class="mt-20"/>
+    <ProductOther />
+    <ProductReview />
+    <Subscribe class="hidden" />
   </div>
 </template>
 
