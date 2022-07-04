@@ -59,13 +59,12 @@
         <div class="bg-primary h-1.5 rounded-full" style="width: 25%"></div>
       </div>
     </div>
-    <base-button class="my-4 border-quaternary">View all</base-button>
+    <base-button @click="$router.push(`/review`)" class="my-4 border-quaternary">View all</base-button>
   </div>
 </template>
 
 <script>
 export default {
-
 }
 </script>
 
