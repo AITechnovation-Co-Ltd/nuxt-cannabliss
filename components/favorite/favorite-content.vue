@@ -50,17 +50,21 @@
             <!-- Product card -->
             <div class="w-full mt-20 grid grid-cols-3 gap-x-6 gap-y-10">
                 <div class="w-full" v-for="(product, index) in products" :key="index">
-                    <div class="relative px-2 bg-card rounded-xl">
-                        <base-icon icon="heart" viewBox="0 0 30 41" size="50"
-                            class="absolute text-quaternary top-0 right-0" />
-                        <img class="w-full" :src="product.img">
-                        <p align="end" class="bottom-8 right-8 font-light">{{ product.quantity }}</p>
+                    <div class="relative border-8 border-card">
+                        <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
+                        <img class="centered w-full" :src="product.img" alt="" />
+                        <span v-if="product.isNew"
+                            class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
+                        <base-icon icon="heartactive" viewBox="0 0 30 41" size="50"
+                            class="hover:cursor-pointer text-red-500 absolute top-8 right-8" />
+                        <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
                     </div>
                     <div class="text-quaternary text-xl">
                         <p>{{ product.type }}</p>
                         <p class="text-3xl font-medium">{{ product.name }}</p>
-                        <p class="mt-4">{{ product.detail }}</p>
-                        <button class="mt-4 px-8 py-2 border-2 border-quaternary rounded-full">View more</button>
+                        <p class="mt-4">{{ product.datial }}</p>
+                        <base-button @click="$router.push(`/product/details`)" class="border-quaternary">View more
+                        </base-button>
                     </div>
                 </div>
             </div>
@@ -147,5 +151,12 @@ export default {
 .vl {
     height: 15px;
     width: 1px;
+}
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -35%);
 }
 </style>

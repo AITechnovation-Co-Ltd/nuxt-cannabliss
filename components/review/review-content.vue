@@ -15,7 +15,7 @@
             <li>
               <div class="flex items-center">
                 <div class="vl mx-1 bg-quaternary"></div>
-                <p class="font-medium md:ml-2">Review</p>
+                <p class="font-extrabold md:ml-2">Review</p>
               </div>
             </li>
           </ol>

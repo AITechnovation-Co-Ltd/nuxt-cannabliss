@@ -91,14 +91,14 @@
                         <span v-if="product.isNew"
                             class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
                         <base-icon icon="heartactive" viewBox="0 0 30 41" size="50"
-                            class="hover:pointer text-red-500 absolute top-8 right-8" />
+                            class="hover:cursor-pointer text-red-500 absolute top-8 right-8" />
                         <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
                     </div>
                     <div class="text-quaternary text-xl">
                         <p>{{ product.type }}</p>
                         <p class="text-3xl font-medium">{{ product.name }}</p>
                         <p class="mt-4">{{ product.datial }}</p>
-                        <BaseButton>View more</BaseButton>
+                        <BaseButton @click="$router.push(`/product/details`)">View more</BaseButton>
                     </div>
                 </div>
             </div>
@@ -165,6 +165,7 @@ import BaseButton from "../base/base-button.vue";
 export default {
     data() {
         return {
+            test: true,
             products: [
                 {
                     name: "Canabliss Crown : Anti -Fall Nourishing Shampoo",

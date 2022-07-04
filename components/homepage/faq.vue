@@ -6,7 +6,7 @@
       <div class="w-1/2 flex flex-col">
 
         <!-- FQA 1-->
-        <base-dropdown class="my-6" dropdownClass="mt-2" @opened="checkDataOpen">
+        <base-dropdown class="my-6" dropdownClass="mt-2" @opened="checkDataOpen" openUp="toggle" >
           <div slot="toggle" class="flex items-center justify-between">
             <p align="start" class="text-3xl font-medium text-quaternary my-2 mr-28"
               :class="{ 'text-primary': dropdown_data }">
@@ -126,7 +126,7 @@
 export default {
   data() {
     return {
-      dropdown_data: false,
+      dropdown_data: true,
       dropdown_data2: false,
       dropdown_data3: false,
       dropdown_data4: false,

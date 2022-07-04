@@ -14,28 +14,29 @@
           </div>
         </div>
         <p class="mt-2 text-quaternary">Based on reviews</p>
-        <base-button class="mt-6">Write a review</base-button>
+        <base-button @click="$refs.DialogReviewRefs.show()" class="mt-6">Write a review</base-button>
       </div>
       <div class="w-2/3">
         <ReviewCard />
         <ReviewCard />
-        <base-button class="mt-6">View more</base-button>
+        <base-button @click="$router.push(`/review`)" class="mt-6">View more</base-button>
       </div>
     </div>
+    <dialog-review ref="DialogReviewRefs" />
   </div>
 </template>
 
 <script>
+import DialogReview from '@/components/review/dialog-review.vue'
 import BaseButton from '../base/base-button.vue'
 import ReviewCard from '../review/review-card.vue'
 export default {
-    components: { ReviewCard }
+  components: { ReviewCard, DialogReview }
 }
 </script>
 
 <style scoped>
-.b
-BaseButtongheight {
-    height: 500px;
+.b BaseButtongheight {
+  height: 500px;
 }
 </style>

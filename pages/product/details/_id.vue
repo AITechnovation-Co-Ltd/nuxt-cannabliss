@@ -4,7 +4,7 @@
     <ProductDetail class="mt-20"/>
     <ProductOther />
     <ProductReview />
-    <Subscribe />
+    <Subscribe class="hidden" />
   </div>
 </template>
 

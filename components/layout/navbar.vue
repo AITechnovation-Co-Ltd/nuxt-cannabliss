@@ -19,18 +19,17 @@
             <base-icon icon="magnifying-glass" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
             <div class="vl mx-4 bg-primary"></div>
             <p id="dropdownDefault" data-dropdown-toggle="dropdown"
-                class="text-primary text-lg ml-2 hover:cursor-pointer rounded-lg text-sm flex items-center"
-                type="button">EN<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg></p>
-              <!-- Dropdown menu -->
-              <div id="dropdown"
-                class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow px-2 "
-                data-popper-placement="bottom"
-                style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
-                <p class="text-center">TH</p>
-              </div>
+              class="text-primary text-lg ml-2 hover:cursor-pointer rounded-lg text-sm flex items-center" type="button">
+              EN<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg></p>
+            <!-- Dropdown menu -->
+            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow px-2 "
+              data-popper-placement="bottom"
+              style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
+              <p class="text-center">TH</p>
+            </div>
 
           </div>
           <button data-collapse-toggle="mobile-menu-4" type="button"
@@ -57,46 +56,60 @@
               <!-- Dropdown menu -->
               <p id="dropdownDefault" data-dropdown-toggle="multilang"
                 class="text-primary hover:cursor-pointer rounded-lg flex items-center"
-                type="button">Product <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                :class="{ 'font-extrabold': route_name == 'product' || route_name == 'product-details-id' }" type="button">
+                Product
+                <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg></p>
-              <div id="multilang"
-                class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 "
+                </svg>
+              </p>
+              <div id="multilang" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 "
                 data-popper-placement="bottom"
                 style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
                 <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
                   <li>
                     <nuxt-link to="/product"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">All Products</nuxt-link>
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">All
+                      Products</nuxt-link>
                   </li>
                   <li>
                     <nuxt-link to="/product"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Hair</nuxt-link>
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Hair
+                    </nuxt-link>
                   </li>
                   <li>
                     <nuxt-link to="/product"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Face</nuxt-link>
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Face
+                    </nuxt-link>
                   </li>
                   <li>
                     <nuxt-link to="/product"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Body</nuxt-link>
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Body
+                    </nuxt-link>
                   </li>
                 </ul>
               </div>
 
             </li>
             <li>
-              <nuxt-link to="/ingredients" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Ingredients</nuxt-link>
+              <nuxt-link to="/ingredients" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
+                <p :class="{ 'font-extrabold': route_name == 'ingredients' }">Ingredients</p>
+              </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/blogs" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Blogs</nuxt-link>
+              <nuxt-link to="/blogs" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
+                <p :class="{ 'font-extrabold': route_name == 'blogs' || route_name == 'blogs-details-id' }">Blogs</p>
+              </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/review" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Review</nuxt-link>
+              <nuxt-link to="/review" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
+                <p :class="{ 'font-extrabold': route_name == 'review' }">Review</p>
+              </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/contact" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Contacts</nuxt-link>
+              <nuxt-link to="/contact" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
+                <p :class="{ 'font-extrabold': route_name == 'contact' }">Contacts </p>
+              </nuxt-link>
             </li>
           </ul>
         </div>
@@ -108,7 +121,16 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      menu_route: ["blogs", "blogs-details-id", "product", "ingredients", "review", "contact", "favorite"]
+    }
+  },
+  computed: {
+    route_name() {
+      return this.$route.name
+    },
+  }
 }
 </script>
 
@@ -117,12 +139,14 @@ export default {
   width: 1px;
   height: 30px;
 }
+
 .notification {
   text-decoration: none;
   padding: 0px;
   position: relative;
   display: inline-block;
 }
+
 .notification .badge {
   position: absolute;
   top: -4px;

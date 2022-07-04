@@ -13,7 +13,7 @@
           <li>
             <div class="flex items-center">
               <div class="vl mx-1 bg-quaternary"></div>
-              <p class="font-medium md:ml-2">Blogs</p>
+              <p class="font-extrabold md:ml-2">Blogs</p>
             </div>
           </li>
         </ol>
@@ -24,7 +24,7 @@
         <!-- Card -->
         <div class="grid grid-cols-2 gab-1 text-quaternary">
           <div class="w-11/12 flex flex-col px-10" v-for="(data, i) in blogcard" :key="i">
-            <img :src="data.url" class="h-96 w-full rounded-lg" :class="{ 'mt-24': i % 2 != 0 }">
+            <img :src="data.url" class="rounded-3xl" :class="{ 'mt-24': i % 2 != 0 }">
             <p class="my-4 text-lg font-medium">Sed Ut Perspiciatis Unde Ommis lste Natus Error Sit</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis odit saepe modi fugit aut
               officiis animi nesciunt repellat molestias dolor laborum tempore deleniti sed provident quae natus,

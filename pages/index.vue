@@ -1,37 +1,37 @@
 <template>
-  <div class="bg-secondary relative">
+  <div class="bg-secondary relative overflow-hidden">
     <!-- Carousel -->
-    <Carousel class="z-10"/>
+    <Carousel class="z-10" />
 
     <!-- Products -->
-    <Product class="z-10"/>
+    <Product class="z-10" />
 
     <!-- Ingredients -->
-    <Ingredients class="z-10"/>
+    <Ingredients class="z-10" />
 
     <!-- Face -->
-    <Face class="z-10"/>
+    <Face class="z-10" />
 
     <!-- Video Review -->
-    <VideoReview class="z-10"/>
+    <VideoReview class="z-10" />
 
     <!-- Blogs -->
-    <Blogs class="z-10"/>
+    <Blogs class="z-10" />
 
     <!-- Review -->
-    <Review class="z-10"/>
+    <Review class="z-10" />
 
     <!-- FAQ -->
-    <Faq class="z-10"/>
+    <Faq class="z-10" />
 
-    <Subscribe class="z-10"/>
+    <Subscribe class="z-10 hidden" />
 
     <!-- Partner -->
-    <Partner class="z-10"/>
+    <Partner class="z-10" />
 
     <!-- background -->
-    <img src="~/static/images/IMG_01home/pages_01home/Group1050@2x.png" alt="" class="bg-1" >
-    <img src="~/static/images/IMG_03blogs/Group1152@2x.png" alt="" class="bg-2" >
+    <img src="~/static/images/IMG_01home/pages_01home/Group1050@2x.png" alt="" class="bg-1">
+    <img src="~/static/images/IMG_03blogs/Group1152@2x.png" alt="" class="bg-2">
     <img src="~/static/images/IMG_01home/pages_01home/Group1094@2x.png" alt="" class="bg-3">
     <img src="~/static/images/IMG_01home/pages_01home/Path322@2x.png" alt="" class="bg-4">
     <img src="~/static/images/IMG_01home/pages_01home/CANABLISS@2x.png" alt="" class="bg-5">
@@ -54,54 +54,61 @@ import VideoReview from '../components/homepage/video-review.vue'
 import Face from '~/components/homepage/face.vue'
 
 export default {
-  components: {Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face },
+  components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face },
 
 }
 </script>
 <style scoped>
-.bg-1{
+.bg-1 {
   height: 1000px;
   position: absolute;
   top: -150px;
   left: -150px;
 }
-.bg-2{
+
+.bg-2 {
   height: 900px;
   position: absolute;
   top: 50px;
   right: 50px;
 }
-.bg-3{
+
+.bg-3 {
   height: 250px;
   position: absolute;
   top: 900px;
   left: 450px;
 }
-.bg-4{
+
+.bg-4 {
   height: 400px;
   position: absolute;
   top: 1490px;
   left: 150px;
 }
-.bg-5{
+
+.bg-5 {
   height: 150px;
   position: absolute;
   top: 2150px;
   left: 170px;
 }
-.bg-6{
+
+.bg-6 {
   height: 1000px;
   position: absolute;
   top: 3600px;
   right: -650px;
 }
-.bg-7{
+
+.bg-7 {
   height: 600px;
   position: absolute;
   top: 4200px;
   left: -20px;
 }
-.bg-8{
+
+.bg-8 {
   height: 200px;
   position: absolute;
   top: 4350px;

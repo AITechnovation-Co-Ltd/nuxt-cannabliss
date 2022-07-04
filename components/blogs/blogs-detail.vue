@@ -19,7 +19,7 @@
           <li>
             <div class="flex items-center">
               <div class="vl mx-1 bg-quaternary"></div>
-              <p class="font-medium md:ml-2">Details</p>
+              <p class="font-extrabold md:ml-2">Details</p>
             </div>
           </li>
         </ol>
@@ -28,46 +28,47 @@
     <!-- -->
     <div class="w-full flex justify-center items-center">
       <!-- Details -->
-      <div class="w-1/2">
+      <div class="w-1/2 pr-4">
         <p class="my-4 text-4xl text-primary">ต้านการอักเสบของสิว</p>
-        <p class="pl-2 font-medium text-quaternary border-l-4 border-primary">การทาครีม CBD โดยไม่มีส่วนผสมของ THC
+        <p class="pl-2 font-medium text-quaternary border-l-4 border-primary text-2xl">การทาครีม CBD โดยไม่มีส่วนผสมของ THC
           เป็นทางเลือกที่
           ปลอดภัยและมีประสิทธิภาพ ไม่มีผลข้างเคียง พัฒนาคุณภาพชีวิต
           ของผู้ป่วยที่มีปัญหาผิวพรรณ โดยเฉพาะด้านการอักเสบ เช่น สิว</p>
-        <p class="my-4 text-quaternary text-sm">การทา CBD เฉพาะที่อาจมีประโยชน์สำหรับความผิดปรกติทางผิวหนังหลายอาการ
+        <p class="my-4 text-quaternary text-2xl">การทา CBD เฉพาะที่อาจมีประโยชน์สำหรับความผิดปรกติทางผิวหนังหลายอาการ
           ซึ่งรวมถึง
           สิวอักเสบ ภูมิแพ้ผิวหนัง เส้นขนที่มากผิดปกติและยับยั้งก่อนเกิดเป็นเนื้อร้ายบางชนิด</p>
-        <p class="text-quaternary text-sm">
+        <p class="text-quaternary text-2xl">
           ประสิทธิผล<br>กระบวนการต้านสิวเกิดขึ้นโดยการปรับการทำงานของเซลล์ซีโบไซต์ภายในต่อมไขมัน
           ด้วยCBD เซลล์ซีโบไซต์จะถูกขัดขวางไม่ให้ส่งสัญญานไปยังต่อมให้ผลิตไขมันผิวหนังมากเกิน
           ไป CBD จะไปหยุดการเพิ่มจำนวนของเซลล์ซีโบไซต๊ แต่ไม่ทำให้เซลล์ตาย และจะให้ฤทธิ์ต้าน
           การอักเสบที่มีศักยภาพแม้ในบริเวณที่มีสารก่อการอักเสบรุนแรงที่ทำให้เกิดสิว ดังนั้น CBD
           จึงเป็นความหวังสำหรับการรักษาสิวที่ไม่ระคายเคือง</p>
       </div>
-      <!-- Picture -->
-      <div class="w-1/2 flex justify-center">
-        <div class="w-96 h-96 relative bg-blue-300 rounded-lg"><img
-            src="@/static/images/IMG_03blogs_details/shutterstock.jpg"
-            class="w-96 h-96 absolute -left-8 -bottom-8 rounded-lg"></div>
 
+      <!-- Picture -->
+      <div class="w-1/2 h-full relative">
+        <div class="w-full h-full flex items-start">
+          <img src="@/static/images/IMG_03blogs_details/shutterstock.jpg" class="rounded-3xl w-11/12 mt-16 z-20" alt="">
+        </div>
+        <div class="bgimg rounded-3xl bg-tertiary absolute top-0 right-0"></div>
       </div>
     </div>
     <!-- -->
     <div class="w-full flex justify-center items-center my-8">
       <!-- Picture -->
       <div class="w-1/2 flex justify-center">
-        <img src="@/static/images/IMG_03blogs_details/cbd.png" class="w-96 h-96">
+        <img src="@/static/images/IMG_03blogs_details/cbd.png" class="w-9/12 h-9/12">
       </div>
       <!-- Details -->
       <div class="w-1/2">
         <p class="my-4 text-4xl text-primary">กลไกการทำงาน</p>
-        <p class="text-quaternary text-sm">ระบบเอ็นแคนนาบินอยด์ในผิวหนังจะควบคุมความผิดปกติทุกด้านที่เกิดขึ้นในสิว
+        <p class="text-quaternary text-2xl">ระบบเอ็นแคนนาบินอยด์ในผิวหนังจะควบคุมความผิดปกติทุกด้านที่เกิดขึ้นในสิว
           ในการทดลอง
           สารออกฤทธิ์หลายชนิดที่พบในกัญชา พบหลักฐานว่าลิโมนีนมีผลกระทบต่อกลไกที่เกี่ยวข้องกับ
           สิวและการรักษาสิว CBDและลิโมนีนร่วมกันอาจมีประสิทธิภาพสูงกว่า เนื่องจากสารทั้งสองชนิด
           นี้มีประสิทธิภาพในการต้านการอักเสบ เมื่อใช้เบต้า-แคริโอฟิลลีนร่วมกับCBDก็จะมีฤทธิ์ต้านการ
           อักเสบเช่นกัน</p>
-        <p class="my-4 text-quaternary text-sm ">ลักษณะทางเคมีที่บ่งใช้: สายพันธุ์ CBD ที่ผสมและใช้อยู่ในยาเฉพาะที่
+        <p class="my-4 text-quaternary text-2xl">ลักษณะทางเคมีที่บ่งใช้: สายพันธุ์ CBD ที่ผสมและใช้อยู่ในยาเฉพาะที่
           การรักษาส่วนของเทอร์ปีน
           ชนิดลิโมนิ่น แคริโอฟิลลีน หรือไพนิ่นไว้ในสูตรยาอาจมีประโยชน์</p>
       </div>
@@ -120,3 +121,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.bgimg {
+  width: 777px;
+  height: 518px;
+}
+</style>

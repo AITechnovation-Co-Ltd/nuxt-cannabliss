@@ -1,44 +1,26 @@
 <template>
   <div v-click-outside="hideEvent" class="w-full">
-    <button
-      @click="openClick"
-      class="outline-none focus:outline-none"
-      :class="toggleClass"
-    >
+    <button @click="openClick" class="outline-none focus:outline-none" :class="toggleClass">
       <div v-if="text">
-        <div
-          class="rounded border text-sm py-2 px-4 flex justify-between items-center"
-          :class="{
-            'border-border-textfeild  text-slate':
-              !disabled && theme != 'primary' && theme != 'primary-border',
-            'bg-blue-100 border-blue-100  text-primary': theme == 'primary',
-            'border-primary  text-primary': theme == 'primary-border',
-            'bg-gray-100 cursor-not-allowed': disabled,
-          }"
-        >
+        <div class="rounded border text-sm py-2 px-4 flex justify-between items-center" :class="{
+          'border-border-textfeild  text-slate':
+            !disabled && theme != 'primary' && theme != 'primary-border',
+          'bg-blue-100 border-blue-100  text-primary': theme == 'primary',
+          'border-primary  text-primary': theme == 'primary-border',
+          'bg-gray-100 cursor-not-allowed': disabled,
+        }">
           <div class="truncate">
             {{ text }}
           </div>
-          <base-icon
-            class="ml-4"
-            icon="dropdown"
-            width="10"
-            height="10"
-            viewBox="0 0 24 24"
-          ></base-icon>
+          <base-icon class="ml-4" icon="dropdown" width="10" height="10" viewBox="0 0 24 24"></base-icon>
         </div>
       </div>
       <div v-else>
         <slot name="toggle" />
       </div>
-      
+
     </button>
-    <div
-      v-show="open"
-      class="z-10"
-      :class="dropdownClassComp"
-      :style="{ width: dropdownWidthFull ? 'inherit' : '' }"
-    >
+    <div v-show="open" class="z-10" :class="dropdownClassComp" :style="{ width: dropdownWidthFull ? 'inherit' : '' }">
       <div class="overflow-hidden">
         <slot />
       </div>
@@ -47,6 +29,7 @@
 </template>
 
 <script>
+import { isReadable } from 'stream'
 import ClickOutside from 'vue-click-outside'
 
 export default {
@@ -87,6 +70,10 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
+    },
+    openUp: {
+      type: String,
+      default: '',
     }
   },
   data() {
@@ -94,9 +81,12 @@ export default {
   },
   computed: {
     dropdownClassComp() {
-      return this.dropdownClass }
+      return this.dropdownClass
+    }
   },
-  mounted() {},
+  mounted() {
+    if (this.openUp) this.open = !this.open
+  },
   methods: {
     openClick() {
       if (this.disabled) return
