@@ -29,7 +29,7 @@
                 class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow px-2 "
                 data-popper-placement="bottom"
                 style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
-                <p class="text-center">ไทย</p>
+                <p class="text-center">TH</p>
               </div>
 
           </div>
