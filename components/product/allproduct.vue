@@ -97,9 +97,9 @@
                         </div>
                         <div class="mb-4 text-quaternary text-xl">
                             <p>{{ product.type }}</p>
-                            <p class="text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
-                            <p class="mt-4">{{ product.detail.slice(0, 80) }}...</p>
-                            <base-button @click="$router.push(`/product/details`)" class="border-quaternary">View more
+                            <p class="text-3xl font-medium">{{ product.name.slice(0, 50) }} ...</p>
+                            <p class="mt-6">{{ product.detail.slice(0, 80) }} ...</p>
+                            <base-button @click="$router.push(`/product/details`)" class="my-10 border-quaternary">View more
                             </base-button>
                         </div>
                     </template>
