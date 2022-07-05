@@ -35,23 +35,29 @@
                 <hr class="w-full my-6 border-b border-gray-200 flex flex-col justify-center items-center" />
                 <div>
                     <ul class="decoration-none text-primary text-lg space-y-4">
-                        <li>
-                            <span class="hover:font-bold hover:cursor-pointer">Best Seller</span>
+                        <li @click="filterType('best')">
+                            <span class="hover:font-bold hover:cursor-pointer"
+                                :class="{ 'font-bold': type == 'best' }">Best Seller</span>
                         </li>
                         <li @click="filterType('new')">
-                            <span class="hover:font-bold hover:cursor-pointer">New In</span>
+                            <span class="hover:font-bold hover:cursor-pointer"
+                                :class="{ 'font-bold': type == 'new' }">New In</span>
                         </li>
                         <li @click="filterType('all')">
-                            <span class="hover:font-bold hover:cursor-pointer">All Products</span>
+                            <span class="hover:font-bold hover:cursor-pointer"
+                                :class="{ 'font-bold': type == 'all' }">All Products</span>
                         </li>
                         <li @click="filterType('hair')">
-                            <span class="hover:font-bold hover:cursor-pointer">Hair</span>
+                            <span class="hover:font-bold hover:cursor-pointer"
+                                :class="{ 'font-bold': type == 'hair' }">Hair</span>
                         </li>
                         <li @click="filterType('face')">
-                            <span class="hover:font-bold hover:cursor-pointer">Face</span>
+                            <span class="hover:font-bold hover:cursor-pointer"
+                                :class="{ 'font-bold': type == 'face' }">Face</span>
                         </li>
                         <li @click="filterType('body')">
-                            <span class="hover:font-bold hover:cursor-pointer">Body</span>
+                            <span class="hover:font-bold hover:cursor-pointer"
+                                :class="{ 'font-bold': type == 'body' }">Body</span>
                         </li>
                     </ul>
                 </div>
@@ -60,7 +66,13 @@
 
         <!-- Product cards -->
         <div class="w-9/12">
-            <h1 class="w-full text-4xl text-primary">All Products</h1>
+            <h1 v-if="type == 'all'" class="w-full text-4xl text-primary">All Products</h1>
+            <h1 v-else-if="type == 'face'" class="w-full text-4xl text-primary">Face</h1>
+            <h1 v-else-if="type == 'body'" class="w-full text-4xl text-primary">Body</h1>
+            <h1 v-else-if="type == 'hair'" class="w-full text-4xl text-primary">Hair</h1>
+            <h1 v-else-if="type == 'best'" class="w-full text-4xl text-primary">Best Seller</h1>
+            <h1 v-else-if="type == 'new'" class="w-full text-4xl text-primary">New In</h1>
+            <h1 v-else class="w-full text-4xl text-primary">All Products</h1>
 
             <!-- Sort by -->
             <div class="w-full py-4 mt-8 bg-tertiary flex flex-row items-center justify-end">
@@ -88,7 +100,7 @@
                     <template v-if="index < 6 * page && index >= 6 * (page - 1)">
                         <div class="relative">
                             <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
-                            <img class="centered w-full" :src="product.imgUrl" />
+                            <img :src="require(`~/static/images/products${product.imgUrl}`)" class="centered w-full" />
                             <span v-if="product.isNew"
                                 class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
                             <base-icon icon="heartactive" viewBox="0 0 30 41" size="50"
@@ -97,9 +109,10 @@
                         </div>
                         <div class="mb-4 text-quaternary text-xl">
                             <p>{{ product.type }}</p>
-                            <p class="text-3xl font-medium">{{ product.name.slice(0, 50) }} ...</p>
-                            <p class="mt-6">{{ product.detail.slice(0, 80) }} ...</p>
-                            <base-button @click="$router.push(`/product/details`)" class="my-10 border-quaternary">View more
+                            <p class="text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
+                            <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
+                            <base-button @click="$router.push(`/product/details/${product.no}`)"
+                                class="border-quaternary">View more
                             </base-button>
                         </div>
                     </template>
@@ -134,12 +147,13 @@ export default {
             return list
         },
     },
-    mounted() {
+    async mounted() {
+        // console.log(this.$route.params.type)
+        if (this.$route.params.type) this.type = await this.$route.params.type
         this.total_p = Math.ceil(this.products.length / 6)
     },
     methods: {
         change(p) {
-            console.log(p)
             this.page = p
         },
         filterType(type) {

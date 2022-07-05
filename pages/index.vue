@@ -19,7 +19,8 @@
     <Blogs class="z-10" />
 
     <!-- Review -->
-    <Review class="z-10" />
+    <slick class="z-10" />
+    <!-- <Review class="z-10" /> -->
 
     <!-- FAQ -->
     <Faq class="z-10" />
@@ -42,6 +43,7 @@
 </template>
 
 <script>
+import slick from '~/components/homepage/slick.vue'
 import Subscribe from '../components/layout/subscribe.vue'
 import Carousel from '~/components/homepage/carousel.vue'
 import Product from '~/components/homepage/product.vue'
@@ -54,7 +56,7 @@ import VideoReview from '../components/homepage/video-review.vue'
 import Face from '~/components/homepage/face.vue'
 
 export default {
-  components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face },
+  components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick },
 
 }
 </script>

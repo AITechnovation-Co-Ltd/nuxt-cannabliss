@@ -1,7 +1,7 @@
 <template>
   <div>
     <ProductBanner />
-    <ProductDetail class="mt-20"/>
+    <ProductDetail class="mt-20" :params="$route.params.id" />
     <ProductOther />
     <ProductReview />
     <Subscribe class="hidden" />
@@ -15,10 +15,12 @@ import ProductOther from '../../../components/product/product-other.vue';
 import ProductReview from '../../../components/product/product-review.vue';
 import Subscribe from '../../../components/layout/subscribe.vue';
 export default {
-    components: { ProductBanner, ProductDetail, ProductOther, ProductReview, Subscribe }
+  components: { ProductBanner, ProductDetail, ProductOther, ProductReview, Subscribe },
+  mounted() {
+    console.log(this.$route.params.id)
+  }
 }
 </script>
 
 <style>
-
 </style>

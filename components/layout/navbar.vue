@@ -52,11 +52,11 @@
           <ul class="flex flex-col mt-4 md:flex-row md:space-x-16 md:mt-0 text-base">
             <li>
               <!-- <nuxt-link to="/product" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Product</nuxt-link> -->
-
               <!-- Dropdown menu -->
               <p id="dropdownDefault" data-dropdown-toggle="multilang"
                 class="text-primary hover:cursor-pointer rounded-lg flex items-center"
-                :class="{ 'font-extrabold': route_name == 'product' || route_name == 'product-details-id' }" type="button">
+                :class="{ 'font-extrabold': route_name == 'product' || route_name == 'product-details-id' }"
+                type="button">
                 Product
                 <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg">
@@ -73,23 +73,22 @@
                       Products</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/product"
+                    <p @click="$router.push({ name: 'product', params: { type: 'hair' } })"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Hair
-                    </nuxt-link>
+                    </p>
                   </li>
                   <li>
-                    <nuxt-link to="/product"
+                    <p @click="$router.push({ name: 'product', params: { type: 'face' } })"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Face
-                    </nuxt-link>
+                    </p>
                   </li>
                   <li>
-                    <nuxt-link to="/product"
+                    <p @click="$router.push({ name: 'product', params: { type: 'body' } })"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Body
-                    </nuxt-link>
+                    </p>
                   </li>
                 </ul>
               </div>
-
             </li>
             <li>
               <nuxt-link to="/ingredients" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
@@ -130,7 +129,7 @@ export default {
     route_name() {
       return this.$route.name
     },
-  }
+  },
 }
 </script>
 
