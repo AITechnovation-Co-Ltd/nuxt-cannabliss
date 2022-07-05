@@ -1,9 +1,10 @@
 <template>
-    <div class="mt-2 flex text-center px-4 text-sm font-light tracking-wide text-blac"
+    <div class="mt-2 flex text-center px-4 text-2xl text-quaternary font-light tracking-wide "
         :class="{ 'border-t py-2': border, 'border-none': !border }">
-        <span class="flex items-center mr-1 ml-auto">
-            {{ page }} จาก {{ total_pages }} หน้า
-        </span>
+        <div class="flex items-center mr-1 ml-auto">
+            <p> <span class="font-medium">{{ page + ' ' }}</span>from<span class="font-medium">{{ ' ' + total_pages + ' '
+            }} </span>pages</p>
+        </div>
         <!-- Pagination -->
         <t-pagination :total-items="total_pages" :per-page="size" :limit="limit" @change="pageChange" :value="page" />
     </div>

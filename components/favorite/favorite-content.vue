@@ -46,13 +46,11 @@
                     </select>
                 </div>
             </div>
-
             <!-- Product card -->
-            <div class="w-full mt-20 grid grid-cols-3 gap-x-6 gap-y-10">
+            <div class="w-full mt-20 grid grid-cols-3 gap-x-4">
                 <div class="w-full" v-for="(product, index) in products" :key="index">
                     <template v-if="index < 6 * page && index >= 6 * (page - 1)">
-                        <div class="relative border-8 border-card">
-                            {{ index }}
+                        <div class="relative">
                             <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
                             <img class="centered w-full" :src="product.img" alt="" />
                             <span v-if="product.isNew"
@@ -61,7 +59,7 @@
                                 class="hover:cursor-pointer text-red-500 absolute top-8 right-8" />
                             <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
                         </div>
-                        <div class="text-quaternary text-xl">
+                        <div class="mb-4 text-quaternary text-xl">
                             <p>{{ product.type }}</p>
                             <p class="text-3xl font-medium">{{ product.name }}</p>
                             <p class="mt-4">{{ product.datial }}</p>
@@ -71,7 +69,6 @@
                     </template>
                 </div>
             </div>
-
             <base-pages @change="change" :page="page" :total_pages="total_p" :limit="7"></base-pages>
         </div>
     </div>
@@ -153,7 +150,7 @@ export default {
         }
     },
     mounted() {
-        this.total_p = Math.ceil(this.products.length / 10)
+        this.total_p = Math.ceil(this.products.length / 6)
     },
     methods: {
         change(p) {
