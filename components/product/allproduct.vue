@@ -38,19 +38,19 @@
                         <li>
                             <span class="hover:font-bold hover:cursor-pointer">Best Seller</span>
                         </li>
-                        <li>
+                        <li @click="filterType('new')">
                             <span class="hover:font-bold hover:cursor-pointer">New In</span>
                         </li>
-                        <li>
+                        <li @click="filterType('all')">
                             <span class="hover:font-bold hover:cursor-pointer">All Products</span>
                         </li>
-                        <li>
+                        <li @click="filterType('hair')">
                             <span class="hover:font-bold hover:cursor-pointer">Hair</span>
                         </li>
-                        <li>
+                        <li @click="filterType('face')">
                             <span class="hover:font-bold hover:cursor-pointer">Face</span>
                         </li>
-                        <li>
+                        <li @click="filterType('body')">
                             <span class="hover:font-bold hover:cursor-pointer">Body</span>
                         </li>
                     </ul>
@@ -84,11 +84,11 @@
 
             <!-- Product card -->
             <div class="w-full mt-20 grid grid-cols-3 gap-x-4">
-                <div class="w-full" v-for="(product, index) in products" :key="index">
+                <div class="w-full" v-for="(product, index) in list_products" :key="index">
                     <template v-if="index < 6 * page && index >= 6 * (page - 1)">
                         <div class="relative">
                             <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
-                            <img class="centered w-full" :src="product.img" alt="" />
+                            <img class="centered w-full" :src="product.imgUrl" />
                             <span v-if="product.isNew"
                                 class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
                             <base-icon icon="heartactive" viewBox="0 0 30 41" size="50"
@@ -97,8 +97,8 @@
                         </div>
                         <div class="mb-4 text-quaternary text-xl">
                             <p>{{ product.type }}</p>
-                            <p class="text-3xl font-medium">{{ product.name }}</p>
-                            <p class="mt-4">{{ product.datial }}</p>
+                            <p class="text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
+                            <p class="mt-4">{{ product.detail.slice(0, 80) }}...</p>
                             <base-button @click="$router.push(`/product/details`)" class="border-quaternary">View more
                             </base-button>
                         </div>
@@ -112,97 +112,28 @@
 
 <script>
 import BaseButton from "../base/base-button.vue";
+import products from "@/static/json/products.json"
 export default {
     data() {
         return {
             page: 1,
             total_p: 1,
-            products: [
-                {
-                    name: "Canabliss Crown : Anti -Fall Nourishing Shampoo",
-                    type: "Hair",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: true,
-                    img: require("~/static/images/IMG_06fav/Group508@2x.png"),
-                },
-                {
-                    name: "Canabliss Oasiz : Red Fruit Overnight Mask",
-                    type: "Face",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: true,
-                    img: require("~/static/images/IMG_02products_detail/Group669@2x.png"),
-                },
-                {
-                    name: "Canabliss Crown : Anti -Fall Nourishing Shampoo",
-                    type: "Hair",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: false,
-                    img: require("~/static/images/IMG_06fav/Group508@2x.png"),
-                },
-                {
-                    name: "Canabliss Crown : Anti -Fall Nourishing Shampoo",
-                    type: "Hair",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: false,
-                    img: require("~/static/images/IMG_06fav/Group508@2x.png"),
-                },
-                {
-                    name: "Canabliss Oasiz : Red Fruit Overnight Mask",
-                    type: "Face",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: false,
-                    img: require("~/static/images/IMG_02products_detail/Group669@2x.png"),
-                },
-                {
-                    name: "Canabliss Crown : Anti -Fall Nourishing Shampoo",
-                    type: "Hair",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: false,
-                    img: require("~/static/images/IMG_06fav/Group508@2x.png"),
-                },
-                {
-                    name: "Canabliss Crown : Anti -Fall Nourishing Shampoo",
-                    type: "Hair",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: false,
-                    img: require("~/static/images/IMG_06fav/Group508@2x.png"),
-                },
-                {
-                    name: "Canabliss Oasiz : Red Fruit Overnight Mask",
-                    type: "Face",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: false,
-                    img: require("~/static/images/IMG_02products_detail/Group669@2x.png"),
-                },
-                {
-                    name: "Canabliss Crown : Anti -Fall Nourishing Shampoo",
-                    type: "Hair",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: false,
-                    img: require("~/static/images/IMG_06fav/Group508@2x.png"),
-                },
-            ],
+            products,
+            type: 'all',
         };
     },
     components: { BaseButton },
+    computed: {
+        list_products() {
+            let list = []
+            if (this.type === 'all') {
+                list = this.products
+            } else {
+                list = this.products.filter((e) => e.type === this.type)
+            }
+            return list
+        },
+    },
     mounted() {
         this.total_p = Math.ceil(this.products.length / 6)
     },
@@ -210,6 +141,9 @@ export default {
         change(p) {
             console.log(p)
             this.page = p
+        },
+        filterType(type) {
+            this.type = type
         },
     }
 };

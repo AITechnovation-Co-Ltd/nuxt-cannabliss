@@ -21,29 +21,29 @@
       <div class="w-5/6">
         <!-- Product card -->
 
-        <div class="w-full grid grid-cols-3 gap-x-6 gap-y-10">
-          <div class="w-full" v-for="(product, index) in products" :key="index">
-            <div class="card relative bg-card rounded-3xl">
-              <span v-if="product.isNew"
-                class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
-              <base-icon icon="heart" viewBox="0 0 30 41" size="50" class="absolute text-quaternary top-4 right-4" />
-              <img class="w-full" :src="product.img">
-              <p class="absolute bottom-4 right-4 font-light ">{{ product.quantity }}ML</p>
-            </div>
-            <div class="text-quaternary text-xl">
-              <p class="mt-8">{{ product.type }}</p>
-              <p class="text-3xl font-medium">{{ product.name }}</p>
-              <p class="mt-4">{{ product.datial }}</p>
-              <BaseButton @click="$router.push(`/product/details`)" class="mt-8">View more</BaseButton>
-            </div>
+        <div class="w-full mt-20 grid grid-cols-3 gap-x-4">
+          <div class="w-full" v-for="(product, index) in list_products" :key="index">
+            <template v-if="index < 3 * page && index >= 3 * (page - 1)">
+              <div class="relative">
+                <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
+                <img class="centered w-full" :src="product.imgUrl" />
+                <span v-if="product.isNew"
+                  class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
+                <base-icon icon="heartactive" viewBox="0 0 30 41" size="50"
+                  class="hover:cursor-pointer text-red-500 absolute top-8 right-8" />
+                <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
+              </div>
+              <div class="mb-4 text-quaternary text-xl">
+                <p>{{ product.type }}</p>
+                <p class="text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
+                <p class="mt-4">{{ product.detail.slice(0, 80) }}...</p>
+                <base-button @click="$router.push(`/product/details`)" class="border-quaternary">View more
+                </base-button>
+              </div>
+            </template>
           </div>
         </div>
-        <div class="w-ful mt-8">
-          <p class="text-4xl text-primary"><span class="font-bold">1</span>/3</p>
-          <div class="progres mt-5 bg-primary rounded-full h-0.5 flex items-center">
-            <div class="bg-primary h-1.5 rounded-full" style="width: 33%"></div>
-          </div>
-        </div>
+        <base-pages @change="change" :page="page" :total_pages="total_p" :limit="7"></base-pages>
       </div>
     </div>
   </div>
@@ -51,16 +51,39 @@
 
 <script>
 import BaseButton from '../base/base-button.vue';
+import products from "@/static/json/products.json"
 export default {
   components: { BaseButton },
   data() {
     return {
-      products: [
-        { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: true, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
-        { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img: require("~/static/images/IMG_02products_detail/Group669@2x.png") },
-        { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100", isNew: false, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
-      ]
+      page: 1,
+      total_p: 1,
+      products,
+      type: 'all',
     }
+  },
+  computed: {
+    list_products() {
+      let list = []
+      if (this.type === 'all') {
+        list = this.products
+      } else {
+        list = this.products.filter((e) => e.type === this.type)
+      }
+      return list
+    },
+  },
+  mounted() {
+    this.total_p = Math.ceil(this.products.length / 3)
+  },
+  methods: {
+    change(p) {
+      console.log(p)
+      this.page = p
+    },
+    filterType(type) {
+      this.type = type
+    },
   }
 }
 </script>
@@ -71,12 +94,12 @@ export default {
   width: 40%;
 }
 
-.card {
-  height: 580.77px;
-  width: 455.11px;
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -35%);
 }
 
-.progres {
-  width: 500px;
-}
 </style>
