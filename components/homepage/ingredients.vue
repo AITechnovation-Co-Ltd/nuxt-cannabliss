@@ -26,10 +26,7 @@
           <div class="w-3/5 ml-16 flex">
             <div class="w-1/2 flex flex-col">
               <img class="rounded-3xl" src="~/static/images/IMG_01home/pages_01home/IMG_1290.jpg" alt="">
-              <div class="ml-4 mt-6 flex space-x-3">
-                <div class="h-5 w-5 rounded-full bg-tertiary"></div>
-                <div class="h-5 w-5 rounded-full bg-gray-300"></div>
-              </div>
+              
             </div>
             <div class="w-1/2 ml-8">
               <img class="mt-28 rounded-3xl" src="~/static/images/IMG_01home/pages_01home/IMG_1262.jpg" alt="">
@@ -58,10 +55,7 @@
           <div class="w-3/5 ml-16 flex">
             <div class="w-1/2 flex flex-col">
               <img class="rounded-3xl" src="~/static/images/IMG_01home/pages_01home/IMG_1290.jpg" alt="">
-              <div class="ml-4 mt-6 flex space-x-3">
-                <div class="h-5 w-5 rounded-full bg-tertiary"></div>
-                <div class="h-5 w-5 rounded-full bg-gray-300"></div>
-              </div>
+              
             </div>
             <div class="w-1/2 ml-8">
               <img class="mt-28 rounded-3xl" src="~/static/images/IMG_01home/pages_01home/IMG_1262.jpg" alt="">
@@ -90,10 +84,7 @@
           <div class="w-3/5 ml-16 flex">
             <div class="w-1/2 flex flex-col">
               <img class="rounded-3xl" src="~/static/images/IMG_01home/pages_01home/IMG_1290.jpg" alt="">
-              <div class="ml-4 mt-6 flex space-x-3">
-                <div class="h-5 w-5 rounded-full bg-tertiary"></div>
-                <div class="h-5 w-5 rounded-full bg-gray-300"></div>
-              </div>
+              
             </div>
             <div class="w-1/2 ml-8">
               <img class="mt-28 rounded-3xl" src="~/static/images/IMG_01home/pages_01home/IMG_1262.jpg" alt="">
@@ -129,11 +120,7 @@
     </div>
     <div class="w-3/5 ml-16 flex">
       <div class="w-1/2 flex flex-col">
-        <img class="rounded-3xl" src="~/static/images/IMG_01home/pages_01home/IMG_1290.jpg" alt="">
-        <div class="ml-4 mt-6 flex space-x-3">
-          <div class="h-5 w-5 rounded-full bg-tertiary"></div>
-          <div class="h-5 w-5 rounded-full bg-gray-300"></div>
-        </div>
+        <img class="rounded-3xl" src="~/static/images/IMG_01home/pages_01home/IMG_1290.jpg" alt=""
       </div>
       <div class="w-1/2 ml-8">
         <img class="mt-28 rounded-3xl" src="~/static/images/IMG_01home/pages_01home/IMG_1262.jpg" alt="">
