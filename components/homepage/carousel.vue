@@ -30,12 +30,12 @@
         </div>
       </div>
     </VueSlickCarousel>
-    <div class="absolute bottom-0 right-0">
-      <div class="flex">
-        <img class="w-12" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
-        <img class="w-12" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
-        <img class="w-12" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
-        <img class="w-12" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt="">
+    <div class="absolute bottom-20 right-20">
+      <div class="flex space-x-8">
+        <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
+        <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
+        <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
+        <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt="">
       </div>
     </div>
     <!-- <div class="w-full h-1/6 flex justify-between items-start">
@@ -90,9 +90,5 @@ export default {
 .vl {
   height: 145px;
   width: 15px;
-}
-
-.progres {
-  width: 500px;
 }
 </style>
