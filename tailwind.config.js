@@ -8,7 +8,12 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
-    extend: {},
+    variants: {
+      extend: {
+        opacity: ['disabled'],
+        cursor: ['disabled'],
+      },
+    },
     colors: {
       bg: '#CDDAD7',
       white: '#ffffff',
@@ -158,6 +163,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/forms'),
     require('flowbite/plugin'),
   ]
 }
