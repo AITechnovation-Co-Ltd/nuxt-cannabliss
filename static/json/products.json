@@ -1,0 +1,47 @@
+[
+    {
+        "no":1,
+        "imgUrl":"~/static/images/products/IMG_1200.jpg",
+        "name":"Canabliss Advance Eye Cream Brown Algae Plus Caffeine",
+        "detail":"ครีมบำรุงรอบดวงตา เพื่อผิวแลดูอ่อนกว่าวัย เนื้อครีมบางเบา อ่อนโยนแม้ผิวแพ้ง่าย ผสานคุณค่าเปปไทด์ที่ออกฤทธิ์คล้าย Botox ช่วยลดเลือนริ้วรอยอย่างตรงจุด พร้อมคุณค่าจากสาหร่ายสีน้ำตาลและแคปซูลบรรจุคาเฟอีน ช่วยฟื้นบำรุงรอยคล้ำใต้ตา เสริมคุณสมบัติด้วยไฮยาลูรอนและเซราไมด์ ช่วยเติมความชุ่มชื้นให้ผิวรอบดวงตา",
+        "link":"https://morhelloclinic.com/product/canabliss-advance-eye-cream-brown-algae-plus-caffeine-10-g/",
+        "type":"face",
+        "quantity": "10 g"
+    },
+    {
+        "no":2,
+        "imgUrl":"~/static/images/products/IMG_1197.jpg",
+        "name":"Canabliss Clear Micellar Cleansing Gel Organic Bulgarian Rose",
+        "detail":"เจลล้างหน้าและเครื่องสำอางที่อ่อนโยนแม้ผิวแพ้ง่าย ทำหน้าที่ช่วยดักจับสิ่งสกปรกอย่างล้ำลึกและขจัดออกจากผิวอย่างอ่อนโยน สามารถใช้รอบดวงตาได้โดยไม่ก่อให้เกิดการระคายเคือง ช่วยลดแบคทีเรียและความมัน สาเหตุของการเกิดสิว ช่วยให้ผิวหน้ากระชับ ชุ่มชื้น ไม่แห้งกร้าน เนื้อเจลนุ่มลื่น เกลี่ยง่าย ไม่ต้องใช้สำลีในการเช็ดทำความสะอาดจึงช่วยลดการเสียดสีผิวซึ่งเป็นสาเหตุของริ้วรอยได้ดี",
+        "link":"https://morhelloclinic.com/product/canabliss-clear-micellar-cleansing-gel-organic-bulgarian-rose-100-ml/",
+        "type":"face",
+        "quantity": "100ml"
+    },
+    {
+        "no":3,
+        "imgUrl":"~/static/images/products/IMG_1195.jpg",
+        "name":"Canabliss Oasiz First Step Amino Essence",
+        "detail":"เอสเซ้นส์บำรุงผิว เพื่อผิวหน้าสดใส อิ่มเด้งตลอดวัน เอสเซ้นส์เนื้อบางเบา เพิ่มและกักเก็บความชุ่มชื้นได้ยาวนาน ผสานสารสกัดจากสารสกัดกัญชาและใบบัวบกด้วยเทคนิคการสกัดพิเศษ ช่วยลดการอักเสบอย่างตรงจุด และยังมี Amino acids ช่วยเติมอาหารให้แก่ผิว ให้ผิวอิ่มฟู นุ่มเด้ง ดูเปล่งปลั่ง อ่อนโยนแม้ผิวแพ้ง่าย",
+        "link":"https://morhelloclinic.com/product/canabliss-oasiz-first-step-amino-essence-100-ml/",
+        "type":"face",
+        "quantity": "100ml"
+    },
+    {
+        "no":4,
+        "imgUrl":"~/static/images/products/IMG_1202.jpg",
+        "name":"Canabliss Pre&Probiotic Balancing Essence",
+        "detail":"เอสเซ้นส์น้ำตบ ตบผิวให้เด้ง คืนสมดุลผิวใส สูตรอ่อนโยน เนื้อบางเบา ไม่เหนอะหนะ ช่วยคืนสมดุล Skin microbiome ด้วย Probiotics และ Prebiotics ให้ผิวแข็งแรง พร้อมมอบความชุ่มชื่น เนียนนุ่มจากกรดไฮยาลูโรนิคแบบ 3D ที่ครอบคลุมตั้งแต่ขนาดใหญ่เพื่อป้องกันการสูญเสียความชิ้นจากผิว ขนาดกลางเพื่อช่วยกักเก็บน้ำในชั้นผิว และขนาดเล็กที่ซึมลึกเพิ่มความชุ่มชื้นยาวนาน ผสานด้วยนาโนเซราไมด์เข้าฟื้นบำรุงอย่างล้ำลึก เสริมปราการผิวให้แข็งแรงสุขภาพดี",
+        "link":"https://morhelloclinic.com/product/canabliss-preprobiotic-balancing-essence-100-ml/",
+        "type":"face",
+        "quantity": "100ml"
+    },
+    {
+        "no":5,
+        "imgUrl":"~/static/images/products/IMG_1192.jpg",
+        "name":"Canabliss Rose Petal Anti-Pollution Toner",
+        "detail":"โทนเนอร์บำรุงผิว เพื่อผิวสว่างกระจ่างใส ด้วยคุณค่าจากสารสกัดกุหลาบและ IBR Snowflake ปลอบประโลมผิวให้แลดูเปล่งปลั่ง พร้อมปกป้องผิวจากมลภาวะและฝุ่น PM 2.5 ช่วยให้ผิวสะอาดนุ่ม ชุ่มชื่น อ่อนโยนแม้ผิวแพ้ง่าย",
+        "link":"https://morhelloclinic.com/product/canabliss-rose-petal-anti-pollution-toner-100-ml/",
+        "type":"face",
+        "quantity": "100 ml"
+    }
+]
