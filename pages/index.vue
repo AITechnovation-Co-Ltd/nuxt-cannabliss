@@ -19,7 +19,8 @@
     <Blogs class="z-10" />
 
     <!-- Review -->
-    <Review class="z-10" />
+    <slick class="z-10" />
+    <!-- <Review class="z-10" /> -->
 
     <!-- FAQ -->
     <Faq class="z-10" />
@@ -34,7 +35,7 @@
     <img src="~/static/images/IMG_03blogs/Group1152@2x.png" alt="" class="bg-2">
     <img src="~/static/images/IMG_01home/pages_01home/Group1094@2x.png" alt="" class="bg-3">
     <img src="~/static/images/IMG_01home/pages_01home/Path322@2x.png" alt="" class="bg-4">
-    <img src="~/static/images/IMG_01home/pages_01home/CANABLISS@2x.png" alt="" class="bg-5">
+    <img src="~/static/images/IMG_01home/pages_01home/CANABLISS@2x.png" alt="" class="bg-5 z-20">
     <img src="~/static/images/IMG_01home/pages_01home/Group1053@2x.png" alt="" class="bg-6">
     <img src="~/static/images/IMG_01home/pages_01home/CANABLISS_01.png" alt="" class="bg-7">
     <img src="~/static/images/IMG_01home/pages_01home/Group1115@2x.png" alt="" class="bg-8">
@@ -42,6 +43,7 @@
 </template>
 
 <script>
+import slick from '~/components/homepage/slick.vue'
 import Subscribe from '../components/layout/subscribe.vue'
 import Carousel from '~/components/homepage/carousel.vue'
 import Product from '~/components/homepage/product.vue'
@@ -54,7 +56,7 @@ import VideoReview from '../components/homepage/video-review.vue'
 import Face from '~/components/homepage/face.vue'
 
 export default {
-  components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face },
+  components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick },
 
 }
 </script>

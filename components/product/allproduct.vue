@@ -35,23 +35,29 @@
                 <hr class="w-full my-6 border-b border-gray-200 flex flex-col justify-center items-center" />
                 <div>
                     <ul class="decoration-none text-primary text-lg space-y-4">
-                        <li>
-                            <span class="hover:font-bold hover:cursor-pointer">Best Seller</span>
+                        <li @click="filterType('best')">
+                            <span class="hover:font-bold hover:cursor-pointer"
+                                :class="{ 'font-bold': type == 'best' }">Best Seller</span>
                         </li>
-                        <li>
-                            <span class="hover:font-bold hover:cursor-pointer">New In</span>
+                        <li @click="filterType('new')">
+                            <span class="hover:font-bold hover:cursor-pointer"
+                                :class="{ 'font-bold': type == 'new' }">New In</span>
                         </li>
-                        <li>
-                            <span class="hover:font-bold hover:cursor-pointer">All Products</span>
+                        <li @click="filterType('all')">
+                            <span class="hover:font-bold hover:cursor-pointer"
+                                :class="{ 'font-bold': type == 'all' }">All Products</span>
                         </li>
-                        <li>
-                            <span class="hover:font-bold hover:cursor-pointer">Hair</span>
+                        <li @click="filterType('hair')">
+                            <span class="hover:font-bold hover:cursor-pointer"
+                                :class="{ 'font-bold': type == 'hair' }">Hair</span>
                         </li>
-                        <li>
-                            <span class="hover:font-bold hover:cursor-pointer">Face</span>
+                        <li @click="filterType('face')">
+                            <span class="hover:font-bold hover:cursor-pointer"
+                                :class="{ 'font-bold': type == 'face' }">Face</span>
                         </li>
-                        <li>
-                            <span class="hover:font-bold hover:cursor-pointer">Body</span>
+                        <li @click="filterType('body')">
+                            <span class="hover:font-bold hover:cursor-pointer"
+                                :class="{ 'font-bold': type == 'body' }">Body</span>
                         </li>
                     </ul>
                 </div>
@@ -60,7 +66,13 @@
 
         <!-- Product cards -->
         <div class="w-9/12">
-            <h1 class="w-full text-4xl text-primary">All Products</h1>
+            <h1 v-if="type == 'all'" class="w-full text-4xl text-primary">All Products</h1>
+            <h1 v-else-if="type == 'face'" class="w-full text-4xl text-primary">Face</h1>
+            <h1 v-else-if="type == 'body'" class="w-full text-4xl text-primary">Body</h1>
+            <h1 v-else-if="type == 'hair'" class="w-full text-4xl text-primary">Hair</h1>
+            <h1 v-else-if="type == 'best'" class="w-full text-4xl text-primary">Best Seller</h1>
+            <h1 v-else-if="type == 'new'" class="w-full text-4xl text-primary">New In</h1>
+            <h1 v-else class="w-full text-4xl text-primary">All Products</h1>
 
             <!-- Sort by -->
             <div class="w-full py-4 mt-8 bg-tertiary flex flex-row items-center justify-end">
@@ -83,176 +95,71 @@
             </div>
 
             <!-- Product card -->
-            <div class="w-full mt-20 grid grid-cols-3 gap-x-6 gap-y-10">
-                <div class="w-full" v-for="(product, index) in products" :key="index">
-                    <div class="relative border-8 border-card hover:border-tertiary hover:rounded-xl">
-                        <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
-                        <img class="centered w-full" :src="product.img" alt="" />
-                        <span v-if="product.isNew"
-                            class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
-                        <base-icon icon="heartactive" viewBox="0 0 30 41" size="50"
-                            class="hover:cursor-pointer text-red-500 absolute top-8 right-8" />
-                        <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
-                    </div>
-                    <div class="text-quaternary text-xl">
-                        <p>{{ product.type }}</p>
-                        <p class="text-3xl font-medium">{{ product.name }}</p>
-                        <p class="mt-4">{{ product.datial }}</p>
-                        <BaseButton @click="$router.push(`/product/details`)">View more</BaseButton>
-                    </div>
+            <div class="w-full mt-20 grid grid-cols-3 gap-x-4">
+                <div class="w-full" v-for="(product, index) in list_products" :key="index">
+                    <template v-if="index < 6 * page && index >= 6 * (page - 1)">
+                        <div class="relative">
+                            <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
+                            <img :src="require(`~/static/images/products${product.imgUrl}`)" class="centered w-full" />
+                            <span v-if="product.isNew"
+                                class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
+                            <base-icon icon="heartactive" viewBox="0 0 30 41" size="50"
+                                class="hover:cursor-pointer text-red-500 absolute top-8 right-8" />
+                            <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
+                        </div>
+                        <div class="mb-4 text-quaternary text-xl">
+                            <p>{{ product.type }}</p>
+                            <p class="text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
+                            <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
+                            <base-button @click="$router.push(`/product/details/${product.no}`)"
+                                class="border-quaternary">View more
+                            </base-button>
+                        </div>
+                    </template>
                 </div>
             </div>
-            <div class="w-full mt-20 flex justify-end items-center">
-                <nav aria-label="Page navigation example">
-                    <ul class="inline-flex items-center space-x-3">
-                        <li>
-                            <div
-                                class="h-9 w-9 rounded-full flex justify-center items-center border border-quaternary hover:bg-primary hover:text-white hover:border-none hover:cursor-pointer">
-                                <a href="#" class="">
-                                    <!-- <span class="sr-only">Previous</span> -->
-                                    <svg class="w-5 h-5 text-quaternary" fill="currentColor" viewBox="0 0 20 20"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div
-                                class="h-9 w-9 rounded-full flex justify-center items-center bg-primary hover:bg-primary hover:text-white hover:border-none hover:cursor-pointer">
-                                <a href="#" class="leading-tight rounded-full text-white">1</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div
-                                class="h-9 w-9 rounded-full flex justify-center items-center text-quaternary border border-quaternary hover:bg-primary hover:text-white hover:border-none hover:cursor-pointer">
-                                <a href="#" class="leading-tight rounded-full">2</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div
-                                class="h-9 w-9 rounded-full flex justify-center items-center text-quaternary border border-quaternary hover:bg-primary hover:text-white hover:border-none hover:cursor-pointer">
-                                <a href="#" class="leading-tight rounded-full">3</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div
-                                class="h-9 w-9 rounded-full flex justify-center items-center border border-quaternary hover:bg-primary hover:text-white hover:border-none hover:cursor-pointer">
-                                <a href="#" class="">
-                                    <!-- <span class="sr-only">Next</span> -->
-                                    <svg class="w-5 h-5 text-quaternary" fill="currentColor" viewBox="0 0 20 20"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <base-pages @change="change" :page="page" :total_pages="total_p" :limit="7"></base-pages>
         </div>
     </div>
 </template>
 
 <script>
 import BaseButton from "../base/base-button.vue";
+import products from "@/static/json/products.json"
 export default {
     data() {
         return {
-            test: true,
-            products: [
-                {
-                    name: "Canabliss Crown : Anti -Fall Nourishing Shampoo",
-                    type: "Hair",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: true,
-                    img: require("~/static/images/IMG_06fav/Group508@2x.png"),
-                },
-                {
-                    name: "Canabliss Oasiz : Red Fruit Overnight Mask",
-                    type: "Face",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: true,
-                    img: require("~/static/images/IMG_02products_detail/Group669@2x.png"),
-                },
-                {
-                    name: "Canabliss Crown : Anti -Fall Nourishing Shampoo",
-                    type: "Hair",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: false,
-                    img: require("~/static/images/IMG_06fav/Group508@2x.png"),
-                },
-                {
-                    name: "Canabliss Crown : Anti -Fall Nourishing Shampoo",
-                    type: "Hair",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: false,
-                    img: require("~/static/images/IMG_06fav/Group508@2x.png"),
-                },
-                {
-                    name: "Canabliss Oasiz : Red Fruit Overnight Mask",
-                    type: "Face",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: false,
-                    img: require("~/static/images/IMG_02products_detail/Group669@2x.png"),
-                },
-                {
-                    name: "Canabliss Crown : Anti -Fall Nourishing Shampoo",
-                    type: "Hair",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: false,
-                    img: require("~/static/images/IMG_06fav/Group508@2x.png"),
-                },
-                {
-                    name: "Canabliss Crown : Anti -Fall Nourishing Shampoo",
-                    type: "Hair",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: false,
-                    img: require("~/static/images/IMG_06fav/Group508@2x.png"),
-                },
-                {
-                    name: "Canabliss Oasiz : Red Fruit Overnight Mask",
-                    type: "Face",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: false,
-                    img: require("~/static/images/IMG_02products_detail/Group669@2x.png"),
-                },
-                {
-                    name: "Canabliss Crown : Anti -Fall Nourishing Shampoo",
-                    type: "Hair",
-                    detail:
-                        "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor",
-                    quantity: "100ML",
-                    isNew: false,
-                    img: require("~/static/images/IMG_06fav/Group508@2x.png"),
-                },
-            ],
-            active: false,
+            page: 1,
+            total_p: 1,
+            products,
+            type: 'all',
         };
     },
     components: { BaseButton },
+    computed: {
+        list_products() {
+            let list = []
+            if (this.type === 'all') {
+                list = this.products
+            } else {
+                list = this.products.filter((e) => e.type === this.type)
+            }
+            return list
+        },
+    },
+    async mounted() {
+        // console.log(this.$route.params.type)
+        if (this.$route.params.type) this.type = await this.$route.params.type
+        this.total_p = Math.ceil(this.products.length / 6)
+    },
+    methods: {
+        change(p) {
+            this.page = p
+        },
+        filterType(type) {
+            this.type = type
+        },
+    }
 };
 </script>
 

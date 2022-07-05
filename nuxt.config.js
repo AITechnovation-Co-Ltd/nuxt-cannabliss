@@ -33,6 +33,7 @@ export default {
   plugins: [
     "@/plugins/base-component",
     "@/plugins/modal",
+    "@/plugins/vue-tailwind",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
