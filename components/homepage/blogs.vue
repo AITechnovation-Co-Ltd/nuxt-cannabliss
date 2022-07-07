@@ -1,13 +1,13 @@
 
 <template>
-  <div class="maincrs w-full flex flex-col justify-center items-center mt-28 px-20">
+  <div class="w-full flex flex-col justify-center items-center mt-28 px-36">
     <!-- Title -->
     <p class="text-7xl text-primary mb-20">Blogs</p>
     <!-- Content -->
     <div class="w-full flex flex-col items-center">
       <!-- Card -->
       <div class="grid grid-cols-2 gab-1 text-quaternary">
-        <div class="w-11/12 flex flex-col px-10" v-for="(data, i) in blogcard" :key="i">
+        <div class="w-11/12 flex flex-col" v-for="(data, i) in blogcard" :key="i">
           <img :src="data.url" class="rounded-3xl" :class="{ 'mt-24': i % 2 != 0 }">
           <p class="my-4 text-lg font-medium">Sed Ut Perspiciatis Unde Ommis lste Natus Error Sit</p>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis odit saepe modi fugit aut
@@ -47,7 +47,4 @@ export default
 </script>
 
 <style scoped>
-.maincrs {
-  min-height: calc(100vh - 84px);
-}
 </style>

@@ -1,9 +1,9 @@
 <template>
-  <div class="maincrs w-full flex flex-col justify-center items-center">
+  <div class="w-full flex flex-col justify-center items-center px-36">
     <p class="my-4 text-7xl text-primary">Review</p>
     <div class="w-full flex my-6">
       <!-- -->
-      <div class="w-1/3 relative py-10 px-20">
+      <div class="w-1/3 relative py-10">
         <div class="w-full flex flex-col items-center">
           <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-primary" />
           <p class="my-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis delectus incidunt ratione
@@ -73,9 +73,3 @@
 export default {
 }
 </script>
-
-<style scope>
-.maincrs {
-  min-height: calc(100vh - 84px);
-}
-</style>

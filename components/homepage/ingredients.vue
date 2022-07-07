@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-28 mt-20 text-quaternary flex items-center">
+  <div class="w-full px-36 mt-20 text-quaternary flex items-center">
 
     <div id="default-carousel" class="w-full relative" data-carousel="slide">
       <!-- Carousel wrapper -->

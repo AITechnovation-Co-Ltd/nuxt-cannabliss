@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-28 mt-24 mb-12 flex items-center">
+  <div class="w-full px-36 mt-24 mb-12 flex items-center">
     <div class="w-3/5 relative">
       <img class="rounded-3xl" src="~/static/images/IMG_01home/pages_01home/sunny-ng.jpg" alt="">
       <div class="centered hidden h-32 w-32 mr-8 bg-white opacity-30 rounded-full flex items-center justify-center"></div>

@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full relative">
-    <img src="~/static/images/IMG_01home/pages_01home/Group1136@2x.png" alt="">
-    <div class="centered w-full flex justify-center items-center">
+  <div class="w-screen relative">
+    <img class="w-full" src="~/static/images/IMG_01home/pages_01home/Group1136@2x.png" alt="">
+    <div class="centered w-full flex justify-center items-center px-36">
 
-      <div class="w-1/3 pl-28 text-xl text-quaternary font-light">
+      <div class="w-1/3 text-xl text-quaternary font-light">
         <p>Face</p>
         <h1 class="text-5xl font-light mt-2">Canabliss Oasiz :</h1>
         <h2 class="text-5xl text-primary mt-2">First Step Amino Essence</h2>
@@ -23,7 +23,7 @@
       <!-- image -->
       <div class="w-1/3"><img src="~/static/images/IMG_01home/pages_01home/Group934@2x.png" alt=""></div>
 
-      <div class="w-1/3 pr-28">
+      <div class="w-1/3">
         <div class="w-full text-quaternary flex flex-col space-y-10" >
           <div class="flex justify-center items-start space-y-4" v-for="index in 3" :key="index">
             <base-icon icon="heart" viewBox="0 0 30 41" size="100" />

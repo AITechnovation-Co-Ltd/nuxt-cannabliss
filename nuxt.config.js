@@ -5,18 +5,18 @@ export default {
    },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-cannabliss',
+    title: 'Canabliss Cosmetic',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
     ],
+    link: [{ rel: "icon", href: "/images/logo.svg" }],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', href: '/logo/Logo-CANABLISS.png' },
       { rel: "stylesheet", href: "https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css" },
     ],
     script: [

@@ -107,8 +107,8 @@
 
 .slick-dots {
   position: absolute;
-  bottom: -70px;
-  left: -580px;
+  bottom: 10%;
+  left: -30%;
   justify-items: start;
   display: block;
 

@@ -1,12 +1,13 @@
 <template>
-  <div class="bg w-full relative px-28">
-    <VueSlickCarousel class="h-full bg2 mt-20 flex justify-center items-center" v-bind="settings">
-      <div class="bg2">
-        <div class="flex h-full items-center justify-between">
+  <div class="bg w-full relative px-36">
+    <VueSlickCarousel class="h-full flex justify-center items-center" v-bind="settings">
+
+      <div class="bg flex justify-center items-center">
+        <div class="bg3 flex h-full items-center justify-between">
           <div class="w-1/2 h-full flex items-center justify-center">
             <div class="flex h-full flex-col items-start justify-center">
               <h1 class="text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
-              <h2 class="mt-2 ml-8 text-7xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+              <h2 class="mt-2 ml-8 text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
               <div class="mt-8 w-full flex items-center">
                 <div class="vl bg-primary mr-8"></div>
                 <p class="text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
@@ -29,12 +30,12 @@
           </div>
         </div>
       </div>
-      <div class="bg2 bg-white">
-        <div class="flex h-full items-center justify-between">
+      <div class="bg flex justify-center items-center">
+        <div class="bg3 bg-white flex h-full items-center justify-between">
           <div class="w-1/2 h-full flex items-center justify-center">
             <div class="flex h-full flex-col items-start justify-center">
               <h1 class="text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
-              <h2 class="mt-2 ml-8 text-7xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+              <h2 class="mt-2 ml-8 text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
               <div class="mt-8 w-full flex items-center">
                 <div class="vl bg-primary mr-8"></div>
                 <p class="text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
@@ -57,12 +58,12 @@
           </div>
         </div>
       </div>
-      <div class="bg2">
-        <div class="flex h-full items-center justify-between">
+      <div class="bg flex justify-center items-center">
+        <div class="bg3 flex h-full items-center justify-between">
           <div class="w-1/2 h-full flex items-center justify-center">
             <div class="flex h-full flex-col items-start justify-center">
               <h1 class="text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
-              <h2 class="mt-2 ml-8 text-7xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+              <h2 class="mt-2 ml-8 text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
               <div class="mt-8 w-full flex items-center">
                 <div class="vl bg-primary mr-8"></div>
                 <p class="text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
@@ -85,12 +86,12 @@
           </div>
         </div>
       </div>
-      <div class="bg2 bg-white">
-        <div class="flex h-full items-center justify-between">
+      <div class="bg flex justify-center items-center">
+        <div class="bg3 bg-white flex h-full items-center justify-between">
           <div class="w-1/2 h-full flex items-center justify-center">
             <div class="flex h-full flex-col items-start justify-center">
               <h1 class="text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
-              <h2 class="mt-2 ml-8 text-7xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+              <h2 class="mt-2 ml-8 text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
               <div class="mt-8 w-full flex items-center">
                 <div class="vl bg-primary mr-8"></div>
                 <p class="text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
@@ -113,8 +114,9 @@
           </div>
         </div>
       </div>
+
     </VueSlickCarousel>
-    <div class="absolute bottom-32 right-28">
+    <div class="contact">
       <div class="flex space-x-8">
         <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
         <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
@@ -171,12 +173,23 @@ export default {
   height: calc(100vh - 84px);
 }
 
-.bg2{
-  height: 800px;
-  /* margin-right: 5px; */
+.bg2 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.bg3 {
+  height: 80%;
+}
+
 .vl {
   height: 145px;
   width: 15px;
+}
+.contact{
+  position: absolute;
+  bottom: 10%;
+  right: 144px;
 }
 </style>

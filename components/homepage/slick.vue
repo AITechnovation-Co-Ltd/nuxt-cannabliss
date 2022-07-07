@@ -1,10 +1,9 @@
 <template>
-    <div class="bg w-full relative px-28">
+    <div class="w-full relative px-36">
         <p class="my-4 text-7xl text-primary">Review</p>
-        <VueSlickCarousel class="h-full flex justify-center items-center" v-bind="settings">
+        <VueSlickCarousel class="flex justify-center items-center" v-bind="settings">
             <div class="maincrs w-full flex flex-col justify-center items-center">
                 <div class="w-full flex my-6">
-                    <!-- -->
                     <div class="w-full relative py-10 px-20 mt-8">
                         <div class="w-full flex flex-col items-center">
                             <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-primary" />
@@ -24,16 +23,11 @@
                             </div>
                         </div>
                     </div>
-                    <!-- -->
-
-                    <!-- -->
                 </div>
             </div>
             <div class="maincrs w-full flex flex-col justify-center items-center">
                 <div class="w-full flex my-6">
-                    <!-- -->
 
-                    <!-- -->
                     <div class="w-full relative p-10 bg-tertiary rounded-xl mt-8">
                         <img src="@/static/images/IMG_01home/pages_01home/review01.png"
                             class="absolute -top-12 -left-8 w-24 h-20">
@@ -57,16 +51,11 @@
                         <img src="@/static/images/IMG_01home/pages_01home/review02.png"
                             class="absolute -bottom-12 right-0 w-24 h-20">
                     </div>
-                    <!-- -->
                 </div>
             </div>
             <div class="maincrs w-full flex flex-col justify-center items-center">
                 <div class="w-full flex my-6">
-                    <!-- -->
 
-                    <!-- -->
-
-                    <!-- -->
                     <div class="w-full relative py-10 px-20 mt-8">
                         <div class="w-full flex flex-col items-center">
                             <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-primary" />
@@ -90,11 +79,7 @@
             </div>
             <div class="maincrs w-full flex flex-col justify-center items-center">
                 <div class="w-full flex my-6">
-                    <!-- -->
-
-                    <!-- -->
-
-                    <!-- -->
+  
                     <div class="w-full relative py-10 px-20 mt-8">
                         <div class="w-full flex flex-col items-center">
                             <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-primary" />
@@ -147,12 +132,5 @@ export default {
 </script>
 
 <style scoped>
-.bg {
-    height: calc(100vh - 84px);
-}
 
-.vl {
-    height: 145px;
-    width: 15px;
-}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-28 mt-20">
+  <div class="w-full px-36 mt-20">
     <div class="flex justify-between">
       <h1 class="text-7xl text-primary">Products</h1>
       <BaseButton @click="$router.push(`/product`)">View all</BaseButton>
@@ -42,8 +42,16 @@
                 <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl}`)" />
                 <span v-if="product.isNew"
                   class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
-                <base-icon icon="heartactive" viewBox="0 0 30 41" size="50"
-                  class="hover:cursor-pointer text-red-500 absolute top-8 right-8" />
+
+                <div v-if="product.islike == true">
+                  <base-icon icon="heartactive" viewBox="0 0 30 41" size="50"
+                    class="hover:cursor-pointer text-red-500 absolute top-8 right-8" />
+                </div>
+
+                <div v-else>
+                  <base-icon icon="heart" viewBox="0 0 30 41" size="50"
+                    class="hover:cursor-pointer text-primary absolute top-8 right-8" />
+                </div>
                 <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
               </div>
               <div class="mb-4 text-quaternary text-xl">
