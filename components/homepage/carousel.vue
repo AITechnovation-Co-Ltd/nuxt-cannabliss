@@ -1,12 +1,96 @@
 <template>
   <div class="bg w-full relative px-28">
-    <VueSlickCarousel class="h-full flex justify-center items-center" v-bind="settings">
-      <div v-for="index in 4" :key="index">
-        <div class="flex bg items-center justify-between">
+    <VueSlickCarousel class="h-full bg2 mt-20 flex justify-center items-center" v-bind="settings">
+      <div class="bg2">
+        <div class="flex h-full items-center justify-between">
           <div class="w-1/2 h-full flex items-center justify-center">
             <div class="flex h-full flex-col items-start justify-center">
-              <h1 class="text-6xl text-quaternary">Canabliss Oasiz</h1>
-              <h2 class="mt-2 text-7xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+              <h1 class="text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
+              <h2 class="mt-2 ml-8 text-7xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+              <div class="mt-8 w-full flex items-center">
+                <div class="vl bg-primary mr-8"></div>
+                <p class="text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
+                  ,
+                  sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua .</p>
+              </div>
+              <div class="w-full mt-20 flex items-center hidden">
+                <div class="h-28 w-28 mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
+                  <div class="h-24 w-24 bg-tertiary rounded-full flex items-center justify-center">
+                    <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
+                  </div>
+                </div>
+                <p class="text-3xl text-quaternary">Watch the video</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 flex justify-center">
+            <img class="w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="bg2 bg-white">
+        <div class="flex h-full items-center justify-between">
+          <div class="w-1/2 h-full flex items-center justify-center">
+            <div class="flex h-full flex-col items-start justify-center">
+              <h1 class="text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
+              <h2 class="mt-2 ml-8 text-7xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+              <div class="mt-8 w-full flex items-center">
+                <div class="vl bg-primary mr-8"></div>
+                <p class="text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
+                  ,
+                  sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua .</p>
+              </div>
+              <div class="w-full mt-20 flex items-center hidden">
+                <div class="h-28 w-28 mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
+                  <div class="h-24 w-24 bg-tertiary rounded-full flex items-center justify-center">
+                    <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
+                  </div>
+                </div>
+                <p class="text-3xl text-quaternary">Watch the video</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 flex justify-center">
+            <img class="w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="bg2">
+        <div class="flex h-full items-center justify-between">
+          <div class="w-1/2 h-full flex items-center justify-center">
+            <div class="flex h-full flex-col items-start justify-center">
+              <h1 class="text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
+              <h2 class="mt-2 ml-8 text-7xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+              <div class="mt-8 w-full flex items-center">
+                <div class="vl bg-primary mr-8"></div>
+                <p class="text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
+                  ,
+                  sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua .</p>
+              </div>
+              <div class="w-full mt-20 flex items-center hidden">
+                <div class="h-28 w-28 mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
+                  <div class="h-24 w-24 bg-tertiary rounded-full flex items-center justify-center">
+                    <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
+                  </div>
+                </div>
+                <p class="text-3xl text-quaternary">Watch the video</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 flex justify-center">
+            <img class="w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="bg2 bg-white">
+        <div class="flex h-full items-center justify-between">
+          <div class="w-1/2 h-full flex items-center justify-center">
+            <div class="flex h-full flex-col items-start justify-center">
+              <h1 class="text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
+              <h2 class="mt-2 ml-8 text-7xl text-primary font-medium">Red Fruit Overnight Mask</h2>
               <div class="mt-8 w-full flex items-center">
                 <div class="vl bg-primary mr-8"></div>
                 <p class="text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
@@ -30,7 +114,7 @@
         </div>
       </div>
     </VueSlickCarousel>
-    <div class="absolute bottom-20 right-20">
+    <div class="absolute bottom-32 right-28">
       <div class="flex space-x-8">
         <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
         <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
@@ -87,6 +171,10 @@ export default {
   height: calc(100vh - 84px);
 }
 
+.bg2{
+  height: 800px;
+  /* margin-right: 5px; */
+}
 .vl {
   height: 145px;
   width: 15px;
