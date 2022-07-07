@@ -1,7 +1,7 @@
 <template>
-    <div class="w-full flex flex-row justify-center px-28">
+    <div class="w-full flex flex-row justify-center px-12 lg:px-20 xl:px-28 2xl:px-36">
         <!-- Categories -->
-        <div class="w-3/12 flex flex-col items-center">
+        <div class="w-3/12 flex flex-col items-start mr-10">
             <!-- Breadcrumb -->
             <div class="w-80">
                 <nav class="w-full flex justify-start items-center" aria-label="Breadcrumb">
@@ -65,7 +65,7 @@
         </div>
 
         <!-- Product cards -->
-        <div class="w-9/12">
+        <div class="w-9/12 ml-10">
             <h1 v-if="type == 'all'" class="w-full text-4xl text-primary">All Products</h1>
             <h1 v-else-if="type == 'face'" class="w-full text-4xl text-primary">Face</h1>
             <h1 v-else-if="type == 'body'" class="w-full text-4xl text-primary">Body</h1>
@@ -95,7 +95,7 @@
             </div>
 
             <!-- Product card -->
-            <div class="w-full mt-20 grid grid-cols-3 gap-x-4">
+            <div class="w-full mt-20 grid grid-cols-2 2xl:grid-cols-3 gap-4">
                 <div class="w-full" v-for="(product, index) in list_products" :key="index">
                     <template v-if="index < 6 * page && index >= 6 * (page - 1)">
                         <div class="relative">
@@ -103,8 +103,15 @@
                             <img :src="require(`~/static/images/products${product.imgUrl}`)" class="centered w-full" />
                             <span v-if="product.isNew"
                                 class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
-                            <base-icon icon="heartactive" viewBox="0 0 30 41" size="50"
-                                class="hover:cursor-pointer text-red-500 absolute top-8 right-8" />
+                            <div v-if="product.islike == true">
+                                <base-icon icon="heartactive" viewBox="0 0 30 41" size="50"
+                                    class="hover:cursor-pointer text-red-500 absolute top-8 right-8" />
+                            </div>
+
+                            <div v-else>
+                                <base-icon icon="heart" viewBox="0 0 30 41" size="50"
+                                    class="hover:cursor-pointer text-primary absolute top-8 right-8" />
+                            </div>
                             <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
                         </div>
                         <div class="mb-4 text-quaternary text-xl">
@@ -118,7 +125,7 @@
                     </template>
                 </div>
             </div>
-            <base-pages @change="change" :page="page" :total_pages="total_p" :limit="7"></base-pages>
+            <base-pages class="mt-12" @change="change" :page="page" :total_pages="total_p" :limit="7"></base-pages>
         </div>
     </div>
 </template>
