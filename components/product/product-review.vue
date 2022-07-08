@@ -79,7 +79,6 @@
 
 <script>
 import DialogReview from '@/components/review/dialog-review.vue'
-import BaseButton from '../base/base-button.vue'
 import ReviewCard from '../review/review-card.vue'
 export default {
   components: { ReviewCard, DialogReview }
