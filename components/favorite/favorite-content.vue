@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex flex-row justify-center px-28">
+    <div class="w-full flex flex-row justify-center px-24 lg:px-12 xl:px-20 2xl:px-36">
         <!-- Categories -->
         <div class="w-3/12 flex flex-col items-center">
             <!-- Breadcrumb -->
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <!-- Product card -->
-            <div class="w-full mt-20 grid grid-cols-3 gap-x-4">
+            <div class="w-full mt-20 grid grid-cols-2 2xl:grid-cols-3 gap-x-4">
                 <div class="w-full" v-for="(product, index) in products" :key="index">
                     <template v-if="index < 6 * page && index >= 6 * (page - 1)">
                         <div class="relative">

@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full px-28">
+  <div class="w-full">
     <!-- Breadcrumb -->
-    <nav class="w-full" aria-label="Breadcrumb">
+    <nav class="w-full px-24 lg:px-12 xl:px-20 2xl:px-36" aria-label="Breadcrumb">
       <ol class="text-quaternary text-base inline-flex items-center justify-center space-x-3">
         <li class="inline-flex items-center">
           <nuxt-link to="/" class="inline-flex items-center font-medium">
@@ -32,8 +32,8 @@
     </nav>
 
     <!-- Content -->
-    <div class="w-full flex justify-evenly items-center" v-for="(products_id, i) in products_img" :key="i">
-      <div class="w-1/2">
+    <div class="w-full flex mt-8 px-24 lg:px-12 xl:px-20 2xl:px-36 flex-col lg:flex-row justify-between items-center xl:items-start" v-for="(products_id, i) in products_img" :key="i">
+      <div class="w-full lg:w-1/2">
         <img :src="require(`~/static/images/products${products_id.imgUrl}`)">
         <div class="grid grid-cols-4 gap-4 mt-4">
           <div class="relative">
@@ -54,13 +54,13 @@
           </div>
         </div>
       </div>
-      <div class="w-1/3 ml-36" v-for="(products_id, i) in products_detail" :key="i">
-        <p>{{ products_id.type }}</p>
+      <div class="w-full lg:w-1/2 mt-8 lg:mt-0 ml-8" v-for="(products_id, i) in products_detail" :key="i">
+        <p class="capitalize">{{ products_id.type }}</p>
         <div class="flex justify-between items-end">
-          <h1 class="text-4xl font-light">{{ products_id.name }}</h1>
+          <h1 class="text-3xl xl:text-4xl font-light">{{ products_id.name }}</h1>
           <p>{{ products_id.quantity }}</p>
         </div>
-        <h2 class="text-4xl font-semibold text-primary">Tinted Hybrid Block SPF50 Pa+++</h2>
+        <!-- <h2 class="text-4xl font-semibold text-primary">Tinted Hybrid Block SPF50 Pa+++</h2> -->
         <div class="flex my-4">
           <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-tertiary mr-4" />
           <p>(55)</p>
@@ -97,14 +97,14 @@
       <div class="w-full centered absolute">
         <div class="w-full text-quaternary flex flex-row justify-evenly items-center">
           <div class="w-2/5 flex flex-col items-center justify-center">
-            <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-40">
+            <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-28 lg:h-40">
             <h1 class="text-xl font-bold">Canabinoid (Cbd)</h1>
             <p class="mt-2">Anti inflammatory to make skin stronger</p>
           </div>
           <div class="vl-3 bg-primary"></div>
-          <div class="w-2/5 flex flex-col items-center justify-center">
-            <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-40">
-            <h1 class="text-xl font-bold">Leucojum Aestivum Bulb Extract ( Ibr - Snowflake®)</h1>
+          <div class="w-2/5 flex flex-col items-center text-center justify-center">
+            <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-28 lg:h-40">
+            <h1 class="text-xl font-bold">Leucojum Aestivum Bulb Extract (Ibr - Snowflake®)</h1>
             <p class="mt-2">Anti Aging To Make Skin Younger And Brighter</p>
           </div>
         </div>

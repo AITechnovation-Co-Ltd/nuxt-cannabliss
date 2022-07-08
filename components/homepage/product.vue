@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-36 mt-20">
+  <div class="w-full mt-20 px-4 md:px-8 lg:px-12 xl:px-24 2xl:px-36">
     <div class="flex justify-between">
       <h1 class="text-7xl text-primary">Products</h1>
       <BaseButton @click="$router.push(`/product`)">View all</BaseButton>

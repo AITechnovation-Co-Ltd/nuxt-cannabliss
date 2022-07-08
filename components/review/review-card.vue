@@ -1,10 +1,11 @@
 <template>
     <div class="w-full flex px-4 py-8 border-b-2 border-gray-200 text-quaternary">
         <!-- Image Product-->
-        <div class="w-2/5 flex ">
-            <div class="w-1/3 relative"><img src="@/static/images/IMG_04review/product-review.png" width="150"
-                    class="absolute -top-20"></div>
-            <p>Canabliss Oasiz : <br>Super Berry Hydrating Mask</p>
+        <div class="w-2/5 flex flex-col xl:flex-row ">
+            <div class="w-1/3 relative">
+                <img src="@/static/images/IMG_04review/product-review.png" width="150" class="absolute -top-20">
+            </div>
+            <p class="mt-16 xl:mt-0">Canabliss Oasiz : <br>Super Berry Hydrating Mask</p>
         </div>
         <!-- Details review -->
         <div class="w-3/5 flex flex-col">
