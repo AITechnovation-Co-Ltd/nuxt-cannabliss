@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex flex-row justify-center px-12 lg:px-20 xl:px-28 2xl:px-36">
+    <div class="w-full flex flex-row justify-center px-4 md:px-8 lg:px-12 xl:px-24 2xl:px-36">
         <!-- Categories -->
         <div class="w-3/12 flex flex-col items-start mr-10">
             <!-- Breadcrumb -->
