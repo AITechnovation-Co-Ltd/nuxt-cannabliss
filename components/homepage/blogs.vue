@@ -1,19 +1,19 @@
 
 <template>
-  <div class="w-full flex flex-col justify-center items-center mt-28 px-36">
+  <div class="w-full flex flex-col justify-center items-center mt-28 px-24 lg:px-12 xl:px-20 2xl:px-36">
     <!-- Title -->
-    <p class="text-7xl text-primary mb-20">Blogs</p>
+    <p class="text-7xl text-primary mb-12 xl:mb-20">Blogs</p>
     <!-- Content -->
     <div class="w-full flex flex-col items-center">
       <!-- Card -->
-      <div class="grid grid-cols-2 gab-1 text-quaternary">
-        <div class="w-11/12 flex flex-col" v-for="(data, i) in blogcard" :key="i">
-          <img :src="data.url" class="rounded-3xl" :class="{ 'mt-24': i % 2 != 0 }">
+      <div class="grid grid-cols-2 gap-8 text-quaternary">
+        <div class="w-full flex flex-col" v-for="(data, i) in blogcard" :key="i">
+          <img :src="data.url" class="rounded-3xl" :class="{ 'mt-16 xl:mt-24': i % 2 != 0 }">
           <p class="my-4 text-lg font-medium">Sed Ut Perspiciatis Unde Ommis lste Natus Error Sit</p>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis odit saepe modi fugit aut
             officiis animi nesciunt repellat molestias dolor laborum tempore deleniti sed provident quae natus,
             voluptates consequatur?</p>
-          <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="w-2/6 mt-8 border-quaternary">View more
+          <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="w-60 mt-8 border-quaternary">View more
           </base-button>
         </div>
       </div>
