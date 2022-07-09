@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-36 mt-20 text-quaternary flex items-center">
+  <div class="w-full mt-20 text-quaternary flex items-center px-24 lg:px-12 xl:px-20 2xl:px-36">
 
     <div id="default-carousel" class="w-full relative" data-carousel="slide">
       <!-- Carousel wrapper -->
@@ -8,14 +8,14 @@
         <div class="flex py-12 duration-700 bg-secondary ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
           data-carousel-item="">
           <div class="w-2/5">
-            <h1 class="text-7xl text-primary">Ingredients</h1>
+            <h1 class="text-3xl xl:text-4xl 2xl:text-7xl text-primary">Ingredients</h1>
             <div class="mt-8 flex items-center">
               <div class="vl bg-primary"></div>
-              <p class="text-3xl ml-4">By having a hero ingredient , there's an opportunity to get into the SKINCARE
+              <p class="text-xl xl:text-2xl 2xl:text-3xl ml-4">By having a hero ingredient , there's an opportunity to get into the SKINCARE
                 TREND in
                 Thailand </p>
             </div>
-            <p class="mt-8 text-2xl">Leucojum aestivum bulb extract ( IBR - Snowflake ) is part of the anti aging
+            <p class="mt-8 text-base xl:text-xl 2xl:text-2xl">Leucojum aestivum bulb extract ( IBR - Snowflake ) is part of the anti aging
               technology
               of IBR that captures and transfers flower bulbs dormancy and rejuvenation to skin . Flower bulbs go
               dormant
@@ -37,14 +37,14 @@
         <div class="flex py-12 duration-700 bg-secondary ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
           data-carousel-item="">
           <div class="w-2/5">
-            <h1 class="text-7xl text-primary">Ingredients</h1>
+            <h1 class="text-3xl xl:text-4xl 2xl:text-7xl text-primary">Ingredients</h1>
             <div class="mt-8 flex items-center">
               <div class="vl bg-primary"></div>
-              <p class="text-3xl ml-4">By having a hero ingredient , there's an opportunity to get into the SKINCARE
+              <p class="text-xl xl:text-2xl 2xl:text-3xl ml-4">By having a hero ingredient , there's an opportunity to get into the SKINCARE
                 TREND in
                 Thailand </p>
             </div>
-            <p class="mt-8 text-2xl">Leucojum aestivum bulb extract ( IBR - Snowflake ) is part of the anti aging
+            <p class="mt-8 text-base xl:text-xl 2xl:text-2xl">Leucojum aestivum bulb extract ( IBR - Snowflake ) is part of the anti aging
               technology
               of IBR that captures and transfers flower bulbs dormancy and rejuvenation to skin . Flower bulbs go
               dormant
@@ -66,14 +66,14 @@
         <div class="flex py-12 duration-700 bg-secondary ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
           data-carousel-item="">
           <div class="w-2/5">
-            <h1 class="text-7xl text-primary">Ingredients</h1>
+            <h1 class="text-3xl xl:text-4xl 2xl:text-7xl text-primary">Ingredients</h1>
             <div class="mt-8 flex items-center">
               <div class="vl bg-primary"></div>
-              <p class="text-3xl ml-4">By having a hero ingredient , there's an opportunity to get into the SKINCARE
+              <p class="text-xl xl:text-2xl 2xl:text-3xl ml-4">By having a hero ingredient , there's an opportunity to get into the SKINCARE
                 TREND in
                 Thailand </p>
             </div>
-            <p class="mt-8 text-2xl">Leucojum aestivum bulb extract ( IBR - Snowflake ) is part of the anti aging
+            <p class="mt-8 text-base xl:text-xl 2xl:text-2xl">Leucojum aestivum bulb extract ( IBR - Snowflake ) is part of the anti aging
               technology
               of IBR that captures and transfers flower bulbs dormancy and rejuvenation to skin . Flower bulbs go
               dormant
@@ -107,13 +107,13 @@
     </div>
 
     <!-- <div class="w-2/5">
-      <h1 class="text-7xl text-primary">Ingredients</h1>
+      <h1 class="text-3xl xl:text-4xl 2xl:text-7xl text-primary">Ingredients</h1>
       <div class="mt-8 flex items-center">
         <div class="vl bg-primary"></div>
-        <p class="text-3xl ml-4">By having a hero ingredient , there's an opportunity to get into the SKINCARE TREND in
+        <p class="text-xl xl:text-2xl 2xl:text-3xl ml-4">By having a hero ingredient , there's an opportunity to get into the SKINCARE TREND in
           Thailand </p>
       </div>
-      <p class="mt-8 text-2xl">Leucojum aestivum bulb extract ( IBR - Snowflake ) is part of the anti aging technology
+      <p class="mt-8 text-base xl:text-xl 2xl:text-2xl">Leucojum aestivum bulb extract ( IBR - Snowflake ) is part of the anti aging technology
         of IBR that captures and transfers flower bulbs dormancy and rejuvenation to skin . Flower bulbs go dormant
         through the winter like " beauty sleep " to allow beautiful awaken , rejuvenated blossom in the spring.</p>
       <BaseButton @click="$router.push(`/ingredients`)" class="mt-12">View more</BaseButton>
