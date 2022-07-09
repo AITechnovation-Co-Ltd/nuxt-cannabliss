@@ -39,6 +39,7 @@
     <img src="~/static/images/IMG_01home/pages_01home/Group1053@2x.png" alt="" class="bg-6">
     <img src="~/static/images/IMG_01home/pages_01home/CANABLISS_01.png" alt="" class="bg-7">
     <img src="~/static/images/IMG_01home/pages_01home/Group1115@2x.png" alt="" class="bg-8">
+    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1136@2x.png" alt="" class="bg-9"> -->
   </div>
 </template>
 
@@ -115,5 +116,10 @@ export default {
   position: absolute;
   top: 4350px;
   left: 250px;
+}
+
+.bg-9 {
+  position: absolute;
+  top: 2900px;
 }
 </style>
