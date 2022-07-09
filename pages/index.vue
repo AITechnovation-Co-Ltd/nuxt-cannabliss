@@ -35,7 +35,7 @@
     <img src="~/static/images/IMG_03blogs/Group1152@2x.png" alt="" class="bg-2 hidden xl:block">
     <img src="~/static/images/IMG_01home/pages_01home/Group1094@2x.png" alt="" class="bg-3">
     <img src="~/static/images/IMG_01home/pages_01home/Path322@2x.png" alt="" class="bg-4 hidden xl:block">
-    <img src="~/static/images/IMG_01home/pages_01home/CANABLISS@2x.png" alt="" class="bg-5 z-20">
+    <img src="~/static/images/IMG_01home/pages_01home/CANABLISS@2x.png" alt="" class="bg-5 z-20 hidden xl:block">
     <img src="~/static/images/IMG_01home/pages_01home/Group1053@2x.png" alt="" class="bg-6">
     <img src="~/static/images/IMG_01home/pages_01home/CANABLISS_01.png" alt="" class="bg-7">
     <img src="~/static/images/IMG_01home/pages_01home/Group1115@2x.png" alt="" class="bg-8">
