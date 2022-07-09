@@ -1,7 +1,7 @@
 <template>
-  <div class="w-screen px-24 lg:px-12 xl:px-20 2xl:px-36">
-    <!-- <img class="w-full" src="~/static/images/IMG_01home/pages_01home/Group1136@2x.png" alt=""> -->
-    <div class="w-full columns-1 xl:flex justify-center items-center">
+  <div class="w-screen static xl:relative ">
+    <img class="w-full hidden xl:block" src="~/static/images/IMG_01home/pages_01home/Group1136@2x.png" alt="">
+    <div class="centered w-full columns-1 xl:flex justify-center items-center px-20">
 
       <div class="w-full xl:w-1/3 text-xl text-quaternary font-light">
         <p>Face</p>
@@ -52,9 +52,16 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .vl {
   height: 170px;
   width: 20px;
+}
+@media (max-width:1280px){
+  .centered {
+  position: static;
+  top: 0;
+  left: 0;
+  transform: translate(0%, 0%);
+}
 }
 </style>
