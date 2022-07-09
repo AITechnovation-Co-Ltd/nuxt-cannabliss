@@ -1,24 +1,24 @@
 <template>
-  <div class="w-full px-36 mt-24 mb-12 flex items-center">
-    <div class="w-3/5 relative">
+  <div class="w-full mt-24 mb-12 flex items-center px-24 lg:px-12 xl:px-20 2xl:px-36">
+    <div class="w-1/2 xl:w-3/5 relative">
       <img class="rounded-3xl" src="~/static/images/IMG_01home/pages_01home/sunny-ng.jpg" alt="">
       <div class="centered hidden h-32 w-32 mr-8 bg-white opacity-30 rounded-full flex items-center justify-center"></div>
       <div class="centered hidden h-24 w-24 bg-tertiary rounded-full flex items-center justify-center">
         <base-icon icon="play" viewBox="0 0 30 41" size="40" class="text-white" />
       </div>
     </div>
-    <div class="w-2/5 pl-28 text-xl text-quaternary font-light">
+    <div class="w-1/2 xl:w-2/5 ml-8 2xl:ml-20 text-xl text-quaternary font-light">
       <p>Video Review</p>
-      <h1 class="text-5xl font-light mt-2">Canabliss Oasiz :</h1>
-      <h2 class="text-5xl text-primary mt-2">Super Berry Hydrating Mask</h2>
-      <div class="w-full flex items-center mt-6">
-        <div class="vl bg-primary mr-4"></div>
+      <h1 class="text-4xl xl:text-5xl font-light mt-1 xl:mt-2">Canabliss Oasiz :</h1>
+      <h2 class="text-4xl 2xl:text-5xl text-primary mt-1 xl:mt-2">Super Berry Hydrating Mask</h2>
+      <div class="w-full flex items-center mt-3 xl:mt-6">
+        <div class="h-48 2xl:h-40 w-4 bg-primary mr-4"></div>
         <p>Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et
           dolore magna aliqua . Ut enim ad minim veniam , quis nostrud exercitation ullamco laboris nisi ut aliquip ex
           ea commodo consequat . Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
           fugiat</p>
       </div>
-      <BaseButton class="mt-12">View more</BaseButton>
+      <BaseButton class="mt-4 xl:mt-12">View more</BaseButton>
     </div>
   </div>
 </template>
