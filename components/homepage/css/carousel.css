@@ -186,3 +186,13 @@
   opacity: 0.75;
   color: black;
 }
+@media (max-width:1536px){
+  .slick-dots {
+    left: -25%;
+  }
+}
+@media (max-width:1279px){
+  .slick-dots {
+    left: -20%;
+  }
+}

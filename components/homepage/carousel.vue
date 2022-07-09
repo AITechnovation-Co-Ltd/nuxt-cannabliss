@@ -1,16 +1,16 @@
 <template>
-  <div class="bg w-full relative px-36">
+  <div class="bg w-full relative px-24 lg:px-12 xl:px-20 2xl:px-36">
     <VueSlickCarousel class="h-full flex justify-center items-center" v-bind="settings">
 
       <div class="bg flex justify-center items-center">
         <div class="bg3 flex h-full items-center justify-between">
           <div class="w-1/2 h-full flex items-center justify-center">
             <div class="flex h-full flex-col items-start justify-center">
-              <h1 class="text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
-              <h2 class="mt-2 ml-8 text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
-              <div class="mt-8 w-full flex items-center">
-                <div class="vl bg-primary mr-8"></div>
-                <p class="text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
+              <h1 class="text-4xl 2xl:text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
+              <h2 class="mt-2 ml-8 text-3xl 2xl:text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+              <div class="mt-4 xl:mt-8 w-full flex items-center">
+                <div class="h-24 xl:h-28 2xl:h-36 w-3 2xl:w-4 bg-primary mr-8"></div>
+                <p class="text-xl xl:text-2xl 2xl:text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
                   ,
                   sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua .</p>
@@ -34,11 +34,11 @@
         <div class="bg3 bg-white flex h-full items-center justify-between">
           <div class="w-1/2 h-full flex items-center justify-center">
             <div class="flex h-full flex-col items-start justify-center">
-              <h1 class="text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
-              <h2 class="mt-2 ml-8 text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
-              <div class="mt-8 w-full flex items-center">
-                <div class="vl bg-primary mr-8"></div>
-                <p class="text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
+              <h1 class="text-4xl 2xl:text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
+              <h2 class="mt-2 ml-8 text-3xl 2xl:text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+              <div class="mt-4 xl:mt-8 w-full flex items-center">
+                <div class="h-24 xl:h-28 2xl:h-36 w-3 2xl:w-4 bg-primary mr-8"></div>
+                <p class="text-xl xl:text-2xl 2xl:text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
                   ,
                   sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua .</p>
@@ -62,11 +62,11 @@
         <div class="bg3 flex h-full items-center justify-between">
           <div class="w-1/2 h-full flex items-center justify-center">
             <div class="flex h-full flex-col items-start justify-center">
-              <h1 class="text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
-              <h2 class="mt-2 ml-8 text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
-              <div class="mt-8 w-full flex items-center">
-                <div class="vl bg-primary mr-8"></div>
-                <p class="text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
+              <h1 class="text-4xl 2xl:text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
+              <h2 class="mt-2 ml-8 text-3xl 2xl:text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+              <div class="mt-4 xl:mt-8 w-full flex items-center">
+                <div class="h-24 xl:h-28 2xl:h-36 w-3 2xl:w-4 bg-primary mr-8"></div>
+                <p class="text-xl xl:text-2xl 2xl:text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
                   ,
                   sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua .</p>
@@ -90,11 +90,11 @@
         <div class="bg3 bg-white flex h-full items-center justify-between">
           <div class="w-1/2 h-full flex items-center justify-center">
             <div class="flex h-full flex-col items-start justify-center">
-              <h1 class="text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
-              <h2 class="mt-2 ml-8 text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
-              <div class="mt-8 w-full flex items-center">
-                <div class="vl bg-primary mr-8"></div>
-                <p class="text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
+              <h1 class="text-4xl 2xl:text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
+              <h2 class="mt-2 ml-8 text-3xl 2xl:text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+              <div class="mt-4 xl:mt-8 w-full flex items-center">
+                <div class="h-24 xl:h-28 2xl:h-36 w-3 2xl:w-4 bg-primary mr-8"></div>
+                <p class="text-xl xl:text-2xl 2xl:text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
                   ,
                   sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua .</p>
@@ -116,17 +116,17 @@
       </div>
 
     </VueSlickCarousel>
-    <div class="contact">
+    <div class="contact right-12 xl:right-24 2xl:right-36">
       <div class="flex space-x-8">
-        <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
-        <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
-        <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
-        <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt="">
+        <img class="w-8 2xl:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
+        <img class="w-8 2xl:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
+        <img class="w-8 2xl:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
+        <img class="w-8 2xl:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt="">
       </div>
     </div>
     <!-- <div class="w-full h-1/6 flex justify-between items-start">
-      <div class="w-full">
-        <p class="text-4xl text-primary"><span class="font-bold">1</span>/4</p>
+      <div class="w-h-24 xl:full">
+        <p class="text-xl xl:text-2xl 2xl:text-4xl text-primary"><span class="font-bold">1</span>/4</p>
         <div class="progres mt-7 bg-primary rounded-full h-0.5 flex items-center">
           <div class="bg-primary h-1.5 rounded-full" style="width: 25%"></div>
         </div>
@@ -190,6 +190,5 @@ export default {
 .contact{
   position: absolute;
   bottom: 10%;
-  right: 144px;
 }
 </style>
