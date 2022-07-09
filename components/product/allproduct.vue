@@ -116,7 +116,7 @@
                         </div>
                         <div class="mb-4 text-quaternary text-xl">
                             <p>{{ product.type }}</p>
-                            <p class="text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
+                            <p class="text-2xl xl:text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
                             <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
                             <base-button @click="$router.push(`/product/details/${product.no}`)"
                                 class="border-quaternary">View more

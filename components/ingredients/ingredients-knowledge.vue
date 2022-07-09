@@ -50,7 +50,7 @@
         <div class="w-full h-full flex items-start">
           <img src="~/static/images/IMG_03ingredients/magnus-engo.jpg" class="rounded-3xl w-11/12 mt-16 z-20" alt="">
         </div>
-        <img src="~/static/images/IMG_03ingredients/bg-green.png" alt=""
+        <img src="~/static/images/IMG_03ingredients/bg-blue2.png" alt=""
           class="w-11/12 rounded-3xl absolute top-0 right-0">
       </div>
     </div>

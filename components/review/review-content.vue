@@ -25,8 +25,8 @@
       <!-- List Categories -->
       <div class="w-full lg:w-80 mt-10">
         <h1 class="text-3xl text-primary">Categories</h1>
-        <hr class="w-full lg:w-8/12 xl:w-10/12 2xl:w-11/12 my-6 border-b-2 border-gray-200 flex flex-col justify-center items-center">
-        <div class="w-full flex justify-around lg:flex-col decoration-none text-primary text-lg">
+        <hr class="w-full lg:w-8/12 xl:w-10/12 2xl:w-11/12 my-6 border-b border-primary flex flex-col justify-center items-center">
+        <div class="w-full flex justify-around lg:flex-col decoration-none text-primary text-lg space-y-4">
           <p><span class="hover:font-bold hover:cursor-pointer">All Products</span></p>
           <p><span class="hover:font-bold hover:cursor-pointer">Hair</span></p>
           <p><span class="hover:font-bold hover:cursor-pointer">Face</span></p>
@@ -38,7 +38,7 @@
     <!-- All Review -->
     <div class="w-full lg:w-9/12">
       <!-- Write a review -->
-      <div class="w-full flex justify-start py-4 px-4 mt-8 bg-tertiary ">
+      <div class="w-full flex justify-start py-3 xl:py-4 px-4 mt-8 bg-tertiary ">
         <base-button @click="$refs.uploadReviewRef.show()" arrow="white"
           class="text-white border-white hover:border-white">Write a review</base-button>
       </div>

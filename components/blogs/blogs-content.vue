@@ -22,17 +22,18 @@
     <!-- Content -->
     <div class="w-full flex flex-col items-center">
       <!-- Card -->
-      <div class="grid gird-cols-1 xl:grid-cols-2 gab-1 text-quaternary">
-        <div class="w-11/12 flex flex-col px-10" v-for="(data, i) in blogcard" :key="i">
-          <img :src="data.url" class="rounded-3xl mt-6" :class="{ 'xl:mt-24': i % 2 != 0 }">
+     <div class="grid grid-cols-2 gap-8 text-quaternary">
+        <div class="w-full flex flex-col" v-for="(data, i) in blogcard" :key="i">
+          <img :src="data.url" class="rounded-3xl" :class="{ 'mt-16 xl:mt-24': i % 2 != 0 }">
           <p class="my-4 text-lg font-medium">Sed Ut Perspiciatis Unde Ommis lste Natus Error Sit</p>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis odit saepe modi fugit aut
             officiis animi nesciunt repellat molestias dolor laborum tempore deleniti sed provident quae natus,
             voluptates consequatur?</p>
-          <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="w-2/6 mt-4 border-quaternary">View more
+          <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="w-60 mt-8 border-quaternary">View more
           </base-button>
         </div>
       </div>
+      
       <!-- Button -->
       <base-button class="px-6 mt-24 mb-4 border-quaternary">Load more</base-button>
     </div>
