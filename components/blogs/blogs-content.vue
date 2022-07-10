@@ -22,20 +22,28 @@
     <!-- Content -->
     <div class="w-full flex flex-col items-center">
       <!-- Card -->
-     <div class="grid grid-cols-2 gap-8 text-quaternary">
+      <div class="grid grid-cols-2 gap-8 text-quaternary">
         <div class="w-full flex flex-col" v-for="(data, i) in blogcard" :key="i">
-          <img :src="data.url" class="rounded-3xl" :class="{ 'mt-16 xl:mt-24': i % 2 != 0 }">
-          <p class="my-4 text-lg font-medium">Sed Ut Perspiciatis Unde Ommis lste Natus Error Sit</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis odit saepe modi fugit aut
-            officiis animi nesciunt repellat molestias dolor laborum tempore deleniti sed provident quae natus,
-            voluptates consequatur?</p>
-          <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="w-60 mt-8 border-quaternary">View more
-          </base-button>
+          <div v-if="!load_more ? i < 4 : i >= 0">
+            <img :src="data.url" class="rounded-3xl" :class="{ 'mt-16 xl:mt-24': i % 2 != 0 }">
+            <p class="my-4 text-lg font-medium">Sed Ut Perspiciatis Unde Ommis lste Natus Error Sit</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis odit saepe modi fugit aut
+              officiis animi nesciunt repellat molestias dolor laborum tempore deleniti sed provident quae natus,
+              voluptates consequatur?</p>
+            <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="w-60 mt-8 border-quaternary">View
+              more
+            </base-button>
+          </div>
         </div>
       </div>
-      
+
       <!-- Button -->
-      <base-button class="px-6 mt-24 mb-4 border-quaternary">Load more</base-button>
+      <base-button v-show="!load_more" @click="load_more = true" class="px-6 mt-24 mb-4 border-quaternary"
+        :arrow='false'>Load more
+      </base-button>
+      <base-button v-show="load_more" @click="load_more = false" class="px-6 mt-24 mb-4 border-quaternary"
+        :arrow='false'>Hide
+      </base-button>
     </div>
   </div>
 </template>
@@ -46,6 +54,7 @@ export default
   {
     data() {
       return {
+        load_more: false,
         blogcard: [{
           id: 1,
           url: require('@/static/images/IMG_03blogs/amplitude.jpg')
@@ -57,6 +66,22 @@ export default
           url: require('@/static/images/IMG_03blogs/enecta.jpg')
         }, {
           id: 4,
+          url: require('@/static/images/IMG_03blogs/toa.jpg')
+        }
+          , {
+          id: 5,
+          url: require('@/static/images/IMG_03blogs/toa.jpg')
+        }
+          , {
+          id: 6,
+          url: require('@/static/images/IMG_03blogs/toa.jpg')
+        }
+          , {
+          id: 7,
+          url: require('@/static/images/IMG_03blogs/toa.jpg')
+        }
+          , {
+          id: 8,
           url: require('@/static/images/IMG_03blogs/toa.jpg')
         }]
       }
