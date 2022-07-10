@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col justify-center items-center px-36">
+  <div class="w-full flex flex-col justify-center items-center px-24 lg:px-12 xl:px-20 2xl:px-36">
     <p class="my-4 text-7xl text-primary">Review</p>
     <div class="w-full flex my-6">
       <!-- -->

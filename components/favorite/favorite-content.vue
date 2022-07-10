@@ -47,7 +47,7 @@
                 </div>
             </div>
             <!-- Product card -->
-            <div class="w-full mt-20 grid grid-cols-2 2xl:grid-cols-3 gap-x-4">
+            <div class="w-full mt-20 grid grid-cols-2 xl:grid-cols-3 gap-x-4">
                 <div class="w-full" v-for="(product, index) in products" :key="index">
                     <template v-if="index < 6 * page && index >= 6 * (page - 1)">
                         <div class="relative">
@@ -61,9 +61,9 @@
                         </div>
                         <div class="mb-4 text-quaternary text-xl">
                             <p>{{ product.type }}</p>
-                            <p class="text-3xl font-medium">{{ product.name }}</p>
-                            <p class="mt-4">{{ product.datial }}</p>
-                            <base-button @click="$router.push(`/product/details`)" class="border-quaternary">View more
+                            <p class="text-xl xl:text-2xl 2xl:text-3xl font-medium">{{ product.name }}</p>
+                            <p class="mt-4">{{ product.detail }}</p>
+                            <base-button @click="$router.push(`/product/details`)" class="mt-3 border-quaternary">View more
                             </base-button>
                         </div>
                     </template>
