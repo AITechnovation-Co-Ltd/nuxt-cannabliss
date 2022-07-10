@@ -50,11 +50,13 @@
         </div>
         <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
           <ul class="flex flex-col mt-4 md:flex-row md:space-x-16 md:mt-0 text-base">
-            <li>
+            <li class="flex flex-col justify-end items-center">
               <!-- <nuxt-link to="/product" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Product</nuxt-link> -->
               <!-- Dropdown menu -->
+              <base-icon v-if="route_name == 'product' || route_name == 'product-details-id'" class="w-full" icon="fan"
+                size="14" viewBox="0 0 24 24" color="#78A695" />
               <p id="dropdownDefault" data-dropdown-toggle="multilang"
-                class="text-primary hover:cursor-pointer rounded-lg flex items-center"
+                class="text-primary hover:cursor-pointer rounded-lg flex items-center "
                 :class="{ 'font-extrabold': route_name == 'product' || route_name == 'product-details-id' }"
                 type="button">
                 Product
@@ -78,6 +80,7 @@
                     </p>
                   </li>
                   <li>
+
                     <p @click="$router.push({ name: 'product', params: { type: 'face' } })"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Face
                     </p>
@@ -90,22 +93,30 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <li class="flex flex-col justify-end items-center ">
+              <base-icon v-if="route_name == 'ingredients'" class="w-full" icon="fan" size="14" viewBox="0 0 24 24"
+                color="#78A695" />
               <nuxt-link to="/ingredients" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
                 <p :class="{ 'font-extrabold': route_name == 'ingredients' }">Ingredients</p>
               </nuxt-link>
             </li>
-            <li>
+            <li class="flex flex-col justify-end items-center ">
+              <base-icon v-if="route_name == 'blogs' || route_name == 'blogs-details-id'" class="w-full" icon="fan"
+                size="14" viewBox="0 0 24 24" color="#78A695" />
               <nuxt-link to="/blogs" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
                 <p :class="{ 'font-extrabold': route_name == 'blogs' || route_name == 'blogs-details-id' }">Blogs</p>
               </nuxt-link>
             </li>
-            <li>
+            <li class="flex flex-col justify-end items-center">
+              <base-icon v-if="route_name == 'review'" class="w-full" icon="fan" size="14" viewBox="0 0 24 24"
+                color="#78A695" />
               <nuxt-link to="/review" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
                 <p :class="{ 'font-extrabold': route_name == 'review' }">Review</p>
               </nuxt-link>
             </li>
-            <li>
+            <li class="flex flex-col justify-end items-center">
+              <base-icon v-if="route_name == 'contact'" class="w-full" icon="fan" size="14" viewBox="0 0 24 24"
+                color="#78A695" />
               <nuxt-link to="/contact" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
                 <p :class="{ 'font-extrabold': route_name == 'contact' }">Contacts </p>
               </nuxt-link>
@@ -119,7 +130,9 @@
 </template>
 
 <script>
+import baseIcon from '../base/base-icon.vue'
 export default {
+  components: { baseIcon },
   data() {
     return {
       menu_route: ["blogs", "blogs-details-id", "product", "ingredients", "review", "contact", "favorite"]

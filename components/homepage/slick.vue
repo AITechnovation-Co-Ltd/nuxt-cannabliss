@@ -10,7 +10,8 @@
                                 class="absolute -top-12 -left-8 w-24 h-20">
                             <div class="w-full flex flex-col items-center">
                                 <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-primary" />
-                                <p class="my-6 text-sm xl:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+                                <p class="my-6 text-sm xl:text-base">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Blanditiis
                                     delectus
                                     incidunt ratione
                                     hic vero
@@ -21,7 +22,8 @@
                                     <div class="w-full flex justify-center relative ">
                                         <img src="@/static/images/IMG_01home/pages_01home/review03.png"
                                             class="absolute bottom-0 -left-8 w-28 h-28">
-                                        <p class="text-sm xl:text-base">Canabliss Oasiz :<br>Super Berry Hydrating Mask</p>
+                                        <p class="text-sm xl:text-base">Canabliss Oasiz :<br>Super Berry Hydrating Mask
+                                        </p>
                                     </div>
                                     <p class="text-sm xl:text-base">Kimberly K.</p>
                                 </div>
@@ -117,6 +119,10 @@
                 </div>
             
         </VueSlickCarousel>
+        <div class="w-full flex justify-center">
+            <base-button @click="$router.push(`/review`)" color_arrow="quaternary">View All</base-button>
+        </div>
+
     </div>
 </template>
 

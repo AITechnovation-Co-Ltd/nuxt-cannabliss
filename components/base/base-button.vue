@@ -1,8 +1,10 @@
 <template>
-  <button class="text-2xl text-quaternary hover:text-white hover:bg-tertiary px-10 py-3 flex justify-between items-center border-2 hover:border-tertiary border-quaternary rounded-full outline-none focus:outline-none " :type="type"
-    style="transition: all 0.15s ease 0s" @click="$emit('click', $event)" :disabled="disabled">
+  <button
+    class="text-2xl text-quaternary hover:text-white hover:bg-tertiary px-10 py-3 flex justify-between items-center border-2 hover:border-tertiary border-quaternary rounded-full outline-none focus:outline-none "
+    :type="type" style="transition: all 0.15s ease 0s" @click="$emit('click', $event)" :disabled="disabled">
     <slot />
-    <base-icon class="ml-3" icon="arrow-right-long" viewBox="0 0 512 512" width="20" height="20" />
+    <base-icon v-show="arrow" class="ml-3" icon="arrow-right-long" viewBox="0 0 512 512" width="20" height="20"
+      :color="color_arrow" />
   </button>
 </template>
 
@@ -20,14 +22,19 @@ export default {
       type: String,
       default: 'primary',
     },
-    arrow: {
+    color_arrow: {
       type: String,
       default: 'gray',
+    },
+    arrow: {
+      type: Boolean,
+      default: true,
     },
     disabled: {
       type: Boolean,
       default: false
-    }
+    },
+
   },
   data() {
     return {}
