@@ -1,6 +1,6 @@
 <template>
   <div v-click-outside="hideEvent" class="w-full">
-    <button @click="openClick" class="outline-none focus:outline-none" :class="toggleClass">
+    <button @click="openClick" class="w-full outline-none focus:outline-none" :class="toggleClass">
       <div v-if="text">
         <div class="rounded border text-sm py-2 px-4 flex justify-between items-center" :class="{
           'border-border-textfeild  text-slate':
