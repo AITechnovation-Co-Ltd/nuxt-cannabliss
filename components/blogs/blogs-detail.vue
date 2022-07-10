@@ -13,7 +13,7 @@
           <li>
             <div class="flex items-center">
               <div class="vl mx-1 bg-quaternary"></div>
-              <p class="font-medium md:ml-2">Blogs</p>
+              <nuxt-link to="/blogs" class="font-medium md:ml-2">Blogs</nuxt-link>
             </div>
           </li>
           <li>

@@ -4,7 +4,7 @@
     <ProductBanner />
 
     <!-- All Products -->
-    <AllProduct class="mt-32"/>
+    <AllProduct class="mt-20 2xl:mt-32"/>
   </div>
 </template>
 

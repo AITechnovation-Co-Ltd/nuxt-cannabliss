@@ -2,115 +2,127 @@
   <div class="bg w-full relative px-24 lg:px-12 xl:px-20 2xl:px-36">
     <VueSlickCarousel class="h-full flex justify-center items-center" v-bind="settings">
 
-      <div class="bg flex justify-center items-center">
-        <div class="bg3 flex h-full items-center justify-between">
-          <div class="w-1/2 h-full flex items-center justify-center">
-            <div class="flex h-full flex-col items-start justify-center">
-              <h1 class="text-4xl 2xl:text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
-              <h2 class="mt-2 ml-8 text-3xl 2xl:text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
-              <div class="mt-4 xl:mt-8 w-full flex items-center">
-                <div class="h-24 xl:h-28 2xl:h-36 w-3 2xl:w-4 bg-primary mr-8"></div>
-                <p class="text-xl xl:text-2xl 2xl:text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
-                  ,
-                  sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua .</p>
-              </div>
-              <div class="w-full mt-20 flex items-center hidden">
-                <div class="h-28 w-28 mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
-                  <div class="h-24 w-24 bg-tertiary rounded-full flex items-center justify-center">
-                    <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
-                  </div>
+      <div>
+        <div class="bg flex justify-center items-start mt-24">
+          <div class="bg3 flex h-full items-center justify-between">
+            <div class="w-1/2 h-full flex items-center justify-center">
+              <div class="flex h-full flex-col items-start justify-center">
+                <h1 class="text-4xl 2xl:text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
+                <h2 class="mt-2 ml-8 text-3xl 2xl:text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+                <div class="mt-4 xl:mt-8 w-full flex items-center">
+                  <div class="h-24 xl:h-28 2xl:h-36 w-3 2xl:w-4 bg-primary mr-8"></div>
+                  <p class="text-xl xl:text-2xl 2xl:text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet ,
+                    consectetur adipiscing elit
+                    ,
+                    sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua .</p>
                 </div>
-                <p class="text-3xl text-quaternary">Watch the video</p>
+                <div class="w-full mt-20 flex items-center hidden">
+                  <div class="h-28 w-28 mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
+                    <div class="h-24 w-24 bg-tertiary rounded-full flex items-center justify-center">
+                      <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
+                    </div>
+                  </div>
+                  <p class="text-3xl text-quaternary">Watch the video</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="w-1/2 flex justify-center">
-            <img class="w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
+            <div class="w-1/2 flex justify-center">
+              <img class="w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
+            </div>
           </div>
         </div>
       </div>
-      <div class="bg flex justify-center items-center">
-        <div class="bg3 bg-white flex h-full items-center justify-between">
-          <div class="w-1/2 h-full flex items-center justify-center">
-            <div class="flex h-full flex-col items-start justify-center">
-              <h1 class="text-4xl 2xl:text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
-              <h2 class="mt-2 ml-8 text-3xl 2xl:text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
-              <div class="mt-4 xl:mt-8 w-full flex items-center">
-                <div class="h-24 xl:h-28 2xl:h-36 w-3 2xl:w-4 bg-primary mr-8"></div>
-                <p class="text-xl xl:text-2xl 2xl:text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
-                  ,
-                  sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua .</p>
-              </div>
-              <div class="w-full mt-20 flex items-center hidden">
-                <div class="h-28 w-28 mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
-                  <div class="h-24 w-24 bg-tertiary rounded-full flex items-center justify-center">
-                    <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
-                  </div>
+      <div>
+        <div class="bg flex justify-center items-start mt-24">
+          <div class="bg3 bg-white flex h-full items-center justify-between">
+            <div class="w-1/2 h-full flex items-center justify-center">
+              <div class="flex h-full flex-col items-start justify-center">
+                <h1 class="text-4xl 2xl:text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
+                <h2 class="mt-2 ml-8 text-3xl 2xl:text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+                <div class="mt-4 xl:mt-8 w-full flex items-center">
+                  <div class="h-24 xl:h-28 2xl:h-36 w-3 2xl:w-4 bg-primary mr-8"></div>
+                  <p class="text-xl xl:text-2xl 2xl:text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet ,
+                    consectetur adipiscing elit
+                    ,
+                    sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua .</p>
                 </div>
-                <p class="text-3xl text-quaternary">Watch the video</p>
+                <div class="w-full mt-20 flex items-center hidden">
+                  <div class="h-28 w-28 mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
+                    <div class="h-24 w-24 bg-tertiary rounded-full flex items-center justify-center">
+                      <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
+                    </div>
+                  </div>
+                  <p class="text-3xl text-quaternary">Watch the video</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="w-1/2 flex justify-center">
-            <img class="w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
+            <div class="w-1/2 flex justify-center">
+              <img class="w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
+            </div>
           </div>
         </div>
       </div>
-      <div class="bg flex justify-center items-center">
-        <div class="bg3 flex h-full items-center justify-between">
-          <div class="w-1/2 h-full flex items-center justify-center">
-            <div class="flex h-full flex-col items-start justify-center">
-              <h1 class="text-4xl 2xl:text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
-              <h2 class="mt-2 ml-8 text-3xl 2xl:text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
-              <div class="mt-4 xl:mt-8 w-full flex items-center">
-                <div class="h-24 xl:h-28 2xl:h-36 w-3 2xl:w-4 bg-primary mr-8"></div>
-                <p class="text-xl xl:text-2xl 2xl:text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
-                  ,
-                  sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua .</p>
-              </div>
-              <div class="w-full mt-20 flex items-center hidden">
-                <div class="h-28 w-28 mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
-                  <div class="h-24 w-24 bg-tertiary rounded-full flex items-center justify-center">
-                    <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
-                  </div>
+      <div>
+        <div class="bg flex justify-center items-start mt-24">
+          <div class="bg3 flex h-full items-center justify-between">
+            <div class="w-1/2 h-full flex items-center justify-center">
+              <div class="flex h-full flex-col items-start justify-center">
+                <h1 class="text-4xl 2xl:text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
+                <h2 class="mt-2 ml-8 text-3xl 2xl:text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+                <div class="mt-4 xl:mt-8 w-full flex items-center">
+                  <div class="h-24 xl:h-28 2xl:h-36 w-3 2xl:w-4 bg-primary mr-8"></div>
+                  <p class="text-xl xl:text-2xl 2xl:text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet ,
+                    consectetur adipiscing elit
+                    ,
+                    sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua .</p>
                 </div>
-                <p class="text-3xl text-quaternary">Watch the video</p>
+                <div class="w-full mt-20 flex items-center hidden">
+                  <div class="h-28 w-28 mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
+                    <div class="h-24 w-24 bg-tertiary rounded-full flex items-center justify-center">
+                      <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
+                    </div>
+                  </div>
+                  <p class="text-3xl text-quaternary">Watch the video</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="w-1/2 flex justify-center">
-            <img class="w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
+            <div class="w-1/2 flex justify-center">
+              <img class="w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
+            </div>
           </div>
         </div>
       </div>
-      <div class="bg flex justify-center items-center">
-        <div class="bg3 bg-white flex h-full items-center justify-between">
-          <div class="w-1/2 h-full flex items-center justify-center">
-            <div class="flex h-full flex-col items-start justify-center">
-              <h1 class="text-4xl 2xl:text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
-              <h2 class="mt-2 ml-8 text-3xl 2xl:text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
-              <div class="mt-4 xl:mt-8 w-full flex items-center">
-                <div class="h-24 xl:h-28 2xl:h-36 w-3 2xl:w-4 bg-primary mr-8"></div>
-                <p class="text-xl xl:text-2xl 2xl:text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet , consectetur adipiscing elit
-                  ,
-                  sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua .</p>
-              </div>
-              <div class="w-full mt-20 flex items-center hidden">
-                <div class="h-28 w-28 mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
-                  <div class="h-24 w-24 bg-tertiary rounded-full flex items-center justify-center">
-                    <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
-                  </div>
+      <div>
+        <div class="bg flex justify-center items-start mt-24">
+          <div class="bg3 bg-white flex h-full items-center justify-between">
+            <div class="w-1/2 h-full flex items-center justify-center">
+              <div class="flex h-full flex-col items-start justify-center">
+                <h1 class="text-4xl 2xl:text-6xl ml-8 text-quaternary">Canabliss Oasiz</h1>
+                <h2 class="mt-2 ml-8 text-3xl 2xl:text-6xl text-primary font-medium">Red Fruit Overnight Mask</h2>
+                <div class="mt-4 xl:mt-8 w-full flex items-center">
+                  <div class="h-24 xl:h-28 2xl:h-36 w-3 2xl:w-4 bg-primary mr-8"></div>
+                  <p class="text-xl xl:text-2xl 2xl:text-4xl font-light text-quaternary">Lorem ipsum dolor sit amet ,
+                    consectetur adipiscing elit
+                    ,
+                    sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua .</p>
                 </div>
-                <p class="text-3xl text-quaternary">Watch the video</p>
+                <div class="w-full mt-20 flex items-center hidden">
+                  <div class="h-28 w-28 mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
+                    <div class="h-24 w-24 bg-tertiary rounded-full flex items-center justify-center">
+                      <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
+                    </div>
+                  </div>
+                  <p class="text-3xl text-quaternary">Watch the video</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="w-1/2 flex justify-center">
-            <img class="w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
+            <div class="w-1/2 flex justify-center">
+              <img class="w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
+            </div>
           </div>
         </div>
       </div>
@@ -120,7 +132,9 @@
       <div class="flex space-x-8">
         <img class="w-8 2xl:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
         <img class="w-8 2xl:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
-        <img class="w-8 2xl:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
+        <a href="https://lin.ee/i5MkM6w" target="_blank">
+          <img class="w-8 2xl:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
+        </a>
         <img class="w-8 2xl:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt="">
       </div>
     </div>
@@ -179,15 +193,17 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 .bg3 {
-  height: 80%;
+  height: 70%;
 }
 
 .vl {
   height: 145px;
   width: 15px;
 }
-.contact{
+
+.contact {
   position: absolute;
   bottom: 10%;
 }
