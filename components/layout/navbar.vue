@@ -25,9 +25,9 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg></p>
             <!-- Dropdown menu -->
-            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow px-2 "
+            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow px-4 text-primary"
               data-popper-placement="bottom"
-              style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
+              style="position: absolute;  inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
               <p class="text-center">TH</p>
             </div>
 
