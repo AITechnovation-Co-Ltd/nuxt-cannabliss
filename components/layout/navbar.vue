@@ -25,9 +25,9 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg></p>
             <!-- Dropdown menu -->
-            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow px-2 "
+            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow px-4 text-primary"
               data-popper-placement="bottom"
-              style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
+              style="position: absolute;  inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
               <p class="text-center">TH</p>
             </div>
 
@@ -50,13 +50,14 @@
         </div>
         <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
           <ul class="flex flex-col mt-4 md:flex-row md:space-x-16 md:mt-0 text-base">
-            <li>
+            <li class="flex flex-col justify-end items-center">
               <!-- <nuxt-link to="/product" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Product</nuxt-link> -->
               <!-- Dropdown menu -->
+              <img v-if="route_name == 'product' || route_name == 'product-details-id'"
+                src="@/static/images/flower.png">
               <p id="dropdownDefault" data-dropdown-toggle="multilang"
-                class="text-primary hover:cursor-pointer rounded-lg flex items-center"
-                :class="{ 'font-extrabold': route_name == 'product' || route_name == 'product-details-id' }"
-                type="button">
+                class="text-primary hover:cursor-pointer rounded-lg flex items-center "
+                :class="{ 'font-bold': route_name == 'product' || route_name == 'product-details-id' }" type="button">
                 Product
                 <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg">
@@ -78,6 +79,7 @@
                     </p>
                   </li>
                   <li>
+
                     <p @click="$router.push({ name: 'product', params: { type: 'face' } })"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Face
                     </p>
@@ -90,24 +92,28 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <li class="flex flex-col justify-end items-center ">
+              <img v-if="route_name == 'ingredients'" src="@/static/images/flower.png">
               <nuxt-link to="/ingredients" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
-                <p :class="{ 'font-extrabold': route_name == 'ingredients' }">Ingredients</p>
+                <p :class="{ 'font-bold': route_name == 'ingredients' }">Ingredients</p>
               </nuxt-link>
             </li>
-            <li>
+            <li class="flex flex-col justify-end items-center ">
+              <img v-if="route_name == 'blogs' || route_name == 'blogs-details-id'" src="@/static/images/flower.png">
               <nuxt-link to="/blogs" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
-                <p :class="{ 'font-extrabold': route_name == 'blogs' || route_name == 'blogs-details-id' }">Blogs</p>
+                <p :class="{ 'font-bold': route_name == 'blogs' || route_name == 'blogs-details-id' }">Blogs</p>
               </nuxt-link>
             </li>
-            <li>
+            <li class="flex flex-col justify-end items-center">
+              <img v-if="route_name == 'review'" src="@/static/images/flower.png">
               <nuxt-link to="/review" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
-                <p :class="{ 'font-extrabold': route_name == 'review' }">Review</p>
+                <p :class="{ 'font-bold': route_name == 'review' }">Review</p>
               </nuxt-link>
             </li>
-            <li>
+            <li class="flex flex-col justify-end items-center">
+              <img v-if="route_name == 'contact'" src="@/static/images/flower.png">
               <nuxt-link to="/contact" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
-                <p :class="{ 'font-extrabold': route_name == 'contact' }">Contacts </p>
+                <p :class="{ 'font-bold': route_name == 'contact' }">Contacts </p>
               </nuxt-link>
             </li>
           </ul>
@@ -119,7 +125,9 @@
 </template>
 
 <script>
+import baseIcon from '../base/base-icon.vue'
 export default {
+  components: { baseIcon },
   data() {
     return {
       menu_route: ["blogs", "blogs-details-id", "product", "ingredients", "review", "contact", "favorite"]

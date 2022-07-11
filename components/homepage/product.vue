@@ -97,12 +97,12 @@ export default {
       } else {
         list = this.products.filter((e) => e.type === this.type)
       }
+      this.page = 1;
+      this.total_p = Math.ceil(this.xl ? list.length / 2 : list.length / 3)
       return list
     },
   },
-  async mounted() {
-    await this.isXL()
-    // console.log(this.isXL())
+  mounted() {
     this.total_p = Math.ceil(this.isXL() ? this.products.length / 2 : this.products.length / 3)
     // console.log(this.total_p)
   },

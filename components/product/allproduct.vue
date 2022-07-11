@@ -72,7 +72,7 @@
             <h1 v-else-if="type == 'hair'" class="w-full text-4xl text-primary">Hair</h1>
             <h1 v-else-if="type == 'best'" class="w-full text-4xl text-primary">Best Seller</h1>
             <h1 v-else-if="type == 'new'" class="w-full text-4xl text-primary">New In</h1>
-            <h1 v-else class="w-full text-4xl text-primary">All Products</h1>
+            <!-- <h1 v-else class="w-full text-4xl text-primary">All Products</h1> -->
 
             <!-- Sort by -->
             <div class="w-full py-4 mt-8 bg-tertiary flex flex-row items-center justify-end">
@@ -89,15 +89,22 @@
                 <div class="flex flex-row items-center mx-4">
                     <p class="text-white">Sort by</p>
                     <select class="text-quaternary rounded-xl mx-4" name="" id="">
+                        <option></option>
+                        <option value="">A-Z</option>
+                        <option value="">Z-A</option>
+                        <option value="">Newest</option>
                         <option value="">Best Selling</option>
+                        <option value="">Price(Low to hight)</option>
+                        <option value="">Price(hight to low)</option>
                     </select>
                 </div>
             </div>
 
             <!-- Product card -->
-            <div class="w-full mt-20 grid grid-cols-2 2xl:grid-cols-3 gap-4">
+            <div class="w-full mt-20 grid grid-cols-2 2xl:grid-cols-3 gap-x-4">
                 <div class="w-full" v-for="(product, index) in list_products" :key="index">
-                    <template v-if="index < 6 * page && index >= 6 * (page - 1)">
+                    <template
+                        v-if="xxl ? index < 4 * page && index >= 4 * (page - 1) : index < 6 * page && index >= 6 * (page - 1)">
                         <div class="relative">
                             <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
                             <img :src="require(`~/static/images/products${product.imgUrl}`)" class="centered w-full" />
@@ -140,6 +147,7 @@ export default {
             total_p: 1,
             products,
             type: 'all',
+            xxl: null,
         };
     },
     components: { BaseButton },
@@ -151,13 +159,16 @@ export default {
             } else {
                 list = this.products.filter((e) => e.type === this.type)
             }
+            this.page = 1;
+            this.total_p = Math.ceil(this.xxl ? list.length / 4 : list.length / 6)
             return list
+
         },
     },
     async mounted() {
         // console.log(this.$route.params.type)
         if (this.$route.params.type) this.type = await this.$route.params.type
-        this.total_p = Math.ceil(this.products.length / 6)
+        this.total_p = Math.ceil(this.isXXL() ? this.products.length / 4 : this.products.length / 6)
     },
     methods: {
         change(p) {
@@ -165,6 +176,17 @@ export default {
         },
         filterType(type) {
             this.type = type
+            //this.calPage();
+        },
+        isXXL() {
+            if (screen.width <= 1536) {
+                this.xxl = true
+                return true;
+            }
+            else {
+                this.xxl = false
+                return false;
+            }
         },
     }
 };

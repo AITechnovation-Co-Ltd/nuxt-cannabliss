@@ -39,7 +39,7 @@
     <div class="w-full lg:w-9/12">
       <!-- Write a review -->
       <div class="w-full flex justify-start py-3 xl:py-4 px-4 mt-8 bg-tertiary ">
-        <base-button @click="$refs.uploadReviewRef.show()" arrow="white"
+        <base-button @click="$refs.uploadReviewRef.show()" color_arrow="white"
           class="text-white border-white hover:border-white">Write a review</base-button>
       </div>
       <!-- Review card -->

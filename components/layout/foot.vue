@@ -66,7 +66,7 @@
                 <a href="#" class=" mx-1 hover dark:hover:text-white">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-instagram@2x.png" alt="">
                 </a>
-                <a href="#" class=" mx-1 hover dark:hover:text-white">
+                <a href="https://lin.ee/i5MkM6w" target="_blank" class=" mx-1 hover dark:hover:text-white">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-line(1)@2x.png" alt="">
                 </a>
                 <a href="#" class=" mx-1 hover dark:hover:text-white">
