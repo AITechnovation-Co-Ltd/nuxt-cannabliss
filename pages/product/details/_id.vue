@@ -2,7 +2,7 @@
   <div>
     <ProductBanner />
     <ProductDetail class="mt-20" :params="$route.params.id" />
-    <ProductReview />
+    <ProductReview :params="$route.params.id"/>
     <ProductOther />
     <Subscribe class="hidden" />
   </div>

@@ -2,81 +2,81 @@
   <div class="w-full px-28">
 
     <div class="hidden lg:block 2xl:hidden">
-    <h1 class="text-5xl text-primary text-center font-medium my-12">You may also like</h1>
-    <div class="w-full grid grid-cols-3 gap-x-4">
-      <div class="w-full" v-for="(product, index) in products" :key="index">
-        <template v-if="index < 3 * page && index >= 3 * (page - 1)">
-          <div class="relative">
-            <img src="~/static/images/IMG_02products_detail/Path357@2x.png" alt="">
-            <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl}`)">
-            <span v-if="product.isNew"
-              class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
-            <base-icon icon="heart" viewBox="0 0 30 41" size="50" class="text-quaternary absolute top-8 right-8" />
-            <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
-          </div>
-          <div class="text-quaternary text-xl">
-            <p>{{ product.type }}</p>
-            <p class="text-2xl 2xl:text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
-            <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
-            <BaseButton @click="$router.push(`/product/details/${product.no}`), location.reload();">View more
-            </BaseButton>
-          </div>
-        </template>
+      <h1 class="text-5xl text-primary text-center font-medium my-12">You may also like</h1>
+      <div class="w-full grid grid-cols-3 gap-x-4">
+        <div class="w-full" v-for="(product, index) in products" :key="index">
+          <template v-if="index < 3 * page && index >= 3 * (page - 1)">
+            <div class="relative">
+              <img src="~/static/images/IMG_02products_detail/Path357@2x.png" alt="">
+              <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl}`)">
+              <span v-if="product.isNew"
+                class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
+              <base-icon icon="heart" viewBox="0 0 30 41" size="50" class="text-quaternary absolute top-8 right-8" />
+              <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
+            </div>
+            <div class="text-quaternary text-xl">
+              <p>{{ product.type }}</p>
+              <p class="text-2xl 2xl:text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
+              <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
+              <BaseButton @click="$router.push(`/product/details/${product.no}`), scrollToTop">View more
+              </BaseButton>
+            </div>
+          </template>
+        </div>
       </div>
-    </div>
-    <base-pages class="mt-8" @change="change" :page="page" :total_pages="total_p" :limit="7"></base-pages>
+      <base-pages class="mt-8" @change="change" :page="page" :total_pages="total_p" :limit="7"></base-pages>
     </div>
 
     <div class="hidden 2xl:block">
-    <h1 class="text-5xl text-primary text-center font-medium my-12">You may also like</h1>
-    <div class="w-full grid grid-cols-4 gap-x-4">
-      <div class="w-full" v-for="(product, index) in products" :key="index">
-        <template v-if="index < 4 * page && index >= 4 * (page - 1)">
-          <div class="relative">
-            <img src="~/static/images/IMG_02products_detail/Path357@2x.png" alt="">
-            <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl}`)">
-            <span v-if="product.isNew"
-              class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
-            <base-icon icon="heart" viewBox="0 0 30 41" size="50" class="text-quaternary absolute top-8 right-8" />
-            <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
-          </div>
-          <div class="text-quaternary text-xl">
-            <p>{{ product.type }}</p>
-            <p class="text-2xl 2xl:text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
-            <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
-            <BaseButton @click="$router.push(`/product/details/${product.no}`), location.reload();">View more
-            </BaseButton>
-          </div>
-        </template>
+      <h1 class="text-5xl text-primary text-center font-medium my-12">You may also like</h1>
+      <div class="w-full grid grid-cols-4 gap-x-4">
+        <div class="w-full" v-for="(product, index) in products" :key="index">
+          <template v-if="index < 4 * page && index >= 4 * (page - 1)">
+            <div class="relative">
+              <img src="~/static/images/IMG_02products_detail/Path357@2x.png" alt="">
+              <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl}`)">
+              <span v-if="product.isNew"
+                class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
+              <base-icon icon="heart" viewBox="0 0 30 41" size="50" class="text-quaternary absolute top-8 right-8" />
+              <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
+            </div>
+            <div class="text-quaternary text-xl">
+              <p>{{ product.type }}</p>
+              <p class="text-2xl 2xl:text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
+              <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
+              <BaseButton @click="$router.push(`/product/details/${product.no}`), scrollToTop">View more
+              </BaseButton>
+            </div>
+          </template>
+        </div>
       </div>
-    </div>
-    <base-pages class="mt-8" @change="change" :page="page" :total_pages="total_p" :limit="7"></base-pages>
+      <base-pages class="mt-8" @change="change" :page="page" :total_pages="total_p" :limit="7"></base-pages>
     </div>
 
     <div class="block lg:hidden">
-    <h1 class="text-5xl text-primary text-center font-medium my-12">You may also like</h1>
-    <div class="w-full grid grid-cols-2 gap-x-4">
-      <div class="w-full" v-for="(product, index) in products" :key="index">
-        <template v-if="index < 2 * page && index >= 2 * (page - 1)">
-          <div class="relative">
-            <img src="~/static/images/IMG_02products_detail/Path357@2x.png" alt="">
-            <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl}`)">
-            <span v-if="product.isNew"
-              class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
-            <base-icon icon="heart" viewBox="0 0 30 41" size="50" class="text-quaternary absolute top-8 right-8" />
-            <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
-          </div>
-          <div class="text-quaternary text-xl">
-            <p>{{ product.type }}</p>
-            <p class="text-2xl 2xl:text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
-            <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
-            <BaseButton @click="$router.push(`/product/details/${product.no}`), location.reload();">View more
-            </BaseButton>
-          </div>
-        </template>
+      <h1 class="text-5xl text-primary text-center font-medium my-12">You may also like</h1>
+      <div class="w-full grid grid-cols-2 gap-x-4">
+        <div class="w-full" v-for="(product, index) in products" :key="index">
+          <template v-if="index < 2 * page && index >= 2 * (page - 1)">
+            <div class="relative">
+              <img src="~/static/images/IMG_02products_detail/Path357@2x.png" alt="">
+              <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl}`)">
+              <span v-if="product.isNew"
+                class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
+              <base-icon icon="heart" viewBox="0 0 30 41" size="50" class="text-quaternary absolute top-8 right-8" />
+              <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
+            </div>
+            <div class="text-quaternary text-xl">
+              <p>{{ product.type }}</p>
+              <p class="text-2xl 2xl:text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
+              <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
+              <BaseButton @click="$router.push(`/product/details/${product.no}`), scrollToTop">View more
+              </BaseButton>
+            </div>
+          </template>
+        </div>
       </div>
-    </div>
-    <base-pages class="mt-8" @change="change" :page="page" :total_pages="total_p" :limit="7"></base-pages>
+      <base-pages class="mt-8" @change="change" :page="page" :total_pages="total_p" :limit="7"></base-pages>
     </div>
   </div>
 </template>
@@ -99,6 +99,9 @@ export default {
   methods: {
     change(p) {
       this.page = p
+    },
+    scrollToTop() {
+      window.scrollTo(0, 0);
     },
   }
 }

@@ -193,8 +193,11 @@
           <div class="w-full flex mt-6">
             <a :href="products_id.link"><button
                 class="px-8 h-14 text-quaternary border border-quaternary rounded-full mr-4">Go to shopping</button></a>
-            <div class="h-14 w-14 flex items-center justify-center border border-primary rounded-full">
-              <base-icon icon="heart" viewBox="0 0 30 41" size="35" class="text-primary" />
+            <div @click="fav = !fav"
+              class="h-14 w-14 flex items-center justify-center border border-primary rounded-full"
+              :class="{ 'bg-primary': fav }">
+              <base-icon icon="heart" viewBox="0 0 30 41" size="35" class="text-primary"
+                :class="{ 'text-red-500': fav }" />
             </div>
           </div>
         </div>
@@ -244,6 +247,7 @@ export default {
   },
   data() {
     return {
+      fav: false,
       products,
       products_img: new Array(),
       products_detail: new Array(),
@@ -274,6 +278,7 @@ export default {
     },
   },
   mounted() {
+    // console.log(this.params)
     this.fetch()
   }
 }

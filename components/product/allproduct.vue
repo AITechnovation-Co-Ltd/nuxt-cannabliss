@@ -89,7 +89,13 @@
                 <div class="flex flex-row items-center mx-4">
                     <p class="text-white">Sort by</p>
                     <select class="text-quaternary rounded-xl mx-4" name="" id="">
+                        <option></option>
+                        <option value="">A-Z</option>
+                        <option value="">Z-A</option>
+                        <option value="">Newest</option>
                         <option value="">Best Selling</option>
+                        <option value="">Price(Low to hight)</option>
+                        <option value="">Price(hight to low)</option>
                     </select>
                 </div>
             </div>

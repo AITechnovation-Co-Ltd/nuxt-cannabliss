@@ -26,7 +26,6 @@
             <img class="centered w-11/12" :src="require(`~/static/images/IMG_02products_detail/Group6512x.png`)">
             5
           </div>
-          
         </VueSlickCarousel>
     </div>
 </template>
