@@ -17,7 +17,7 @@
         <p class="mt-6">Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua . Ut enim ad minim veniam , quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat .</p>
-        <BaseButton class="mt-12">View more</BaseButton>
+        <BaseButton class="mt-12" @click="$router.push(`/product/details/3`)">View more</BaseButton>
       </div>
 
       <!-- image -->

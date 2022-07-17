@@ -14,16 +14,16 @@
           <div>
             <ul>
               <li class="mb-4 mt-8">
-                <a href="" class="hover:underline font-semibold">Product</a>
+                <p class="hover:underline font-semibold">Product</p>
               </li>
               <li class="mb-4">
-                <a href="" class="hover:underline">Hair</a>
+                <p class="hover:underline">Hair</p>
               </li>
               <li class="mb-4">
-                <a href="" class="hover:underline">Face</a>
+                <p class="hover:underline">Face</p>
               </li>
               <li>
-                <a href="" class="hover:underline">Body</a>
+                <p class="hover:underline">Body</p>
               </li>
             </ul>
           </div>
@@ -32,19 +32,19 @@
           <div>
             <ul>
               <li class="mb-4 mt-8">
-                <p class="hover:underline font-semibold">Home</p>
+                <nuxt-link to="/" class="hover:underline font-semibold">Home</nuxt-link>
               </li>
               <li class="mb-4">
-                <p class="hover:underline ">Ingredients</p>
+                <nuxt-link to="/ingredients" class="hover:underline ">Ingredients</nuxt-link>
               </li>
               <li class="mb-4">
-                <p class="hover:underline ">Blogs</p>
+                <nuxt-link to="/blogs" class="hover:underline ">Blogs</nuxt-link>
               </li>
               <li class="mb-4">
-                <p class="hover:underline ">Review</p>
+                <nuxt-link to="/review" class="hover:underline ">Review</nuxt-link>
               </li>
               <li>
-                <p class="hover:underline">Contacts</p>
+                <nuxt-link to="/contact" class="hover:underline">Contacts</nuxt-link>
               </li>
             </ul>
           </div>
@@ -72,7 +72,7 @@
                 <a href="#" class=" mx-1 hover dark:hover:text-white">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-twitter(1)@2x.png" alt="">
                 </a>
-                <a href="#" class=" ml-1 hover dark:hover:text-white">
+                <a href="#" class=" ml-1 hover dark:hover:text-white hidden">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-pinterest@2x.png" alt="">
                 </a>
               </li>

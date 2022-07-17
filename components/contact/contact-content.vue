@@ -30,15 +30,15 @@
             Subdistrict,Huai Khwang Distric Bangkok</p>
         </a>
 
-        <a class="flex items-center my-8 " href="tel:03525684593" target="_blank">
+        <div class="flex items-center my-8 ">
           <base-icon viewBox="0 0 153 178" icon="phone" class="w-20 h-20 ml-4" />
-          <p class="text-primary text-lg lg:text-xl border-b-2 border-primary">+391 (0)35 2568 4593</p>
-        </a>
+          <p class="text-primary text-lg lg:text-xl border-primary">+391 (0)35 2568 4593</p>
+        </div>
 
-        <a class="flex items-center " href="www.morhello@domain.com" target="_blank">
+        <div class="flex items-center ">
           <base-icon viewBox="0 0 157 156" icon="email" class="w-20 h-20 mr-4" />
-          <p class="text-primary text-lg lg:text-xl border-b-2 border-primary">morhello@domain.com</p>
-        </a>
+          <p class="text-primary text-lg lg:text-xl border-primary">morhello@domain.com</p>
+        </div>
       </div>
 
       <!-- Email Box -->

@@ -135,7 +135,9 @@
       <div class="flex space-x-8">
         <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
         <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
-        <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
+        <a href="https://lin.ee/i5MkM6w" target="_blank">
+          <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
+        </a>
         <img class="w-10" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt="">
       </div>
     </div>

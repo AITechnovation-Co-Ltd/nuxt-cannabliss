@@ -35,7 +35,8 @@
 
     <div class="w-full mt-12 flex flex-row justify-between items-center">
       <div class="w-1/2 xl:w-2/5 mr-12 xl:mr-0">
-        <h1 class="text-5xl text-primary">What Is <br>IBR-SNOWFLAKE®?</h1>
+        <h1 class="text-5xl text-primary">What Is</h1>
+        <h1 class="h-full flex text-5xl text-primary">IBR-SNOWFLAKE <span class="text-4xl">®</span>?</h1>
         <p class="mt-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
           , totam rem aperiam , eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
           explicabo . Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit , sed quia consequuntur

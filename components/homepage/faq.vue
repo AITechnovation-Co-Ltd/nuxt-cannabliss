@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col justify-center px-24 lg:px-12 xl:px-20 2xl:px-36">
+  <div class="w-full flex flex-col justify-center pt-24 lg:px-12 xl:px-20 2xl:px-36">
     <p class="text-primary text-7xl">FAQ</p>
     <div class="w-full flex flex-row items-start my-6">
       <!-- Dropdown FQA -->

@@ -16,7 +16,7 @@
                         <li>
                             <div class="flex items-center">
                                 <div class="vl mx-1 bg-quaternary"></div>
-                                <p class="font-medium md:ml-2">Product</p>
+                                <nuxt-link to="/product" class="font-medium md:ml-2">Product</nuxt-link>
                             </div>
                         </li>
                         <li aria-current="page">

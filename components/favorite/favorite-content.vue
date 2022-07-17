@@ -76,25 +76,14 @@
 
 <script>
 import basePages from '../base/base-pages.vue'
+import products from "@/static/json/products.json"
 export default {
     components: { basePages },
     data() {
         return {
             page: 1,
             total_p: 1,
-            products: [
-                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100ML", isNew: true, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
-                { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100ML", isNew: true, img: require("~/static/images/IMG_02products_detail/Group669@2x.png") },
-                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100ML", isNew: false, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
-                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100ML", isNew: false, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
-                { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100ML", isNew: false, img: require("~/static/images/IMG_02products_detail/Group669@2x.png") },
-                { name: "Canabliss Crown : Okiquiopimo Keqimoko1234", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100ML", isNew: false, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
-                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100ML", isNew: false, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
-                { name: "Canabliss Oasiz : Red Fruit Overnight Mask", type: "Face", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100ML", isNew: false, img: require("~/static/images/IMG_02products_detail/Group669@2x.png") },
-                { name: "Canabliss Crown : Okiquiopimo Keqimoko1234", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100ML", isNew: false, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
-                { name: "Canabliss Crown : Anti -Fall Nourishing Shampoo", type: "Hair", detail: "Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor", quantity: "100ML", isNew: true, img: require("~/static/images/IMG_06fav/Group508@2x.png") },
-                
-            ]
+            products
         }
     },
     mounted() {
