@@ -1,8 +1,8 @@
 export default {
   mode: 'static',
-   router: {
-      base: '/nuxt-cannabliss/'
-   },
+  router: {
+    base: '/nuxt-cannabliss/'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Canabliss Cosmetic',
@@ -34,6 +34,7 @@ export default {
     "@/plugins/base-component",
     "@/plugins/modal",
     "@/plugins/vue-tailwind",
+    "@/plugins/vue-scrollto",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

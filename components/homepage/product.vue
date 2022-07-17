@@ -41,17 +41,14 @@
             <template
               v-if="xl ? index < 2 * page && index >= 2 * (page - 1) : index < 3 * page && index >= 3 * (page - 1)">
               <div class="relative">
-
                 <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
-                <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl}`)" />
+                <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
                 <span v-if="product.isNew"
                   class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
-
                 <div v-if="product.islike == true">
                   <base-icon icon="heartactive" viewBox="0 0 30 41" size="50"
                     class="hover:cursor-pointer text-red-500 absolute top-8 right-8" />
                 </div>
-
                 <div v-else>
                   <base-icon icon="heart" viewBox="0 0 30 41" size="50"
                     class="hover:cursor-pointer text-primary absolute top-8 right-8" />
