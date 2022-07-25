@@ -1,7 +1,7 @@
 <template>
     <div class="mt-2 flex text-center px-4 text-2xl text-quaternary font-light tracking-wide ">
         <div class="flex items-center mr-1 ml-auto">
-            <p> <span class="font-medium">{{ page + ' ' }}</span>from<span class="font-medium">{{ ' ' + total_pages + ' '
+            <p class="hidden sm:block"> <span class="font-medium">{{ page + ' ' }}</span>from<span class="font-medium">{{ ' ' + total_pages + ' '
             }} </span>pages</p>
         </div>
         <!-- Pagination -->
