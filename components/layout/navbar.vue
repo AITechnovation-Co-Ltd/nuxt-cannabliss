@@ -1,14 +1,20 @@
 <template>
   <div class="sticky top-0 z-50">
     <nav class="w-screen bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
-      <div class="container h-16 flex flex-wrap justify-between items-center mx-auto">
+      <div class="container h-16 flex flex-wrap justify-between items-center mx-auto px-6">
 
         <!-- Logo -->
         <nuxt-link to="/" class="flex items-center">
           <img class="h-16" src="~/static/logo/Logo-CANABLISS.png" alt="">
         </nuxt-link>
 
-        <div class="flex md:order-2">
+        <div class="lg:hidden">
+          <button @click="drawer">
+            <base-icon icon="bars" viewBox="0 0 20 20" :size="35" class="text-primary" />
+          </button>
+        </div>
+
+        <div class="hidden lg:flex md:order-2">
           <div class="flex items-center">
             <div class="notification">
               <nuxt-link to="/favorite">
@@ -16,6 +22,7 @@
                 <span class="badge bg-primary">0</span>
               </nuxt-link>
             </div>
+
             <base-icon icon="magnifying-glass" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
             <div class="vl mx-4 bg-primary"></div>
             <p id="dropdownDefault" data-dropdown-toggle="dropdown"
@@ -32,65 +39,15 @@
             </div>
 
           </div>
-          <button data-collapse-toggle="mobile-menu-4" type="button"
-            class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="mobile-menu-4" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"></path>
-            </svg>
-            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </button>
         </div>
-        <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
-          <ul class="flex flex-col mt-4 md:flex-row md:space-x-16 md:mt-0 text-base">
-            <li class="flex flex-col justify-end items-center">
-              <!-- <nuxt-link to="/product" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Product</nuxt-link> -->
-              <!-- Dropdown menu -->
-              <img v-if="route_name == 'product' || route_name == 'product-details-id'"
-                src="@/static/images/flower.png">
-              <p id="dropdownDefault" data-dropdown-toggle="multilang"
-                class="text-primary hover:cursor-pointer rounded-lg flex items-center "
-                :class="{ 'font-bold': route_name == 'product' || route_name == 'product-details-id' }" type="button">
-                Product
-                <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </p>
-              <div id="multilang" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 "
-                data-popper-placement="bottom"
-                style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
-                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                  <li>
-                    <nuxt-link to="/product"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">All
-                      Products</nuxt-link>
-                  </li>
-                  <li>
-                    <p @click="$router.push({ name: 'product', params: { type: 'hair' } })"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Hair
-                    </p>
-                  </li>
-                  <li>
 
-                    <p @click="$router.push({ name: 'product', params: { type: 'face' } })"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Face
-                    </p>
-                  </li>
-                  <li>
-                    <p @click="$router.push({ name: 'product', params: { type: 'body' } })"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Body
-                    </p>
-                  </li>
-                </ul>
-              </div>
+        <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-4">
+          <ul class="flex flex-col mt-4 md:flex-row md:space-x-16 md:mt-0 text-base">
+            <li class="flex flex-col justify-end items-center ">
+              <img v-if="route_name == 'product'" src="@/static/images/flower.png">
+              <nuxt-link to="/product" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
+                <p :class="{ 'font-bold': route_name == 'product' }">Product</p>
+              </nuxt-link>
             </li>
             <li class="flex flex-col justify-end items-center ">
               <img v-if="route_name == 'ingredients'" src="@/static/images/flower.png">
@@ -118,6 +75,72 @@
             </li>
           </ul>
         </div>
+
+        <aside
+          class="p-5 z-50 transform top-0 right-0 w-64 bg-primary fixed h-full overflow-auto ease-in-out transition-all duration-300"
+          :class="isOpen ? 'translate-x-0' : 'translate-x-full'">
+
+          <div class="close w-full flex justify-end">
+            <button @click="isOpen = false" class="mt-1.5 mr-3">
+              <base-icon icon="xmark" viewBox="0 0 20 20" :size="35" class="text-white" />
+            </button>
+          </div>
+          <ul class="divide-y devide-white font-sans">
+            <li>
+              <nuxt-link to="/product" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">Product</p>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/ingredients" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">Ingredients</p>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/blogs" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">Blog</p>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/review" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">Review</p>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/contact" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">Contacts</p>
+              </nuxt-link>
+            </li>
+            <!-- Checked login for V-show -->
+            <!-- <div class="text-lg text-white px-2" v-for="(item, i) in $menus.menu_users"
+            :key="`menu-user-${i}`">
+            <li>
+              <nuxt-link class="text-white text-lg w-full font-medium my-4 inline-block" :to="item.link"
+                :class="{ 'text-secondary': item.routes.includes(route_name) }">
+                <p @click="isOpen = false" class="w-full">{{ item.label
+                }}</p>
+              </nuxt-link>
+            </li>
+          </div> -->
+        
+            <li>
+              <nuxt-link to="/" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">ออกจากระบบ</p>
+              </nuxt-link>
+            </li>
+            <li>
+              <div class="p-3">
+                <nuxt-link to="/users/login" class="flex items-center space-x-3 text-white text-lg font-medium my-4 ">
+                  <p class="text-white">เข้าสู่ระบบ</p>
+                </nuxt-link>
+                <nuxt-link to="/users/register"
+                  class="flex items-center space-x-3 text-white text-lg font-medium my-4 ">
+                  <p class="text-white">สมัครสมาชิก</p>
+                </nuxt-link>
+              </div>
+            </li>
+          </ul>
+        </aside>
       </div>
     </nav>
 
@@ -130,13 +153,35 @@ export default {
   components: { baseIcon },
   data() {
     return {
-      menu_route: ["blogs", "blogs-details-id", "product", "ingredients", "review", "contact", "favorite"]
+      menu_route: ["blogs", "blogs-details-id", "product", "ingredients", "review", "contact", "favorite"],
+      isOpen: false,
     }
   },
   computed: {
     route_name() {
       return this.$route.name
     },
+  },
+  methods: {
+    drawer() {
+      this.isOpen = !this.isOpen;
+    },
+  },
+  mounted() {
+    document.addEventListener("keydown", e => {
+      if (e.keyCode == 27 && this.isOpen) this.isOpen = false;
+    });
+  },
+  watch: {
+    isOpen: {
+      immediate: true,
+      handler(isOpen) {
+        if (process.client) {
+          if (isOpen) document.body.style.setProperty("overflow", "hidden");
+          else document.body.style.removeProperty("overflow");
+        }
+      }
+    }
   },
 }
 </script>
