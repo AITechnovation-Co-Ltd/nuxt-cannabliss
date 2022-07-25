@@ -9,7 +9,7 @@
     <button class="to-top hide" id="totop" @click="toTop">
       <base-icon icon="angle-up" viewBox="0 0 30 41" size="30" class="text-white" />
     </button>
-    <Foot class="mt-40" />
+    <Foot class="mt-20" />
   </div>
 </template>
 
