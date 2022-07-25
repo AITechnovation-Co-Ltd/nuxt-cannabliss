@@ -113,7 +113,7 @@
 
       <hooper-pagination slot="hooper-addons"></hooper-pagination>
     </hooper>
-    <div class="social w-full flex justify-center sm:absolute bottom-8 sm:bottom-12 right-12 xl:right-24 2xl:right-36">
+    <div class="social justify-center sm:absolute bottom-8 sm:bottom-12 right-12 xl:right-24 2xl:right-36">
       <div class="flex space-x-6 sm:space-x-8">
         <img class="w-8 sm:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
         <img class="w-8 sm:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
@@ -186,6 +186,8 @@ export default {
 }
 @media (max-width: 639px) {
 .social{
+  display: flex;
+  width: 100%;
   margin-top: -50px;
 }
 }

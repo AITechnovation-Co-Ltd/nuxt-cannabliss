@@ -6,7 +6,7 @@
     </div>
     <div class="w-full columns-1 lg:flex mt-0 sm:mt-16">
       <div class="hidden sm:flex w-full lg:w-1/6 mr-6">
-        <ul class="w-full flex justify-around lg:flex-col decorate-none text-3xl text-primary font-light">
+        <ul class="w-full flex justify-around lg:justify-start lg:flex-col decorate-none text-3xl text-primary font-light">
           <li @click="filterType('all')">
             <span class="flex justify-between items-center lg:my-2 hover:font-bold hover:cursor-pointer"
               :class="{ 'font-bold': type == 'all' }">All Products <div v-if="type == 'all'"

@@ -122,14 +122,35 @@
               </nuxt-link>
             </li>
           </div> -->
-        
-            <li>
-              <nuxt-link to="/" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
-                <p @click="isOpen = false" class="w-full">ออกจากระบบ</p>
-              </nuxt-link>
-            </li>
+
             <li>
               <div class="p-3">
+                <nuxt-link to="/favorite" class="flex items-center justify-center space-x-3 text-white text-lg font-medium my-4">
+                  <div class="notification">
+                    <nuxt-link to="/favorite">
+                      <base-icon icon="heart" viewBox="0 0 30 41" size="40" class="text-white mx-2" />
+                    </nuxt-link>
+                  </div>
+
+                  <div class="vl mx-4 bg-white"></div>
+                  <p id="dropdownDefault" data-dropdown-toggle="dropdown"
+                    class="text-white text-lg ml-2 hover:cursor-pointer rounded-lg text-sm flex items-center"
+                    type="button">
+                    EN<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg></p>
+                  <!-- Dropdown menu -->
+                  <div id="dropdown"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow px-4 text-white"
+                    data-popper-placement="bottom"
+                    style="position: absolute;  inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
+                    <p class="text-center">TH</p>
+                  </div>
+                </nuxt-link>
+                <nuxt-link to="/" class="flex items-center space-x-3 text-white text-lg font-medium my-4">
+                  <p @click="isOpen = false" class="w-full">ออกจากระบบ</p>
+                </nuxt-link>
                 <nuxt-link to="/users/login" class="flex items-center space-x-3 text-white text-lg font-medium my-4 ">
                   <p class="text-white">เข้าสู่ระบบ</p>
                 </nuxt-link>

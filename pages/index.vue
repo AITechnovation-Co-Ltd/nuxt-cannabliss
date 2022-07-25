@@ -7,10 +7,10 @@
     <Product class="z-10" />
 
     <!-- Ingredients -->
-    <Ingredients class="z-10" />
+    <Ingredients class="static z-20" />
 
     <!-- Face -->
-    <Face class="z-10" />
+    <Face class="static z-10" />
 
     <!-- Video Review -->
     <VideoReview class="z-10" />
@@ -31,14 +31,14 @@
     <Partner class="z-10" />
 
     <!-- background -->
-    <img src="~/static/images/IMG_01home/pages_01home/Group1050@2x.png" alt="" class="bg-1">
-    <img src="~/static/images/IMG_03blogs/Group1152@2x.png" alt="" class="bg-2 hidden xl:block">
-    <img src="~/static/images/IMG_01home/pages_01home/Group1094@2x.png" alt="" class="bg-3">
+    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1050@2x.png" alt="" class="bg-1"> -->
+    <!-- <img src="~/static/images/IMG_03blogs/Group1152@2x.png" alt="" class="bg-2 hidden xl:block"> -->
+    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1094@2x.png" alt="" class="bg-3"> -->
     <!-- <img src="~/static/images/IMG_01home/pages_01home/Path322@2x.png" alt="" class="bg-4 hidden xl:block"> -->
-    <img src="~/static/images/IMG_01home/pages_01home/CANABLISS@2x.png" alt="" class="bg-5 z-20 hidden xl:block">
-    <img src="~/static/images/IMG_01home/pages_01home/Group1053@2x.png" alt="" class="bg-6">
-    <img src="~/static/images/IMG_01home/pages_01home/CANABLISS_01.png" alt="" class="bg-7">
-    <img src="~/static/images/IMG_01home/pages_01home/Group1115@2x.png" alt="" class="bg-8">
+    <!-- <img src="~/static/images/IMG_01home/pages_01home/CANABLISS@2x.png" alt="" class="bg-5 z-20 hidden xl:block"> -->
+    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1053@2x.png" alt="" class="bg-6"> -->
+    <!-- <img src="~/static/images/IMG_01home/pages_01home/CANABLISS_01.png" alt="" class="bg-7"> -->
+    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1115@2x.png" alt="" class="bg-8"> -->
     <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1136@2x.png" alt="" class="bg-9"> -->
   </div>
 </template>
