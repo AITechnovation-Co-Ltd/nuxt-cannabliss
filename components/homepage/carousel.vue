@@ -16,7 +16,7 @@
                 <div class="w-full flex items-center mt-4 md:mt-10 ml-4">
                   <div class="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 2xl:h-28 2xl:w-28 mr-4 2xl:mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
                     <div class="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 2xl:h-24 2xl:w-24 bg-tertiary rounded-full flex items-center justify-center">
-                      <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
+                      <base-icon icon="play" viewBox="0 0 30 41" size="40" class="text-white" />
                     </div>
                   </div>
                   <p class="text-xl sm:text-3xl text-quaternary">Watch the video</p>
@@ -43,7 +43,7 @@
                 <div class="w-full flex items-center mt-4 md:mt-10 ml-4">
                   <div class="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 2xl:h-28 2xl:w-28 mr-4 2xl:mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
                     <div class="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 2xl:h-24 2xl:w-24 bg-tertiary rounded-full flex items-center justify-center">
-                      <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
+                      <base-icon icon="play" viewBox="0 0 30 41" size="40" class="text-white" />
                     </div>
                   </div>
                   <p class="text-xl sm:text-3xl text-quaternary">Watch the video</p>
@@ -70,7 +70,7 @@
                 <div class="w-full flex items-center mt-4 md:mt-10 ml-4">
                   <div class="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 2xl:h-28 2xl:w-28 mr-4 2xl:mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
                     <div class="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 2xl:h-24 2xl:w-24 bg-tertiary rounded-full flex items-center justify-center">
-                      <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
+                      <base-icon icon="play" viewBox="0 0 30 41" size="40" class="text-white" />
                     </div>
                   </div>
                   <p class="text-xl sm:text-3xl text-quaternary">Watch the video</p>
@@ -97,7 +97,7 @@
                 <div class="w-full flex items-center mt-4 md:mt-10 ml-4">
                   <div class="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 2xl:h-28 2xl:w-28 mr-4 2xl:mr-8 border-2 border-tertiary rounded-full flex items-center justify-center">
                     <div class="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 2xl:h-24 2xl:w-24 bg-tertiary rounded-full flex items-center justify-center">
-                      <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
+                      <base-icon icon="play" viewBox="0 0 30 41" size="40" class="text-white" />
                     </div>
                   </div>
                   <p class="text-xl sm:text-3xl text-quaternary">Watch the video</p>

@@ -1,12 +1,12 @@
 <template>
-  <div class="w-full flex flex-col justify-center pt-24 lg:px-12 xl:px-20 2xl:px-36">
-    <p class="text-primary text-7xl">FAQ</p>
-    <div class="w-full flex flex-row items-start my-6">
+  <div class="w-full flex flex-col justify-center mt-4 sm:mt-12 px-8 lg:px-12 xl:px-20 2xl:px-36">
+    <p class="text-primary text-5xl">FAQ</p>
+    <div class="w-full flex flex-col lg:flex-row items-center my-6">
       <!-- Dropdown FQA -->
-      <div class="w-1/2 flex flex-col mr-8">
+      <div class="w-full lg:w-1/2 flex flex-col mr-0 lg:mr-8">
 
         <!-- FQA 1-->
-        <base-dropdown class="my-6" dropdownClass="mt-2" @opened="checkDataOpen" openUp="toggle">
+        <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen" openUp="toggle">
           <div slot="toggle" class="w-full flex items-center justify-between">
             <p align="start" class="text-base xl:text-2xl 2xl:text-3xl font-medium text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data }">
@@ -30,8 +30,8 @@
         <hr class="w-full border-b border-gray-300">
 
         <!-- FAQ 2-->
-        <base-dropdown class="my-6" dropdownClass="mt-2" @opened="checkDataOpen2">
-          <div slot="toggle" class="flex items-center">
+        <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen2">
+          <div slot="toggle" class="w-full flex items-center justify-between">
             <p align="start" class="text-base xl:text-2xl 2xl:text-3xl font-medium text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data2 }">
               Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium</p>
@@ -54,8 +54,8 @@
         <hr class="w-full border-b border-gray-300">
 
         <!-- FAQ 3 -->
-        <base-dropdown class="my-6" dropdownClass="mt-2" @opened="checkDataOpen3">
-          <div slot="toggle" class="flex items-center">
+        <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen3">
+          <div slot="toggle" class="w-full flex items-center justify-between">
             <p align="start" class="text-base xl:text-2xl 2xl:text-3xl font-medium text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data3 }">
               Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium</p>
@@ -78,8 +78,8 @@
         <hr class="w-full border-b border-gray-300">
 
         <!-- FAQ 4 -->
-        <base-dropdown class="my-6" dropdownClass="mt-2" @opened="checkDataOpen4">
-          <div slot="toggle" class="flex items-center">
+        <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen4">
+          <div slot="toggle" class="w-full flex items-center justify-between">
             <p align="start" class="text-base xl:text-2xl 2xl:text-3xl font-medium text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data4 }">
               Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium</p>
@@ -97,27 +97,26 @@
               reprehenderit? Officia.</p>
           </base-dropdown-item>
         </base-dropdown>
-        <hr class="w-full border-b border-gray-300">
       </div>
 
       <!-- Picture-->
-      <div class="w-1/2 mt-8 xl:mt-10">
+      <div class="w-full md:w-11/12 lg:w-1/2 mt-8 xl:mt-10">
         <img src="@/static/images/IMG_01home/pages_01home/enecta.jpg" class="rounded-3xl">
       </div>
     </div>
 
-    <div class="w-full my-28 flex justify-between 2xl:justify-center text-quaternary 2xl:space-x-60">
-      <div class="flex flex-col items-center ">
+    <div class="w-full scale-100 sm:scale-90 md:scale-100 mt-0 sm:mt-28 mb-28 flex flex-wrap justify-around 2xl:justify-center text-quaternary 2xl:space-x-60">
+      <div class="flex flex-col mx-4 sm:mx-0 items-center ">
         <base-icon icon="heart" viewBox="0 0 24 24" size="90" class="mb-8" />
         <p class="text-3xl mb-4 font-medium">24 Services</p>
         <p class="text-xl">Consultations via email</p>
       </div>
-      <div class="flex flex-col items-center ">
+      <div class="mt-8 sm:mt-0 flex flex-col mx-4 sm:mx-0 items-center ">
         <base-icon icon="heart" viewBox="0 0 24 24" size="90" class="mb-8" />
         <p class="text-3xl mb-4 font-medium">30 Days Return</p>
         <p class="text-xl">You have to 30 days to return</p>
       </div>
-      <div class="flex flex-col items-center ">
+      <div class="mt-8 md:mt-0 flex flex-col mx-4 sm:mx-0 items-center ">
         <base-icon icon="heart" viewBox="0 0 24 24" size="90" class="mb-8" />
         <p class="text-3xl mb-4 font-medium">Fast Delivery</p>
         <p class="text-xl">On order above $ 50</p>

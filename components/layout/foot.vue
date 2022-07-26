@@ -54,10 +54,10 @@
             <h2 class="mb-6 mt-6 text-lg font-semibold">Let's talk</h2>
             <ul>
               <li class="mb-4">
-                <a href="#" class="hover:underline">T: +391 (0)35 2568 4593</a>
+                <p>T: +391 (0)35 2568 4593</p>
               </li>
               <li class="mb-4">
-                <a href="#" class="hover:underline">E: hello@domain.com</a>
+                <p>E: hello@domain.com</p>
               </li>
               <li class="flex flex-row">
                 <a href="#" class=" mr-1 hover dark:hover:text-white">
