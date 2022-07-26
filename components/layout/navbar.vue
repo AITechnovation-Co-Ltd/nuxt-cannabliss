@@ -38,6 +38,11 @@
               <p class="text-center">TH</p>
             </div>
 
+            <!-- User Auth -->
+            <div>
+              <base-icon icon="user" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
+            </div>
+
           </div>
         </div>
 
