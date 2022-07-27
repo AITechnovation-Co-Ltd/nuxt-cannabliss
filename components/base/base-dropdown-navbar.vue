@@ -1,13 +1,13 @@
 <template>
-  <div v-click-outside="hideEvent" class="w-full">
+  <div v-click-outside="hideEvent" class="relative w-full">
     <button
       @click="openClick"
-      class="w-full outline-none focus:outline-none"
+      class="outline-none focus:outline-none"
       :class="toggleClass"
     >
       <div v-if="text">
         <div
-          class="rounded border text-sm py-2 px-4 flex justify-between items-center"
+          class="rounded border text-base py-2 px-4 flex justify-between items-center"
           :class="{
             'border-border-textfeild  text-slate':
               !disabled && theme != 'primary' && theme != 'primary-border',
@@ -31,14 +31,15 @@
       <div v-else>
         <slot name="toggle" />
       </div>
+      
     </button>
     <div
       v-show="open"
-      class="z-10"
+      class="absolute right-0 origin-top-right rounded-md shadow-md z-50"
       :class="dropdownClassComp"
       :style="{ width: dropdownWidthFull ? 'inherit' : '' }"
     >
-      <div class="overflow-hidden">
+      <div class="bg-white rounded-md shadow-lg overflow-hidden">
         <slot />
       </div>
     </div>
@@ -46,8 +47,7 @@
 </template>
 
 <script>
-import { isReadable } from "stream";
-import ClickOutside from "vue-click-outside";
+import ClickOutside from 'vue-click-outside'
 
 export default {
   inheritAttrs: false,
@@ -57,24 +57,32 @@ export default {
   provide() {
     return {
       parent: this,
-    };
+    }
   },
   props: {
     theme: {
       type: String,
-      default: "default",
+      default: 'default',
+    },
+    position: {
+      type: String,
+      default: 'bottom',
+    },
+    positionH: {
+      type: String,
+      default: 'right',
     },
     text: {
       type: String,
-      default: "",
+      default: '',
     },
     toggleClass: {
       type: String,
-      default: "",
+      default: '',
     },
     dropdownClass: {
       type: String,
-      default: "",
+      default: '',
     },
     dropdownMaxWidthAuto: {
       type: Boolean,
@@ -87,38 +95,37 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
-    },
-    openUp: {
-      type: String,
-      default: "",
-    },
+    }
   },
   data() {
-    return { open: false };
+    return { open: false }
   },
   computed: {
     dropdownClassComp() {
-      return this.dropdownClass;
+      return `${this.dropdownClass} ${
+        !this.dropdownMaxWidthAuto ? 'max-w-full' : ''
+      }
+      ${this.position == 'bottom' ? 'top-0 mt-10' : 'bottom-0 mb-10'} ${
+        this.positionH == 'left' ? 'left-0' : 'right-0'
+      }`
     },
   },
-  mounted() {
-    if (this.openUp) this.open = !this.open;
-  },
+  mounted() {},
   methods: {
     openClick() {
-      if (this.disabled) return;
-      this.open = !this.open;
+      if (this.disabled) return
+      this.open = !this.open
 
-      this.$emit("opened", this.open);
+      this.$emit('opened', this.open)
     },
     hideEvent() {
-      this.open = false;
-      this.$emit("opened", this.open);
+      this.open = false
+      this.$emit('opened', this.open)
     },
     hide() {
-      this.open = false;
-      this.$emit("opened", this.open);
+      this.open = false
+      this.$emit('opened', this.open)
     },
   },
-};
+}
 </script>

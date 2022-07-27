@@ -1,6 +1,6 @@
 <template>
   <div
-    class="cursor-pointer"
+    class="px-4 py-2 text-sm bg-transparent hover:bg-primary hover:bg-opacity-20 cursor-pointer"
     @click="clickEvent"
   >
     <slot />

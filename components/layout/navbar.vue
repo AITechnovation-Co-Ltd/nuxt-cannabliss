@@ -8,13 +8,13 @@
           <img class="h-16" src="~/static/logo/Logo-CANABLISS.png" alt="">
         </nuxt-link>
 
-        <div class="lg:hidden">
+        <div class="xl:hidden">
           <button @click="drawer">
             <base-icon icon="bars" viewBox="0 0 20 20" :size="35" class="text-primary" />
           </button>
         </div>
 
-        <div class="hidden lg:flex md:order-2">
+        <div class="hidden xl:flex md:order-2">
           <div class="flex items-center">
             <div class="notification">
               <nuxt-link to="/favorite">
@@ -25,28 +25,64 @@
 
             <base-icon icon="magnifying-glass" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
             <div class="vl mx-4 bg-primary"></div>
-            <p id="dropdownDefault" data-dropdown-toggle="dropdown"
-              class="text-primary text-lg ml-2 hover:cursor-pointer rounded-lg text-sm flex items-center" type="button">
-              EN<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg></p>
-            <!-- Dropdown menu -->
-            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow px-4 text-primary"
-              data-popper-placement="bottom"
-              style="position: absolute;  inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
-              <p class="text-center">TH</p>
+
+            <div
+              class="w-28 relative flex justify-evenly bg-secondary text-lg rounded-full cursor-pointer drop-shadow-md"
+              @click="chlang">
+              <div class="w-1/2 absolute z-10 h-full bg-tertiary rounded-full" :class="isthai ? 'right-0' : 'left-0'">
+              </div>
+              <p class="px-4 py-1 z-20" :class="isthai ? 'text-primary' : 'text-white'">EN</p>
+              <p class="px-4 py-1 z-20" :class="isthai ? 'text-white' : 'text-primary'">TH</p>
             </div>
 
-            <!-- User Auth -->
-            <div>
-              <base-icon icon="user" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
+            <div class="h-16 ml-2 flex items-center w-10 text-center">
+              <base-dropdown-navbar :dropdownMaxWidthAuto="true" positionH="right"
+                dropdownClass="mt-16 border border-gray-100 w-72" @opened="checkUserOpen">
+                <div slot="toggle" class="flex justify-center">
+                  <base-icon icon="user" viewBox="0 0 48 48" size="35" class="text-primary" />
+                </div>
+                <base-dropdown-item class="p-3">
+                  <div class="flex items-center space-x-3">
+                    <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
+                      <base-icon icon="user" viewBox="0 0 45 45" size="24" color="#fff" />
+                    </div>
+                    <div class="colums-1 items-center">
+                      <p class="text-primary">นายพันธกานต์ คุ้มภัย</p>
+                      <p class="text-primary">izephanthakarn@hotmail.com</p>
+                    </div>
+                  </div>
+                </base-dropdown-item>
+                <base-dropdown-item class="p-3">
+                  <div class="flex items-center space-x-3">
+                    <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
+                      <base-icon icon="logout" viewBox="0 0 45 45" size="24" color="#fff" />
+                    </div>
+                    <p class="text-primary text-base">ออกจากระบบ</p>
+                  </div>
+                </base-dropdown-item>
+                <base-dropdown-item class="p-3">
+                  <nuxt-link to="/users/login" class="flex items-center space-x-3">
+                    <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
+                      <base-icon icon="login" viewBox="0 0 45 45" size="24" color="#fff" />
+                    </div>
+                    <p class="text-primary text-base">เข้าสู่ระบบ</p>
+                  </nuxt-link>
+                </base-dropdown-item>
+                <base-dropdown-item class="p-3">
+                  <nuxt-link to="/users/register" class="flex items-center space-x-3">
+                    <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
+                      <base-icon icon="register" viewBox="0 0 45 45" size="24" color="#fff" />
+                    </div>
+                    <p class="text-primary text-base">สมัครสมาชิก</p>
+                  </nuxt-link>
+                </base-dropdown-item>
+              </base-dropdown-navbar>
             </div>
 
           </div>
         </div>
 
-        <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-4">
+        <div class="hidden justify-between items-center w-full xl:flex lg:w-auto lg:order-1" id="mobile-menu-4">
           <ul class="flex flex-col mt-4 md:flex-row md:space-x-16 md:mt-0 text-base">
             <li class="flex flex-col justify-end items-center ">
               <img v-if="route_name == 'product'" src="@/static/images/flower.png">
@@ -130,7 +166,8 @@
 
             <li>
               <div class="p-3">
-                <nuxt-link to="/favorite" class="flex items-center justify-center space-x-3 text-white text-lg font-medium my-4">
+                <div to="/favorite"
+                  class="flex items-center justify-center space-x-3 text-white text-lg font-medium my-4">
                   <div class="notification">
                     <nuxt-link to="/favorite">
                       <base-icon icon="heart" viewBox="0 0 30 41" size="40" class="text-white mx-2" />
@@ -138,21 +175,16 @@
                   </div>
 
                   <div class="vl mx-4 bg-white"></div>
-                  <p id="dropdownDefault" data-dropdown-toggle="dropdown"
-                    class="text-white text-lg ml-2 hover:cursor-pointer rounded-lg text-sm flex items-center"
-                    type="button">
-                    EN<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg></p>
-                  <!-- Dropdown menu -->
-                  <div id="dropdown"
-                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow px-4 text-white"
-                    data-popper-placement="bottom"
-                    style="position: absolute;  inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
-                    <p class="text-center">TH</p>
+                  <div
+                    class="w-28 relative flex justify-evenly bg-secondary text-lg rounded-full cursor-pointer drop-shadow-md"
+                    @click="chlang">
+                    <div class="w-1/2 absolute z-10 h-full bg-tertiary rounded-full"
+                      :class="isthai ? 'right-0' : 'left-0'"></div>
+                    <p class="px-4 py-1 z-20" :class="isthai ? 'text-primary' : 'text-white'">EN</p>
+                    <p class="px-4 py-1 z-20" :class="isthai ? 'text-white' : 'text-primary'">TH</p>
                   </div>
-                </nuxt-link>
+                </div>
+
                 <nuxt-link to="/" class="flex items-center space-x-3 text-white text-lg font-medium my-4">
                   <p @click="isOpen = false" class="w-full">ออกจากระบบ</p>
                 </nuxt-link>
@@ -181,6 +213,9 @@ export default {
     return {
       menu_route: ["blogs", "blogs-details-id", "product", "ingredients", "review", "contact", "favorite"],
       isOpen: false,
+      dropdowm_data: false,
+      dropdowm_user: false,
+      isthai: false,
     }
   },
   computed: {
@@ -191,6 +226,15 @@ export default {
   methods: {
     drawer() {
       this.isOpen = !this.isOpen;
+    },
+    checkDataOpen(p) {
+      this.dropdowm_data = p
+    },
+    checkUserOpen(p) {
+      this.dropdowm_user = p
+    },
+    chlang() {
+      this.isthai = !this.isthai;
     },
   },
   mounted() {
