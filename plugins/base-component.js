@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import BaseIcon from "@/components/base/base-icon";
+import BaseInputReview from "@/components/base/base-input-review";
 import BaseInput from "@/components/base/base-input";
 import BaseButton from "@/components/base/base-button";
 import BaseModal from "@/components/base/base-modal";
@@ -9,6 +10,7 @@ import BaseDropDownItem from "@/components/base/base-dropdown-item"
 import BasePages from "@/components/base/base-pages";
 
 Vue.component("base-icon", BaseIcon);
+Vue.component("base-input-review", BaseInputReview);
 Vue.component("base-input", BaseInput);
 Vue.component("base-button", BaseButton);
 Vue.component("base-modal", BaseModal);

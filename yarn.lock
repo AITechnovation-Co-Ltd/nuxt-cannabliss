@@ -1418,6 +1418,11 @@
     defu "^6.0.0"
     eslint-webpack-plugin "^2.6.0"
 
+"@nuxtjs/recaptcha@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/recaptcha/-/recaptcha-1.1.1.tgz#21f9dcd53d7b869b570ab4829404df1200ed26de"
+  integrity sha512-maHqf6x6EgfRm7lvjK7nTwle/17cRzMkeFDWPGdcdKjDnAjuli7Mei5qPG0CFZX1zG9ohIEv+0QEs7fgudyLrg==
+
 "@nuxtjs/tailwindcss@^4.2.1":
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-4.2.1.tgz#bd0dc5e0d7f02aebe15bc2384c003687e6e5d508"
@@ -10052,10 +10057,10 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.npmjs.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue-toast-notification@^0.6.0:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/vue-toast-notification/-/vue-toast-notification-0.6.2.tgz#44bb164505c310f6a721ff96921761b006ebb5cc"
-  integrity sha512-fIsgALA3yQAtTnZjyUg5Y1tbVrYkLNBCET/ZvvDTS7tnmaWz8L1IzkESrRs1KIiqIGRVbBbiZAzUImrVBEziDA==
+vue-toast-notification@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/vue-toast-notification/-/vue-toast-notification-0.6.3.tgz#79dbb52f56a41d700d5ed98fbffe95b8c8da6f24"
+  integrity sha512-w4daYmEWsUsqDfON1snfhMUxxm+Blf9OISnoOeKrN3f7HqKvH4pQYwIcPOvIr9cX2EOsRReMWfv8Kha03n9nqw==
 
 vue2-datepicker@^3.10.4:
   version "3.11.0"

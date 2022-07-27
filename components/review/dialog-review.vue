@@ -51,9 +51,9 @@
           <option>list #3</option>
           <option>list #4</option>
         </select>
-        <base-input label='Name Lastname' class="text-quaternary my-2" />
-        <base-input label='E-mail' class="text-quaternary my-2" />
-        <base-input label='Please write your comment' class="text-quaternary my-2" />
+        <base-input-review label='Name Lastname' class="text-quaternary my-2" />
+        <base-input-review label='E-mail' class="text-quaternary my-2" />
+        <base-input-review label='Please write your comment' class="text-quaternary my-2" />
       </div>
       <div class="mt-10 flex justify-center space-x-4">
         <base-button @click="isShow = false" class="border-quaternary">Write a review</base-button>

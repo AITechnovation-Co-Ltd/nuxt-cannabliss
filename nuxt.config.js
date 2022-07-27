@@ -35,6 +35,7 @@ export default {
     "@/plugins/modal",
     "@/plugins/vue-tailwind",
     "@/plugins/vue-scrollto",
+    "@/plugins/notification",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -48,6 +49,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    "@nuxtjs/recaptcha",
     // Simple usage
     'nuxt-leaflet',
 
@@ -63,5 +65,12 @@ export default {
         autoprefixer: {},
       },
     },
-  }
+  },
+  recaptcha: {
+    language: "th", // Recaptcha language (v2)
+    mode: "base", // Mode: 'base', 'enterprise'
+    siteKey: "6Lf5faggAAAAAEB3EoI-9O2c3rEAdWjpFTWH6gcZ", // Site key for requests
+    version: 2, // Version
+    size: "normal", // Size: 'compact', 'normal', 'invisible' (v2)
+  },
 }

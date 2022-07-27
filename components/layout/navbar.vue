@@ -61,7 +61,7 @@
                   </div>
                 </base-dropdown-item>
                 <base-dropdown-item class="p-3">
-                  <nuxt-link to="/users/login" class="flex items-center space-x-3">
+                  <nuxt-link to="/login" class="flex items-center space-x-3">
                     <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
                       <base-icon icon="login" viewBox="0 0 45 45" size="24" color="#fff" />
                     </div>
@@ -69,7 +69,7 @@
                   </nuxt-link>
                 </base-dropdown-item>
                 <base-dropdown-item class="p-3">
-                  <nuxt-link to="/users/register" class="flex items-center space-x-3">
+                  <nuxt-link to="/register" class="flex items-center space-x-3">
                     <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
                       <base-icon icon="register" viewBox="0 0 45 45" size="24" color="#fff" />
                     </div>
@@ -188,10 +188,10 @@
                 <nuxt-link to="/" class="flex items-center space-x-3 text-white text-lg font-medium my-4">
                   <p @click="isOpen = false" class="w-full">ออกจากระบบ</p>
                 </nuxt-link>
-                <nuxt-link to="/users/login" class="flex items-center space-x-3 text-white text-lg font-medium my-4 ">
+                <nuxt-link to="/login" class="flex items-center space-x-3 text-white text-lg font-medium my-4 ">
                   <p class="text-white">เข้าสู่ระบบ</p>
                 </nuxt-link>
-                <nuxt-link to="/users/register"
+                <nuxt-link to="/register"
                   class="flex items-center space-x-3 text-white text-lg font-medium my-4 ">
                   <p class="text-white">สมัครสมาชิก</p>
                 </nuxt-link>
