@@ -4,9 +4,9 @@
       <div class="container h-16 flex flex-wrap justify-between items-center mx-auto px-6">
 
         <!-- Logo -->
-        <nuxt-link to="/" class="flex items-center">
+        <div class="flex items-center">
           <img class="h-16" src="~/static/logo/Logo-CANABLISS.png" alt="">
-        </nuxt-link>
+        </div>
 
         <div class="xl:hidden">
           <button @click="drawer">
@@ -16,16 +16,6 @@
 
         <div class="hidden xl:flex md:order-2">
           <div class="flex items-center">
-            <div class="notification hidden">
-              <nuxt-link to="/favorite">
-                <base-icon icon="heart" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
-                <span class="badge bg-primary">0</span>
-              </nuxt-link>
-            </div>
-
-            <base-icon icon="magnifying-glass" viewBox="0 0 30 41" size="40" class="text-primary mx-2 hidden" />
-            <div class="vl mx-4 bg-primary hidden"></div>
-
             <div
               class="w-28 relative flex justify-evenly bg-secondary text-lg rounded-full cursor-pointer drop-shadow-md hidden"
               @click="chlang">
@@ -35,7 +25,18 @@
               <p class="px-4 py-1 z-20" :class="isthai ? 'text-white' : 'text-primary'">TH</p>
             </div>
 
-            <div class="h-16 ml-2 flex items-center w-10 text-center">
+            <div class="flex flex-row justify-center items-center">
+              <div class=" h-12 w-12 rounded-full bg-primary mr-4 flex justify-center items-center drop-shadow-md">
+                <base-icon icon="user" viewBox="0 0 45 45" size="30" color="#fff" />
+              </div>
+              <div class="flex flex-col items-center mr-4">
+                <p class="text-primary">Admin Cannabliss</p>
+                <p class="text-primary">admin@cnb.com</p>
+              </div>
+              <button class="bg-primary px-6 py-2 drop-shadow-md rounded-2xl text-white text-xl">Logout</button>
+            </div>
+
+            <!-- <div class="h-16 ml-2 flex items-center w-10 text-center">
               <base-dropdown-navbar :dropdownMaxWidthAuto="true" positionH="right"
                 dropdownClass="mt-16 border border-gray-100 w-72" @opened="checkUserOpen">
                 <div slot="toggle" class="flex justify-center">
@@ -77,7 +78,7 @@
                   </nuxt-link>
                 </base-dropdown-item>
               </base-dropdown-navbar>
-            </div>
+            </div> -->
 
           </div>
         </div>

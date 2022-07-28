@@ -152,6 +152,11 @@
                 <p @click="isOpen = false" class="w-full">Contacts</p>
               </nuxt-link>
             </li>
+            <li>
+              <nuxt-link to="/favorite" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">Favorites</p>
+              </nuxt-link>
+            </li>
             <!-- Checked login for V-show -->
             <!-- <div class="text-lg text-white px-2" v-for="(item, i) in $menus.menu_users"
             :key="`menu-user-${i}`">
@@ -167,14 +172,15 @@
             <li>
               <div class="py-3">
                 <div to="/favorite"
-                  class="flex items-center justify-center space-x-3 text-white text-lg font-medium my-4">
+                  class="flex items-center justify-center space-x-3 text-white text-lg font-medium my-4 hidden">
                   <div class="notification">
                     <nuxt-link to="/favorite">
-                      <base-icon icon="heart" viewBox="0 0 30 41" size="40" class="text-white mx-2" />
+                      <p @click="isOpen = false" class="w-full">Favorite</p>
+                      <!-- <base-icon icon="heart" viewBox="0 0 30 41" size="40" class="text-white mx-2" /> -->
                     </nuxt-link>
                   </div>
 
-                  <div class="vl mx-4 bg-white"></div>
+                  <div class="vl mx-4 bg-white hidden"></div>
                   <div
                     class="w-28 relative flex justify-evenly bg-secondary text-lg rounded-full cursor-pointer drop-shadow-md hidden"
                     @click="chlang">
