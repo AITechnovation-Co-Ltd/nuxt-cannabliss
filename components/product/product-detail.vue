@@ -48,7 +48,8 @@
         </div>
         <div class="flex w-full overflow-x-auto">
           <img v-for="(item, i) in picture " :key="i" :src="require(`~/static/images/products${picture[i]}`)"
-            @click="current = i" class="h-32 w-32 2xl:h-40 2xl:w-40" :class="{ 'border-4 border-blue-500': i == current }">
+            @click="current = i" class="h-32 w-32 2xl:h-40 2xl:w-40"
+            :class="{ 'border-4 border-primary': i == current }">
         </div>
       </div>
 
@@ -70,7 +71,7 @@
           <base-dropdown class="my-2" dropdownClass="mt-2" @opened="checkDataOpen">
             <div slot="toggle" class="w-full flex items-center justify-between">
               <p class="text-base xl:text-2xl 2xl:text-3xl font-medium text-primary my-2">How to use</p>
-              <p>+</p>
+              <p>{{ !dropdown_data ? '+' : '-' }}</p>
             </div>
             <!-- Details -->
             <base-dropdown-item>
@@ -86,7 +87,7 @@
           <base-dropdown class="my-2" dropdownClass="mt-2" @opened="checkDataOpen2">
             <div slot="toggle" class="w-full flex items-center justify-between">
               <p align="start" class="text-base xl:text-2xl 2xl:text-3xl font-medium text-primary my-2">Ingredients</p>
-              <p>+</p>
+              <p>{{ !dropdown_data2 ? '+' : '-' }}</p>
             </div>
             <!-- Details -->
             <base-dropdown-item>

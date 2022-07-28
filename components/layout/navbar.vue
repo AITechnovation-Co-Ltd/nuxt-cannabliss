@@ -41,7 +41,7 @@
                 <div slot="toggle" class="flex justify-center">
                   <base-icon icon="user" viewBox="0 0 48 48" size="35" class="text-primary" />
                 </div>
-                <base-dropdown-item class="p-3" >
+                <base-dropdown-item v-show="check_logined" class="p-3">
                   <div class="flex items-center space-x-3">
                     <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
                       <base-icon icon="user" viewBox="0 0 45 45" size="24" color="#fff" />
@@ -52,7 +52,7 @@
                     </div>
                   </div>
                 </base-dropdown-item>
-                <base-dropdown-item class="p-3" >
+                <base-dropdown-item v-show="check_logined" class="p-3">
                   <div class="flex items-center space-x-3" @click="logoutClick()">
                     <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
                       <base-icon icon="logout" viewBox="0 0 45 45" size="24" color="#fff" />
@@ -60,7 +60,7 @@
                     <p class="text-primary text-base">Logout</p>
                   </div>
                 </base-dropdown-item>
-                <base-dropdown-item class="p-3" >
+                <base-dropdown-item v-show="!check_logined" class="p-3">
                   <nuxt-link to="/login" class="flex items-center space-x-3">
                     <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
                       <base-icon icon="login" viewBox="0 0 45 45" size="24" color="#fff" />
@@ -68,7 +68,7 @@
                     <p class="text-primary text-base">Login</p>
                   </nuxt-link>
                 </base-dropdown-item>
-                <base-dropdown-item class="p-3" >
+                <base-dropdown-item v-show="!check_logined" class="p-3">
                   <nuxt-link to="/register" class="flex items-center space-x-3">
                     <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
                       <base-icon icon="register" viewBox="0 0 45 45" size="24" color="#fff" />
@@ -190,29 +190,31 @@
                     <p class="px-4 py-1 z-20" :class="isthai ? 'text-white' : 'text-primary'">TH</p>
                   </div>
                 </div>
-                <div class="flex items-center">
-                    <div class="colums-1 items-center text-white">
-                      <p>{{ me.prefix + ' ' + me.first_name + ' ' + me.last_name }}</p>
-                      <p>{{ me.email }}</p>
-                    </div>
+                <div v-show="check_logined" class="flex items-center">
+                  <div class="colums-1 items-center text-white">
+                    <p>{{ me.prefix + ' ' + me.first_name + ' ' + me.last_name }}</p>
+                    <p>{{ me.email }}</p>
                   </div>
-                <div class="flex items-center space-x-3 text-white text-lg font-medium my-4" @click="logoutClick()">
+                </div>
+                <div v-show="check_logined" class="flex items-center space-x-3 text-white text-lg font-medium my-4"
+                  @click="logoutClick()">
                   <div class="bg-white rounded-full h-12 w-12 flex items-center justify-center">
-                      <base-icon icon="logout" viewBox="0 0 45 45" size="24" class="text-primary" />
-                    </div>
+                    <base-icon icon="logout" viewBox="0 0 45 45" size="24" class="text-primary" />
+                  </div>
                   <p @click="isOpen = false">Logout</p>
                 </div>
-                <nuxt-link to="/login" class="flex items-center space-x-3 text-white text-lg font-medium my-4 ">
-                  <div class="bg-white rounded-full h-12 w-12 flex items-center justify-center">
-                      <base-icon icon="login" viewBox="0 0 45 45" size="24" class="text-primary" />
-                    </div>
-                  <p @click="isOpen = false" class="text-white">Login</p>
-                </nuxt-link>
-                <nuxt-link to="/register"
+                <nuxt-link v-show="!check_logined" to="/login"
                   class="flex items-center space-x-3 text-white text-lg font-medium my-4 ">
                   <div class="bg-white rounded-full h-12 w-12 flex items-center justify-center">
-                      <base-icon icon="register" viewBox="0 0 45 45" size="24" class="text-primary" />
-                    </div>
+                    <base-icon icon="login" viewBox="0 0 45 45" size="24" class="text-primary" />
+                  </div>
+                  <p @click="isOpen = false" class="text-white">Login</p>
+                </nuxt-link>
+                <nuxt-link v-show="!check_logined" to="/register"
+                  class="flex items-center space-x-3 text-white text-lg font-medium my-4 ">
+                  <div class="bg-white rounded-full h-12 w-12 flex items-center justify-center">
+                    <base-icon icon="register" viewBox="0 0 45 45" size="24" class="text-primary" />
+                  </div>
                   <p @click="isOpen = false" class="text-white">Register</p>
                 </nuxt-link>
               </div>
@@ -231,7 +233,7 @@ export default {
   components: { baseIcon },
   data() {
     return {
-      me:{},
+      me: {},
       menu_route: ["blogs", "blogs-details-id", "product", "ingredients", "review", "contact", "favorite"],
       isOpen: false,
       dropdowm_data: false,
@@ -250,6 +252,7 @@ export default {
   },
   created() {
     if (this.check_logined) this.me = this.$store.getters['me/getUser']
+    // console.log(this.me)
   },
   methods: {
     drawer() {

@@ -7,7 +7,7 @@
     <div class="w-full flex flex-col items-center">
       <!-- Card -->
       <div class="grid grid-col-1 md:grid-cols-2 gap-8 text-quaternary">
-        <div class="hidden md:block w-full flex items-start flex-col" v-for="(data, i) in blogcard" :key="i">
+        <div class="hidden md:block w-full flex items-start flex-col" v-for="(data, i) in blogcard" :key="`blog-${i}`">
           <img :src="data.url" class="rounded-3xl" :class="{ 'mt-16 xl:mt-24': i % 2 != 0 }">
           <p class="my-4 text-lg font-medium">Sed Ut Perspiciatis Unde Ommis lste Natus Error Sit</p>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis odit saepe modi fugit aut

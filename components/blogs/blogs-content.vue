@@ -23,7 +23,7 @@
     <div class="w-full flex flex-col items-center">
       <!-- Card -->
       <div class="grid grid-cols-2 gap-8 text-quaternary">
-        <div class="w-full flex flex-col" v-for="(data, i) in blogcard" :key="i">
+        <div class="w-full flex flex-col" v-for="(data, i) in blogcard" :key="`blog-${i}`">
           <div v-if="!load_more ? i < 4 : i >= 0">
             <img :src="data.url" class="rounded-3xl" :class="{ 'mt-16 xl:mt-24': i % 2 != 0 }">
             <p class="my-4 text-lg font-medium">Sed Ut Perspiciatis Unde Ommis lste Natus Error Sit</p>
