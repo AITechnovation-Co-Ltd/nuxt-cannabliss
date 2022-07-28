@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col px-24 lg:px-12 xl:px-20 2xl:px-36">
+  <div class="w-full flex flex-col px-8 sm:px-12 lg:px-16 xl:px-20 2xl:px-36">
     <!-- -->
     <div class="w-80 my-12">
       <nav class="w-full flex justify-start items-center" aria-label="Breadcrumb">
@@ -26,9 +26,9 @@
       </nav>
     </div>
     <!-- -->
-    <div class="w-full columns-1 xl:flex justify-center items-center">
+    <div class="w-full flex flex-col lg:flex-row justify-center items-center">
       <!-- Details -->
-      <div class="w-full xl:w-1/2 pr-4">
+      <div class="w-full sm:w-11/12 xlw-1/2 pr-4">
         <p class="my-4 text-4xl text-primary">ต้านการอักเสบของสิว</p>
         <p class="pl-2 font-medium text-quaternary border-l-4 border-primary text-xl 2xl:text-2xl">การทาครีม CBD โดยไม่มีส่วนผสมของ THC
           เป็นทางเลือกที่
@@ -46,9 +46,9 @@
       </div>
 
       <!-- Picture -->
-      <div class="w-full xl:w-1/2 mt-8 xl:mt-0 h-full relative">
+      <div class="w-full sm:w-11/12 xl:w-1/2 mt-8 xl:mt-0 h-full relative">
         <div class="w-full h-full flex items-start justify-center">
-          <img src="@/static/images/IMG_03blogs_details/shutterstock.jpg" class="rounded-3xl w-11/12 mt-16 z-20" alt="">
+          <img src="@/static/images/IMG_03blogs_details/shutterstock.jpg" class="rounded-3xl w-11/12 mt-8 lg:mt-16 z-20" alt="">
         </div>
         <img src="~/static/images/IMG_03ingredients/bg-blue2.png" alt=""
           class="w-11/12 rounded-3xl absolute top-0 right-0">
@@ -57,11 +57,11 @@
     <!-- -->
     <div class="w-full flex flex-col-reverse xl:flex-row justify-center items-center my-8">
       <!-- Picture -->
-      <div class="w-full xl:w-1/2 flex justify-center">
-        <img src="@/static/images/IMG_03blogs_details/cbd.png" class="w-6/12 h-6/12 xl:w-9/12 xl:h-9/12">
+      <div class="w-full sm:w-11/12 xl:w-1/2 flex justify-center">
+        <img src="@/static/images/IMG_03blogs_details/cbd.png" class="w-full sm:w-6/12 xl:w-9/12 ">
       </div>
       <!-- Details -->
-      <div class="w-full xl:w-1/2">
+      <div class="w-full sm:w-11/12 xl:w-1/2">
         <p class="my-4 text-4xl text-primary">กลไกการทำงาน</p>
         <p class="text-quaternary text-xl 2xl:text-2xl">ระบบเอ็นแคนนาบินอยด์ในผิวหนังจะควบคุมความผิดปกติทุกด้านที่เกิดขึ้นในสิว
           ในการทดลอง
@@ -75,9 +75,9 @@
       </div>
     </div>
     <!-- Benefis of cbd -->
-    <div class="w-full flex flex-col items-center mt-8">
-      <p class="my-6 text-4xl text-primary">Benefits Of CBD For Acne</p>
-      <div class="grid grid-cols-3 gap-4 text-quaternary">
+    <div class="w-full flex flex-col items-center">
+      <p class="my-6 text-3xl sm:text-4xl text-primary">Benefits Of CBD For Acne</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-quaternary">
         <div class="flex items-center" v-for="(data, i) in cbd" :key="i">
           <img :src="data.url" class="h-24 w-24">
           <p class="ml-2 font-medium">{{ data.benefits }}</p>

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full columns-1 lg:flex justify-center px-24 lg:px-12 xl:px-20 2xl:px-36">
+  <div class="w-full columns-1 lg:flex justify-center px-4 sm:px-12 lg:px-16 xl:px-20 2xl:px-36">
     <!-- Categories -->
     <div class="w-full lg:w-3/12 flex flex-col items-start">
       <!-- Breadcrumb -->
@@ -27,7 +27,7 @@
         <h1 class="text-3xl text-primary">Categories</h1>
         <hr class="w-full lg:w-8/12 xl:w-10/12 2xl:w-11/12 my-6 border-b border-primary flex flex-col justify-center items-center">
         <div class="w-full flex justify-around lg:flex-col decoration-none text-primary text-lg space-y-4">
-          <p><span class="hover:font-bold hover:cursor-pointer">All Products</span></p>
+          <p class="mt-4 lg:mt-0"><span class="hover:font-bold hover:cursor-pointer">All Products</span></p>
           <p><span class="hover:font-bold hover:cursor-pointer">Hair</span></p>
           <p><span class="hover:font-bold hover:cursor-pointer">Face</span></p>
           <p><span class="hover:font-bold hover:cursor-pointer">Body</span></p>

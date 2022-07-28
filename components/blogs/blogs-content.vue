@@ -1,7 +1,8 @@
 <template>
-  <div class="w-full flex flex-col px-28 px-24 lg:px-12 xl:px-20 2xl:px-36">
+  <div class="w-full flex flex-col px-8 sm:px-12 lg:px-16 xl:px-20 2xl:px-36">
+
     <!-- Breadcrumb -->
-    <div class="w-80 my-12">
+    <div class="w-80 my-6 lg:my-12">
       <nav class="w-full flex justify-start items-center" aria-label="Breadcrumb">
         <ol class="text-quaternary text-base inline-flex items-center justify-center space-x-1 md:space-x-3">
           <li class="inline-flex items-center">
@@ -19,18 +20,19 @@
         </ol>
       </nav>
     </div>
+
     <!-- Content -->
     <div class="w-full flex flex-col items-center">
       <!-- Card -->
-      <div class="grid grid-cols-2 gap-8 text-quaternary">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 sm:gap-8 text-quaternary">
         <div class="w-full flex flex-col" v-for="(data, i) in blogcard" :key="`blog-${i}`">
           <div v-if="!load_more ? i < 4 : i >= 0">
-            <img :src="data.url" class="rounded-3xl" :class="{ 'mt-16 xl:mt-24': i % 2 != 0 }">
+            <img :src="data.url" class="rounded-3xl" :class="{ 'sm:mt-16 xl:mt-24': i % 2 != 0 }">
             <p class="my-4 text-lg font-medium">Sed Ut Perspiciatis Unde Ommis lste Natus Error Sit</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis odit saepe modi fugit aut
               officiis animi nesciunt repellat molestias dolor laborum tempore deleniti sed provident quae natus,
               voluptates consequatur?</p>
-            <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="w-60 mt-8 border-quaternary">View
+            <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="mt-8 border-quaternary">View
               more
             </base-button>
           </div>
@@ -38,12 +40,12 @@
       </div>
 
       <!-- Button -->
-      <base-button v-show="!load_more" @click="load_more = true" class="px-6 mt-24 mb-4 border-quaternary"
+      <base-button v-show="!load_more" @click="load_more = true" class="px-6 -mt-20 sm:mt-0 border-quaternary"
         :arrow='false'>Load more
       </base-button>
-      <base-button v-show="load_more" @click="load_more = false" class="px-6 mt-24 mb-4 border-quaternary"
+      <!-- <base-button v-show="load_more" @click="load_more = false" class="px-6 -mt-20 sm:mt-0 border-quaternary"
         :arrow='false'>Hide
-      </base-button>
+      </base-button> -->
     </div>
   </div>
 </template>

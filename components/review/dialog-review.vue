@@ -2,7 +2,7 @@
   <base-modal v-model="isShow">
     <div class="px-2 py-12 bg-secondary rounded-3xl flex flex-col items-center">
       <!-- Title -->
-      <div class="w-full text-7xl font-light text-primary text-center mb-4">
+      <div class="w-full text-4xl xl:text-7xl font-light text-primary text-center mb-4">
         Write a review
       </div>
 
@@ -41,7 +41,7 @@
       </div>
 
       <!-- Form Review -->
-      <div class="w-2/3 mt-4 px-24 flex flex-col text-gray-300">
+      <div class="w-full xl:w-2/3 mt-4 px-8 sm:px-24 flex flex-col text-gray-300">
         <select id="underline_select" :disabled="product_name ? true : false"
           class="block py-2.5 px-0 w-full text-sm font-light bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer">
           <option v-if="product_name">{{ product_name }}</option>
@@ -51,7 +51,7 @@
           <option>list #3</option>
           <option>list #4</option>
         </select>
-        <base-input-review label='Name Lastname' class="text-quaternary my-2" />
+        <base-input-review label='Name' class="text-quaternary my-2" />
         <base-input-review label='E-mail' class="text-quaternary my-2" />
         <base-input-review label='Please write your comment' class="text-quaternary my-2" />
       </div>
