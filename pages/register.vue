@@ -11,21 +11,21 @@
                         <div class="col-span-2 flex flex-col">
                             <p class="text-white text-lg font-light">Prefix<span class="text-red-500"> *</span></p>
                             <div class="flex w-full mt-input">
-                                <select class="w-full h-full rounded-2xl fixheight" v-model="prefix"
+                                <select class="w-full h-full rounded-2xl fixheight" v-model="pprefix"
                                     @change="switchSelect($event)">
                                     <option disabled selected hidden value="">Prefix</option>
-                                    <option value="1">Mr</option>
-                                    <option value="2">Mrs</option>
-                                    <option value="3">Miss</option>
-                                    <option value="4">Ms</option>
-                                    <option value="5">Other</option>
+                                    <option value="Mr">Mr</option>
+                                    <option value="Mrs">Mrs</option>
+                                    <option value="Miss">Miss</option>
+                                    <option value="Ms">Ms</option>
+                                    <option value="other">Other</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="col-span-2 mt-7" :class="otherprefix ? 'block' : 'hidden'">
                             <label class="text-white text-lg font-light"> </label>
-                            <base-input name="fname" type="text" v-model="pprefix" placeholder="Prefix"
+                            <base-input name="fname" type="text" v-model="prefix" placeholder="Prefix"
                                 innerClass="rounded-2xl text-sm py-3" class="drop-shadow-md" />
                         </div>
 
@@ -125,7 +125,7 @@
                 </div>
             </div>
             <!-- Submit Button -->
-            <button type="submit" color="gray" @click.prevent="register()"
+            <button type="submit" color="gray" @click.prevent="register()" :disabled="!check_token"
                 class="py-3 rounded-2xl w-1/5 bg-primary border-none text-white font-light my-2 sm:w-3/12 drop-shadow-md">
                 Register</button>
             <!-- Go to Home -->
@@ -133,9 +133,10 @@
                 class="text-center w-2/5 text-sm border-2 border-primary drop-shadow-md font-light underline bg-white py-3 rounded-2xl sm:w-3/12 my-2"
                 to="/">Back to homepage</nuxt-link>
             <div class="flex justify-center mt-4">
-                <recaptcha />
+                <recaptcha @success="onSuccess"/>
             </div>
         </div>
+        
 
         <!-- Popup -->
         <dialog-register ref="alertSubmit" type="confirm" />
@@ -149,9 +150,10 @@ export default {
     components: { dialogRegister },
     data() {
         return {
+            check_token: false,
             selected: '',
             otherprefix: false,
-            pprefix:'',
+            pprefix: '',
             prefix: '',
             first_name: '',
             last_name: '',
@@ -165,14 +167,16 @@ export default {
     methods: {
         switchSelect(event) {
             this.selected = event.target.value;
-            if (this.selected == "5")
-                this.otherprefix = true;
+            if (this.selected == "other")
+                this.otherprefix = true,
+                this.prefix = "";
             else
                 this.otherprefix = false;
         },
         register() {
             const self = this;
             let error = self.validateForm();
+            if (self.pprefix != "other") self.prefix = self.pprefix;
             console.log(error);
 
             if (error) {
@@ -181,16 +185,16 @@ export default {
                     type: "error",
                     duration: 5000,
                 });
-                // self.$store.dispatch("loading/setLoading", false);
+                self.$store.dispatch("loading/setLoading", false);
 
                 return;
             }
             self.$refs.alertSubmit.show(
                 `Would you like to confirm your registration? "${self.first_name}"`,
                 "",
-                // async function () {
-                // await self.registerClick();
-                // }
+                async function () {
+                    await self.registerClick();
+                }
             );
         },
         validateForm() {
@@ -198,8 +202,8 @@ export default {
             let error = "";
             var format = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
 
-            if (!self.prefix) error = "Please select a prefix";
-            else if (self.prefix == 5 && (!self.pprefix)) error = "Please enter your prefix";
+            if (!self.pprefix) error = "Please select a prefix";
+            else if (self.pprefix == 5 && (!self.prefix)) error = "Please enter your prefix";
             else if (!self.first_name) error = "Please enter your first name";
             else if (!self.last_name) error = "Please enter your last name";
             else if (!self.birthday) error = "Please enter your birthday";
@@ -216,6 +220,45 @@ export default {
             else error = "";
 
             return error;
+        },
+        async registerClick() {
+            const self = this;
+
+            self.$store.dispatch("loading/setLoading", true);
+
+            let form = {
+                prefix: self.prefix,
+                first_name: self.first_name,
+                last_name: self.last_name,
+                birthday: self.birthday,
+                phone_number: self.phone,
+                email: self.email,
+                password: self.password,
+            };
+            console.log(form)
+            await self.$api
+                .userRegister(form)
+                .then(async () => {
+                    self.$toast.open({
+                        message: "Successful registration",
+                        type: "success",
+                        duration: 5000,
+                    });
+                    self.$router.push("/login");
+                })
+                .catch(async (error) => {
+                    self.$toast.open({
+                        message: error.response.data.message,
+                        type: "error",
+                        duration: 5000,
+                    });
+
+                    // self.$router.push("/users/register/nonpass");
+                });
+            self.$store.dispatch("loading/setLoading", false);
+        },
+        onSuccess(token) {
+            this.check_token = true
         },
     }
 }
