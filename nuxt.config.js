@@ -3,6 +3,8 @@ export default {
   router: {
     base: '/nuxt-cannabliss/'
   },
+  // Nuxt loading
+  loading: '@/components/loading/loading.vue',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Canabliss Cosmetic',
@@ -31,6 +33,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    "@/plugins/api",
+    "@/plugins/axios",
     "@/plugins/base-component",
     "@/plugins/modal",
     "@/plugins/vue-tailwind",
@@ -49,6 +53,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    "@nuxtjs/axios",
     "@nuxtjs/recaptcha",
     // Simple usage
     'nuxt-leaflet',
@@ -56,6 +61,23 @@ export default {
     // With options
     ['nuxt-leaflet', { /* module options */ }],
   ],
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+    baseURL:
+      process.env.NODE_ENV == "production"
+        ? "/"
+        : process.env.API || "https://go-cnb-dev-olv6u5muta-as.a.run.app",
+    credentials: true,
+    proxy: true, //process.env.NODE_ENV !== 'production',
+  },
+
+  proxy: {
+    "/api": {
+      target: process.env.API || "https://go-cnb-dev-olv6u5muta-as.a.run.app",
+      pathRewrite: { "^/api": "/api" },
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

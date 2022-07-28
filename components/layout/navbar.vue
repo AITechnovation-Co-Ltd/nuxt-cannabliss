@@ -41,26 +41,26 @@
                 <div slot="toggle" class="flex justify-center">
                   <base-icon icon="user" viewBox="0 0 48 48" size="35" class="text-primary" />
                 </div>
-                <base-dropdown-item class="p-3">
+                <base-dropdown-item class="p-3" >
                   <div class="flex items-center space-x-3">
                     <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
                       <base-icon icon="user" viewBox="0 0 45 45" size="24" color="#fff" />
                     </div>
                     <div class="colums-1 items-center">
-                      <p class="text-primary">Phanthakarn Khumphai</p>
-                      <p class="text-primary">izephanthakarn@hotmail.com</p>
+                      <p>{{ me.prefix + ' ' + me.first_name + ' ' + me.last_name }}</p>
+                      <p>{{ me.email }}</p>
                     </div>
                   </div>
                 </base-dropdown-item>
-                <base-dropdown-item class="p-3">
-                  <div class="flex items-center space-x-3">
+                <base-dropdown-item class="p-3" >
+                  <div class="flex items-center space-x-3" @click="logoutClick()">
                     <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
                       <base-icon icon="logout" viewBox="0 0 45 45" size="24" color="#fff" />
                     </div>
                     <p class="text-primary text-base">Logout</p>
                   </div>
                 </base-dropdown-item>
-                <base-dropdown-item class="p-3">
+                <base-dropdown-item class="p-3" >
                   <nuxt-link to="/login" class="flex items-center space-x-3">
                     <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
                       <base-icon icon="login" viewBox="0 0 45 45" size="24" color="#fff" />
@@ -68,7 +68,7 @@
                     <p class="text-primary text-base">Login</p>
                   </nuxt-link>
                 </base-dropdown-item>
-                <base-dropdown-item class="p-3">
+                <base-dropdown-item class="p-3" >
                   <nuxt-link to="/register" class="flex items-center space-x-3">
                     <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
                       <base-icon icon="register" viewBox="0 0 45 45" size="24" color="#fff" />
@@ -192,16 +192,16 @@
                 </div>
                 <div class="flex items-center">
                     <div class="colums-1 items-center text-white">
-                      <p>Phanthakarn Khumphai</p>
-                      <p>izephanthakarn@hotmail.com</p>
+                      <p>{{ me.prefix + ' ' + me.first_name + ' ' + me.last_name }}</p>
+                      <p>{{ me.email }}</p>
                     </div>
                   </div>
-                <nuxt-link to="/" class="flex items-center space-x-3 text-white text-lg font-medium my-4">
+                <div class="flex items-center space-x-3 text-white text-lg font-medium my-4" @click="logoutClick()">
                   <div class="bg-white rounded-full h-12 w-12 flex items-center justify-center">
                       <base-icon icon="logout" viewBox="0 0 45 45" size="24" class="text-primary" />
                     </div>
                   <p @click="isOpen = false">Logout</p>
-                </nuxt-link>
+                </div>
                 <nuxt-link to="/login" class="flex items-center space-x-3 text-white text-lg font-medium my-4 ">
                   <div class="bg-white rounded-full h-12 w-12 flex items-center justify-center">
                       <base-icon icon="login" viewBox="0 0 45 45" size="24" class="text-primary" />
@@ -231,6 +231,7 @@ export default {
   components: { baseIcon },
   data() {
     return {
+      me:{},
       menu_route: ["blogs", "blogs-details-id", "product", "ingredients", "review", "contact", "favorite"],
       isOpen: false,
       dropdowm_data: false,
@@ -242,6 +243,13 @@ export default {
     route_name() {
       return this.$route.name
     },
+    check_logined() {
+      let check = this.$store.getters['me/getToken']
+      return check ? true : false
+    },
+  },
+  created() {
+    if (this.check_logined) this.me = this.$store.getters['me/getUser']
   },
   methods: {
     drawer() {
@@ -256,6 +264,26 @@ export default {
     chlang() {
       this.isthai = !this.isthai;
     },
+    async logoutClick() {
+      const self = this
+      await self.$store.dispatch('loading/setLoading', true)
+
+      const res = await self.$store.dispatch('me/logout')
+      if (res instanceof Error) {
+        self.$toast.open({
+          message: res.response.data.message,
+          type: 'error',
+          duration: 5000,
+        })
+      } else {
+        await setTimeout(async () => {
+          await self.$router.push('/')
+        }, 500)
+      }
+
+      await self.$store.dispatch('loading/setLoading', false)
+      window.location.reload()
+    }
   },
   mounted() {
     document.addEventListener("keydown", e => {
