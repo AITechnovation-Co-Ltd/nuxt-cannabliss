@@ -77,7 +77,7 @@
                         </div>
                     </form>
                     <hr class="border-white mb-4">
-                    <div class="w-full mx-16 text-white">
+                    <div class="mx-16 text-white">
                         <p>Password must be</p>
                         <ol style="list-style-type:disc;">
                             <li>

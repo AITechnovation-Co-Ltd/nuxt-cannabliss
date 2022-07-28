@@ -16,15 +16,15 @@
 
         <div class="hidden xl:flex md:order-2">
           <div class="flex items-center">
-            <div class="notification">
+            <div class="notification hidden">
               <nuxt-link to="/favorite">
                 <base-icon icon="heart" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
                 <span class="badge bg-primary">0</span>
               </nuxt-link>
             </div>
 
-            <base-icon icon="magnifying-glass" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
-            <div class="vl mx-4 bg-primary"></div>
+            <base-icon icon="magnifying-glass" viewBox="0 0 30 41" size="40" class="text-primary mx-2 hidden" />
+            <div class="vl mx-4 bg-primary hidden"></div>
 
             <div
               class="w-28 relative flex justify-evenly bg-secondary text-lg rounded-full cursor-pointer drop-shadow-md hidden"
@@ -85,24 +85,24 @@
         <div class="hidden justify-between items-center w-full xl:flex lg:w-auto lg:order-1" id="mobile-menu-4">
           <ul class="flex flex-col mt-4 md:flex-row md:space-x-16 md:mt-0 text-base">
             <li class="flex flex-col justify-end items-center ">
-              <img v-if="route_name == 'product'" src="@/static/images/flower.png">
-              <nuxt-link to="/product" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
-                <p :class="{ 'font-bold': route_name == 'product' }">Product</p>
+              <img v-if="route_name == 'admin-dashboard'" src="@/static/images/flower.png">
+              <nuxt-link to="/admin/dashboard" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
+                <p :class="{ 'font-bold': route_name == 'admin-dashboard' }">Dashboard</p>
               </nuxt-link>
             </li>
             <li class="flex flex-col justify-end items-center ">
-              <img v-if="route_name == 'ingredients'" src="@/static/images/flower.png">
-              <nuxt-link to="/ingredients" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
-                <p :class="{ 'font-bold': route_name == 'ingredients' }">Ingredients</p>
+              <img v-if="route_name == 'admin-blog'" src="@/static/images/flower.png">
+              <nuxt-link to="/admin/blog" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
+                <p :class="{ 'font-bold': route_name == 'admin-blog' }">Blog</p>
               </nuxt-link>
             </li>
             <li class="flex flex-col justify-end items-center ">
-              <img v-if="route_name == 'blogs' || route_name == 'blogs-details-id'" src="@/static/images/flower.png">
-              <nuxt-link to="/blogs" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
-                <p :class="{ 'font-bold': route_name == 'blogs' || route_name == 'blogs-details-id' }">Blogs</p>
+              <img v-if="route_name == 'admin-product'" src="@/static/images/flower.png">
+              <nuxt-link to="/admin/product" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
+                <p :class="{ 'font-bold': route_name == 'admin-product' }">Product</p>
               </nuxt-link>
             </li>
-            <li class="flex flex-col justify-end items-center">
+            <!-- <li class="flex flex-col justify-end items-center">
               <img v-if="route_name == 'review'" src="@/static/images/flower.png">
               <nuxt-link to="/review" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
                 <p :class="{ 'font-bold': route_name == 'review' }">Review</p>
@@ -113,7 +113,7 @@
               <nuxt-link to="/contact" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
                 <p :class="{ 'font-bold': route_name == 'contact' }">Contacts </p>
               </nuxt-link>
-            </li>
+            </li> -->
           </ul>
         </div>
 
@@ -128,21 +128,21 @@
           </div>
           <ul class="divide-y devide-white font-sans">
             <li>
-              <nuxt-link to="/product" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
-                <p @click="isOpen = false" class="w-full">Product</p>
+              <nuxt-link to="/admin/dashboard" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">Dashboard</p>
               </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/ingredients" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
-                <p @click="isOpen = false" class="w-full">Ingredients</p>
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/blogs" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+              <nuxt-link to="/admin/blog" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
                 <p @click="isOpen = false" class="w-full">Blog</p>
               </nuxt-link>
             </li>
             <li>
+              <nuxt-link to="/admin/product" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">Product</p>
+              </nuxt-link>
+            </li>
+            <!-- <li>
               <nuxt-link to="/review" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
                 <p @click="isOpen = false" class="w-full">Review</p>
               </nuxt-link>
@@ -151,7 +151,8 @@
               <nuxt-link to="/contact" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
                 <p @click="isOpen = false" class="w-full">Contacts</p>
               </nuxt-link>
-            </li>
+            </li> -->
+
             <!-- Checked login for V-show -->
             <!-- <div class="text-lg text-white px-2" v-for="(item, i) in $menus.menu_users"
             :key="`menu-user-${i}`">
@@ -225,7 +226,7 @@ export default {
   components: { baseIcon },
   data() {
     return {
-      menu_route: ["blogs", "blogs-details-id", "product", "ingredients", "review", "contact", "favorite"],
+      menu_route: ["dashboard", "blog", "product", "ingredients", "review", "contact", "favorite"],
       isOpen: false,
       dropdowm_data: false,
       dropdowm_user: false,
