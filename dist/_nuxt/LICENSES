@@ -4,6 +4,12 @@
  */
 
 /*!
+  * vue-scrollto v2.20.0
+  * (c) 2019 Randjelovic Igor
+  * @license MIT
+  */
+
+/*!
  * The buffer module from node.js, for the browser.
  *
  * @author   Feross Aboukhadijeh <http://feross.org>
@@ -42,13 +48,6 @@
 /*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 
 
-/**
-  * Hopper 0.3.4
-  * (c) 2019
-    * @license MIT
-    */
-
-
 /*!
   * vue-router v3.5.4
   * (c) 2022 Evan You
@@ -60,3 +59,16 @@
  * (c) 2014-2021 Evan You
  * Released under the MIT License.
  */
+
+/*!
+ * vuex v3.6.2
+ * (c) 2021 Evan You
+ * @license MIT
+ */
+
+
+/**
+  * Hopper 0.3.4
+  * (c) 2019
+    * @license MIT
+    */
