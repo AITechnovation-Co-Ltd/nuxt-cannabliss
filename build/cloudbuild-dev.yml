@@ -7,13 +7,13 @@ steps:
         "-f",
         "Dockerfile.dev",
         "-t",
-        "asia.gcr.io/$PROJECT_ID/nuxt-fnh:develop",
+        "asia.gcr.io/$PROJECT_ID/nuxt-cnb:develop",
         ".",
       ]
 
   # Push the container image to Container Registry
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "asia.gcr.io/$PROJECT_ID/nuxt-fnh:develop"]
+    args: ["push", "asia.gcr.io/$PROJECT_ID/nuxt-cnb:develop"]
 
   # Deploy container image to Cloud Run
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
@@ -21,9 +21,9 @@ steps:
     args:
       - "run"
       - "deploy"
-      - "nuxt-fnh-dev"
+      - "nuxt-cnb-dev"
       - "--image"
-      - "asia.gcr.io/$PROJECT_ID/nuxt-fnh:develop"
+      - "asia.gcr.io/$PROJECT_ID/nuxt-cnb:develop"
       - "--memory"
       - "1Gi"
       - "--region"
@@ -37,5 +37,5 @@ steps:
       - "CLOUDSDK_CORE_PROJECT=ai-technovation"
       - "CLOUDSDK_COMPUTE_ZONE=asia-southeast1-a"
 images:
-  - "asia.gcr.io/$PROJECT_ID/nuxt-fnh:develop"
+  - "asia.gcr.io/$PROJECT_ID/nuxt-cnb:develop"
 timeout: 1200s
