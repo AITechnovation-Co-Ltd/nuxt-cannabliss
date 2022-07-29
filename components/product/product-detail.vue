@@ -1,8 +1,8 @@
 <template>
   <div class="w-full">
     <!-- Breadcrumb -->
-    <nav class="w-full px-24 lg:px-12 xl:px-20 2xl:px-36" aria-label="Breadcrumb">
-      <ol class="text-quaternary text-base inline-flex items-center justify-center space-x-3">
+    <nav class="w-full text-quaternary text-sm lg:text-base px-8 lg:px-12 xl:px-20 2xl:px-36" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center justify-center space-x-3">
         <li class="inline-flex items-center">
           <nuxt-link to="/" class="inline-flex items-center font-medium">
             <base-icon icon="angle-left" viewBox="0 0 30 41" size="20" class="mr-2" />
@@ -12,29 +12,25 @@
         <li aria-current="page">
           <div class="flex items-center">
             <div class="vl mx-1 bg-quaternary"></div>
-            <p class="font-medium ml-2 ">Product</p>
+            <nuxt-link to="/product" class="font-medium ml-2">Product</nuxt-link>
           </div>
         </li>
         <li aria-current="page">
           <div class="flex items-center">
             <div class="vl mx-1 bg-quaternary"></div>
-            <nuxt-link to="/product" class="font-medium ml-2">All Products</nuxt-link>
-          </div>
-        </li>
-        <li aria-current="page">
-          <div class="flex items-center">
-            <div class="vl mx-1 bg-quaternary"></div>
-            <p v-for="(products_id, i) in products_name" :key="i" class="font-extrabold ml-2 ">{{ products_id.name }}
+            <p v-for="(products_id, i) in products_name" :key="i" class="font-extrabold ml-2 hidden md:block">{{ products_id.name }}
             </p>
           </div>
         </li>
       </ol>
+      <p v-for="(products_id, i) in products_name" :key="i" class="block md:hidden font-extrabold ml-7">{{ products_id.name }}</p>
     </nav>
 
     <!-- Content -->
     <div
-      class="w-full flex mt-8 px-24 lg:px-12 xl:px-20 2xl:px-36 flex-col lg:flex-row justify-between items-center xl:items-start"
+      class="w-full flex mt-8 px-8 lg:px-12 xl:px-20 2xl:px-36 flex-col lg:flex-row justify-between items-center xl:items-start"
       v-for="(products_id, i) in products_img" :key="i">
+
       <!-- Picture -->
       <div class="w-full overflow-hidden lg:w-1/2">
         <div class="flex items-center relative">
@@ -46,9 +42,9 @@
             <base-icon icon='dropdown' viewBox="0 0 24 24" class="transform -rotate-90" size="32" />
           </div>
         </div>
-        <div class="flex w-full overflow-x-auto">
+        <div class="grid grid-cols-4 w-full overflow-x-auto">
           <img v-for="(item, i) in picture " :key="i" :src="require(`~/static/images/products${picture[i]}`)"
-            @click="current = i" class="h-32 w-32 2xl:h-40 2xl:w-40"
+            @click="current = i" class=""
             :class="{ 'border-4 border-primary': i == current }">
         </div>
       </div>
@@ -70,7 +66,7 @@
           <!-- FAQ 1 -->
           <base-dropdown class="my-2" dropdownClass="mt-2" @opened="checkDataOpen">
             <div slot="toggle" class="w-full flex items-center justify-between">
-              <p class="text-base xl:text-2xl 2xl:text-3xl font-medium text-primary my-2">How to use</p>
+              <p class="text-lg xl:text-2xl 2xl:text-3xl font-medium text-primary my-2">How to use</p>
               <p>{{ !dropdown_data ? '+' : '-' }}</p>
             </div>
             <!-- Details -->
@@ -86,7 +82,7 @@
           <!-- FAQ 2-->
           <base-dropdown class="my-2" dropdownClass="mt-2" @opened="checkDataOpen2">
             <div slot="toggle" class="w-full flex items-center justify-between">
-              <p align="start" class="text-base xl:text-2xl 2xl:text-3xl font-medium text-primary my-2">Ingredients</p>
+              <p align="start" class="text-lg xl:text-2xl 2xl:text-3xl font-medium text-primary my-2">Ingredients</p>
               <p>{{ !dropdown_data2 ? '+' : '-' }}</p>
             </div>
             <!-- Details -->
@@ -117,20 +113,20 @@
     </div>
 
     <!-- More detail -->
-    <div class="w-full mt-16 relative">
-      <img src="~/static/images/IMG_03ingredients/Group1149@2x.png">
-      <div class="w-full centered absolute">
-        <div class="w-full text-quaternary flex flex-row justify-evenly items-center">
-          <div class="w-2/5 flex flex-col items-center justify-center">
-            <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-28 lg:h-40">
+    <div class="w-full mt-16 sm:mt-28 relative">
+      <img class="bg w-full z-10" src="~/static/images/IMG_03ingredients/Group1149@2x.png" alt="">
+      <div class="content w-full flex pb-4 lg:pb-0 z-20">
+        <div class="w-full text-quaternary flex flex-col md:flex-row justify-evenly items-center z-20">
+          <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
+            <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
             <h1 class="text-xl font-bold">Canabinoid (Cbd)</h1>
-            <p class="mt-2">Anti inflammatory to make skin stronger</p>
+            <p class="mt-2 text-center">Anti inflammatory to make skin stronger</p>
           </div>
-          <div class="vl-3 bg-primary"></div>
-          <div class="w-2/5 flex flex-col items-center text-center justify-center">
-            <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-28 lg:h-40">
-            <h1 class="text-xl font-bold">Leucojum Aestivum Bulb Extract (Ibr - Snowflake®)</h1>
-            <p class="mt-2">Anti Aging To Make Skin Younger And Brighter</p>
+          <div class="w-0.5 h-60 xl:h-72 2xl:h-80 bg-primary hidden md:block"></div>
+          <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
+            <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
+            <h1 class="text-xl text-center font-bold">Leucojum Aestivum Bulb Extract (Ibr - Snowflake®)</h1>
+            <p class="mt-2 text-center">Anti Aging To Make Skin Younger And Brighter</p>
           </div>
         </div>
       </div>
@@ -203,15 +199,24 @@ export default {
   width: 1px;
 }
 
-.centered {
+
+hr {
+  width: 100%;
+  border-bottom: solid .5px #78A695;
+}
+
+@media (min-width:1024px) {
+.content{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-hr {
-  width: 100%;
-  border-bottom: solid .5px #78A695;
+}
+@media (max-width:1024px) {
+  .bg {
+    position: absolute;
+    bottom: 0;
+  }
 }
 </style>
