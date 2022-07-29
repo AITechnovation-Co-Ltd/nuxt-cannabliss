@@ -1,9 +1,5 @@
 <template>
   <div>
-    <!-- Banner -->
-    <ProductBanner />
-
-    <!-- All Products -->
     <AllProduct class="mt-8 sm:mt-20 2xl:mt-32"/>
   </div>
 </template>

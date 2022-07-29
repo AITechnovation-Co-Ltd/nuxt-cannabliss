@@ -1,6 +1,5 @@
 <template>
   <div>
-    <ProductBanner />
     <ProductDetail class="mt-12 sm:mt-20" :params="$route.params.id" />
     <ProductReview :params="$route.params.id"/>
     <ProductOther />

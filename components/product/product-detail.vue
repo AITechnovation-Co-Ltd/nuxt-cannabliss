@@ -18,12 +18,16 @@
         <li aria-current="page">
           <div class="flex items-center">
             <div class="vl mx-1 bg-quaternary"></div>
-            <p v-for="(products_id, i) in products_name" :key="i" class="font-extrabold ml-2 hidden md:block">{{ products_id.name }}
+            <p v-for="(products_id, i) in products_name" :key="i" class="font-extrabold ml-2 hidden md:block">{{
+                products_id.name
+            }}
             </p>
           </div>
         </li>
       </ol>
-      <p v-for="(products_id, i) in products_name" :key="i" class="block md:hidden font-extrabold ml-7">{{ products_id.name }}</p>
+      <p v-for="(products_id, i) in products_name" :key="i" class="block md:hidden font-extrabold ml-7">{{
+          products_id.name
+      }}</p>
     </nav>
 
     <!-- Content -->
@@ -44,8 +48,7 @@
         </div>
         <div class="grid grid-cols-4 w-full overflow-x-auto">
           <img v-for="(item, i) in picture " :key="i" :src="require(`~/static/images/products${picture[i]}`)"
-            @click="current = i" class=""
-            :class="{ 'border-4 border-primary': i == current }">
+            @click="current = i" class="" :class="{ 'border-4 border-primary': i == current }">
         </div>
       </div>
 
@@ -164,7 +167,7 @@ export default {
       this.products_name = products_test
       this.products_detail = products_test
       this.picture = this.products_img[0].imgUrl
-      console.log(this.picture)
+      console.log(products_test)
     },
     checkDataOpen(toggle) {
       // console.log(toggle)
@@ -186,9 +189,10 @@ export default {
       else if (this.current != 0) { this.current-- }
     },
   },
-  mounted() {
-    // console.log(this.params)
-    this.fetch()
+  async mounted() {
+    await this.fetch()
+    this.$store.dispatch('me/setBreadcrumb', this.products_name[0].name)
+    // console.log(this.products_name[0].name)
   }
 }
 </script>
@@ -206,13 +210,14 @@ hr {
 }
 
 @media (min-width:1024px) {
-.content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
-}
+
 @media (max-width:1024px) {
   .bg {
     position: absolute;

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <FavoriteBanner />
     <FavoriteContent class="my-6"/>
   </div>
 </template>

@@ -3,6 +3,7 @@ export const state = () => {
     user: {},
     token: '',
     refresh_token: '',
+    breadcrumb: '',
     toggle: true,
     role: 0,
   }
@@ -29,6 +30,10 @@ export const getters = {
   getToggle: (state) => {
     const toggle = state.toggle
     return toggle
+  },
+  getBreadcrumb: (state) => {
+    const breadcrumb = state.breadcrumb
+    return breadcrumb
   },
 }
 export const mutations = {
@@ -62,6 +67,9 @@ export const mutations = {
   },
   SET_TOGGLE(state) {
     state.toggle = !state.toggle
+  },
+  SET_BREADCRUMB(state, breadcrumb) {
+    state.breadcrumb = breadcrumb
   },
 }
 export const actions = {
@@ -101,5 +109,8 @@ export const actions = {
   },
   setToggle({ commit }) {
     commit('SET_TOGGLE')
+  },
+  setBreadcrumb({ commit }, breadcrumb) {
+    commit('SET_BREADCRUMB', breadcrumb)
   },
 }

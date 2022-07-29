@@ -1,6 +1,5 @@
 <template>
   <div class="bg-secondary">
-    <BlogsBanner />
     <BlogsDetail class="my-6" />
   </div>
 </template>
