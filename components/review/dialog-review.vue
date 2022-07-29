@@ -42,9 +42,8 @@
 
       <!-- Form Review -->
       <div class="w-full xl:w-2/3 mt-4 px-8 sm:px-24 flex flex-col text-gray-300">
-        <select id="underline_select" :disabled="product_name ? true : false"
+        <select id="underline_select"
           class="block py-2.5 px-0 w-full text-sm font-light bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer">
-          <option v-if="product_name">{{ product_name }}</option>
           <option>Please select products</option>
           <option>list #1</option>
           <option>list #2</option>

@@ -19,7 +19,7 @@
     </nav>
 
     <div class="w-full flex flex-col mt-4 lg:mt-0 lg:flex-row justify-between items-center">
-      <div class="w-full sm:w-5/6 lg:w-1/2 xl:w-2/5 mr-8 xl:mr-0">
+      <div class="w-full sm:w-5/6 lg:w-1/2 xl:w-2/5 lg:mr-8 xl:mr-0">
         <h1 class="text-4xl sm:text-5xl text-primary">Ingredients</h1>
         <div class="flex items-center mt-4">
           <div class="w-1.5 h-24 2xl:h-16 bg-primary mr-4 flex"></div>
