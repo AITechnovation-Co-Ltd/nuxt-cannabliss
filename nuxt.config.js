@@ -1,5 +1,10 @@
 export default {
   mode: 'static',
+  ssr: false,
+  server: {
+    host: '0.0.0.0',
+    post: process.env.PORT || 3000
+  },
   router: {
     base: '/nuxt-cannabliss/'
   },
