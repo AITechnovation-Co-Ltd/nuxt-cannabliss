@@ -9,10 +9,8 @@ export const state = () => {
 }
 export const getters = {
   getToken: (state) => {
-    if (typeof window !== 'undefined') {
-      const t = localStorage.getItem('token') || state.token
-      return t
-    }
+    const t = localStorage.getItem('token') || state.token
+    return t
   },
   getRefreshToken: (state) => {
     const rt = localStorage.getItem('refresh_token') || state.refresh_token
@@ -33,7 +31,6 @@ export const getters = {
     return toggle
   },
 }
-
 export const mutations = {
   SET_TOKEN(state, token) {
     if (typeof window !== 'undefined') {
@@ -67,7 +64,6 @@ export const mutations = {
     state.toggle = !state.toggle
   },
 }
-
 export const actions = {
   async userLogin({ commit, dispatch }, data) {
     const self = this
