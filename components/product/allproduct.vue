@@ -93,7 +93,7 @@
                             </div>
                             <div class="mb-4 text-quaternary text-xl">
                                 <p class="text-sm sm:text-base">{{ product.type }}</p>
-                                <p class="text-xl sm:text-2xl xl:text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
+                                <p class="text-lg sm:text-xl xl:text-2xl font-medium">{{ product.name.slice(0, 50) }}</p>
                                 <p class="my-4 text-base sm:text-lg">{{ product.detail.slice(0, 80) }}..</p>
                                 <base-button @click="$router.push(`/product/details/${product.no}`)"
                                     class="border-quaternary">View more

@@ -25,7 +25,7 @@
       <div class="w-full lg:w-1/2 mt-8 lg:mt-0 ml-8" v-for="(products_id, i) in products_detail" :key="i">
         <p class="capitalize">{{ products_id.type }}</p>
         <div class="flex justify-between items-end">
-          <h1 class="text-3xl xl:text-4xl font-light">{{ products_id.name }}</h1>
+          <h1 class="text-2xl xl:text-3xl font-light">{{ products_id.name }}</h1>
           <p>{{ products_id.quantity }}</p>
         </div>
         <!-- <h2 class="text-4xl font-semibold text-primary">Tinted Hybrid Block SPF50 Pa+++</h2> -->
@@ -39,7 +39,7 @@
           <!-- FAQ 1 -->
           <base-dropdown class="my-2" dropdownClass="mt-2" @opened="checkDataOpen">
             <div slot="toggle" class="w-full flex items-center justify-between">
-              <p class="text-lg xl:text-2xl 2xl:text-3xl font-medium text-primary my-2">How to use</p>
+              <p class="text-lg xl:text-2xl font-medium text-primary my-2">How to use</p>
               <p>{{ !dropdown_data ? '+' : '-' }}</p>
             </div>
             <!-- Details -->
@@ -55,7 +55,7 @@
           <!-- FAQ 2-->
           <base-dropdown class="my-2" dropdownClass="mt-2" @opened="checkDataOpen2">
             <div slot="toggle" class="w-full flex items-center justify-between">
-              <p align="start" class="text-lg xl:text-2xl 2xl:text-3xl font-medium text-primary my-2">Ingredients</p>
+              <p align="start" class="text-lg xl:text-2xl font-medium text-primary my-2">Ingredients</p>
               <p>{{ !dropdown_data2 ? '+' : '-' }}</p>
             </div>
             <!-- Details -->
@@ -69,7 +69,7 @@
           </base-dropdown>
           <div class="w-full mt-10 flex items-center text-quaternary">
             <div class="h-3 w-3 bg-primary rounded-full mr-2"></div>
-            <p>Available</p>
+            <p class="text-xl">Available</p>
           </div>
           <div class="w-full flex mt-6">
             <a :href="products_id.link"><button
@@ -78,7 +78,7 @@
               class="h-14 w-14 flex items-center justify-center border border-primary rounded-full"
               :class="{ 'bg-primary': fav }">
               <base-icon icon="heart" viewBox="0 0 30 41" size="35" class="text-primary"
-                :class="{ 'text-red-500': fav }" />
+                :class="{ 'text-white': fav }" />
             </div>
           </div>
         </div>

@@ -15,7 +15,7 @@
             </div>
             <div class="text-quaternary text-xl">
               <p>{{ product.type }}</p>
-              <p class="text-2xl 2xl:text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
+              <p class="text-xl xl:text-2xl font-medium">{{ product.name.slice(0, 50) }}</p>
               <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
               <BaseButton @click="$router.push(`/product/details/${product.no}`), scrollToTop">View more
               </BaseButton>
@@ -40,7 +40,7 @@
             </div>
             <div class="text-quaternary text-xl">
               <p>{{ product.type }}</p>
-              <p class="text-2xl 2xl:text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
+              <p class="text-xl xl:text-2xl font-medium">{{ product.name.slice(0, 50) }}</p>
               <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
               <BaseButton @click="$router.push(`/product/details/${product.no}`), scrollToTop">View more
               </BaseButton>
@@ -65,7 +65,7 @@
             </div>
             <div class="text-quaternary text-xl">
               <p>{{ product.type }}</p>
-              <p class="text-2xl 2xl:text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
+              <p class="text-xl xl:text-2xl font-medium">{{ product.name.slice(0, 50) }}</p>
               <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
               <BaseButton @click="$router.push(`/product/details/${product.no}`), scrollToTop">View more
               </BaseButton>
