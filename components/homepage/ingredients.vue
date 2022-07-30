@@ -1,10 +1,10 @@
 <template>
-  <div class="w-full mt-20 text-quaternary flex flex-col lg:flex-row items-center px-8 lg:px-12 xl:px-20 2xl:px-36">
+  <div class="w-full mt-20 text-quaternary flex flex-col lg:flex-row items-center px-8 lg:px-12 xl:px-20 2xl:px-32">
     <div class="w-full sm:w-11/12 lg:w-2/5">
-      <h1 class="text-4xl xl:text-6xl 2xl:text-7xl text-primary">Ingredients</h1>
+      <h1 class="text-3xl xl:text-4xl 2xl:text-5xl text-primary">Ingredients</h1>
       <div class="mt-4 lg:mt-8 flex items-center">
         <div class="vl bg-primary"></div>
-        <p class="text-xl xl:text-2xl 2xl:text-3xl ml-2 lg:ml-4">By having a hero ingredient , there's an opportunity to get
+        <p class="text-lg xl:text-xl 2xl:text-2xl ml-2 lg:ml-4">By having a hero ingredient , there's an opportunity to get
           into the SKINCARE
           TREND in
           Thailand </p>

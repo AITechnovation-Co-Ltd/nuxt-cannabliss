@@ -1,38 +1,8 @@
 <template>
   <div class="w-full">
-    <!-- Breadcrumb -->
-    <nav class="w-full text-quaternary text-sm lg:text-base px-8 lg:px-12 xl:px-20 2xl:px-36" aria-label="Breadcrumb">
-      <ol class="inline-flex items-center justify-center space-x-3">
-        <li class="inline-flex items-center">
-          <nuxt-link to="/" class="inline-flex items-center font-medium">
-            <base-icon icon="angle-left" viewBox="0 0 30 41" size="20" class="mr-2" />
-            <p>Home</p>
-          </nuxt-link>
-        </li>
-        <li aria-current="page">
-          <div class="flex items-center">
-            <div class="vl mx-1 bg-quaternary"></div>
-            <nuxt-link to="/product" class="font-medium ml-2">Product</nuxt-link>
-          </div>
-        </li>
-        <li aria-current="page">
-          <div class="flex items-center">
-            <div class="vl mx-1 bg-quaternary"></div>
-            <p v-for="(products_id, i) in products_name" :key="i" class="font-extrabold ml-2 hidden md:block">{{
-                products_id.name
-            }}
-            </p>
-          </div>
-        </li>
-      </ol>
-      <p v-for="(products_id, i) in products_name" :key="i" class="block md:hidden font-extrabold ml-7">{{
-          products_id.name
-      }}</p>
-    </nav>
-
     <!-- Content -->
     <div
-      class="w-full flex mt-8 px-8 lg:px-12 xl:px-20 2xl:px-36 flex-col lg:flex-row justify-between items-center xl:items-start"
+      class="w-full flex mt-8 px-8 lg:px-12 xl:px-20 2xl:px-32 flex-col lg:flex-row justify-between items-center xl:items-start"
       v-for="(products_id, i) in products_img" :key="i">
 
       <!-- Picture -->

@@ -1,23 +1,5 @@
 <template>
-  <div class="w-full px-8 lg:px-12 xl:px-20 2xl:px-36 z-20">
-    <!-- Breadcrumb -->
-    <nav class="w-full" aria-label="Breadcrumb">
-      <ol class="text-quaternary text-base inline-flex items-center justify-center space-x-1 md:space-x-3">
-        <li class="inline-flex items-center">
-          <nuxt-link to="/" class="inline-flex items-center font-medium">
-            <base-icon icon="angle-left" viewBox="0 0 30 41" size="20" class="mr-2" />
-            <p>Home</p>
-          </nuxt-link>
-        </li>
-        <li aria-current="page">
-          <div class="flex items-center">
-            <div class="vl mx-1 bg-quaternary"></div>
-            <p class="font-extrabold md:ml-2 ">Ingredients</p>
-          </div>
-        </li>
-      </ol>
-    </nav>
-
+  <div class="w-full px-8 lg:px-12 xl:px-20 2xl:px-32 z-20">
     <div class="w-full flex flex-col mt-4 lg:mt-0 lg:flex-row justify-between items-center">
       <div class="w-full sm:w-5/6 lg:w-1/2 xl:w-2/5 lg:mr-8 xl:mr-0">
         <h1 class="text-4xl sm:text-5xl text-primary">Ingredients</h1>

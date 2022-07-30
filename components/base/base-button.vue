@@ -1,6 +1,6 @@
 <template>
   <button
-    class="h-12 sm:h-14 text-quaternary text-xl sm:text-2xl hover:text-white hover:bg-tertiary px-4 flex justify-between items-center border-2 hover:border-tertiary border-quaternary rounded-full"
+    class="h-12 sm:h-14 text-quaternary text-lg sm:text-xl hover:text-white hover:bg-tertiary px-4 flex justify-between items-center border-2 hover:border-tertiary border-quaternary rounded-full"
     :type="type" style="transition: all 0.15s ease 0s" @click="$emit('click', $event)" :disabled="disabled">
     <slot />
     <base-icon v-show="arrow" class="ml-3" icon="arrow-right-long" viewBox="0 0 512 512" width="20" height="20"

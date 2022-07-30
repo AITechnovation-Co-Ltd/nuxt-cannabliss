@@ -1,14 +1,14 @@
 <template>
     <div class="w-full flex flex-col justify-center px-4 md:px-8 lg:px-12 xl:px-24 2xl:px-36">
-        <div class="w-full flex flex-col sm:flex-row">
-            <h1 v-show="type == 'all'" class="mt-4 sm:mt-0 text-4xl text-primary">All Products</h1>
-            <h1 v-show="type != 'all'" class="mt-4 sm:mt-0 text-4xl text-primary">All Products {{ ": " + type }}</h1>
+        <div class="w-full flex justify-end ">
+            <h1 v-show="type == 'all'" class="w-full lg:w-9/12 lg:-mr-10 text-4xl text-primary">All Products</h1>
+            <h1 v-show="type != 'all'" class="w-full lg:w-9/12 lg:-mr-10 text-4xl text-primary">All Products {{ ": " + type }}</h1>
         </div>
         <!-- Categories -->
         <div class="w-full flex flex-col lg:flex-row items-start">
 
             <!-- List Categories -->
-            <div class="w-full lg:w-3/12 mt-0 sm:mt-10">
+            <div class="w-full lg:w-3/12 mt-4">
                 <h1 class="text-2xl sm:text-3xl text-primary">Categories</h1>
                 <hr class="w-full my-3 sm:my-6 border-b border-gray-200 flex flex-col justify-center items-center" />
                 <div>
@@ -48,7 +48,7 @@
                 <div class="w-full py-4 mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
                     <div class="flex flex-col sm:flex-row items-start sm:items-center mx-2 sm:mx-4">
                         <p class="text-white">Items per page</p>
-                        <select class="text-quaternary rounded-xl mr-1 sm:mx-4" v-model="item_per_page" name="" id="">
+                        <select class="text-sm sm:text-base text-quaternary rounded-xl mr-1 sm:mx-4" v-model="item_per_page" name="" id="">
                             <option selected value=6>6</option>
                             <option value=12>12</option>
                             <option value=18>18</option>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center ml-2 sm:ml-0 mx-2 sm:mx-4">
                         <p class="text-white">Sort by</p>
-                        <select class="text-quaternary rounded-xl mr-1 sm:mx-4" name="" id="">
+                        <select class="w-48 sm:w-auto text-sm sm:text-base text-quaternary rounded-xl mr-1 sm:mx-4" name="" id="">
                             <option></option>
                             <option value="">A-Z</option>
                             <option value="">Z-A</option>

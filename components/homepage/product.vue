@@ -1,12 +1,12 @@
 <template>
-  <div class="w-full mt-20 px-8 lg:px-12 xl:px-20 2xl:px-36">
+  <div class="w-full mt-20 px-8 lg:px-12 xl:px-20 2xl:px-32">
     <div class="flex flex-col sm:flex-row justify-between items-start">
-      <h1 class="text-5xl mb-6 sm:mb-0 md:text-7xl text-primary">Products</h1>
+      <h1 class="text-5xl mb-6 sm:mb-0 md:text-5xl text-primary">Products</h1>
       <BaseButton @click="$router.push(`/product`)">View all</BaseButton>
     </div>
     <div class="w-full columns-1 lg:flex mt-0 sm:mt-16">
       <div class="hidden sm:flex w-full lg:w-1/6 mr-6">
-        <ul class="w-full flex justify-around lg:justify-start lg:flex-col decorate-none text-3xl text-primary font-light">
+        <ul class="w-full flex justify-around lg:justify-start lg:flex-col decorate-none text-xl text-primary font-light">
           <li @click="filterType('all')">
             <span class="flex justify-between items-center lg:my-2 hover:font-bold hover:cursor-pointer"
               :class="{ 'font-bold': type == 'all' }">All Products <div v-if="type == 'all'"
@@ -57,7 +57,7 @@
               </div>
               <div class="mb-4 text-quaternary text-xl">
                 <p class="mt-2">{{ product.type }}</p>
-                <p class="text-2xl 2xl:text-3xl font-medium">{{ product.name.slice(0, 50) }}</p>
+                <p class="text-xl 2xl:text-2xl font-medium">{{ product.name.slice(0, 50) }}</p>
                 <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
                 <base-button @click="$router.push(`/product/details/${product.no}`)" class="border-quaternary">
                   View more

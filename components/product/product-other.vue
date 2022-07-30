@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-8 lg:px-12 xl:px-20 2xl:px-36">
+  <div class="w-full px-8 lg:px-12 xl:px-20 2xl:px-32">
     <div class="hidden lg:block 2xl:hidden">
       <h1 class="text-5xl text-primary text-center font-medium my-12">You may also like</h1>
       <div class="w-full grid grid-cols-3 gap-x-4">
