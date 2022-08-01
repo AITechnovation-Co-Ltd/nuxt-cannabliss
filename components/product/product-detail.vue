@@ -74,11 +74,10 @@
           <div class="w-full flex mt-6">
             <a :href="products_id.link"><button
                 class="px-8 h-14 text-quaternary border border-quaternary rounded-full mr-4">Go to shopping</button></a>
-            <div @click="fav = !fav"
-              class="h-14 w-14 flex items-center justify-center border border-primary rounded-full"
-              :class="{ 'bg-primary': fav }">
+            <div @click="liked(i)" class="h-14 w-14 flex items-center justify-center border border-primary rounded-full"
+              :class="{ 'bg-primary': products_id.islike }">
               <base-icon icon="heart" viewBox="0 0 30 41" size="35" class="text-primary"
-                :class="{ 'text-white': fav }" />
+                :class="{ 'text-white': products_id.islike }" />
             </div>
           </div>
         </div>
@@ -158,10 +157,14 @@ export default {
       if (this.current <= 0) { this.current = this.current = 0 }
       else if (this.current != 0) { this.current-- }
     },
+    liked(index) {
+      this.products_detail[index].islike = !this.products_detail[index].islike
+    },
   },
   async mounted() {
     await this.fetch()
     this.$store.dispatch('me/setBreadcrumb', this.products_name[0].name)
+
     // console.log(this.products_name[0].name)
   }
 }

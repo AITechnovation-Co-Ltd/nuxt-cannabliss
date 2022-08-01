@@ -85,7 +85,7 @@
         <div class="hidden justify-between items-center w-full xl:flex lg:w-auto lg:order-1" id="mobile-menu-4">
           <ul class="flex flex-col mt-4 md:flex-row md:space-x-16 md:mt-0 text-base">
             <li class="flex flex-col justify-end items-center ">
-              <img v-if="route_name == 'product'" src="@/static/images/flower.png">
+              <img v-if="route_name == 'product' || route_name == 'product-details-id'" src="@/static/images/flower.png">
               <nuxt-link to="/product" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
                 <p :class="{ 'font-bold': route_name == 'product' }">Product</p>
               </nuxt-link>
@@ -196,8 +196,8 @@
                     <p>{{ me.email }}</p>
                   </div>
                 </div>
-                <div v-show="check_logined" class="flex items-center space-x-3 text-white text-lg font-medium my-4 hidden"
-                  @click="logoutClick()">
+                <div v-show="check_logined"
+                  class="flex items-center space-x-3 text-white text-lg font-medium my-4 hidden" @click="logoutClick()">
                   <div class="bg-white rounded-full h-12 w-12 flex items-center justify-center">
                     <base-icon icon="logout" viewBox="0 0 45 45" size="24" class="text-primary" />
                   </div>

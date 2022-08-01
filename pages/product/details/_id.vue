@@ -2,7 +2,7 @@
   <div>
     <ProductDetail class="mt-12 sm:mt-20" :params="$route.params.id" />
     <ProductReview :params="$route.params.id"/>
-    <ProductOther />
+    <ProductOther :params="$route.params.id"/>
     <Subscribe class="hidden" />
   </div>
 </template>
@@ -16,7 +16,7 @@ import Subscribe from '../../../components/layout/subscribe.vue';
 export default {
   components: { ProductBanner, ProductDetail, ProductOther, ProductReview, Subscribe },
   mounted() {
-    console.log(this.$route.params.id)
+    // console.log(this.$route.params.id)
   }
 }
 </script>

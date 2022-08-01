@@ -14,16 +14,16 @@
           <div>
             <ul>
               <li class="mb-4 mt-8">
-                <p class="hover:underline font-semibold">Product</p>
+                <p @click="$router.push(`/product`)" class="hover:underline font-semibold">Product</p>
               </li>
               <li class="mb-4">
-                <p class="hover:underline">Hair</p>
+                <p @click="filter('Hair')" class="hover:underline">Hair</p>
               </li>
               <li class="mb-4">
-                <p class="hover:underline">Face</p>
+                <p @click="filter('Face')" class="hover:underline">Face</p>
               </li>
               <li>
-                <p class="hover:underline">Body</p>
+                <p @click="filter('Body')" class="hover:underline">Body</p>
               </li>
             </ul>
           </div>
@@ -93,16 +93,21 @@
 
 <script>
 export default {
-
+  methods: {
+    filter(product) {
+      this.$store.dispatch('me/setProduct', product)
+      this.$router.push(`/product`)
+    }
+  }
 }
 </script>
 
 <style scoped>
 @media (max-width:400px) {
-.content{
-  display: flex;
-  flex-direction: column;
-  margin-left: 20px;
-}
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
 }
 </style>

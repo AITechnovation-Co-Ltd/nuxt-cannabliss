@@ -6,7 +6,8 @@
     </div>
     <div class="w-full columns-1 lg:flex mt-0 sm:mt-16">
       <div class="hidden sm:flex w-full lg:w-1/6 mr-6">
-        <ul class="w-full flex justify-around lg:justify-start lg:flex-col decorate-none text-xl text-primary font-light">
+        <ul
+          class="w-full flex justify-around lg:justify-start lg:flex-col decorate-none text-xl text-primary font-light">
           <li @click="filterType('all')">
             <span class="flex justify-between items-center lg:my-2 hover:font-bold hover:cursor-pointer"
               :class="{ 'font-bold': type == 'all' }">All Products <div v-if="type == 'all'"
@@ -36,26 +37,22 @@
       <div class="w-full lg:w-5/6">
 
         <!-- Product card -->
-        <div class="w-full mt-12 lg:mt-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-4 md:gap-x-16">
+        <div v-if="list_products.length != 0"
+          class="w-full mt-12 lg:mt-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 ">
           <div class="w-full" v-for="(product, index) in list_products" :key="index">
-            <template
-              v-if="xl ? index < 2 * page && index >= 2 * (page - 1) : index < 3 * page && index >= 3 * (page - 1)">
-              <div class="relative">
+            <template v-if="index < page_screen * page && index >= page_screen * (page - 1)">
+              <div class="relative mx-2">
                 <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
                 <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
                 <span v-if="product.isNew"
                   class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
-                <div v-if="product.islike == true">
-                  <base-icon icon="heartactive" viewBox="0 0 30 41" size="50"
-                    class="hover:cursor-pointer text-red-500 absolute top-8 right-8" />
-                </div>
-                <div v-else>
-                  <base-icon icon="heart" viewBox="0 0 30 41" size="50"
-                    class="hover:cursor-pointer text-primary absolute top-8 right-8" />
+                <div @click="liked(index)" class="absolute top-8 right-8 cursor-pointer">
+                  <base-icon icon='heartactive' viewBox="0 0 30 41" size="50" class="text-quaternary"
+                    :class="{ 'text-red-500': product.islike }" />
                 </div>
                 <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
               </div>
-              <div class="mb-4 text-quaternary text-xl">
+              <div class="mb-4 mx-2 text-quaternary text-xl">
                 <p class="mt-2">{{ product.type }}</p>
                 <p class="text-xl 2xl:text-2xl font-medium">{{ product.name.slice(0, 50) }}</p>
                 <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
@@ -66,7 +63,9 @@
             </template>
           </div>
         </div>
-        <base-pages @change="change" :page="page" :total_pages="total_p" :limit="7"></base-pages>
+        <div v-else class="w-full py-12 mt-12 bg-white text-center text-2xl text-primary">No Products</div>
+        <base-pages v-if="list_products.length != 0" @change="change" :page="page" :total_pages="total_p" :limit="7">
+        </base-pages>
       </div>
     </div>
   </div>
@@ -82,6 +81,7 @@ export default {
       page: 1,
       total_p: 1,
       products,
+      screen: window.screen.width,
       type: 'all',
       xl: null,
     }
@@ -95,12 +95,29 @@ export default {
         list = this.products.filter((e) => e.type === this.type)
       }
       this.page = 1;
-      this.total_p = Math.ceil(this.xl ? list.length / 2 : list.length / 3)
+      this.total_p = Math.ceil(list.length / this.page_screen)
       return list
+    },
+    page_screen() {
+      let item_per_page = 4
+      if (this.screen <= 1536 && this.screen > 1440) {
+        item_per_page = 4
+      }
+      else if (this.screen <= 1440 && this.screen > 1280) {
+        item_per_page = 3
+      }
+      else if (this.screen <= 1280 && this.screen > 768) {
+        item_per_page = 2
+      }
+      else if (this.screen <= 768) {
+        item_per_page = 1
+      }
+      return item_per_page
     },
   },
   mounted() {
-    this.total_p = Math.ceil(this.isXL() ? this.products.length / 2 : this.products.length / 3)
+    console.log(this.page_screen)
+    this.total_p = Math.ceil(this.products.length / this.page_screen)
     // console.log(this.total_p)
   },
   methods: {
@@ -120,7 +137,10 @@ export default {
         this.xl = false
         return false;
       }
-    }
+    },
+    liked(index) {
+      this.products[index].islike = !this.products[index].islike
+    },
   }
 }
 </script>

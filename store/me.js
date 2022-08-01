@@ -4,6 +4,7 @@ export const state = () => {
     token: '',
     refresh_token: '',
     breadcrumb: '',
+    product: '',
     toggle: true,
     role: 0,
   }
@@ -34,6 +35,10 @@ export const getters = {
   getBreadcrumb: (state) => {
     const breadcrumb = state.breadcrumb
     return breadcrumb
+  },
+  getProduct: (state) => {
+    const product = state.product
+    return product
   },
 }
 export const mutations = {
@@ -70,6 +75,9 @@ export const mutations = {
   },
   SET_BREADCRUMB(state, breadcrumb) {
     state.breadcrumb = breadcrumb
+  },
+  SET_PRODUCT(state, product) {
+    state.product = product
   },
 }
 export const actions = {
@@ -112,5 +120,8 @@ export const actions = {
   },
   setBreadcrumb({ commit }, breadcrumb) {
     commit('SET_BREADCRUMB', breadcrumb)
+  },
+  setProduct({ commit }, product) {
+    commit('SET_PRODUCT', product)
   },
 }
