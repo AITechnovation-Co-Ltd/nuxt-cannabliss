@@ -22,8 +22,11 @@
                 <span class="badge bg-primary">0</span>
               </nuxt-link>
             </div>
-
-            <base-icon icon="magnifying-glass" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
+            <div @click="searchProduct" class="cursor-pointer hover:scale-110">
+              <base-icon icon="magnifying-glass" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
+            </div>
+            <base-autocomplete v-show="search" v-model="productname" placeholder="Product Name"
+              :items="$model.productname" />
             <div class="vl mx-4 bg-primary"></div>
 
             <div
@@ -85,7 +88,8 @@
         <div class="hidden justify-between items-center w-full xl:flex lg:w-auto lg:order-1" id="mobile-menu-4">
           <ul class="flex flex-col mt-4 md:flex-row md:space-x-16 md:mt-0 text-base">
             <li class="flex flex-col justify-end items-center ">
-              <img v-if="route_name == 'product' || route_name == 'product-details-id'" src="@/static/images/flower.png">
+              <img v-if="route_name == 'product' || route_name == 'product-details-id'"
+                src="@/static/images/flower.png">
               <nuxt-link to="/product" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
                 <p :class="{ 'font-bold': route_name == 'product' }">Product</p>
               </nuxt-link>
@@ -234,8 +238,10 @@ export default {
   data() {
     return {
       me: {},
+      productname: '',
       menu_route: ["blogs", "blogs-details-id", "product", "ingredients", "review", "contact", "favorite"],
       isOpen: false,
+      search: false,
       dropdowm_data: false,
       dropdowm_user: false,
       isthai: false,
@@ -280,13 +286,24 @@ export default {
         })
       } else {
         await setTimeout(async () => {
+          window.location.reload()
           await self.$router.push('/')
         }, 500)
       }
-
       await self.$store.dispatch('loading/setLoading', false)
-      window.location.reload()
-    }
+    },
+    searchProduct() {
+      if (this.search == false) {
+        this.search = true
+      }
+      else if (this.search == true) {
+        if (this.productname != '') {
+          this.$store.dispatch('me/setProductName', this.productname)
+          this.$router.push(`/product/details/${this.productname}`)
+        }
+        this.search = false
+      }
+    },
   },
   mounted() {
     document.addEventListener("keydown", e => {

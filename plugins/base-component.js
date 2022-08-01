@@ -8,6 +8,7 @@ import BaseDropDown from "@/components/base/base-dropdown"
 import BaseDropDownNavbar from "@/components/base/base-dropdown-navbar"
 import BaseDropDownItem from "@/components/base/base-dropdown-item"
 import BasePages from "@/components/base/base-pages";
+import BaseAutoComplete from "@/components/base/base-autocomplete"
 
 Vue.component("base-icon", BaseIcon);
 Vue.component("base-input-review", BaseInputReview);
@@ -18,3 +19,4 @@ Vue.component("base-dropdown", BaseDropDown);
 Vue.component("base-dropdown-navbar", BaseDropDownNavbar);
 Vue.component("base-dropdown-item", BaseDropDownItem);
 Vue.component("base-pages",BasePages);
+Vue.component("base-autocomplete",BaseAutoComplete);

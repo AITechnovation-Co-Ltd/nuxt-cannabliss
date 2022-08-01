@@ -5,6 +5,7 @@ export const state = () => {
     refresh_token: '',
     breadcrumb: '',
     product: '',
+    productname: '',
     toggle: true,
     role: 0,
   }
@@ -39,6 +40,10 @@ export const getters = {
   getProduct: (state) => {
     const product = state.product
     return product
+  },
+  getProductName: (state) => {
+    const productname = state.productname
+    return productname
   },
 }
 export const mutations = {
@@ -78,6 +83,9 @@ export const mutations = {
   },
   SET_PRODUCT(state, product) {
     state.product = product
+  },
+  SET_PRODUCTNAME(state, productname) {
+    state.productname = productname
   },
 }
 export const actions = {
@@ -123,5 +131,8 @@ export const actions = {
   },
   setProduct({ commit }, product) {
     commit('SET_PRODUCT', product)
+  },
+  setProductName({ commit }, productname) {
+    commit('SET_PRODUCTNAME', productname)
   },
 }

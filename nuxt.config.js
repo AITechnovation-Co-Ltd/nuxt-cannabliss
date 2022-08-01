@@ -41,6 +41,7 @@ export default {
     "@/plugins/vue-tailwind",
     "@/plugins/vue-scrollto",
     "@/plugins/notification",
+    '@/plugins/model',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

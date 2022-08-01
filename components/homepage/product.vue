@@ -47,8 +47,7 @@
                 <span v-if="product.isNew"
                   class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
                 <div @click="liked(index)" class="absolute top-8 right-8 cursor-pointer">
-                  <base-icon icon='heartactive' viewBox="0 0 30 41" size="50" class="text-quaternary"
-                    :class="{ 'text-red-500': product.islike }" />
+                  <base-icon icon='heartactive' viewBox="0 0 30 41" size="50" :color="product.islike ? '#f05252' : '#5E5F5F'" />
                 </div>
                 <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
               </div>

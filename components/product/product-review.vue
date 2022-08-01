@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div v-if="!no_product" class="w-full">
     <div class="w-full relative mt-20 px-8 lg:px-12 xl:px-20 2xl:px-32">
       <h1 class="w-full text-5xl text-center font-medium text-primary">Review</h1>
       <div class="w-full flex flex-col xl:flex-row mt-12">
@@ -61,6 +61,7 @@ export default {
     return {
       products,
       product_name: '',
+      no_product: false,
     }
   },
   props: {
@@ -71,12 +72,24 @@ export default {
   },
   methods: {
     async fetch() {
-      let products_test = await this.products.filter((e) => e.no == this.params)
-      this.product_name = products_test[0].name
+      const self = this
+      if (self.$store.getters['me/getProductName'] != '') {
+        let products_test = await self.products.filter((e) => e.name == self.$store.getters['me/getProductName'])
+        console.log(products_test.length)
+        if (products_test.length == 0) {
+          self.no_product = true
+        }
+        else {
+          self.product_name = products_test[0].name
+        }
+      }
+      else {
+        let products_test = await self.products.filter((e) => e.no == self.params)
+        self.product_name = products_test[0].name
+      }
     },
   },
   mounted() {
-    console.log(this.params)
     this.fetch()
   }
 }
