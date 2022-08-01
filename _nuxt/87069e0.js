@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{612:function(e,t,n){"use strict";n.r(t);var c={layout:"admin"},l=n(4),component=Object(l.a)(c,(function(){var e=this,t=e.$createElement;return(e._self._c||t)("div",{staticClass:"flex justify-center items-center"},[e._v("\n  Admin Create Product\n")])}),[],!1,null,null,null);t.default=component.exports}}]);
