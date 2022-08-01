@@ -1,26 +1,7 @@
 <template>
-  <div class="w-full columns-1 lg:flex justify-center px-4 sm:px-12 lg:px-16 xl:px-20 2xl:px-36">
+  <div class="w-full columns-1 lg:flex justify-center px-4 sm:px-12 lg:px-16 xl:px-20 2xl:px-32">
     <!-- Categories -->
     <div class="w-full lg:w-3/12 flex flex-col items-start">
-      <!-- Breadcrumb -->
-      <div class="w-80">
-        <nav class="w-full flex justify-start items-center" aria-label="Breadcrumb">
-          <ol class="text-quaternary text-base inline-flex items-center justify-center space-x-1 md:space-x-3">
-            <li class="inline-flex items-center">
-              <nuxt-link to="/" class="inline-flex items-center font-medium">
-                <base-icon icon="angle-left" viewBox="0 0 30 41" size="20" class="mr-2" />
-                <p>Home</p>
-              </nuxt-link>
-            </li>
-            <li>
-              <div class="flex items-center">
-                <div class="vl mx-1 bg-quaternary"></div>
-                <p class="font-extrabold md:ml-2">Review</p>
-              </div>
-            </li>
-          </ol>
-        </nav>
-      </div>
 
       <!-- List Categories -->
       <div class="w-full lg:w-80 mt-10">

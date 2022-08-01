@@ -3,16 +3,16 @@ export const state = () => {
     user: {},
     token: '',
     refresh_token: '',
+    breadcrumb: '',
+    product: '',
     toggle: true,
     role: 0,
   }
 }
 export const getters = {
   getToken: (state) => {
-    if (typeof window !== 'undefined') {
-      const t = localStorage.getItem('token') || state.token
-      return t
-    }
+    const t = localStorage.getItem('token') || state.token
+    return t
   },
   getRefreshToken: (state) => {
     const rt = localStorage.getItem('refresh_token') || state.refresh_token
@@ -32,8 +32,15 @@ export const getters = {
     const toggle = state.toggle
     return toggle
   },
+  getBreadcrumb: (state) => {
+    const breadcrumb = state.breadcrumb
+    return breadcrumb
+  },
+  getProduct: (state) => {
+    const product = state.product
+    return product
+  },
 }
-
 export const mutations = {
   SET_TOKEN(state, token) {
     if (typeof window !== 'undefined') {
@@ -66,8 +73,13 @@ export const mutations = {
   SET_TOGGLE(state) {
     state.toggle = !state.toggle
   },
+  SET_BREADCRUMB(state, breadcrumb) {
+    state.breadcrumb = breadcrumb
+  },
+  SET_PRODUCT(state, product) {
+    state.product = product
+  },
 }
-
 export const actions = {
   async userLogin({ commit, dispatch }, data) {
     const self = this
@@ -105,5 +117,11 @@ export const actions = {
   },
   setToggle({ commit }) {
     commit('SET_TOGGLE')
+  },
+  setBreadcrumb({ commit }, breadcrumb) {
+    commit('SET_BREADCRUMB', breadcrumb)
+  },
+  setProduct({ commit }, product) {
+    commit('SET_PRODUCT', product)
   },
 }

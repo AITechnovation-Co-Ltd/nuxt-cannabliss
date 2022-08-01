@@ -58,7 +58,7 @@ import Face from '~/components/homepage/face.vue'
 
 export default {
   components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick },
-
+  layout: 'home',
 }
 </script>
 <style scoped>

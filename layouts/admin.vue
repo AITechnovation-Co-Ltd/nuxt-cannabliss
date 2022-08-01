@@ -13,7 +13,6 @@
 import NavbarAdmin from '../components/layout/navbar-admin.vue'
 export default {
   components: { NavbarAdmin},
-
 }
 </script>
 

@@ -1,18 +1,18 @@
 <template>
   <div class="w-full relative xl:flex flex-col justify-center items-center">
-    <div class="content w-full flex flex-col 2xl:flex-row py-8 px-8 lg:px-12 xl:px-20 2xl:px-36 z-20">
+    <div class="content w-full flex flex-col 2xl:flex-row py-8 px-8 lg:px-12 xl:px-20 2xl:px-32 z-20">
       <div class="w-full 2xl:w-1/3 text-xl text-quaternary font-light z-20">
         <p>Face</p>
-        <h1 class="text-4xl 2xl:text-5xl font-light mt-2">Canabliss Oasiz :</h1>
-        <h2 class="text-4xl 2xl:text-5xl text-primary mt-2">First Step Amino Essence</h2>
+        <h1 class="text-3xl 2xl:text-4xl font-light mt-2">Canabliss Oasiz :</h1>
+        <h2 class="text-2xl 2xl:text-3xl text-primary mt-2">First Step Amino Essence</h2>
         <div class="w-full flex items-center mt-6">
           <div class="vl bg-primary mr-4"></div>
-          <p>Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et
+          <p class="text-lg">Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua . Ut enim ad minim veniam , quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat . Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
             fugiat nulla pariatur .</p>
         </div>
-        <p class="mt-6">Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor incididunt ut
+        <p class="mt-6 text-lg">Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua . Ut enim ad minim veniam , quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat .</p>
         <BaseButton class="mt-4" @click="$router.push(`/product/details/3`)">View more</BaseButton>
@@ -54,7 +54,7 @@ export default {
 }
 
 .vl {
-  height: 220px;
+  height: 240px;
   width: 20px;
 }
 

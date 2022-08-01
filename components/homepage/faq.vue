@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col justify-center mt-4 sm:mt-12 px-8 lg:px-12 xl:px-20 2xl:px-36">
+  <div class="w-full flex flex-col justify-center mt-4 sm:mt-12 px-8 lg:px-12 xl:px-20 2xl:px-32">
     <p class="text-primary text-5xl">FAQ</p>
     <div class="w-full flex flex-col lg:flex-row items-center my-6">
       <!-- Dropdown FQA -->
@@ -8,7 +8,7 @@
         <!-- FQA 1-->
         <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen" openUp="toggle">
           <div slot="toggle" class="w-full flex items-center justify-between">
-            <p align="start" class="text-base xl:text-2xl 2xl:text-3xl font-medium text-quaternary my-2"
+            <p align="start" class="text-base xl:text-xl 2xl:text-2xl font-medium text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data }">
               Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium</p>
 
@@ -32,7 +32,7 @@
         <!-- FAQ 2-->
         <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen2">
           <div slot="toggle" class="w-full flex items-center justify-between">
-            <p align="start" class="text-base xl:text-2xl 2xl:text-3xl font-medium text-quaternary my-2"
+            <p align="start" class="text-base xl:text-xl 2xl:text-2xl font-medium text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data2 }">
               Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium</p>
 
@@ -56,7 +56,7 @@
         <!-- FAQ 3 -->
         <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen3">
           <div slot="toggle" class="w-full flex items-center justify-between">
-            <p align="start" class="text-base xl:text-2xl 2xl:text-3xl font-medium text-quaternary my-2"
+            <p align="start" class="text-base xl:text-xl 2xl:text-2xl font-medium text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data3 }">
               Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium</p>
 
@@ -80,7 +80,7 @@
         <!-- FAQ 4 -->
         <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen4">
           <div slot="toggle" class="w-full flex items-center justify-between">
-            <p align="start" class="text-base xl:text-2xl 2xl:text-3xl font-medium text-quaternary my-2"
+            <p align="start" class="text-base xl:text-xl 2xl:text-2xl font-medium text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data4 }">
               Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium</p>
             <base-icon icon="dropdown" :class="{
@@ -105,7 +105,7 @@
       </div>
     </div>
 
-    <div class="w-full scale-100 sm:scale-90 md:scale-100 mt-0 sm:mt-28 mb-28 flex flex-wrap justify-around 2xl:justify-center text-quaternary 2xl:space-x-60">
+    <div class="w-full scale-100 sm:scale-90 md:scale-100 mt-0 sm:mt-28 mb-28 flex flex-wrap justify-around 2xl:justify-center text-quaternary 2xl:space-x-56">
       <div class="flex flex-col mx-4 sm:mx-0 items-center ">
         <base-icon icon="heart" viewBox="0 0 24 24" size="90" class="mb-8" />
         <p class="text-3xl mb-4 font-medium">24 Services</p>

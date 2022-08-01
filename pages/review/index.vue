@@ -1,6 +1,5 @@
 <template>
   <div class="bg-secondary">
-    <ReviewBanner />
     <ReviewContent class="my-6"/>
   </div>
 </template>

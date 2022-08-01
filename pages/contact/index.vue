@@ -1,6 +1,5 @@
 <template>
   <div class="bg-secondary">
-    <ContactBanner />
     <ContactContent class="my-16"/>
     <Map class="mb-8" />
   </div>

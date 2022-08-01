@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full flex flex-col justify-center items-center px-24 lg:px-12 xl:px-20 2xl:px-36">
-    <p class="my-4 text-7xl text-primary">Review</p>
+  <div class="w-full flex flex-col justify-center items-center px-24 lg:px-12 xl:px-20 2xl:px-32">
+    <p class="my-4 text-5xl text-primary">Review</p>
     <div class="w-full flex my-6">
       <!-- -->
       <div class="w-1/3 relative py-10">

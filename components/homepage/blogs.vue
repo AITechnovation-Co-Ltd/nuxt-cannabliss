@@ -1,8 +1,8 @@
 
 <template>
-  <div class="w-full flex flex-col justify-center items-center mt-12 lg:mt-20 2xl:mt-28 px-8 lg:px-12 xl:px-20 2xl:px-36">
+  <div class="w-full flex flex-col justify-center items-center mt-12 lg:mt-20 2xl:mt-28 px-8 lg:px-12 xl:px-20 2xl:px-32">
     <!-- Title -->
-    <p class="text-7xl text-primary mb-8 lg:mb-12 xl:mb-20">Blogs</p>
+    <p class="text-5xl text-primary mb-8 lg:mb-12 xl:mb-20">Blogs</p>
     <!-- Content -->
     <div class="w-full flex flex-col items-center">
       <!-- Card -->

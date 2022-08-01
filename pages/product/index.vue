@@ -1,10 +1,6 @@
 <template>
   <div>
-    <!-- Banner -->
-    <ProductBanner />
-
-    <!-- All Products -->
-    <AllProduct class="mt-20 2xl:mt-32"/>
+    <AllProduct class="mt-8 sm:mt-12 "/>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <div class="w-full relative px-8 lg:px-12 xl:px-20">
-        <p class="my-4 text-7xl text-primary text-center">Review</p>
+        <p class="my-4 text-5xl text-primary text-center">Review</p>
         <VueSlickCarousel class="flex justify-center items-center" v-bind="settings">
 
             <div class="w-full my-6 ml-0 sm:ml-8 flex flex-col justify-center items-center">
@@ -126,26 +126,32 @@
             <base-button @click="$router.push(`/review`)" color_arrow="quaternary">View All</base-button>
         </div>
         <div class="w-full">
-            <div class="w-full text-xl flex justify-between">
-                <h1 class="text-5xl text-primary">#Cannabliss</h1>
-                <a href="" class="flex text-quaternary items-center">
+            <div class="w-full mt-8 sm:mt-0 text-xl flex justify-between">
+                <h1 class="text-3xl md:text-5xl text-primary">#Cannabliss</h1>
+                <a href="" class="flex text-quaternary items-center hidden md:block">
                     <img class="w-10 mr-4" src="~/static/images/IMG_footer/icons8-instagram@2x.png" alt="">
                     Follow us on instagram
                 </a>
             </div>
-            <div class="ig mt-8 grid grid-cols-4">
+            <div class="ig mt-2 sm:mt-8 grid grid-cols-2 sm:grid-cols-4">
                 <div class="flex justify-center items-center">
                 <img src="@/static/images/IMG_01home/pages_01home/content-pixie-TxBQ7yLj6JU-unsplash.jpg" alt="">
                 </div>
                 <div class="flex justify-center items-center">
                 <img src="@/static/images/IMG_01home/pages_01home/mathilde-langevin-FDRaYqiTY1k-unsplash.jpg" alt="">
                 </div>
-                <div class="flex justify-center items-center">
+                <div class="flex justify-center items-center hidden sm:block">
                 <img src="@/static/images/IMG_01home/pages_01home/lume-wellness-zpMn92OY4I8-unsplash.jpg" alt="">
                 </div>
-                <div class="flex justify-center items-center">
+                <div class="flex justify-center items-center hidden sm:block">
                 <img src="@/static/images/IMG_01home/pages_01home/birgith-roosipuu-W71jxsXrwyQ-unsplash.jpg" alt="">
                 </div>
+            </div>
+            <div class="w-full mt-4 sm:mt-8 sm:mt-0 text-xl flex justify-end">
+                <a href="" class="flex text-quaternary items-center block md:hidden">
+                    <img class="w-8 sm:w-10 mr-2 sm:mr-4" src="~/static/images/IMG_footer/icons8-instagram@2x.png" alt="">
+                    Follow us on instagram
+                </a>
             </div>
         </div>
 

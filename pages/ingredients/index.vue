@@ -1,7 +1,6 @@
 <template>
   <div>
-    <IngredientsBanner />
-    <IngredientsDetail class="mt-12 xl:mt-20 2xl:mt-28 mb-20"/>
+    <IngredientsDetail class="mt-12 xl:my-12"/>
     <IngredientsKnowledge />
   </div>
 </template>

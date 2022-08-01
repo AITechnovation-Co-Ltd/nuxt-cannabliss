@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <div class="w-full relative mt-20 px-8 lg:px-12 xl:px-20 2xl:px-36">
+    <div class="w-full relative mt-20 px-8 lg:px-12 xl:px-20 2xl:px-32">
       <h1 class="w-full text-5xl text-center font-medium text-primary">Review</h1>
       <div class="w-full flex flex-col xl:flex-row mt-12">
         <div class="w-full xl:w-1/4 2xl:mr-20">
