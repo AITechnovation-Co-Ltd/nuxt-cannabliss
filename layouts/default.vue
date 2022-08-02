@@ -8,7 +8,7 @@
                 <h1 class="text-5xl 2xl:text-7xl text-primary">{{ item.label }}</h1>
             </div>
         </div>
-        <div class="flex items-center px-3 mt-8 text-quaternary px-4 sm:px-12 lg:px-16 xl:px-20 2xl:px-32">
+        <div v-if="route_name != 'product'" class="flex items-center px-3 mt-8 text-quaternary px-4 sm:px-12 lg:px-16 xl:px-20 2xl:px-32">
             <base-icon icon="angle-left" viewBox="0 0 24 24" size="18" />
             <nuxt-link to="/" class="hover:underline mr-2">Home |
             </nuxt-link>
