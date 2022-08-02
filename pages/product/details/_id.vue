@@ -1,8 +1,8 @@
 <template>
   <div>
     <ProductDetail class="mt-12 sm:mt-20" :params="$route.params.id" />
-    <ProductReview :params="$route.params.id"/>
     <ProductOther :params="$route.params.id"/>
+    <ProductReview :params="$route.params.id"/>
     <Subscribe class="hidden" />
   </div>
 </template>

@@ -48,8 +48,49 @@
   src: local("Poppins"), url(~assets/fonts/Poppins-Black.ttf) format("truetype");
 }
 @font-face {
-  font-family: "DB-Helvethaica";
-  src: local("DB-Helvethaica"), url(~assets/fonts/DBHelvethaicaXv3.2.ttf) format("truetype");
+  font-family: "DBHelvethaica";
+  font-weight: 200;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXThinCond.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 200;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXThinExtItv3.2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 300;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXThinExtv3.2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 400;
+  src: local("DBHelvethaica"), url(~assets/fonts/DB-Helvethaica-X-v3.2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 100;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXUlLiCondv3.2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 600;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXUlLiExtItv3.2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 700;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXUlLiExtv3.2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 800;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXUlLiItv3.2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 900;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXv3.2.ttf) format("truetype");
 }
 
 * {
@@ -57,7 +98,7 @@
 }
 
 .thai {
-  font-family: "DB-Helvethaica";
+  font-family: "DBHelvethaica", sans-serif;
 }
 
 .v-toast__icon {

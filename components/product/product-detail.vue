@@ -8,7 +8,7 @@
     <div v-else class="w-full">
       <!-- Content -->
       <div
-        class="w-full flex mt-8 px-8 lg:px-12 xl:px-20 2xl:px-32 flex-col lg:flex-row justify-between items-center xl:items-start"
+        class="w-full flex mt-8 px-8 lg:px-12 xl:px-20 3xl:px-32 flex-col lg:flex-row justify-between items-center xl:items-start"
         v-for="(products_id, i) in products_img" :key="i">
 
         <!-- Picture -->
@@ -29,28 +29,28 @@
         </div>
 
         <div class="w-full lg:w-1/2 mt-8 lg:mt-0 ml-8" v-for="(products_id, i) in products_detail" :key="i">
-          <p class="capitalize">{{ products_id.type }}</p>
+          <p class="text-sm capitalize">{{ products_id.type }}</p>
           <div class="flex justify-between items-end">
             <h1 class="text-2xl xl:text-3xl font-light">{{ products_id.name }}</h1>
-            <p>{{ products_id.quantity }}</p>
+            <p class="font-extralight">{{ products_id.quantity }}</p>
           </div>
           <!-- <h2 class="text-4xl font-semibold text-primary">Tinted Hybrid Block SPF50 Pa+++</h2> -->
-          <div class="flex my-4">
+          <div class="flex my-4 items-center">
             <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-tertiary mr-4" />
-            <p>(55)</p>
+            <p class="text-quaternary text-sm">(55)</p>
           </div>
-          <p class="my-2 font-medium text-xl">{{ products_id.detail }}</p>
+          <p class="my-2 font-extralight text-quaternary text-sm">{{ products_id.detail }}</p>
           <div class="w-full flex-col text-2xl text-primary">
 
             <!-- FAQ 1 -->
             <base-dropdown class="my-2" dropdownClass="mt-2" @opened="checkDataOpen">
               <div slot="toggle" class="w-full flex items-center justify-between">
-                <p class="text-lg xl:text-2xl font-medium text-primary my-2">How to use</p>
+                <p class="text-lg font-normal text-primary my-2">How to use</p>
                 <p>{{ !dropdown_data ? '+' : '-' }}</p>
               </div>
               <!-- Details -->
               <base-dropdown-item>
-                <p class="w-11/12 text-sm xl:text-xl text-quaternary ">Lorem ipsum dolor sit amet consectetur
+                <p class="w-11/12 text-sm text-quaternary ">Lorem ipsum dolor sit amet consectetur
                   adipisicing elit. Harum sequi
                   provident optio magnam, commodi
                   corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
@@ -61,12 +61,12 @@
             <!-- FAQ 2-->
             <base-dropdown class="my-2" dropdownClass="mt-2" @opened="checkDataOpen2">
               <div slot="toggle" class="w-full flex items-center justify-between">
-                <p align="start" class="text-lg xl:text-2xl font-medium text-primary my-2">Ingredients</p>
+                <p align="start" class="text-lg font-normal text-primary my-2">Ingredients</p>
                 <p>{{ !dropdown_data2 ? '+' : '-' }}</p>
               </div>
               <!-- Details -->
               <base-dropdown-item>
-                <p class="w-11/12 text-sm xl:text-xl text-quaternary ">Lorem ipsum dolor sit amet consectetur
+                <p class="w-11/12 text-sm text-quaternary ">Lorem ipsum dolor sit amet consectetur
                   adipisicing
                   elit. Harum sequi
                   provident optio magnam, commodi
@@ -75,8 +75,8 @@
               </base-dropdown-item>
             </base-dropdown>
             <div class="w-full mt-10 flex items-center text-quaternary">
-              <div class="h-3 w-3 bg-primary rounded-full mr-2"></div>
-              <p class="text-xl">Available</p>
+              <div class="h-2 w-2 bg-primary rounded-full mr-2"></div>
+              <p class="text-lg">Available</p>
             </div>
             <div class="w-full flex mt-6">
               <a :href="products_id.link"><button
@@ -96,17 +96,17 @@
       <div class="w-full mt-16 sm:mt-28 relative">
         <img class="bg w-full z-10" src="~/static/images/IMG_03ingredients/Group1149@2x.png" alt="">
         <div class="content w-full flex pb-4 lg:pb-0 z-20">
-          <div class="w-full text-quaternary flex flex-col md:flex-row justify-evenly items-center z-20">
+          <div class="w-full flex flex-col md:flex-row justify-evenly items-center z-20">
             <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
-              <h1 class="text-xl font-bold">Canabinoid (Cbd)</h1>
-              <p class="mt-2 text-center">Anti inflammatory to make skin stronger</p>
+              <h1 class="text-xl font-normal">Canabinoid (Cbd)</h1>
+              <p class="mt-2 text-center text-extralight">Anti inflammatory to make skin stronger</p>
             </div>
             <div class="w-0.5 h-60 xl:h-72 2xl:h-80 bg-primary hidden md:block"></div>
             <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
-              <h1 class="text-xl text-center font-bold">Leucojum Aestivum Bulb Extract (Ibr - Snowflake®)</h1>
-              <p class="mt-2 text-center">Anti Aging To Make Skin Younger And Brighter</p>
+              <h1 class="text-xl text-center font-normal">Leucojum Aestivum Bulb Extract (Ibr - Snowflake®)</h1>
+              <p class="mt-2 text-center text-extralight">Anti Aging To Make Skin Younger And Brighter</p>
             </div>
           </div>
         </div>

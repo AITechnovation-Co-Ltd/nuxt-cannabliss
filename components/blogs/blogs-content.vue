@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col px-8 sm:px-12 lg:px-16 xl:px-20 2xl:px-32">
+  <div class="w-full flex flex-col mt-16 px-8 sm:px-12 lg:px-16 xl:px-20 2xl:px-32">
 
     <!-- Content -->
     <div class="w-full flex flex-col items-center">
@@ -8,8 +8,8 @@
         <div class="w-full flex flex-col" v-for="(data, i) in blogcard" :key="`blog-${i}`">
           <div v-if="!load_more ? i < 4 : i >= 0">
             <img :src="data.url" class="rounded-3xl" :class="{ 'sm:mt-16 xl:mt-24': i % 2 != 0 }">
-            <p class="my-4 text-lg font-medium">Sed Ut Perspiciatis Unde Ommis lste Natus Error Sit</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis odit saepe modi fugit aut
+            <p class="my-4 text-lg font-normal">Sed Ut Perspiciatis Unde Ommis lste Natus Error Sit</p>
+            <p class="text-sm font-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis odit saepe modi fugit aut
               officiis animi nesciunt repellat molestias dolor laborum tempore deleniti sed provident quae natus,
               voluptates consequatur?</p>
             <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="mt-8 border-quaternary">View

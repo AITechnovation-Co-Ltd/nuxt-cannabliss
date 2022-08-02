@@ -3,19 +3,27 @@
     <!-- -->
     <div class="w-full flex flex-col lg:flex-row justify-center items-center">
       <!-- Details -->
-      <div class="w-full sm:w-11/12 xlw-1/2 pr-4">
-        <p class="my-4 text-4xl text-primary thai">ต้านการอักเสบของสิว</p>
-        <p class="pl-2 font-medium text-quaternary border-l-4 border-primary text-xl 2xl:text-2xl thai">การทาครีม CBD
+      <div class="w-full sm:w-11/12 xl:w-1/2 pr-4">
+        <p class="my-4 text-4xl text-primary thai font-thin">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-extralight">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-light">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-normal">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-medium">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-semibold">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-bold">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-extrabold">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-black">ต้านการอักเสบของสิว</p>
+        <p class="pl-2 font-medium text-quaternary border-l-4 border-primary text-xl thai font-black">การทาครีม CBD
           โดยไม่มีส่วนผสมของ THC
           เป็นทางเลือกที่
           ปลอดภัยและมีประสิทธิภาพ ไม่มีผลข้างเคียง พัฒนาคุณภาพชีวิต
           ของผู้ป่วยที่มีปัญหาผิวพรรณ โดยเฉพาะด้านการอักเสบ เช่น สิว</p>
-        <p class="my-4 text-quaternary text-xl 2xl:text-2xl thai">การทา CBD
+        <p class="my-4 text-quaternary text-xl thai font-black">การทา CBD
           เฉพาะที่อาจมีประโยชน์สำหรับความผิดปรกติทางผิวหนังหลายอาการ
           ซึ่งรวมถึง
           สิวอักเสบ ภูมิแพ้ผิวหนัง เส้นขนที่มากผิดปกติและยับยั้งก่อนเกิดเป็นเนื้อร้ายบางชนิด</p>
-        <p class="text-quaternary text-xl 2xl:text-2xl thai">
-          ประสิทธิผล<br>กระบวนการต้านสิวเกิดขึ้นโดยการปรับการทำงานของเซลล์ซีโบไซต์ภายในต่อมไขมัน
+        <p class="text-quaternary text-xl thai font-black"><span class="thai text-2xl">
+          ประสิทธิผล</span><br>กระบวนการต้านสิวเกิดขึ้นโดยการปรับการทำงานของเซลล์ซีโบไซต์ภายในต่อมไขมัน
           ด้วยCBD เซลล์ซีโบไซต์จะถูกขัดขวางไม่ให้ส่งสัญญานไปยังต่อมให้ผลิตไขมันผิวหนังมากเกิน
           ไป CBD จะไปหยุดการเพิ่มจำนวนของเซลล์ซีโบไซต๊ แต่ไม่ทำให้เซลล์ตาย และจะให้ฤทธิ์ต้าน
           การอักเสบที่มีศักยภาพแม้ในบริเวณที่มีสารก่อการอักเสบรุนแรงที่ทำให้เกิดสิว ดังนั้น CBD

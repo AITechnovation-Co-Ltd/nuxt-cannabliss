@@ -2,22 +2,22 @@
     <div class="w-screen bg-secondary scroll-smooth">
         <Navbar />
         <div class="w-full relative" v-for="(item, i) in menus" :key="`banner-${i}`">
-            <img v-if="route_name == item.route || route_name == item.sub_routes" class="w-full bg z-10"
+            <img v-if="route_name == item.route || route_name == item.sub_routes" class="w-full bg mb-20 z-10"
                 :src="item.src">
             <div v-if="route_name == item.route || route_name == item.sub_routes" class="content flex z-20">
-                <h1 class="text-5xl 2xl:text-7xl text-primary">{{ item.label }}</h1>
+                <h1 class="text-5xl 3xl:text-6xl text-primary">{{ item.label }}</h1>
             </div>
         </div>
-        <div v-if="route_name != 'product'" class="flex items-center px-3 mt-8 text-quaternary px-4 sm:px-12 lg:px-16 xl:px-20 2xl:px-32">
-            <base-icon icon="angle-left" viewBox="0 0 24 24" size="18" />
-            <nuxt-link to="/" class="hover:underline mr-2">Home |
+        <div v-if="route_name != 'product'" class="flex items-center px-3 mt-20 text-quaternary font-extralight text-sm px-4 sm:px-12 lg:px-16 xl:px-20 3xl:px-32">
+            <base-icon icon="angle-left" viewBox="0 0 24 24" size="15" />&nbsp;&nbsp;
+            <nuxt-link to="/" class="hover:underline mr-2 ">Home&nbsp;&nbsp;|&nbsp;
             </nuxt-link>
             <div v-for="(item, i) in menus" :key="`menus-${i}`" class="flex">
                 <p v-if="route_name == item.route || route_name == item.sub_routes"
                     @click="$router.push(`${item.path}`)" class="mr-2 cursor-pointer hover:underline"
-                    :class="{ 'font-bold ': route_name == item.route }">{{ item.label }}</p>
+                    :class="{ 'font-normal ': route_name == item.route }">{{ item.label }}</p>
                 <p v-if="route_name == item.sub_routes" @click="$router.push(`${item.path}`)">| <span
-                        class="font-bold">{{breadcrumb}}</span></p>
+                        class="font-normal">{{breadcrumb}}</span></p>
             </div>
         </div>
         <div class="w-full">

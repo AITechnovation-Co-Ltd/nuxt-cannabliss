@@ -1,44 +1,55 @@
 <template>
-    <div class="w-full flex flex-col justify-center px-4 md:px-8 lg:px-12 xl:px-24 2xl:px-36">
+    <div class="w-full flex flex-col justify-center px-4 md:px-8 lg:px-12 xl:px-24 3xl:px-36">
         <div class="w-full flex justify-end ">
-            <h1 v-show="type == 'all'" class="w-full lg:w-9/12 lg:-mr-10 text-4xl text-primary">All Products</h1>
-            <h1 v-show="type != 'all'" class="w-full lg:w-9/12 lg:-mr-10 text-4xl text-primary">All Products {{ ": " +
+            <div class="w-full lg:w-3/12 flex font-extralight text-sm text-quaternary items-center">
+                <base-icon icon="angle-left" viewBox="0 0 24 24" size="18" />&nbsp;
+                <nuxt-link to="/" class="hover:underline">Home</nuxt-link>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <p>Product</p>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <p class="font-normal">{{ type }}</p>
+            </div>
+            <div class="w-full ml-10 lg:w-9/12">
+                <h1 class="w-full text-4xl font-extralight text-primary">{{ type }}</h1>
+                <!-- <h1 v-show="type != 'all'" class="w-full lg:w-9/12 lg:-mr-10 text-4xl text-primary">All Products {{ ": " +
                     type
-            }}</h1>
+            }}</h1> -->
+            </div>
         </div>
         <!-- Categories -->
         <div class="w-full flex flex-col lg:flex-row items-start">
             <!-- List Categories -->
             <div class="w-full lg:w-3/12 mt-0 sm:mt-10">
-                <h1 class="text-2xl sm:text-3xl text-primary">Categories</h1>
+                <h1 class="text-xl text-primary">Categories</h1>
                 <hr class="w-full my-3 sm:my-6 border-b border-gray-200 flex flex-col justify-center items-center" />
                 <div>
                     <ul
-                        class="decoration-none text-primary text-lg grid grid-cols-3 md:grid-cols-6 lg:grid-cols-1 gap-2 md:gap-x-2 lg:gap-y-4">
+                        class="decoration-none text-primary font-extralight text-sm grid grid-cols-3 md:grid-cols-6 lg:grid-cols-1 gap-2 md:gap-x-2 lg:gap-y-4">
                         <li class="flex items-center justify-center lg:justify-start"
                             @click="filterType('Best Seller')">
-                            <span class="hover:font-bold hover:cursor-pointer"
-                                :class="{ 'font-bold': type == 'Best Seller' }">Best Seller</span>
+                            <span class="hover:font-normal hover:cursor-pointer"
+                                :class="{ 'font-normal': type == 'Best Seller' }">Best Seller</span>
                         </li>
                         <li class="flex items-center justify-center lg:justify-start" @click="filterType('New In')">
-                            <span class="hover:font-bold hover:cursor-pointer"
-                                :class="{ 'font-bold': type == 'New In' }">New In</span>
+                            <span class="hover:font-normal hover:cursor-pointer"
+                                :class="{ 'font-normal': type == 'New In' }">New In</span>
                         </li>
-                        <li class="flex items-center justify-center lg:justify-start" @click="filterType('all')">
-                            <span class="hover:font-bold hover:cursor-pointer"
-                                :class="{ 'font-bold': type == 'all' }">All Products</span>
+                        <li class="flex items-center justify-center lg:justify-start"
+                            @click="filterType('All Products')">
+                            <span class="hover:font-normal hover:cursor-pointer"
+                                :class="{ 'font-normal': type == 'All Products' }">All Products</span>
                         </li>
                         <li class="flex items-center justify-center lg:justify-start" @click="filterType('Hair')">
-                            <span class="hover:font-bold hover:cursor-pointer"
-                                :class="{ 'font-bold': type == 'Hair' }">Hair</span>
+                            <span class="hover:font-normal hover:cursor-pointer"
+                                :class="{ 'font-normal': type == 'Hair' }">Hair</span>
                         </li>
                         <li class="flex items-center justify-center lg:justify-start" @click="filterType('Face')">
-                            <span class="hover:font-bold hover:cursor-pointer"
-                                :class="{ 'font-bold': type == 'Face' }">Face</span>
+                            <span class="hover:font-normal hover:cursor-pointer"
+                                :class="{ 'font-normal': type == 'Face' }">Face</span>
                         </li>
                         <li class="flex items-center justify-center lg:justify-start" @click="filterType('Body')">
-                            <span class="hover:font-bold hover:cursor-pointer"
-                                :class="{ 'font-bold': type == 'Body' }">Body</span>
+                            <span class="hover:font-normal hover:cursor-pointer"
+                                :class="{ 'font-normal': type == 'Body' }">Body</span>
                         </li>
                     </ul>
                 </div>
@@ -48,24 +59,24 @@
             <div class="w-full lg:w-9/12 lg:ml-10">
 
                 <!-- Sort by -->
-                <div class="w-full py-4 mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center mx-2 sm:mx-4">
-                        <p class="text-white">Items per page</p>
-                        <select class="text-quaternary rounded-xl mr-1 sm:mx-4" v-model="item_per_page">
+                <div class="w-full py-3 mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center mx-2">
+                        <p class="text-xs text-white">Items per page</p>
+                        <select class="h-8 w-16 text-xs text-quaternary rounded-xl mr-1 sm:mx-4" v-model="item_per_page">
                             <option selected value=6>6</option>
                             <option value=12>12</option>
                             <option value=18>18</option>
                             <option value=24>24</option>
                         </select>
                     </div>
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center ml-2 sm:ml-0 mx-2 sm:mx-4">
-                        <p class="text-white">Sort by</p>
-                        <select class="text-quaternary rounded-xl mr-1 sm:mx-4">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center ml-2 sm:ml-0 mx-2">
+                        <p class="text-xs text-white">Sort by</p>
+                        <select class="h-8 w-32 py-px text-xs text-quaternary rounded-xl mr-1 sm:mx-2">
                             <option></option>
                             <option value="">A-Z</option>
                             <option value="">Z-A</option>
                             <option value="">Newest</option>
-                            <option value="">Best Selling</option>
+                            <option selected value="">Best Selling</option>
                             <option value="">Price(Low to hight)</option>
                             <option value="">Price(hight to low)</option>
                         </select>
@@ -84,16 +95,17 @@
                                 <span v-if="product.isNew"
                                     class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
                                 <div @click="liked(index)" class="absolute top-8 right-8 cursor-pointer">
-                                    <base-icon icon='heartactive' viewBox="0 0 30 41" size="50" :color="product.islike ? '#f05252' : '#5E5F5F'" />
+                                    <base-icon icon='heartactive' viewBox="0 0 30 41" size="50"
+                                        :color="product.islike ? '#f05252' : '#5E5F5F'" />
                                 </div>
-                                <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
+                                <p class="absolute bottom-8 right-8 text-sm font-thin text-quaternary">{{ product.quantity }}</p>
                             </div>
-                            <div class="mb-4 text-quaternary text-xl">
-                                <p class="text-sm sm:text-base">{{ product.type }}</p>
-                                <p class="text-lg sm:text-xl xl:text-2xl font-medium">{{ product.name.slice(0, 50)
+                            <div class="my-4 mx-2 text-quaternary text-xl">
+                                <p class="mt-2 text-sm capitalize">{{ product.type }}</p>
+                                <p class="text-lg font-medium">{{ product.name.slice(0, 40)
                                 }}
                                 </p>
-                                <p class="my-4 text-base sm:text-lg">{{ product.detail.slice(0, 80) }}..</p>
+                                <p class="mb-4 mt-2 text-base font-extralight">{{ product.detail.slice(0, 70) }}..</p>
                                 <base-button @click="$router.push(`/product/details/${product.no}`)"
                                     class="border-quaternary">View more
                                 </base-button>
@@ -101,7 +113,7 @@
                         </template>
                     </div>
                 </div>
-                <div v-else class="w-full py-12 mt-12 bg-white text-center text-2xl text-primary">No Products</div>
+                <div v-else class="w-full py-12 mt-12 bg-white text-center font-light text-2xl text-primary">No Products</div>
                 <base-pages v-if="list_products.length != 0" class="mt-12" @change="change" :page="page"
                     :total_pages="total_p" :limit="7"></base-pages>
             </div>
@@ -118,7 +130,7 @@ export default {
             page: 1,
             total_p: 1,
             products,
-            type: 'all',
+            type: 'All Products',
             xxl: null,
             item_per_page: 6,
         };
@@ -127,7 +139,7 @@ export default {
     computed: {
         list_products() {
             let list = []
-            if (this.type === 'all') {
+            if (this.type === 'All Products') {
                 list = this.products
             } else {
                 list = this.products.filter((e) => e.type === this.type)

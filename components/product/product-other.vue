@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full px-8 lg:px-12 xl:px-20 2xl:px-32">
-    <h1 class="text-5xl text-primary text-center font-medium my-12">You may also like</h1>
-    <div class="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4">
+  <div class="w-full px-8 lg:px-12 xl:px-20 3xl:px-32">
+    <h1 class="text-5xl text-primary text-center font-light my-12">You may also like</h1>
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 ">
       <div class="w-full " v-for="(product, index) in products" :key="index">
         <template v-if="index < page_screen * page && index >= page_screen * (page - 1)">
           <div class="relative mx-2">
@@ -12,12 +12,12 @@
             <div @click="liked(index)" class="absolute top-8 right-8 cursor-pointer">
               <base-icon icon='heartactive' viewBox="0 0 30 41" size="50" :color="product.islike ? '#f05252' : '#5E5F5F'" />
             </div>
-            <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
+            <p class="absolute bottom-8 right-8 text-sm font-extralight">{{ product.quantity }}</p>
           </div>
           <div class="text-quaternary text-xl mx-2">
-            <p>{{ product.type }}</p>
-            <p class="text-xl xl:text-2xl font-medium">{{ product.name.slice(0, 50) }}</p>
-            <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
+            <p class="mt-2 text-sm capitalize">{{ product.type }}</p>
+            <p class="text-lg font-medium">{{ product.name.slice(0, 50) }}</p>
+            <p class="mb-4 mt-2 text-base font-extralight">{{ product.detail.slice(0, 80) }}...</p>
             <base-button @click="$router.push(`/product/details/${product.no}`), scrollToTop">View more
             </base-button>
           </div>
@@ -54,10 +54,10 @@ export default {
   computed: {
     page_screen() {
       let item_per_page = 4
-      if (this.screen <= 1536 && this.screen > 1440) {
+      if ( this.screen > 1439) {
         item_per_page = 4
       }
-      else if (this.screen <= 1440 && this.screen > 1280) {
+      else if (this.screen <= 1439 && this.screen > 1280) {
         item_per_page = 3
       }
       else if (this.screen <= 1280 && this.screen > 768) {
