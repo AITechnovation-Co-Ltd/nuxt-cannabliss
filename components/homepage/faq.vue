@@ -1,26 +1,26 @@
 <template>
-  <div class="w-full flex flex-col justify-center mt-4 sm:mt-12 px-8 lg:px-12 xl:px-20 2xl:px-32">
+  <div class="w-full flex flex-col justify-center mt-4 sm:mt-12 px-8 lg:px-12 xl:px-20 3xl:px-32">
     <p class="text-primary text-5xl">FAQ</p>
     <div class="w-full flex flex-col lg:flex-row items-center my-6">
       <!-- Dropdown FQA -->
-      <div class="w-full lg:w-1/2 flex flex-col mr-0 lg:mr-8">
+      <div class="w-full lg:w-1/2 flex flex-col mr-0 lg:mr-36">
 
         <!-- FQA 1-->
         <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen" openUp="toggle">
           <div slot="toggle" class="w-full flex items-center justify-between">
-            <p align="start" class="text-base xl:text-xl 2xl:text-2xl font-medium text-quaternary my-2"
+            <p align="start" class="text-lg font-normal text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data }">
-              Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium</p>
+              Sed Ut Perspiciatis Unde Omnis Iste Natus <br> Error Sit Voluptatem Accusantium</p>
 
             <base-icon icon="dropdown" :class="{
               'transform rotate-180 duration-200': dropdown_data,
               'transform rotate-0 duration-200': !dropdown_data,
-            }" viewBox="0 0 233 168" width="40" color='#5E5F5F' class="mr-4" />
+            }" viewBox="0 0 233 168" width="30" color='#5E5F5F' class="mr-4" />
 
           </div>
           <!-- Details -->
           <base-dropdown-item>
-            <p class="w-11/12 text-sm xl:text-xl text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing
+            <p class="w-11/12 text-sm font-extralight text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing
               elit. Harum sequi
               provident optio magnam, commodi
               corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
@@ -32,19 +32,19 @@
         <!-- FAQ 2-->
         <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen2">
           <div slot="toggle" class="w-full flex items-center justify-between">
-            <p align="start" class="text-base xl:text-xl 2xl:text-2xl font-medium text-quaternary my-2"
+            <p align="start" class="text-lg font-normal text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data2 }">
-              Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium</p>
+              Sed Ut Perspiciatis Unde Omnis Iste Natus <br> Error Sit Voluptatem Accusantium</p>
 
             <base-icon icon="dropdown" :class="{
               'transform rotate-180 duration-200': dropdown_data2,
               'transform rotate-0 duration-200': !dropdown_data2,
-            }" viewBox="0 0 233 168" width="40" color='#5E5F5F' class="mr-4" />
+            }" viewBox="0 0 233 168" width="30" color='#5E5F5F' class="mr-4" />
 
           </div>
           <!-- Details -->
           <base-dropdown-item>
-            <p class="w-11/12 text-sm xl:text-xl text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing
+            <p class="w-11/12 text-sm font-extralight text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing
               elit. Harum sequi
               provident optio magnam, commodi
               corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
@@ -56,19 +56,19 @@
         <!-- FAQ 3 -->
         <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen3">
           <div slot="toggle" class="w-full flex items-center justify-between">
-            <p align="start" class="text-base xl:text-xl 2xl:text-2xl font-medium text-quaternary my-2"
+            <p align="start" class="text-lg font-normal text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data3 }">
-              Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium</p>
+              Sed Ut Perspiciatis Unde Omnis Iste Natus <br> Error Sit Voluptatem Accusantium</p>
 
             <base-icon icon="dropdown" :class="{
               'transform rotate-180 duration-200': dropdown_data3,
               'transform rotate-0 duration-200': !dropdown_data3,
-            }" viewBox="0 0 233 168" width="40" color='#5E5F5F' class="mr-4" />
+            }" viewBox="0 0 233 168" width="30" color='#5E5F5F' class="mr-4" />
 
           </div>
           <!-- Details -->
           <base-dropdown-item>
-            <p class="w-11/12 text-sm xl:text-xl text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing
+            <p class="w-11/12 text-sm font-extralight text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing
               elit. Harum sequi
               provident optio magnam, commodi
               corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
@@ -80,17 +80,17 @@
         <!-- FAQ 4 -->
         <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen4">
           <div slot="toggle" class="w-full flex items-center justify-between">
-            <p align="start" class="text-base xl:text-xl 2xl:text-2xl font-medium text-quaternary my-2"
+            <p align="start" class="text-lg font-normal text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data4 }">
-              Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium</p>
+              Sed Ut Perspiciatis Unde Omnis Iste Natus <br> Error Sit Voluptatem Accusantium</p>
             <base-icon icon="dropdown" :class="{
               'transform rotate-180 duration-200': dropdown_data4,
               'transform rotate-0 duration-200': !dropdown_data4,
-            }" viewBox="0 0 233 168" width="40" color='#5E5F5F' class="mr-4" />
+            }" viewBox="0 0 233 168" width="30" color='#5E5F5F' class="mr-4" />
           </div>
           <!-- Details -->
           <base-dropdown-item>
-            <p class="w-11/12 text-sm xl:text-xl text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing
+            <p class="w-11/12 text-sm font-extralight text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing
               elit. Harum sequi
               provident optio magnam, commodi
               corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
@@ -105,21 +105,21 @@
       </div>
     </div>
 
-    <div class="w-full scale-100 sm:scale-90 md:scale-100 mt-0 sm:mt-28 mb-28 flex flex-wrap justify-around 2xl:justify-center text-quaternary 2xl:space-x-56">
+    <div class="w-full my-20 flex flex-wrap justify-evenly text-quaternary">
       <div class="flex flex-col mx-4 sm:mx-0 items-center ">
-        <base-icon icon="heart" viewBox="0 0 24 24" size="90" class="mb-8" />
-        <p class="text-3xl mb-4 font-medium">24 Services</p>
-        <p class="text-xl">Consultations via email</p>
+        <base-icon icon="heart" viewBox="0 0 24 24" size="60" class="mb-4" />
+        <p class="text-lg font-normal">24 Services</p>
+        <p class="text-sm font-extralight">Consultations via email</p>
       </div>
       <div class="mt-8 sm:mt-0 flex flex-col mx-4 sm:mx-0 items-center ">
-        <base-icon icon="heart" viewBox="0 0 24 24" size="90" class="mb-8" />
-        <p class="text-3xl mb-4 font-medium">30 Days Return</p>
-        <p class="text-xl">You have to 30 days to return</p>
+        <base-icon icon="heart" viewBox="0 0 24 24" size="60" class="mb-4" />
+        <p class="text-lg font-normal">30 Days Return</p>
+        <p class="text-sm font-extralight">You have to 30 days to return</p>
       </div>
       <div class="mt-8 md:mt-0 flex flex-col mx-4 sm:mx-0 items-center ">
-        <base-icon icon="heart" viewBox="0 0 24 24" size="90" class="mb-8" />
-        <p class="text-3xl mb-4 font-medium">Fast Delivery</p>
-        <p class="text-xl">On order above $ 50</p>
+        <base-icon icon="heart" viewBox="0 0 24 24" size="60" class="mb-4" />
+        <p class="text-lg font-normal">Fast Delivery</p>
+        <p class="text-sm font-extralight">On order above $ 50</p>
       </div>
     </div>
   </div>

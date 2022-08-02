@@ -1,0 +1,41 @@
+steps:
+  # Build the container image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-f",
+        "Dockerfile.dev",
+        "-t",
+        "asia.gcr.io/$PROJECT_ID/nuxt-cnb:develop",
+        ".",
+      ]
+
+  # Push the container image to Container Registry
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "asia.gcr.io/$PROJECT_ID/nuxt-cnb:develop"]
+
+  # Deploy container image to Cloud Run
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gcloud
+    args:
+      - "run"
+      - "deploy"
+      - "nuxt-cnb-dev"
+      - "--image"
+      - "asia.gcr.io/$PROJECT_ID/nuxt-cnb:develop"
+      - "--memory"
+      - "1Gi"
+      - "--region"
+      - "asia-southeast1"
+      - "--platform"
+      - "managed"
+      - "--port"
+      - "3000"
+      - "--allow-unauthenticated"
+    env:
+      - "CLOUDSDK_CORE_PROJECT=ai-technovation"
+      - "CLOUDSDK_COMPUTE_ZONE=asia-southeast1-a"
+images:
+  - "asia.gcr.io/$PROJECT_ID/nuxt-cnb:develop"
+timeout: 1200s
