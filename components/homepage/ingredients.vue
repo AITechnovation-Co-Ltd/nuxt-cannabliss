@@ -1,15 +1,15 @@
 <template>
-  <div class="w-full mt-20 text-quaternary flex flex-col lg:flex-row items-center px-8 lg:px-12 xl:px-20 2xl:px-32">
+  <div class="w-full mt-20 text-quaternary flex flex-col lg:flex-row items-center px-8 lg:px-12 xl:px-20">
     <div class="w-full sm:w-11/12 lg:w-2/5">
       <h1 class="text-3xl xl:text-4xl 2xl:text-5xl text-primary">Ingredients</h1>
       <div class="mt-4 lg:mt-8 flex items-center">
         <div class="vl bg-primary"></div>
-        <p class="text-lg xl:text-xl 2xl:text-2xl ml-2 lg:ml-4">By having a hero ingredient , there's an opportunity to get
+        <p class="content text-lg ml-2 lg:ml-4">By having a hero ingredient , there's an opportunity to get
           into the SKINCARE
           TREND in
           Thailand </p>
       </div>
-      <p class="mt-3 lg:mt-8 text-base xl:text-xl 2xl:text-2xl">Leucojum aestivum bulb extract ( IBR - Snowflake ) is part of
+      <p class="mt-3 lg:mt-8 text-sm font-extralight">Leucojum aestivum bulb extract ( IBR - Snowflake ) is part of
         the anti aging
         technology
         of IBR that captures and transfers flower bulbs dormancy and rejuvenation to skin . Flower bulbs go
@@ -18,7 +18,7 @@
       </p>
       <BaseButton class="mt-4 lg:mt-8" @click="$router.push(`/ingredients`)">View more</BaseButton>
     </div>
-    <div class="w-full sm:w-11/12 lg:w-3/5 mt-4 lg:mt-0 ml-3 lg:ml-8 lg:ml-12 xl:ml-16 flex">
+    <div class="w-full sm:w-11/12 lg:w-3/5 mt-4 lg:mt-0 ml-3 flex">
       <div class="w-1/2 flex flex-col">
         <img class="rounded-3xl" src="~/static/images/IMG_01home/pages_01home/IMG_1290.jpg" alt="">
       </div>
@@ -58,14 +58,16 @@ export default {
 
 <style scoped>
 .vl {
-  height: 120px;
-  width: 10px;
+  height: 60px;
+  width: 4px;
 }
 
 .bg {
   height: 700px;
 }
-
+.content {
+  width: 470px;
+}
 @media (max-width: 1023px) {
 .vl {
   height: 60px;

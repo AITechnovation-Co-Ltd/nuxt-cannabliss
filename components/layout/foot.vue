@@ -9,12 +9,12 @@
             <img class="h-32" src="~/static/logo/Logo-CANABLISS.png" alt="">
           </nuxt-link>
         </div>
-        <div class="w-full lg:w-3/4 grid grid-cols-2 sm:flex justify-around content">
+        <div class="w-full lg:w-3/4 grid text-sm grid-cols-2 sm:flex justify-around content">
           <!-- product -->
-          <div>
+          <div class="font-light">
             <ul>
               <li class="mb-4 mt-8">
-                <p @click="$router.push(`/product`)" class="hover:underline font-semibold">Product</p>
+                <p @click="$router.push(`/product`)" class="hover:underline">Product</p>
               </li>
               <li class="mb-4">
                 <p @click="filter('Hair')" class="hover:underline">Hair</p>
@@ -32,7 +32,7 @@
           <div>
             <ul>
               <li class="mb-4 mt-8">
-                <nuxt-link to="/" class="hover:underline font-semibold">Home</nuxt-link>
+                <nuxt-link to="/" class="hover:underline">Home</nuxt-link>
               </li>
               <li class="mb-4">
                 <nuxt-link to="/ingredients" class="hover:underline ">Ingredients</nuxt-link>
@@ -51,7 +51,7 @@
 
           <!-- contacts -->
           <div class="contact">
-            <h2 class="mb-6 mt-6 text-lg font-semibold">Let's talk</h2>
+            <h2 class="mb-3 mt-6 text-lg font-normal">Let's talk</h2>
             <ul>
               <li class="mb-4">
                 <p>T: +391 (0)35 2568 4593</p>
