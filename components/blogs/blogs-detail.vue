@@ -33,7 +33,7 @@
       <!-- Picture -->
       <div class="w-full sm:w-11/12 xl:w-1/2 mt-8 xl:mt-0 h-full relative">
         <div class="w-full h-full flex items-start justify-center">
-          <img src="@/static/images/IMG_03blogs_details/shutterstock.jpg" class="rounded-3xl w-11/12 mt-8 lg:mt-16 z-20"
+          <img src="@/static/images/IMG_03blogs_details/shutterstock.jpg" class="rounded-3xl w-11/12 mt-8 z-20"
             alt="">
         </div>
         <img src="~/static/images/IMG_03ingredients/bg-blue2.png" alt=""
@@ -65,10 +65,10 @@
     <!-- Benefis of cbd -->
     <div class="w-full flex flex-col items-center">
       <p class="my-6 text-3xl sm:text-4xl text-primary">Benefits Of CBD For Acne</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-quaternary">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="flex items-center" v-for="(data, i) in cbd" :key="i">
           <img :src="data.url" class="h-24 w-24">
-          <p class="ml-2 font-medium">{{ data.benefits }}</p>
+          <p class="ml-2 font-normal">{{ data.benefits }}</p>
         </div>
       </div>
     </div>

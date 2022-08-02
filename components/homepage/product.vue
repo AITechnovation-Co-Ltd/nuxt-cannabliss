@@ -1,34 +1,34 @@
 <template>
-  <div class="w-full mt-20 px-8 lg:px-12 xl:px-20">
+  <div class="w-full mt-20 px-4 lg:px-12 xl:px-20 3xl:px-36">
     <div class="flex flex-col sm:flex-row justify-between items-start">
-      <h1 class="text-5xl mb-6 sm:mb-0 md:text-5xl text-primary">Products</h1>
+      <h1 class="text-4xl sm:text-5xl mb-2 sm:mb-0 md:text-5xl text-primary">Products</h1>
       <BaseButton @click="$router.push(`/product`)">View all</BaseButton>
     </div>
     <div class="w-full columns-1 lg:flex mt-0 sm:mt-16">
       <div class="hidden sm:flex w-full lg:w-1/6 mr-6">
         <ul
-          class="w-full flex justify-around lg:justify-start lg:flex-col decorate-none text-xl text-primary font-extralight">
+          class="w-full flex justify-around lg:justify-start lg:flex-col decorate-none text-lg lg:text-xl text-primary font-extralight">
           <li @click="filterType('all')">
             <span class="flex items-center lg:my-4 hover:cursor-pointer"
               :class="{ 'font-normal': type == 'all' }">All<div v-if="type == 'all'"
-                class="w-16 ml-2 h-0.5 bg-primary" :class="{ 'hidden': xl }"></div>
+                class="w-16 ml-2 h-0.5 bg-primary hidden lg:block" :class="{ 'hidden': xl }"></div>
             </span>
           </li>
           <li @click="filterType('hair')">
             <span class="flex items-center lg:my-4 hover:cursor-pointer"
-              :class="{ 'font-normal': type == 'hair' }">Hair<div v-if="type == 'hair'" class="w-16 ml-2 h-0.5 bg-primary"
+              :class="{ 'font-normal': type == 'hair' }">Hair<div v-if="type == 'hair'" class="w-16 ml-2 h-0.5 bg-primary hidden lg:block"
                 :class="{ 'hidden': xl }"></div>
             </span>
           </li>
           <li @click="filterType('face')">
             <span class="flex items-center lg:my-4 hover:cursor-pointer"
-              :class="{ 'font-normal': type == 'face' }">Face<div v-if="type == 'face'" class="w-16 ml-2 h-0.5 bg-primary"
+              :class="{ 'font-normal': type == 'face' }">Face<div v-if="type == 'face'" class="w-16 ml-2 h-0.5 bg-primary hidden lg:block"
                 :class="{ 'hidden': xl }"></div>
             </span>
           </li>
           <li @click="filterType('body')">
             <span class="flex items-center lg:my-4 hover:cursor-pointer"
-              :class="{ 'font-normal': type == 'body' }">Body<div v-if="type == 'body'" class="w-16 ml-2 h-0.5 bg-primary"
+              :class="{ 'font-normal': type == 'body' }">Body<div v-if="type == 'body'" class="w-16 ml-2 h-0.5 bg-primary hidden lg:block"
                 :class="{ 'hidden': xl }"></div>
             </span>
           </li>
@@ -38,7 +38,7 @@
 
         <!-- Product card -->
         <div v-if="list_products.length != 0"
-          class="w-full mt-12 lg:mt-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 ">
+          class="w-full mt-6 sm:mt-12 lg:mt-0 grid grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 ">
           <div class="w-full" v-for="(product, index) in list_products" :key="index">
             <template v-if="index < page_screen * page && index >= page_screen * (page - 1)">
               <div class="relative mx-2">
@@ -46,14 +46,14 @@
                 <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
                 <span v-if="product.isNew"
                   class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
-                <div @click="liked(index)" class="absolute top-8 right-8 cursor-pointer">
+                <div @click="liked(index)" class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer">
                   <base-icon icon='heartactive' viewBox="0 0 30 41" size="50" :color="product.islike ? '#f05252' : '#5E5F5F'" />
                 </div>
-                <p class="absolute bottom-8 right-8 text-sm font-thin text-quaternary">{{ product.quantity }}</p>
+                <p class="absolute bottom-2 right-2 sm:bottom-8 sm:right-8 text-sm font-thin text-quaternary">{{ product.quantity }}</p>
               </div>
               <div class="my-4 mx-2 text-quaternary text-xl">
                 <p class="mt-2 text-sm capitalize">{{ product.type }}</p>
-                <p class="text-lg font-medium">{{ product.name.slice(0, 50) }}</p>
+                <p class="text-base sm:text-lg font-medium">{{ product.name.slice(0, 50) }}</p>
                 <p class="mb-4 mt-2 text-base font-thin">{{ product.detail.slice(0, 80) }}...</p>
                 <base-button @click="$router.push(`/product/details/${product.no}`)" class="border-quaternary">
                   View more
@@ -105,11 +105,8 @@ export default {
       else if (this.screen <= 1440 && this.screen > 1280) {
         item_per_page = 3
       }
-      else if (this.screen <= 1280 && this.screen > 768) {
+      else if (this.screen <= 1280) {
         item_per_page = 2
-      }
-      else if (this.screen <= 768) {
-        item_per_page = 1
       }
       return item_per_page
     },

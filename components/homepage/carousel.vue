@@ -7,11 +7,11 @@
           <div class="w-full bg3 flex-col-reverse sm:flex-row mb-32 flex h-full items-center justify-between">
             <div class="w-full sm:w-1/2 h-full flex items-center justify-center">
               <div class="flex h-full flex-col items-start justify-center">
-                <h1 class="text-3xl font-light text-quaternary">Canabliss Oasiz</h1>
-                <h2 class="mt-2 text-3xl 2xl:text-5xl text-primary font-normal">Red Fruit Overnight Mask</h2>
+                <h1 class="text-2xl sm:text-3xl font-light text-quaternary">Canabliss Oasiz</h1>
+                <h2 class="mt-2 text-2xl sm:text-3xl 2xl:text-5xl text-primary font-normal">Red Fruit Overnight Mask</h2>
                 <div class="mt-4 xl:mt-8 w-full flex items-center">
                   <div class="h-20 w-1 bg-primary mr-4"></div>
-                  <p class="content text-lg font-extralight text-quaternary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua .</p>
+                  <p class="content text-sm sm:text-lg font-extralight text-quaternary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua .</p>
                 </div>
                 <div class="w-full flex items-center mt-4 md:mt-10 ml-4">
                   <div class="h-16 w-16 sm:h-20 sm:w-20 mr-4 border-2 border-tertiary rounded-full flex items-center justify-center">
@@ -34,11 +34,11 @@
           <div class="w-full bg3 flex-col-reverse sm:flex-row mb-32 flex h-full items-center justify-between">
             <div class="w-full sm:w-1/2 h-full flex items-center justify-center">
               <div class="flex h-full flex-col items-start justify-center">
-                <h1 class="text-3xl font-light text-quaternary">Canabliss Oasiz</h1>
-                <h2 class="mt-2 text-3xl 2xl:text-5xl text-primary font-normal">Red Fruit Overnight Mask</h2>
+                <h1 class="text-2xl sm:text-3xl font-light text-quaternary">Canabliss Oasiz</h1>
+                <h2 class="mt-2 text-2xl sm:text-3xl 2xl:text-5xl text-primary font-normal">Red Fruit Overnight Mask</h2>
                 <div class="mt-4 xl:mt-8 w-full flex items-center">
                   <div class="h-20 w-1 bg-primary mr-4"></div>
-                  <p class="content text-lg font-extralight text-quaternary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua .</p>
+                  <p class="content text-sm sm:text-lg font-extralight text-quaternary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua .</p>
                 </div>
                 <div class="w-full flex items-center mt-4 md:mt-10 ml-4">
                   <div class="h-16 w-16 sm:h-20 sm:w-20 mr-4 border-2 border-tertiary rounded-full flex items-center justify-center">
@@ -61,11 +61,11 @@
           <div class="w-full bg3 flex-col-reverse sm:flex-row mb-32 flex h-full items-center justify-between">
             <div class="w-full sm:w-1/2 h-full flex items-center justify-center">
               <div class="flex h-full flex-col items-start justify-center">
-                <h1 class="text-3xl font-light text-quaternary">Canabliss Oasiz</h1>
-                <h2 class="mt-2 text-3xl 2xl:text-5xl text-primary font-normal">Red Fruit Overnight Mask</h2>
+                <h1 class="text-2xl sm:text-3xl font-light text-quaternary">Canabliss Oasiz</h1>
+                <h2 class="mt-2 text-2xl sm:text-3xl 2xl:text-5xl text-primary font-normal">Red Fruit Overnight Mask</h2>
                 <div class="mt-4 xl:mt-8 w-full flex items-center">
                   <div class="h-20 w-1 bg-primary mr-4"></div>
-                  <p class="content text-lg font-extralight text-quaternary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua .</p>
+                  <p class="content text-sm sm:text-lg font-extralight text-quaternary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua .</p>
                 </div>
                 <div class="w-full flex items-center mt-4 md:mt-10 ml-4">
                   <div class="h-16 w-16 sm:h-20 sm:w-20 mr-4 border-2 border-tertiary rounded-full flex items-center justify-center">
@@ -88,11 +88,11 @@
           <div class="w-full bg3 flex-col-reverse sm:flex-row mb-32 flex h-full items-center justify-between">
             <div class="w-full sm:w-1/2 h-full flex items-center justify-center">
               <div class="flex h-full flex-col items-start justify-center">
-                <h1 class="text-3xl font-light text-quaternary">Canabliss Oasiz</h1>
-                <h2 class="mt-2 text-3xl 2xl:text-5xl text-primary font-normal">Red Fruit Overnight Mask</h2>
+                <h1 class="text-2xl sm:text-3xl font-light text-quaternary">Canabliss Oasiz</h1>
+                <h2 class="mt-2 text-2xl sm:text-3xl 2xl:text-5xl text-primary font-normal">Red Fruit Overnight Mask</h2>
                 <div class="mt-4 xl:mt-8 w-full flex items-center">
                   <div class="h-20 w-1 bg-primary mr-4"></div>
-                  <p class="content text-lg font-extralight text-quaternary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua .</p>
+                  <p class="content text-sm sm:text-lg font-extralight text-quaternary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua .</p>
                 </div>
                 <div class="w-full flex items-center mt-4 md:mt-10 ml-4">
                   <div class="h-16 w-16 sm:h-20 sm:w-20 mr-4 border-2 border-tertiary rounded-full flex items-center justify-center">
@@ -177,6 +177,11 @@ export default {
 }
 .content{
   width: 480px;
+}
+@media (max-width: 1090px){
+  .content{
+  width: auto;
+}
 }
 @media (max-width: 1023px){
   .bg {
