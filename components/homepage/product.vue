@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full mt-20 px-8 lg:px-12 xl:px-20 2xl:px-32">
+  <div class="w-full mt-20 px-8 lg:px-12 xl:px-20">
     <div class="flex flex-col sm:flex-row justify-between items-start">
       <h1 class="text-5xl mb-6 sm:mb-0 md:text-5xl text-primary">Products</h1>
       <BaseButton @click="$router.push(`/product`)">View all</BaseButton>
@@ -7,28 +7,28 @@
     <div class="w-full columns-1 lg:flex mt-0 sm:mt-16">
       <div class="hidden sm:flex w-full lg:w-1/6 mr-6">
         <ul
-          class="w-full flex justify-around lg:justify-start lg:flex-col decorate-none text-xl text-primary font-light">
+          class="w-full flex justify-around lg:justify-start lg:flex-col decorate-none text-xl text-primary font-extralight">
           <li @click="filterType('all')">
-            <span class="flex justify-between items-center lg:my-2 hover:font-bold hover:cursor-pointer"
-              :class="{ 'font-bold': type == 'all' }">All Products <div v-if="type == 'all'"
-                class=" w-24 h-1 bg-primary" :class="{ 'hidden': xl }"></div>
+            <span class="flex items-center lg:my-4 hover:cursor-pointer"
+              :class="{ 'font-normal': type == 'all' }">All<div v-if="type == 'all'"
+                class="w-16 ml-2 h-0.5 bg-primary" :class="{ 'hidden': xl }"></div>
             </span>
           </li>
           <li @click="filterType('hair')">
-            <span class="flex justify-between items-center lg:my-2 hover:font-bold hover:cursor-pointer"
-              :class="{ 'font-bold': type == 'hair' }">Hair<div v-if="type == 'hair'" class="w-40 h-1 bg-primary"
+            <span class="flex items-center lg:my-4 hover:cursor-pointer"
+              :class="{ 'font-normal': type == 'hair' }">Hair<div v-if="type == 'hair'" class="w-16 ml-2 h-0.5 bg-primary"
                 :class="{ 'hidden': xl }"></div>
             </span>
           </li>
           <li @click="filterType('face')">
-            <span class="flex justify-between items-center lg:my-2 hover:font-bold hover:cursor-pointer"
-              :class="{ 'font-bold': type == 'face' }">Face<div v-if="type == 'face'" class="w-40 h-1 bg-primary"
+            <span class="flex items-center lg:my-4 hover:cursor-pointer"
+              :class="{ 'font-normal': type == 'face' }">Face<div v-if="type == 'face'" class="w-16 ml-2 h-0.5 bg-primary"
                 :class="{ 'hidden': xl }"></div>
             </span>
           </li>
           <li @click="filterType('body')">
-            <span class="flex justify-between items-center lg:my-2 hover:font-bold hover:cursor-pointer"
-              :class="{ 'font-bold': type == 'body' }">Body<div v-if="type == 'body'" class="w-40 h-1 bg-primary"
+            <span class="flex items-center lg:my-4 hover:cursor-pointer"
+              :class="{ 'font-normal': type == 'body' }">Body<div v-if="type == 'body'" class="w-16 ml-2 h-0.5 bg-primary"
                 :class="{ 'hidden': xl }"></div>
             </span>
           </li>
@@ -49,12 +49,12 @@
                 <div @click="liked(index)" class="absolute top-8 right-8 cursor-pointer">
                   <base-icon icon='heartactive' viewBox="0 0 30 41" size="50" :color="product.islike ? '#f05252' : '#5E5F5F'" />
                 </div>
-                <p class="absolute bottom-8 right-8">{{ product.quantity }}</p>
+                <p class="absolute bottom-8 right-8 text-sm font-thin text-quaternary">{{ product.quantity }}</p>
               </div>
-              <div class="mb-4 mx-2 text-quaternary text-xl">
-                <p class="mt-2">{{ product.type }}</p>
-                <p class="text-xl 2xl:text-2xl font-medium">{{ product.name.slice(0, 50) }}</p>
-                <p class="my-4">{{ product.detail.slice(0, 80) }}...</p>
+              <div class="my-4 mx-2 text-quaternary text-xl">
+                <p class="mt-2 text-sm capitalize">{{ product.type }}</p>
+                <p class="text-lg font-medium">{{ product.name.slice(0, 50) }}</p>
+                <p class="mb-4 mt-2 text-base font-thin">{{ product.detail.slice(0, 80) }}...</p>
                 <base-button @click="$router.push(`/product/details/${product.no}`)" class="border-quaternary">
                   View more
                 </base-button>

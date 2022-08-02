@@ -39,7 +39,7 @@ export default {
         return {
             menus: [{ path: "/blogs", label: "Blogs", route: ['blogs'], sub_routes: ["blogs-details-id"], src: require("~/static/images/IMG_03blogs/Group1120@2x.png") },
             { path: "/review", label: "Review", route: ['review'], src: require("~/static/images/IMG_04review/Group1162@2x.png") },
-            { path: "/product", label: "Product", route: ['product'], sub_routes: ["product-details-id"], src: require("~/static/images/IMG_02products_detail/Group1137@2x.png") },
+            { path: "/product", label: "Products", route: ['product'], sub_routes: ["product-details-id"], src: require("~/static/images/IMG_02products_detail/Group1137@2x.png") },
             { path: "/contact", label: "Contact", route: ['contact'], src: require("~/static/images/IMG_05contacts/Group1163@2x.png") },
             { path: "/ingredients", label: "Ingredients", route: ['ingredients'], src: require("~/static/images/IMG_03ingredients/Group1150@2x.png"), },
             { path: "/favorite", label: "Favorite", route: ['favorite'], src: require("~/static/images/IMG_02products_detail/Group1137@2x.png"), }]

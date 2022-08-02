@@ -91,31 +91,31 @@
               <img v-if="route_name == 'product' || route_name == 'product-details-id'"
                 src="@/static/images/flower.png">
               <nuxt-link to="/product" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
-                <p :class="{ 'font-bold': route_name == 'product' }">Product</p>
+                <p :class="{ 'font-medium': route_name == 'product' }">Product</p>
               </nuxt-link>
             </li>
             <li class="flex flex-col justify-end items-center ">
               <img v-if="route_name == 'ingredients'" src="@/static/images/flower.png">
               <nuxt-link to="/ingredients" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
-                <p :class="{ 'font-bold': route_name == 'ingredients' }">Ingredients</p>
+                <p :class="{ 'font-medium': route_name == 'ingredients' }">Ingredients</p>
               </nuxt-link>
             </li>
             <li class="flex flex-col justify-end items-center ">
               <img v-if="route_name == 'blogs' || route_name == 'blogs-details-id'" src="@/static/images/flower.png">
               <nuxt-link to="/blogs" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
-                <p :class="{ 'font-bold': route_name == 'blogs' || route_name == 'blogs-details-id' }">Blogs</p>
+                <p :class="{ 'font-medium': route_name == 'blogs' || route_name == 'blogs-details-id' }">Blogs</p>
               </nuxt-link>
             </li>
             <li class="flex flex-col justify-end items-center">
               <img v-if="route_name == 'review'" src="@/static/images/flower.png">
               <nuxt-link to="/review" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
-                <p :class="{ 'font-bold': route_name == 'review' }">Review</p>
+                <p :class="{ 'font-medium': route_name == 'review' }">Review</p>
               </nuxt-link>
             </li>
             <li class="flex flex-col justify-end items-center">
               <img v-if="route_name == 'contact'" src="@/static/images/flower.png">
               <nuxt-link to="/contact" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
-                <p :class="{ 'font-bold': route_name == 'contact' }">Contacts </p>
+                <p :class="{ 'font-medium': route_name == 'contact' }">Contacts </p>
               </nuxt-link>
             </li>
           </ul>
