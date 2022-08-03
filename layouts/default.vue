@@ -2,13 +2,14 @@
     <div class="w-screen bg-secondary scroll-smooth">
         <Navbar />
         <div class="w-full relative" v-for="(item, i) in menus" :key="`banner-${i}`">
-            <img v-if="route_name == item.route || route_name == item.sub_routes" class="w-full bg mb-10 sm:mb-20 z-10"
+            <img v-if="route_name == item.route || route_name == item.sub_routes" class="w-full bg mb-20 z-10"
                 :src="item.src">
             <div v-if="route_name == item.route || route_name == item.sub_routes" class="content flex z-20">
                 <h1 class="text-5xl 3xl:text-6xl text-primary">{{ item.label }}</h1>
             </div>
         </div>
-        <div v-if="route_name != 'product'" class="flex items-center px-3 text-quaternary font-extralight text-sm px-4 sm:px-12 lg:px-16 xl:px-20 3xl:px-32">
+        <div v-if="!no_breadcrumb.includes(route_name)"
+            class="flex items-center px-3 mt-20 text-quaternary font-extralight text-sm px-4 sm:px-12 lg:px-16 xl:px-20 3xl:px-32">
             <base-icon icon="angle-left" viewBox="0 0 24 24" size="15" />&nbsp;&nbsp;
             <nuxt-link to="/" class="hover:underline mr-2 ">Home&nbsp;&nbsp;|&nbsp;
             </nuxt-link>
@@ -17,7 +18,7 @@
                     @click="$router.push(`${item.path}`)" class="mr-2 cursor-pointer hover:underline"
                     :class="{ 'font-normal ': route_name == item.route }">{{ item.label }}</p>
                 <p v-if="route_name == item.sub_routes" @click="$router.push(`${item.path}`)">| <span
-                        class="font-normal">{{breadcrumb}}</span></p>
+                        class="font-normal">{{ breadcrumb }}</span></p>
             </div>
         </div>
         <div class="w-full">
@@ -37,6 +38,7 @@ export default {
     components: { Navbar, Foot },
     data() {
         return {
+            no_breadcrumb: ['product', 'favorite'],
             menus: [{ path: "/blogs", label: "Blogs", route: ['blogs'], sub_routes: ["blogs-details-id"], src: require("~/static/images/IMG_03blogs/Group1120@2x.png") },
             { path: "/review", label: "Review", route: ['review'], src: require("~/static/images/IMG_04review/Group1162@2x.png") },
             { path: "/product", label: "Products", route: ['product'], sub_routes: ["product-details-id"], src: require("~/static/images/IMG_02products_detail/Group1137@2x.png") },
@@ -49,7 +51,7 @@ export default {
         route_name() {
             return this.$route.name
         },
-        breadcrumb(){
+        breadcrumb() {
             return this.$store.getters['me/getBreadcrumb']
         },
     },
@@ -63,7 +65,7 @@ export default {
                 myID.className = "to-top hide"
             }
         };
-        window.addEventListener("scroll", myScrollFunc); 
+        window.addEventListener("scroll", myScrollFunc);
     },
     methods: {
         toTop: function () {
@@ -99,18 +101,18 @@ export default {
     bottom: 20px;
 }
 
-.content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media (max-width:1024px) {
-  img.bg {
-    object-fit: cover;
-    width: auto;
-    height: 220px;
-  }
+    img.bg {
+        object-fit: cover;
+        width: auto;
+        height: 220px;
+    }
 }
 </style>

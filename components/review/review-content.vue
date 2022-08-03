@@ -22,8 +22,8 @@
     <div class="w-full lg:w-9/12">
       <!-- Write a review -->
       <div class="w-full flex justify-start py-2 px-4 mt-6 sm:mt-8 bg-tertiary ">
-        <base-button @click="$refs.uploadReviewRef.show()" color_arrow="white"
-          class="text-white border-white hover:border-white">Write a review</base-button>
+        <base-button @click="$refs.uploadReviewRef.show()" color="white">
+          Write a review</base-button>
       </div>
       <!-- Review card -->
       <div class="w-full columns-1 xl:flex justify-center" v-for="index in 4" :key="index">
