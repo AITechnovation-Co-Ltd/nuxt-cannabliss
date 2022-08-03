@@ -20,7 +20,7 @@
 }
 .hooper-pagination {
   position: absolute;
-  bottom: 13%;
+  bottom: 7%;
   right: 84%;
   transform: translateX(50%);
   display: flex;
@@ -34,14 +34,14 @@
 }
 /* .hooper-indicator:hover, */
 .hooper-indicator.is-active {
-  height: 6px;
+  height: 12.5%;
   border-radius: 4px;
   background-color: #78A695;
 }
 .hooper-indicator {
   margin: 0 0px;
-  width: 100px;
-  height: 2px;
+  width: 4vw;
+  height: 2.5%;
   border-radius: 0px;
   border: none;
   padding: 0;
@@ -106,7 +106,7 @@
   box-sizing: border-box;
   width: 100%;
   height: auto;
-  padding: 20px 0px;
+  padding: 0px 0px;
 }
 .hooper * {
   box-sizing: border-box;
@@ -144,23 +144,29 @@
   border: 0;
 }
 
-@media (max-width:1280px) {
+/* @media (max-width:1280px) {
   .hooper-pagination {
     right: 70%;
   }
-}
+} */
 
 @media (max-width:820px) {
-  .hooper-pagination {
+  /* .hooper-pagination {
     right: 73%;
+  } */
+  .hooper-indicator.is-active {
+    height: 7%;
   }
-  .hooper-indicator {
+  .hooper-pagination {
+    bottom: 4%;
+  }
+  /* .hooper-indicator {
     width: 80px;
     height: 2px;
-  }
+  } */
 }
-@media (max-width:600px) {
+/* @media (max-width:600px) {
   .hooper-pagination {
     right: 50%;
   }
-}
+} */

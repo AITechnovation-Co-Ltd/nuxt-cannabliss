@@ -1,12 +1,12 @@
 <template>
   <div class="w-full relative xl:flex flex-col justify-center items-center">
-    <div class="content w-full flex flex-col 2xl:flex-row py-8 px-8 lg:px-12 xl:px-20 z-20">
+    <div class="content w-full flex flex-col 2xl:flex-row py-8 px-4 lg:px-12 xl:px-20 3xl:px-32 z-20">
       <div class="w-full 2xl:w-1/3 text-xl text-quaternary font-light z-20">
         <p class="text-sm">Face</p>
         <h1 class="text-2xl font-light">Canabliss Oasiz :</h1>
         <h2 class="text-2xl text-primary font-normal">First Step Amino Essence</h2>
         <div class="w-full flex items-center mt-6">
-          <div class="vl bg-primary mr-4"></div>
+          <div class="h-40 sm:h-20 lg:h-16 2xl:h-32 w-3 sm:w-1.5 2xl:w-3 bg-primary mr-4"></div>
           <p class="text-sm font-extralight">Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua . Ut enim ad minim veniam , quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat . Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
@@ -93,18 +93,6 @@ export default {
 @media (max-width:590px) {
   .vl {
   height: 220px;
-  width: 14px;
-}
-}
-@media (max-width:455px) {
-  .vl {
-  height: 260px;
-  width: 14px;
-}
-}
-@media (max-width:391px) {
-  .vl {
-  height: 290px;
   width: 14px;
 }
 }

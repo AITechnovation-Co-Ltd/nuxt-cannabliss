@@ -1,8 +1,8 @@
 <template>
-  <div class="w-full mt-20 px-4 lg:px-12 xl:px-20 3xl:px-36">
+  <div class="w-full mt-8 sm:mt-20 px-4 lg:px-12 xl:px-20 3xl:px-36">
     <div class="flex flex-col sm:flex-row justify-between items-start">
       <h1 class="text-4xl sm:text-5xl mb-2 sm:mb-0 md:text-5xl text-primary">Products</h1>
-      <BaseButton @click="$router.push(`/product`)">View all</BaseButton>
+      <BaseButton class="mt-2 sm:mt-0" @click="$router.push(`/product`)">View all</BaseButton>
     </div>
     <div class="w-full columns-1 lg:flex mt-0 sm:mt-16">
       <div class="hidden sm:flex w-full lg:w-1/6 mr-6">
@@ -46,15 +46,20 @@
                 <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
                 <span v-if="product.isNew"
                   class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
-                <div @click="liked(index)" class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer">
-                  <base-icon icon='heartactive' viewBox="0 0 30 41" size="50" :color="product.islike ? '#f05252' : '#5E5F5F'" />
+                <div @click="liked(index)" class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer block sm:hidden">
+                  <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="40" :color="product.islike ? '#f05252' : '#d5d6d7'" />
+                </div>
+                <div @click="liked(index)" class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer hidden sm:block">
+                  <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="50" :color="product.islike ? '#f05252' : '#d5d6d7'" />
                 </div>
                 <p class="absolute bottom-2 right-2 sm:bottom-8 sm:right-8 text-sm font-thin text-quaternary">{{ product.quantity }}</p>
               </div>
               <div class="my-4 mx-2 text-quaternary text-xl">
                 <p class="mt-2 text-sm capitalize">{{ product.type }}</p>
-                <p class="text-base sm:text-lg font-medium">{{ product.name.slice(0, 50) }}</p>
-                <p class="mb-4 mt-2 text-base font-thin">{{ product.detail.slice(0, 80) }}...</p>
+                <p class="text-base sm:text-lg font-medium hidden sm:block">{{ product.name.slice(0, 50) }}</p>
+                <p class="text-base sm:text-lg font-medium block sm:hidden">{{ product.name.slice(0, 30) }}</p>
+                <p class="mb-4 mt-2 text-xl font-normal thai hidden sm:block">{{ product.detail.slice(0, 80) }} ..</p>
+                <p class="mb-4 mt-2 text-xl font-normal thai block sm:hidden">{{ product.detail.slice(0, 40) }} ..</p>
                 <base-button @click="$router.push(`/product/details/${product.no}`)" class="border-quaternary">
                   View more
                 </base-button>

@@ -1,16 +1,16 @@
 <template>
-  <div class="bg w-full relative px-4 md:px-8 lg:px-12 xl:px-20">
+  <div class="bg w-full relative">
     <hooper :settings="hooperSettings" class="flex justify-center items-center">
 
-      <slide>
+      <!-- <slide v-for="index in 4" :key="index">
         <div class="bg flex justify-center items-center">
           <div class="w-full bg3 flex-col-reverse sm:flex-row mb-32 flex h-full items-center justify-between">
             <div class="w-full sm:w-1/2 h-full flex items-center justify-center">
               <div class="flex h-full flex-col items-start justify-center">
                 <h1 class="text-2xl sm:text-3xl font-light text-quaternary">Canabliss Oasiz</h1>
-                <h2 class="mt-2 text-2xl sm:text-3xl 2xl:text-5xl text-primary font-normal">Red Fruit Overnight Mask</h2>
+                <h2 class="mt-0 sm:mt-2 text-2xl sm:text-3xl 2xl:text-5xl text-primary font-normal">Red Fruit Overnight Mask</h2>
                 <div class="mt-4 xl:mt-8 w-full flex items-center">
-                  <div class="h-20 w-1 bg-primary mr-4"></div>
+                  <div class="h-16 sm:h-32 md:h-24 lg:h-20 w-2 sm:w-3 md:w-2 lg:w-1 bg-primary mr-2 sm:mr-4"></div>
                   <p class="content text-sm sm:text-lg font-extralight text-quaternary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua .</p>
                 </div>
                 <div class="w-full flex items-center mt-4 md:mt-10 ml-4">
@@ -28,87 +28,9 @@
             </div>
           </div>
         </div>
-      </slide>
-      <slide>
-        <div class="bg flex justify-center items-center">
-          <div class="w-full bg3 flex-col-reverse sm:flex-row mb-32 flex h-full items-center justify-between">
-            <div class="w-full sm:w-1/2 h-full flex items-center justify-center">
-              <div class="flex h-full flex-col items-start justify-center">
-                <h1 class="text-2xl sm:text-3xl font-light text-quaternary">Canabliss Oasiz</h1>
-                <h2 class="mt-2 text-2xl sm:text-3xl 2xl:text-5xl text-primary font-normal">Red Fruit Overnight Mask</h2>
-                <div class="mt-4 xl:mt-8 w-full flex items-center">
-                  <div class="h-20 w-1 bg-primary mr-4"></div>
-                  <p class="content text-sm sm:text-lg font-extralight text-quaternary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua .</p>
-                </div>
-                <div class="w-full flex items-center mt-4 md:mt-10 ml-4">
-                  <div class="h-16 w-16 sm:h-20 sm:w-20 mr-4 border-2 border-tertiary rounded-full flex items-center justify-center">
-                    <div class="h-12 w-12 sm:h-16 sm:w-16 bg-tertiary rounded-full flex items-center justify-center">
-                      <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
-                    </div>
-                  </div>
-                  <p class="text-lg text-quaternary">Watch the video</p>
-                </div>
-              </div>
-            </div>
-            <div class="w-full sm:w-1/2 flex justify-center">
-              <img class="w-11/12 sm:w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
-            </div>
-          </div>
-        </div>
-      </slide>
-      <slide>
-        <div class="bg flex justify-center items-center">
-          <div class="w-full bg3 flex-col-reverse sm:flex-row mb-32 flex h-full items-center justify-between">
-            <div class="w-full sm:w-1/2 h-full flex items-center justify-center">
-              <div class="flex h-full flex-col items-start justify-center">
-                <h1 class="text-2xl sm:text-3xl font-light text-quaternary">Canabliss Oasiz</h1>
-                <h2 class="mt-2 text-2xl sm:text-3xl 2xl:text-5xl text-primary font-normal">Red Fruit Overnight Mask</h2>
-                <div class="mt-4 xl:mt-8 w-full flex items-center">
-                  <div class="h-20 w-1 bg-primary mr-4"></div>
-                  <p class="content text-sm sm:text-lg font-extralight text-quaternary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua .</p>
-                </div>
-                <div class="w-full flex items-center mt-4 md:mt-10 ml-4">
-                  <div class="h-16 w-16 sm:h-20 sm:w-20 mr-4 border-2 border-tertiary rounded-full flex items-center justify-center">
-                    <div class="h-12 w-12 sm:h-16 sm:w-16 bg-tertiary rounded-full flex items-center justify-center">
-                      <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
-                    </div>
-                  </div>
-                  <p class="text-lg text-quaternary">Watch the video</p>
-                </div>
-              </div>
-            </div>
-            <div class="w-full sm:w-1/2 flex justify-center">
-              <img class="w-11/12 sm:w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
-            </div>
-          </div>
-        </div>
-      </slide>
-      <slide>
-        <div class="bg flex justify-center items-center">
-          <div class="w-full bg3 flex-col-reverse sm:flex-row mb-32 flex h-full items-center justify-between">
-            <div class="w-full sm:w-1/2 h-full flex items-center justify-center">
-              <div class="flex h-full flex-col items-start justify-center">
-                <h1 class="text-2xl sm:text-3xl font-light text-quaternary">Canabliss Oasiz</h1>
-                <h2 class="mt-2 text-2xl sm:text-3xl 2xl:text-5xl text-primary font-normal">Red Fruit Overnight Mask</h2>
-                <div class="mt-4 xl:mt-8 w-full flex items-center">
-                  <div class="h-20 w-1 bg-primary mr-4"></div>
-                  <p class="content text-sm sm:text-lg font-extralight text-quaternary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua .</p>
-                </div>
-                <div class="w-full flex items-center mt-4 md:mt-10 ml-4">
-                  <div class="h-16 w-16 sm:h-20 sm:w-20 mr-4 border-2 border-tertiary rounded-full flex items-center justify-center">
-                    <div class="h-12 w-12 sm:h-16 sm:w-16 bg-tertiary rounded-full flex items-center justify-center">
-                      <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
-                    </div>
-                  </div>
-                  <p class="text-lg text-quaternary">Watch the video</p>
-                </div>
-              </div>
-            </div>
-            <div class="w-full sm:w-1/2 flex justify-center">
-              <img class="w-11/12 sm:w-full" src="~/static/images/IMG_06fav/Group1063@2x.png" alt="">
-            </div>
-          </div>
-        </div>
+      </slide> -->
+      <slide v-for="(img, index) in imgs" :key="index">
+        <img :src="require(`~/static/images/banner${img.url}`)" class="w-full" />
       </slide>
 
       <hooper-pagination slot="hooper-addons"></hooper-pagination>
@@ -133,7 +55,6 @@ import {
   Slide,
   Pagination as HooperPagination
 } from 'hooper';
-
 export default {
   components: {
     Hooper,
@@ -149,7 +70,8 @@ export default {
         autoPlay: true,
         playSpeed: 6000,
         wheelControl: false,
-      }
+      },
+        imgs: [{ "url": "/banner1.png" }, { "url": "/Image2.png" }, { "url": "/banner3.png" }, { "url": "/banner4.png" }, { "url": "/banner5.png" }],
     };
   }
 }
@@ -175,27 +97,32 @@ export default {
   height: 145px;
   width: 15px;
 }
-.content{
+
+.content {
   width: 480px;
 }
-@media (max-width: 1090px){
-  .content{
-  width: auto;
+
+@media (max-width: 1090px) {
+  .content {
+    width: auto;
+  }
 }
-}
-@media (max-width: 1023px){
+
+@media (max-width: 1023px) {
   .bg {
-  height: auto;
+    height: auto;
+  }
+
+  .bg3 {
+    height: auto;
+  }
 }
-.bg3 {
-  height: auto;
-}
-}
+
 @media (max-width: 639px) {
-.social{
-  display: flex;
-  width: 100%;
-  margin-top: -50px;
-}
+  .social {
+    display: flex;
+    width: 100%;
+    margin-top: -50px;
+  }
 }
 </style>

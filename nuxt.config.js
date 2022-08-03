@@ -6,7 +6,7 @@ export default {
     post: process.env.PORT || 3000
   },
   router: {
-    base: '/nuxt-cannabliss/'
+    base: '/'
   },
   // Nuxt loading
   loading: '@/components/loading/loading.vue',

@@ -1,10 +1,10 @@
 <template>
-  <div class="w-full mt-20 text-quaternary flex flex-col lg:flex-row items-center px-8 lg:px-12 xl:px-20">
+  <div class="w-full mt-8 sm:mt-20 text-quaternary flex flex-col lg:flex-row items-center px-4 lg:px-12 xl:px-20">
     <div class="w-full sm:w-11/12 lg:w-2/5">
       <h1 class="text-3xl xl:text-4xl 2xl:text-5xl text-primary">Ingredients</h1>
       <div class="mt-4 lg:mt-8 flex items-center">
         <div class="vl bg-primary"></div>
-        <p class="content text-lg ml-2 lg:ml-4">By having a hero ingredient , there's an opportunity to get
+        <p class="content text-base sm:text-lg ml-2 lg:ml-4">By having a hero ingredient , there's an opportunity to get
           into the SKINCARE
           TREND in
           Thailand </p>
@@ -18,7 +18,7 @@
       </p>
       <BaseButton class="mt-4 lg:mt-8" @click="$router.push(`/ingredients`)">View more</BaseButton>
     </div>
-    <div class="w-full sm:w-11/12 lg:w-3/5 mt-4 lg:mt-0 ml-3 flex">
+    <div class="w-full sm:w-11/12 lg:w-3/5 mt-4 lg:mt-0 ml-0 sm:ml-3 flex">
       <div class="w-1/2 flex flex-col">
         <img class="rounded-3xl" src="~/static/images/IMG_01home/pages_01home/IMG_1290.jpg" alt="">
       </div>
@@ -67,6 +67,12 @@ export default {
 }
 .content {
   width: 470px;
+}
+@media (max-width: 1355px) {
+.vl {
+  height: 80px;
+  width: 5px;
+}
 }
 @media (max-width: 1023px) {
 .vl {
