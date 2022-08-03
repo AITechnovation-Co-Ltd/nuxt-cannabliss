@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col justify-center mt-4 sm:mt-12 px-8 lg:px-12 xl:px-20 3xl:px-32">
+  <div class="w-full flex flex-col justify-center mt-4 sm:mt-12 px-4 lg:px-12 xl:px-20 3xl:px-32">
     <p class="text-primary text-5xl">FAQ</p>
     <div class="w-full flex flex-col lg:flex-row items-center my-6">
       <!-- Dropdown FQA -->
@@ -8,9 +8,9 @@
         <!-- FQA 1-->
         <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen" openUp="toggle">
           <div slot="toggle" class="w-full flex items-center justify-between">
-            <p align="start" class="text-lg font-normal text-quaternary my-2"
+            <p align="start" class="text-base sm:text-lg font-normal text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data }">
-              Sed Ut Perspiciatis Unde Omnis Iste Natus <br> Error Sit Voluptatem Accusantium</p>
+              Sed Ut Perspiciatis Unde Omnis Iste Natus <br class="hidden sm:block"> Error Sit Voluptatem Accusantium</p>
 
             <base-icon icon="dropdown" :class="{
               'transform rotate-180 duration-200': dropdown_data,
@@ -32,9 +32,9 @@
         <!-- FAQ 2-->
         <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen2">
           <div slot="toggle" class="w-full flex items-center justify-between">
-            <p align="start" class="text-lg font-normal text-quaternary my-2"
+            <p align="start" class="text-base sm:text-lg font-normal text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data2 }">
-              Sed Ut Perspiciatis Unde Omnis Iste Natus <br> Error Sit Voluptatem Accusantium</p>
+              Sed Ut Perspiciatis Unde Omnis Iste Natus <br class="hidden sm:block"> Error Sit Voluptatem Accusantium</p>
 
             <base-icon icon="dropdown" :class="{
               'transform rotate-180 duration-200': dropdown_data2,
@@ -56,9 +56,9 @@
         <!-- FAQ 3 -->
         <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen3">
           <div slot="toggle" class="w-full flex items-center justify-between">
-            <p align="start" class="text-lg font-normal text-quaternary my-2"
+            <p align="start" class="text-base sm:text-lg font-normal text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data3 }">
-              Sed Ut Perspiciatis Unde Omnis Iste Natus <br> Error Sit Voluptatem Accusantium</p>
+              Sed Ut Perspiciatis Unde Omnis Iste Natus <br class="hidden sm:block"> Error Sit Voluptatem Accusantium</p>
 
             <base-icon icon="dropdown" :class="{
               'transform rotate-180 duration-200': dropdown_data3,
@@ -80,9 +80,9 @@
         <!-- FAQ 4 -->
         <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen4">
           <div slot="toggle" class="w-full flex items-center justify-between">
-            <p align="start" class="text-lg font-normal text-quaternary my-2"
+            <p align="start" class="text-base sm:text-lg font-normal text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data4 }">
-              Sed Ut Perspiciatis Unde Omnis Iste Natus <br> Error Sit Voluptatem Accusantium</p>
+              Sed Ut Perspiciatis Unde Omnis Iste Natus <br class="hidden sm:block"> Error Sit Voluptatem Accusantium</p>
             <base-icon icon="dropdown" :class="{
               'transform rotate-180 duration-200': dropdown_data4,
               'transform rotate-0 duration-200': !dropdown_data4,
@@ -105,7 +105,7 @@
       </div>
     </div>
 
-    <div class="w-full my-20 flex flex-wrap justify-evenly text-quaternary">
+    <div class="w-full my-12 sm:my-20 flex flex-wrap justify-evenly text-quaternary">
       <div class="flex flex-col mx-4 sm:mx-0 items-center ">
         <base-icon icon="heart" viewBox="0 0 24 24" size="60" class="mb-4" />
         <p class="text-lg font-normal">24 Services</p>

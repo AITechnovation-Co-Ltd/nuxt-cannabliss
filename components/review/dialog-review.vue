@@ -2,12 +2,12 @@
   <base-modal v-model="isShow">
     <div class="px-2 py-12 bg-secondary rounded-3xl flex flex-col items-center">
       <!-- Title -->
-      <div class="w-full text-4xl xl:text-7xl font-light text-primary text-center mb-4">
+      <div class="w-full text-4xl xl:text-6xl font-extralight text-primary text-center mb-4">
         Write a review
       </div>
 
       <!-- Star -->
-      <div class="w-full flex items-center justify-center">
+      <div class="w-full flex mt-3 items-center justify-center">
         <svg @click="test(1)" class="w-12 h-12 text-gray-300" :class="{ 'text-blue-400': s1 }" fill="currentColor"
           viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path

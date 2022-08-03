@@ -45,6 +45,8 @@ module.exports = {
       secondary: '#F6F8EC',
       tertiary: '#83B9DF',
       quaternary: '#5E5F5F',
+      detail: '#545454',
+      gold: '#A37F50',
       card: '#f2f5e2',
       accept: '#2B3CD4',
       progress: '#EF8437',

@@ -1,6 +1,6 @@
 <template>
   <div v-if="!no_product" class="w-full">
-    <div class="w-full relative mt-20 px-8 lg:px-12 xl:px-20 2xl:px-32">
+    <div class="w-full relative mt-20 px-4 lg:px-12 xl:px-20 3xl:px-32">
       <h1 class="w-full text-5xl text-center font-normal text-primary">Review</h1>
       <div class="w-full flex flex-col xl:flex-row mt-12">
         <div class="w-full xl:w-1/4 2xl:mr-20">
@@ -18,27 +18,31 @@
           <base-button @click="$refs.DialogReviewRefs.show()" class="mt-6">Write a review</base-button>
         </div>
         <div class="w-full mt-8 lg:mt-0 xl:w-3/4">
-          <div class="w-full columns-1 xl:flex justify-center" v-for="index in 2" :key="index">
-            <div class="w-full columns-1 xl:flex px-4 py-8 border-b-2 border-gray-200 text-quaternary">
-              <!-- Image Product-->
-              <div class="w-full xl:w-2/5 columns-1 items-start md:flex ">
-                <img src="@/static/images/IMG_04review/product-review.png" class="w-24 h-12 mr-0 md:mr-6">
-                <p class="mt-6 md:mt-0 text-sm font-extralight">Canabliss Oasiz : <br>Super Berry Hydrating Mask</p>
-              </div>
-              <!-- Details review -->
-              <div class="w-full xl:w-3/5 flex flex-col ml-4 mt-6 xl:mt-0 ">
-                <div class="columns-1 xl:flex justify-between">
-                  <p class="text-lg font-light">Kimberly K.</p>
-                  <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-primary" />
+          <div class="w-full xl:flex justify-center divide-y-2 devide-quaternary">
+            <div v-for="index in 2" :key="index">
+              <div class="w-full xl:flex px-4 py-8 text-quaternary">
+                <!-- Image Product-->
+                <div class="w-full xl:w-2/5 columns-1 items-start md:flex ">
+                  <img src="@/static/images/IMG_04review/product-review.png" class="w-24 h-12 mr-0 md:mr-6">
+                  <p class="mt-6 md:mt-0 text-sm font-extralight">Canabliss Oasiz : <br>Super Berry Hydrating Mask</p>
                 </div>
-                <!-- Comment -->
-                <p class="my-4 text-sm font-extralight">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius
-                  commodi
-                  laudantium
-                  earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae
-                  architecto. Quia, eaque.</p>
-                <!-- Date -->
-                <p class="text-sm font-extralight">12/06/22</p>
+                <!-- Details review -->
+                <div class="w-full xl:w-3/5 flex flex-col ml-0 sm:ml-4 mt-6 xl:mt-0 ">
+                  <div class="columns-1 xl:flex justify-between">
+                    <p class="text-lg font-light">Kimberly K.</p>
+                    <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-primary" />
+                  </div>
+                  <!-- Comment -->
+                  <p class="my-4 text-sm font-extralight">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse
+                    aperiam tempore eius
+                    commodi
+                    laudantium
+                    earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima
+                    beatae
+                    architecto. Quia, eaque.</p>
+                  <!-- Date -->
+                  <p class="text-sm font-extralight">12/06/22</p>
+                </div>
               </div>
             </div>
           </div>

@@ -55,11 +55,11 @@
                 <p class="absolute bottom-2 right-2 sm:bottom-8 sm:right-8 text-sm font-thin text-quaternary">{{ product.quantity }}</p>
               </div>
               <div class="my-4 mx-2 text-quaternary text-xl">
-                <p class="mt-2 text-sm capitalize">{{ product.type }}</p>
-                <p class="text-base sm:text-lg font-medium hidden sm:block">{{ product.name.slice(0, 50) }}</p>
+                <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type }}</p>
+                <p class="text-base sm:text-lg font-medium hidden sm:block">{{ product.name.slice(0, 45)}} ..</p>
                 <p class="text-base sm:text-lg font-medium block sm:hidden">{{ product.name.slice(0, 30) }}</p>
-                <p class="mb-4 mt-2 text-xl font-normal thai hidden sm:block">{{ product.detail.slice(0, 80) }} ..</p>
-                <p class="mb-4 mt-2 text-xl font-normal thai block sm:hidden">{{ product.detail.slice(0, 40) }} ..</p>
+                <p class="mb-4 mt-2 text-xl text-detail font-bold thai hidden sm:block">{{ product.detail.slice(0, 80) }} ..</p>
+                <p class="mb-4 mt-2 text-xl text-detail font-bold thai block sm:hidden">{{ product.detail.slice(0, 40) }} ..</p>
                 <base-button @click="$router.push(`/product/details/${product.no}`)" class="border-quaternary">
                   View more
                 </base-button>

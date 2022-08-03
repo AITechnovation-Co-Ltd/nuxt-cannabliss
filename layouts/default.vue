@@ -2,13 +2,13 @@
     <div class="w-screen bg-secondary scroll-smooth">
         <Navbar />
         <div class="w-full relative" v-for="(item, i) in menus" :key="`banner-${i}`">
-            <img v-if="route_name == item.route || route_name == item.sub_routes" class="w-full bg mb-20 z-10"
+            <img v-if="route_name == item.route || route_name == item.sub_routes" class="w-full bg mb-10 sm:mb-20 z-10"
                 :src="item.src">
             <div v-if="route_name == item.route || route_name == item.sub_routes" class="content flex z-20">
                 <h1 class="text-5xl 3xl:text-6xl text-primary">{{ item.label }}</h1>
             </div>
         </div>
-        <div v-if="route_name != 'product'" class="flex items-center px-3 mt-20 text-quaternary font-extralight text-sm px-4 sm:px-12 lg:px-16 xl:px-20 3xl:px-32">
+        <div v-if="route_name != 'product'" class="flex items-center px-3 text-quaternary font-extralight text-sm px-4 sm:px-12 lg:px-16 xl:px-20 3xl:px-32">
             <base-icon icon="angle-left" viewBox="0 0 24 24" size="15" />&nbsp;&nbsp;
             <nuxt-link to="/" class="hover:underline mr-2 ">Home&nbsp;&nbsp;|&nbsp;
             </nuxt-link>

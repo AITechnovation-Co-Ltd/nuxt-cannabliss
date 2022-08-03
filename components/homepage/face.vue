@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full relative xl:flex flex-col justify-center items-center">
+  <div class="w-full relative xl:flex flex-col justify-center items-center z-10">
     <div class="content w-full flex flex-col 2xl:flex-row py-8 px-4 lg:px-12 xl:px-20 3xl:px-32 z-20">
       <div class="w-full 2xl:w-1/3 text-xl text-quaternary font-light z-20">
         <p class="text-sm">Face</p>
@@ -15,7 +15,7 @@
         <p class="mt-6 text-sm font-extralight">Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua . Ut enim ad minim veniam , quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat .</p>
-        <BaseButton class="mt-4" @click="$router.push(`/product/details/3`)">View more</BaseButton>
+        <BaseButton class="mt-8" @click="$router.push(`/product/details/3`)">View more</BaseButton>
       </div>
 
       <!-- image -->

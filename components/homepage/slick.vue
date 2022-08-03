@@ -1,9 +1,9 @@
 <template>
-    <div class="w-full relative px-8 lg:px-12 xl:px-20">
+    <div class="w-full relative px-8 lg:px-12">
         <p class="my-4 text-5xl text-primary text-center">Review</p>
         <VueSlickCarousel class="flex justify-center items-center" v-bind="settings">
 
-            <div class="w-full my-6 ml-0 sm:ml-8 flex flex-col justify-center items-center">
+            <div class="w-full my-6 ml-0 sm:ml-8 flex flex-col justify-center items-center" v-for="(item,index) in 4" :key="index">
                 <div class="w-full flex justify-center sm:justify-start my-6">
                     <div class="w-11/12 relative px-4 py-8 xl:p-10 bg-f rounded-xl mt-8 ">
                         <img src="@/static/images/IMG_01home/pages_01home/review01.png"
@@ -33,93 +33,6 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full my-6 ml-0 sm:ml-8 flex flex-col justify-center items-center">
-                <div class="w-full flex justify-center sm:justify-start my-6">
-                    <div class="w-11/12 relative px-4 py-8 xl:p-10 bg-f rounded-xl mt-8 ">
-                        <img src="@/static/images/IMG_01home/pages_01home/review01.png"
-                            class="absolute -top-6 left-0 w-16">
-                        <div class="w-full flex flex-col items-center text-sm font-extralight text-quaternary">
-                            <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-primary" />
-                            <p class="my-6 text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Blanditiis
-                                delectus
-                                incidunt ratione
-                                hic vero
-                                omnis laboriosam cupiditate velit, odio alias suscipit ad repellat. Autem doloribus
-                                ipsam laboriosam
-                                molestiae, provident corrupti.</p>
-                            <div class="w-full flex justify-between items-end">
-                                <div class="w-full flex justify-center relative ">
-                                    <img src="@/static/images/IMG_01home/pages_01home/review03.png"
-                                        class="absolute bottom-0 -left-8 w-28 h-28">
-                                    <p>Canabliss Oasiz :<br>Super Berry Hydrating Mask</p>
-                                </div>
-                                <p class="whitespace-nowrap">Kimberly K.</p>
-                            </div>
-                        </div>
-                        <img src="@/static/images/IMG_01home/pages_01home/review02.png"
-                            class="absolute -bottom-6 right-0 w-16">
-                    </div>
-                </div>
-            </div>
-            <div class="w-full my-6 ml-0 sm:ml-8 flex flex-col justify-center items-center">
-                <div class="w-full flex justify-center sm:justify-start my-6">
-                    <div class="w-11/12 relative px-4 py-8 xl:p-10 bg-f rounded-xl mt-8 ">
-                        <img src="@/static/images/IMG_01home/pages_01home/review01.png"
-                            class="absolute -top-6 left-0 w-16">
-                        <div class="w-full flex flex-col items-center text-sm font-extralight text-quaternary">
-                            <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-primary" />
-                            <p class="my-6 text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Blanditiis
-                                delectus
-                                incidunt ratione
-                                hic vero
-                                omnis laboriosam cupiditate velit, odio alias suscipit ad repellat. Autem doloribus
-                                ipsam laboriosam
-                                molestiae, provident corrupti.</p>
-                            <div class="w-full flex justify-between items-end">
-                                <div class="w-full flex justify-center relative ">
-                                    <img src="@/static/images/IMG_01home/pages_01home/review03.png"
-                                        class="absolute bottom-0 -left-8 w-28 h-28">
-                                    <p>Canabliss Oasiz :<br>Super Berry Hydrating Mask</p>
-                                </div>
-                                <p class="whitespace-nowrap">Kimberly K.</p>
-                            </div>
-                        </div>
-                        <img src="@/static/images/IMG_01home/pages_01home/review02.png"
-                            class="absolute -bottom-6 right-0 w-16">
-                    </div>
-                </div>
-            </div>
-            <div class="w-full my-6 mr-0 sm:ml-8 flex flex-col justify-center items-center">
-                <div class="w-full flex justify-center sm:justify-start my-6">
-                    <div class="w-11/12 relative px-4 py-8 xl:p-10 bg-f rounded-xl mt-8 ">
-                        <img src="@/static/images/IMG_01home/pages_01home/review01.png"
-                            class="absolute -top-6 left-0 w-16">
-                        <div class="w-full flex flex-col items-center text-sm font-extralight text-quaternary">
-                            <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-primary" />
-                            <p class="my-6 text-center">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Blanditiis
-                                delectus
-                                incidunt ratione
-                                hic vero
-                                omnis laboriosam cupiditate velit, odio alias suscipit ad repellat. Autem doloribus
-                                ipsam laboriosam
-                                molestiae, provident corrupti.</p>
-                            <div class="w-full flex justify-between items-end">
-                                <div class="w-full flex justify-center relative ">
-                                    <img src="@/static/images/IMG_01home/pages_01home/review03.png"
-                                        class="absolute bottom-0 -left-8 w-28 h-28">
-                                    <p>Canabliss Oasiz :<br>Super Berry Hydrating Mask</p>
-                                </div>
-                                <p class="whitespace-nowrap">Kimberly K.</p>
-                            </div>
-                        </div>
-                        <img src="@/static/images/IMG_01home/pages_01home/review02.png"
-                            class="absolute -bottom-6 right-0 w-16">
-                    </div>
-                </div>
-            </div>
 
         </VueSlickCarousel>
         <div class="w-full my-6 flex justify-center">
@@ -135,7 +48,7 @@
                     </div>
                 </a>
             </div>
-            <div class="ig mt-2 sm:mt-8 grid grid-cols-2 sm:grid-cols-4">
+            <div class="ig mt-2 sm:mt-8 grid grid-cols-1 gap-y-4 sm:gap-y-0 sm:grid-cols-2 md:grid-cols-4">
                 <div class="flex justify-center items-center">
                     <img src="@/static/images/IMG_01home/pages_01home/content-pixie-TxBQ7yLj6JU-unsplash.jpg" alt="">
                 </div>
@@ -187,7 +100,7 @@ export default {
                 pauseOnHover: false,
                 "responsive": [
                     {
-                        "breakpoint": 1800,
+                        "breakpoint": 1440,
                         "settings": {
                             "slidesToShow": 2,
                             "slidesToScroll": 1,

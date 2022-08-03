@@ -10,11 +10,11 @@ const settings = {
     props: {
       classes: {
         wrapper: 'table text-center',
-        element: 'w-8 h-8 text-gray table-cell rounded hover:bg-primary hover:bg-opacity-10 focus:outline-none',
-        activeElement: 'w-8 h-8 table-cell rounded bg-primary hover:bg-primary hover:bg-opacity-25 text-black',
+        element: 'w-8 h-8 text-gray table-cell rounded-full hover:bg-primary hover:bg-opacity-10 focus:outline-none',
+        activeElement: 'w-8 h-8 table-cell rounded-full bg-primary hover:bg-primary hover:bg-opacity-25 text-black',
         disabledElement: 'w-8 h-8 table-cell',
         ellipsisElement: 'w-8 h-8 hidden md:table-cell',
-        activeButton: 'bg-primary w-full h-full rounded text-white hover:bg-primary hover:bg-opacity-10 hover:text-black focus:outline-none',
+        activeButton: 'bg-primary w-full h-full rounded-full text-white hover:bg-primary hover:bg-opacity-10 hover:text-black focus:outline-none',
         disabledButton: 'opacity-25 bg-light w-full h-full cursor-not-allowed',
         button: 'w-full h-full focus:outline-none',
         ellipsis: ''

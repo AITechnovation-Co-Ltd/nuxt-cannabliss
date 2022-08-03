@@ -25,7 +25,7 @@
 
       <!-- Email Box -->
       <div class="w-full lg:w-1/2 flex flex-col items-center">
-        <p class="mb-4 text-2xl text-primary">Have some questions ?</p>
+        <p class="mb-4 -mt-6 text-2xl text-primary">Have some questions ?</p>
         <a href="https://lin.ee/i5MkM6w" target="_blank">
           <img src="~/static/images/IMG_05contacts/qrline.png" alt="" class="rounded-2xl drop-shadow-md w-60">
         </a>

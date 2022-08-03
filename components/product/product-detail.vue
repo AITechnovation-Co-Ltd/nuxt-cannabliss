@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <div v-if="no_product" class="w-full columns-1 mt-8 px-8 lg:px-12 xl:px-20 2xl:px-32">
+    <div v-if="no_product" class="w-full columns-1 mt-8 px-4 lg:px-12 xl:px-20 3xl:px-32">
       <div class="w-full py-12 mt-12 bg-white text-center text-4xl text-primary">No Product<br>
         <span class="text-red-500 text-xl">{{ productname }}</span>
       </div>
@@ -28,11 +28,11 @@
           </div>
         </div>
 
-        <div class="w-full lg:w-1/2 mt-8 lg:mt-0 ml-8" v-for="(products_id, i) in products_detail" :key="i">
-          <p class="text-sm capitalize">{{ products_id.type }}</p>
-          <div class="flex justify-between items-end">
+        <div class="w-full lg:w-1/2 mt-8 lg:mt-0 sm:ml-8" v-for="(products_id, i) in products_detail" :key="i">
+          <p class="text-sm font-extralight capitalize">{{ products_id.type }}</p>
+          <div class="flex justify-between items-start">
             <h1 class="text-2xl xl:text-3xl font-light">{{ products_id.name }}</h1>
-            <p class="font-extralight">{{ products_id.quantity }}</p>
+            <p class="font-extralight mt-2">{{ products_id.quantity }}</p>
           </div>
           <!-- <h2 class="text-4xl font-semibold text-primary">Tinted Hybrid Block SPF50 Pa+++</h2> -->
           <div class="flex my-4 items-center">
@@ -79,8 +79,8 @@
               <p class="text-lg">Available</p>
             </div>
             <div class="w-full flex mt-6">
-              <a :href="products_id.link"><button
-                  class="px-8 h-14 text-quaternary border border-quaternary rounded-full mr-4">Go to
+              <a class="flex items-center justify-center" :href="products_id.link"><button
+                  class="px-4 sm:px-8 h-10 sm:h-14 text-lg sm:text-2xl text-quaternary border border-quaternary rounded-full mr-4">Go to
                   shopping</button></a>
               <div @click="liked(i)"
                 class="h-14 w-14 flex items-center justify-center border border-primary rounded-full"
@@ -93,19 +93,19 @@
         </div>
       </div>
       <!-- More detail -->
-      <div class="w-full mt-16 sm:mt-28 relative">
+      <div class="w-full mt-16 sm:mt-28 relative px-4">
         <img class="bg w-full z-10" src="~/static/images/IMG_03ingredients/Group1149@2x.png" alt="">
         <div class="content w-full flex pb-4 lg:pb-0 z-20">
           <div class="w-full flex flex-col md:flex-row justify-evenly items-center z-20">
             <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
-              <h1 class="text-xl font-normal">Canabinoid (Cbd)</h1>
+              <h1 class="text-lg sm:text-xl font-normal">Canabinoid (Cbd)</h1>
               <p class="mt-2 text-center text-extralight">Anti inflammatory to make skin stronger</p>
             </div>
             <div class="w-0.5 h-60 xl:h-72 2xl:h-80 bg-primary hidden md:block"></div>
-            <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
+            <div class="w-full mt-4 sm:mt-0 md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
-              <h1 class="text-xl text-center font-normal">Leucojum Aestivum Bulb Extract (Ibr - Snowflake®)</h1>
+              <h1 class="text-lg sm:text-xl text-center font-normal">Leucojum Aestivum Bulb Extract (Ibr - Snowflake®)</h1>
               <p class="mt-2 text-center text-extralight">Anti Aging To Make Skin Younger And Brighter</p>
             </div>
           </div>
