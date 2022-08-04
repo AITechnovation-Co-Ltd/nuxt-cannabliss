@@ -7,7 +7,7 @@
       <div class="w-full lg:w-80 mt-10">
         <h1 class="text-xl font-normal text-primary">Categories</h1>
         <!-- <hr class="w-full lg:w-8/12 xl:w-10/12 3xl:w-11/12 my-6 border-b-px border-primary flex flex-col justify-center items-center"> -->
-        <div class="hrr bg-primary my-6 w-4/6"></div>
+        <div class="hrr bg-primary my-6 w-full sm:w-4/6"></div>
         <div
           class="w-full flex justify-around lg:flex-col decoration-none text-primary text-sm font-extralight space-y-0 sm:space-y-6">
           <p class="mt-0 sm:mt-4 lg:mt-0"><span class="hover:font-normal hover:cursor-pointer">All Products</span></p>
@@ -22,11 +22,12 @@
     <div class="w-full lg:w-9/12">
       <!-- Write a review -->
       <div class="w-full flex justify-start py-2 px-4 mt-6 sm:mt-8 bg-tertiary ">
-        <base-button @click="$refs.uploadReviewRef.show()" color="white">
+        <base-button @click="$refs.uploadReviewRef.show()" color="white" class="ml-auto mr-auto sm:ml-0">
           Write a review</base-button>
       </div>
       <!-- Review card -->
-      <div class="w-full columns-1 xl:flex justify-center" v-for="index in 4" :key="index">
+      <div class="w-full columns-1 xl:flex justify-center divide-y divide-primary47">
+        <div v-for="index in 4" :key="index">
         <div class="flex divide-y-2 divide-primary">
           <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
             <!-- Image Product-->
@@ -51,6 +52,7 @@
               <p class="text-sm font-extralight">12/06/22</p>
             </div>
           </div>
+        </div>
         </div>
       </div>
       <!-- Load More -->

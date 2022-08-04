@@ -1,6 +1,6 @@
 
 <template>
-  <div class="w-full flex flex-col justify-center items-center pb-20 mt-12 lg:mt-20 px-8 lg:px-12 xl:px-20">
+  <div class="w-full flex flex-col justify-center items-center pb-10 sm:pb-20 mt-12 lg:mt-20 px-4 lg:px-12 xl:px-20 3xl:px-32">
     <!-- Title -->
     <p class="text-5xl text-primary mb-8 lg:mb-16">Blogs</p>
     <!-- Content -->
@@ -13,7 +13,7 @@
           <p class="text-sm font-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis odit saepe modi fugit aut
             officiis animi nesciunt repellat molestias dolor laborum tempore deleniti sed provident quae natus,
             voluptates consequatur?</p>
-          <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="mt-8 border-quaternary">View more
+          <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="mt-4 mr-0 sm:mr-auto ml-auto sm:ml-0 border-quaternary">View more
           </base-button>
         </div>
         <div class="block md:hidden w-full flex items-start justify-start flex-col" v-for="(data, i) in blogcard" :key="i" :class="{ 'hidden': i % 2 != 0 }">
@@ -22,7 +22,7 @@
           <p class="text-sm font-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis odit saepe modi fugit aut
             officiis animi nesciunt repellat molestias dolor laborum tempore deleniti sed provident quae natus,
             voluptates consequatur?</p>
-          <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="mt-8 border-quaternary">View more
+          <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="mt-4 mr-0 sm:mr-auto ml-auto sm:ml-0 border-quaternary">View more
           </base-button>
         </div>
       </div>

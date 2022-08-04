@@ -4,12 +4,12 @@
       <div class="flex flex-col lg:flex-row lg:justify-around">
 
         <!-- logo -->
-        <div class="w-full lg:w-1/4 flex justify-start lg:justify-center mb-6 md:mb-0">
+        <div class="w-full lg:w-1/4 flex justify-center sm:justify-start lg:justify-center mb-6 md:mb-0">
           <nuxt-link to="/" class="flex items-center">
             <img class="h-32" src="~/static/logo/Logo-CANABLISS.png" alt="">
           </nuxt-link>
         </div>
-        <div class="w-full lg:w-3/4 grid text-sm grid-cols-2 sm:flex justify-around content">
+        <div class="w-full lg:w-3/4 px-4 sm:px-0 grid text-sm grid-cols-2 sm:flex justify-around content">
           <!-- product -->
           <div class="font-light">
             <ul>
@@ -50,7 +50,7 @@
           </div>
 
           <!-- contacts -->
-          <div class="contact">
+          <div class="contact col-span-2 sm:col-span-1">
             <h2 class="mb-3 mt-6 text-lg font-normal">Let's talk</h2>
             <ul>
               <li class="mb-4">
@@ -81,7 +81,7 @@
         </div>
 
       </div>
-      <hr class="mt-6 border-primary sm:mx-auto ">
+      <hr class="mt-6 border-primary sm:mx-auto">
       <div class="py-5 flex items-center justify-center">
         <span class="text-xs font-extralight sm:text-center">Copyright © 2021 <a href="#" class="hover:underline">MorHello</a>. All
           rights reserved.
@@ -103,11 +103,5 @@ export default {
 </script>
 
 <style scoped>
-@media (max-width:400px) {
-  .content {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-  }
-}
+
 </style>

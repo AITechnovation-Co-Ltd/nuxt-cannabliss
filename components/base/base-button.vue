@@ -1,5 +1,5 @@
 <template>
-  <button class="h-10 text-sm font-light px-3 sm:px-8 flex justify-between items-center border rounded-full"
+  <button class="h-8 sm:h-10 text-sm font-light px-3 sm:px-8 flex justify-between items-center border rounded-full"
     v-on:mouseover="arrow_first = arrow_over" v-on:mouseout="arrow_first = arrow_out" :type="type"
     style="transition: all 0.15s ease 0s" :class="style" @click="$emit('click', $event)" :disabled="disabled">
     <slot />

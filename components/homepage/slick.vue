@@ -1,10 +1,10 @@
 <template>
-    <div class="w-full relative px-8 lg:px-12">
+    <div class="w-full relative px-4 lg:px-12">
         <p class="my-4 text-5xl text-primary text-center">Review</p>
         <VueSlickCarousel class="flex justify-center items-center" v-bind="settings">
 
-            <div class="w-full my-6 ml-0 sm:ml-8 flex flex-col justify-center items-center" v-for="(item,index) in 4" :key="index">
-                <div class="w-full flex justify-center sm:justify-start my-6">
+            <div class="w-full my-0 sm:my-6 ml-0 sm:ml-8 flex flex-col justify-center items-center" v-for="(item,index) in 4" :key="index">
+                <div class="w-full flex justify-center sm:justify-start mt-0 sm:mt-6 mb-6">
                     <div class="w-11/12 relative px-4 py-8 xl:p-10 bg-f rounded-xl mt-8 ">
                         <img src="@/static/images/IMG_01home/pages_01home/review01.png"
                             class="absolute -top-6 left-0 w-16">
@@ -63,7 +63,7 @@
                     <img src="@/static/images/IMG_01home/pages_01home/birgith-roosipuu-W71jxsXrwyQ-unsplash.jpg" alt="">
                 </div>
             </div>
-            <div class="w-full mt-4 sm:mt-8 sm:mt-0 text-xl flex justify-end">
+            <div class="w-full mt-4 sm:mt-8 sm:mt-0 text-xl flex justify-center">
                 <a href="" class="text-quaternary block md:hidden">
                     <div class="flex items-center">
                         <img class="w-8 mr-2" src="~/static/images/IMG_footer/icons8-instagram@2x.png" alt="">

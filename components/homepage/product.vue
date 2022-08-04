@@ -1,8 +1,8 @@
 <template>
   <div class="w-full mt-8 sm:mt-20 px-4 lg:px-12 xl:px-20 3xl:px-36">
-    <div class="flex flex-col sm:flex-row justify-between items-start">
-      <h1 class="text-4xl sm:text-5xl mb-2 sm:mb-0 md:text-5xl text-primary">Products</h1>
-      <BaseButton class="mt-2 sm:mt-0" @click="$router.push(`/product`)">View all</BaseButton>
+    <div class="flex flex-row justify-between items-center">
+      <h1 class="text-3xl md:text-5xl text-primary">Products</h1>
+      <BaseButton @click="$router.push(`/product`)">View all</BaseButton>
     </div>
     <div class="w-full columns-1 lg:flex mt-0 sm:mt-16">
       <div class="hidden sm:flex w-full lg:w-1/6 mr-6">

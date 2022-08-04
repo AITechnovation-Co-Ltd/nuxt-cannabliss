@@ -3,9 +3,9 @@
     <div class="w-full relative mt-20 px-4 lg:px-12 xl:px-20 3xl:px-32">
       <h1 class="w-full text-5xl text-center font-normal text-primary">Review</h1>
       <div class="w-full flex flex-col xl:flex-row mt-12">
-        <div class="w-full xl:w-1/4 2xl:mr-20">
-          <div class="w-full flex items-center">
-            <p class="text-4xl font-light mr-4">4.0</p>
+        <div class="w-full flex flex-col items-center xl:w-1/4 2xl:mr-20">
+          <div class="w-full flex flex-col sm:flex-row items-center">
+            <p class="text-4xl font-light mr-0 sm:mr-4">4.0</p>
             <div class="flex -space-x-2">
               <base-icon icon="star" viewBox="0 0 30 41" size="45" class="text-primary" />
               <base-icon icon="star" viewBox="0 0 30 41" size="45" class="text-primary" />
@@ -15,14 +15,14 @@
             </div>
           </div>
           <p class="ml-2 mt-2 text-quaternary text-sm">Based on reviews</p>
-          <base-button @click="$refs.DialogReviewRefs.show()" class="mt-6">Write a review</base-button>
+          <base-button @click="$refs.DialogReviewRefs.show()" class="mt-4 sm:mt-6">Write a review</base-button>
         </div>
         <div class="w-full mt-8 lg:mt-0 xl:w-3/4">
-          <div class="w-full xl:flex justify-center divide-y-2 devide-quaternary">
+          <div class="w-full xl:flex justify-center divide-y-2">
             <div v-for="index in 2" :key="index">
               <div class="w-full xl:flex px-4 py-8 text-quaternary">
                 <!-- Image Product-->
-                <div class="w-full xl:w-2/5 columns-1 items-start md:flex ">
+                <div class="w-full xl:w-2/5 flex flex-col items-start md:flex ">
                   <img src="@/static/images/IMG_04review/product-review.png" class="w-24 h-12 mr-0 md:mr-6">
                   <p class="mt-6 md:mt-0 text-sm font-extralight">Canabliss Oasiz : <br>Super Berry Hydrating Mask</p>
                 </div>
