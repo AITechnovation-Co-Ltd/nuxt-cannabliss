@@ -31,8 +31,8 @@
       </slide> -->
       <slide v-for="(banner, index) in banners" :key="index">
         <div class="relative banner">
-          <div class="absolute h-full w-full md:w-2/3 lg:w-1/2 flex items-center justify-center z-10">
-            <div class="flex flex-col items-start justify-center">
+          <div class="absolute h-full w-full md:w-2/3 lg:w-3/4 flex items-center justify-center z-10 pl-12 pr-60">
+            <div class="w-full flex flex-col items-start justify-center">
               <h1 class="text-2xl sm:text-3xl font-light text-quaternary">{{ banner.tag }}</h1>
               <h2 class="mt-0 sm:mt-2 text-2xl sm:text-3xl 2xl:text-5xl text-primary font-normal">{{ banner.head }}</h2>
               <div class="mt-4 xl:mt-8 w-full flex items-center border-l-2 border-primary px-4">
@@ -127,7 +127,7 @@ export default {
 
 @media (max-width: 1919px) {
   .banner {
-    height: 810px;
+    height: 737px;
   }
 }
 
