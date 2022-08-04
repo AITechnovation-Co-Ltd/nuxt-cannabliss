@@ -6,6 +6,7 @@ export const state = () => {
     breadcrumb: '',
     product: '',
     productname: '',
+    count: 0,
     toggle: true,
     role: 0,
   }
@@ -44,6 +45,10 @@ export const getters = {
   getProductName: (state) => {
     const productname = state.productname
     return productname
+  },
+  getCount: (state) => {
+    const count = state.count
+    return count
   },
 }
 export const mutations = {
@@ -86,6 +91,9 @@ export const mutations = {
   },
   SET_PRODUCTNAME(state, productname) {
     state.productname = productname
+  },
+  SET_COUNT(state, count) {
+    state.count = state.count + count
   },
 }
 export const actions = {
@@ -134,5 +142,9 @@ export const actions = {
   },
   setProductName({ commit }, productname) {
     commit('SET_PRODUCTNAME', productname)
+  },
+  setCount({ commit }, count) {
+    // console.log(count)
+    commit('SET_COUNT', count)
   },
 }

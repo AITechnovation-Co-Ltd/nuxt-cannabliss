@@ -83,7 +83,7 @@
                   class="px-4 sm:px-8 h-10 sm:h-14 text-lg sm:text-2xl text-quaternary border border-quaternary rounded-full mr-4">Go to
                   shopping</button></a>
               <div @click="liked(i)"
-                class="h-14 w-14 flex items-center justify-center border border-primary rounded-full"
+                class="h-14 w-14 flex items-center justify-center border border-primary rounded-full cursor-pointer"
                 :class="{ 'bg-primary': products_id.islike }">
                 <base-icon icon="heart" viewBox="0 0 30 41" size="35" class="text-primary"
                   :color="products_id.islike ? '#ffffff' : '#78A695'" />
@@ -183,6 +183,8 @@ export default {
       else if (this.current != 0) { this.current-- }
     },
     liked(index) {
+      if (this.products_detail[index].islike) this.$store.dispatch('me/setCount', -1)
+      else if (!this.products_detail[index].islike) this.$store.dispatch('me/setCount', 1)
       this.products_detail[index].islike = !this.products_detail[index].islike
     },
     setBreadcrumb() {

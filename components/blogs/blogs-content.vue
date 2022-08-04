@@ -9,7 +9,8 @@
           <div v-if="!load_more ? i < 4 : i >= 0">
             <img :src="data.url" class="rounded-3xl" :class="{ 'sm:mt-16 xl:mt-24': i % 2 != 0 }">
             <p class="my-4 text-lg font-normal">Sed Ut Perspiciatis Unde Ommis lste Natus Error Sit</p>
-            <p class="text-sm font-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis odit saepe modi fugit aut
+            <p class="text-sm font-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corporis odit
+              saepe modi fugit aut
               officiis animi nesciunt repellat molestias dolor laborum tempore deleniti sed provident quae natus,
               voluptates consequatur?</p>
             <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="mt-8 border-quaternary">View
@@ -21,7 +22,7 @@
 
       <!-- Button -->
       <base-button v-show="!load_more" @click="load_more = true" class="px-6 -mt-20 sm:mt-0 border-quaternary"
-        :arrow='false'>Load more
+        :show_icon='false'>Load more
       </base-button>
       <!-- <base-button v-show="load_more" @click="load_more = false" class="px-6 -mt-20 sm:mt-0 border-quaternary"
         :arrow='false'>Hide

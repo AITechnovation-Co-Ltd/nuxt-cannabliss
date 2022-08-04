@@ -53,15 +53,15 @@
             </div>
           </div>
         </div>
-        </div>
       </div>
       <!-- Load More -->
       <div class="w-full flex justify-start py-4 px-4 mt-8">
-        <base-button class="border-quaternary">Load more</base-button>
+        <base-button v-show="!load_more" @click="load_more = !load_more" class_icon="rotate-90">Load more</base-button>
       </div>
     </div>
     <!-- Dialog -->
     <dialog-review ref="uploadReviewRef" />
+  </div>
   </div>
 </template>
 
@@ -71,6 +71,11 @@ import ReviewCard from "@/components/review/review-card.vue"
 export default {
   components: {
     ReviewCard, DialogReview
+  },
+  data() {
+    return {
+      load_more: false,
+    }
   }
 }
 </script>
