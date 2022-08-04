@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-screen">
+  <div class="relative w-full">
     <img class="w-full bg z-10" src="~/static/images/IMG_03ingredients/Group1150@2x.png">
     <div class="content flex z-20">
       <h1 class="text-5xl 2xl:text-7xl text-primary">Ingredients</h1>

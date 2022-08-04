@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg w-screen">
+  <div class="relative bg w-full">
     <img class="w-full" src="~/static/images/IMG_01home/pages_01home/Group1134@2x.png">
     <div class="centered flex flex-col">
       <p class="text-quaternary text-5xl">Subscribe to receive grape News & Promotion</p>
