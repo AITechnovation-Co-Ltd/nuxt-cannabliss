@@ -117,3 +117,7 @@
 .v-toast .v-toast__item {
   border-radius: 5em;
 }
+.hrr {
+  height: .5px;
+  opacity: .5;
+}

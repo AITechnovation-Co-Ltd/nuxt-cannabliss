@@ -1,60 +1,20 @@
 <template>
     <div class="w-full flex flex-col justify-center px-4 md:px-8 lg:px-12 xl:px-24 3xl:px-36">
-        <div class="w-full flex flex-col sm:flex-row justify-end ">
-            <div class="w-full lg:w-3/12 flex font-extralight text-sm text-quaternary items-center">
+        <div class="w-full flex flex-col lg:flex-row items-center">
+            <div class="w-full lg:w-2/12 flex font-extralight text-sm text-quaternary">
                 <base-icon icon="angle-left" viewBox="0 0 24 24" size="18" />&nbsp;
                 <nuxt-link to="/" class="hover:underline">Home</nuxt-link>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
-                <p>Favorite</p>
-                &nbsp;&nbsp;|&nbsp;&nbsp;
-                <p class="font-normal">{{ type }}</p>
+                <p class="font-normal">Favorite</p>
             </div>
-            <div class="w-full sm:ml-10 lg:w-9/12">
-                <h1 class="w-full text-2xl mt-6 sm:mt-0 sm:text-4xl font-extralight text-primary">{{ type }}</h1>
+            <div class="w-full lg:w-10/12">
+                <h1 class="w-full text-2xl mt-6 lg:mt-0 sm:text-4xl font-extralight text-primary">Favorite</h1>
             </div>
         </div>
         <!-- Categories -->
-        <div class="w-full flex flex-col lg:flex-row items-start">
-            <!-- List Categories -->
-            <div class="w-full lg:w-3/12 mt-3 sm:mt-10">
-                <h1 class="text-xl text-primary">Categories</h1>
-                <hr class="w-full my-3 sm:my-6 border-b border-gray-200 flex flex-col justify-center items-center" />
-                <div>
-                    <ul
-                        class="decoration-none text-primary font-extralight text-sm grid grid-cols-3 md:grid-cols-6 lg:grid-cols-1 gap-2 md:gap-x-2 lg:gap-y-4">
-                        <li class="flex items-center justify-center lg:justify-start"
-                            @click="filterType('Best Seller')">
-                            <span class="hover:font-normal hover:cursor-pointer"
-                                :class="{ 'font-normal': type == 'Best Seller' }">Best Seller</span>
-                        </li>
-                        <li class="flex items-center justify-center lg:justify-start" @click="filterType('New In')">
-                            <span class="hover:font-normal hover:cursor-pointer"
-                                :class="{ 'font-normal': type == 'New In' }">New In</span>
-                        </li>
-                        <li class="flex items-center justify-center lg:justify-start"
-                            @click="filterType('All Products')">
-                            <span class="hover:font-normal hover:cursor-pointer"
-                                :class="{ 'font-normal': type == 'All Products' }">All Products</span>
-                        </li>
-                        <li class="flex items-center justify-center lg:justify-start" @click="filterType('Hair')">
-                            <span class="hover:font-normal hover:cursor-pointer"
-                                :class="{ 'font-normal': type == 'Hair' }">Hair</span>
-                        </li>
-                        <li class="flex items-center justify-center lg:justify-start" @click="filterType('Face')">
-                            <span class="hover:font-normal hover:cursor-pointer"
-                                :class="{ 'font-normal': type == 'Face' }">Face</span>
-                        </li>
-                        <li class="flex items-center justify-center lg:justify-start" @click="filterType('Body')">
-                            <span class="hover:font-normal hover:cursor-pointer"
-                                :class="{ 'font-normal': type == 'Body' }">Body</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
+        <div class="w-full flex justify-end">
             <!-- Product cards -->
-            <div class="w-full lg:w-9/12 lg:ml-10">
-
+            <div class="w-full lg:w-10/12 mr-0 ml-auto">
                 <!-- Sort by -->
                 <div
                     class="w-full py-3 mt-3 sm:mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
@@ -83,8 +43,8 @@
                 </div>
 
                 <!-- Product card -->
-                <div v-if="list_products.length != 0" class="w-full mt-12 grid grid-cols-2 2xl:grid-cols-3 gap-x-4">
-                    <div class="w-full" v-for="(product, index) in list_products" :key="index">
+                <div v-if="products_liked.length != 0" class="w-full mt-12 grid grid-cols-2 2xl:grid-cols-3 gap-x-4">
+                    <div class="w-full" v-for="(product, index) in products_liked" :key="index">
                         <template v-if="index < item_per_page * page && index >= item_per_page * (page - 1)">
                             <div class="relative mx-2">
                                 <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
@@ -122,7 +82,7 @@
                 </div>
                 <div v-else class="w-full py-12 mt-12 bg-white text-center font-light text-2xl text-primary">No Products
                 </div>
-                <base-pages v-if="list_products.length != 0" class="mt-12" @change="change" :page="page"
+                <base-pages v-if="products_liked.length != 0" class="mt-12" @change="change" :page="page"
                     :total_pages="total_p" :limit="7"></base-pages>
             </div>
         </div>
@@ -138,48 +98,29 @@ export default {
             page: 1,
             total_p: 1,
             products,
-            products_islike: [],
-            type: 'All Products',
-            xxl: null,
+            products_liked: [],
             item_per_page: 6,
         };
     },
     components: { BaseButton },
-    computed: {
-        list_products() {
-            let list = []
-            if (this.type === 'All Products') {
-                list = this.products_islike
-            } else {
-                list = this.products_islike.filter((e) => e.type === this.type)
-            }
-            this.page = 1;
-            this.total_p = Math.ceil(list.length / this.item_per_page)
-            return list
-        },
-    },
     async mounted() {
-        await this.count_islike()
-        this.total_p = Math.ceil(this.products_islike.length / this.item_per_page)
+        await this.filter_liked()
     },
     methods: {
         change(p) {
             this.page = p
         },
-        filterType(type) {
-            this.type = type
-        },
         async liked(index) {
             if (this.products[index].islike) this.$store.dispatch('me/setCount', -1)
             else if (!this.products[index].islike) this.$store.dispatch('me/setCount', 1)
             this.products[index].islike = await !this.products[index].islike
-            this.count_islike()
+            this.filter_liked()
         },
-        count_islike() {
+        filter_liked() {
             let list = []
             list = this.products.filter((e) => e.islike === true)
             this.total_p = Math.ceil(list.length / this.item_per_page)
-            this.products_islike = list
+            this.products_liked = list
         }
     }
 };

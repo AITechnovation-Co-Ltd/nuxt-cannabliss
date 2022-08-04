@@ -1,6 +1,6 @@
 <template>
-    <div class="mt-2 flex text-center px-4 text-md text-quaternary font-light tracking-wide ">
-        <div class="flex items-center mr-1 ml-auto">
+    <div class="mt-2 flex items-center justify-center text-center px-4 text-md text-quaternary font-light tracking-wide ">
+        <div class="flex items-center sm:mr-1 sm:ml-auto">
             <p class="hidden sm:block"> <span class="font-medium">{{ page + ' ' }}</span>from<span class="font-medium">{{ ' ' + total_pages + ' '
             }} </span>pages</p>
         </div>

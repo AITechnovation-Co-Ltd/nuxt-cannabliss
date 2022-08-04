@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AllProduct class="mt-8 sm:mt-12 "/>
+    <AllProduct/>
   </div>
 </template>
 

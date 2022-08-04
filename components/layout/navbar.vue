@@ -132,6 +132,10 @@
           </div>
           <ul class="divide-y devide-white font-sans">
             <li>
+              <base-autocomplete v-model="productname" placeholder="Search" class="my-3 w-full"
+              :items="$model.productname" />
+            </li>
+            <li>
               <nuxt-link to="/product" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
                 <p @click="isOpen = false" class="w-full">Product</p>
               </nuxt-link>

@@ -6,8 +6,7 @@
         <h1 class="text-2xl font-light">Canabliss Oasiz :</h1>
         <h2 class="text-2xl text-primary font-normal">First Step Amino Essence</h2>
         <div class="w-full flex items-center mt-6">
-          <div class="h-40 sm:h-20 lg:h-16 2xl:h-32 w-3 sm:w-1.5 2xl:w-3 bg-primary mr-4"></div>
-          <p class="text-sm font-extralight">Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et
+          <p class="text-sm font-extralight pl-2 sm:pl-3 border-l-2 border-primary">Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua . Ut enim ad minim veniam , quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat . Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
             fugiat nulla pariatur .</p>
@@ -15,7 +14,7 @@
         <p class="mt-6 text-sm font-extralight">Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua . Ut enim ad minim veniam , quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat .</p>
-        <BaseButton class="mt-8" @click="$router.push(`/product/details/3`)">View more</BaseButton>
+        <base-button class="mt-8 hidden sm:block" @click="$router.push(`/product/details/3`)">View more</base-button>
       </div>
 
       <!-- image -->
@@ -31,6 +30,7 @@
             </div>
           </div>
         </div>
+    <base-button class=" mr-1 ml-auto block sm:hidden" @click="$router.push(`/product/details/3`)">View more</base-button>
       </div>
     </div>
     <img class="bg w-full z-10" src="~/static/images/IMG_01home/pages_01home/Group1136@2x.png" alt="">
@@ -39,9 +39,8 @@
 </template>
 
 <script>
-import BaseButton from '../base/base-button.vue';
 export default {
-  components: { BaseButton }
+
 }
 </script>
 

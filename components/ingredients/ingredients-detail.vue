@@ -5,7 +5,7 @@
         <h1 class="text-4xl sm:text-5xl text-primary">Ingredients</h1>
         <div class="flex items-center mt-4">
           <!-- <div class="w-0.5 h-24 2xl:h-12 bg-primary mr-4 flex"></div> -->
-          <span class="text-quaternary font-normal text-lg border-l-2 border-primary pl-4">By having a hero ingredient , there's an opportunity <br> to get
+          <span class="text-quaternary font-normal text-lg border-l-2 border-primary pl-4">By having a hero ingredient , there's an opportunity <br class="hidden sm:block"> to get
             into the SKINCARE TREND in Thailand</span>
         </div>
         <p class="mt-4 text-justify text-quaternary text-sm font-extralight">Leucojum aestivum bulb extract ( IBR - Snowflake ) is part of the anti aging
