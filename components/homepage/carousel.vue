@@ -31,18 +31,26 @@
       </slide> -->
       <slide v-for="(banner, index) in banners" :key="index">
         <div class="relative banner">
-          <div class="absolute h-full w-full md:w-2/3 lg:w-3/4 flex items-center justify-center z-10 pl-12 pr-60">
+          <div class="absolute h-full w-full md:w-2/3 lg:w-3/4 flex items-center justify-center z-10 pl-12 pr-32 lg:pr-60">
             <div class="w-full flex flex-col items-start justify-center">
               <h1 class="text-2xl sm:text-3xl font-light text-quaternary">{{ banner.tag }}</h1>
               <h2 class="mt-0 sm:mt-2 text-2xl sm:text-3xl 2xl:text-5xl text-primary font-normal">{{ banner.head }}</h2>
               <div class="mt-4 xl:mt-8 w-full flex items-center border-l-2 border-primary px-4">
                 <p class="content text-sm sm:text-lg font-extralight text-quaternary">{{ banner.detail }}</p>
               </div>
-              <div class="w-full flex items-center mt-4 md:mt-10 ml-4">
+              <div class="w-full flex items-center mt-2">
                 <div
-                  class="h-16 w-16 sm:h-20 sm:w-20 mr-4 border-2 border-tertiary rounded-full flex items-center justify-center">
+                  class="lg:hidden h-16 w-16 mr-4 border-2 border-tertiary rounded-full flex items-center justify-center">
                   <div
-                    class="h-12 w-12 sm:h-16 sm:w-16 bg-tertiary rounded-full flex items-center justify-center cursor-pointer">
+                    class="lg:hidden h-12 w-12 bg-tertiary rounded-full flex items-center justify-center cursor-pointer">
+                    <base-icon icon="play" viewBox="0 0 30 41" size="20" class="text-white" />
+                  </div>
+                </div>
+                <!-- play button responsive -->
+                <div
+                  class="lg:flex hidden h-20 w-20 mr-4 border-2 border-tertiary rounded-full  items-center justify-center">
+                  <div
+                    class="lg:flex hidden h-16 w-16 bg-tertiary rounded-full flex items-center justify-center cursor-pointer">
                     <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
                   </div>
                 </div>
