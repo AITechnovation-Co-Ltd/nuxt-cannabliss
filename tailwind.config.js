@@ -42,6 +42,7 @@ module.exports = {
       white: '#ffffff',
       black: '#000000',
       primary: '#78A695',
+      primary47:'#78a69578',
       secondary: '#F6F8EC',
       tertiary: '#83B9DF',
       quaternary: '#5E5F5F',
@@ -190,5 +191,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('flowbite/plugin'),
+    require('@tailwindcss/line-clamp'),
   ]
 }

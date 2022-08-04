@@ -7,7 +7,7 @@
       <div class="w-full lg:w-80 mt-10">
         <h1 class="text-xl font-normal text-primary">Categories</h1>
         <!-- <hr class="w-full lg:w-8/12 xl:w-10/12 3xl:w-11/12 my-6 border-b-px border-primary flex flex-col justify-center items-center"> -->
-        <div class="hrr bg-primary my-6 w-4/6"></div>
+        <div class="hrr bg-primary my-6 w-full sm:w-4/6"></div>
         <div
           class="w-full flex justify-around lg:flex-col decoration-none text-primary text-sm font-extralight space-y-0 sm:space-y-6">
           <p class="mt-0 sm:mt-4 lg:mt-0"><span class="hover:font-normal hover:cursor-pointer">All Products</span></p>
@@ -22,12 +22,12 @@
     <div class="w-full lg:w-9/12">
       <!-- Write a review -->
       <div class="w-full flex justify-start py-2 px-4 mt-6 sm:mt-8 bg-tertiary ">
-        <base-button @click="$refs.uploadReviewRef.show()" color="white">
+        <base-button @click="$refs.uploadReviewRef.show()" color="white" class="ml-auto mr-auto sm:ml-0">
           Write a review</base-button>
       </div>
       <!-- Review card -->
-      <div class="w-full columns-1 xl:flex justify-center" v-for="index in 4" :key="index">
-        <div class="flex divide-y-2 divide-primary">
+      <div class="w-full columns-1 xl:flex justify-center" v-for="i in 8" :key="i">
+        <div v-if="!load_more ? i < 4 : i >= 0" class="flex divide-y-2 divide-primary">
           <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
             <!-- Image Product-->
             <div class="w-full xl:w-2/5 columns-1 items-start md:flex ">
@@ -55,7 +55,7 @@
       </div>
       <!-- Load More -->
       <div class="w-full flex justify-start py-4 px-4 mt-8">
-        <base-button class="border-quaternary">Load more</base-button>
+        <base-button v-show="!load_more" @click="load_more = !load_more" class_icon="rotate-90">Load more</base-button>
       </div>
     </div>
     <!-- Dialog -->
@@ -69,6 +69,11 @@ import ReviewCard from "@/components/review/review-card.vue"
 export default {
   components: {
     ReviewCard, DialogReview
+  },
+  data() {
+    return {
+      load_more: false,
+    }
   }
 }
 </script>

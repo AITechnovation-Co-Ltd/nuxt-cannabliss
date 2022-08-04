@@ -1,6 +1,6 @@
 <template>
     <div class="w-full flex flex-col justify-center px-4 md:px-8 lg:px-12 xl:px-24 3xl:px-36">
-        <div class="w-full flex flex-col sm:flex-row justify-end ">
+        <div class="w-full flex flex-col lg:flex-row justify-end ">
             <div class="w-full lg:w-3/12 flex font-extralight text-sm text-quaternary items-center">
                 <base-icon icon="angle-left" viewBox="0 0 24 24" size="18" />&nbsp;
                 <nuxt-link to="/" class="hover:underline">Home</nuxt-link>
@@ -9,14 +9,14 @@
                 &nbsp;&nbsp;|&nbsp;&nbsp;
                 <p class="font-normal">{{ type }}</p>
             </div>
-            <div class="w-full sm:ml-10 lg:w-9/12">
-                <h1 class="w-full text-2xl mt-6 sm:mt-0 sm:text-4xl font-extralight text-primary">{{ type }}</h1>
+            <div class="w-full lg:ml-10 lg:w-9/12">
+                <h1 class="w-full text-2xl mt-6 lg:mt-0 sm:text-4xl font-extralight text-primary">{{ type }}</h1>
             </div>
         </div>
-        <!-- Categories -->
+
         <div class="w-full flex flex-col lg:flex-row items-start">
             <!-- List Categories -->
-            <div class="w-full lg:w-3/12 mt-3 sm:mt-10">
+            <div class="w-full lg:w-3/12 mt-3 sm:mt-10 hidden lg:block">
                 <h1 class="text-xl text-primary">Categories</h1>
                 <!-- <hr class="w-5/6 my-3 sm:my-6 border-b border-gold flex flex-col justify-center items-center" /> -->
                 <div class="w-5/6 my-3 sm:my-6 bg-gold hrr"></div>
@@ -59,7 +59,7 @@
                 <!-- Sort by -->
                 <div
                     class="w-full py-3 mt-3 sm:mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center mx-2">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center mx-2 hidden lg:flex">
                         <p class="text-xs text-white">Items per page</p>
                         <select class="h-8 w-16 text-xs text-quaternary rounded-xl mr-1 sm:mx-4"
                             v-model="item_per_page">
@@ -67,6 +67,18 @@
                             <option value=12>12</option>
                             <option value=18>18</option>
                             <option value=24>24</option>
+                        </select>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center ml-2 sm:ml-0 mx-2 lg:hidden">
+                        <p class="text-xs text-white">Categories</p>
+                        <select class="h-8 w-32 py-px text-xs text-quaternary rounded-xl mr-1 sm:mx-2" v-model="type">
+                            <option selected value="Best Seller">Best Seller</option>
+                            <option value="New In">New In</option>
+                            <option selected value="All Products">All Products</option>
+                            <option value="Hair">Hair</option>
+                            <option value="Face">Face</option>
+                            <option value="Body">Body</option>
                         </select>
                     </div>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center ml-2 sm:ml-0 mx-2">
@@ -109,16 +121,10 @@
                             </div>
                             <div class="my-4 mx-2 text-quaternary text-xl">
                                 <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type }}</p>
-                                <p class="text-base sm:text-lg font-medium hidden sm:block">{{ product.name.slice(0, 45)
-                                }} ..</p>
-                                <p class="text-base sm:text-lg font-medium block sm:hidden">{{ product.name.slice(0, 30)
+                                <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.name }}</p>
+                                <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
+                                        product.detail
                                 }}</p>
-                                <p class="mb-4 mt-2 text-xl text-detail font-bold thai hidden sm:block">{{
-                                        product.detail.slice(0, 80)
-                                }} ..</p>
-                                <p class="mb-4 mt-2 text-xl text-detail font-bold thai block sm:hidden">{{
-                                        product.detail.slice(0, 40)
-                                }} ..</p>
                                 <base-button @click="$router.push(`/product/details/${product.no}`)"
                                     class="border-quaternary">
                                     View more
@@ -195,6 +201,8 @@ export default {
             this.$store.dispatch('me/setProduct', '')
         },
         liked(index) {
+            if (this.products[index].islike) this.$store.dispatch('me/setCount', -1)
+            else if (!this.products[index].islike) this.$store.dispatch('me/setCount', 1)
             this.products[index].islike = !this.products[index].islike
         },
     }
@@ -206,14 +214,24 @@ export default {
     height: 15px;
     width: 1px;
 }
+
 .hrr {
     height: 0.5px;
     opacity: .34;
 }
+
 .centered {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -35%);
+}
+
+.truncated-2-lines {
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 </style>

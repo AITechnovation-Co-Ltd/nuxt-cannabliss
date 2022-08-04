@@ -8,7 +8,7 @@
     <div v-else class="w-full">
       <!-- Content -->
       <div
-        class="w-full flex mt-8 px-8 lg:px-12 xl:px-20 3xl:px-32 flex-col lg:flex-row justify-between items-center xl:items-start"
+        class="w-full flex mt-8 px-4 lg:px-12 xl:px-20 3xl:px-32 flex-col lg:flex-row justify-between items-center xl:items-start"
         v-for="(products_id, i) in products_img" :key="i">
 
         <!-- Picture -->
@@ -30,7 +30,7 @@
 
         <div class="w-full lg:w-1/2 mt-8 lg:mt-0 sm:ml-8" v-for="(products_id, i) in products_detail" :key="i">
           <p class="text-sm font-extralight capitalize">{{ products_id.type }}</p>
-          <div class="flex justify-between items-start">
+          <div class="flex flex-col sm:flex-row justify-between items-start">
             <h1 class="text-2xl xl:text-3xl font-light">{{ products_id.name }}</h1>
             <p class="font-extralight mt-2">{{ products_id.quantity }}</p>
           </div>
@@ -57,7 +57,7 @@
                   reprehenderit? Officia.</p>
               </base-dropdown-item>
             </base-dropdown>
-            <hr class="my-3">
+            <div class="hrr bg-primary"></div>
             <!-- FAQ 2-->
             <base-dropdown class="my-2" dropdownClass="mt-2" @opened="checkDataOpen2">
               <div slot="toggle" class="w-full flex items-center justify-between">
@@ -83,7 +83,7 @@
                   class="px-4 sm:px-8 h-10 sm:h-14 text-lg sm:text-2xl text-quaternary border border-quaternary rounded-full mr-4">Go to
                   shopping</button></a>
               <div @click="liked(i)"
-                class="h-14 w-14 flex items-center justify-center border border-primary rounded-full"
+                class="h-14 w-14 flex items-center justify-center border border-primary rounded-full cursor-pointer"
                 :class="{ 'bg-primary': products_id.islike }">
                 <base-icon icon="heart" viewBox="0 0 30 41" size="35" class="text-primary"
                   :color="products_id.islike ? '#ffffff' : '#78A695'" />
@@ -100,13 +100,13 @@
             <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
               <h1 class="text-lg sm:text-xl font-normal">Canabinoid (Cbd)</h1>
-              <p class="mt-2 text-center text-extralight">Anti inflammatory to make skin stronger</p>
+              <p class="mt-2 text-center text-base font-extralight">Anti inflammatory to make skin stronger</p>
             </div>
             <div class="w-0.5 h-60 xl:h-72 2xl:h-80 bg-primary hidden md:block"></div>
             <div class="w-full mt-4 sm:mt-0 md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
-              <h1 class="text-lg sm:text-xl text-center font-normal">Leucojum Aestivum Bulb Extract (Ibr - Snowflake®)</h1>
-              <p class="mt-2 text-center text-extralight">Anti Aging To Make Skin Younger And Brighter</p>
+              <h1 class="text-lg sm:text-xl text-center font-normal">Leucojum Aestivum Bulb Extract <br class="block sm:hidden"> (Ibr - Snowflake®)</h1>
+              <p class="mt-2 text-center text-base font-extralight">Anti Aging To Make Skin Younger And Brighter</p>
             </div>
           </div>
         </div>
@@ -183,6 +183,8 @@ export default {
       else if (this.current != 0) { this.current-- }
     },
     liked(index) {
+      if (this.products_detail[index].islike) this.$store.dispatch('me/setCount', -1)
+      else if (!this.products_detail[index].islike) this.$store.dispatch('me/setCount', 1)
       this.products_detail[index].islike = !this.products_detail[index].islike
     },
     setBreadcrumb() {
@@ -212,11 +214,6 @@ export default {
   width: 1px;
 }
 
-
-hr {
-  width: 100%;
-  border-bottom: solid .5px #78A695;
-}
 
 @media (min-width:1024px) {
   .content {

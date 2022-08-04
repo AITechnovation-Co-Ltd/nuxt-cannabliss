@@ -13,8 +13,8 @@
         <p class="my-4 text-4xl text-primary thai font-bold">ต้านการอักเสบของสิว</p>
         <p class="my-4 text-4xl text-primary thai font-extrabold">ต้านการอักเสบของสิว</p>
         <p class="my-4 text-4xl text-primary thai font-black">ต้านการอักเสบของสิว</p> -->
-        <p class="my-4 text-6xl text-primary thai">ต้านการอักเสบของสิว</p>
-        <p class="pl-2 font-medium text-quaternary border-l-4 border-primary text-2xl thai">การทาครีม CBD
+        <p class="my-4 text-5xl sm:text-6xl text-primary thai">ต้านการอักเสบของสิว</p>
+        <p class="pl-2 font-medium text-quaternary border-l-2 sm:border-l-4 border-primary text-2xl thai">การทาครีม CBD
           โดยไม่มีส่วนผสมของ THC
           เป็นทางเลือกที่
           ปลอดภัยและมีประสิทธิภาพ ไม่มีผลข้างเคียง พัฒนาคุณภาพชีวิต
@@ -49,7 +49,7 @@
       </div>
       <!-- Details -->
       <div class="w-full sm:w-11/12 xl:w-1/2">
-        <p class="my-4 text-6xl text-primary thai">กลไกการทำงาน</p>
+        <p class="my-4 text-5xl sm:text-6xl text-primary thai">กลไกการทำงาน</p>
         <p class="text-quaternary text-xl 2xl:text-2xl thai">
           ระบบเอ็นแคนนาบินอยด์ในผิวหนังจะควบคุมความผิดปกติทุกด้านที่เกิดขึ้นในสิว
           ในการทดลอง
@@ -65,10 +65,10 @@
     </div>
     <!-- Benefis of cbd -->
     <div class="w-full flex flex-col items-center">
-      <p class="my-6 text-3xl sm:text-4xl text-primary">Benefits Of CBD For Acne</p>
+      <p class="my-6 text-2xl sm:text-4xl text-primary">Benefits Of CBD For Acne</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="flex items-center" v-for="(data, i) in cbd" :key="i">
-          <img :src="data.url" class="h-24 w-24">
+          <img :src="data.url" class="w-20 sm:w-24">
           <p class="ml-2 font-normal">{{ data.benefits }}</p>
         </div>
       </div>
