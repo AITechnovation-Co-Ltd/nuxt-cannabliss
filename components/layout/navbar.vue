@@ -19,7 +19,7 @@
             <div class="notification">
               <nuxt-link to="/favorite">
                 <base-icon icon="heart" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
-                <span class="badge bg-primary">0</span>
+                <span class="badge bg-primary">{{ count_islike }}</span>
               </nuxt-link>
             </div>
             <div @click="searchProduct" class="cursor-pointer hover:scale-110">
@@ -232,12 +232,14 @@
 </template>
 
 <script>
+import products from "@/static/json/products.json"
 import baseIcon from '../base/base-icon.vue'
 export default {
   components: { baseIcon },
   data() {
     return {
       me: {},
+      products,
       productname: '',
       menu_route: ["blogs", "blogs-details-id", "product", "ingredients", "review", "contact", "favorite"],
       isOpen: false,
@@ -255,6 +257,10 @@ export default {
       let check = this.$store.getters['me/getToken']
       return check ? true : false
     },
+    count_islike() {
+      let count = this.$store.getters['me/getCount']
+      return count
+    }
   },
   created() {
     if (this.check_logined) this.me = this.$store.getters['me/getUser']
@@ -305,8 +311,8 @@ export default {
       }
     },
   },
-  mounted() {
-    document.addEventListener("keydown", e => {
+  async mounted() {
+    await document.addEventListener("keydown", e => {
       if (e.keyCode == 27 && this.isOpen) this.isOpen = false;
     });
   },

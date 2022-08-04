@@ -109,16 +109,10 @@
                             </div>
                             <div class="my-4 mx-2 text-quaternary text-xl">
                                 <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type }}</p>
-                                <p class="text-base sm:text-lg font-medium hidden sm:block">{{ product.name.slice(0, 45)
-                                }} ..</p>
-                                <p class="text-base sm:text-lg font-medium block sm:hidden">{{ product.name.slice(0, 30)
+                                <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.name }}</p>
+                                <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
+                                        product.detail
                                 }}</p>
-                                <p class="mb-4 mt-2 text-xl text-detail font-bold thai hidden sm:block">{{
-                                        product.detail.slice(0, 80)
-                                }} ..</p>
-                                <p class="mb-4 mt-2 text-xl text-detail font-bold thai block sm:hidden">{{
-                                        product.detail.slice(0, 40)
-                                }} ..</p>
                                 <base-button @click="$router.push(`/product/details/${product.no}`)"
                                     class="border-quaternary">
                                     View more
@@ -195,6 +189,8 @@ export default {
             this.$store.dispatch('me/setProduct', '')
         },
         liked(index) {
+            if (this.products[index].islike) this.$store.dispatch('me/setCount', -1)
+            else if (!this.products[index].islike) this.$store.dispatch('me/setCount', 1)
             this.products[index].islike = !this.products[index].islike
         },
     }
@@ -206,14 +202,24 @@ export default {
     height: 15px;
     width: 1px;
 }
+
 .hrr {
     height: 0.5px;
     opacity: .34;
 }
+
 .centered {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -35%);
+}
+
+.truncated-2-lines {
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 </style>

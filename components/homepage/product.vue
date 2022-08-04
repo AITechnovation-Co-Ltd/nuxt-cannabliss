@@ -8,27 +8,27 @@
       <div class="hidden sm:flex w-full lg:w-1/6 mr-6">
         <ul
           class="w-full flex justify-around lg:justify-start lg:flex-col decorate-none text-lg lg:text-xl text-primary font-extralight">
-          <li @click="filterType('all')">
+          <li @click="filterType('All')">
             <span class="flex items-center lg:my-4 hover:cursor-pointer"
-              :class="{ 'font-normal': type == 'all' }">All<div v-if="type == 'all'"
+              :class="{ 'font-normal': type == 'All' }">All<div v-if="type == 'All'"
                 class="w-16 ml-2 h-0.5 bg-primary hidden lg:block" :class="{ 'hidden': xl }"></div>
             </span>
           </li>
-          <li @click="filterType('hair')">
+          <li @click="filterType('Hair')">
             <span class="flex items-center lg:my-4 hover:cursor-pointer"
-              :class="{ 'font-normal': type == 'hair' }">Hair<div v-if="type == 'hair'" class="w-16 ml-2 h-0.5 bg-primary hidden lg:block"
+              :class="{ 'font-normal': type == 'Hair' }">Hair<div v-if="type == 'Hair'" class="w-16 ml-2 h-0.5 bg-primary hidden lg:block"
                 :class="{ 'hidden': xl }"></div>
             </span>
           </li>
-          <li @click="filterType('face')">
+          <li @click="filterType('Face')">
             <span class="flex items-center lg:my-4 hover:cursor-pointer"
-              :class="{ 'font-normal': type == 'face' }">Face<div v-if="type == 'face'" class="w-16 ml-2 h-0.5 bg-primary hidden lg:block"
+              :class="{ 'font-normal': type == 'Face' }">Face<div v-if="type == 'Face'" class="w-16 ml-2 h-0.5 bg-primary hidden lg:block"
                 :class="{ 'hidden': xl }"></div>
             </span>
           </li>
-          <li @click="filterType('body')">
+          <li @click="filterType('Body')">
             <span class="flex items-center lg:my-4 hover:cursor-pointer"
-              :class="{ 'font-normal': type == 'body' }">Body<div v-if="type == 'body'" class="w-16 ml-2 h-0.5 bg-primary hidden lg:block"
+              :class="{ 'font-normal': type == 'Body' }">Body<div v-if="type == 'Body'" class="w-16 ml-2 h-0.5 bg-primary hidden lg:block"
                 :class="{ 'hidden': xl }"></div>
             </span>
           </li>
@@ -56,10 +56,8 @@
               </div>
               <div class="my-4 mx-2 text-quaternary text-xl">
                 <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type }}</p>
-                <p class="text-base sm:text-lg font-medium hidden sm:block">{{ product.name.slice(0, 45)}} ..</p>
-                <p class="text-base sm:text-lg font-medium block sm:hidden">{{ product.name.slice(0, 30) }}</p>
-                <p class="mb-4 mt-2 text-xl text-detail font-bold thai hidden sm:block">{{ product.detail.slice(0, 80) }} ..</p>
-                <p class="mb-4 mt-2 text-xl text-detail font-bold thai block sm:hidden">{{ product.detail.slice(0, 40) }} ..</p>
+                <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.name }}</p>
+                                <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{ product.detail }}</p>
                 <base-button @click="$router.push(`/product/details/${product.no}`)" class="border-quaternary">
                   View more
                 </base-button>
@@ -86,14 +84,14 @@ export default {
       total_p: 1,
       products,
       screen: window.screen.width,
-      type: 'all',
+      type: 'All',
       xl: null,
     }
   },
   computed: {
     list_products() {
       let list = []
-      if (this.type === 'all') {
+      if (this.type === 'All') {
         list = this.products
       } else {
         list = this.products.filter((e) => e.type === this.type)
@@ -140,6 +138,8 @@ export default {
       }
     },
     liked(index) {
+      if (this.products[index].islike) this.$store.dispatch('me/setCount', -1)
+      else if (!this.products[index].islike) this.$store.dispatch('me/setCount', 1)
       this.products[index].islike = !this.products[index].islike
     },
   }
@@ -151,12 +151,18 @@ export default {
   height: 3px;
   width: 40%;
 }
-
-
 .centered {
   position: absolute;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -35%);
+}
+.truncated-2-lines {
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
 }
 </style>

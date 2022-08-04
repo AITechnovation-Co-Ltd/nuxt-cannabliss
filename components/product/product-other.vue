@@ -24,16 +24,8 @@
           </div>
           <div class="my-4 mx-2 text-quaternary text-xl">
             <p class="mt-2 text-xs sm:text-sm capitalize">{{ product.type }}</p>
-            <p class="text-sm sm:text-lg font-medium hidden sm:block">{{ product.name.slice(0, 50)
-            }}</p>
-            <p class="text-sm sm:text-lg font-medium block sm:hidden">{{ product.name.slice(0, 30)
-            }}</p>
-            <p class="mb-4 mt-2 text-xl font-normal thai hidden sm:block">{{ product.detail.slice(0,
-                80)
-            }} ..</p>
-            <p class="mb-4 mt-2 text-xl font-normal thai block sm:hidden">{{ product.detail.slice(0,
-                40)
-            }} ..</p>
+            <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.name }}</p>
+            <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{ product.detail }}</p>
             <base-button @click="$router.push(`/product/details/${product.no}`)" class="border-quaternary">
               View more
             </base-button>
@@ -92,6 +84,8 @@ export default {
       window.scrollTo(0, 0);
     },
     liked(index) {
+      if (this.products[index].islike) this.$store.dispatch('me/setCount', -1)
+      else if (!this.products[index].islike) this.$store.dispatch('me/setCount', 1)
       this.products[index].islike = !this.products[index].islike
     },
     list_products() {
@@ -112,5 +106,14 @@ export default {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -35%);
+}
+
+.truncated-2-lines {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
 }
 </style>

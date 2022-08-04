@@ -56,7 +56,8 @@
             <div class="w-full lg:w-9/12 lg:ml-10">
 
                 <!-- Sort by -->
-                <div class="w-full py-3 mt-3 sm:mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
+                <div
+                    class="w-full py-3 mt-3 sm:mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
                     <div class="flex flex-col sm:flex-row items-start sm:items-center mx-2">
                         <p class="text-xs text-white">Items per page</p>
                         <select class="h-8 w-16 text-xs text-quaternary rounded-xl mr-1 sm:mx-4"
@@ -83,9 +84,8 @@
 
                 <!-- Product card -->
                 <div v-if="list_products.length != 0" class="w-full mt-12 grid grid-cols-2 2xl:grid-cols-3 gap-x-4">
-                    <div class="w-full" v-for="(product, index) in list_products" :key="index" v-show="product.islike">
+                    <div class="w-full" v-for="(product, index) in list_products" :key="index">
                         <template v-if="index < item_per_page * page && index >= item_per_page * (page - 1)">
-                            <!-- v-if="xxl ? index < 4 * page && index >= 4 * (page - 1) : index < 6 * page && index >= 6 * (page - 1)"> -->
                             <div class="relative mx-2">
                                 <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
                                 <img class="centered w-full"
@@ -108,16 +108,10 @@
                             </div>
                             <div class="my-4 mx-2 text-quaternary text-xl">
                                 <p class="mt-2 text-xs sm:text-sm capitalize">{{ product.type }}</p>
-                                <p class="text-sm sm:text-lg font-medium hidden sm:block">{{ product.name.slice(0, 50)
+                                <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.name }}</p>
+                                <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
+                                        product.detail
                                 }}</p>
-                                <p class="text-sm sm:text-lg font-medium block sm:hidden">{{ product.name.slice(0, 30)
-                                }}</p>
-                                <p class="mb-4 mt-2 text-xl font-normal thai hidden sm:block">{{ product.detail.slice(0,
-                                        80)
-                                }} ..</p>
-                                <p class="mb-4 mt-2 text-xl font-normal thai block sm:hidden">{{ product.detail.slice(0,
-                                        40)
-                                }} ..</p>
                                 <base-button @click="$router.push(`/product/details/${product.no}`)"
                                     class="border-quaternary">
                                     View more
@@ -144,6 +138,7 @@ export default {
             page: 1,
             total_p: 1,
             products,
+            products_islike: [],
             type: 'All Products',
             xxl: null,
             item_per_page: 6,
@@ -154,20 +149,18 @@ export default {
         list_products() {
             let list = []
             if (this.type === 'All Products') {
-                list = this.products
+                list = this.products_islike
             } else {
-                list = this.products.filter((e) => e.type === this.type)
+                list = this.products_islike.filter((e) => e.type === this.type)
             }
             this.page = 1;
             this.total_p = Math.ceil(list.length / this.item_per_page)
-            // this.total_p = Math.ceil(this.xxl ? list.length / 4 : list.length / 6)
             return list
-
         },
     },
     async mounted() {
-        await this.getProduct()
-        this.total_p = Math.ceil(this.products.length / this.item_per_page)
+        await this.count_islike()
+        this.total_p = Math.ceil(this.products_islike.length / this.item_per_page)
     },
     methods: {
         change(p) {
@@ -175,27 +168,19 @@ export default {
         },
         filterType(type) {
             this.type = type
-            //this.calPage();
         },
-        isXXL() {
-            if (screen.width <= 1536) {
-                this.xxl = true
-                return true;
-            }
-            else {
-                this.xxl = false
-                return false;
-            }
+        async liked(index) {
+            if (this.products[index].islike) this.$store.dispatch('me/setCount', -1)
+            else if (!this.products[index].islike) this.$store.dispatch('me/setCount', 1)
+            this.products[index].islike = await !this.products[index].islike
+            this.count_islike()
         },
-        async getProduct() {
-            if (this.$store.getters['me/getProduct'] != '') {
-                this.type = await this.$store.getters['me/getProduct']
-            }
-            this.$store.dispatch('me/setProduct', '')
-        },
-        liked(index) {
-            this.products[index].islike = !this.products[index].islike
-        },
+        count_islike() {
+            let list = []
+            list = this.products.filter((e) => e.islike === true)
+            this.total_p = Math.ceil(list.length / this.item_per_page)
+            this.products_islike = list
+        }
     }
 };
 </script>
@@ -211,5 +196,14 @@ export default {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -35%);
+}
+
+.truncated-2-lines {
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
 }
 </style>
