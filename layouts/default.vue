@@ -1,5 +1,5 @@
 <template>
-    <div class="w-screen bg-secondary scroll-smooth">
+    <div class="w-full bg-secondary scroll-smooth">
         <Navbar />
         <div class="w-full relative" v-for="(item, i) in menus" :key="`banner-${i}`">
             <img v-if="route_name == item.route || route_name == item.sub_routes" class="w-full bg mb-10 sm:mb-20 z-10"

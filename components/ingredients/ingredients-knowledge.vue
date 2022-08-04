@@ -49,9 +49,9 @@
       </div>
       <div class="w-full sm:w-11/12 lg:w-1/2 h-full relative">
         <div class="w-full h-full flex items-start">
-          <img src="~/static/images/IMG_03ingredients/magnus-engo.jpg" class="rounded-3xl w-11/12 mt-8 sm:mt-14 lg:mt-12 z-20" alt="">
+          <img src="~/static/images/IMG_03ingredients/magnus-engo1.jpg" class="rounded-3xl w-11/12 mt-8 sm:mt-14 lg:mt-12 z-20" alt="">
         </div>
-        <img src="~/static/images/IMG_03ingredients/bg-blue2.png" alt=""
+        <img src="~/static/images/IMG_03ingredients/bg-blue.png" alt=""
           class="w-11/12 rounded-3xl mt-4 lg:mt-0 absolute top-0 right-0">
       </div>
     </div>

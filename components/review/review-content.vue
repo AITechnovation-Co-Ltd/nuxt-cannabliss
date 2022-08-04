@@ -26,8 +26,9 @@
           Write a review</base-button>
       </div>
       <!-- Review card -->
-      <div class="w-full columns-1 xl:flex justify-center" v-for="i in 8" :key="i">
-        <div v-if="!load_more ? i < 4 : i >= 0" class="flex divide-y-2 divide-primary">
+      <div class="w-full flex flex-col justify-center divide-y divide-primary47">
+        <div v-for="index in 4" :key="index">
+        <div class="divide-y-2 divide-primary">
           <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
             <!-- Image Product-->
             <div class="w-full xl:w-2/5 columns-1 items-start md:flex ">
@@ -60,6 +61,7 @@
     </div>
     <!-- Dialog -->
     <dialog-review ref="uploadReviewRef" />
+  </div>
   </div>
 </template>
 

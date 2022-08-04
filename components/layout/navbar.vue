@@ -1,6 +1,6 @@
 <template>
   <div class="sticky top-0 z-50">
-    <nav class="w-screen bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+    <nav class="w-full bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
       <div class="container h-16 flex flex-wrap justify-between items-center mx-auto px-6">
 
         <!-- Logo -->

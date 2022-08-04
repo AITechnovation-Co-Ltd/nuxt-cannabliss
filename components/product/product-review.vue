@@ -18,7 +18,7 @@
           <base-button @click="$refs.DialogReviewRefs.show()" class="mt-4 sm:mt-6">Write a review</base-button>
         </div>
         <div class="w-full mt-8 lg:mt-0 xl:w-3/4">
-          <div class="w-full xl:flex justify-center divide-y-2">
+          <div class="w-full flex flex-col justify-center divide-y-2">
             <div v-for="index in 2" :key="index">
               <div class="w-full xl:flex px-4 py-8 text-quaternary">
                 <!-- Image Product-->
