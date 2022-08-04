@@ -1,7 +1,10 @@
 <template>
   <div class="bg-secondary relative overflow-hidden">
     <!-- Carousel -->
-    <Carousel class="z-10" />
+    <Carousel class="z-10 md:block hidden" />
+
+    <!-- CarouselPhone -->
+    <Carouselphone class="z-10 md:hidden block" />
 
     <!-- Products -->
     <Product class="z-10" />
@@ -47,6 +50,7 @@
 import slick from '~/components/homepage/slick.vue'
 import Subscribe from '../components/layout/subscribe.vue'
 import Carousel from '~/components/homepage/carousel.vue'
+import Carouselphone from '~/components/homepage/carouselphone.vue'
 import Product from '~/components/homepage/product.vue'
 import Ingredients from '~/components/homepage/ingredients'
 import Blogs from '/components/homepage/blogs'
@@ -57,7 +61,7 @@ import VideoReview from '../components/homepage/video-review.vue'
 import Face from '~/components/homepage/face.vue'
 
 export default {
-  components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick },
+  components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick , Carouselphone},
   layout: 'home',
 }
 </script>

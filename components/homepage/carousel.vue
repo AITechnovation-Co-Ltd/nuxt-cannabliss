@@ -29,8 +29,29 @@
           </div>
         </div>
       </slide> -->
-      <slide v-for="(img, index) in imgs" :key="index">
-        <img :src="require(`~/static/images/banner${img.url}`)" class="w-full" />
+      <slide v-for="(banner, index) in banners" :key="index">
+        <div class="relative banner">
+          <div class="absolute h-full w-full md:w-2/3 lg:w-1/2 flex items-center justify-center z-10">
+            <div class="flex flex-col items-start justify-center">
+              <h1 class="text-2xl sm:text-3xl font-light text-quaternary">{{ banner.tag }}</h1>
+              <h2 class="mt-0 sm:mt-2 text-2xl sm:text-3xl 2xl:text-5xl text-primary font-normal">{{ banner.head }}</h2>
+              <div class="mt-4 xl:mt-8 w-full flex items-center border-l-2 border-primary px-4">
+                <p class="content text-sm sm:text-lg font-extralight text-quaternary">{{ banner.detail }}</p>
+              </div>
+              <div class="w-full flex items-center mt-4 md:mt-10 ml-4">
+                <div
+                  class="h-16 w-16 sm:h-20 sm:w-20 mr-4 border-2 border-tertiary rounded-full flex items-center justify-center">
+                  <div
+                    class="h-12 w-12 sm:h-16 sm:w-16 bg-tertiary rounded-full flex items-center justify-center cursor-pointer">
+                    <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
+                  </div>
+                </div>
+                <p class="text-lg text-quaternary">Watch the video</p>
+              </div>
+            </div>
+          </div>
+          <img :src="require(`~/static/images/banner${banner.url}`)" class="w-full top-0 z-1 absolute " />
+        </div>
       </slide>
 
       <hooper-pagination slot="hooper-addons"></hooper-pagination>
@@ -49,6 +70,7 @@
 </template>
 
 <script>
+import banners from '@/static/json/bannerscom.json'
 import '@/components/homepage/css/hooper.css'
 import {
   Hooper,
@@ -63,23 +85,23 @@ export default {
   },
   data() {
     return {
+      banners,
       hooperSettings: {
         itemsToShow: 1,
         itemsToSlide: 1,
         centerMode: true,
-        autoPlay: true,
+        autoPlay: false,
         playSpeed: 6000,
         wheelControl: false,
       },
-        imgs: [{ "url": "/banner1.png" }, { "url": "/Image2.png" }, { "url": "/banner3.png" }, { "url": "/banner4.png" }, { "url": "/banner5.png" }],
     };
   }
 }
 </script>
 
 <style scoped>
-.bg {
-  height: calc(100vh - 124px);
+.banner {
+  height: 1000px;
 }
 
 .bg2 {
@@ -102,27 +124,28 @@ export default {
   width: 480px;
 }
 
-@media (max-width: 1090px) {
-  .content {
-    width: auto;
+
+@media (max-width: 1919px) {
+  .banner {
+    height: 810px;
   }
 }
 
-@media (max-width: 1023px) {
-  .bg {
-    height: auto;
-  }
-
-  .bg3 {
-    height: auto;
+@media (max-width: 1439px) {
+  .banner {
+    height: 393px;
   }
 }
 
-@media (max-width: 639px) {
-  .social {
-    display: flex;
-    width: 100%;
-    margin-top: -50px;
+@media (max-width: 820px) {
+  .banner {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 432px;
   }
 }
 </style>
