@@ -32,7 +32,7 @@
           <p class="text-sm font-extralight capitalize">{{ products_id.type }}</p>
           <div class="flex flex-col sm:flex-row justify-between items-start">
             <h1 class="text-2xl xl:text-3xl font-light">{{ products_id.name }}</h1>
-            <p class="font-extralight mt-2">{{ products_id.quantity }}</p>
+            <p class="text-sm font-extralight mt-2">{{ products_id.quantity }}</p>
           </div>
           <!-- <h2 class="text-4xl font-semibold text-primary">Tinted Hybrid Block SPF50 Pa+++</h2> -->
           <div class="flex my-4 items-center">

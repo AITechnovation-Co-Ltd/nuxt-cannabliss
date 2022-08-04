@@ -26,9 +26,9 @@
           Write a review</base-button>
       </div>
       <!-- Review card -->
-      <div class="w-full columns-1 xl:flex justify-center divide-y divide-primary47">
+      <div class="w-full flex flex-col justify-center divide-y divide-primary47">
         <div v-for="index in 4" :key="index">
-        <div class="flex divide-y-2 divide-primary">
+        <div class="divide-y-2 divide-primary">
           <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
             <!-- Image Product-->
             <div class="w-full xl:w-2/5 columns-1 items-start md:flex ">
