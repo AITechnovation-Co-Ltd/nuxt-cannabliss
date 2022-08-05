@@ -31,14 +31,14 @@
       </slide> -->
       <slide v-for="(banner, index) in banners" :key="index">
         <div class="relative banner">
-          <div class="absolute h-full w-full md:w-2/3 lg:w-3/4 flex items-center justify-center z-10 pl-12 pr-32 lg:pr-60">
-            <div class="w-full flex flex-col items-start justify-center">
-              <h1 class="text-2xl sm:text-3xl font-light text-quaternary">{{ banner.tag }}</h1>
-              <h2 class="mt-0 sm:mt-2 text-2xl sm:text-3xl 2xl:text-5xl text-primary font-normal">{{ banner.head }}</h2>
+          <div class="absolute h-full w-full md:w-2/3 lg:w-3/4 flex items-center justify-center z-10 pl-10 lg:pl-20 pr-32 lg:pr-60">
+            <div class="w-full lg:-mt-48 flex flex-col items-start justify-center sm:-mt-12">
+              <h1 class="text-2xl lg:text-3xl sm:text-2xl font-light text-quaternary">{{ banner.tag }}</h1>
+              <h2 class="mt-0 sm:mt-2 text-2xl lg:text-5xl sm:text-3xl text-primary font-medium">{{ banner.head }}</h2>
               <div class="mt-4 xl:mt-8 w-full flex items-center border-l-2 border-primary px-4">
-                <p class="content text-sm sm:text-lg font-extralight text-quaternary">{{ banner.detail }}</p>
+                <p class="content text-sm lg:text-lg sm:text-md font-extralight text-quaternary">{{ banner.detail }}</p>
               </div>
-              <div class="w-full flex items-center mt-2">
+              <div class="w-full flex items-center mt-8">
                 <div
                   class="lg:hidden h-16 w-16 mr-4 border-2 border-tertiary rounded-full flex items-center justify-center">
                   <div
@@ -48,30 +48,32 @@
                 </div>
                 <!-- play button responsive -->
                 <div
-                  class="lg:flex hidden h-20 w-20 mr-4 border-2 border-tertiary rounded-full  items-center justify-center">
+                  class="lg:flex hidden h-16 w-16 mr-4 border-2 border-tertiary rounded-full  items-center justify-center">
                   <div
-                    class="lg:flex hidden h-16 w-16 bg-tertiary rounded-full flex items-center justify-center cursor-pointer">
-                    <base-icon icon="play" viewBox="0 0 30 41" size="30" class="text-white" />
+                    class="lg:flex hidden h-12 w-12 bg-tertiary rounded-full flex items-center justify-center cursor-pointer">
+                    <base-icon icon="play" viewBox="0 0 30 41" size="16" class="text-white" />
                   </div>
                 </div>
                 <p class="text-lg text-quaternary">Watch the video</p>
               </div>
             </div>
           </div>
+          <!-- <img :src="require(`~/static/images/banner/test1440.jpeg`)" class="w-full top-0 z-1 absolute " /> -->
           <img :src="require(`~/static/images/banner${banner.url}`)" class="w-full top-0 z-1 absolute " />
+          <!-- <img :src="require(`~/static/images/banner/1440x480.jpeg`)" class="w-full h-full top-0 z-1 absolute" /> -->
         </div>
       </slide>
 
       <hooper-pagination slot="hooper-addons"></hooper-pagination>
     </hooper>
-    <div class="social justify-center sm:absolute bottom-8 sm:bottom-12 right-12 xl:right-24 2xl:right-36">
+    <div class="social justify-center sm:absolute right-8 xl:right-24 2xl:right-36">
       <div class="flex space-x-6 sm:space-x-8">
-        <img class="w-8 sm:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
-        <img class="w-8 sm:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
+        <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
+        <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
         <a href="https://lin.ee/i5MkM6w" target="_blank">
-          <img class="w-8 sm:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
+          <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
         </a>
-        <img class="w-8 sm:w-10" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt="">
+        <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt="">
       </div>
     </div>
   </div>
@@ -109,9 +111,22 @@ export default {
 
 <style scoped>
 .banner {
-  height: 1000px;
+  /* height: calc(100vh - 84px); */
+  height: 100vh;
+  /* height: 1000px; */
+}
+.social {
+ top: 80%;
 }
 
+@media (max-width:1024px){
+  .banner {
+    height: 420px;
+  }
+  .social {
+    top: 88%;
+  }
+}
 .bg2 {
   height: 100%;
   display: flex;
@@ -132,14 +147,14 @@ export default {
   width: 480px;
 }
 
-
+/* 
 @media (max-width: 1919px) {
   .banner {
-    height: 737px;
+    height: 816px;
   }
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1000px) {
   .banner {
     height: 393px;
   }
@@ -155,5 +170,5 @@ export default {
   .banner {
     height: 432px;
   }
-}
+} */
 </style>

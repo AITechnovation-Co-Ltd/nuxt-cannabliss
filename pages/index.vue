@@ -10,10 +10,10 @@
     <Product class="z-10" />
 
     <!-- Ingredients -->
-    <Ingredients class="static z-20" />
+    <Ingredients class="relative z-20" />
 
     <!-- Face -->
-    <Face class="static z-10" />
+    <Face class="relative z-10" />
 
     <!-- Video Review -->
     <VideoReview class="z-10" />

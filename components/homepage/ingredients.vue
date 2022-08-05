@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-auto mt-8 sm:mt-20 text-quaternary flex flex-col lg:flex-row items-center px-4 lg:px-12 xl:px-20 z-20">
+  <div class="w-full h-auto mt-8 sm:mt-20 text-quaternary flex flex-col lg:flex-row items-center px-4 lg:px-12 xl:px-20">
     <div class="w-full sm:w-11/12 lg:w-2/5">
       <h1 class="text-3xl xl:text-4xl 2xl:text-5xl text-primary">Ingredients</h1>
       <div class="mt-4 lg:mt-8 flex items-center">

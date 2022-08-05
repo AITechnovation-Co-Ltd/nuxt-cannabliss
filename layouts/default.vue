@@ -16,9 +16,9 @@
             <div v-for="(item, i) in menus" :key="`menus-${i}`" class="flex">
                 <p v-if="route_name == item.route || route_name == item.sub_routes"
                     @click="$router.push(`${item.path}`)" class="mr-2 cursor-pointer hover:underline"
-                    :class="{ 'font-normal ': route_name == item.route }">{{ item.label }}&nbsp;&nbsp;|&nbsp;</p>
+                    :class="{ 'font-normal ': route_name == item.route }">{{ item.label }}</p>
                 <p v-if="route_name == item.sub_routes" @click="$router.push(`${item.path}`)"
-                    class="font-normal line-clamp-1">{{ breadcrumb }}</p>
+                    class="font-normal line-clamp-1">&nbsp;|&nbsp;&nbsp;{{ breadcrumb }}</p>
             </div>
         </div>
         <div class="w-full">

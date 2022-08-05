@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-sm bg-transparent hover:bg-primary hover:bg-opacity-20 cursor-pointer"
+    class="text-sm bg-transparent cursor-pointer"
     @click="clickEvent"
   >
     <slot />

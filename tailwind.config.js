@@ -18,9 +18,10 @@ module.exports = {
       '2xl': '1.5rem',
       '3xl': '1.875rem',
       '4xl': '2.25rem',
-      '5xl': '3rem',
-      '6xl': '4rem',
-      '7xl': '5rem',
+      '5xl': '2.75rem',
+      '6xl': '3rem',
+      '7xl': '4rem',
+      '8xl': '5rem',
     },
     variants: {
       extend: {
@@ -33,7 +34,7 @@ module.exports = {
       'md': '768px',
       'lg': '1024px',
       'xl': '1280px',
-      '2xl': '1440px',
+      '2xl': '1420px',
       '3xl': '1536px',
       // => @media (min-width: 1440px) { ... }
     },

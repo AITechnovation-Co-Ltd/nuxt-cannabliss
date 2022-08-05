@@ -93,8 +93,8 @@
         </div>
       </div>
       <!-- More detail -->
-      <div class="w-full mt-16 sm:mt-28 relative px-4">
-        <img class="bg w-full z-10" src="~/static/images/IMG_03ingredients/Group1149@2x.png" alt="">
+      <div class="w-full mt-16 sm:mt-28 relative px-0 lg:px-4">
+        <img class="bg absolute bottom-0 lg:relative w-full z-10" src="~/static/images/IMG_03ingredients/Group1149@2x.png" alt="">
         <div class="content w-full flex pb-4 lg:pb-0 z-20">
           <div class="w-full flex flex-col md:flex-row justify-evenly items-center z-20">
             <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
@@ -224,10 +224,10 @@ export default {
   }
 }
 
-@media (max-width:1024px) {
+/* @media (max-width:1024px) {
   .bg {
     position: absolute;
     bottom: 0;
   }
-}
+} */
 </style>

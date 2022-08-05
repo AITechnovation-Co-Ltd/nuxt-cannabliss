@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full relative xl:flex flex-col justify-center items-center z-10">
-    <div class="content w-full flex flex-col 2xl:flex-row py-8 px-4 lg:px-12 xl:px-20 3xl:px-32 z-20">
+  <div class="w-full h-auto relative xl:flex flex-col justify-center items-center z-10">
+    <div class="content  w-full flex flex-col 2xl:flex-row py-8 px-4 lg:px-12 xl:px-20 3xl:px-32 z-20">
       <div class="w-full 2xl:w-1/3 text-xl text-quaternary font-light z-20">
         <p class="text-sm">Face</p>
         <h1 class="text-2xl font-light">Canabliss Oasiz :</h1>

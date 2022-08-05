@@ -1,7 +1,7 @@
 <template>
   <div class="sticky top-0 z-50">
     <nav class="w-full bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
-      <div class="container h-16 flex flex-wrap justify-between items-center mx-auto px-6">
+      <div class="container flex flex-wrap justify-between items-center mx-auto px-6">
 
         <!-- Logo -->
         <nuxt-link to="/" class="flex items-center">
@@ -354,5 +354,8 @@ export default {
   padding: 0px 7px;
   border-radius: 50%;
   color: white;
+}
+.container {
+  height: 72px;
 }
 </style>

@@ -19,11 +19,9 @@
                                 ipsam laboriosam
                                 molestiae, provident corrupti.</p>
                             <div class="w-full flex justify-between items-end">
-                                <div class="w-full flex justify-center relative ">
-                                    <img src="@/static/images/IMG_01home/pages_01home/review03.png"
-                                        class="absolute bottom-0 -left-8 w-28 h-28">
-                                    <p>Canabliss Oasiz :<br>Super Berry Hydrating Mask
-                                    </p>
+                                <div class="w-full flex flex-col 3xl:flex-row  justify-center">
+                                    <img src="@/static/images/IMG_04review/product-review.png" class="w-20">
+                                    <p>Canabliss Oasiz :<br>Super Berry Hydrating Mask</p>
                                 </div>
                                 <p class="whitespace-nowrap">Kimberly K.</p>
                             </div>
