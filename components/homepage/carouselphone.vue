@@ -2,9 +2,9 @@
   <div class="bg w-full relative">
     <hooper :settings="hooperSettings" class="flex justify-center items-center">
       <slide v-for="(banner, index) in banners" :key="index">
-        <div class="relative  banner">
+        <div class="relative banner">
           <div class="absolute h-full w-full flex items-start justify-center z-10 mt-8">
-            <div class="flex flex-col w-full items-start justify-center pl-9 pr-6">
+            <div class="maincontent flex flex-col w-full items-start justify-between pl-9 pr-6">
               <h1 class="text-lg font-light text-quaternary">{{banner.tag}}</h1>
               <h2 class="text-3xl text-primary font-medium">{{banner.head}}</h2>
               <div class="mt-2 xl:mt-8 w-full flex items-center border-l-2 border-primary px-2">
@@ -82,5 +82,8 @@ export default {
 
 .content {
   width: 480px;
+}
+.maincontent {
+  height: 300px;
 }
 </style>
