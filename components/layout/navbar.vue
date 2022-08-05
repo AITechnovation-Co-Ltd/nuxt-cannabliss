@@ -18,7 +18,8 @@
           <div class="flex items-center">
             <div class="notification">
               <nuxt-link to="/favorite">
-                <base-icon icon="heart" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
+                <base-icon icon="heart" viewBox="0 0 30 41" size="45" class="text-primary mx-2" />
+                <!-- <div class="bg-primary w-5 h-5 rounded-full"></div> -->
                 <span class="badge bg-primary">{{ count_islike }}</span>
               </nuxt-link>
             </div>
@@ -348,12 +349,17 @@ export default {
 }
 
 .notification .badge {
+  height: 24px;
+  width: 24px;
   position: absolute;
   top: -4px;
   right: -2px;
   padding: 0px 7px;
   border-radius: 50%;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container {
   height: 72px;

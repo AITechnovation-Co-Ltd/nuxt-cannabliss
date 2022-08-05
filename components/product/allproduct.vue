@@ -108,7 +108,7 @@
                                 <div @click="liked(index)"
                                     class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer block sm:hidden">
                                     <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="40"
-                                        :color="product.islike ? '#f05252' : '#d5d6d7'" />
+                                        :color="islike_product0 ? '#f05252' : '#d5d6d7'" />
                                 </div>
                                 <div @click="liked(index)"
                                     class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer hidden sm:block">
@@ -120,7 +120,7 @@
                                     {{ product.quantity }}</p>
                             </div>
                             <div class="my-4 mx-2 text-quaternary text-xl">
-                                <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type }}</p>
+                                <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type }}{{islike_product0}}</p>
                                 <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.name }}</p>
                                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
                                         product.detail
@@ -201,8 +201,10 @@ export default {
             this.$store.dispatch('me/setProduct', '')
         },
         liked(index) {
-            if (this.products[index].islike) this.$store.dispatch('me/setCount', -1)
-            else if (!this.products[index].islike) this.$store.dispatch('me/setCount', 1)
+            // localStorage.setItem('products',JSON.stringify(products));
+            // var catchProduct = localStorage.getItem('products')
+            if (this.products[index].islike) this.$store.dispatch('me/setCount', -1),localStorage.setItem("islike_product"+index,false)
+            else if (!this.products[index].islike) this.$store.dispatch('me/setCount', 1),localStorage.setItem("islike_product"+index,true)
             this.products[index].islike = !this.products[index].islike
         },
     }

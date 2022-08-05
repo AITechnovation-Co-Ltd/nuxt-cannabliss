@@ -2,7 +2,7 @@
 <template>
   <div class="w-full flex flex-col justify-center items-center pb-10 sm:pb-20 mt-12 lg:mt-20 px-4 lg:px-12 xl:px-20 3xl:px-32">
     <!-- Title -->
-    <p class="text-5xl text-primary mb-8 lg:mb-16">Blogs</p>
+    <p class="text-5xl text-primary mb-8 lg:mb-16 font-medium">Blogs</p>
     <!-- Content -->
     <div class="w-full flex flex-col items-center">
       <!-- Card -->
