@@ -35,8 +35,8 @@
             <div class="w-full lg:-mt-48 flex flex-col items-start justify-center sm:-mt-12">
               <h1 class="text-2xl lg:text-3xl sm:text-2xl font-light text-quaternary">{{ banner.tag }}</h1>
               <h2 class="mt-0 sm:mt-2 text-2xl lg:text-5xl sm:text-3xl text-primary font-medium">{{ banner.head }}</h2>
-              <div class="mt-4 xl:mt-8 w-full flex items-center border-l-2 border-primary px-4">
-                <p class="content text-sm lg:text-lg sm:text-md font-extralight text-quaternary">{{ banner.detail }}</p>
+              <div class="mt-4 xl:mt-8 w-full flex items-center border-l-2 border-primary pl-2 lg:pl-4">
+                <p class="content text-2xl font-normal text-quaternary thai leading-6 lg:leading-8">{{ banner.detail }}</p>
               </div>
               <div class="w-full flex items-center mt-8">
                 <div

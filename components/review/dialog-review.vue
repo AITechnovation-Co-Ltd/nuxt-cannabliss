@@ -43,7 +43,7 @@
       <!-- Form Review -->
       <div class="w-full xl:w-2/3 mt-4 px-8 sm:px-24 flex flex-col text-gray-300">
         <select id="underline_select" :disabled="product_name ? true : false"
-          class="block py-2.5 px-0 w-full text-sm font-light bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+          class="block py-2.5 pl-0 pr-8 w-full text-sm font-light bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer">
           <option v-if="product_name" selected>{{ product_name }}</option>
           <option>Please select products</option>
           <option v-for="(item, i) in products" :key="`product-${i}`" :value="item.no">{{ item.name }}</option>

@@ -4,11 +4,11 @@
       <slide v-for="(banner, index) in banners" :key="index">
         <div class="relative banner">
           <div class="absolute h-full w-full flex items-start justify-center z-10 mt-8">
-            <div class="maincontent flex flex-col w-full items-start justify-between pl-9 pr-6">
+            <div class="maincontent flex flex-col w-full items-start justify-between px-4">
               <h1 class="text-lg font-light text-quaternary">{{banner.tag}}</h1>
               <h2 class="text-3xl text-primary font-medium">{{banner.head}}</h2>
               <div class="mt-2 xl:mt-8 w-full flex items-center border-l-2 border-primary px-2">
-                <p class="content text-base font-extralight text-quaternary">{{banner.detail}}</p>
+                <p class="content text-xl font-normal text-quaternary thai">{{banner.detail}}</p>
               </div>
               <div class="w-full flex items-center mt-2">
                 <div

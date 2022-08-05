@@ -53,9 +53,9 @@
           </div>
         </div>
         <!-- Load More -->
-        <div class="w-full flex justify-start py-4 px-4 mt-8">
-          <base-button v-if="count == 4" @click="count = 8" class_icon="rotate-90">Load more</base-button>
-        </div>
+      </div>
+      <div class="w-full flex justify-start py-4 px-4 mt-8">
+        <base-button v-if="count == 4" @click="count = 8" class_icon="rotate-90">Load more</base-button>
       </div>
       <!-- Dialog -->
       <dialog-review ref="uploadReviewRef" />

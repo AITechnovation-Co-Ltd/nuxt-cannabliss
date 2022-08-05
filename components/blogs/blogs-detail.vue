@@ -33,7 +33,7 @@
 
       <!-- Picture -->
       <div class="w-full sm:w-11/12 xl:w-1/2 mt-8 xl:mt-0 h-full relative">
-        <div class="w-full h-full flex items-start justify-center">
+        <div class="w-full h-full flex items-start justify-start sm:justify-center">
           <img src="@/static/images/IMG_03blogs_details/shutterstock.jpg" class="rounded-3xl w-11/12 mt-8 z-20"
             alt="">
         </div>
@@ -50,14 +50,14 @@
       <!-- Details -->
       <div class="w-full sm:w-11/12 xl:w-1/2">
         <p class="my-4 text-5xl sm:text-6xl text-primary thai">กลไกการทำงาน</p>
-        <p class="text-quaternary text-xl 2xl:text-2xl thai">
+        <p class="text-quaternary text-xl thai">
           ระบบเอ็นแคนนาบินอยด์ในผิวหนังจะควบคุมความผิดปกติทุกด้านที่เกิดขึ้นในสิว
           ในการทดลอง
           สารออกฤทธิ์หลายชนิดที่พบในกัญชา พบหลักฐานว่าลิโมนีนมีผลกระทบต่อกลไกที่เกี่ยวข้องกับ
           สิวและการรักษาสิว CBDและลิโมนีนร่วมกันอาจมีประสิทธิภาพสูงกว่า เนื่องจากสารทั้งสองชนิด
           นี้มีประสิทธิภาพในการต้านการอักเสบ เมื่อใช้เบต้า-แคริโอฟิลลีนร่วมกับCBDก็จะมีฤทธิ์ต้านการ
           อักเสบเช่นกัน</p>
-        <p class="my-4 text-quaternary text-xl 2xl:text-2xl thai">ลักษณะทางเคมีที่บ่งใช้: สายพันธุ์ CBD
+        <p class="my-4 text-quaternary text-xl thai">ลักษณะทางเคมีที่บ่งใช้: สายพันธุ์ CBD
           ที่ผสมและใช้อยู่ในยาเฉพาะที่
           การรักษาส่วนของเทอร์ปีน
           ชนิดลิโมนิ่น แคริโอฟิลลีน หรือไพนิ่นไว้ในสูตรยาอาจมีประโยชน์</p>
