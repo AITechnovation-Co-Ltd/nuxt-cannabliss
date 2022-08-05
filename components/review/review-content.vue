@@ -27,8 +27,7 @@
       </div>
       <!-- Review card -->
       <div class="w-full flex flex-col justify-center divide-y divide-primary47">
-        <div v-for="index in 4" :key="index">
-        <div class="divide-y-2 divide-primary">
+        <div v-for="i in count" :key="i">
           <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
             <!-- Image Product-->
             <div class="w-full xl:w-2/5 columns-1 items-start md:flex ">
@@ -53,15 +52,14 @@
             </div>
           </div>
         </div>
+        <!-- Load More -->
+        <div class="w-full flex justify-start py-4 px-4 mt-8">
+          <base-button v-if="count == 4" @click="count = 8" class_icon="rotate-90">Load more</base-button>
+        </div>
       </div>
-      <!-- Load More -->
-      <div class="w-full flex justify-start py-4 px-4 mt-8">
-        <base-button v-show="!load_more" @click="load_more = !load_more" class_icon="rotate-90">Load more</base-button>
-      </div>
+      <!-- Dialog -->
+      <dialog-review ref="uploadReviewRef" />
     </div>
-    <!-- Dialog -->
-    <dialog-review ref="uploadReviewRef" />
-  </div>
   </div>
 </template>
 
@@ -74,6 +72,7 @@ export default {
   },
   data() {
     return {
+      count: 4,
       load_more: false,
     }
   }
