@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <div v-if="no_product" class="w-full columns-1 mt-8 px-4 lg:px-12 xl:px-20 3xl:px-32">
+    <div v-if="no_product" class="w-full columns-1 mt-8 px-4 lg:px-12 xl:px-28 3xl:px-32">
       <div class="w-full py-12 mt-12 bg-white text-center text-4xl text-primary">No Product<br>
         <span class="text-red-500 text-xl">{{ productname }}</span>
       </div>
@@ -8,7 +8,7 @@
     <div v-else class="w-full">
       <!-- Content -->
       <div
-        class="w-full flex mt-8 px-4 lg:px-12 xl:px-20 3xl:px-32 flex-col lg:flex-row justify-between items-center xl:items-start"
+        class="w-full flex mt-8 px-4 lg:px-12 xl:px-28 3xl:px-32 flex-col lg:flex-row justify-between items-center xl:items-start"
         v-for="(products_id, i) in products_img" :key="i">
 
         <!-- Picture -->
@@ -39,6 +39,8 @@
             <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-tertiary mr-4" />
             <p class="text-quaternary text-sm">(55)</p>
           </div>
+          <div v-if="products_id.subtitle == ''" class="w-full h-6"></div>
+          <p v-else class="my-2 font-light text-quaternary text-md">{{ products_id.subtitle }}</p>
           <p class="my-2 font-extralight text-quaternary text-sm">{{ products_id.detail }}</p>
           <div class="w-full flex-col text-2xl text-primary">
 
@@ -80,13 +82,12 @@
             </div>
             <div class="w-full flex mt-6">
               <a class="flex items-center justify-center" :href="products_id.link"><button
-                  class="px-4 sm:px-8 h-10 sm:h-14 text-lg sm:text-2xl text-quaternary border border-quaternary rounded-full mr-4">Go
-                  to
+                  class="px-4 sm:px-8 h-10 sm:h-14 text-lg sm:text-2xl text-quaternary border border-quaternary rounded-full mr-4">Go to
                   shopping</button></a>
               <div @click="liked(i)"
-                class="h-14 w-14 flex items-center justify-center border border-primary rounded-full cursor-pointer"
+                class="h-10 w-10 flex items-center justify-center border border-primary rounded-full cursor-pointer"
                 :class="{ 'bg-primary': products_id.islike }">
-                <base-icon icon="heart" viewBox="0 0 30 41" size="35" class="text-primary"
+                <base-icon icon="heart" viewBox="0 0 30 41" size="25" class="text-primary"
                   :color="products_id.islike ? '#ffffff' : '#78A695'" />
               </div>
             </div>
@@ -95,20 +96,18 @@
       </div>
       <!-- More detail -->
       <div class="w-full mt-16 sm:mt-28 relative px-0 lg:px-4">
-        <img class="bg absolute bottom-0 lg:relative w-full z-10"
-          src="~/static/images/IMG_03ingredients/Group1149@2x.png" alt="">
+        <img class="bg absolute bottom-0 lg:relative w-full z-10" src="~/static/images/IMG_03ingredients/Group1149@2x.png" alt="">
         <div class="content w-full flex pb-4 lg:pb-0 z-20">
-          <div class="w-full flex flex-col md:flex-row justify-evenly items-center z-20">
+          <div class="w-full flex flex-col md:flex-row justify-evenly items-center z-20 px-4 lg:px-12 xl:px-28 3xl:px-32">
             <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
-              <h1 class="text-lg sm:text-xl font-normal">Canabinoid (Cbd)</h1>
-              <p class="mt-2 text-center text-base font-extralight">Anti inflammatory to make skin stronger</p>
+              <h1 class="text-lg 3xl:text-2xl font-normal">Canabinoid (Cbd)</h1>
+              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">Anti inflammatory to make skin stronger</p>
             </div>
-            <div class="w-0.5 h-60 xl:h-72 2xl:h-80 bg-primary hidden md:block"></div>
+            <div class="vl h-60 bg-primary hidden md:block"></div>
             <div class="w-full mt-4 sm:mt-0 md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
-              <h1 class="text-lg sm:text-xl text-center font-normal">Leucojum Aestivum Bulb Extract <br
-                  class="block sm:hidden"> (Ibr - Snowflake®)</h1>
+              <h1 class="text-lg sm:text-xl text-center font-normal">Leucojum Aestivum Bulb Extract <br class="block sm:hidden"> (Ibr - Snowflake®)</h1>
               <p class="mt-2 text-center text-base font-extralight">Anti Aging To Make Skin Younger And Brighter</p>
             </div>
           </div>
@@ -224,7 +223,6 @@ export default {
 
 <style scoped>
 .vl {
-  height: 15px;
   width: 1px;
 }
 

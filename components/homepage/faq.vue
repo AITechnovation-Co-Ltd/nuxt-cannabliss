@@ -1,9 +1,9 @@
 <template>
   <div class="w-full flex flex-col justify-center mt-8 sm:mt-12 px-4 lg:px-12 xl:px-20 3xl:px-32">
     <p class="text-primary text-4xl sm:text-5xl">FAQ</p>
-    <div class="w-full flex flex-col lg:flex-row items-center mt-4 mb-6 sm:mt-6">
+    <div class="w-full flex flex-col lg:flex-row items-start mt-4 mb-6 sm:mt-6">
       <!-- Dropdown FQA -->
-      <div class="w-full lg:w-1/2 flex flex-col mr-0 lg:mr-36">
+      <div class="w-full lg:w-1/2 flex flex-col mr-0 lg:mr-28">
 
         <!-- FQA 1-->
         <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen" openUp="toggle">

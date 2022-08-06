@@ -7,13 +7,27 @@
       <div class="w-full lg:w-80 mt-10">
         <h1 class="text-xl font-normal text-primary">Categories</h1>
         <!-- <hr class="w-full lg:w-8/12 xl:w-10/12 3xl:w-11/12 my-6 border-b-px border-primary flex flex-col justify-center items-center"> -->
-        <div class="hrr bg-primary my-6 w-full sm:w-4/6"></div>
-        <div
-          class="w-full flex justify-around lg:flex-col decoration-none text-primary text-sm font-extralight space-y-0 sm:space-y-6">
-          <p class="mt-0 sm:mt-4 lg:mt-0"><span class="hover:font-normal hover:cursor-pointer">All Products</span></p>
-          <p><span class="hover:font-normal hover:cursor-pointer">Hair</span></p>
-          <p><span class="hover:font-normal hover:cursor-pointer">Face</span></p>
-          <p><span class="hover:font-normal hover:cursor-pointer">Body</span></p>
+        <div class="hrr bg-primary my-6 w-full lg:w-4/6"></div>
+        <div>
+          <ul
+            class="decoration-none text-primary font-extralight text-sm grid grid-cols-4 lg:grid-cols-1 gap-2 md:gap-x-2 lg:gap-y-4">
+            <li class="flex items-center justify-center lg:justify-start" @click="filterType('All Products')">
+              <span class="hover:font-normal hover:cursor-pointer"
+                :class="{ 'font-normal': type == 'All Products' }">All Products</span>
+            </li>
+            <li class="flex items-center justify-center lg:justify-start" @click="filterType('Hair')">
+              <span class="hover:font-normal hover:cursor-pointer"
+                :class="{ 'font-normal': type == 'Hair' }">Hair</span>
+            </li>
+            <li class="flex items-center justify-center lg:justify-start" @click="filterType('Face')">
+              <span class="hover:font-normal hover:cursor-pointer"
+                :class="{ 'font-normal': type == 'Face' }">Face</span>
+            </li>
+            <li class="flex items-center justify-center lg:justify-start" @click="filterType('Body')">
+              <span class="hover:font-normal hover:cursor-pointer"
+                :class="{ 'font-normal': type == 'Body' }">Body</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -26,33 +40,37 @@
           Write a review</base-button>
       </div>
       <!-- Review card -->
-      <div class="w-full flex flex-col justify-center divide-y divide-primary47">
-        <div v-for="i in count" :key="i">
+      <div v-if="list_reviews.length != 0" class="w-full flex flex-col justify-center divide-y divide-primary47">
+        <div v-for="(review, index) in list_reviews.slice(0, count)" :key="index">
           <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
             <!-- Image Product-->
-            <div class="w-full xl:w-2/5 columns-1 items-start md:flex ">
-              <img src="@/static/images/IMG_04review/product-review.png" class="w-24 h-12 mr-0 md:mr-6">
-              <p class="mt-6 md:mt-0 text-sm font-extralight">Canabliss Oasiz : <br>Super Berry Hydrating Mask</p>
+            <div class="w-full xl:w-2/5 columns-1 items-start md:flex">
+              <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-24 h-12 mr-0 md:mr-6">
+              <p class="mt-6 md:mt-0 text-sm font-extralight">{{ review.product_name }}</p>
             </div>
             <!-- Details review -->
-            <div class="w-full xl:w-3/5 flex flex-col ml-0 sm:ml-4 mt-6 xl:mt-0 ">
-              <div class="columns-1 xl:flex justify-between">
-                <p class="text-lg font-light">Kimberly K.</p>
-                <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-primary" />
+            <div class="w-full xl:w-3/5 flex flex-col ml-0 xl:ml-4 mt-4 xl:mt-0 ">
+              <div class="flex sm:flex justify-between">
+                <p class="text-lg font-light">{{ review.name }}</p>
+                <div class="flex flex-row w-40">
+                  <div v-for="i in `first${review.score}`" :key="i">
+                    <base-icon icon="star" viewBox="0 0 30 41" size="30" class="text-primary" />
+                  </div>
+                  <div v-for="j in (5 - review.score)" :key="j">
+                    <base-icon icon="star" viewBox="0 0 30 41" size="30" class="text-gray-300" />
+                  </div>
+                </div>
               </div>
               <!-- Comment -->
-              <p class="my-4 text-sm font-extralight">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse
-                aperiam tempore eius
-                commodi
-                laudantium
-                earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae
-                architecto. Quia, eaque.</p>
+              <p class="my-4 text-sm font-extralight">{{ review.review }}</p>
               <!-- Date -->
-              <p class="text-sm font-extralight">12/06/22</p>
+              <p class="text-sm font-extralight">{{ review.date }}</p>
             </div>
           </div>
         </div>
         <!-- Load More -->
+      </div>
+      <div v-else class="w-full py-12 mt-12 bg-white text-center font-light text-2xl text-primary">No Reviews
       </div>
       <div class="w-full flex justify-start py-4 px-4 mt-8">
         <base-button v-if="count == 4" @click="count = 8" class_icon="rotate-90">Load more</base-button>
@@ -66,6 +84,7 @@
 <script>
 import DialogReview from "@/components/review/dialog-review.vue"
 import ReviewCard from "@/components/review/review-card.vue"
+import reviews from "@/static/json/review.json"
 export default {
   components: {
     ReviewCard, DialogReview
@@ -73,9 +92,27 @@ export default {
   data() {
     return {
       count: 4,
+      reviews,
       load_more: false,
+      type: 'All Products',
     }
-  }
+  },
+  computed: {
+    list_reviews() {
+      let list = []
+      if (this.type === 'All Products') {
+        list = this.reviews
+      } else {
+        list = this.reviews.filter((e) => e.type === this.type)
+      }
+      return list
+    },
+  },
+  methods: {
+    filterType(type) {
+      this.type = type
+    },
+  },
 }
 </script>
 

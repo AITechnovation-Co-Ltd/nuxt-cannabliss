@@ -1,6 +1,6 @@
 <template>
   <div>
-    <IngredientsDetail class="mt-10 xl:my-12"/>
+    <IngredientsDetail/>
     <IngredientsKnowledge />
   </div>
 </template>

@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "product_id": 1,
+    "imgUrl": ["/IMG_1200.jpg"],
+    "product_name": "Canabliss Advance Eye Cream Brown Algae Plus Caffeine",
+    "type": "Face",
+    "name": "Kimberly K.",
+    "score": 4,
+    "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
+    "date": "12/06/22"
+  },
+  {
+    "id": 2,
+    "product_id": 2,
+    "imgUrl": ["/IMG_1197.jpg"],
+    "product_name": "Canabliss Clear Micellar Cleansing Gel Organic Bulgarian Rose",
+    "type": "Face",
+    "name": "John D.",
+    "score": 5,
+    "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
+    "date": "14/06/22"
+  },
+  {
+    "id": 3,
+    "product_id": 1,
+    "imgUrl": ["/IMG_1200.jpg"],
+    "product_name": "Canabliss Advance Eye Cream Brown Algae Plus Caffeine",
+    "type": "Face",
+    "name": "Jane D.",
+    "score": 4,
+    "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
+    "date": "17/06/22"
+  },
+  {
+    "id": 4,
+    "product_id": 3,
+    "imgUrl": ["/IMG_1195.jpg"],
+    "product_name": "Canabliss Oasiz First Step Amino Essence",
+    "type": "Face",
+    "name": "Smit K.",
+    "score": 5,
+    "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
+    "date": "17/06/22"
+  },
+  {
+    "id": 5,
+    "product_id": 3,
+    "imgUrl": ["/IMG_1195.jpg"],
+    "product_name": "Canabliss Oasiz First Step Amino Essence",
+    "type": "Face",
+    "name": "Yaris G.",
+    "score": 4,
+    "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
+    "date": "20/06/22"
+  },
+  {
+    "id": 6,
+    "product_id": 2,
+    "imgUrl": ["/IMG_1197.jpg"],
+    "product_name": "Canabliss Clear Micellar Cleansing Gel Organic Bulgarian Rose",
+    "type": "Face",
+    "name": "Rik G.",
+    "score": 5,
+    "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
+    "date": "22/06/22"
+  },
+  {
+    "id": 7,
+    "product_id": 1,
+    "imgUrl": ["/IMG_1200.jpg"],
+    "product_name": "Canabliss Advance Eye Cream Brown Algae Plus Caffeine",
+    "type": "Face",
+    "name": "Steve R.",
+    "score": 4,
+    "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
+    "date": "25/06/22"
+  },
+  {
+    "id": 8,
+    "product_id": 3,
+    "imgUrl": ["/IMG_1195.jpg"],
+    "product_name": "Canabliss Oasiz First Step Amino Essence",
+    "type": "Face",
+    "name": "Bucky B.",
+    "score": 5,
+    "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
+    "date": "29/06/22"
+  }
+]

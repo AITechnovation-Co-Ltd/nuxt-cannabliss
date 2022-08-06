@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full px-4 lg:px-12 xl:px-20 3xl:px-32">
-    <h1 class="text-4xl sm:text-5xl text-primary text-center font-light my-12">You may also like</h1>
+  <div class="w-full px-4 lg:px-12 xl:px-28 3xl:px-32">
+    <h1 class="text-4xl sm:text-5xl text-primary text-center font-medium my-12">You may also like</h1>
     <div class="w-full grid grid-cols-2 xl:grid-cols-4 ">
       <div class="w-full " v-for="(product, index) in products" :key="index">
         <template v-if="index < page_screen * page && index >= page_screen * (page - 1)">
