@@ -36,6 +36,7 @@ import Navbar from '../components/layout/navbar.vue'
 import Foot from '../components/layout/foot.vue'
 export default {
     components: { Navbar, Foot },
+    middleware: 'auth',
     data() {
         return {
             no_breadcrumb: ['product', 'favorite'],

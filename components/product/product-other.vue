@@ -56,8 +56,7 @@ export default {
     }
   },
   async mounted() {
-    // console.log(this.page_screen)
-    console.log(this.params)
+    this.productname = await this.$store.getters['me/getProductName']
     this.list_products()
   },
   computed: {
@@ -72,7 +71,6 @@ export default {
       else if (this.screen <= 1280) {
         item_per_page = 2
       }
-
       return item_per_page
     },
   },
@@ -83,18 +81,33 @@ export default {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
-    liked(index) {
-      if (this.products[index].islike) this.$store.dispatch('me/setCount', -1)
-      else if (!this.products[index].islike) this.$store.dispatch('me/setCount', 1)
-      this.products[index].islike = !this.products[index].islike
+    async liked(index) {
+      this.products[index].islike = await !this.products[index].islike
+      this.$store.dispatch('me/setProducts', this.data)
     },
-    list_products() {
-      let list = []
-      list = this.data.filter((e) => e.no != this.params)
-      this.page = 1;
-      this.total_p = Math.ceil(list.length / this.page_screen)
-      console.log(list)
-      this.products = list
+    async list_products() {
+      const self = this
+      await self.getProducts()
+      if (self.$store.getters['me/getProductName'] != '') {
+        let list = await self.data.filter((e) => e.name != self.$store.getters['me/getProductName'])
+        self.products = list
+      }
+      else {
+        let list = await self.data.filter((e) => e.no != this.params)
+        self.products = list
+      }
+      this.total_p = Math.ceil(self.products.length / self.page_screen)
+    },
+    async getProducts() {
+      const self = this
+      try {
+        let products = await self.$store.getters['me/getProducts']
+        if (products != []) {
+          self.data = products
+        }
+      } catch (err) {
+        console.log('error', err);
+      }
     },
   },
 };

@@ -52,7 +52,6 @@
                     </ul>
                 </div>
             </div>
-
             <!-- Product cards -->
             <div class="w-full lg:w-9/12 lg:ml-10">
 
@@ -159,7 +158,8 @@ export default {
     components: { BaseButton },
     computed: {
         list_products() {
-            let list = []
+            this.getProducts()
+            let list = this.products
             if (this.type === 'All Products') {
                 list = this.products
             } else {
@@ -167,13 +167,10 @@ export default {
             }
             this.page = 1;
             this.total_p = Math.ceil(list.length / this.item_per_page)
-            // this.total_p = Math.ceil(this.xxl ? list.length / 4 : list.length / 6)
             return list
-
         },
     },
     async mounted() {
-        await this.getProduct()
         this.total_p = Math.ceil(this.products.length / this.item_per_page)
     },
     methods: {
@@ -182,28 +179,21 @@ export default {
         },
         filterType(type) {
             this.type = type
-            //this.calPage();
         },
-        isXXL() {
-            if (screen.width <= 1536) {
-                this.xxl = true
-                return true;
-            }
-            else {
-                this.xxl = false
-                return false;
+        async getProducts() {
+            const self = this
+            try {
+                let products = await self.$store.getters['me/getProducts']
+                if (products != []) {
+                    self.products = products
+                }
+            } catch (err) {
+                console.log('error', err);
             }
         },
-        async getProduct() {
-            if (this.$store.getters['me/getProduct'] != '') {
-                this.type = await this.$store.getters['me/getProduct']
-            }
-            this.$store.dispatch('me/setProduct', '')
-        },
-        liked(index) {
-            if (this.products[index].islike) this.$store.dispatch('me/setCount', -1)
-            else if (!this.products[index].islike) this.$store.dispatch('me/setCount', 1)
-            this.products[index].islike = !this.products[index].islike
+        async liked(index) {
+            this.products[index].islike = await !this.products[index].islike
+            this.$store.dispatch('me/setProducts', this.products)
         },
     }
 };

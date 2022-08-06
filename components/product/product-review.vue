@@ -79,7 +79,6 @@ export default {
       const self = this
       if (self.$store.getters['me/getProductName'] != '') {
         let products_test = await self.products.filter((e) => e.name == self.$store.getters['me/getProductName'])
-        console.log(products_test.length)
         if (products_test.length == 0) {
           self.no_product = true
         }
@@ -103,7 +102,6 @@ export default {
 .b BaseButtongheight {
   height: 500px;
 }
-
 .centered {
   position: absolute;
   top: 50%;

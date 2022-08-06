@@ -80,7 +80,8 @@
             </div>
             <div class="w-full flex mt-6">
               <a class="flex items-center justify-center" :href="products_id.link"><button
-                  class="px-4 sm:px-8 h-10 sm:h-14 text-lg sm:text-2xl text-quaternary border border-quaternary rounded-full mr-4">Go to
+                  class="px-4 sm:px-8 h-10 sm:h-14 text-lg sm:text-2xl text-quaternary border border-quaternary rounded-full mr-4">Go
+                  to
                   shopping</button></a>
               <div @click="liked(i)"
                 class="h-14 w-14 flex items-center justify-center border border-primary rounded-full cursor-pointer"
@@ -94,7 +95,8 @@
       </div>
       <!-- More detail -->
       <div class="w-full mt-16 sm:mt-28 relative px-0 lg:px-4">
-        <img class="bg absolute bottom-0 lg:relative w-full z-10" src="~/static/images/IMG_03ingredients/Group1149@2x.png" alt="">
+        <img class="bg absolute bottom-0 lg:relative w-full z-10"
+          src="~/static/images/IMG_03ingredients/Group1149@2x.png" alt="">
         <div class="content w-full flex pb-4 lg:pb-0 z-20">
           <div class="w-full flex flex-col md:flex-row justify-evenly items-center z-20">
             <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
@@ -105,7 +107,8 @@
             <div class="w-0.5 h-60 xl:h-72 2xl:h-80 bg-primary hidden md:block"></div>
             <div class="w-full mt-4 sm:mt-0 md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
-              <h1 class="text-lg sm:text-xl text-center font-normal">Leucojum Aestivum Bulb Extract <br class="block sm:hidden"> (Ibr - Snowflake®)</h1>
+              <h1 class="text-lg sm:text-xl text-center font-normal">Leucojum Aestivum Bulb Extract <br
+                  class="block sm:hidden"> (Ibr - Snowflake®)</h1>
               <p class="mt-2 text-center text-base font-extralight">Anti Aging To Make Skin Younger And Brighter</p>
             </div>
           </div>
@@ -143,6 +146,7 @@ export default {
   methods: {
     async fetch() {
       const self = this
+      await self.getProducts()
       if (self.productname !== '') {
         let products_test = await self.products.filter((e) => e.name == self.productname)
         if (products_test.length == 0) {
@@ -178,14 +182,24 @@ export default {
         this.current++
       }
     },
+    async getProducts() {
+      const self = this
+      try {
+        let products = await self.$store.getters['me/getProducts']
+        if (products != []) {
+          self.products = products
+        }
+      } catch (err) {
+        console.log('error', err);
+      }
+    },
     arrow_left() {
       if (this.current <= 0) { this.current = this.current = 0 }
       else if (this.current != 0) { this.current-- }
     },
-    liked(index) {
-      if (this.products_detail[index].islike) this.$store.dispatch('me/setCount', -1)
-      else if (!this.products_detail[index].islike) this.$store.dispatch('me/setCount', 1)
-      this.products_detail[index].islike = !this.products_detail[index].islike
+    async liked(index) {
+      this.products_detail[index].islike = await !this.products_detail[index].islike
+      this.$store.dispatch('me/setProducts', this.products)
     },
     setBreadcrumb() {
       if (this.productname !== '' && this.no_product != true) {

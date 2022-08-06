@@ -111,17 +111,28 @@ export default {
             this.page = p
         },
         async liked(index) {
-            if (this.products[index].islike) this.$store.dispatch('me/setCount', -1)
-            else if (!this.products[index].islike) this.$store.dispatch('me/setCount', 1)
             this.products[index].islike = await !this.products[index].islike
+            await this.$store.dispatch('me/setProducts', this.products)
             this.filter_liked()
         },
-        filter_liked() {
+        async filter_liked() {
             let list = []
+            await this.getProducts()
             list = this.products.filter((e) => e.islike === true)
             this.total_p = Math.ceil(list.length / this.item_per_page)
             this.products_liked = list
-        }
+        },
+        async getProducts() {
+            const self = this
+            try {
+                let products = await self.$store.getters['me/getProducts']
+                if (products != []) {
+                    self.products = products
+                }
+            } catch (err) {
+                console.log('error', err);
+            }
+        },
     }
 };
 </script>

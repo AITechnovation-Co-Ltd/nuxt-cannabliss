@@ -1,12 +1,14 @@
+
 export const state = () => {
   return {
     user: {},
     token: '',
     refresh_token: '',
     breadcrumb: '',
-    product: '',
+    products: [],
     productname: '',
     count: 0,
+    liked: [],
     toggle: true,
     role: 0,
   }
@@ -38,17 +40,23 @@ export const getters = {
     const breadcrumb = state.breadcrumb
     return breadcrumb
   },
-  getProduct: (state) => {
-    const product = state.product
-    return product
+  getProducts: (state) => {
+    const products = localStorage.getItem('products') || state.products
+    let p = JSON.parse(products)
+    return p
   },
   getProductName: (state) => {
     const productname = state.productname
     return productname
   },
   getCount: (state) => {
-    const count = state.count
+    const count = localStorage.getItem('count') || state.count
     return count
+  },
+  getSome: (state) => {
+    console.log(state.liked)
+    const liked = localStorage.getItem('liked') || state.liked
+    return liked
   },
 }
 export const mutations = {
@@ -86,14 +94,30 @@ export const mutations = {
   SET_BREADCRUMB(state, breadcrumb) {
     state.breadcrumb = breadcrumb
   },
-  SET_PRODUCT(state, product) {
-    state.product = product
+  SET_PRODUCTS(state, products) {
+    let like_count = 0
+    products.forEach(product => {
+      if (product["islike"]) {
+        like_count++
+      }
+    })
+    state.products = products
+    state.count = like_count
+    const p = JSON.stringify(products)
+    localStorage.setItem('count', like_count)
+    localStorage.setItem('products', p)
   },
   SET_PRODUCTNAME(state, productname) {
     state.productname = productname
   },
   SET_COUNT(state, count) {
     state.count = state.count + count
+    localStorage.setItem('count', state.count)
+  },
+  SET_SOME(state, data) {
+    state.liked[data.index] = { index: data.index, liked: data.islike }
+    localStorage.setItem('liked', state.liked)
+    console.log(state.liked)
   },
 }
 export const actions = {
@@ -137,14 +161,30 @@ export const actions = {
   setBreadcrumb({ commit }, breadcrumb) {
     commit('SET_BREADCRUMB', breadcrumb)
   },
-  setProduct({ commit }, product) {
-    commit('SET_PRODUCT', product)
+  setProducts({ commit }, products) {
+    let product = []
+    products.forEach(p => {
+      product.push({
+        detail: p.detail,
+        imgUrl: p.imgUrl,
+        islike: p.islike,
+        link: p.link,
+        name: p.name,
+        no: p.no,
+        quantity: p.quantity,
+        type: p.type,
+      })
+    })
+    commit('SET_PRODUCTS', product)
   },
-  setProductName({ commit }, productname) {
-    commit('SET_PRODUCTNAME', productname)
+  async setProductName({ commit }, productname) {
+    await commit('SET_PRODUCTNAME', productname)
   },
   setCount({ commit }, count) {
-    // console.log(count)
     commit('SET_COUNT', count)
+  },
+  setSome({ commit }, data) {
+    console.log(data)
+    commit('SET_SOME', data)
   },
 }
