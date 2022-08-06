@@ -42,10 +42,13 @@
 
       <!-- Form Review -->
       <div class="w-full xl:w-2/3 mt-4 px-8 sm:px-24 flex flex-col text-gray-300">
-        <select id="underline_select" :disabled="product_name ? true : false" v-model="product_no" :class="{'text-primary':product_no != ''}"
+        <select v-if="product_name" disabled
+          class="block py-2.5 pl-0 pr-8 w-full text-sm text-primary font-light bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+          <option selected>{{ product_name }}</option>
+        </select>
+        <select v-else v-model="product_no" :class="{ 'text-primary': product_no != '' }"
           class="block py-2.5 pl-0 pr-8 w-full text-sm font-light bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer">
-          <option v-if="product_name" selected>{{ product_name }}</option>
-          <option value=''>Please select products</option>
+          <option value="" disabled selected hidden>Please select products</option>
           <option v-for="(item, i) in products" :key="`product-${i}`" :value="item.no">{{ item.name }}</option>
         </select>
         <base-input-review label='Name Lastname' class="text-quaternary my-2" />
@@ -80,7 +83,7 @@ export default {
   data() {
     return {
       products,
-      product_no:'',
+      product_no: '',
       s1: false,
       s2: false,
       s3: false,
@@ -89,6 +92,9 @@ export default {
       isShow: false,
       callback: undefined,
     };
+  },
+  mounted() {
+    console.log(this.product_name)
   },
   methods: {
     show(title, callback) {

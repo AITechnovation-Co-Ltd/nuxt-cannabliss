@@ -30,10 +30,10 @@
                     </div>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center ml-2 sm:ml-0 mx-2">
                         <p class="text-xs text-white">Sort by</p>
-                        <select class="h-8 w-32 py-px text-xs text-quaternary rounded-xl mr-1 sm:mx-2">
-                            <option></option>
-                            <option value="">A-Z</option>
-                            <option value="">Z-A</option>
+                        <select v-model="sort_by" @change="sortby(sort_by)"
+                            class="h-8 w-32 py-px text-xs text-quaternary rounded-xl mr-1 sm:mx-2">
+                            <option value="a-z">A-Z</option>
+                            <option value="z-a">Z-A</option>
                             <option value="">Newest</option>
                             <option selected value="">Best Selling</option>
                             <option value="">Price(Low to hight)</option>
@@ -100,6 +100,7 @@ export default {
             products,
             products_liked: [],
             item_per_page: 6,
+            sort_by: '',
         };
     },
     components: { BaseButton },
@@ -109,6 +110,24 @@ export default {
     methods: {
         change(p) {
             this.page = p
+        },
+        sortby(value) {
+            if (value === 'a-z') {
+                this.products_liked.sort((a, b) => {
+                    // console.log(a,b)
+                    let textA = a.name.toUpperCase();
+                    let textB = b.name.toUpperCase();
+                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                })
+                // console.log(this.products_liked)
+            }
+            else if (value === 'z-a') {
+                this.products_liked.reverse((a, b) => {
+                    let textA = a.name.toUpperCase();
+                    let textB = b.name.toUpperCase();
+                    return (textA > textB) ? 1 : (textA < textB) ? -1 : 0;
+                })
+            }
         },
         async liked(index) {
             this.products[index].islike = await !this.products[index].islike

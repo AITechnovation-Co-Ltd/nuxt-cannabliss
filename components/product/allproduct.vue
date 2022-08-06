@@ -82,9 +82,10 @@
                     </div>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center ml-2 sm:ml-0 mx-2">
                         <p class="text-xs text-white">Sort by</p>
-                        <select class="h-8 w-32 py-px text-xs text-quaternary rounded-xl mr-1 sm:mx-2">
-                            <option value="">A-Z</option>
-                            <option value="">Z-A</option>
+                        <select v-model="sort_by" @change="sortby(sort_by)"
+                            class="h-8 w-32 py-px text-xs text-quaternary rounded-xl mr-1 sm:mx-2">
+                            <option value="a-z">A-Z</option>
+                            <option value="z-a">Z-A</option>
                             <option value="">Newest</option>
                             <option selected value="">Best Selling</option>
                             <option value="">Price(Low to hight)</option>
@@ -97,7 +98,6 @@
                 <div v-if="list_products.length != 0" class="w-full mt-12 grid grid-cols-2 2xl:grid-cols-3 gap-x-4">
                     <div class="w-full" v-for="(product, index) in list_products" :key="index">
                         <template v-if="index < item_per_page * page && index >= item_per_page * (page - 1)">
-                            <!-- v-if="xxl ? index < 4 * page && index >= 4 * (page - 1) : index < 6 * page && index >= 6 * (page - 1)"> -->
                             <div class="relative mx-2">
                                 <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
                                 <img class="centered w-full"
@@ -107,7 +107,7 @@
                                 <div @click="liked(index)"
                                     class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer block sm:hidden">
                                     <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="40"
-                                        :color="islike_product0 ? '#f05252' : '#d5d6d7'" />
+                                        :color="product.islike ? '#f05252' : '#d5d6d7'" />
                                 </div>
                                 <div @click="liked(index)"
                                     class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer hidden sm:block">
@@ -119,7 +119,8 @@
                                     {{ product.quantity }}</p>
                             </div>
                             <div class="my-4 mx-2 text-quaternary text-xl">
-                                <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type }}{{islike_product0}}</p>
+                                <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type
+                                }}{{ product.islike }}</p>
                                 <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.name }}</p>
                                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
                                         product.detail
@@ -152,6 +153,7 @@ export default {
             products,
             type: 'All Products',
             xxl: null,
+            sort_by: '',
             item_per_page: 6,
         };
     },
@@ -159,7 +161,7 @@ export default {
     computed: {
         list_products() {
             this.getProducts()
-            let list = this.products
+            let list = []
             if (this.type === 'All Products') {
                 list = this.products
             } else {
@@ -167,15 +169,31 @@ export default {
             }
             this.page = 1;
             this.total_p = Math.ceil(list.length / this.item_per_page)
-            // this.total_p = Math.ceil(this.xxl ? list.length / 4 : list.length / 6)
             return list
-
         },
     },
     async mounted() {
         this.total_p = Math.ceil(this.products.length / this.item_per_page)
     },
     methods: {
+        sortby(value) {
+            if (value === 'a-z') {
+                this.list_products.sort((a, b) => {
+                    // console.log(a,b)
+                    let textA = a.name.toUpperCase();
+                    let textB = b.name.toUpperCase();
+                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                })
+                // console.log(this.list_products)
+            }
+            else if (value === 'z-a') {
+                this.list_products.reverse((a, b) => {
+                    let textA = a.name.toUpperCase();
+                    let textB = b.name.toUpperCase();
+                    return (textA > textB) ? 1 : (textA < textB) ? -1 : 0;
+                })
+            }
+        },
         change(p) {
             this.page = p
         },

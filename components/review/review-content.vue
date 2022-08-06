@@ -53,10 +53,10 @@
               <div class="flex sm:flex justify-between">
                 <p class="text-lg font-light">{{ review.name }}</p>
                 <div class="flex flex-row w-40">
-                  <div v-for="i in `first${review.score}`" :key="i">
+                  <div v-for="i in review.score" :key="`review-${i}`">
                     <base-icon icon="star" viewBox="0 0 30 41" size="30" class="text-primary" />
                   </div>
-                  <div v-for="j in (5 - review.score)" :key="j">
+                  <div v-for="j in (5 - review.score)" :key="`review+${j}`">
                     <base-icon icon="star" viewBox="0 0 30 41" size="30" class="text-gray-300" />
                   </div>
                 </div>

@@ -20,7 +20,7 @@
               <nuxt-link to="/favorite">
                 <base-icon icon="heart" viewBox="0 0 30 41" size="45" class="text-primary mx-2" />
                 <!-- <div class="bg-primary w-5 h-5 rounded-full"></div> -->
-                <span class="badge bg-primary">{{ count_islike }}</span>
+                <span class="badge bg-primary">{{ fake_islike != null ? fake_islike : count_islike }}</span>
               </nuxt-link>
             </div>
             <div @click="searchProduct" class="cursor-pointer hover:scale-110">
@@ -134,7 +134,7 @@
           <ul class="divide-y devide-white font-sans">
             <li>
               <base-autocomplete v-model="productname" placeholder="Search" class="my-3 w-full"
-              :items="$model.productname" />
+                :items="$model.productname" />
             </li>
             <li>
               <nuxt-link to="/product" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
@@ -264,8 +264,14 @@ export default {
     },
     count_islike() {
       let count = this.$store.getters['me/getCount']
+      console.log(count)
       return count
-    }
+    },
+    fake_islike() {
+      let count = this.$store.getters['me/getFakeCount']
+      console.log(count)
+      return count
+    },
   },
   created() {
     if (this.check_logined) this.me = this.$store.getters['me/getUser']
@@ -361,6 +367,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 .container {
   height: 72px;
 }

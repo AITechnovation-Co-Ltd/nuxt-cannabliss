@@ -8,6 +8,7 @@ export const state = () => {
     products: [],
     productname: '',
     count: 0,
+    fake_count: null,
     liked: [],
     toggle: true,
     role: 0,
@@ -52,6 +53,10 @@ export const getters = {
   getCount: (state) => {
     const count = localStorage.getItem('count') || state.count
     return count
+  },
+  getFakeCount: (state) => {
+    const fake_count = state.fake_count
+    return fake_count
   },
   getSome: (state) => {
     console.log(state.liked)
@@ -103,6 +108,7 @@ export const mutations = {
     })
     state.products = products
     state.count = like_count
+    state.fake_count = like_count
     const p = JSON.stringify(products)
     localStorage.setItem('count', like_count)
     localStorage.setItem('products', p)
@@ -113,6 +119,9 @@ export const mutations = {
   SET_COUNT(state, count) {
     state.count = state.count + count
     localStorage.setItem('count', state.count)
+  },
+  SET_FAKE_COUNT(state, count) {
+    state.fake_count = state.fake_count + count
   },
   SET_SOME(state, data) {
     state.liked[data.index] = { index: data.index, liked: data.islike }
@@ -182,6 +191,9 @@ export const actions = {
   },
   setCount({ commit }, count) {
     commit('SET_COUNT', count)
+  },
+  setFakeCount({ commit }, count) {
+    commit('SET_FAKE_COUNT', count)
   },
   setSome({ commit }, data) {
     console.log(data)

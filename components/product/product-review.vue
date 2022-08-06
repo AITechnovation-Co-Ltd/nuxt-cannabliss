@@ -88,12 +88,17 @@ export default {
       }
       else {
         let products_test = await self.products.filter((e) => e.no == self.params)
-        self.product_name = products_test[0].name
+        if (products_test.length == 0) {
+          let products_test = await self.products.filter((e) => e.name == self.params)
+          if (products_test.length == 0) { self.no_product = true }
+          else { self.product_name = products_test[0].name }
+        }
+        else { self.product_name = products_test[0].name }
       }
     },
   },
-  mounted() {
-    this.fetch()
+  async mounted() {
+    await this.fetch()
   }
 }
 </script>
@@ -102,6 +107,7 @@ export default {
 .b BaseButtongheight {
   height: 500px;
 }
+
 .centered {
   position: absolute;
   top: 50%;

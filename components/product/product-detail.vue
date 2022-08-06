@@ -82,7 +82,8 @@
             </div>
             <div class="w-full flex mt-6">
               <a class="flex items-center justify-center" :href="products_id.link"><button
-                  class="px-4 sm:px-8 h-10 sm:h-14 text-lg sm:text-2xl text-quaternary border border-quaternary rounded-full mr-4">Go to
+                  class="px-4 sm:px-8 h-10 sm:h-14 text-lg sm:text-2xl text-quaternary border border-quaternary rounded-full mr-4">Go
+                  to
                   shopping</button></a>
               <div @click="liked(i)"
                 class="h-10 w-10 flex items-center justify-center border border-primary rounded-full cursor-pointer"
@@ -96,18 +97,22 @@
       </div>
       <!-- More detail -->
       <div class="w-full mt-16 sm:mt-28 relative px-0 lg:px-4">
-        <img class="bg absolute bottom-0 lg:relative w-full z-10" src="~/static/images/IMG_03ingredients/Group1149@2x.png" alt="">
+        <img class="bg absolute bottom-0 lg:relative w-full z-10"
+          src="~/static/images/IMG_03ingredients/Group1149@2x.png" alt="">
         <div class="content w-full flex pb-4 lg:pb-0 z-20">
-          <div class="w-full flex flex-col md:flex-row justify-evenly items-center z-20 px-4 lg:px-12 xl:px-28 3xl:px-32">
+          <div
+            class="w-full flex flex-col md:flex-row justify-evenly items-center z-20 px-4 lg:px-12 xl:px-28 3xl:px-32">
             <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
               <h1 class="text-lg 3xl:text-2xl font-normal">Canabinoid (Cbd)</h1>
-              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">Anti inflammatory to make skin stronger</p>
+              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">Anti inflammatory to make skin stronger
+              </p>
             </div>
             <div class="vl h-60 bg-primary hidden md:block"></div>
             <div class="w-full mt-4 sm:mt-0 md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
-              <h1 class="text-lg sm:text-xl text-center font-normal">Leucojum Aestivum Bulb Extract <br class="block sm:hidden"> (Ibr - Snowflake®)</h1>
+              <h1 class="text-lg sm:text-xl text-center font-normal">Leucojum Aestivum Bulb Extract <br
+                  class="block sm:hidden"> (Ibr - Snowflake®)</h1>
               <p class="mt-2 text-center text-base font-extralight">Anti Aging To Make Skin Younger And Brighter</p>
             </div>
           </div>
@@ -160,10 +165,25 @@ export default {
       }
       else {
         let products_test = await self.products.filter((e) => e.no == self.params)
-        self.products_img = products_test
-        self.products_name = products_test
-        self.products_detail = products_test
-        self.picture = self.products_img[0].imgUrl
+        if (products_test.length == 0) {
+          let products_test = await self.products.filter((e) => e.name == self.params)
+          if (products_test.length == 0) {
+            self.no_product = true
+          }
+          else {
+            self.products_img = products_test
+            self.products_name = products_test
+            self.products_detail = products_test
+            self.picture = self.products_img[0].imgUrl
+          }
+        }
+        else {
+          self.products_img = products_test
+          self.products_name = products_test
+          self.products_detail = products_test
+          self.picture = self.products_img[0].imgUrl
+        }
+
       }
 
     },
