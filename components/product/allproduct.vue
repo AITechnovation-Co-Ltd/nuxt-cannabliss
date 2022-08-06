@@ -168,7 +168,7 @@ export default {
             this.page = 1;
             this.total_p = Math.ceil(list.length / this.item_per_page)
             // this.total_p = Math.ceil(this.xxl ? list.length / 4 : list.length / 6)
-            return list
+            return list.slice(0,this.count)
 
         },
     },
@@ -201,10 +201,8 @@ export default {
             this.$store.dispatch('me/setProduct', '')
         },
         liked(index) {
-            // localStorage.setItem('products',JSON.stringify(products));
-            // var catchProduct = localStorage.getItem('products')
-            if (this.products[index].islike) this.$store.dispatch('me/setCount', -1),localStorage.setItem("islike_product"+index,false)
-            else if (!this.products[index].islike) this.$store.dispatch('me/setCount', 1),localStorage.setItem("islike_product"+index,true)
+            if (this.products[index].islike) this.$store.dispatch('me/setCount', -1)
+            else if (!this.products[index].islike) this.$store.dispatch('me/setCount', 1)
             this.products[index].islike = !this.products[index].islike
         },
     }

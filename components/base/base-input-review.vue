@@ -4,7 +4,7 @@
             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
             placeholder=" " v-on="inputListeners" :name="name" :disabled="disabled" :rows="rows" v-bind="$attrs" />
         <input v-else id="floating_standard"
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
+            class="block py-2.5 px-0 w-full text-sm text-primary bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
             placeholder=" " v-on="inputListeners" :name="name" :disabled="disabled" :rows="rows" v-bind="$attrs"
             :type="type" @keypress="isNumber($event)" :maxlength="maxLength" />
         <label for="floating_standard"
