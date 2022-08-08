@@ -1,35 +1,59 @@
 [
-    {
-        "no":1,
-        "imgUrl":["/Eye-cream.png","/Eye-cream.png","/Eye-cream.png","/Eye-cream.png"],
-        "name":"Canabliss Advance Eye Cream Brown Algae Plus Caffeine",
-        "subtitle":"",
-        "detail":"ครีมบำรุงรอบดวงตา เพื่อผิวแลดูอ่อนกว่าวัย เนื้อครีมบางเบา อ่อนโยนแม้ผิวแพ้ง่าย ผสานคุณค่าเปปไทด์ที่ออกฤทธิ์คล้าย Botox ช่วยลดเลือนริ้วรอยอย่างตรงจุด พร้อมคุณค่าจากสาหร่ายสีน้ำตาลและแคปซูลบรรจุคาเฟอีน ช่วยฟื้นบำรุงรอยคล้ำใต้ตา เสริมคุณสมบัติด้วยไฮยาลูรอนและเซราไมด์ ช่วยเติมความชุ่มชื้นให้ผิวรอบดวงตา",
-        "link":"https://morhelloclinic.com/product/canabliss-advance-eye-cream-brown-algae-plus-caffeine-10-g/",
-        "type":"Face",
-        "quantity": "10G",
-        "islike":false
-    },
-    {
-        "no":2,
-        "imgUrl":["/Micellar-cleansing.png","/Micellar-cleansing.png","/Micellar-cleansing.png","/Micellar-cleansing.png"],
-        "name":"Canabliss Clear Micellar Cleansing Gel Organic Bulgarian Rose",
-        "subtitle":"",
-        "detail":"เจลล้างหน้าและเครื่องสำอางที่อ่อนโยนแม้ผิวแพ้ง่าย ทำหน้าที่ช่วยดักจับสิ่งสกปรกอย่างล้ำลึกและขจัดออกจากผิวอย่างอ่อนโยน สามารถใช้รอบดวงตาได้โดยไม่ก่อให้เกิดการระคายเคือง ช่วยลดแบคทีเรียและความมัน สาเหตุของการเกิดสิว ช่วยให้ผิวหน้ากระชับ ชุ่มชื้น ไม่แห้งกร้าน เนื้อเจลนุ่มลื่น เกลี่ยง่าย ไม่ต้องใช้สำลีในการเช็ดทำความสะอาดจึงช่วยลดการเสียดสีผิวซึ่งเป็นสาเหตุของริ้วรอยได้ดี",
-        "link":"https://morhelloclinic.com/product/canabliss-clear-micellar-cleansing-gel-organic-bulgarian-rose-100-ml/",
-        "type":"Face",
-        "quantity": "100ML",
-        "islike":false
-    },
-    {
-        "no":3,
-        "imgUrl":["/First-step.png","/First-step.png","/First-step.png","/First-step.png"],
-        "name":"Canabliss Oasiz First Step Amino Essence",
-        "subtitle":"",
-        "detail":"เอสเซ้นส์บำรุงผิว เพื่อผิวหน้าสดใส อิ่มเด้งตลอดวัน เอสเซ้นส์เนื้อบางเบา เพิ่มและกักเก็บความชุ่มชื้นได้ยาวนาน ผสานสารสกัดจากสารสกัดกัญชาและใบบัวบกด้วยเทคนิคการสกัดพิเศษ ช่วยลดการอักเสบอย่างตรงจุด และยังมี Amino acids ช่วยเติมอาหารให้แก่ผิว ให้ผิวอิ่มฟู นุ่มเด้ง ดูเปล่งปลั่ง อ่อนโยนแม้ผิวแพ้ง่าย",
-        "link":"https://morhelloclinic.com/product/canabliss-oasiz-first-step-amino-essence-100-ml/",
-        "type":"Face",
-        "quantity": "100ML",
-        "islike":false
-    }
+  {
+    "no": 1,
+    "imgUrl": [
+      "/Eye-cream.png",
+      "/Eye-cream.png",
+      "/Eye-cream.png",
+      "/Eye-cream.png"
+    ],
+    "name": "Canabliss Advance Eye Cream Brown Algae Plus Caffeine",
+    "subtitle": "",
+    "detail": "ครีมบำรุงรอบดวงตา เพื่อผิวแลดูอ่อนกว่าวัย เนื้อครีมบางเบา อ่อนโยนแม้ผิวแพ้ง่าย ผสานคุณค่าเปปไทด์ที่ออกฤทธิ์คล้าย Botox ช่วยลดเลือนริ้วรอยอย่างตรงจุด พร้อมคุณค่าจากสาหร่ายสีน้ำตาลและแคปซูลบรรจุคาเฟอีน ช่วยฟื้นบำรุงรอยคล้ำใต้ตา เสริมคุณสมบัติด้วยไฮยาลูรอนและเซราไมด์ ช่วยเติมความชุ่มชื้นให้ผิวรอบดวงตา",
+    "link": "https://morhelloclinic.com/product/canabliss-advance-eye-cream-brown-algae-plus-caffeine-10-g/",
+    "type": "Face",
+    "quantity": "10G",
+    "price": 990,
+    "sales": 10,
+    "release": "2022-08-01",
+    "islike": false
+  },
+  {
+    "no": 2,
+    "imgUrl": [
+      "/Micellar-cleansing.png",
+      "/Micellar-cleansing.png",
+      "/Micellar-cleansing.png",
+      "/Micellar-cleansing.png"
+    ],
+    "name": "Canabliss Clear Micellar Cleansing Gel Organic Bulgarian Rose",
+    "subtitle": "",
+    "detail": "เจลล้างหน้าและเครื่องสำอางที่อ่อนโยนแม้ผิวแพ้ง่าย ทำหน้าที่ช่วยดักจับสิ่งสกปรกอย่างล้ำลึกและขจัดออกจากผิวอย่างอ่อนโยน สามารถใช้รอบดวงตาได้โดยไม่ก่อให้เกิดการระคายเคือง ช่วยลดแบคทีเรียและความมัน สาเหตุของการเกิดสิว ช่วยให้ผิวหน้ากระชับ ชุ่มชื้น ไม่แห้งกร้าน เนื้อเจลนุ่มลื่น เกลี่ยง่าย ไม่ต้องใช้สำลีในการเช็ดทำความสะอาดจึงช่วยลดการเสียดสีผิวซึ่งเป็นสาเหตุของริ้วรอยได้ดี",
+    "link": "https://morhelloclinic.com/product/canabliss-clear-micellar-cleansing-gel-organic-bulgarian-rose-100-ml/",
+    "type": "Face",
+    "quantity": "100ML",
+    "price": 390,
+    "sales": 8,
+    "release": "2022-08-02",
+    "islike": false
+  },
+  {
+    "no": 3,
+    "imgUrl": [
+      "/First-step.png",
+      "/First-step.png",
+      "/First-step.png",
+      "/First-step.png"
+    ],
+    "name": "Canabliss Oasiz First Step Amino Essence",
+    "subtitle": "",
+    "detail": "เอสเซ้นส์บำรุงผิว เพื่อผิวหน้าสดใส อิ่มเด้งตลอดวัน เอสเซ้นส์เนื้อบางเบา เพิ่มและกักเก็บความชุ่มชื้นได้ยาวนาน ผสานสารสกัดจากสารสกัดกัญชาและใบบัวบกด้วยเทคนิคการสกัดพิเศษ ช่วยลดการอักเสบอย่างตรงจุด และยังมี Amino acids ช่วยเติมอาหารให้แก่ผิว ให้ผิวอิ่มฟู นุ่มเด้ง ดูเปล่งปลั่ง อ่อนโยนแม้ผิวแพ้ง่าย",
+    "link": "https://morhelloclinic.com/product/canabliss-oasiz-first-step-amino-essence-100-ml/",
+    "type": "Face",
+    "quantity": "100ML",
+    "price": 790,
+    "sales": 4,
+    "release": "2022-067-12",
+    "islike": false
+  }
 ]

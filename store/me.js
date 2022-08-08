@@ -9,6 +9,7 @@ export const state = () => {
     productname: '',
     count: 0,
     fake_count: null,
+    type: '',
     liked: [],
     toggle: true,
     role: 0,
@@ -57,6 +58,10 @@ export const getters = {
   getFakeCount: (state) => {
     const fake_count = state.fake_count
     return fake_count
+  },
+  getType: (state) => {
+    const type = state.type
+    return type
   },
   getSome: (state) => {
     console.log(state.liked)
@@ -122,6 +127,10 @@ export const mutations = {
   },
   SET_FAKE_COUNT(state, count) {
     state.fake_count = state.fake_count + count
+  },
+  SET_TYPE(state, type) {
+    console.log(type)
+    state.type = type
   },
   SET_SOME(state, data) {
     state.liked[data.index] = { index: data.index, liked: data.islike }
@@ -196,7 +205,10 @@ export const actions = {
     commit('SET_FAKE_COUNT', count)
   },
   setSome({ commit }, data) {
-    console.log(data)
     commit('SET_SOME', data)
+  },
+  setType({ commit }, data) {
+    // console.log(data)
+    commit('SET_TYPE', data)
   },
 }

@@ -7,10 +7,10 @@
                 &nbsp;&nbsp;|&nbsp;&nbsp;
                 <p>Products</p>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
-                <p class="font-normal">{{ type }}</p>
+                <p class="font-normal">{{ get_type != '' ? get_type : type }}</p>
             </div>
             <div class="w-full lg:ml-10 lg:w-9/12">
-                <h1 class="w-full text-2xl mt-6 lg:mt-0 sm:text-4xl font-light text-primary">{{ type }}</h1>
+                <h1 class="w-full text-2xl mt-6 lg:mt-0 sm:text-4xl font-extralight text-primary">{{ type }}</h1>
             </div>
         </div>
 
@@ -72,9 +72,9 @@
                     <div class="flex flex-col sm:flex-row items-start sm:items-center ml-2 sm:ml-0 mx-2 lg:hidden">
                         <p class="text-xs text-white">Categories</p>
                         <select class="h-8 w-32 py-px text-xs text-quaternary rounded-xl mr-1 sm:mx-2" v-model="type">
-                            <option selected value="Best Seller">Best Seller</option>
+                            <option value="Best Seller">Best Seller</option>
                             <option value="New In">New In</option>
-                            <option selected value="All Products">All Products</option>
+                            <option value="All Products">All Products</option>
                             <option value="Hair">Hair</option>
                             <option value="Face">Face</option>
                             <option value="Body">Body</option>
@@ -84,12 +84,13 @@
                         <p class="text-xs text-white">Sort by</p>
                         <select v-model="sort_by" @change="sortby(sort_by)"
                             class="h-8 w-32 py-px text-xs text-quaternary rounded-xl mr-1 sm:mx-2">
+                            <option value="" hidden disabled selected>Please Select</option>
                             <option value="a-z">A-Z</option>
                             <option value="z-a">Z-A</option>
-                            <option value="">Newest</option>
-                            <option selected value="">Best Selling</option>
-                            <option value="">Price(Low to hight)</option>
-                            <option value="">Price(hight to low)</option>
+                            <option value="date">Newest</option>
+                            <option value="best">Best Selling</option>
+                            <option value="low-hight">Price(Low to hight)</option>
+                            <option value="hight-low">Price(Hight to low)</option>
                         </select>
                     </div>
                 </div>
@@ -152,7 +153,6 @@ export default {
             total_p: 1,
             products,
             type: 'All Products',
-            xxl: null,
             sort_by: '',
             item_per_page: 6,
         };
@@ -171,28 +171,62 @@ export default {
             this.total_p = Math.ceil(list.length / this.item_per_page)
             return list
         },
+        get_type() {
+            let type = this.$store.getters['me/getType']
+            if (type != '') this.type = type
+            this.$store.dispatch('me/setType', '')
+            return type
+        },
     },
     async mounted() {
-        this.total_p = Math.ceil(this.products.length / this.item_per_page)
+        this.total_p = await Math.ceil(this.products.length / this.item_per_page)
+        this.sortby()
     },
     methods: {
-        sortby(value) {
-            if (value === 'a-z') {
-                this.list_products.sort((a, b) => {
-                    // console.log(a,b)
+        sortby() {
+            if (this.sort_by === 'a-z') {
+                this.list_products?.sort((a, b) => {
                     let textA = a.name.toUpperCase();
                     let textB = b.name.toUpperCase();
-                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                    return (textA > textB) ? 1 : -1;
                 })
-                // console.log(this.list_products)
             }
-            else if (value === 'z-a') {
-                this.list_products.reverse((a, b) => {
+            else if (this.sort_by === 'z-a') {
+                this.list_products?.sort((a, b) => {
                     let textA = a.name.toUpperCase();
                     let textB = b.name.toUpperCase();
-                    return (textA > textB) ? 1 : (textA < textB) ? -1 : 0;
+                    return (textA > textB) ? -1 : 1;
                 })
             }
+            else if (this.sort_by === 'low-hight') {
+                this.list_products?.sort((a, b) => {
+                    let priceA = a.price;
+                    let priceB = b.price;
+                    return (priceA > priceB) ? 1 : -1;
+                })
+            }
+            else if (this.sort_by === 'hight-low') {
+                this.list_products?.sort((a, b) => {
+                    let priceA = a.price;
+                    let priceB = b.price;
+                    return (priceA > priceB) ? -1 : 1;
+                })
+            }
+            else if (this.sort_by === 'best') {
+                this.list_products?.sort((a, b) => {
+                    let salesA = a.sales;
+                    let salesB = b.sales;
+                    return (salesA > salesB) ? -1 : 1;
+                })
+            }
+            else if (this.sort_by === 'date') {
+                this.list_products?.sort((a, b) => {
+                    let releaseA = a.release;
+                    let releaseB = b.release;
+                    return new Date(releaseB) - new Date(releaseA);
+                })
+            }
+            this.page = 1
         },
         change(p) {
             this.page = p
