@@ -14,7 +14,7 @@
           <div class="font-light">
             <ul>
               <li class="mb-4 mt-8">
-                <p @click="$router.push(`/product`)" class="hover:underline">Product</p>
+                <p @click="filter('All Products')" class="hover:underline">Product</p>
               </li>
               <li class="mb-4">
                 <p @click="filter('Hair')" class="hover:underline">Hair</p>
@@ -83,7 +83,8 @@
       </div>
       <hr class="mt-6 border-primary sm:mx-auto">
       <div class="py-5 flex items-center justify-center">
-        <span class="text-xs font-extralight sm:text-center">Copyright © 2021 <a href="#" class="hover:underline">MorHello</a>. All
+        <span class="text-xs font-extralight sm:text-center">Copyright © 2021 <a href="#"
+            class="hover:underline">MorHello</a>. All
           rights reserved.
         </span>
       </div>
@@ -95,7 +96,7 @@
 export default {
   methods: {
     filter(product) {
-      this.$store.dispatch('me/setProduct', product)
+      this.$store.dispatch('me/setType', product)
       this.$router.push(`/product`)
     }
   }
@@ -103,5 +104,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
