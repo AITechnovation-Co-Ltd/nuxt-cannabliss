@@ -34,11 +34,17 @@
       </div>
     </div>
 
-    <div class="w-full mt-8 sm:mt-12 flex flex-col lg:flex-row justify-between items-center">
+    <div class="w-full mt-4 sm:mt-12 flex flex-col lg:flex-row justify-between items-center">
       <div class="w-full lg:w-1/2 xl:w-2/5 ml-0 lg:mr-12 xl:mr-0">
-        <h1 class="text-2xl sm:text-5xl text-primary font-medium">What Is</h1>
-        <h1 class="h-full mt-0 sm:mt-3 flex text-2xl sm:text-5xl text-primary font-medium">IBR-SNOWFLAKE <span
-            class="text-xl sm:text-4xl">®</span>?</h1>
+        <div class="hidden sm:block">
+          <h1 class="text-2xl sm:text-5xl text-primary font-medium">What Is</h1>
+          <h1 class="h-full mt-0 sm:mt-3 flex text-2xl sm:text-5xl text-primary font-medium">IBR-SNOWFLAKE <span
+              class="text-xl sm:text-4xl">®</span>?</h1>
+        </div>
+        <div class="block sm:hidden">
+          <h1 class="flex text-2xl sm:text-5xl text-primary font-medium">What Is IBR-SNOWFLAKE<span
+              class="text-xl sm:text-4xl">®</span>?</h1>
+        </div>
         <p class="mt-2 sm:mt-6 text-sm font-extralight">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
           architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit

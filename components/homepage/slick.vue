@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full relative px-4 lg:px-12">
+    <div class="w-full relative px-4 lg:px-12 xl:px-20 3xl:px-36">
         <p class="my-4 text-5xl text-primary text-center font-medium">Review</p>
         <VueSlickCarousel class="flex justify-center items-center" v-bind="settings">
 
@@ -11,10 +11,10 @@
                             class="absolute -top-6 left-0 w-16">
                         <div class="w-full flex flex-col items-center text-sm font-extralight text-quaternary">
                             <div class="flex flex-row w-40">
-                                <div v-for="i in `first${review.score}`" :key="i">
+                                <div v-for="i in review.score" :key="`review-${i}`">
                                     <base-icon icon="star" viewBox="0 0 30 41" size="30" class="text-primary" />
                                 </div>
-                                <div v-for="j in (5 - review.score)" :key="j">
+                                <div v-for="j in (5 - review.score)" :key="`review+${j}`">
                                     <base-icon icon="star" viewBox="0 0 30 41" size="30" class="text-gray-300" />
                                 </div>
                             </div>
@@ -34,7 +34,7 @@
             </div>
 
         </VueSlickCarousel>
-        <div class="w-full my-6 flex justify-center">
+        <div class="w-full mb-6 mt-10 flex justify-center">
             <base-button @click="$router.push(`/review`)" color_arrow="quaternary">View All</base-button>
         </div>
         <div class="w-full mt-12">
@@ -47,19 +47,19 @@
                     </div>
                 </a>
             </div>
-            <div class="ig mt-2 sm:mt-8 grid grid-cols-1 gap-y-4 sm:gap-y-0 sm:grid-cols-2 md:grid-cols-4">
+            <div class="ig mt-2 sm:mt-8 grid gap-y-4 sm:gap-y-0 grid-cols-2 sm:grid-cols-4">
                 <div class="flex justify-center items-center">
-                    <img src="@/static/images/IMG_01home/pages_01home/content-pixie-TxBQ7yLj6JU-unsplash.jpg" alt="">
+                    <img class="w-auto h-auto" src="@/static/images/IMG_01home/pages_01home/content-pixie-TxBQ7yLj6JU-unsplash.jpg" alt="">
                 </div>
                 <div class="flex justify-center items-center">
-                    <img src="@/static/images/IMG_01home/pages_01home/mathilde-langevin-FDRaYqiTY1k-unsplash.jpg"
+                    <img class="w-auto h-auto" src="@/static/images/IMG_01home/pages_01home/mathilde-langevin-FDRaYqiTY1k-unsplash.jpg"
                         alt="">
                 </div>
-                <div class="w-full h-full justify-center items-center hidden sm:flex">
-                    <img src="@/static/images/IMG_01home/pages_01home/lume-wellness-zpMn92OY4I8-unsplash.jpg" alt="">
+                <div class="flex justify-center items-center">
+                    <img class="w-auto h-auto" src="@/static/images/IMG_01home/pages_01home/lume-wellness-zpMn92OY4I8-unsplash.jpg" alt="">
                 </div>
-                <div class="w-full h-full justify-center items-center hidden sm:flex">
-                    <img src="@/static/images/IMG_01home/pages_01home/birgith-roosipuu-W71jxsXrwyQ-unsplash.jpg" alt="">
+                <div class="flex justify-center items-center">
+                    <img class="w-auto h-auto" src="@/static/images/IMG_01home/pages_01home/birgith-roosipuu-W71jxsXrwyQ-unsplash.jpg" alt="">
                 </div>
             </div>
             <div class="w-full mt-4 sm:mt-8 sm:mt-0 text-xl flex justify-center">
@@ -88,7 +88,7 @@ export default {
             settings: {
                 centerMode: true,
                 centerPadding: "0px",
-                dots: false,
+                dots: true,
                 arrows: false,
                 infinite: true,
                 slidesToShow: 3,
@@ -127,8 +127,16 @@ export default {
 
 .ig img {
     object-fit: cover;
-    width: 290px;
-    height: 290px;
+    width: 20vw;
+    height: 20vw;
     border-radius: 10%;
+}
+@media (max-width:640px){
+    .ig img {
+    object-fit: cover;
+    width: 42vw;
+    height: 42vw;
+    border-radius: 10%;
+}
 }
 </style>

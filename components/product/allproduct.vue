@@ -10,11 +10,7 @@
                 <p class="font-normal">{{ get_type != '' ? get_type : type }}</p>
             </div>
             <div class="w-full lg:ml-10 lg:w-9/12">
-                <h1 class="w-full text-2xl mt-6 lg:mt-0 sm:text-4xl font-extralight text-primary">{{ get_type != '' ?
-                        get_type
-                        :
-                        type
-                }}</h1>
+                <h1 class="w-full text-2xl mt-6 lg:mt-0 sm:text-4xl font-extralight text-primary">{{ type }}</h1>
             </div>
         </div>
 

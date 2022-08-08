@@ -6,7 +6,7 @@
       <div class="w-full lg:w-1/2 flex flex-col mr-0 lg:mr-28">
 
         <!-- FQA 1-->
-        <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen" openUp="toggle">
+        <base-dropdown class="my-1 sm:my-6" dropdownClass="mt-2" @opened="checkDataOpen">
           <div slot="toggle" class="w-full flex items-center justify-between">
             <p align="start" class="text-base sm:text-lg font-normal text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data }">
@@ -105,7 +105,7 @@
       </div>
     </div>
 
-    <div class="w-full my-12 sm:my-20 flex flex-wrap justify-evenly text-quaternary">
+    <div class="w-full my-0 mb-0 mt-12 sm:my-20 flex flex-wrap justify-evenly text-quaternary">
       <div class="flex flex-col mx-4 sm:mx-0 items-center ">
         <base-icon icon="heart" viewBox="0 0 24 24" size="60" class="mb-4" />
         <p class="text-lg font-normal">24 Services</p>
@@ -129,7 +129,7 @@
 export default {
   data() {
     return {
-      dropdown_data: true,
+      dropdown_data: false,
       dropdown_data2: false,
       dropdown_data3: false,
       dropdown_data4: false,

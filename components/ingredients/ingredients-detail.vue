@@ -2,10 +2,10 @@
   <div class="w-full px-4 sm:px-12 lg:px-16 xl:px-28 3xl:px-32 z-20">
     <div class="w-full flex flex-col mt-0 sm:mt-4 lg:mt-0 lg:flex-row justify-between items-start lg:items-center">
       <div class="w-full lg:w-1/2 lg:mr-8 xl:mr-0 pr-0 lg:pr-20 xl:pr-32">
-        <h1 class="text-4xl sm:text-5xl text-primary">Ingredients</h1>
+        <h1 class="text-4xl sm:text-5xl mt-4 sm:mt-0 text-primary">Ingredients</h1>
         <div class="flex items-center mt-4">
           <!-- <div class="w-0.5 h-24 2xl:h-12 bg-primary mr-4 flex"></div> -->
-          <span class="text-quaternary font-normal text-lg border-l-2 border-primary pl-4">By having a hero ingredient , there's an opportunity <br class="hidden sm:block"> to get
+          <span class="text-quaternary font-normal text-lg border-l-2 border-primary pl-2 sm:pl-4">By having a hero ingredient , there's an opportunity <br class="hidden sm:block"> to get
             into the SKINCARE TREND in Thailand</span>
         </div>
         <p class="mt-4 text-justify text-quaternary text-sm font-extralight">Leucojum aestivum bulb extract ( IBR - Snowflake ) is part of the anti aging

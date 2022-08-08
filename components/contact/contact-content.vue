@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full flex flex-col justify-center text-3xl px-8 lg:px-12 xl:px-20 2xl:px-32">
+  <div class="w-full flex flex-col justify-center text-3xl mt-10 sm:mt-2 px-4 lg:px-12 xl:px-20 2xl:px-32">
 
     <div class="flex flex-col lg:flex-row">
       <!-- Details Contract -->
-      <div class="w-full lg:w-1/2 flex flex-col my-4">
+      <div class="w-full lg:w-1/2 flex flex-col">
         <a class="flex items-center " href="https://goo.gl/maps/ndXssawVBm4sNwf96" target="_blank">
           <img src="~static/images/IMG_05contacts/Group1164@2x.png" alt="" class="w-20 h-20 mr-4">
           <p class="text-sm text-quaternary font-light">2922 / 209-214, Charn Issara Tower 2,12A
@@ -25,7 +25,7 @@
 
       <!-- Email Box -->
       <div class="w-full lg:w-1/2 flex flex-col items-center">
-        <p class="mb-4 -mt-6 text-2xl text-primary">Have some questions ?</p>
+        <p class="mb-4 mt-10 sm:-mt-6 text-2xl text-primary">Have some questions ?</p>
         <a href="https://lin.ee/i5MkM6w" target="_blank">
           <img src="~/static/images/IMG_05contacts/qrline.png" alt="" class="rounded-2xl drop-shadow-md w-60">
         </a>
