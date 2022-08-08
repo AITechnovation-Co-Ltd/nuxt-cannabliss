@@ -2,7 +2,7 @@
   {
     "id": 1,
     "product_id": 1,
-    "imgUrl": ["/IMG_1200.jpg"],
+    "imgUrl": ["/Eye-cream.png"],
     "product_name": "Canabliss Advance Eye Cream Brown Algae Plus Caffeine",
     "type": "Face",
     "name": "Kimberly K.",
@@ -13,7 +13,7 @@
   {
     "id": 2,
     "product_id": 2,
-    "imgUrl": ["/IMG_1197.jpg"],
+    "imgUrl": ["/Micellar-cleansing.png"],
     "product_name": "Canabliss Clear Micellar Cleansing Gel Organic Bulgarian Rose",
     "type": "Face",
     "name": "John D.",
@@ -24,7 +24,7 @@
   {
     "id": 3,
     "product_id": 1,
-    "imgUrl": ["/IMG_1200.jpg"],
+    "imgUrl": ["/Eye-cream.png"],
     "product_name": "Canabliss Advance Eye Cream Brown Algae Plus Caffeine",
     "type": "Face",
     "name": "Jane D.",
@@ -35,7 +35,7 @@
   {
     "id": 4,
     "product_id": 3,
-    "imgUrl": ["/IMG_1195.jpg"],
+    "imgUrl": ["/First-step.png"],
     "product_name": "Canabliss Oasiz First Step Amino Essence",
     "type": "Face",
     "name": "Smit K.",
@@ -46,7 +46,7 @@
   {
     "id": 5,
     "product_id": 3,
-    "imgUrl": ["/IMG_1195.jpg"],
+    "imgUrl": ["/First-step.png"],
     "product_name": "Canabliss Oasiz First Step Amino Essence",
     "type": "Face",
     "name": "Yaris G.",
@@ -57,7 +57,7 @@
   {
     "id": 6,
     "product_id": 2,
-    "imgUrl": ["/IMG_1197.jpg"],
+    "imgUrl": ["/Micellar-cleansing.png"],
     "product_name": "Canabliss Clear Micellar Cleansing Gel Organic Bulgarian Rose",
     "type": "Face",
     "name": "Rik G.",
@@ -68,7 +68,7 @@
   {
     "id": 7,
     "product_id": 1,
-    "imgUrl": ["/IMG_1200.jpg"],
+    "imgUrl": ["/Eye-cream.png"],
     "product_name": "Canabliss Advance Eye Cream Brown Algae Plus Caffeine",
     "type": "Face",
     "name": "Steve R.",
@@ -79,7 +79,7 @@
   {
     "id": 8,
     "product_id": 3,
-    "imgUrl": ["/IMG_1195.jpg"],
+    "imgUrl": ["/First-step.png"],
     "product_name": "Canabliss Oasiz First Step Amino Essence",
     "type": "Face",
     "name": "Bucky B.",
