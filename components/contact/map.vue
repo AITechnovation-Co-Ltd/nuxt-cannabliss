@@ -1,6 +1,6 @@
 <template>
     <!-- Leaflet Street Map -->
-    <div class="w-full flex justify-center px-8 lg:px-12 xl:px-20 2xl:px-32">
+    <div class="w-full flex justify-center mt-10 sm:mt-0 px-8 lg:px-12 xl:px-20 2xl:px-32">
       <div id="map-wrap" class="w-full h-96 z-0 drop-shadow-md">
         <client-only>
           <l-map @ready="ready" :zoom="16" :center="[13.7194164,100.5846806]" class="rounded-xl">

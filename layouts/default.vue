@@ -9,7 +9,7 @@
             </div>
         </div>
         <div v-if="!no_breadcrumb.includes(route_name)"
-            class="flex items-center px-3 mt-20 text-quaternary font-extralight text-sm px-4 sm:px-12 lg:px-16 xl:px-28 3xl:px-32">
+            class="flex items-center px-3 mt-10 sm:mt-20 text-quaternary font-extralight text-sm px-4 sm:px-12 lg:px-16 xl:px-28 3xl:px-32">
             <base-icon icon="angle-left" viewBox="0 0 24 24" size="15" />&nbsp;&nbsp;
             <nuxt-link to="/" class="hover:underline mr-2 ">Home&nbsp;&nbsp;|&nbsp;
             </nuxt-link>

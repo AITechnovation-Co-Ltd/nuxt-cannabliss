@@ -3,7 +3,7 @@
     <!-- -->
     <div class="w-full flex flex-col lg:flex-row justify-center items-center">
       <!-- Details -->
-      <div class="w-full sm:w-11/12 xl:w-1/2 pr-24">
+      <div class="w-full sm:w-11/12 xl:w-1/2 pr-0 sm:pr-24">
         <!-- <p class="my-4 text-4xl text-primary thai font-thin">ต้านการอักเสบของสิว</p>
         <p class="my-4 text-4xl text-primary thai font-extralight">ต้านการอักเสบของสิว</p>
         <p class="my-4 text-4xl text-primary thai font-light">ต้านการอักเสบของสิว</p>
@@ -42,14 +42,14 @@
       </div>
     </div>
     <!-- -->
-    <div class="w-full flex flex-col-reverse xl:flex-row justify-center items-center mt-8">
+    <div class="w-full flex flex-col-reverse lg:flex-row justify-center items-center mt-8">
       <!-- Picture -->
       <div class="w-full sm:w-11/12 xl:w-3/5 flex justify-center">
         <img src="@/static/images/IMG_03blogs_details/cbd.png" class="w-full sm:w-6/12 xl:w-9/12 ">
       </div>
       <!-- Details -->
       <div class="w-full sm:w-11/12 xl:w-2/5">
-        <p class="my-4 text-5xl sm:text-7xl text-primary thai">กลไกการทำงาน</p>
+        <p class="mb-4 text-5xl sm:text-7xl text-primary thai">กลไกการทำงาน</p>
         <p class="text-quaternary text-lg 3xl:text-xl leading-6 thai">
           ระบบเอ็นแคนนาบินอยด์ในผิวหนังจะควบคุมความผิดปกติทุกด้านที่เกิดขึ้นในสิว
           ในการทดลอง

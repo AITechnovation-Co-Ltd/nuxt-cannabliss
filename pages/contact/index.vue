@@ -1,6 +1,6 @@
 <template>
   <div class="bg-secondary">
-    <ContactContent class="my-16"/>
+    <ContactContent/>
     <Map class="mb-8" />
   </div>
 </template>

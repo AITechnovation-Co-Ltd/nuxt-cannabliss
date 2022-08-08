@@ -107,8 +107,8 @@
 
 .slick-dots {
   position: absolute;
-  bottom: 10%;
-  left: -30%;
+  bottom: -8%;
+  left: 0%;
   justify-items: start;
   display: block;
 
@@ -125,7 +125,7 @@
 
   display: inline-block;
 
-  width: 127.5px;
+  width: auto;
   height: 20px;
   margin: 0 0;
   padding: 0;
@@ -138,8 +138,8 @@
 
   display: block;
 
-  width: 128px;
-  height: 2px;
+  width: 8vw;
+  height: 2.5%;
   padding: 0px;
   cursor: pointer;
 
@@ -158,8 +158,8 @@
 } */
 .slick-dots li.slick-active button {
   background: #78A695;
-  height: 6px;
-  border-radius: 5px;
+  height: 12.5%;
+  border-radius: 4px;
 }
 .slick-dots li button:before {
   font-family: 'slick';
@@ -186,13 +186,16 @@
   opacity: 0.75;
   color: black;
 }
-@media (max-width:1536px){
+/* @media (max-width:1536px){
   .slick-dots {
     left: -25%;
   }
-}
-@media (max-width:1279px){
+} */
+@media (max-width:640px){
   .slick-dots {
-    left: -20%;
+    bottom: -8%;
+  }
+  .slick-dots li button {
+    width: 14vw;
   }
 }

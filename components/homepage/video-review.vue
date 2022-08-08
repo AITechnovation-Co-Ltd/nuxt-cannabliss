@@ -10,7 +10,7 @@
     </div>
     <div class="w-full sm:w-11/12 md:w-1/2 xl:w-2/5 ml-0 md:ml-8 2xl:ml-20 text-xl text-quaternary font-light">
       <p class="text-xs sm:text-sm">Video Review</p>
-      <h1 class="text-xl sm:text-3xl font-extralight mt-1">Canabliss Oasiz :</h1>
+      <h1 class="text-xl sm:text-3xl font-light mt-1">Canabliss Oasiz :</h1>
       <h2 class="text-xl sm:text-3xl font-normal text-primary">Super Berry Hydrating Mask</h2>
       <div class="w-full flex items-center mt-3 xl:mt-6">
         <p class="text-sm border-l-2 border-primary pl-2 sm:pl-3 font-extralight">Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et
@@ -44,5 +44,12 @@ img {
 .vl {
   height: 170px;
   width: 20px;
+}
+@media (max-width:640px){
+  .centered {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 }
 </style>

@@ -36,7 +36,7 @@
     <div class="w-full lg:w-9/12">
       <!-- Write a review -->
       <div class="w-full flex justify-start py-2 px-4 mt-6 sm:mt-8 bg-tertiary ">
-        <base-button @click="$refs.uploadReviewRef.show()" color="white" class="ml-auto mr-auto sm:ml-0">
+        <base-button @click="$refs.uploadReviewRef.show()" color="white">
           Write a review</base-button>
       </div>
       <!-- Review card -->
@@ -46,7 +46,7 @@
             <!-- Image Product-->
             <div class="w-full xl:w-2/5 columns-1 items-start md:flex">
               <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-24 h-12 mr-0 md:mr-6">
-              <p class="mt-6 md:mt-0 text-sm font-extralight">{{ review.product_name }}</p>
+              <p class="mt-3 md:mt-0 text-sm font-extralight">{{ review.product_name }}</p>
             </div>
             <!-- Details review -->
             <div class="w-full xl:w-3/5 flex flex-col ml-0 xl:ml-4 mt-4 xl:mt-0 ">

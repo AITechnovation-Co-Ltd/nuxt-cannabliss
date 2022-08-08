@@ -10,7 +10,7 @@
                 <p class="font-normal">{{ type }}</p>
             </div>
             <div class="w-full lg:ml-10 lg:w-9/12">
-                <h1 class="w-full text-2xl mt-6 lg:mt-0 sm:text-4xl font-extralight text-primary">{{ type }}</h1>
+                <h1 class="w-full text-2xl mt-6 lg:mt-0 sm:text-4xl font-light text-primary">{{ type }}</h1>
             </div>
         </div>
 

@@ -27,7 +27,7 @@
         </div>
       </div>
       <!-- Button -->
-      <base-button @click="$router.push(`/blogs`)" class="px-6 mt-12 border-quaternary">View All</base-button>
+      <base-button @click="$router.push(`/blogs`)" class="px-6 mt-12 border-quaternary">View all</base-button>
     </div>
   </div>
 </template>
