@@ -82,7 +82,7 @@
             </div>
             <div class="w-full flex mt-6">
               <a class="flex items-center justify-center" :href="products_id.link"><button
-                  class="px-4 sm:px-8 h-10 sm:h-14 text-lg sm:text-2xl text-quaternary border border-quaternary rounded-full mr-4">Go
+                  class="px-4 h-10 text-lg  text-quaternary border border-quaternary rounded-full mr-4">Go
                   to
                   shopping</button></a>
               <div @click="liked(i)"
