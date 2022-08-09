@@ -28,7 +28,7 @@
             </div>
             <base-autocomplete v-show="search" v-model="productname" placeholder="Product Name"
               :items="$model.productname" />
-            <div class="vl mx-4 bg-primary"></div>
+            <div class="vl mx-4 bg-primary "></div>
 
             <div
               class="w-28 relative flex justify-evenly bg-secondary text-lg rounded-full cursor-pointer drop-shadow-md"

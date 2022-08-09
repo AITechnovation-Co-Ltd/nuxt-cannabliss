@@ -1,9 +1,10 @@
 <template>
     <label class="block text-sm relative">
         <span class="">{{ label }}</span><span v-if="required" class="text-red-500">*</span>
-        <input class="py-2 w-full rounded-xl" type="search" :placeholder="placeholder" :disabled="disabled"
-            @focus="onChange" @input="onChange" v-model="search" @keyup.down="onArrowDown" @keyup.up="onArrowUp"
-            @keyup.enter="onEnter" />
+        <input
+            class="py-2 w-full rounded-xl border-primary focus:ring-0 focus:border-primary focus:border-2"
+            type="search" :placeholder="placeholder" :disabled="disabled" @focus="onChange" @input="onChange"
+            v-model="search" @keyup.down="onArrowDown" @keyup.up="onArrowUp" @keyup.enter="onEnter" />
         <ul id="autocomplete-results" v-show="isOpen" class="bg-white rounded-md shadow-lg overflow-y-auto absolute"
             style="max-height: 400px">
             <li class="loading" v-if="isLoading">Loading results...</li>

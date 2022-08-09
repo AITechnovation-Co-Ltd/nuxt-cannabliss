@@ -55,7 +55,7 @@
     ],
     "genre":"CANABLISS OASIZ",
     "genre_th":"คานาบลีส โอเอซีส",
-    "name": "SUPER BERRY <br> HYDRATING MASK",
+    "name": "SUPER BERRY HYDRATING MASK",
     "name_th":"ซุปเปอร์ เบอร์รี่ ไฮเดรตติ้ง มาส์ก",
     "subtitle_th": "ผลิตภัณฑ์พอกผิวหน้าแบบล้างออก",
     "detail_th": "เจลมาส์กผิวหน้าอุดมด้วยสารสกัดกลุ่มเบอร์รี่ อาทิ Acai berry, Blackberry, Blackcurrant, Blueberry, Cranberry, Raspberry และ Strawberry ช่วยลดเลือนจุดด่างดำ เผยผิวกระจ่างใส ผสานสารสกัดที่มีสารแคนนาบิไดออล (CBD) จากกัญชง เพิ่มความชุ่มชื้นแก่ผิว",
@@ -274,25 +274,6 @@
     "sales": 0,
     "release": "2022-08-01",
     "islike": false
-  },
-  {
-    "no": 15,
-    "imgUrl": [
-      "/First-step.png",
-      "/First-step.png",
-      "/First-step.png",
-      "/First-step.png"
-    ],
-    "genre":"",
-    "name": "Canabliss Oasiz First Step Amino Essence",
-    "subtitle": "",
-    "detail": "เอสเซ้นส์บำรุงผิว เพื่อผิวหน้าสดใส อิ่มเด้งตลอดวัน เอสเซ้นส์เนื้อบางเบา เพิ่มและกักเก็บความชุ่มชื้นได้ยาวนาน ผสานสารสกัดจากสารสกัดกัญชาและใบบัวบกด้วยเทคนิคการสกัดพิเศษ ช่วยลดการอักเสบอย่างตรงจุด และยังมี Amino acids ช่วยเติมอาหารให้แก่ผิว ให้ผิวอิ่มฟู นุ่มเด้ง ดูเปล่งปลั่ง อ่อนโยนแม้ผิวแพ้ง่าย",
-    "link": "https://morhelloclinic.com/product/canabliss-oasiz-first-step-amino-essence-100-ml/",
-    "type": "Face",
-    "quantity": "100ML",
-    "price": 790,
-    "sales": 4,
-    "release": "2022-067-12",
-    "islike": false
   }
+  
 ]

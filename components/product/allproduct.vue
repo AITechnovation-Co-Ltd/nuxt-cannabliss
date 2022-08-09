@@ -82,7 +82,7 @@
                     </div>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center ml-2 sm:ml-0 mx-2">
                         <p class="text-xs text-white">Sort by</p>
-                        <select v-model="sort_by" @change="sortby(sort_by)"
+                        <select v-model="sort_by" @change="sortby()"
                             class="h-8 w-32 py-px text-xs text-quaternary rounded-xl mr-1 sm:mx-2">
                             <option value="" hidden disabled selected>Please Select</option>
                             <option value="a-z">A-Z</option>
@@ -100,7 +100,7 @@
                     <div class="w-full" v-for="(product, index) in list_products" :key="index">
                         <template v-if="index < item_per_page * page && index >= item_per_page * (page - 1)">
                             <div class="relative mx-2">
-                                <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
+                                <img src="~/static/images/IMG_02products_detail/Path357@2x.png" />
                                 <img class="centered w-full"
                                     :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
                                 <span v-if="product.isNew"
@@ -121,10 +121,10 @@
                             </div>
                             <div class="my-4 mx-2 text-quaternary text-xl">
                                 <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type
-                                }}{{ product.islike }}</p>
+                                }}</p>
                                 <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.name }}</p>
                                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
-                                        product.detail
+                                        product.detail_th
                                 }}</p>
                                 <base-button @click="$router.push(`/product/details/${product.no}`)"
                                     class="border-quaternary">
