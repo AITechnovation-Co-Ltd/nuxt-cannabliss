@@ -15,7 +15,7 @@
     <div class="w-full flex flex-col mt-6 sm:mt-6 lg:flex-row justify-between items-center">
       <div class="w-full sm:w-11/12 lg:w-1/2 h-full relative">
         <div class="w-full h-full flex items-start">
-          <img src="~/static/images/IMG_03ingredients/matthew-brodeur.jpg"
+          <img src="~/static/images/IMG_03ingredients/Ingredients_01-2.jpg"
             class="rounded-3xl w-11/12 mt-8 sm:mt-12 z-20" alt="">
         </div>
         <img src="~/static/images/IMG_03ingredients/bg-blue.png" alt=""
@@ -57,7 +57,7 @@
       </div>
       <div class="w-full sm:w-11/12 lg:w-1/2 h-full relative">
         <div class="w-full h-full flex items-start">
-          <img src="~/static/images/IMG_03ingredients/magnus-engo1.jpg"
+          <img src="~/static/images/IMG_03ingredients/Ingredients_02-2.jpg"
             class="rounded-3xl w-11/12 mt-10 sm:mt-14 lg:mt-12 z-20" alt="">
         </div>
         <img src="~/static/images/IMG_03ingredients/bg-blue.png" alt=""
