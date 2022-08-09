@@ -120,9 +120,11 @@
                             <div class="my-4 mx-2 text-quaternary text-xl">
                                 <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type
                                 }}</p>
-                                <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.genre + ': '
-                                }}{{
-        product.name
+                                <p class="truncated-2-lines text-base sm:text-lg font-medium "
+                                    :class="{ 'thai sm:text-2xl': getLanguage }">{{ getLanguage ? product.genre_th + ': ' :
+                                            product.genre + ': '
+                                    }}{{
+        getLanguage ? product.name_th : product.name
 }}</p>
                                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
                                         product.detail_th
@@ -192,6 +194,9 @@ export default {
             this.$store.dispatch('me/setType', '')
             return type
         },
+        getLanguage() {
+            return this.$store.getters['me/getLanguage']
+        }
     },
     async mounted() {
         // this.total_p = await Math.ceil(this.products.length / this.item_per_page)

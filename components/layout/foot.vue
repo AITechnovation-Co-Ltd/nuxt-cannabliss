@@ -4,10 +4,9 @@
       <div class="flex flex-col lg:flex-row lg:justify-around">
 
         <!-- logo -->
-        <div class="w-full lg:w-1/4 flex justify-center sm:justify-start lg:justify-center mb-6 md:mb-0">
-          <nuxt-link to="/" class="flex items-center">
-            <img class="h-32" src="~/static/logo/Logo-CANABLISS.png" alt="">
-          </nuxt-link>
+        <div @click="gotoHome()"
+          class="w-full lg:w-1/4 flex justify-center sm:justify-start lg:justify-center mb-6 md:mb-0">
+          <img class="h-32" src="~/static/logo/Logo-CANABLISS.png" alt="">
         </div>
         <div class="w-full lg:w-3/4 px-4 sm:px-0 grid text-sm grid-cols-2 sm:flex justify-around content">
           <!-- product -->
@@ -32,7 +31,7 @@
           <div>
             <ul>
               <li class="mb-4 mt-8">
-                <nuxt-link to="/" class="hover:underline">Home</nuxt-link>
+                <div @click="gotoHome()" class="hover:underline">Home</div>
               </li>
               <li class="mb-4">
                 <nuxt-link to="/ingredients" class="hover:underline ">Ingredients</nuxt-link>
@@ -83,7 +82,8 @@
       </div>
       <hr class="mt-6 border-primary sm:mx-auto">
       <div class="py-5 flex items-center justify-center">
-        <span class="text-xs font-extralight sm:text-center">Copyright © 2022 <a href="#" class="hover:underline">MorHello</a>. All
+        <span class="text-xs font-extralight sm:text-center">Copyright © 2022 <a href="#"
+            class="hover:underline">MorHello</a>. All
           rights reserved.
         </span>
       </div>
@@ -93,10 +93,31 @@
 
 <script>
 export default {
+  computed: {
+    route_name() {
+      return this.$route.name
+    },
+  },
+  mounted() {
+    // console.log(this.route_name)
+  },
   methods: {
     filter(product) {
       this.$store.dispatch('me/setType', product)
       this.$router.push(`/product`)
+    },
+    gotoHome() {
+      if (this.route_name == 'index') {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
+      else {
+        this.$router.push('/')
+      }
+
     }
   }
 }

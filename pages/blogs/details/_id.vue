@@ -1,6 +1,6 @@
 <template>
   <div class="bg-secondary">
-    <BlogsDetail class="my-6" />
+    <BlogsDetail class="my-6" :params="$route.params.id" />
   </div>
 </template>
 
@@ -10,6 +10,7 @@ import BlogsDetail from '../../../components/blogs/blogs-detail.vue';
 export default {
   components: { BlogsBanner, BlogsDetail }
 }
+
 </script>
 
 <style>

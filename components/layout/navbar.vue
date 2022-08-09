@@ -289,6 +289,7 @@ export default {
     },
     chlang() {
       this.isthai = !this.isthai;
+      this.$store.dispatch('me/setLanguages', this.isthai)
     },
     async logoutClick() {
       const self = this

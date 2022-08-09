@@ -10,6 +10,7 @@ export const state = () => {
     count: 0,
     fake_count: null,
     type: '',
+    isthai: false,
     liked: [],
     toggle: true,
     role: 0,
@@ -67,6 +68,10 @@ export const getters = {
     console.log(state.liked)
     const liked = localStorage.getItem('liked') || state.liked
     return liked
+  },
+  getLanguage: (state) => {
+    const isthai = state.isthai
+    return isthai
   },
 }
 export const mutations = {
@@ -131,6 +136,9 @@ export const mutations = {
   SET_TYPE(state, type) {
     console.log(type)
     state.type = type
+  },
+  SET_LANGUAGE(state, isthai) {
+    state.isthai = isthai
   },
   SET_SOME(state, data) {
     state.liked[data.index] = { index: data.index, liked: data.islike }
@@ -218,5 +226,8 @@ export const actions = {
   setType({ commit }, data) {
     // console.log(data)
     commit('SET_TYPE', data)
+  },
+  setLanguages({ commit }, data) {
+    commit('SET_LANGUAGE', data)
   },
 }
