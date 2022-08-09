@@ -53,12 +53,12 @@
                                     :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
                                 <span v-if="product.isNew"
                                     class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
-                                <div @click="liked(index)"
+                                <div @click="liked(product.no)"
                                     class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer block sm:hidden">
                                     <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="40"
                                         :color="product.islike ? '#f05252' : '#d5d6d7'" />
                                 </div>
-                                <div @click="liked(index)"
+                                <div @click="liked(product.no)"
                                     class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer hidden sm:block">
                                     <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="50"
                                         :color="product.islike ? '#f05252' : '#d5d6d7'" />
@@ -69,9 +69,12 @@
                             </div>
                             <div class="my-4 mx-2 text-quaternary text-xl">
                                 <p class="mt-2 text-xs sm:text-sm capitalize">{{ product.type }}</p>
-                                <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.name }}</p>
+                                <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.genre + ': '
+                                }}{{
+        product.name
+}}</p>
                                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
-                                        product.detail
+                                        product.detail_th
                                 }}</p>
                                 <base-button @click="$router.push(`/product/details/${product.no}`)"
                                     class="border-quaternary">
@@ -107,7 +110,6 @@ export default {
     components: { BaseButton },
     async mounted() {
         await this.filter_liked()
-        this.sortby()
     },
     methods: {
         change(p) {
@@ -158,8 +160,11 @@ export default {
             }
             this.page = 1
         },
-        async liked(index) {
-            this.products[index].islike = await !this.products[index].islike
+        async liked(n) {
+            let list = []
+            list = this.products.filter((e) => e.no === n)
+            list[0].islike = false
+            this.products.push(list)
             await this.$store.dispatch('me/setProducts', this.products)
             this.filter_liked()
         },
@@ -169,6 +174,7 @@ export default {
             list = this.products.filter((e) => e.islike === true)
             this.total_p = Math.ceil(list.length / this.item_per_page)
             this.products_liked = list
+            console.log(this.products_liked)
         },
         async getProducts() {
             const self = this
@@ -207,14 +213,16 @@ export default {
     left: 50%;
     transform: translate(-50%, -35%);
 }
+
 @media (max-width:1419px) {
     .centered {
-    height: 18vw;
+        height: 18vw;
+    }
 }
-}
+
 @media (max-width:1023px) {
     .centered {
-    height: 25vw;
-}
+        height: 25vw;
+    }
 }
 </style>

@@ -183,14 +183,22 @@ export const actions = {
     let product = []
     products.forEach(p => {
       product.push({
-        detail: p.detail,
-        imgUrl: p.imgUrl,
-        islike: p.islike,
-        link: p.link,
-        name: p.name,
         no: p.no,
-        quantity: p.quantity,
+        imgUrl: p.imgUrl,
+        genre: p.genre,
+        genre_th: p.genre_th,
+        name: p.name,
+        name_th: p.name_th,
+        subtitle_th: p.subtitle_th,
+        detail_th: p.detail_th,
+        ingredients: p.ingredients,
+        link: p.link,
         type: p.type,
+        quantity: p.quantity,
+        price: p.price,
+        sales: p.sales,
+        release: p.release,
+        islike: p.islike,
       })
     })
     commit('SET_PRODUCTS', product)

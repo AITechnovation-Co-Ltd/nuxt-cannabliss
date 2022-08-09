@@ -122,7 +122,9 @@
                             <div class="my-4 mx-2 text-quaternary text-xl">
                                 <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type
                                 }}</p>
-                                <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.name }}</p>
+                                <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.genre + ': ' }}{{
+                                        product.name
+                                }}</p>
                                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
                                         product.detail_th
                                 }}</p>
@@ -271,6 +273,7 @@ export default {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
 }
+
 .centered {
     height: 12vw;
     width: auto;
@@ -282,12 +285,13 @@ export default {
 
 @media (max-width:1419px) {
     .centered {
-    height: 18vw;
+        height: 18vw;
+    }
 }
-}
+
 @media (max-width:1023px) {
     .centered {
-    height: 25vw;
-}
+        height: 25vw;
+    }
 }
 </style>

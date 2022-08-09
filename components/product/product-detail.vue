@@ -25,7 +25,8 @@
           <div class="mt-4 grid grid-cols-4 gapx-4 w-full relative overflow-x-auto">
             <div v-for="(item, i) in picture " :key="i" class="relative w-full h-auto" @click="current = i">
               <!-- <img src="@/static/images/IMG_02products_detail/Rectangle199@2x.png" class="" alt="" :class="{ 'border-4 border-primary': i == current }"> -->
-              <div class="backgroundp mx-auto w-full h-auto rounded-xl sm:rounded-3xl" :class="{ 'border-4 border-primary': i == current }"></div>
+              <div class="backgroundp mx-auto w-full h-auto rounded-xl sm:rounded-3xl"
+                :class="{ 'border-4 border-primary': i == current }"></div>
               <img :src="require(`~/static/images/products${picture[i]}`)" class="centered w-full">
             </div>
           </div>
@@ -33,18 +34,20 @@
 
         <div class="w-full lg:w-1/2 mt-8 lg:mt-0 lg:ml-8" v-for="(products_id, i) in products_detail" :key="i">
           <p class="text-sm font-extralight capitalize">{{ products_id.type }}</p>
-          <div class="flex flex-col sm:flex-row justify-between items-start">
-            <h1 class="text-2xl xl:text-3xl font-light">{{ products_id.name }}</h1>
+          <div class="flex flex-col lg:flex-row justify-between items-start">
+            <div class="columns-1">
+              <p class="text-2xl xl:text-3xl font-light">{{ products_id.genre }}</p>
+              <p class="text-2xl text-primary xl:text-3xl font-light">{{ products_id.name }}</p>
+            </div>
             <p class="text-sm font-extralight mt-2">{{ products_id.quantity }}</p>
           </div>
-          <!-- <h2 class="text-4xl font-semibold text-primary">Tinted Hybrid Block SPF50 Pa+++</h2> -->
           <div class="flex my-4 items-center">
             <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-tertiary mr-4" />
             <p class="text-quaternary text-sm">(55)</p>
           </div>
           <div v-if="products_id.subtitle == ''" class="w-full h-6"></div>
-          <p v-else class="my-2 font-light text-quaternary text-md">{{ products_id.subtitle }}</p>
-          <p class="my-2 font-extralight text-quaternary text-sm">{{ products_id.detail }}</p>
+          <p v-else class="my-2 font-light text-quaternary text-md">{{ products_id.subtitle_th }}</p>
+          <p class="my-2 font-extralight text-quaternary text-sm">{{ products_id.detail_th }}</p>
           <div class="w-full flex-col text-2xl text-primary">
 
             <!-- FAQ 1 -->
@@ -71,12 +74,7 @@
               </div>
               <!-- Details -->
               <base-dropdown-item>
-                <p class="w-11/12 text-sm text-quaternary ">Lorem ipsum dolor sit amet consectetur
-                  adipisicing
-                  elit. Harum sequi
-                  provident optio magnam, commodi
-                  corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
-                  reprehenderit? Officia.</p>
+                <p class="w-11/12 text-sm text-quaternary ">{{ products_id.ingredients }}</p>
               </base-dropdown-item>
             </base-dropdown>
             <div class="w-full mt-10 flex items-center text-quaternary">
@@ -278,28 +276,31 @@ export default {
 } */
 @media (max-width:1023px) {
   .maincentered {
-  height: 40vw;
-}
-    .centered {
+    height: 40vw;
+  }
+
+  .centered {
     height: 12vw;
+  }
 }
-}
+
 @media (max-width:640px) {
   .maincentered {
-  height: 50vw;
+    height: 50vw;
+  }
 }
-}
+
 .backgroundp {
   background: #f2f5e2;
   height: 9vw;
   width: 9vw;
 }
 
-@media (max-width:1023px){
+@media (max-width:1023px) {
   .backgroundp {
-  height: 20vw;
-  width: 20vw;
-}
+    height: 20vw;
+    width: 20vw;
+  }
 }
 
 @media (min-width:1024px) {
