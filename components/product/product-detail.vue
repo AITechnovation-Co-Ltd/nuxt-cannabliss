@@ -47,7 +47,7 @@
           </div>
           <div v-if="products_id.subtitle == ''" class="w-full h-6"></div>
           <p v-else class="my-2 font-light text-quaternary text-md">{{ products_id.subtitle_th }}</p>
-          <p class="my-2 font-extralight text-quaternary text-sm">{{ products_id.detail_th }}</p>
+          <p v-html="products_id.detail_th" class="my-2 font-extralight text-quaternary text-sm"></p>
           <div class="w-full flex-col text-2xl text-primary">
 
             <!-- FAQ 1 -->
@@ -86,7 +86,7 @@
                   class="px-4 h-10 text-lg  text-quaternary border border-quaternary rounded-full mr-4">Go
                   to
                   shopping</button></a>
-              <div @click="liked(i)"
+              <div @click="liked(products_id.no)"
                 class="h-10 w-10 flex items-center justify-center border border-primary rounded-full cursor-pointer"
                 :class="{ 'bg-primary': products_id.islike }">
                 <base-icon icon="heart" viewBox="0 0 30 41" size="25" class="text-primary"
@@ -217,8 +217,9 @@ export default {
       if (this.current <= 0) { this.current = this.current = 0 }
       else if (this.current != 0) { this.current-- }
     },
-    async liked(index) {
-      this.products_detail[index].islike = await !this.products_detail[index].islike
+    async liked(n) {
+      let list = await this.products_detail.findIndex((e => e.no == n))
+      this.products_detail[list].islike = !this.products_detail[list].islike
       this.$store.dispatch('me/setProducts', this.products)
     },
     setBreadcrumb() {

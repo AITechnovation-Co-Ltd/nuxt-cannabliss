@@ -20,8 +20,8 @@
                     class="w-full py-3 mt-3 sm:mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
                     <div class="flex flex-col sm:flex-row items-start sm:items-center mx-2">
                         <p class="text-xs text-white">Items per page</p>
-                        <select class="h-8 w-16 text-xs text-quaternary rounded-xl mr-1 sm:mx-4"
-                            v-model="item_per_page">
+                        <select class="h-8 w-16 text-xs text-quaternary rounded-xl mr-1 sm:mx-4" v-model="item_per_page"
+                            @change="pagegiantion">
                             <option selected value=6>6</option>
                             <option value=12>12</option>
                             <option value=18>18</option>
@@ -36,7 +36,7 @@
                             <option value="a-z">A-Z</option>
                             <option value="z-a">Z-A</option>
                             <option value="date">Newest</option>
-                            <option value="best">Best Selling</option>
+                            <option value="best">Best Seller</option>
                             <option value="low-hight">Price(Low to hight)</option>
                             <option value="hight-low">Price(Hight to low)</option>
                         </select>
@@ -115,44 +115,47 @@ export default {
         change(p) {
             this.page = p
         },
+        pagegiantion() {
+            this.total_p = Math.ceil(this.products_liked.length / this.item_per_page)
+        },
         sortby() {
             if (this.sort_by === 'a-z') {
-                this.list_products?.sort((a, b) => {
+                this.products_liked?.sort((a, b) => {
                     let textA = a.name.toUpperCase();
                     let textB = b.name.toUpperCase();
                     return (textA > textB) ? 1 : -1;
                 })
             }
             else if (this.sort_by === 'z-a') {
-                this.list_products?.sort((a, b) => {
+                this.products_liked?.sort((a, b) => {
                     let textA = a.name.toUpperCase();
                     let textB = b.name.toUpperCase();
                     return (textA > textB) ? -1 : 1;
                 })
             }
             else if (this.sort_by === 'low-hight') {
-                this.list_products?.sort((a, b) => {
+                this.products_liked?.sort((a, b) => {
                     let priceA = a.price;
                     let priceB = b.price;
                     return (priceA > priceB) ? 1 : -1;
                 })
             }
             else if (this.sort_by === 'hight-low') {
-                this.list_products?.sort((a, b) => {
+                this.products_liked?.sort((a, b) => {
                     let priceA = a.price;
                     let priceB = b.price;
                     return (priceA > priceB) ? -1 : 1;
                 })
             }
             else if (this.sort_by === 'best') {
-                this.list_products?.sort((a, b) => {
+                this.products_liked?.sort((a, b) => {
                     let salesA = a.sales;
                     let salesB = b.sales;
                     return (salesA > salesB) ? -1 : 1;
                 })
             }
             else if (this.sort_by === 'date') {
-                this.list_products?.sort((a, b) => {
+                this.products_liked?.sort((a, b) => {
                     let releaseA = a.release;
                     let releaseB = b.release;
                     return new Date(releaseB) - new Date(releaseA);
@@ -161,11 +164,9 @@ export default {
             this.page = 1
         },
         async liked(n) {
-            let list = []
-            list = this.products.filter((e) => e.no === n)
-            list[0].islike = false
-            this.products.push(list)
-            await this.$store.dispatch('me/setProducts', this.products)
+            let list = await this.products.findIndex((e => e.no == n))
+            this.products[list].islike = false
+            this.$store.dispatch('me/setProducts', this.products)
             this.filter_liked()
         },
         async filter_liked() {
@@ -174,7 +175,6 @@ export default {
             list = this.products.filter((e) => e.islike === true)
             this.total_p = Math.ceil(list.length / this.item_per_page)
             this.products_liked = list
-            console.log(this.products_liked)
         },
         async getProducts() {
             const self = this

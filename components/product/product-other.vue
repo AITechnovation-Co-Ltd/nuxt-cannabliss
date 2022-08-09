@@ -9,12 +9,12 @@
             <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
             <span v-if="product.isNew"
               class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
-            <div @click="liked(index)"
+            <div @click="liked(product.no)"
               class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer block sm:hidden">
               <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="40"
                 :color="product.islike ? '#f05252' : '#d5d6d7'" />
             </div>
-            <div @click="liked(index)"
+            <div @click="liked(product.no)"
               class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer hidden sm:block">
               <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="50"
                 :color="product.islike ? '#f05252' : '#d5d6d7'" />
@@ -24,7 +24,8 @@
           </div>
           <div class="my-4 mx-2 text-quaternary text-xl">
             <p class="mt-2 text-xs sm:text-sm capitalize">{{ product.type }}</p>
-            <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.genre + ': ' }}{{ product.name }}</p>
+            <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.genre + ': ' }}{{ product.name }}
+            </p>
             <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{ product.detail_th }}</p>
             <base-button @click="$router.push(`/product/details/${product.no}`)" class="border-quaternary">
               View more
@@ -81,9 +82,10 @@ export default {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
-    async liked(index) {
-      this.products[index].islike = await !this.products[index].islike
-      this.$store.dispatch('me/setProducts', this.data)
+    async liked(n) {
+      let list = await this.products.findIndex((e => e.no == n))
+      this.products[list].islike = !this.products[list].islike
+      this.$store.dispatch('me/setProducts', this.products)
     },
     async list_products() {
       const self = this
