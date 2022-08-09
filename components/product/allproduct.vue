@@ -237,6 +237,11 @@ export default {
         },
         change(p) {
             this.page = p
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
         },
         filterType(type) {
             this.type = type

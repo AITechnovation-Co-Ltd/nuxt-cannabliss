@@ -114,6 +114,11 @@ export default {
     methods: {
         change(p) {
             this.page = p
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
         },
         pagegiantion() {
             this.total_p = Math.ceil(this.products_liked.length / this.item_per_page)
