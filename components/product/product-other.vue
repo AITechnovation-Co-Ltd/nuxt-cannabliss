@@ -89,14 +89,20 @@ export default {
       const self = this
       await self.getProducts()
       if (self.$store.getters['me/getProductName'] != '') {
-        let list = await self.data.filter((e) => e.name != self.$store.getters['me/getProductName'])
+        let list = await self.data.filter((e) => e.name != self.productname)
         self.products = list
       }
       else {
-        let list = await self.data.filter((e) => e.no != this.params)
-        self.products = list
+        if (this.params.length < 3) {
+          let list = await self.data.filter((e) => e.no != self.params)
+          self.products = list
+        }
+        else {
+          let list = await self.data.filter((e) => e.name != self.params)
+          self.products = list
+        }
       }
-      this.total_p = Math.ceil(self.products.length / self.page_screen)
+      self.total_p = Math.ceil(self.products.length / self.page_screen)
     },
     async getProducts() {
       const self = this

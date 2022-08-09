@@ -5,86 +5,45 @@
         Review
       </h1>
       <div class="w-full flex flex-col xl:flex-row mt-12">
-        <div
-          class="
+        <div class="
             w-full
             flex flex-col
             items-center
             sm:items-start
             xl:w-1/4
             2xl:mr-20
-          "
-        >
+          ">
           <div class="w-full flex flex-col sm:flex-row items-center">
             <p class="text-4xl font-light mr-0 sm:mr-4">4.0</p>
             <div class="flex -space-x-2">
-              <base-icon
-                icon="star"
-                viewBox="0 0 30 41"
-                size="45"
-                class="text-primary"
-              />
-              <base-icon
-                icon="star"
-                viewBox="0 0 30 41"
-                size="45"
-                class="text-primary"
-              />
-              <base-icon
-                icon="star"
-                viewBox="0 0 30 41"
-                size="45"
-                class="text-primary"
-              />
-              <base-icon
-                icon="star"
-                viewBox="0 0 30 41"
-                size="45"
-                class="text-primary"
-              />
-              <base-icon
-                icon="star"
-                viewBox="0 0 30 41"
-                size="45"
-                class="text-gray-300"
-              />
+              <base-icon icon="star" viewBox="0 0 30 41" size="45" class="text-primary" />
+              <base-icon icon="star" viewBox="0 0 30 41" size="45" class="text-primary" />
+              <base-icon icon="star" viewBox="0 0 30 41" size="45" class="text-primary" />
+              <base-icon icon="star" viewBox="0 0 30 41" size="45" class="text-primary" />
+              <base-icon icon="star" viewBox="0 0 30 41" size="45" class="text-gray-300" />
             </div>
           </div>
           <p class="ml-2 mt-2 text-quaternary text-sm">Based on reviews</p>
-          <base-button
-            @click="$refs.DialogReviewRefs.show()"
-            class="mt-4 sm:mt-6"
-            >Write a review</base-button
-          >
+          <base-button @click="$refs.DialogReviewRefs.show()" class="mt-4 sm:mt-6">Write a review</base-button>
         </div>
         <div class="w-full mt-8 lg:mt-0 xl:w-3/4">
-          <div
-            v-if="products_reviews.length != 0"
-            class="
+          <div v-if="products_reviews.length != 0" class="
               w-full
               flex flex-col
               justify-center
               divide-y divide-primary47
-            "
-          >
-            <div
-              v-for="(review, index) in products_reviews.slice(0, 2)"
-              :key="index"
-            >
+            ">
+            <div v-for="(review, index) in products_reviews.slice(0, 2)" :key="index">
               <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
                 <!-- Image Product-->
                 <div class="w-full xl:w-2/5 columns-1 items-start md:flex">
-                  <img
-                    :src="require(`~/static/images/products${review.imgUrl}`)"
-                    class="w-24 h-12 mr-0 md:mr-6"
-                  />
+                  <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-24 h-12 mr-0 md:mr-6" />
                   <p class="mt-3 md:mt-0 text-sm font-extralight">
                     {{ review.product_name }}
                   </p>
                 </div>
                 <!-- Details review -->
-                <div
-                  class="
+                <div class="
                     w-full
                     xl:w-3/5
                     flex flex-col
@@ -92,26 +51,15 @@
                     xl:ml-4
                     mt-4
                     xl:mt-0
-                  "
-                >
+                  ">
                   <div class="flex sm:flex justify-between">
                     <p class="text-lg font-light">{{ review.name }}</p>
                     <div class="flex flex-row w-40">
                       <div v-for="i in review.score" :key="`review-${i}`">
-                        <base-icon
-                          icon="star"
-                          viewBox="0 0 30 41"
-                          size="30"
-                          class="text-primary"
-                        />
+                        <base-icon icon="star" viewBox="0 0 30 41" size="30" class="text-primary" />
                       </div>
                       <div v-for="j in 5 - review.score" :key="`review+${j}`">
-                        <base-icon
-                          icon="star"
-                          viewBox="0 0 30 41"
-                          size="30"
-                          class="text-gray-300"
-                        />
+                        <base-icon icon="star" viewBox="0 0 30 41" size="30" class="text-gray-300" />
                       </div>
                     </div>
                   </div>
@@ -126,9 +74,7 @@
             </div>
             <!-- Load More -->
           </div>
-          <base-button @click="$router.push(`/review`)" class="mt-6"
-            >View more</base-button
-          >
+          <base-button @click="$router.push(`/review`)" class="mt-6">View more</base-button>
         </div>
       </div>
       <dialog-review ref="DialogReviewRefs" :product_name="product_name" />
@@ -162,9 +108,30 @@ export default {
   },
   methods: {
     list_reviews() {
-      let list = [];
-      list = this.reviews.filter((e) => e.product_id == this.params);
-      this.products_reviews = list;
+      const self = this
+      if (self.$store.getters["me/getProductName"] != "") {
+        let list = self.reviews.filter((e) => e.product_name == self.$store.getters["me/getProductName"]);
+        if (list.length == 0) {
+          self.no_product = true;
+        } else {
+          self.products_reviews = list;
+        }
+      }
+      else {
+        let list = self.reviews.filter((e) => e.product_id == self.params);
+        if (list.length == 0) {
+          let list = self.reviews.filter((e) => e.product_name == self.params);
+          if (list.length == 0) {
+            self.no_product = true;
+          }
+          else {
+            self.products_reviews = list;
+          }
+        } else {
+          self.products_reviews = list;
+        }
+      }
+
     },
     async fetch() {
       const self = this;
