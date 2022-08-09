@@ -3,26 +3,17 @@
     <div class="w-full sm:w-11/12 lg:w-2/5">
       <h1 class="text-3xl xl:text-4xl 2xl:text-5xl text-primary">Ingredients</h1>
       <div class="mt-4 lg:mt-8 flex items-center">
-        <p class="content text-base sm:text-lg border-l-2 border-primary pl-2 lg:pl-4">By having a hero ingredient , there's an opportunity to get
-          into the SKINCARE
-          TREND in
-          Thailand </p>
+        <p class="content text-lg sm:text-xl border-l-2 border-primary pl-2 lg:pl-4">ผสานพลัง 2 สารสกัดมหัศจรรย์จากธรรมชาติ เพื่อดูแลผิวของคุณให้กระจ่างใส และแข็งแรงขึ้น</p>
       </div>
-      <p class="mt-3 lg:mt-8 text-sm font-extralight">Leucojum aestivum bulb extract ( IBR - Snowflake ) is part of
-        the anti aging
-        technology
-        of IBR that captures and transfers flower bulbs dormancy and rejuvenation to skin . Flower bulbs go
-        dormant
-        through the winter like " beauty sleep " to allow beautiful awaken , rejuvenated blossom in the spring.
-      </p>
+      <p class="mt-3 lg:mt-8 text-base sm:text-lg font-extralight">ด้วยสารสกัด CBD จากกัญชงที่มีส่วนช่วยในการลดการอักเสบ ปรับสภาพ และ คืนความชุ่มชื้นให้กับผิว และ Snow Bell Extract จากประเทศเกาหลี ที่มีสารต้านอนุมูลอิสระ และทำให้ผิวแลดูขาว กระจ่างใสขึ้น</p>
       <base-button class="mt-4 lg:mt-8 hidden sm:block" @click="$router.push(`/ingredients`)">View more</base-button>
     </div>
     <div class="w-full sm:w-11/12 lg:w-3/5 mt-4 lg:mt-0 ml-0 sm:ml-3 flex">
       <div class="w-1/2 flex flex-col">
-        <img class="rounded-3xl" src="~/static/images/IMG_01home/pages_01home/IMG_1290.jpg" alt="">
+        <img class="rounded-3xl" src="~/static/images/IMG_01home/Ingredients/Ingredients_01.jpg" alt="">
       </div>
       <div class="w-1/2 ml-3 lg:ml-8">
-        <img class="mt-12 lg:mt-28 rounded-3xl" src="~/static/images/IMG_01home/pages_01home/IMG_1262.jpg" alt="">
+        <img class="mt-12 lg:mt-28 rounded-3xl" src="~/static/images/IMG_01home/Ingredients/Ingredients_02.jpg" alt="">
       </div>
     </div>
     <base-button class="mt-6 mr-0 ml-auto lg:mt-8 block sm:hidden" @click="$router.push(`/ingredients`)">View more</base-button>

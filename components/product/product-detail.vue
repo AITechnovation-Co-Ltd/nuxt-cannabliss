@@ -22,9 +22,13 @@
               <base-icon icon='dropdown' viewBox="0 0 24 24" class="transform -rotate-90" size="32" />
             </div>
           </div>
-          <div class="grid grid-cols-4 w-full overflow-x-auto">
-            <img v-for="(item, i) in picture " :key="i" :src="require(`~/static/images/products${picture[i]}`)"
-              @click="current = i" class="" :class="{ 'border-4 border-primary': i == current }">
+          <div class="grid grid-cols-4 gapx-4 w-full relative overflow-x-auto">
+            <div v-for="(item, i) in picture " :key="i" class="relative" @click="current = i">
+            <!-- <img src="@/static/images/IMG_02products_detail/Rectangle199@2x.png" class="" alt="" :class="{ 'border-4 border-primary': i == current }"> -->
+            <div class="backgroundp mx-auto rounded-3xl" :class="{ 'border-4 border-primary': i == current }"></div>
+            <img :src="require(`~/static/images/products${picture[i]}`)"
+               class="centered" >
+              </div>
           </div>
         </div>
 
@@ -245,8 +249,18 @@ export default {
 .vl {
   width: 1px;
 }
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-
+.backgroundp{
+  background: #f2f5e2;
+  height: 9vw;
+  width: 9vw;
+}
 @media (min-width:1024px) {
   .content {
     position: absolute;
