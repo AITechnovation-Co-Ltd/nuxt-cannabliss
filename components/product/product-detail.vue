@@ -114,7 +114,7 @@
               <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
               <h1 class="text-lg sm:text-xl text-center font-normal">Leucojum Aestivum Bulb Extract <br
                   class="block sm:hidden"> (Ibr - Snowflake®)</h1>
-              <p class="mt-2 text-center text-base font-extralight">Anti Aging To Make Skin Younger And Brighter</p>
+              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">Anti Aging To Make Skin Younger And Brighter</p>
             </div>
           </div>
         </div>

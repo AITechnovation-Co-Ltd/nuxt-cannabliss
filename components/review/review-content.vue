@@ -44,9 +44,9 @@
         <div v-for="(review, index) in list_reviews.slice(0, count)" :key="index">
           <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
             <!-- Image Product-->
-            <div class="w-full xl:w-2/5 columns-1 items-start md:flex">
-              <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-auto h-12 mr-0 md:mr-6">
-              <p class="mt-3 md:mt-0 text-sm font-extralight">{{ review.product_name }}</p>
+            <div class="w-full xl:w-2/5 columns-1 items-start xl:flex">
+              <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-auto h-24 mr-0 md:mr-6">
+              <p class="mt-3 xl:mt-0 text-sm font-extralight">{{ review.product_name }}</p>
             </div>
             <!-- Details review -->
             <div class="w-full xl:w-3/5 flex flex-col ml-0 xl:ml-4 mt-4 xl:mt-0 ">
