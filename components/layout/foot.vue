@@ -83,7 +83,7 @@
       </div>
       <hr class="mt-6 border-primary sm:mx-auto">
       <div class="py-5 flex items-center justify-center">
-        <span class="text-xs font-extralight sm:text-center">Copyright © 2021 <a href="#" class="hover:underline">MorHello</a>. All
+        <span class="text-xs font-extralight sm:text-center">Copyright © 2022 <a href="#" class="hover:underline">MorHello</a>. All
           rights reserved.
         </span>
       </div>

@@ -37,7 +37,7 @@
               <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
                 <!-- Image Product-->
                 <div class="w-full xl:w-2/5 columns-1 items-start md:flex">
-                  <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-24 h-12 mr-0 md:mr-6" />
+                  <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-auto h-12 mr-0 md:mr-6" />
                   <p class="mt-3 md:mt-0 text-sm font-extralight">
                     {{ review.product_name }}
                   </p>

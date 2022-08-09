@@ -5,7 +5,7 @@
             <img v-if="route_name == item.route || route_name == item.sub_routes" class="w-full bg mb-10 sm:mb-20 z-10"
                 :src="item.src">
             <div v-if="route_name == item.route || route_name == item.sub_routes" class="content flex z-20">
-                <h1 class="text-6xl text-primary font-medium">{{ item.label }}</h1>
+                <h1 class="text-6xl text-primary font-normal">{{ item.label }}</h1>
             </div>
         </div>
         <div v-if="!no_breadcrumb.includes(route_name)"
