@@ -101,7 +101,7 @@
                         <template v-if="index < item_per_page * page && index >= item_per_page * (page - 1)">
                             <div class="relative mx-2">
                                 <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
-                                <img class="centered w-full"
+                                <img class="imgp centered w-full"
                                     :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
                                 <span v-if="product.isNew"
                                     class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
@@ -264,18 +264,30 @@ export default {
     opacity: .34;
 }
 
-.centered {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -35%);
-}
-
 .truncated-2-lines {
     width: 100%;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+}
+.centered {
+    height: 12vw;
+    width: auto;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+@media (max-width:1419px) {
+    .centered {
+    height: 18vw;
+}
+}
+@media (max-width:1023px) {
+    .centered {
+    height: 25vw;
+}
 }
 </style>

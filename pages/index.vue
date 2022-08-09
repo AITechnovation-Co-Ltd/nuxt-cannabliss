@@ -34,15 +34,6 @@
     <Partner class="z-10" />
 
     <!-- background -->
-    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1050@2x.png" alt="" class="bg-1"> -->
-    <!-- <img src="~/static/images/IMG_03blogs/Group1152@2x.png" alt="" class="bg-2 hidden xl:block"> -->
-    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1094@2x.png" alt="" class="bg-3"> -->
-    <!-- <img src="~/static/images/IMG_01home/pages_01home/Path322@2x.png" alt="" class="bg-4 hidden xl:block"> -->
-    <!-- <img src="~/static/images/IMG_01home/pages_01home/CANABLISS@2x.png" alt="" class="bg-5 z-20 hidden xl:block"> -->
-    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1053@2x.png" alt="" class="bg-6"> -->
-    <!-- <img src="~/static/images/IMG_01home/pages_01home/CANABLISS_01.png" alt="" class="bg-7"> -->
-    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1115@2x.png" alt="" class="bg-8"> -->
-    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1136@2x.png" alt="" class="bg-9"> -->
   </div>
 </template>
 
@@ -66,64 +57,5 @@ export default {
 }
 </script>
 <style scoped>
-.bg-1 {
-  height: 1000px;
-  position: absolute;
-  top: -150px;
-  left: -150px;
-}
 
-.bg-2 {
-  height: 900px;
-  position: absolute;
-  top: 50px;
-  right: 50px;
-}
-
-.bg-3 {
-  height: 250px;
-  position: absolute;
-  top: 900px;
-  left: 450px;
-}
-
-.bg-4 {
-  height: 400px;
-  position: absolute;
-  top: 1490px;
-  left: 150px;
-}
-
-.bg-5 {
-  height: 150px;
-  position: absolute;
-  top: 2150px;
-  left: 170px;
-}
-
-.bg-6 {
-  height: 1000px;
-  position: absolute;
-  top: 3600px;
-  right: -650px;
-}
-
-.bg-7 {
-  height: 600px;
-  position: absolute;
-  top: 4200px;
-  left: -20px;
-}
-
-.bg-8 {
-  height: 200px;
-  position: absolute;
-  top: 4350px;
-  left: 250px;
-}
-
-.bg-9 {
-  position: absolute;
-  top: 2900px;
-}
 </style>

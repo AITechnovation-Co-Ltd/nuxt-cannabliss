@@ -17,22 +17,21 @@
             <div @click="arrow_left" class="absolute left-0 top-1/2">
               <base-icon icon='dropdown' viewBox="0 0 24 24" class="transform rotate-90" size="32" />
             </div>
-            <img :src="require(`~/static/images/products${products_id.imgUrl[current]}`)">
+            <img class="maincentered" :src="require(`~/static/images/products${products_id.imgUrl[current]}`)">
             <div @click="arrow_right" class="absolute right-0 top-1/2">
               <base-icon icon='dropdown' viewBox="0 0 24 24" class="transform -rotate-90" size="32" />
             </div>
           </div>
-          <div class="grid grid-cols-4 gapx-4 w-full relative overflow-x-auto">
-            <div v-for="(item, i) in picture " :key="i" class="relative" @click="current = i">
-            <!-- <img src="@/static/images/IMG_02products_detail/Rectangle199@2x.png" class="" alt="" :class="{ 'border-4 border-primary': i == current }"> -->
-            <div class="backgroundp mx-auto rounded-3xl" :class="{ 'border-4 border-primary': i == current }"></div>
-            <img :src="require(`~/static/images/products${picture[i]}`)"
-               class="centered" >
-              </div>
+          <div class="mt-4 grid grid-cols-4 gapx-4 w-full relative overflow-x-auto">
+            <div v-for="(item, i) in picture " :key="i" class="relative w-full h-auto" @click="current = i">
+              <!-- <img src="@/static/images/IMG_02products_detail/Rectangle199@2x.png" class="" alt="" :class="{ 'border-4 border-primary': i == current }"> -->
+              <div class="backgroundp mx-auto w-full h-auto rounded-xl sm:rounded-3xl" :class="{ 'border-4 border-primary': i == current }"></div>
+              <img :src="require(`~/static/images/products${picture[i]}`)" class="centered w-full">
+            </div>
           </div>
         </div>
 
-        <div class="w-full lg:w-1/2 mt-8 lg:mt-0 sm:ml-8" v-for="(products_id, i) in products_detail" :key="i">
+        <div class="w-full lg:w-1/2 mt-8 lg:mt-0 lg:ml-8" v-for="(products_id, i) in products_detail" :key="i">
           <p class="text-sm font-extralight capitalize">{{ products_id.type }}</p>
           <div class="flex flex-col sm:flex-row justify-between items-start">
             <h1 class="text-2xl xl:text-3xl font-light">{{ products_id.name }}</h1>
@@ -249,18 +248,60 @@ export default {
 .vl {
   width: 1px;
 }
+
+/* .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.maincentered {
+  height: 30vw;
+  width: auto;
+  margin: auto;
+}
+
 .centered {
+  height: 5vw;
+  width: auto;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.backgroundp{
+/* @media (max-width:1419px) {
+    img.centered {
+    height: 18vw;
+}
+} */
+@media (max-width:1023px) {
+  .maincentered {
+  height: 40vw;
+}
+    .centered {
+    height: 12vw;
+}
+}
+@media (max-width:640px) {
+  .maincentered {
+  height: 50vw;
+}
+}
+.backgroundp {
   background: #f2f5e2;
   height: 9vw;
   width: 9vw;
 }
+
+@media (max-width:1023px){
+  .backgroundp {
+  height: 20vw;
+  width: 20vw;
+}
+}
+
 @media (min-width:1024px) {
   .content {
     position: absolute;
@@ -270,10 +311,10 @@ export default {
   }
 }
 
-/* @media (max-width:1024px) {
+@media (max-width:1024px) {
   .bg {
     position: absolute;
     bottom: 0;
   }
-} */
+}
 </style>
