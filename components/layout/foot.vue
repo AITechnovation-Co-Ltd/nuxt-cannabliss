@@ -13,16 +13,16 @@
           <div class="font-light">
             <ul>
               <li class="mb-4 mt-8">
-                <p @click="filter('All Products')" class="hover:underline">Product</p>
+                <p @click="filter('All Products')" class="hover:underline hover:cursor-pointer">Product</p>
               </li>
               <li class="mb-4">
-                <p @click="filter('Hair')" class="hover:underline">Hair</p>
+                <p @click="filter('Hair')" class="hover:underline hover:cursor-pointer">Hair</p>
               </li>
               <li class="mb-4">
-                <p @click="filter('Face')" class="hover:underline">Face</p>
+                <p @click="filter('Face')" class="hover:underline hover:cursor-pointer">Face</p>
               </li>
               <li>
-                <p @click="filter('Body')" class="hover:underline">Body</p>
+                <p @click="filter('Body')" class="hover:underline hover:cursor-pointer">Body</p>
               </li>
             </ul>
           </div>
@@ -31,7 +31,7 @@
           <div>
             <ul>
               <li class="mb-4 mt-8">
-                <div @click="gotoHome()" class="hover:underline">Home</div>
+                <div @click="gotoHome()" class="hover:underline hover:cursor-pointer">Home</div>
               </li>
               <li class="mb-4">
                 <nuxt-link to="/ingredients" class="hover:underline ">Ingredients</nuxt-link>
@@ -53,10 +53,10 @@
             <h2 class="mb-3 mt-6 text-lg font-normal">Let's talk</h2>
             <ul>
               <li class="mb-4">
-                <p>T: +391 (0)35 2568 4593</p>
+                <p>T: +66 (0) 2712-0333</p>
               </li>
               <li class="mb-4">
-                <p>E: hello@domain.com</p>
+                <p>E: info@panacee.com</p>
               </li>
               <li class="flex flex-row">
                 <a href="#" class=" mr-1 hover dark:hover:text-white">
