@@ -13,15 +13,16 @@
     "name_th": "ไมเซลล่าร์ คลีนซิ่ง เจล",
     "subtitle_th": "ผลิตภัณฑ์ทำความสะอาดผิวหน้าแบบล้างออก",
     "detail_th": "เจลล้างหน้าและเครื่องสำอางที่อ่อนโยนแม้ผิวแพ้ง่าย ทำหน้าที่ช่วยดักจับสิ่งสกปรกอย่างล้ำลึกและขจัดออกจากผิวอย่างอ่อนโยน สามารถใช้รอบดวงตาได้โดยไม่ก่อให้เกิดการระคายเคือง ช่วยลดแบคทีเรียและความมัน สาเหตุของการเกิดสิว ช่วยให้ผิวหน้ากระชับ ชุ่มชื้น ไม่แห้งกร้าน เนื้อเจลนุ่มลื่น เกลี่ยง่าย ไม่ต้องใช้สำลีในการเช็ดทำความสะอาดจึงช่วยลดการเสียดสีผิวซึ่งเป็นสาเหตุของริ้วรอยได้ดี",
-    "how2use":"",
+    "how2use": "นวดให้ทั่วใบหน้าเบาๆขณะหน้าแห้ง แล้วล้างออกด้วยน้ำสะอาด",
     "ingredients": "AQUA, PEG-6 CAPRYLIC/CAPRIC GLYCERIDES, POLYSORBATE 20, PROPANEDIOL, AMMONIUM ACRYLOYLDIMETHYLTAURATE/VP COPOLYMER, GLYCERIN, SODIUM LEVULINATE, PHENOXYETHANOL, LEVULINIC ACID, SODIUM ANISATE, FRAGRANCE, CITRIC ACID, STYRAX JAPONICUS BRANCH/FRUIT/LEAF EXTRACT, BUTYLENE GLYCOL, CANNABIS SPP. EXTRACT (CANNABIDIOL), LAVANDULA ANGUSTIFOLIA FLOWER EXTRACT, ROSA DAMASCENA EXTRACT, 1,2-HEXANEDIOL, HINOKITIOL, ETHYL HEXANEDIOL, SODIUM BENZOATE, POTASSIUM SORBATE",
     "link": "https://morhelloclinic.com/product/canabliss-clear-micellar-cleansing-gel-organic-bulgarian-rose-100-ml/",
     "type": "Face",
     "quantity": "100 ML 3.4fl.oz.",
-    "price": 390.00,
+    "price": 390.0,
     "sales": 1,
     "release": "2022-08-09",
-    "islike": false
+    "islike": false,
+    "best": false
   },
   {
     "no": 2,
@@ -37,15 +38,16 @@
     "name_th": "แอดวานซ์ อาย ครีม บราวน์ แอลจี้ พลัส คาเฟอีน",
     "subtitle_th": "ผลิตภัณฑ์บำรุงผิวบริเวณรอบดวงตา",
     "detail_th": "ครีมบำรุงรอบดวงตา เพื่อผิวแลดูอ่อนกว่าวัย เนื้อครีมบางเบา อ่อนโยนแม้ผิวแพ้ง่าย ผสานคุณค่าเปปไทด์ที่ออกฤทธิ์คล้าย Botox ช่วยลดเลือนริ้วรอยอย่างตรงจุด พร้อมคุณค่าจากสาหร่ายสีน้ำตาลและแคปซูลบรรจุคาเฟอีน ช่วยฟื้นบำรุงรอยคล้ำใต้ตา เสริมคุณสมบัติด้วยไฮยาลูรอนและเซราไมด์ ช่วยเติมความชุ่มชื้นให้ผิวรอบดวงตา",
-    "how2use":"",
+    "how2use": "ทาบริเวณรอบดวงตาเป็นประจำ",
     "ingredients": "AQUA, DIBUTYL ADIPATE, CETYL ALCOHOL, DIMETHICONE, PROPANEDIOL, GLYCERYL STEARATE, ARACHIDYL ALCOHOL, BUTYROSPERMUM PARKII BUTTER, CANNABIS SPP. EXTRACT (CANNABIDIOL), GLYCERIN, PEG-100 STEARATE, CAFFEINE, BEHENYL ALCOHOL, BUTYLENE GLYCOL, STYRAX JAPONICUS BRANCH/FRUIT/LEAF EXTRACT, SODIUM STARCH OCTENYLSUCCINATE, SODIUM LEVULINATE, ARACHIDYL GLUCOSIDE, PHENOXYETHANOL, BEESWAX, SODIUM ANISATE, TRIETHANOLAMINE, FUCUS VESICULOSUS EXTRACT, ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER, ALLANTOIN, CETEARETH-25, XANTHAN GUM, DISODIUM EDTA, HYDROLYZED SODIUM HYALURONATE, CAPRYLYL GLYCOL, ETHYLHEXYLGLYCERIN, HYDRATED SILICA, HYDROXYETHYL BEHENAMIDOPROPYL DIMONIUM CHLORIDE, POLYQUATERNIUM-67, HEXYLENE GLYCOL, 1,2-HEXANEDIOL, GLUCOSE, BEHENIC ACID, CERAMIDE NP, CHOLESTEROL, ACETYL HEXAPEPTIDE-8, CERAMIDE NS, POTASSIUM SORBATE, CERAMIDE AP, CERAMIDE EOP, CERAMIDE EOS, CAPROOYL PHYTOSPHINGOSINE, CAPROOYL SPHINGOSINE",
     "link": "https://morhelloclinic.com/product/canabliss-advance-eye-cream-brown-algae-plus-caffeine-10-g/",
     "type": "Face",
     "quantity": "15 G",
-    "price": 990.00,
+    "price": 990.0,
     "sales": 2,
     "release": "2022-08-09",
-    "islike": false
+    "islike": false,
+    "best": false
   },
   {
     "no": 3,
@@ -61,7 +63,7 @@
     "name_th": "ซุปเปอร์ เบอร์รี่ ไฮเดรตติ้ง มาส์ก",
     "subtitle_th": "ผลิตภัณฑ์พอกผิวหน้าแบบล้างออก",
     "detail_th": "เจลมาส์กผิวหน้าอุดมด้วยสารสกัดกลุ่มเบอร์รี่ อาทิ Acai berry, Blackberry, Blackcurrant, Blueberry, Cranberry, Raspberry และ Strawberry ช่วยลดเลือนจุดด่างดำ เผยผิวกระจ่างใส ผสานสารสกัดที่มีสารแคนนาบิไดออล (CBD) จากกัญชง เพิ่มความชุ่มชื้นแก่ผิว",
-    "how2use":"",
+    "how2use": "ทามาส์กลงบนผิวหน้าที่สะอาด มาส์กทิ้งไว้ประมาณ​ 15 - 20 นาที แล้วล้างออกด้วยน้ำสะอาด แนะนำให้มาส์กหน้าอย่างน้อยสัปดาห์ละ 2 ครั้งเพื่อผลลัพธ์ที่ดี",
     "ingredients": "AQUA, BUTYLENE GLYCOL, PEG-40 HYDROGENATED CASTOR OIL, 1,2-HEXANEDIOL, ACRYLATES/BEHENETH-25 METHACRYLATE COPOLYMER, INOSITOL, PANTHENOL, PHENOXYETHANOL, AMINOMETHYL PROPANOL, FRAGRANCE, HEXACARBOXYMETHYL DIPEPTIDE-12, HYDROLYZED HYALURONIC ACID, HYDROLYZED SODIUM HYALURONATE, ETHYLHEXYLGLYCERIN, STYRAX JAPONICUS BRANCH/FRUIT/LEAF EXTRACT, EUTERPE OLERACEA FRUIT EXTRACT, FRAGARIA VESCA FRUIT EXTRACT, RIBES NIGRUM FRUIT EXTRACT, RUBUS FRUTICOSUS FRUIT EXTRACT, RUBUS IDAEUS FRUIT EXTRACT, VACCINIUM ANGUSTIFOLIUM FRUIT EXTRACT, VACCINIUM MACROCARPON FRUIT EXTRACT, CANNABIS SPP. EXTRACT (CANNABIDIOL), GLYCINE, SERINE, GLUTAMIC ACID, ASPARTIC ACID, LEUCINE, ALANINE, LYSINE, ARGININE, TYROSINE, PHENYLALANINE, PROLINE, THREONINE, VALINE, ISOLEUCINE, CI 14720, HISTIDINE",
     "link": "",
     "type": "Face",
@@ -69,7 +71,8 @@
     "price": 0,
     "sales": 3,
     "release": "2022-08-09",
-    "islike": false
+    "islike": false,
+    "best": false
   },
   {
     "no": 4,
@@ -80,7 +83,7 @@
     "name_th": "บอดี้ โลชั่น สกิน โพรเทคติ้ง เอสพีเอฟ50 พีเอ+++",
     "subtitle_th": "ผลิตภัณฑ์ป้องกันแสงแดดสำหรับผิวกาย",
     "detail_th": "โลชั่นบำรุงผิวกาย ผสมสารป้องกันแสงแดด ช่วยปกป้องผิวจากแสงแดด ผสานสารสกัดที่มีสารแคนนาบิไดออล (CBD) จากกัญชง ช่วยให้ความชุ่มชื้นแก่ผิว",
-    "how2use":"",
+    "how2use": "ทาบริเวณผิวกายเป็นประจำ",
     "ingredients": "AQUA, BUTYL METHOXYDIBENZOYLMETHANE, CYCLOPENTASILOXANE, ETHYLHEXYL SALICYLATE, GLYCERIN, OCTOCRYLENE, PHENYLBENZIMIDAZOLE SULFONIC ACID, METHYLENE BIS-BENZOTRIAZOLYL TETRAMETHYLBUTYLPHENOL, STEARIC ACID, TRIETHANOLAMINE, GLYCERYL STEARATE, CANNABIS SPP. EXTRACT (CANNABIDIOL), CETEARYL ALCOHOL, HYDROXYETHYL ACRYLATE/SODIUM ACRYLOYLDIMETHYL TAURATE COPOLYMER, PHENOXYETHANOL, PEG-100 STEARATE, FRAGRANCE, GLYCERYL CAPRYLATE, TOCOPHERYL ACETATE, DECYL GLUCOSIDE, XANTHAN GUM, CARBOMER, DISODIUM EDTA, STYRAX JAPONICUS BRANCH/FRUIT/LEAF EXTRACT, ETHYLHEXYLGLYCERIN, BHT, PROPYLENE GLYCOL",
     "link": "",
     "type": "Body",
@@ -88,7 +91,8 @@
     "price": 0,
     "sales": 4,
     "release": "2022-08-09",
-    "islike": false
+    "islike": false,
+    "best": false
   },
   {
     "no": 5,
@@ -104,7 +108,7 @@
     "name_th": "แอนตี้-ฟอล นอริชชิ่ง แชมพู",
     "subtitle_th": "ผลิตภัณฑ์ทำความสะอาดเส้นผม/หนังศีรษะแบบล้างออก",
     "detail_th": "แชมพูทำความสะอาดเส้นผม ปราศจาก SLES สูตรผสานสารสกัดที่มีสารแคนนาบิไดออล (CBD) จากกัญชง พร้อมบำรุงผมด้วย HA ทั้ง 7 ชนิด ผสานสารสกัดจากมะขามป้อม ช่วยบำรุงเส้นผม ทำให้ผมลื่นหวีง่าย ลดการขาดหลุดร่วงของเส้นผม ทีมีสาเหตุมาจากเส้นผมพันกัน",
-    "how2use":"",
+    "how2use": "ล้างหนังศีรษะให้สะอาดจนเปียกชุ่ม<br>ปั๊มแชมพู 2-3 ครั้ง ลงบนฝ่ามือ ถูมือให้เกิดฟอง<br>นวดบริเวณหนังศีรษะให้ทั่ว และล้างออกให้สะอาด<br>สามารถสระเพิ่มครั้งที่ 2 โดยลดปริมาณแชมพูลง",
     "ingredients": "AQUA, COCAMIDE MEA, SODIUM LAUROYL SARCOSINATE, ACRYLATES COPOLYMER, SODIUM METHYL COCOYL TAURATE, GLYCERIN, FRAGRANCE, DECYL GLUCOSIDE, GLYCOL DISTEARATE, PHENOXYETHANOL, SODIUM CHLORIDE, ORBIGNYA OLEIFERA SEED OIL, SYNTHETIC FLUORPHLOGOPITE, PENTACLETHRA MACROLOBA SEED OIL, GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE, CANNABIS SPP. EXTRACT (CANNABIDIOL), CI 77891, PROPANEDIOL, PROPYLENE GLYCOL, STYRAX JAPONICUS BRANCH/FRUIT/LEAF EXTRACT, BISABOLOL, 1,2-HEXANEDIOL, AMARANTHUS CAUDATUS SEED EXTRACT, ZEA MAYS STARCH, TIN OXIDE, PHYLLANTHUS EMBLICA FRUIT EXTRACT, HYALURONIC ACID, HYDROLYZED GLYCOSAMINOGLYCANS, HYDROLYZED HYALURONIC ACID, HYDROLYZED SODIUM HYALURONATE, POTASSIUM HYALURONATE, SODIUM HYALURONATE, SODIUM HYALURONATE CROSSPOLYMER, ALOE BARBADENSIS LEAF EXTRACT",
     "link": "",
     "type": "Hair",
@@ -112,7 +116,8 @@
     "price": 0,
     "sales": 5,
     "release": "2022-08-09",
-    "islike": false
+    "islike": false,
+    "best": false
   },
   {
     "no": 6,
@@ -128,7 +133,7 @@
     "name_th": "เรด ฟรุ๊ต โอเวอร์ไนท์ มาส์ก",
     "subtitle_th": "มาส์กบำรุงผิวหน้าไม่ต้องล้างออก",
     "detail_th": "ครีมบำรุงผิวหน้าก่อนนอน สูตรผสานสารสกัดที่มีสารแคนนาบิไดออล (CBD) จากกัญชง และสารสกัดสตรอเบอร์รี่ ทำงานร่วมกับวิตามินซี และวิตามินอีที่อยู่ในรูปแบบเอนแคปซูเลชั่น (Encapsulation) และวิตามินบี 3  ช่วยเติมเต็มความชุ่มชื้น ทำให้ผิวหน้าเนียนนุ่ม แลดูขาวกระจ่างใส สดใส ดูมีชีวิตชีวาหลังจากตื่นนอน",
-    "how2use":"",
+    "how2use": "ทามาส์กลงบนผิวหน้าที่สะอาด แนะนำให้มาส์กหน้าอย่างน้อยสัปดาห์ละ 2 ครั้งเพื่อผลลัพธ์ที่ดี",
     "ingredients": "AQUA, GLYCERIN, NIACINAMIDE, C15-19 ALKANE, COCO-CAPRYLATE/CAPRATE, AUREOBASIDIUM PULLULANS FERMENT, PENTAERYTHRITYL TETRAETHYLHEXANOATE, PHENOXYETHANOL, SACCHARIDE ISOMERATE, MALTODEXTRIN, POLYACRYLATE CROSSPOLYMER-6, PUNICA GRANATUM SEED CELL CULTURE LYSATE, HYDROXYETHYL ACRYLATE/SODIUM ACRYLOYLDIMETHYL TAURATE COPOLYMER, PROPYLENE GLYCOL, ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER, DAUCUS CAROTA SATIVA ROOT CELL CULTURE LYSATE, SQUALANE, CAPRYLIC/CAPRIC TRIGLYCERIDE, TRIETHANOLAMINE, MANNITOL, FRAGRANCE, DISODIUM EDTA, DEOXYPHYTANTRIYL PALMITAMIDE MEA, FRAGARIA ANANASSA FRUIT EXTRACT, HYDROGENATED LECITHIN, STYRAX JAPONICUS BRANCH/FRUIT/LEAF EXTRACT, MICROCRYSTALLINE CELLULOSE, POLYSORBATE 60, SUCROSE, CERAMIDE NP, CHOLESTEROL, SORBITAN ISOSTEARATE, ZEA MAYS STARCH, CITRIC ACID, CANNABIS SPP. EXTRACT (CANNABIDIOL), HYDROXYPROPYL METHYLCELLULOSE, SODIUM CITRATE, 3-O-ETHYL ASCORBIC ACID, CI 12490, CI 74160, TOCOPHERYL ACETATE, ALOE BARBADENSIS LEAF EXTRACT, ETHYLHEXYLGLYCERIN, CI 17200",
     "link": "",
     "type": "Face",
@@ -136,7 +141,8 @@
     "price": 0,
     "sales": 6,
     "release": "2022-08-09",
-    "islike": false
+    "islike": false,
+    "best": true
   },
   {
     "no": 7,
@@ -152,7 +158,7 @@
     "name_th": "ไทย เฮอร์เบิล สกิน โพรเทคติ้ง บอดี้ สครับ",
     "subtitle_th": "ผลิตภัณฑ์ขัดผิวกายแบบล้างออก",
     "detail_th": "สครับเกลือขัดผิว ช่วยทำความสะอาด ขจัดสิ่งสกปรก ผสานสารสกัดจากสมุนไพรรากว่านน้ำ, ต้นคาวทอง, งาขี้ม้อน, โกฐหัวบัว, ทานาคา, ขมิ้น รวมถึงสารสกัดที่มีสารแคนนาบิไดออล (CBD) จากกัญชง บำรุงผิว เผยผิวเรียบเนียน",
-    "how2use":"",
+    "how2use": "ทำความสะอาดผิวกายก่อนในเบื้องต้น เพื่อกำจัดสิ่งสกปรกบางส่วนให้หลุดลอกออกไป จากนั้นจึงนำบอร์ดี้ สครับ ที่เตรียมไว้ มาถูวนเบาๆ ไปทีละจุดจนทั่วผิวกาย เน้นบริเวณผิวที่มีความหมองคล้ำ และหยาบกร้านเป็นพิเศษ จากนั้นให้ทิ้งไว้ประมาณ 10-15 นาที แล้วล้างออก ตามด้วยการอาบน้ำทำความสะอาดผิวตามปกติ",
     "ingredients": "SODIUM CHLORIDE, AQUA, PARAFFINUM LIQUIDUM, CETYL ALCOHOL, STEARYL ALCOHOL, MYRISTYL ALCOHOL, FRAGRANCE, PHENOXYETHANOL, BEESWAX, LIMONIA ACIDISSIMA BARK POWDER, CANNABIS SPP. EXTRACT (CANNABIDIOL), CI 19140, SODIUM LAURETH SULFATE, TRIETHYLENE GLYCOL, BUTYLENE GLYCOL, GLYCERIN, STYRAX JAPONICUS BRANCH/FRUIT/LEAF EXTRACT, 1,2-HEXANEDIOL , ETHYL HEXANEDIOL, METHYLISOTHIAZOLINONE, CI 16255, CURCUMA LONGA ROOT POWDER, WHEY PROTEIN, C16-36 ALKYL STEARATE, CETEARETH-25, SODIUM SULFATE, ACORUS CALAMUS ROOT EXTRACT, HOUTTUYNIA CORDATA EXTRACT, PERILLA FRUTESCENS LEAF EXTRACT, CNIDIUM OFFICINALE ROOT EXTRACT",
     "link": "",
     "type": "Body",
@@ -160,7 +166,8 @@
     "price": 0,
     "sales": 7,
     "release": "2022-08-09",
-    "islike": false
+    "islike": false,
+    "best": false
   },
   {
     "no": 8,
@@ -176,7 +183,7 @@
     "name_th": "อัลตร้า มายด์ บอดี้ วอช",
     "subtitle_th": "ผลิตภัณฑ์ทำความสะอาดผิวกายแบบล้างออก",
     "detail_th": "ครีมอาบน้ำสูตรอ่อนโยน Sulfate Free ผสานสารสกัดที่มีสารแคนนาบิไดออล (CBD) จากกัญชง และอุดมด้วยสารสกัดจากธรรมชาติจากสารสกัดรากสคิวลาเลีย, รากชะเอมเทศ, รากของขู่เซิง, ว่านหางจระเข้, Meadowfoam oil และ Avocado oil ช่วยบำรุงผิวให้นุ่มชุ่มชื้นขึ้น พร้อมสารอาร์บูติน, วิตามินบี 3 และทรานซามิคแอซิด ช่วยบำรุงผิวให้แลดูขาวกระจ่างใส เรียบเนียน",
-    "how2use":"",
+    "how2use": "ล้างตัวให้สะอาดจนเปียกชุ่ม<br>ปั๊ม อัลตร้า มายด์ บอดี้ วอช 2-3 ครั้ง ลงบนฝ่ามือ ถูมือให้เกิดฟอง<br>ชะโลมบริเวณตัวให้ทั่ว และล้างออกให้สะอาด ",
     "ingredients": "AQUA, LAURYL HYDROXYSULTAINE, COCAMIDOPROPYL BETAINE, SODIUM LAUROYL METHYL ISETHIONATE, GLYCERIN, POLYQUATERNIUM-7, COCAMIDE METHYL MEA, GLYCOL DISTEARATE, PROPYLENE GLYCOL, PHENOXYETHANOL, LIMNANTHES ALBA SEED OIL, PERSEA GRATISSIMA OIL, FRAGRANCE, OLIVE OIL PEG-7 ESTERS, PEG-160 SORBITAN TRIISOSTEARATE, TRISODIUM ETHYLENEDIAMINE DISUCCINATE, CANNABIS SPP. EXTRACT (CANNABIDIOL), SODIUM BENZOATE, DISODIUM EDTA, BUTYLENE GLYCOL, STYRAX JAPONICUS BRANCH/FRUIT/LEAF EXTRACT, ALOE BARBADENSIS LEAF EXTRACT, SCUTELLARIA BAICALENSIS ROOT EXTRACT, SOPHORA FLAVESCENS ROOT EXTRACT,  GLYCYRRHIZA INFLATA ROOT EXTRACT, ARBUTIN, NIACINAMIDE, TRANEXAMIC ACID, POLYSORBATE 20, CITRIC ACID, SODIUM SULFITE, GLYCYRRHIZA GLABRA ROOT EXTRACT, SAURURUS CHINENSIS EXTRACT, GLUTATHIONE",
     "link": "",
     "type": "Body",
@@ -184,7 +191,8 @@
     "price": 0,
     "sales": 8,
     "release": "2022-08-09",
-    "islike": false
+    "islike": false,
+    "best": false
   },
   {
     "no": 9,
@@ -200,7 +208,7 @@
     "name_th": "มัลติ-แคร์ เนเชอรัล แฮร์ ทรีทเม้นท์",
     "subtitle_th": "ผลิตภัณฑ์บำรุงเส้นผม/หนังศีรษะแบบล้างออก",
     "detail_th": "ทรีทเม้นท์บำรุงเส้นผม สูตรผสานสารสกัดที่มีสารแคนนาบิไดออล (CBD) จากกัญชง และสารสกัดจากธรรมชาติมากมาย อาทิ น้ำมันเมล็ดทานตะวัน, น้ำมันแมคคาเดเมีย, น้ำมันอาร์แกน และน้ำมันมะพร้าว ช่วยบำรุงดูแลเส้นผม ช่วยให้ผมดูเงางาม นุ่ม สลวย",
-    "how2use":"",
+    "how2use": "ล้างศีรษะให้สะอาดจนเปียกชุ่ม<br>ชะโลมบริเวณหนังศรีษะให้ทั่ว และล้างออกให้สะอาด",
     "ingredients": "AQUA, PROPYLENE GLYCOL, STEARYL ALCOHOL, CETYL ALCOHOL, GLYCERIN, BEHENTRIMONIUM CHLORIDE, DIMETHICONE, AMODIMETHICONE, GLYCERYL MONOSTEARATE, FRAGRANCE, HELIANTHUS ANNUUS SEED OIL, PHENOXYETHANOL, OCTYLDODECANOL, BETAINE, CANNABIS SPP. EXTRACT (CANNABIDIOL), SILICONE QUATERNIUM-22, DISODIUM EDTA, GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE, OCTYLDODECYL XYLOSIDE, PEG-30 DIPOLYHYDROXYSTEARATE, DIPROPYLENE GLYCOL, HYDROLYZED KERATIN, POLYGLYCERYL-3 CAPRATE, PROPANEDIOL, STYRAX JAPONICUS BRANCH/FRUIT/LEAF EXTRACT, DIMETHICONOL, COCAMIDOPROPYL BETAINE, ARGANIA SPINOSA KERNEL OIL, COCOS NUCIFERA OIL, ELAEIS GUINEENSIS OIL, MACADAMIA TERNIFOLIA SEED OIL, OLEA EUROPAEA FRUIT OIL, PALMITAMIDOPROPYLTRIMONIUM CHLORIDE, AMARANTHUS CAUDATUS SEED EXTRACT, 1,2-HEXANEDIOL, COMMIPHORA MYRRHA RESIN EXTRACT, ZEA MAYS STARCH, PHYLLANTHUS EMBLICA FRUIT EXTRACT, ROSMARINUS OFFICINALIS LEAF EXTRACT, GARDENIA TAITENSIS FLOWER EXTRACT, ALOE BARBADENSIS LEAF EXTRACT, XYLOSE, HYALURONIC ACID, HYDROLYZED GLYCOSAMINOGLYCANS, HYDROLYZED HYALURONIC ACID, HYDROLYZED SODIUM HYALURONATE, POTASSIUM HYALURONATE, SODIUM HYALURONATE, SODIUM HYALURONATE CROSSPOLYMER, TOCOPHEROL",
     "link": "",
     "type": "Hair",
@@ -208,7 +216,8 @@
     "price": 0,
     "sales": 9,
     "release": "2022-08-09",
-    "islike": false
+    "islike": false,
+    "best": false
   },
   {
     "no": 10,
@@ -224,7 +233,7 @@
     "name_th": "สวิส สโนว์ โอเวอร์ไนท์ มาส์ก",
     "subtitle_th": "ผลิตภัณฑ์บำรุงผิวหน้าไม่ล้างออก",
     "detail_th": "มาส์กบำรุงผิวหน้ามีส่วนผสมของสารสกัดจากน้ำแร่บริสุทธิ์จากธารน้ำแข็ง Swiss glacier water จากเทือกเขาแอลป์ประเทศสวิสเซอร์แลนด์ เพิ่มความชุ่มชื้นให้ผิวได้ยาวนาน และฟื้นฟูผิวที่แห้งกร้าน ผสานสารสกัดที่มีสารแคนนาบิไดออล (CBD) จากกัญชง, สารสกัดรากชะเอมเทศ และสารสกัดสาหร่ายสีแดง ช่วยให้ผิวแลดูขาวกระจ่างใสขึ้น ปรับสีผิวให้เรียบเนียนสม่ำเสมอ",
-    "how2use":"",
+    "how2use": "ทามาส์กลงบนผิวหน้าที่สะอาด แนะนำให้มาส์กหน้าอย่างน้อยสัปดาห์ละ 2 ครั้งเพื่อผลลัพธ์ที่ดี",
     "ingredients": "AQUA, POLYSORBATE 20, PROPANEDIOL, MALTODEXTRIN, GLYCERIN, ALGAE EXTRACT, SODIUM ACRYLATES CROSSPOLYMER-2, PHENOXYETHANOL, CAPRYLIC/CAPRIC TRIGLYCERIDE, ETHANOL, LECITHIN, CANNABIS SPP. EXTRACT (CANNABIDIOL), SUCROSE STEARATE, PENTYLENE GLYCOL, AMYLOPECTIN, STYRAX JAPONICUS BRANCH/FRUIT/LEAF EXTRACT, CENTELLA ASIATICA LEAF EXTRACT, CYATHEA MEDULLARIS LEAF EXTRACT, EUCALYPTUS GLOBULUS LEAF OIL, LITHOTHAMNION CALCAREUM EXTRACT, MENTHA PIPERITA OIL, CITRUS AURANTIFOLIA OIL, LACTIC ACID, LAVANDULA ANGUSTIFOLIA OIL, POTASSIUM SORBATE, SODIUM BENZOATE, BOSWELLIA SERRATA OIL, PELARGONIUM GRAVEOLENS FLOWER OIL, SODIUM HYALURONATE, POGOSTEMON CABLIN LEAF OIL, CALCIUM GLUCONATE, GLUCONOLACTONE, GLYCYRRHIZA GLABRA ROOT EXTRACT, XANTHAN GUM, ANTHEMIS NOBILIS FLOWER OIL, SUCCINIC ACID",
     "link": "",
     "type": "Face",
@@ -232,7 +241,8 @@
     "price": 0,
     "sales": 10,
     "release": "2022-08-09",
-    "islike": false
+    "islike": false,
+    "best": false
   },
   {
     "no": 11,
@@ -246,9 +256,9 @@
     "genre_th": "มิไร",
     "name": "MIRAI CANNABIS LEAF SHEET MASK",
     "name_th": "มิไร คานาบลิส ลีฟ ชีท แมสก์",
-    "subtitle_th": "",
-    "detail_th": "มาส์กหน้าที่ช่วยปรนนิบัติผิวด้วยสารสกัดจากใบกัญชา ช่วยลดการอักเสบของผิว พร้อมทำให้ผิวหน้าอิ่มฟู ดูเนียนนุ่ม เติมเต็มความชุ่มชื้นให้ผิวที่อ่อนล้ากลับมาเปล่งปลั่ง ด้วยนวัตกรรมแผ่นมาส์กจากเส้นใยไหมธรรมชาติ 100% อันมีเทคนิคพิเศษเฉพาะในการถักทอ ทำให้ได้แผ่นมาส์กที่บางสนิทโอบรัดไปกับรูปหน้า ช่วยให้สารสำคัญซึมลงสู่ผิวเพื่อประสิทธิภาพสูงสุดในการดูแลผิวหน้า สวยได้ทั้งหน้า ทาได้ทั้งตัว",
-    "how2use":"<ul class='list-decimal list-outside'><li>วางแผ่นมาส์กลงบนผิวหน้าที่สะอาด โดยให้แผ่นรองสีขาวอยู่ด้านนอก</li><li>ลอกแผ่นรองสีขาวออก ใช้นิ้วมือจัดเกลี่ยแผ่นมาส์กไล่ฟองอากาศ</li><li>ทิ้งแผ่นมาสํกไว้ประมาณ 15-20 นาทีจากนั้นนำแผ่นมาส์กออก</li><li>ใช้ปลายนิ้วนวดเบาๆทั่วใบหน้าเพื่อให้สารอาหารเข้าสู่ผิวแล้วล้างออกด้วยน้ำสะอาด</li></ul>",
+    "subtitle_th": "มาส์กหน้าสารสกัดใบกัญชา",
+    "detail_th": "สู้ทุกปัญหาสิว ผิวแพ้/ระคายเคือง เสริมภูมิคุ้มกันผิวให้แข็งแรง ควบคุมความมันพร้อมกระชับรูขุมขนให้ผิวเรียบเนียน ดูสุขภาพดี ผลิตจากเส้นใยไหมธรรมชาติ 100% จึงแนบสนิทกับผิวหน้า และปลดปล่อยสารสำคัญได้อย่างเต็มประสิทธิภาพ",
+    "how2use": "วางมาส์กลงบนผิวหน้าที่สะอาด มาส์กทิ้งไว้ประมาณ​ 15 - 20 นาที แนะนำให้มาส์กหน้าอย่างน้อยสัปดาห์ละ 2 ครั้งเพื่อผลลัพธ์ที่ดี",
     "ingredients": "Aqua, Sodium carbomer, CaprylyI glycol, Glycerine, Lavandula Angustifolia oil, Enantia Chlorantha Bark Extract Citrus reticulata fruit extract, Citrus aurantium Amara fruit extract, Citrus aurantium sinensis peel extract, Ascorbic acid, Citric acid, Lactic Acid, Tetrasodiumglutamate diacetate, CANNABIS SPP. (CANNABIS) LEAF (POWDER)",
     "link": "https://morhelloclinic.com/product/mirai-cannabis-leaf-sheet-mask-15-1-%e0%b8%81%e0%b8%a5%e0%b9%88%e0%b8%ad%e0%b8%87/",
     "type": "Face",
@@ -256,7 +266,8 @@
     "price": 0,
     "sales": 11,
     "release": "2022-08-09",
-    "islike": false
+    "islike": false,
+    "best": false
   },
   {
     "no": 12,
@@ -271,8 +282,8 @@
     "name": "CBD WHITENING FACIAL SHEET MASK",
     "name_th": "ซีบีดี ไวท์เทนนิ่ง แฟเชียล ชีท แมสก์",
     "subtitle_th": "",
-    "detail_th": "มาส์กย้อนวัย กระชับรูขุมขนให้ผิวสวยชุ่มชื้นดูเด็กลง ขาวกระจ่างใส มากยิ่งขึ้น <ul class='list-disc list-inside'><li>ลดการอักเสบของผิวอย่างมีประสิทธิภาพ</li><li>ให้ผิวหน้าชุ่มชื้น เปล่งปลั่ง</li><li>ช่วยกระชับรูขุมขน</li><li>ผิวดูขาวกระจ่างใส</li></ul>มีส่วนผสมจากธรรมชาติ ช่วยให้ผิวเนียน มีออร่า ขาวกระจ่างใส",
-    "how2use":"<ul class='list-decimal list-outside'><li>วางแผ่นมาส์กลงบนผิวหน้าที่สะอาด โดยให้แผ่นรองสีขาวอยู่ด้านนอก</li><li>ลอกแผ่นรองสีขาวออก ใช้นิ้วมือจัดเกลียแผ่นมาส์กไล่ฟองอากาศ</li><li>ทิ้งแผ่นมาส์กไว้ประมาณ 15-20 นาทีจากนั้นนำแผ่นมาส์กออก</li><li>ใช้ปลายนิ้วนวดเบาๆทั่วใบหน้าเพื่อให้สารอาหารเข้าสู่ผิว</li></ul>",
+    "detail_th": "มาส์กหน้าสารสกัดใบกัญชา สูตรไวท์เทนนิ่ง เพื่อผิวโกลวใส ไร้จุดด่างดำ พร้อมเสริมภูมิคุ้มกันผิวให้แข็งแรง ผลิตจากเส้นใยไหมธรรมชาติ 100% จึงแนบสนิทกับผิวหน้า และปลดปล่อยสารสำคัญได้อย่างเต็มประสิทธิภาพ",
+    "how2use": "วางมาส์กลงบนผิวหน้าที่สะอาด มาส์กทิ้งไว้ประมาณ​ 15 - 20 นาที แนะนำให้มาส์กหน้าอย่างน้อยสัปดาห์ละ 2 ครั้งเพื่อผลลัพธ์ที่ดี",
     "ingredients": "Aqua, Sodium carbomer, Cucumis sativus distillate (Cucumber), Caprylyl glycol, Glycerine, Sambucus nigra flower extract, Prunus Amygdalus dulcis (Sweet almond) extract, Citrus aurantium sinensis peer extract Citrus Reticulata fruit extract, Ascorbic acid, Citric acid,Latic Acid, Tetrasodium glutamate diacetate, CANNABIS SPP. EXTRACT (CANNABIDIOL) 0.03% (w/w)",
     "link": "https://morhelloclinic.com/product/mirai-cbd-whitening-facial-sheet-mask/",
     "type": "Face",
@@ -280,7 +291,8 @@
     "price": 0,
     "sales": 12,
     "release": "2022-08-09",
-    "islike": false
+    "islike": false,
+    "best": false
   },
   {
     "no": 13,
@@ -290,21 +302,22 @@
       "/First-step.png",
       "/First-step.png"
     ],
-    "genre":"CANABLISS OASIZ",
-    "genre_th":"",
+    "genre": "CANABLISS OASIZ",
+    "genre_th": "",
     "name": "FIRST STEP AMINO ESSENCE",
-    "name_th":"",
+    "name_th": "",
     "subtitle_th": "เอสเซ้นส์บำรุงผิว เพื่อผิวหน้าสดใส อิ่มเด้งตลอดวัน",
     "detail_th": "เอสเซ้นส์เนื้อบางเบา เพิ่มและกักเก็บความชุ่มชื้นได้ยาวนาน ผสานสารสกัดจากสารสกัดกัญชาและใบบัวบกด้วยเทคนิคการสกัดพิเศษ ช่วยลดการอักเสบอย่างตรงจุด และยังมี Amino acids ช่วยเติมอาหารให้แก่ผิว ให้ผิวอิ่มฟู นุ่มเด้ง ดูเปล่งปลั่ง อ่อนโยนแม้ผิวแพ้ง่าย",
-    "how2use":"",
-    "ingredients":"",
+    "how2use": "",
+    "ingredients": "",
     "link": "",
     "type": "Face",
     "quantity": "",
     "price": 0,
     "sales": 4,
     "release": "2022-07-12",
-    "islike": false
+    "islike": false,
+    "best": true
   },
   {
     "no": 14,
@@ -314,21 +327,22 @@
       "/probiotic.png",
       "/probiotic.png"
     ],
-    "genre":"CANABLISS",
-    "genre_th":"",
+    "genre": "CANABLISS",
+    "genre_th": "",
     "name": "PRE&PROBIOTIC BALANCING ESSENCE",
-    "name_th":"",
+    "name_th": "",
     "subtitle_th": "เอสเซ้นส์น้ำตบ ตบผิวให้เด้ง คืนสมดุลผิวใส",
     "detail_th": "สูตรอ่อนโยน เนื้อบางเบา ไม่เหนอะหนะ ช่วยคืนสมดุล Skin microbiome ด้วย Probiotics และ Prebiotics ให้ผิวแข็งแรง พร้อมมอบความชุ่มชื่น เนียนนุ่มจากกรดไฮยาลูโรนิคแบบ 3D ที่ครอบคลุมตั้งแต่ขนาดใหญ่เพื่อป้องกันการสูญเสียความชิ้นจากผิว ขนาดกลางเพื่อช่วยกักเก็บน้ำในชั้นผิว และขนาดเล็กที่ซึมลึกเพิ่มความชุ่มชื้นยาวนาน ผสานด้วยนาโนเซราไมด์เข้าฟื้นบำรุงอย่างล้ำลึก เสริมปราการผิวให้แข็งแรงสุขภาพดี",
-    "how2use":"",
-    "ingredients":"",
+    "how2use": "",
+    "ingredients": "",
     "link": "",
     "type": "Face",
     "quantity": "",
-    "price": 990.00,
+    "price": 990.0,
     "sales": 4,
     "release": "2022-07-12",
-    "islike": false
+    "islike": false,
+    "best": true
   },
   {
     "no": 15,
@@ -338,20 +352,21 @@
       "/Rose-petal.png",
       "/Rose-petal.png"
     ],
-    "genre":"CANABLISS",
-    "genre_th":"",
+    "genre": "CANABLISS",
+    "genre_th": "",
     "name": "ROSE PETAL ANTI-POLLUTION TONER",
-    "name_th":"",
+    "name_th": "",
     "subtitle_th": "โทนเนอร์บำรุงผิว เพื่อผิวสว่างกระจ่างใส",
     "detail_th": "ด้วยคุณค่าจากสารสกัดกุหลาบและ IBR Snowflake ปลอบประโลมผิวให้แลดูเปล่งปลั่ง พร้อมปกป้องผิวจากมลภาวะและฝุ่น PM 2.5 ช่วยให้ผิวสะอาดนุ่ม ชุ่มชื่น อ่อนโยนแม้ผิวแพ้ง่าย",
-    "how2use":"",
-    "ingredients":"",
+    "how2use": "",
+    "ingredients": "",
     "link": "",
     "type": "Face",
     "quantity": "",
-    "price": 990.00,
+    "price": 990.0,
     "sales": 4,
     "release": "2022-07-12",
-    "islike": false
+    "islike": false,
+    "best": true
   }
 ]
