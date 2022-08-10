@@ -101,7 +101,7 @@
                                 <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
                                 <img class="centered w-full"
                                     :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
-                                <span v-if="product.isNew"
+                                <span v-if="$day.getDatetoNow(product.release) <= 7"
                                     class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
                                 <div @click="liked(product.no)"
                                     class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer block sm:hidden">
@@ -121,9 +121,7 @@
                                 <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type
                                 }}</p>
                                 <p class="truncated-2-lines text-base sm:text-lg font-medium "
-                                    :class="{ 'thai sm:text-2xl': getLanguage }">{{ getLanguage ? product.genre_th + ': ' :
-                                            product.genre + ': '
-                                    }}{{
+                                    :class="{ 'thai sm:text-2xl': getLanguage }">{{ getLanguage ? product.genre_th + ': ' :product.genre + ': ' }}{{
         getLanguage ? product.name_th : product.name
 }}</p>
                                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
@@ -171,14 +169,16 @@ export default {
             }
             else {
                 if (self.type == 'Best Seller') {
-                    console.log(self.type)
-                    list = self.products
-                    list?.sort((a, b) => {
-                        let salesA = a.sales;
-                        let salesB = b.sales;
-                        return (salesA > salesB) ? -1 : 1;
-                    })
-                    console.log(list)
+                    // list = self.products
+                    // list?.sort((a, b) => {
+                    //     let salesA = a.sales;
+                    //     let salesB = b.sales;
+                    //     return (salesA > salesB) ? -1 : 1;
+                    // })
+                    list = self.products.filter((e) => e.best === true)
+                }
+                else if (self.type == 'New In') {
+                    // list = self.products.filter((e) => e.release === self.type)
                 }
                 else {
                     list = self.products.filter((e) => e.type === self.type)

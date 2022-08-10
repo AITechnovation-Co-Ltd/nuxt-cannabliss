@@ -104,7 +104,16 @@ export default {
   methods: {
     filter(product) {
       this.$store.dispatch('me/setType', product)
-      this.$router.push(`/product`)
+      if (this.route_name == 'product') {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
+      else {
+        this.$router.push(`/product`)
+      }
     },
     gotoHome() {
       if (this.route_name == 'index') {
@@ -117,7 +126,6 @@ export default {
       else {
         this.$router.push('/')
       }
-
     }
   }
 }

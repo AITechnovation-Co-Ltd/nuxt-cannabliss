@@ -75,7 +75,8 @@
       <div v-else class="w-full py-12 mt-12 bg-white text-center font-light text-2xl text-primary">No Reviews
       </div>
       <div class="w-full flex justify-start py-4 px-4 mt-8">
-        <base-button v-if="count <= reviews.length" @click="count += 4" class_icon="rotate-90">Load more</base-button>
+        <base-button v-if="count <= list_reviews.length" @click="count += 4" class_icon="rotate-90">Load more
+        </base-button>
       </div>
       <!-- Dialog -->
       <dialog-review ref="uploadReviewRef" />
@@ -128,7 +129,8 @@ export default {
   height: .5px;
   opacity: .71;
 }
-.productimg{
+
+.productimg {
   min-width: 100px;
   max-height: 100px;
 }

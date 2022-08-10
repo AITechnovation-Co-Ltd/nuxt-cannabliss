@@ -154,41 +154,5 @@
     "score": 5,
     "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
     "date": "29/06/22"
-  },
-  {
-    "id": 14,
-    "product_id": 14,
-    "imgUrl": ["/probiotic.png"],
-    "genre":"CANABLISS",
-    "product_name": "PRE&PROBIOTIC BALANCING ESSENCE",
-    "type": "Face",
-    "name": "Anya J.",
-    "score": 9,
-    "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
-    "date": "29/06/22"
-  },
-  {
-    "id": 15,
-    "product_id": 15,
-    "imgUrl": ["/Rose-petal.png"],
-    "genre":"CANABLISS",
-    "product_name": "Rose Petal Anti-Pollution Toner",
-    "type": "Face",
-    "name": "Anya J.",
-    "score": 9,
-    "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
-    "date": "29/06/22"
-  },
-  {
-    "id": 16,
-    "product_id": 1,
-    "imgUrl": ["/Micellar-cleansing.png"],
-    "genre":"CANABLISS CLEAR",
-    "product_name": "MICELLA CLEANSING GEL",
-    "type": "Face",
-    "name": "Jenny E.",
-    "score": 4,
-    "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
-    "date": "12/06/22"
   }
 ]

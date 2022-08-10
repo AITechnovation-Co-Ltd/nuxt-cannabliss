@@ -46,6 +46,7 @@ export default {
     "@/plugins/vue-scrollto",
     "@/plugins/notification",
     '@/plugins/model',
+    '@/plugins/day',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
