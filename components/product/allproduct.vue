@@ -169,16 +169,10 @@ export default {
             }
             else {
                 if (self.type == 'Best Seller') {
-                    // list = self.products
-                    // list?.sort((a, b) => {
-                    //     let salesA = a.sales;
-                    //     let salesB = b.sales;
-                    //     return (salesA > salesB) ? -1 : 1;
-                    // })
                     list = self.products.filter((e) => e.best === true)
                 }
                 else if (self.type == 'New In') {
-                    // list = self.products.filter((e) => e.release === self.type)
+                    list = self.products.filter((e) => self.$day.getDatetoNow(e.release) <= 7)
                 }
                 else {
                     list = self.products.filter((e) => e.type === self.type)
@@ -233,9 +227,9 @@ export default {
             }
             else if (this.sort_by === 'date') {
                 this.list_products?.sort((a, b) => {
-                    let releaseA = a.release;
-                    let releaseB = b.release;
-                    return new Date(releaseB) - new Date(releaseA);
+                    let noA = a.no;
+                    let noB = b.no;
+                    return (noA > noB) ? -1 : 1;
                 })
             }
             this.page = 1

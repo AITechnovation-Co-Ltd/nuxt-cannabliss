@@ -36,7 +36,6 @@
                             <option value="a-z">A-Z</option>
                             <option value="z-a">Z-A</option>
                             <option value="date">Newest</option>
-                            <option value="best">Best Seller</option>
                             <option value="low-hight">Price(Low to hight)</option>
                             <option value="hight-low">Price(Hight to low)</option>
                         </select>
@@ -152,18 +151,11 @@ export default {
                     return (priceA > priceB) ? -1 : 1;
                 })
             }
-            else if (this.sort_by === 'best') {
-                this.products_liked?.sort((a, b) => {
-                    let salesA = a.sales;
-                    let salesB = b.sales;
-                    return (salesA > salesB) ? -1 : 1;
-                })
-            }
             else if (this.sort_by === 'date') {
                 this.products_liked?.sort((a, b) => {
-                    let releaseA = a.release;
-                    let releaseB = b.release;
-                    return new Date(releaseB) - new Date(releaseA);
+                    let noA = a.no;
+                    let noB = b.no;
+                    return (noA > noB) ? -1 : 1;
                 })
             }
             this.page = 1
