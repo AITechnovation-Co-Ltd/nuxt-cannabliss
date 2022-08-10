@@ -1,16 +1,15 @@
 <template>
   <div>
-    <footer class="px-8 text-primary">
+    <footer class="px-8 text-primary relative">
       <div class="flex flex-col lg:flex-row lg:justify-around">
-
         <!-- logo -->
         <div @click="gotoHome()"
-          class="w-full lg:w-1/4 flex justify-center sm:justify-start lg:justify-center mb-6 md:mb-0 hover:cursor-pointer">
+          class="w-full lg:w-1/4 flex justify-center sm:justify-start lg:justify-center mb-6 md:mb-0 hover:cursor-pointer z-20">
           <img class="h-32" src="~/static/logo/Logo-CANABLISS.png" alt="">
         </div>
         <div class="w-full lg:w-3/4 px-4 sm:px-0 grid text-sm grid-cols-2 sm:flex justify-around content">
           <!-- product -->
-          <div class="font-light">
+          <div class="font-light relative z-20">
             <ul>
               <li class="mb-4 mt-8">
                 <p @click="filter('All Products')" class="hover:underline hover:cursor-pointer">Product</p>
@@ -28,7 +27,7 @@
           </div>
 
           <!-- home -->
-          <div>
+          <div class="z-20">
             <ul>
               <li class="mb-4 mt-8">
                 <div @click="gotoHome()" class="hover:underline hover:cursor-pointer">Home</div>

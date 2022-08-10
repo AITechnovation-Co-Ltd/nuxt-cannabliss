@@ -1,5 +1,6 @@
 <template>
-  <div class="w-full">
+  <div class="w-full relative overflow-hidden">
+    <img src="~/static/images/IMG_02products_detail/Group1141@2x.png" class="widget1141">
     <div v-if="no_product" class="w-full columns-1 mt-8 px-4 lg:px-12 xl:px-28 3xl:px-32">
       <div class="w-full py-12 mt-12 bg-white text-center text-4xl text-primary">No Product<br>
         <span class="text-red-500 text-xl">{{ productname }}</span>
@@ -48,9 +49,8 @@
           <p v-else class="my-2 font-light text-quaternary text-md">{{ products_id.subtitle_th }}</p>
           <p v-html="products_id.detail_th" class="my-2 font-extralight text-quaternary text-sm"></p>
           <div class="w-full flex-col text-2xl text-primary">
-
             <!-- FAQ 1 -->
-            <base-dropdown class="my-2" dropdownClass="mt-2" @opened="checkDataOpen">
+            <base-dropdown class="my-2 z-10" dropdownClass="mt-2" @opened="checkDataOpen">
               <div slot="toggle" class="w-full flex items-center justify-between">
                 <p class="text-lg font-normal text-primary my-2">How to use</p>
                 <p>{{ !dropdown_data ? '+' : '-' }}</p>
@@ -237,6 +237,13 @@ export default {
 </script>
 
 <style scoped>
+.widget1141 {
+  height: 20rem;
+  position: absolute;
+  left: 0;
+  transform: translate(5rem, 15rem);
+}
+
 .vl {
   width: 1px;
 }
@@ -268,6 +275,14 @@ export default {
     height: 18vw;
 }
 } */
+@media (max-width:1441px) {
+.widget1141 {
+  height: 15rem;
+  position: absolute;
+  left: 0;
+  transform: translate(5rem, 10rem);
+}
+}
 @media (max-width:1023px) {
   .maincentered {
     height: 40vw;

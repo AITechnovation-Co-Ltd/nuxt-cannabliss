@@ -1,5 +1,42 @@
 [
   {
+    "id": 1,
+    "product_id": 1,
+    "imgUrl": ["/Micellar-cleansing.png"],
+    "genre": "CANABLISS CLEAR",
+    "product_name": "MICELLA CLEANSING GEL",
+    "type": "Face",
+    "name": "Kimberly K.",
+    "score": 4,
+    "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
+    "date": "12/06/22"
+  },
+  {
+    "id": 2,
+    "product_id": 2,
+    "imgUrl": ["/Eye-cream.png"],
+    "genre": "CANABLISS GUARDIAN",
+    "product_name": "ADVANCE EYE CREAM BROWN ALGAE PLUS CAFFEINE",
+    "type": "Face",
+    "name": "John D.",
+    "score": 5,
+    "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
+    "date": "14/06/22"
+  },
+  {
+    "id": 3,
+    "product_id": 3,
+    "imgUrl": ["/super-berry.png"],
+    "genre": "CANABLISS OASIZ",
+    "product_name": "SUPER BERRY HYDRATING MASK",
+    "type": "Face",
+    "name": "Jane D.",
+    "score": 4,
+    "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse aperiam tempore eius commodi laudantium earum temporibus ex illum, adipisci dolorem quia consequatur hic necessitatibus debitis minima beatae architecto. Quia, eaque.",
+    "date": "17/06/22"
+  },
+  {
+>>>>>>> f24e76a53f16fc041abebcbb6120242cfd0b5509
     "id": 4,
     "product_id": 4,
     "imgUrl": ["/spf-50.png"],
