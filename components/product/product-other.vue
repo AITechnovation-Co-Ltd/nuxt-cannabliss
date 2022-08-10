@@ -7,15 +7,15 @@
           <div class="relative mx-2">
             <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
             <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
-            <span v-if="product.isNew"
-              class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
+            <span v-if="$day.getDatetoNow(product.release) <= 7"
+              class="px-3 sm:px-9 py-0.5 sm:py-2 text-white text-sm sm:text-base absolute top-3 left-3 sm:top-4 sm:left-4 3xl:top-8 3xl:left-8 bg-primary rounded-full">New</span>
             <div @click="liked(product.no)"
-              class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer block sm:hidden">
+              class="absolute top-1 right-1 sm:top-4 sm:right-4 3xl:top-8 3xl:right-8 cursor-pointer block sm:hidden">
               <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="40"
                 :color="product.islike ? '#f05252' : '#d5d6d7'" />
             </div>
             <div @click="liked(product.no)"
-              class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer hidden sm:block">
+              class="absolute top-1 right-1 sm:top-4 sm:right-4 3xl:top-8 3xl:right-8 cursor-pointer hidden sm:block">
               <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="50"
                 :color="product.islike ? '#f05252' : '#d5d6d7'" />
             </div>

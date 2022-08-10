@@ -58,11 +58,7 @@
               </div>
               <!-- Details -->
               <base-dropdown-item>
-                <p class="w-11/12 text-sm text-quaternary ">Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Harum sequi
-                  provident optio magnam, commodi
-                  corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
-                  reprehenderit? Officia.</p>
+                <p class="w-11/12 text-sm text-quaternary ">{{products_id.how2use}}</p>
               </base-dropdown-item>
             </base-dropdown>
             <div class="hrr bg-primary"></div>
