@@ -13,24 +13,13 @@
         <p class="my-4 text-4xl text-primary thai font-bold">ต้านการอักเสบของสิว</p>
         <p class="my-4 text-4xl text-primary thai font-extrabold">ต้านการอักเสบของสิว</p>
         <p class="my-4 text-4xl text-primary thai font-black">ต้านการอักเสบของสิว</p> -->
-        <img src="~/static/images/IMG_03ingredients/CANABLISS@2x.png" class="widget">
-        <p class="my-4 text-5xl sm:text-7xl text-primary thai">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-5xl sm:text-7xl text-primary thai">{{ blogs.title }}</p>
         <p class="pl-2 font-medium text-quaternary border-l-2 sm:border-l-4 border-primary text-2xl leading-7 thai">
-          การทาครีม CBD
-          โดยไม่มีส่วนผสมของ THC
-          เป็นทางเลือกที่
-          ปลอดภัยและมีประสิทธิภาพ ไม่มีผลข้างเคียง พัฒนาคุณภาพชีวิต
-          ของผู้ป่วยที่มีปัญหาผิวพรรณ โดยเฉพาะด้านการอักเสบ เช่น สิว</p>
-        <p class="my-4 text-quaternary text-lg 3xl:text-xl leading-6 thai">การทา CBD
-          เฉพาะที่อาจมีประโยชน์สำหรับความผิดปรกติทางผิวหนังหลายอาการ
-          ซึ่งรวมถึง
-          สิวอักเสบ ภูมิแพ้ผิวหนัง เส้นขนที่มากผิดปกติและยับยั้งก่อนเกิดเป็นเนื้อร้ายบางชนิด</p>
+          {{ blogs.subtitle }}</p>
+        <p class="my-4 text-quaternary text-lg 3xl:text-xl leading-6 thai">{{ blogs.detail_title }}</p>
         <p class="text-quaternary text-lg 3xl:text-xl leading-6 thai">
-          ประสิทธิผล<br>กระบวนการต้านสิวเกิดขึ้นโดยการปรับการทำงานของเซลล์ซีโบไซต์ภายในต่อมไขมัน
-          ด้วยCBD เซลล์ซีโบไซต์จะถูกขัดขวางไม่ให้ส่งสัญญานไปยังต่อมให้ผลิตไขมันผิวหนังมากเกิน
-          ไป CBD จะไปหยุดการเพิ่มจำนวนของเซลล์ซีโบไซต๊ แต่ไม่ทำให้เซลล์ตาย และจะให้ฤทธิ์ต้าน
-          การอักเสบที่มีศักยภาพแม้ในบริเวณที่มีสารก่อการอักเสบรุนแรงที่ทำให้เกิดสิว ดังนั้น CBD
-          จึงเป็นความหวังสำหรับการรักษาสิวที่ไม่ระคายเคือง</p>
+          {{ blogs.first_header }}<br><span v-html="blogs.first_detail"
+            class="text-quaternary text-lg 3xl:text-xl leading-6 thai"></span></p>
       </div>
 
       <!-- Picture -->
@@ -50,29 +39,15 @@
       </div>
       <!-- Details -->
       <div class="w-full sm:w-11/12 xl:w-2/5">
-        <img src="~/static/images/IMG_03blogs_details/Group803@2x.png" class="widget803">
-        <p class="mb-4 text-5xl sm:text-7xl text-primary thai">กลไกการทำงาน</p>
-        <p class="text-quaternary text-lg 3xl:text-xl leading-6 thai">
-          ระบบเอ็นแคนนาบินอยด์ในผิวหนังจะควบคุมความผิดปกติทุกด้านที่เกิดขึ้นในสิว
-          ในการทดลอง
-          สารออกฤทธิ์หลายชนิดที่พบในกัญชา พบหลักฐานว่าลิโมนีนมีผลกระทบต่อกลไกที่เกี่ยวข้องกับ
-          สิวและการรักษาสิว CBDและลิโมนีนร่วมกันอาจมีประสิทธิภาพสูงกว่า เนื่องจากสารทั้งสองชนิด
-          นี้มีประสิทธิภาพในการต้านการอักเสบ เมื่อใช้เบต้า-แคริโอฟิลลีนร่วมกับCBDก็จะมีฤทธิ์ต้านการ
-          อักเสบเช่นกัน</p>
-        <p class="my-4 text-quaternary text-lg 3xl:text-xl leading-6 thai">ลักษณะทางเคมีที่บ่งใช้: สายพันธุ์ CBD
-          ที่ผสมและใช้อยู่ในยาเฉพาะที่
-          การรักษาส่วนของเทอร์ปีน
-          ชนิดลิโมนิ่น แคริโอฟิลลีน หรือไพนิ่นไว้ในสูตรยาอาจมีประโยชน์</p>
+        <p class="mb-4 text-5xl sm:text-7xl text-primary thai">{{ blogs.second_header }}</p>
+        <p v-html="blogs.second_detail" class="text-quaternary text-lg 3xl:text-xl leading-6 thai"></p>
+        <p v-html="blogs.second_detail2" class="my-4 text-quaternary text-lg 3xl:text-xl leading-6 thai"></p>
       </div>
     </div>
     <!-- Benefis of cbd -->
     <div class="w-full flex flex-col items-center">
       <p class="my-10 text-2xl sm:text-4xl text-primary font-medium">Benefits Of CBD For Acne</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <!-- <div class="flex items-center" v-for="(data, i) in cbd" :key="i">
-          <img :src="data.url" class="w-20 sm:w-24">
-          <p class="ml-2 font-normal">{{ data.benefits }}</p>
-        </div> -->
         <div class="flex items-center">
           <img src="~/static/images/IMG_03blogs_details/01@2x.png" class="widget01">
           <img src="@/static/images/IMG_03blogs_details/reduce.png" alt="" class="w-20 sm:w-24 mr-4">
@@ -111,9 +86,11 @@
 </template>
 
 <script>
+import blogs from "@/static/json/blogs.json"
 export default {
   data() {
     return {
+      blogs,
       cbd: [{
         id: 1,
         url: require('@/static/images/IMG_03blogs_details/reduce.png'),
@@ -140,12 +117,26 @@ export default {
         id: 6,
         url: require('@/static/images/IMG_03blogs_details/suppressed.png'),
         benefits: 'Suppressed cell prolifera',
-      },]
+      },],
+
     }
   },
-  mounted() {
-    this.$store.dispatch('me/setBreadcrumb', 'ต้านการอักเสบของสิว')
-    // console.log(this.products_name[0].name)
+  async mounted() {
+    await this.fetch()
+    this.$store.dispatch('me/setBreadcrumb', this.blogs.title)
+  },
+  methods: {
+    async fetch() {
+      let list = await this.blogs.filter((e) => e.id == this.params)
+      this.blogs = list[0]
+      console.log(this.blogs)
+    }
+  },
+  props: {
+    params: {
+      type: String,
+      required: true,
+    }
   }
 }
 </script>

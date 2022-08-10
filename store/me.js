@@ -10,6 +10,7 @@ export const state = () => {
     count: 0,
     fake_count: null,
     type: '',
+    isthai: false,
     liked: [],
     toggle: true,
     role: 0,
@@ -67,6 +68,10 @@ export const getters = {
     console.log(state.liked)
     const liked = localStorage.getItem('liked') || state.liked
     return liked
+  },
+  getLanguage: (state) => {
+    const isthai = state.isthai
+    return isthai
   },
 }
 export const mutations = {
@@ -132,6 +137,9 @@ export const mutations = {
     console.log(type)
     state.type = type
   },
+  SET_LANGUAGE(state, isthai) {
+    state.isthai = isthai
+  },
   SET_SOME(state, data) {
     state.liked[data.index] = { index: data.index, liked: data.islike }
     localStorage.setItem('liked', state.liked)
@@ -183,14 +191,22 @@ export const actions = {
     let product = []
     products.forEach(p => {
       product.push({
-        detail: p.detail,
-        imgUrl: p.imgUrl,
-        islike: p.islike,
-        link: p.link,
-        name: p.name,
         no: p.no,
-        quantity: p.quantity,
+        imgUrl: p.imgUrl,
+        genre: p.genre,
+        genre_th: p.genre_th,
+        name: p.name,
+        name_th: p.name_th,
+        subtitle_th: p.subtitle_th,
+        detail_th: p.detail_th,
+        ingredients: p.ingredients,
+        link: p.link,
         type: p.type,
+        quantity: p.quantity,
+        price: p.price,
+        sales: p.sales,
+        release: p.release,
+        islike: p.islike,
       })
     })
     commit('SET_PRODUCTS', product)
@@ -210,5 +226,8 @@ export const actions = {
   setType({ commit }, data) {
     // console.log(data)
     commit('SET_TYPE', data)
+  },
+  setLanguages({ commit }, data) {
+    commit('SET_LANGUAGE', data)
   },
 }

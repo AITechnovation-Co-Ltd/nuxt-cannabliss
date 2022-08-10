@@ -46,9 +46,11 @@
         <div v-for="(review, index) in list_reviews.slice(0, count)" :key="index">
           <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
             <!-- Image Product-->
-            <div class="w-full xl:w-2/5 columns-1 items-start md:flex">
-              <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-24 h-12 mr-0 md:mr-6">
-              <p class="mt-3 md:mt-0 text-sm font-extralight">{{ review.product_name }}</p>
+            <div class="w-full xl:w-2/5 columns-1 items-start xl:flex">
+              <div class="productimg">
+                <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-auto h-24">
+              </div>
+              <p class="mt-3 xl:mt-0 text-sm font-extralight">{{ review.product_name }}</p>
             </div>
             <!-- Details review -->
             <div class="w-full xl:w-3/5 flex flex-col ml-0 xl:ml-4 mt-4 xl:mt-0 ">
@@ -75,7 +77,8 @@
       <div v-else class="w-full py-12 mt-12 bg-white text-center font-light text-2xl text-primary">No Reviews
       </div>
       <div class="w-full flex justify-start py-4 px-4 mt-8">
-        <base-button v-if="count == 4" @click="count = 8" class_icon="rotate-90">Load more</base-button>
+        <base-button v-if="count <= list_reviews.length" @click="count += 4" class_icon="rotate-90">Load more
+        </base-button>
       </div>
       <!-- Dialog -->
       <dialog-review ref="uploadReviewRef" />
@@ -144,5 +147,10 @@ export default {
 .hrr {
   height: .5px;
   opacity: .71;
+}
+
+.productimg {
+  min-width: 100px;
+  max-height: 100px;
 }
 </style>

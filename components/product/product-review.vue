@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!no_product" class="w-full">
+  <div class="w-full">
     <div class="w-full relative mt-20 px-4 lg:px-12 xl:px-28 3xl:px-32">
       <h1 class="w-full text-5xl text-center font-normal text-primary">
         Review
@@ -26,7 +26,7 @@
           <p class="ml-2 mt-2 text-quaternary text-sm">Based on reviews</p>
           <base-button @click="$refs.DialogReviewRefs.show()" class="mt-4 sm:mt-6">Write a review</base-button>
         </div>
-        <div class="w-full mt-8 lg:mt-0 xl:w-3/4">
+        <div v-if="!no_product" class="w-full mt-8 lg:mt-0 xl:w-3/4">
           <div v-if="products_reviews.length != 0" class="
               w-full
               flex flex-col
@@ -36,9 +36,11 @@
             <div v-for="(review, index) in products_reviews.slice(0, 2)" :key="index">
               <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
                 <!-- Image Product-->
-                <div class="w-full xl:w-2/5 columns-1 items-start md:flex">
-                  <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-24 h-12 mr-0 md:mr-6" />
-                  <p class="mt-3 md:mt-0 text-sm font-extralight">
+                <div class="w-full xl:w-2/5 columns-1 items-start lg:flex">
+                  <div class="productimg">
+                    <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-auto h-24" />
+                  </div>
+                  <p class="mt-3 lg:mt-0 text-sm font-extralight">
                     {{ review.product_name }}
                   </p>
                 </div>
@@ -75,6 +77,8 @@
             <!-- Load More -->
           </div>
           <base-button @click="$router.push(`/review`)" class="mt-6">View more</base-button>
+        </div>
+        <div v-else class="w-full py-12 mt-12 bg-white text-center font-light text-2xl text-primary">No Review
         </div>
       </div>
       <dialog-review ref="DialogReviewRefs" :product_name="product_name" />
@@ -180,5 +184,10 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -40%);
+}
+
+.productimg {
+  min-width: 100px;
+  max-height: 100px;
 }
 </style>

@@ -34,18 +34,21 @@
         </div>
 
         <div class="w-full lg:w-1/2 mt-8 lg:mt-0 lg:ml-8" v-for="(products_id, i) in products_detail" :key="i">
-          <div class="flex flex-col sm:flex-row justify-between items-start">
-            <h1 class="text-2xl xl:text-3xl font-light">{{ products_id.name }}</h1>
+          <p class="text-sm font-extralight capitalize">{{ products_id.type }}</p>
+          <div class="flex flex-col lg:flex-row justify-between items-start">
+            <div class="columns-1">
+              <p class="text-2xl xl:text-3xl font-light">{{ products_id.genre }}</p>
+              <p class="text-2xl text-primary xl:text-3xl font-light">{{ products_id.name }}</p>
+            </div>
             <p class="text-sm font-extralight mt-2">{{ products_id.quantity }}</p>
           </div>
-          <!-- <h2 class="text-4xl font-semibold text-primary">Tinted Hybrid Block SPF50 Pa+++</h2> -->
           <div class="flex my-4 items-center">
             <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-tertiary mr-4" />
             <p class="text-quaternary text-sm">(55)</p>
           </div>
           <div v-if="products_id.subtitle == ''" class="w-full h-6"></div>
-          <p v-else class="my-2 font-light text-quaternary text-md">{{ products_id.subtitle }}</p>
-          <p class="my-2 font-extralight text-quaternary text-sm">{{ products_id.detail }}</p>
+          <p v-else class="my-2 font-light text-quaternary text-md">{{ products_id.subtitle_th }}</p>
+          <p v-html="products_id.detail_th" class="my-2 font-extralight text-quaternary text-sm"></p>
           <div class="w-full flex-col text-2xl text-primary">
             <!-- FAQ 1 -->
             <base-dropdown class="my-2 z-10" dropdownClass="mt-2" @opened="checkDataOpen">
@@ -55,11 +58,7 @@
               </div>
               <!-- Details -->
               <base-dropdown-item>
-                <p class="w-11/12 text-sm text-quaternary ">Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Harum sequi
-                  provident optio magnam, commodi
-                  corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
-                  reprehenderit? Officia.</p>
+                <p class="w-11/12 text-sm text-quaternary ">{{products_id.how2use}}</p>
               </base-dropdown-item>
             </base-dropdown>
             <div class="hrr bg-primary"></div>
@@ -71,12 +70,7 @@
               </div>
               <!-- Details -->
               <base-dropdown-item>
-                <p class="w-11/12 text-sm text-quaternary ">Lorem ipsum dolor sit amet consectetur
-                  adipisicing
-                  elit. Harum sequi
-                  provident optio magnam, commodi
-                  corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
-                  reprehenderit? Officia.</p>
+                <p class="w-11/12 text-sm text-quaternary ">{{ products_id.ingredients }}</p>
               </base-dropdown-item>
             </base-dropdown>
             <div class="w-full mt-10 flex items-center text-quaternary">
@@ -88,7 +82,7 @@
                   class="px-4 h-10 text-lg  text-quaternary border border-quaternary rounded-full mr-4">Go
                   to
                   shopping</button></a>
-              <div @click="liked(i)"
+              <div @click="liked(products_id.no)"
                 class="h-10 w-10 flex items-center justify-center border border-primary rounded-full cursor-pointer"
                 :class="{ 'bg-primary': products_id.islike }">
                 <base-icon icon="heart" viewBox="0 0 30 41" size="25" class="text-primary"
@@ -116,7 +110,7 @@
               <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
               <h1 class="text-lg sm:text-xl text-center font-normal">Leucojum Aestivum Bulb Extract <br
                   class="block sm:hidden"> (Ibr - Snowflake®)</h1>
-              <p class="mt-2 text-center text-base font-extralight">Anti Aging To Make Skin Younger And Brighter</p>
+              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">Anti Aging To Make Skin Younger And Brighter</p>
             </div>
           </div>
         </div>
@@ -219,8 +213,9 @@ export default {
       if (this.current <= 0) { this.current = this.current = 0 }
       else if (this.current != 0) { this.current-- }
     },
-    async liked(index) {
-      this.products_detail[index].islike = await !this.products_detail[index].islike
+    async liked(n) {
+      let list = await this.products_detail.findIndex((e => e.no == n))
+      this.products_detail[list].islike = !this.products_detail[list].islike
       this.$store.dispatch('me/setProducts', this.products)
     },
     setBreadcrumb() {

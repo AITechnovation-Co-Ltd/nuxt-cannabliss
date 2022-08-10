@@ -5,10 +5,10 @@
     <div class="w-full sm:w-11/12 lg:w-2/5">
       <h1 class="text-3xl xl:text-4xl 2xl:text-5xl text-primary">Ingredients</h1>
       <div class="mt-4 lg:mt-8 flex items-center">
-        <p class="content text-lg sm:text-xl border-l-2 border-primary pl-2 lg:pl-4">ผสานพลัง 2
+        <p class="content text-lg sm:text-xl border-l-2 border-primary pl-2 lg:pl-4 thai font-light">ผสานพลัง 2
           สารสกัดมหัศจรรย์จากธรรมชาติ เพื่อดูแลผิวของคุณให้กระจ่างใส และแข็งแรงขึ้น</p>
       </div>
-      <p class="mt-3 lg:mt-8 text-base sm:text-lg font-extralight">ด้วยสารสกัด CBD จากกัญชงที่มีส่วนช่วยในการลดการอักเสบ
+      <p class="mt-3 lg:mt-8 text-base sm:text-lg thai font-light">ด้วยสารสกัด CBD จากกัญชงที่มีส่วนช่วยในการลดการอักเสบ
         ปรับสภาพ และ คืนความชุ่มชื้นให้กับผิว และ Snow Bell Extract จากประเทศเกาหลี ที่มีสารต้านอนุมูลอิสระ
         และทำให้ผิวแลดูขาว กระจ่างใสขึ้น</p>
       <base-button class="mt-4 lg:mt-8 hidden sm:block" @click="$router.push(`/ingredients`)">View more</base-button>

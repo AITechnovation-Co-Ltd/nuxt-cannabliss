@@ -7,15 +7,13 @@
         <img src="~/static/images/IMG_03ingredients/Group1053@2x.png" class="widget1053">
         <div class="flex items-center mt-4">
           <!-- <div class="w-0.5 h-24 2xl:h-12 bg-primary mr-4 flex"></div> -->
-          <span class="text-quaternary font-normal text-lg border-l-2 border-primary pl-2 sm:pl-4">By having a hero
-            ingredient , there's an opportunity <br class="hidden sm:block"> to get
-            into the SKINCARE TREND in Thailand</span>
+          <span class="text-quaternary font-normal text-2xl border-l-2 border-primary pl-2 sm:pl-4 thai">ผสานพลัง 2
+            สารสกัดมหัศจรรย์จากธรรมชาติ เพื่อดูแลผิวของคุณให้กระจ่างใส และแข็งแรงขึ้น</span>
         </div>
-        <p class="mt-4 text-justify text-quaternary text-sm font-extralight">Leucojum aestivum bulb extract ( IBR -
-          Snowflake ) is part of the anti aging
-          technology of IBR that captures and transfers flower bulbs dormancy and rejuvenation to skin . Flower bulbs go
-          dormant through the winter like " beauty sleep " to allow beautiful awaken , rejuvenated blossom in the spring
-          .</p>
+        <p class="mt-4 text-justify text-quaternary text-xl font-light thai">ด้วยสารสกัด CBD
+          จากกัญชงที่มีส่วนช่วยในการลดการอักเสบ
+          ปรับสภาพ และ คืนความชุ่มชื้นให้กับผิว และ Snow Bell Extract จากประเทศเกาหลี ที่มีสารต้านอนุมูลอิสระ
+          และทำให้ผิวแลดูขาว กระจ่างใสขึ้น</p>
       </div>
       <div class="w-full lg:w-1/2 h-full mt-8 lg:mt-0 lg:mt-0 relative">
         <div class="w-full h-full flex items-start">
@@ -36,16 +34,21 @@
             <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
             <h1 class="text-lg font-normal">Canabinoid (Cbd)</h1>
             <p class="mt-2 text-center">Anti inflammatory to make skin stronger</p>
-            <p class="mt-2 2xl:mt-4 text-center">Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua .</p>
+            <p class="mt-2 2xl:mt-4 text-center">Lorem ipsur dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut Iabore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+              ut aliquip ex ea commnodo</p>
           </div>
           <div class="vl h-60 xl:h-64 bg-primary hidden md:block"></div>
           <div class="w-full md:w-2/5 flex flex-col text-sm font-extralight items-center justify-center">
             <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
-            <h1 class="text-lg text-center font-normal">Leucojum Aestivum Bulb Extract ( Ibr - Snowflake®)</h1>
+            <h1 class="text-lg text-center font-normal">Leucojum Aestivum Bulb Extract <br class="block sm:hidden"> (
+              Ibr - Snowflake®)</h1>
             <p class="mt-2 text-center">Anti Aging To Make Skin Younger And Brighter</p>
-            <p class="mt-2 2xl:mt-4 text-center">Lorem ipsum dolor sit amet , consectetur adipiscing elit , sed do
-              eiusmod tempor incididunt</p>
+            <p class="mt-2 2xl:mt-4 text-center">Lorem ipsur dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut Iabore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+              ut aliquip ex ea commnodo</p>
           </div>
         </div>
       </div>

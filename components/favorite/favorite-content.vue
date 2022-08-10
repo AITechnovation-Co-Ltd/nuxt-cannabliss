@@ -22,8 +22,8 @@
                     class="w-full py-3 mt-3 sm:mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
                     <div class="flex flex-col sm:flex-row items-start sm:items-center mx-2">
                         <p class="text-xs text-white">Items per page</p>
-                        <select class="h-8 w-16 text-xs text-quaternary rounded-xl mr-1 sm:mx-4"
-                            v-model="item_per_page">
+                        <select class="h-8 w-16 text-xs text-quaternary rounded-xl mr-1 sm:mx-4" v-model="item_per_page"
+                            @change="pagegiantion">
                             <option selected value=6>6</option>
                             <option value=12>12</option>
                             <option value=18>18</option>
@@ -38,7 +38,6 @@
                             <option value="a-z">A-Z</option>
                             <option value="z-a">Z-A</option>
                             <option value="date">Newest</option>
-                            <option value="best">Best Selling</option>
                             <option value="low-hight">Price(Low to hight)</option>
                             <option value="hight-low">Price(Hight to low)</option>
                         </select>
@@ -53,15 +52,15 @@
                                 <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
                                 <img class="centered w-full"
                                     :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
-                                <span v-if="product.isNew"
-                                    class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
-                                <div @click="liked(index)"
-                                    class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer block sm:hidden">
+                                <span v-if="$day.getDatetoNow(product.release) <= 7"
+                                    class="px-3 sm:px-9 py-0.5 sm:py-2 text-white text-sm sm:text-base absolute top-3 left-3 sm:top-4 sm:left-4 3xl:top-8 3xl:left-8 bg-primary rounded-full">New</span>
+                                <div @click="liked(product.no)"
+                                    class="absolute top-1 right-1 sm:top-4 sm:right-4 3xl:top-8 3xl:right-8 cursor-pointer block sm:hidden">
                                     <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="40"
                                         :color="product.islike ? '#f05252' : '#d5d6d7'" />
                                 </div>
-                                <div @click="liked(index)"
-                                    class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer hidden sm:block">
+                                <div @click="liked(product.no)"
+                                    class="absolute top-1 right-1 sm:top-4 sm:right-4 3xl:top-8 3xl:right-8 cursor-pointer hidden sm:block">
                                     <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="50"
                                         :color="product.islike ? '#f05252' : '#d5d6d7'" />
                                 </div>
@@ -71,9 +70,12 @@
                             </div>
                             <div class="my-4 mx-2 text-quaternary text-xl">
                                 <p class="mt-2 text-xs sm:text-sm capitalize">{{ product.type }}</p>
-                                <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.name }}</p>
+                                <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.genre + ': '
+                                }}{{
+        product.name
+}}</p>
                                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
-                                        product.detail
+                                        product.detail_th
                                 }}</p>
                                 <base-button @click="$router.push(`/product/details/${product.no}`)"
                                     class="border-quaternary">
@@ -109,60 +111,61 @@ export default {
     components: { BaseButton },
     async mounted() {
         await this.filter_liked()
-        this.sortby()
     },
     methods: {
         change(p) {
             this.page = p
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        },
+        pagegiantion() {
+            this.total_p = Math.ceil(this.products_liked.length / this.item_per_page)
         },
         sortby() {
             if (this.sort_by === 'a-z') {
-                this.list_products?.sort((a, b) => {
+                this.products_liked?.sort((a, b) => {
                     let textA = a.name.toUpperCase();
                     let textB = b.name.toUpperCase();
                     return (textA > textB) ? 1 : -1;
                 })
             }
             else if (this.sort_by === 'z-a') {
-                this.list_products?.sort((a, b) => {
+                this.products_liked?.sort((a, b) => {
                     let textA = a.name.toUpperCase();
                     let textB = b.name.toUpperCase();
                     return (textA > textB) ? -1 : 1;
                 })
             }
             else if (this.sort_by === 'low-hight') {
-                this.list_products?.sort((a, b) => {
+                this.products_liked?.sort((a, b) => {
                     let priceA = a.price;
                     let priceB = b.price;
                     return (priceA > priceB) ? 1 : -1;
                 })
             }
             else if (this.sort_by === 'hight-low') {
-                this.list_products?.sort((a, b) => {
+                this.products_liked?.sort((a, b) => {
                     let priceA = a.price;
                     let priceB = b.price;
                     return (priceA > priceB) ? -1 : 1;
                 })
             }
-            else if (this.sort_by === 'best') {
-                this.list_products?.sort((a, b) => {
-                    let salesA = a.sales;
-                    let salesB = b.sales;
-                    return (salesA > salesB) ? -1 : 1;
-                })
-            }
             else if (this.sort_by === 'date') {
-                this.list_products?.sort((a, b) => {
-                    let releaseA = a.release;
-                    let releaseB = b.release;
-                    return new Date(releaseB) - new Date(releaseA);
+                this.products_liked?.sort((a, b) => {
+                    let noA = a.no;
+                    let noB = b.no;
+                    return (noA > noB) ? -1 : 1;
                 })
             }
             this.page = 1
         },
-        async liked(index) {
-            this.products[index].islike = await !this.products[index].islike
-            await this.$store.dispatch('me/setProducts', this.products)
+        async liked(n) {
+            let list = await this.products.findIndex((e => e.no == n))
+            this.products[list].islike = false
+            this.$store.dispatch('me/setProducts', this.products)
             this.filter_liked()
         },
         async filter_liked() {

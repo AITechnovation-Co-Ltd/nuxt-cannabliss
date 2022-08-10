@@ -3,26 +3,25 @@
     <footer class="px-8 text-primary relative">
       <div class="flex flex-col lg:flex-row lg:justify-around">
         <!-- logo -->
-        <div class="w-full lg:w-1/4 flex justify-center sm:justify-start lg:justify-center mb-6 md:mb-0 ">
-          <nuxt-link to="/" class="flex items-center">
-            <img class="h-32" src="~/static/logo/Logo-CANABLISS.png" alt="">
-          </nuxt-link>
+        <div @click="gotoHome()"
+          class="w-full lg:w-1/4 flex justify-center sm:justify-start lg:justify-center mb-6 md:mb-0 hover:cursor-pointer">
+          <img class="h-32" src="~/static/logo/Logo-CANABLISS.png" alt="">
         </div>
         <div class="w-full lg:w-3/4 px-4 sm:px-0 grid text-sm grid-cols-2 sm:flex justify-around content">
           <!-- product -->
           <div class="font-light relative">
             <ul>
               <li class="mb-4 mt-8">
-                <p @click="filter('All Products')" class="hover:underline">Product</p>
+                <p @click="filter('All Products')" class="hover:underline hover:cursor-pointer">Product</p>
               </li>
               <li class="mb-4">
-                <p @click="filter('Hair')" class="hover:underline">Hair</p>
+                <p @click="filter('Hair')" class="hover:underline hover:cursor-pointer">Hair</p>
               </li>
               <li class="mb-4">
-                <p @click="filter('Face')" class="hover:underline">Face</p>
+                <p @click="filter('Face')" class="hover:underline hover:cursor-pointer">Face</p>
               </li>
               <li>
-                <p @click="filter('Body')" class="hover:underline">Body</p>
+                <p @click="filter('Body')" class="hover:underline hover:cursor-pointer">Body</p>
               </li>
             </ul>
           </div>
@@ -31,7 +30,7 @@
           <div>
             <ul>
               <li class="mb-4 mt-8">
-                <nuxt-link to="/" class="hover:underline">Home</nuxt-link>
+                <div @click="gotoHome()" class="hover:underline hover:cursor-pointer">Home</div>
               </li>
               <li class="mb-4">
                 <nuxt-link to="/ingredients" class="hover:underline ">Ingredients</nuxt-link>
@@ -53,10 +52,10 @@
             <h2 class="mb-3 mt-6 text-lg font-normal">Let's talk</h2>
             <ul>
               <li class="mb-4">
-                <p>T: +391 (0)35 2568 4593</p>
+                <p>T: +66 (0) 2712-0333</p>
               </li>
               <li class="mb-4">
-                <p>E: hello@domain.com</p>
+                <p>E: info@panacee.com</p>
               </li>
               <li class="flex flex-row">
                 <a href="#" class=" mr-1 hover dark:hover:text-white">
@@ -82,7 +81,7 @@
       </div>
       <hr class="mt-6 border-primary sm:mx-auto">
       <div class="py-5 flex items-center justify-center">
-        <span class="text-xs font-extralight sm:text-center">Copyright © 2021 <a href="#"
+        <span class="text-xs font-extralight sm:text-center">Copyright © 2022 <a href="#"
             class="hover:underline">MorHello</a>. All
           rights reserved.
         </span>
@@ -93,10 +92,39 @@
 
 <script>
 export default {
+  computed: {
+    route_name() {
+      return this.$route.name
+    },
+  },
+  mounted() {
+    // console.log(this.route_name)
+  },
   methods: {
     filter(product) {
       this.$store.dispatch('me/setType', product)
-      this.$router.push(`/product`)
+      if (this.route_name == 'product') {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
+      else {
+        this.$router.push(`/product`)
+      }
+    },
+    gotoHome() {
+      if (this.route_name == 'index') {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
+      else {
+        this.$router.push('/')
+      }
     }
   }
 }

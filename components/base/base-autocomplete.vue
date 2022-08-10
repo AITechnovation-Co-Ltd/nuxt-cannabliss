@@ -1,10 +1,9 @@
 <template>
     <label class="block text-sm relative">
         <span class="">{{ label }}</span><span v-if="required" class="text-red-500">*</span>
-        <input
-            class="py-2 w-full rounded-xl border-primary focus:ring-0 focus:border-primary focus:border-2"
+        <input class="py-2 w-full rounded-xl border-primary focus:ring-0 focus:border-primary focus:border-2"
             type="search" :placeholder="placeholder" :disabled="disabled" @focus="onChange" @input="onChange"
-            v-model="search" @keyup.down="onArrowDown" @keyup.up="onArrowUp" @keyup.enter="onEnter" />
+            v-model="search" @keyup.enter="onEnter" />
         <ul id="autocomplete-results" v-show="isOpen" class="bg-white rounded-md shadow-lg overflow-y-auto absolute"
             style="max-height: 400px">
             <li class="loading" v-if="isLoading">Loading results...</li>
@@ -84,22 +83,27 @@ export default {
             this.search = result.name
             this.isOpen = false
         },
-        onArrowDown(evt) {
-            if (this.arrowCounter < this.results.length) {
-                this.arrowCounter = this.arrowCounter + 1
+        // onArrowDown(evt) {
+        //     if (this.arrowCounter < this.results.length) {
+        //         this.arrowCounter = this.arrowCounter + 1
+        //     }
+        // },
+        // onArrowUp() {
+        //     if (this.arrowCounter > 0) {
+        //         this.arrowCounter = this.arrowCounter - 1
+        //     }
+        // },
+        async onEnter() {
+            // this.search = this.arrowCounter
+            //     ? this.results[this.arrowCounter].name
+            //     : ''
+            // this.isOpen = false
+            // this.arrowCounter = -1
+            if (this.search != '') {
+                await this.$store.dispatch('me/setProductName', this.search)
+                this.$router.push(`/product/details/${this.search}`)
             }
-        },
-        onArrowUp() {
-            if (this.arrowCounter > 0) {
-                this.arrowCounter = this.arrowCounter - 1
-            }
-        },
-        onEnter() {
-            this.search = this.arrowCounter
-                ? this.results[this.arrowCounter].name
-                : ''
-            this.isOpen = false
-            this.arrowCounter = -1
+
         },
         handleClickOutside(evt) {
             if (!this.$el.contains(evt.target)) {
