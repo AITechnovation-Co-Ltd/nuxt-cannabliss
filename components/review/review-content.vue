@@ -41,7 +41,7 @@
       </div>
       <!-- Review card -->
       <div v-if="list_reviews.length != 0" class="w-full flex flex-col justify-center divide-y divide-primary47">
-        <div v-for="(review, index) in list_reviews" :key="index">
+        <div v-for="(review, index) in list_reviews.slice(0, count)" :key="index">
           <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
             <!-- Image Product-->
             <div class="w-full xl:w-2/5 columns-1 items-start xl:flex">
