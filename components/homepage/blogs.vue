@@ -17,8 +17,8 @@
             class="mt-4 mr-0 sm:mr-auto ml-auto sm:ml-0 border-quaternary">View more
           </base-button>
         </div>
-        <div class="block md:hidden w-full flex items-start justify-start flex-col" v-for="(data, i) in blogs" :key="i"
-          :class="{ 'hidden': i % 2 != 0 }">
+        <div class="block md:hidden w-full flex items-start justify-start flex-col"
+          v-for="(data, i) in blogs.slice(0, 2)" :key="i">
           <img :src="url" class="rounded-3xl">
           <p class="my-4 text-lg font-normal">{{ data.title }}</p>
           <p class="text-sm font-light">{{ data.subtitle }}</p>

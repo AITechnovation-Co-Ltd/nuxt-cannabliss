@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FavoriteContent class="my-6"/>
+    <FavoriteContent />
   </div>
 </template>
 
@@ -8,10 +8,9 @@
 import FavoriteBanner from '../../components/favorite/favorite-banner.vue';
 import FavoriteContent from '../../components/favorite/favorite-content.vue';
 export default {
-    components: { FavoriteBanner, FavoriteContent }
+  components: { FavoriteBanner, FavoriteContent }
 }
 </script>
 
-<style>
-
-</style>
+<style scoped>
+</style>>

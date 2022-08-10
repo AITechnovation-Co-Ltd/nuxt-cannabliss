@@ -1,10 +1,11 @@
 <template>
-    <div class="w-full flex flex-col justify-center px-4 md:px-8 lg:px-12 xl:px-24 3xl:px-36">
+    <div class="w-full flex flex-col justify-center pt-10 sm:pt-20 px-4 md:px-8 lg:px-12 xl:px-24 3xl:px-36">
         <div class="w-full flex flex-col lg:flex-row items-center">
             <div class="w-full lg:w-2/12 flex font-extralight text-sm text-quaternary">
                 <base-icon icon="angle-left" viewBox="0 0 24 24" size="18" />&nbsp;
                 <nuxt-link to="/" class="hover:underline">Home</nuxt-link>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
+                <img src="~/static/images/IMG_02products/Group1132@2x.png" class="widget1132">
                 <p class="font-normal">Favorite</p>
             </div>
             <div class="w-full lg:w-10/12">
@@ -15,6 +16,7 @@
         <div class="w-full flex justify-end">
             <!-- Product cards -->
             <div class="w-full lg:w-10/12 mr-0 ml-auto">
+                <img src="~/static/images/IMG_06fav/Group389@2x.png" class="widget389">
                 <!-- Sort by -->
                 <div
                     class="w-full py-3 mt-3 sm:mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
@@ -36,7 +38,6 @@
                             <option value="a-z">A-Z</option>
                             <option value="z-a">Z-A</option>
                             <option value="date">Newest</option>
-                            <option value="best">Best Seller</option>
                             <option value="low-hight">Price(Low to hight)</option>
                             <option value="hight-low">Price(Hight to low)</option>
                         </select>
@@ -51,15 +52,15 @@
                                 <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
                                 <img class="centered w-full"
                                     :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
-                                <span v-if="product.isNew"
-                                    class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
+                                <span v-if="$day.getDatetoNow(product.release) <= 7"
+                                    class="px-3 sm:px-9 py-0.5 sm:py-2 text-white text-sm sm:text-base absolute top-3 left-3 sm:top-4 sm:left-4 3xl:top-8 3xl:left-8 bg-primary rounded-full">New</span>
                                 <div @click="liked(product.no)"
-                                    class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer block sm:hidden">
+                                    class="absolute top-1 right-1 sm:top-4 sm:right-4 3xl:top-8 3xl:right-8 cursor-pointer block sm:hidden">
                                     <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="40"
                                         :color="product.islike ? '#f05252' : '#d5d6d7'" />
                                 </div>
                                 <div @click="liked(product.no)"
-                                    class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer hidden sm:block">
+                                    class="absolute top-1 right-1 sm:top-4 sm:right-4 3xl:top-8 3xl:right-8 cursor-pointer hidden sm:block">
                                     <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="50"
                                         :color="product.islike ? '#f05252' : '#d5d6d7'" />
                                 </div>
@@ -152,18 +153,11 @@ export default {
                     return (priceA > priceB) ? -1 : 1;
                 })
             }
-            else if (this.sort_by === 'best') {
-                this.products_liked?.sort((a, b) => {
-                    let salesA = a.sales;
-                    let salesB = b.sales;
-                    return (salesA > salesB) ? -1 : 1;
-                })
-            }
             else if (this.sort_by === 'date') {
                 this.products_liked?.sort((a, b) => {
-                    let releaseA = a.release;
-                    let releaseB = b.release;
-                    return new Date(releaseB) - new Date(releaseA);
+                    let noA = a.no;
+                    let noB = b.no;
+                    return (noA > noB) ? -1 : 1;
                 })
             }
             this.page = 1
@@ -197,6 +191,26 @@ export default {
 </script>
 
 <style scoped>
+.widget1132 {
+    height: 6rem;
+    position: absolute;
+    transform: translate(35rem, -3.5rem);
+}
+
+.widget389 {
+    height: 40rem;
+    position: absolute;
+    left: -10.5rem;
+}
+
+@media (max-width:1441px) {
+    .widget389 {
+        height: 33rem;
+        position: absolute;
+        left: -8.5rem;
+    }
+}
+
 .vl {
     height: 15px;
     width: 1px;

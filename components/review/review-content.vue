@@ -1,10 +1,11 @@
 <template>
-  <div class="w-full columns-1 lg:flex justify-center px-4 sm:px-12 lg:px-16 xl:px-20 3xl:px-32">
+  <div
+    class="w-full columns-1 lg:flex justify-center px-4 sm:px-12 lg:px-16 xl:px-20 3xl:px-32 relative overflow-hidden">
     <!-- Categories -->
     <div class="w-full lg:w-3/12 flex flex-col items-start">
-
       <!-- List Categories -->
-      <div class="w-full lg:w-80 mt-10">
+      <div class="w-full lg:w-80 mt-10 z-20">
+        <!-- <img src="~/static/images/IMG_03ingredients/Group1053@2x.png" class="widget1053"></img> -->
         <h1 class="text-xl font-normal text-primary">Categories</h1>
         <!-- <hr class="w-full lg:w-8/12 xl:w-10/12 3xl:w-11/12 my-6 border-b-px border-primary flex flex-col justify-center items-center"> -->
         <div class="hrr bg-primary my-6 w-full lg:w-4/6"></div>
@@ -40,6 +41,7 @@
           Write a review</base-button>
       </div>
       <!-- Review card -->
+      <img src="~/static/images/IMG_03blogs_details/Group803@2x.png" class="widget803">
       <div v-if="list_reviews.length != 0" class="w-full flex flex-col justify-center divide-y divide-primary47">
         <div v-for="(review, index) in list_reviews.slice(0, count)" :key="index">
           <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
@@ -75,7 +77,8 @@
       <div v-else class="w-full py-12 mt-12 bg-white text-center font-light text-2xl text-primary">No Reviews
       </div>
       <div class="w-full flex justify-start py-4 px-4 mt-8">
-        <base-button v-if="count <= reviews.length" @click="count += 4" class_icon="rotate-90">Load more</base-button>
+        <base-button v-if="count <= list_reviews.length" @click="count += 4" class_icon="rotate-90">Load more
+        </base-button>
       </div>
       <!-- Dialog -->
       <dialog-review ref="uploadReviewRef" />
@@ -119,6 +122,23 @@ export default {
 </script>
 
 <style scoped>
+.widget803 {
+  height: 70rem;
+  position: absolute;
+  right: -20rem;
+  top: -3rem;
+}
+
+@media (max-width:1441px) {
+  .widget803 {
+  height: 65rem;
+  position: absolute;
+  right: -20rem;
+  top: 3rem;
+}
+
+}
+
 .vl {
   height: 15px;
   width: 1px;
@@ -128,7 +148,8 @@ export default {
   height: .5px;
   opacity: .71;
 }
-.productimg{
+
+.productimg {
   min-width: 100px;
   max-height: 100px;
 }
