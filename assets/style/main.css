@@ -1,3 +1,123 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 100;
+  src: local("Poppins"), url(~assets/fonts/Poppins-Thin.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 200;
+  src: local("Poppins"), url(~assets/fonts/Poppins-ExtraLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 300;
+  src: local("Poppins"), url(~assets/fonts/Poppins-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src: local("Poppins"), url(~assets/fonts/Poppins-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  src: local("Poppins"), url(~assets/fonts/Poppins-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  src: local("Poppins"), url(~assets/fonts/Poppins-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  src: local("Poppins"), url(~assets/fonts/Poppins-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 800;
+  src: local("Poppins"), url(~assets/fonts/Poppins-ExtraLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 900;
+  src: local("Poppins"), url(~assets/fonts/Poppins-Black.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 200;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXThinCond.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 200;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXThinExtItv3.2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 300;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXThinExtv3.2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 400;
+  src: local("DBHelvethaica"), url(~assets/fonts/DB-Helvethaica-X-v3.2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 100;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXUlLiCondv3.2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 600;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXUlLiExtItv3.2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 700;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXUlLiExtv3.2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 800;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXUlLiItv3.2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DBHelvethaica";
+  font-weight: 900;
+  src: local("DBHelvethaica"), url(~assets/fonts/DBHelvethaicaXv3.2.ttf) format("truetype");
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.thai {
+  font-family: "DBHelvethaica", sans-serif;
+}
+
+.v-toast__icon {
+  margin-left: 1.5em !important;
+}
+
+.v-toast__text {
+  text-shadow: 1px 1px #00000022;
+  margin-right: 0.5em !important;
+}
+
+.v-toast__item--success {
+  background-color: #4caf50 !important;
+}
+
+.v-toast .v-toast__item {
+  border-radius: 5em;
+}
+.hrr {
+  height: .5px;
+  opacity: .5;
+}

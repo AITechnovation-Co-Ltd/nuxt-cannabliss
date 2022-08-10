@@ -1,0 +1,107 @@
+[
+  {
+    "no": 1,
+    "genre": "CANABLISS CLEAR",
+    "genre_th": "คานาบลิส เคลียร์",
+    "name": "MICELLA CLEANSING GEL",
+    "name_th": "ไมเซลล่าร์ คลีนซิ่ง เจล"
+  },
+  {
+    "no": 2,
+    "genre": "CANABLISS GUARDIAN",
+    "genre_th": "คานาบลิส การ์เดี้ยน",
+    "name": "ADVANCE EYE CREAM BROWN ALGAE PLUS CAFFEINE",
+    "name_th": "แอดวานซ์ อาย ครีม บราวน์ แอลจี้ พลัส คาเฟอีน"
+  },
+  {
+    "no": 3,
+    "genre": "CANABLISS OASIZ",
+    "genre_th": "คานาบลีส โอเอซีส",
+    "name": "SUPER BERRY HYDRATING MASK",
+    "name_th": "ซุปเปอร์ เบอร์รี่ ไฮเดรตติ้ง มาส์ก"
+  },
+  {
+    "no": 4,
+    "genre": "CANABLISS GUARDIAN",
+    "genre_th": "คานาบลิส การ์เดี้ยน",
+    "name": "BODY LOTION SKIN PROTECTING SPF50 PA+++",
+    "name_th": "บอดี้ โลชั่น สกิน โพรเทคติ้ง เอสพีเอฟ50 พีเอ+++"
+  },
+  {
+    "no": 5,
+    "genre": "CANABLISS CROWN",
+    "genre_th": "คานาบลิส คราวน์",
+    "name": "ANTI-FALL NOURISHING SHAMPOO",
+    "name_th": "แอนตี้-ฟอล นอริชชิ่ง แชมพู"
+  },
+  {
+    "no": 6,
+    "genre": "CANABLISS OASIZ",
+    "genre_th": "คานาบลิส โอเอซีส",
+    "name": "RED FRUIT OVERNIGHT MASK",
+    "name_th": "เรด ฟรุ๊ต โอเวอร์ไนท์ มาส์ก"
+  },
+  {
+    "no": 7,
+    "genre": "CANABLISS CLEAR",
+    "genre_th": "คานาบลิส เคลียร์",
+    "name": "THAI HERBAL SKIN PROTECTING BODY SCRUB",
+    "name_th": "ไทย เฮอร์เบิล สกิน โพรเทคติ้ง บอดี้ สครับ"
+  },
+  {
+    "no": 8,
+    "genre": "CANABLISS CLEAR",
+    "genre_th": "คานาบลิส เคลียร์",
+    "name": "ULTRA MILD BODY WASH",
+    "name_th": "อัลตร้า มายด์ บอดี้ วอช"
+  },
+  {
+    "no": 9,
+    "genre": "CANABLISS CROWN",
+    "genre_th": "คานาบลิส คราวน์",
+    "name": "MULTI-CARE NATURAL HAIR TREATMENT",
+    "name_th": "มัลติ-แคร์ เนเชอรัล แฮร์ ทรีทเม้นท์"
+  },
+  {
+    "no": 10,
+    "genre": "CANABLISS OASIZ",
+    "genre_th": "คานาบลิส โอเอซีส",
+    "name": "SWISS SNOW OVERNIGHT MASK",
+    "name_th": "สวิส สโนว์ โอเวอร์ไนท์ มาส์ก"
+  },
+  {
+    "no": 11,
+    "genre": "MIRAI",
+    "genre_th": "มิไร",
+    "name": "MIRAI CANNABIS LEAF SHEET MASK",
+    "name_th": "มิไร คานาบลิส ลีฟ ชีท แมสก์"
+  },
+  {
+    "no": 12,
+    "genre": "MIRAI",
+    "genre_th": "มิไร",
+    "name": "CBD WHITENING FACIAL SHEET MASK",
+    "name_th": "ซีบีดี ไวท์เทนนิ่ง แฟเชียล ชีท แมสก์"
+  },
+  {
+    "no": 13,
+    "genre": "CANABLISS OASIZ",
+    "genre_th": "",
+    "name": "FIRST STEP AMINO ESSENCE",
+    "name_th": ""
+  },
+  {
+    "no": 14,
+    "genre": "CANABLISS",
+    "genre_th": "",
+    "name": "PRE&PROBIOTIC BALANCING ESSENCE",
+    "name_th": ""
+  },
+  {
+    "no": 15,
+    "genre": "CANABLISS",
+    "genre_th": "",
+    "name": "ROSE PETAL ANTI-POLLUTION TONER",
+    "name_th": ""
+  }
+]

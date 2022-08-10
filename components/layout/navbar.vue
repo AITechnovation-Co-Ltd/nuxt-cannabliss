@@ -1,99 +1,235 @@
 <template>
-  <div>
-    <nav class="w-screen bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
-      <div class="container h-16 flex flex-wrap justify-between items-center mx-auto">
-        <nuxt-link to="/" class="flex items-center">
-          <span class="self-center text-xl font-semibold whitespace-nowrap">Cannabliss</span>
-        </nuxt-link>
-        <div class="flex md:order-2">
-          <div class="flex items-center">
-            <!-- <base-icon icon="heart" viewBox="0 0 30 41" size="40" color="#000" class="text-black bg-red-200 mx-2 sm:mx-4" />
-            <base-icon icon="magnifying-glass" viewBox="0 0 30 41" size="40" color="#000" class="text-black bg-red-200 mx-2 sm:mx-4" /> -->
-            <!-- <base-icon icon="appoint" viewBox="0 0 30 41" size="40" color="#fff" class="mx-2 sm:mx-4" /> -->
-            <p class="text-primary">O</p>
-            <p class="ml-4 text-primary">O</p>
-            <div class="vl mx-4"></div>
-            <p id="dropdownDefault" data-dropdown-toggle="dropdown"
-                class="text-primary hover:cursor-pointer rounded-lg text-sm flex items-center"
-                type="button">EN<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg></p>
-              <!-- Dropdown menu -->
-              <div id="dropdown"
-                class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow px-2 "
-                data-popper-placement="bottom"
-                style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
-                <p class="text-center">ไทย</p>
-              </div>
+  <div class="sticky top-0 z-50">
+    <nav class="w-full bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+      <div class="container flex flex-wrap justify-between items-center mx-auto px-6">
 
-          </div>
-          <button data-collapse-toggle="mobile-menu-4" type="button"
-            class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="mobile-menu-4" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"></path>
-            </svg>
-            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd"></path>
-            </svg>
+        <!-- Logo -->
+        <nuxt-link to="/" class="flex items-center">
+          <img class="h-16" src="~/static/logo/Logo-CANABLISS.png" alt="">
+        </nuxt-link>
+
+        <div class="xl:hidden">
+          <button @click="drawer">
+            <base-icon icon="bars" viewBox="0 0 20 20" :size="35" class="text-primary" />
           </button>
         </div>
-        <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
-          <ul class="flex flex-col mt-4 md:flex-row md:space-x-16 md:mt-0 text-base">
-            <li>
 
-              <p id="dropdownDefault" data-dropdown-toggle="multilang"
-                class="text-primary hover:cursor-pointer rounded-lg flex items-center"
-                type="button">Product <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg></p>
-              <!-- Dropdown menu -->
-              <div id="multilang"
-                class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 "
-                data-popper-placement="bottom"
-                style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(592px, 735px);">
-                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                  <li>
-                    <a href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">list #1</a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">list #2</a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">list #3</a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">list #4</a>
-                  </li>
-                </ul>
+        <div class="hidden xl:flex md:order-2">
+          <div class="flex items-center">
+            <div class="notification">
+              <nuxt-link to="/favorite">
+                <base-icon icon="heart" viewBox="0 0 30 41" size="45" class="text-primary mx-2" />
+                <!-- <div class="bg-primary w-5 h-5 rounded-full"></div> -->
+                <span class="badge bg-primary">{{ fake_islike != null ? fake_islike : count_islike }}</span>
+              </nuxt-link>
+            </div>
+            <div @click="searchProduct" class="cursor-pointer hover:scale-110">
+              <base-icon icon="magnifying-glass" viewBox="0 0 30 41" size="40" class="text-primary mx-2" />
+            </div>
+            <base-autocomplete v-show="search" v-model="productname" placeholder="Product Name"
+              :items="$model.productname" />
+            <div class="vl mx-4 bg-primary "></div>
+
+            <div
+              class="w-28 relative flex justify-evenly bg-secondary text-lg rounded-full cursor-pointer drop-shadow-md"
+              @click="chlang">
+              <div class="w-1/2 absolute z-10 h-full bg-tertiary rounded-full" :class="isthai ? 'right-0' : 'left-0'">
               </div>
+              <p class="px-4 py-1 z-20" :class="isthai ? 'text-primary' : 'text-white'">EN</p>
+              <p class="px-4 py-1 z-20" :class="isthai ? 'text-white' : 'text-primary'">TH</p>
+            </div>
 
+            <div class="h-16 ml-2 flex items-center w-10 text-center hidden">
+              <base-dropdown-navbar :dropdownMaxWidthAuto="true" positionH="right"
+                dropdownClass="mt-16 border border-gray-100 w-72" @opened="checkUserOpen">
+                <div slot="toggle" class="flex justify-center">
+                  <base-icon icon="user" viewBox="0 0 48 48" size="35" class="text-primary" />
+                </div>
+                <base-dropdown-item v-show="check_logined" class="p-3">
+                  <div class="flex items-center space-x-3">
+                    <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
+                      <base-icon icon="user" viewBox="0 0 45 45" size="24" color="#fff" />
+                    </div>
+                    <div class="colums-1 items-center">
+                      <p>{{ me.prefix + ' ' + me.first_name + ' ' + me.last_name }}</p>
+                      <p>{{ me.email }}</p>
+                    </div>
+                  </div>
+                </base-dropdown-item>
+                <base-dropdown-item v-show="check_logined" class="p-3">
+                  <div class="flex items-center space-x-3" @click="logoutClick()">
+                    <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
+                      <base-icon icon="logout" viewBox="0 0 45 45" size="24" color="#fff" />
+                    </div>
+                    <p class="text-primary text-base">Logout</p>
+                  </div>
+                </base-dropdown-item>
+                <base-dropdown-item v-show="!check_logined" class="p-3">
+                  <nuxt-link to="/login" class="flex items-center space-x-3">
+                    <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
+                      <base-icon icon="login" viewBox="0 0 45 45" size="24" color="#fff" />
+                    </div>
+                    <p class="text-primary text-base">Login</p>
+                  </nuxt-link>
+                </base-dropdown-item>
+                <base-dropdown-item v-show="!check_logined" class="p-3">
+                  <nuxt-link to="/register" class="flex items-center space-x-3">
+                    <div class="bg-primary rounded-full h-12 w-12 flex items-center justify-center">
+                      <base-icon icon="register" viewBox="0 0 45 45" size="24" color="#fff" />
+                    </div>
+                    <p class="text-primary text-base">Register</p>
+                  </nuxt-link>
+                </base-dropdown-item>
+              </base-dropdown-navbar>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="hidden justify-between items-center w-full xl:flex lg:w-auto lg:order-1" id="mobile-menu-4">
+          <ul class="flex flex-col mt-4 md:flex-row md:space-x-16 md:mt-0 text-base">
+            <li class="flex flex-col justify-end items-center ">
+              <img v-if="route_name == 'product' || route_name == 'product-details-id'"
+                src="@/static/images/flower.png">
+              <nuxt-link to="/product" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
+                <p :class="{ 'font-medium': route_name == 'product' }">Product</p>
+              </nuxt-link>
             </li>
-            <li>
-              <a href="#" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Ingredients</a>
+            <li class="flex flex-col justify-end items-center ">
+              <img v-if="route_name == 'ingredients'" src="@/static/images/flower.png">
+              <nuxt-link to="/ingredients" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
+                <p :class="{ 'font-medium': route_name == 'ingredients' }">Ingredients</p>
+              </nuxt-link>
             </li>
-            <li>
-              <a href="#" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Blogs</a>
+            <li class="flex flex-col justify-end items-center ">
+              <img v-if="route_name == 'blogs' || route_name == 'blogs-details-id'" src="@/static/images/flower.png">
+              <nuxt-link to="/blogs" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
+                <p :class="{ 'font-medium': route_name == 'blogs' || route_name == 'blogs-details-id' }">Blogs</p>
+              </nuxt-link>
             </li>
-            <li>
-              <a href="#" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Review</a>
+            <li class="flex flex-col justify-end items-center">
+              <img v-if="route_name == 'review'" src="@/static/images/flower.png">
+              <nuxt-link to="/review" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
+                <p :class="{ 'font-medium': route_name == 'review' }">Review</p>
+              </nuxt-link>
             </li>
-            <li>
-              <a href="#" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">Contacts</a>
+            <li class="flex flex-col justify-end items-center">
+              <img v-if="route_name == 'contact'" src="@/static/images/flower.png">
+              <nuxt-link to="/contact" class="block py-2 pr-4 pl-3 text-primary md:border-0 md:p-0">
+                <p :class="{ 'font-medium': route_name == 'contact' }">Contacts </p>
+              </nuxt-link>
             </li>
           </ul>
         </div>
+
+        <aside
+          class="p-5 z-50 transform top-0 right-0 w-64 bg-primary fixed h-full overflow-auto ease-in-out transition-all duration-300"
+          :class="isOpen ? 'translate-x-0' : 'translate-x-full'">
+
+          <div class="close w-full flex justify-end">
+            <button @click="isOpen = false" class="mt-1.5 mr-3">
+              <base-icon icon="xmark" viewBox="0 0 20 20" :size="35" class="text-white" />
+            </button>
+          </div>
+          <ul class="divide-y devide-white font-sans">
+            <li>
+              <base-autocomplete v-model="productname" placeholder="Search" class="my-3 w-full"
+                :items="$model.productname" />
+            </li>
+            <li>
+              <nuxt-link to="/product" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">Product</p>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/ingredients" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">Ingredients</p>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/blogs" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">Blog</p>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/review" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">Review</p>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/contact" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">Contacts</p>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/favorite" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
+                <p @click="isOpen = false" class="w-full">Favorites</p>
+              </nuxt-link>
+            </li>
+            <!-- Checked login for V-show -->
+            <!-- <div class="text-lg text-white px-2" v-for="(item, i) in $menus.menu_users"
+            :key="`menu-user-${i}`">
+            <li>
+              <nuxt-link class="text-white text-lg w-full font-medium my-4 inline-block" :to="item.link"
+                :class="{ 'text-secondary': item.routes.includes(route_name) }">
+                <p @click="isOpen = false" class="w-full">{{ item.label
+                }}</p>
+              </nuxt-link>
+            </li>
+          </div> -->
+
+            <li>
+              <div class="py-3">
+                <div to="/favorite"
+                  class="flex items-center justify-center space-x-3 text-white text-lg font-medium my-4 hidden">
+                  <div class="notification">
+                    <nuxt-link to="/favorite">
+                      <p @click="isOpen = false" class="w-full">Favorite</p>
+                      <!-- <base-icon icon="heart" viewBox="0 0 30 41" size="40" class="text-white mx-2" /> -->
+                    </nuxt-link>
+                  </div>
+
+                  <div class="vl mx-4 bg-white hidden"></div>
+                  <div
+                    class="w-28 relative flex justify-evenly bg-secondary text-lg rounded-full cursor-pointer drop-shadow-md"
+                    @click="chlang">
+                    <div class="w-1/2 absolute z-10 h-full bg-tertiary rounded-full"
+                      :class="isthai ? 'right-0' : 'left-0'"></div>
+                    <p class="px-4 py-1 z-20" :class="isthai ? 'text-primary' : 'text-white'">EN</p>
+                    <p class="px-4 py-1 z-20" :class="isthai ? 'text-white' : 'text-primary'">TH</p>
+                  </div>
+                </div>
+                <div v-show="check_logined" class="flex items-center hidden">
+                  <div class="colums-1 items-center text-white">
+                    <p>{{ me.prefix + ' ' + me.first_name + ' ' + me.last_name }}</p>
+                    <p>{{ me.email }}</p>
+                  </div>
+                </div>
+                <div v-show="check_logined"
+                  class="flex items-center space-x-3 text-white text-lg font-medium my-4 hidden" @click="logoutClick()">
+                  <div class="bg-white rounded-full h-12 w-12 flex items-center justify-center">
+                    <base-icon icon="logout" viewBox="0 0 45 45" size="24" class="text-primary" />
+                  </div>
+                  <p @click="isOpen = false">Logout</p>
+                </div>
+                <nuxt-link v-show="!check_logined" to="/login"
+                  class="flex items-center space-x-3 text-white text-lg font-medium my-4 hidden">
+                  <div class="bg-white rounded-full h-12 w-12 flex items-center justify-center">
+                    <base-icon icon="login" viewBox="0 0 45 45" size="24" class="text-primary" />
+                  </div>
+                  <p @click="isOpen = false" class="text-white">Login</p>
+                </nuxt-link>
+                <nuxt-link v-show="!check_logined" to="/register"
+                  class="flex items-center space-x-3 text-white text-lg font-medium my-4 hidden">
+                  <div class="bg-white rounded-full h-12 w-12 flex items-center justify-center">
+                    <base-icon icon="register" viewBox="0 0 45 45" size="24" class="text-primary" />
+                  </div>
+                  <p @click="isOpen = false" class="text-white">Register</p>
+                </nuxt-link>
+              </div>
+            </li>
+          </ul>
+        </aside>
       </div>
     </nav>
 
@@ -101,10 +237,139 @@
 </template>
 
 <script>
+import products from "@/static/json/products.json"
+import baseIcon from '../base/base-icon.vue'
 export default {
+  components: { baseIcon },
+  data() {
+    return {
+      me: {},
+      products,
+      productname: '',
+      menu_route: ["blogs", "blogs-details-id", "product", "ingredients", "review", "contact", "favorite"],
+      isOpen: false,
+      search: false,
+      dropdowm_data: false,
+      dropdowm_user: false,
+      isthai: false,
+    }
+  },
+  computed: {
+    route_name() {
+      return this.$route.name
+    },
+    check_logined() {
+      let check = this.$store.getters['me/getToken']
+      return check ? true : false
+    },
+    count_islike() {
+      let count = this.$store.getters['me/getCount']
+      console.log(count)
+      return count
+    },
+    fake_islike() {
+      let count = this.$store.getters['me/getFakeCount']
+      console.log(count)
+      return count
+    },
+  },
+  created() {
+    if (this.check_logined) this.me = this.$store.getters['me/getUser']
+    // console.log(this.me)
+  },
+  methods: {
+    drawer() {
+      this.isOpen = !this.isOpen;
+    },
+    checkDataOpen(p) {
+      this.dropdowm_data = p
+    },
+    checkUserOpen(p) {
+      this.dropdowm_user = p
+    },
+    chlang() {
+      this.isthai = !this.isthai;
+      this.$store.dispatch('me/setLanguages', this.isthai)
+    },
+    async logoutClick() {
+      const self = this
+      await self.$store.dispatch('loading/setLoading', true)
 
+      const res = await self.$store.dispatch('me/logout')
+      if (res instanceof Error) {
+        self.$toast.open({
+          message: res.response.data.message,
+          type: 'error',
+          duration: 5000,
+        })
+      } else {
+        await setTimeout(async () => {
+          window.location.reload()
+          await self.$router.push('/')
+        }, 500)
+      }
+      await self.$store.dispatch('loading/setLoading', false)
+    },
+    searchProduct() {
+      if (this.search == false) {
+        this.search = true
+      }
+      else if (this.search == true) {
+        if (this.productname != '') {
+          this.$store.dispatch('me/setProductName', this.productname)
+          this.$router.push(`/product/details/${this.productname}`)
+        }
+        this.search = false
+      }
+    },
+  },
+  async mounted() {
+    await document.addEventListener("keydown", e => {
+      if (e.keyCode == 27 && this.isOpen) this.isOpen = false;
+    });
+  },
+  watch: {
+    isOpen: {
+      immediate: true,
+      handler(isOpen) {
+        if (process.client) {
+          if (isOpen) document.body.style.setProperty("overflow", "hidden");
+          else document.body.style.removeProperty("overflow");
+        }
+      }
+    }
+  },
 }
 </script>
 
-<style>
+<style scoped>
+.vl {
+  width: 1px;
+  height: 30px;
+}
+
+.notification {
+  text-decoration: none;
+  padding: 0px;
+  position: relative;
+  display: inline-block;
+}
+
+.notification .badge {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: -4px;
+  right: -2px;
+  padding: 0px 7px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 72px;
+}
 </style>

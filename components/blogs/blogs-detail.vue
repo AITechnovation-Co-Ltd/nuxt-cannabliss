@@ -1,0 +1,141 @@
+<template>
+  <div class="w-full flex flex-col px-4 sm:px-12 lg:px-16 xl:px-28 3xl:px-32">
+    <!-- -->
+    <div class="w-full flex flex-col lg:flex-row justify-center items-center">
+      <!-- Details -->
+      <div class="w-full sm:w-11/12 xl:w-1/2 pr-0 sm:pr-24">
+        <!-- <p class="my-4 text-4xl text-primary thai font-thin">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-extralight">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-light">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-normal">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-medium">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-semibold">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-bold">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-extrabold">ต้านการอักเสบของสิว</p>
+        <p class="my-4 text-4xl text-primary thai font-black">ต้านการอักเสบของสิว</p> -->
+        <p class="my-4 text-5xl sm:text-7xl text-primary thai">{{ blogs.title }}</p>
+        <p class="pl-2 font-medium text-quaternary border-l-2 sm:border-l-4 border-primary text-2xl leading-7 thai">
+          {{ blogs.subtitle }}</p>
+        <p class="my-4 text-quaternary text-lg 3xl:text-xl leading-6 thai">{{ blogs.detail_title }}</p>
+        <p class="text-quaternary text-lg 3xl:text-xl leading-6 thai">
+          {{ blogs.first_header }}<br><span v-html="blogs.first_detail"
+            class="text-quaternary text-lg 3xl:text-xl leading-6 thai"></span></p>
+      </div>
+
+      <!-- Picture -->
+      <div class="w-full sm:w-11/12 xl:w-1/2 mt-8 xl:mt-0 h-full relative">
+        <div class="w-full h-full flex items-start justify-start sm:justify-center">
+          <img src="@/static/images/IMG_03blogs_details/shutterstock.jpg" class="rounded-3xl w-11/12 mt-8 z-20" alt="">
+        </div>
+        <img src="~/static/images/IMG_03ingredients/bg-blue2.png" alt=""
+          class="w-11/12 rounded-3xl absolute top-0 right-0">
+      </div>
+    </div>
+    <!-- -->
+    <div class="w-full flex flex-col-reverse lg:flex-row justify-center items-center mt-8">
+      <!-- Picture -->
+      <div class="w-full sm:w-11/12 xl:w-3/5 flex justify-center">
+        <img src="@/static/images/IMG_03blogs_details/cbd.png" class="w-full sm:w-6/12 xl:w-9/12 ">
+      </div>
+      <!-- Details -->
+      <div class="w-full sm:w-11/12 xl:w-2/5">
+        <p class="mb-4 text-5xl sm:text-7xl text-primary thai">{{ blogs.second_header }}</p>
+        <p v-html="blogs.second_detail" class="text-quaternary text-lg 3xl:text-xl leading-6 thai"></p>
+        <p v-html="blogs.second_detail2" class="my-4 text-quaternary text-lg 3xl:text-xl leading-6 thai"></p>
+      </div>
+    </div>
+    <!-- Benefis of cbd -->
+    <div class="w-full flex flex-col items-center">
+      <p class="my-10 text-2xl sm:text-4xl text-primary font-medium">Benefits Of CBD For Acne</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="flex items-center">
+          <img src="@/static/images/IMG_03blogs_details/reduce.png" alt="" class="w-20 sm:w-24 mr-4">
+          <p class="ml-2 font-normal">Reduce redness <br> & inflammation</p>
+        </div>
+        <div class="flex items-center">
+          <img src="@/static/images/IMG_03blogs_details/regulates.png" alt="" class="w-20 sm:w-24 mr-4">
+          <p class="ml-2 font-normal">Regulates oil <br> Production in the skin</p>
+        </div>
+        <div class="flex items-center">
+          <img src="@/static/images/IMG_03blogs_details/sebum.png" alt="" class="w-20 sm:w-24 mr-4">
+          <p class="ml-2 font-normal">Make sebum less-viscous <br> preventing clogging</p>
+        </div>
+        <div class="flex items-center">
+          <img src="@/static/images/IMG_03blogs_details/inhibits.png" alt="" class="w-20 sm:w-24 mr-4">
+          <p class="ml-2 font-normal">Inhibits bacterial <br> Growth in the pores</p>
+        </div>
+        <div class="flex items-center">
+          <img src="@/static/images/IMG_03blogs_details/promotes.png" alt="" class="w-20 sm:w-24 mr-4">
+          <p class="ml-2 font-normal">Promotes the regeneration <br> of new skin cells</p>
+        </div>
+        <div class="flex items-center">
+          <img src="@/static/images/IMG_03blogs_details/suppressed.png" alt="" class="w-20 sm:w-24 mr-4">
+          <p class="ml-2 font-normal">Suppressed cell prolifera</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import blogs from "@/static/json/blogs.json"
+export default {
+  data() {
+    return {
+      blogs,
+      cbd: [{
+        id: 1,
+        url: require('@/static/images/IMG_03blogs_details/reduce.png'),
+        benefits: 'Reduce redness & inflammation',
+      }, {
+        id: 2,
+        url: require('@/static/images/IMG_03blogs_details/regulates.png'),
+        benefits: 'Regulates oil Production in the skin',
+      },
+      {
+        id: 3,
+        url: require('@/static/images/IMG_03blogs_details/sebum.png'),
+        benefits: 'Make sebum less-viscous preventing clogging',
+      },
+      {
+        id: 4,
+        url: require('@/static/images/IMG_03blogs_details/inhibits.png'),
+        benefits: 'Inhibits bacterial Growth in the pores',
+      }, {
+        id: 5,
+        url: require('@/static/images/IMG_03blogs_details/promotes.png'),
+        benefits: 'Promotes the regeneration of new skin cells',
+      }, {
+        id: 6,
+        url: require('@/static/images/IMG_03blogs_details/suppressed.png'),
+        benefits: 'Suppressed cell prolifera',
+      },],
+
+    }
+  },
+  async mounted() {
+    await this.fetch()
+    this.$store.dispatch('me/setBreadcrumb', this.blogs.title)
+  },
+  methods: {
+    async fetch() {
+      let list = await this.blogs.filter((e) => e.id == this.params)
+      this.blogs = list[0]
+      console.log(this.blogs)
+    }
+  },
+  props: {
+    params: {
+      type: String,
+      required: true,
+    }
+  }
+}
+</script>
+
+<style scoped>
+.vl {
+  height: 15px;
+  width: 1px;
+}
+</style>

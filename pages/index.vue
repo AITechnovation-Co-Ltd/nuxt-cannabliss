@@ -1,63 +1,61 @@
 <template>
-   <div class="bg-secondary">
-    <navbar class="sticky top-0"/>
-
+  <div class="bg-secondary relative overflow-hidden">
     <!-- Carousel -->
-    <div class="maincrs w-screen bg-red-100 flex justify-center items-center">
-      <h1 class="text-5xl">Carousel</h1>
-    </div>
+    <Carousel class="z-10 md:block hidden" />
+
+    <!-- CarouselPhone -->
+    <Carouselphone class="z-10 md:hidden block" />
 
     <!-- Products -->
-    <div class="maincrs w-screen bg-red-200 flex justify-center items-center">
-      <h1 class="text-5xl">Products</h1>
-    </div>
-    
-    <!-- Ingredients -->
-    <div class="maincrs w-screen bg-red-300 flex justify-center items-center">
-      <h1 class="text-5xl">Ingredients</h1>
-    </div>
-    <!-- Face -->
-    <div class="maincrs w-screen bg-red-400 flex justify-center items-center">
-      <h1 class="text-5xl">Face</h1>
-    </div>
-    <!-- Video Review -->
-    <div class="maincrs w-screen bg-red-500 flex justify-center items-center">
-      <h1 class="text-5xl">Video Review</h1>
-    </div>
-    <!-- Blogs -->
-    <div class="maincrs w-screen bg-red-600 flex justify-center items-center">
-      <h1 class="text-5xl">Blogs</h1>
-    </div>
-    <!-- Review -->
-    <div class="maincrs w-screen bg-red-700 flex justify-center items-center">
-      <h1 class="text-5xl">Review</h1>
-    </div>
-    <!-- FAQ -->
-    <div class="maincrs w-screen bg-red-800 flex justify-center items-center">
-      <h1 class="text-5xl">FAQ</h1>
-    </div>
-    <subscribe />
-    <!-- Partner -->
-    <div class="maincrs w-screen bg-red-900 flex justify-center items-center">
-      <h1 class="text-5xl">Partner</h1>
-    </div>
+    <Product class="z-10" />
 
-    <foot />
+    <!-- Ingredients -->
+    <Ingredients class="relative z-20" />
+
+    <!-- Face -->
+    <Face class="relative z-10" />
+
+    <!-- Video Review -->
+    <VideoReview class="z-10" />
+
+    <!-- Blogs -->
+    <Blogs class="z-10" />
+
+    <!-- Review -->
+    <slick class="z-10" />
+    <!-- <Review class="z-10" /> -->
+
+    <!-- FAQ -->
+    <Faq class="z-10" />
+
+    <Subscribe class="z-10 hidden" />
+
+    <!-- Partner -->
+    <Partner class="z-10" />
+
+    <!-- background -->
   </div>
 </template>
 
 <script>
-import foot from '~~/components/layout/foot.vue'
-import navbar from '~~/components/layout/navbar.vue'
-import Subscribe from '~~/components/layout/subscribe.vue'
-export default {
-  components: { navbar, foot, Subscribe },
+import slick from '~/components/homepage/slick.vue'
+import Subscribe from '../components/layout/subscribe.vue'
+import Carousel from '~/components/homepage/carousel.vue'
+import Carouselphone from '~/components/homepage/carouselphone.vue'
+import Product from '~/components/homepage/product.vue'
+import Ingredients from '~/components/homepage/ingredients'
+import Blogs from '/components/homepage/blogs'
+import Faq from '~/components/homepage/faq.vue'
+import Review from '~/components/homepage/review'
+import Partner from '~/components/homepage/partner.vue'
+import VideoReview from '../components/homepage/video-review.vue'
+import Face from '~/components/homepage/face.vue'
 
+export default {
+  components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick , Carouselphone},
+  layout: 'home',
 }
 </script>
-
 <style scoped>
-.maincrs {
-  min-height: calc(100vh - 84px);
-}
+
 </style>
