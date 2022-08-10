@@ -1,5 +1,6 @@
 <template>
-  <div class="w-full">
+  <div class="w-full relative overflow-hidden">
+    <img src="~/static/images/IMG_02products_detail/Group1141@2x.png" class="widget1141">
     <div v-if="no_product" class="w-full columns-1 mt-8 px-4 lg:px-12 xl:px-28 3xl:px-32">
       <div class="w-full py-12 mt-12 bg-white text-center text-4xl text-primary">No Product<br>
         <span class="text-red-500 text-xl">{{ productname }}</span>
@@ -10,7 +11,6 @@
       <div
         class="w-full flex mt-8 px-4 lg:px-12 xl:px-28 3xl:px-32 flex-col lg:flex-row justify-between items-center xl:items-start"
         v-for="(products_id, i) in products_img" :key="i">
-
         <!-- Picture -->
         <div class="w-full overflow-hidden lg:w-1/2">
           <div class="flex items-center relative">
@@ -49,20 +49,15 @@
           <p v-else class="my-2 font-light text-quaternary text-md">{{ products_id.subtitle_th }}</p>
           <p v-html="products_id.detail_th" class="my-2 font-extralight text-quaternary text-sm"></p>
           <div class="w-full flex-col text-2xl text-primary">
-
             <!-- FAQ 1 -->
-            <base-dropdown class="my-2" dropdownClass="mt-2" @opened="checkDataOpen">
+            <base-dropdown class="my-2 z-10" dropdownClass="mt-2" @opened="checkDataOpen">
               <div slot="toggle" class="w-full flex items-center justify-between">
                 <p class="text-lg font-normal text-primary my-2">How to use</p>
                 <p>{{ !dropdown_data ? '+' : '-' }}</p>
               </div>
               <!-- Details -->
               <base-dropdown-item>
-                <p class="w-11/12 text-sm text-quaternary ">Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Harum sequi
-                  provident optio magnam, commodi
-                  corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
-                  reprehenderit? Officia.</p>
+                <p class="w-11/12 text-sm text-quaternary ">{{products_id.how2use}}</p>
               </base-dropdown-item>
             </base-dropdown>
             <div class="hrr bg-primary"></div>
@@ -184,9 +179,7 @@ export default {
           self.products_detail = products_test
           self.picture = self.products_img[0].imgUrl
         }
-
       }
-
     },
     checkDataOpen(toggle) {
       this.dropdown_data = toggle
@@ -244,6 +237,13 @@ export default {
 </script>
 
 <style scoped>
+.widget1141 {
+  height: 20rem;
+  position: absolute;
+  left: 0;
+  transform: translate(5rem, 15rem);
+}
+
 .vl {
   width: 1px;
 }
@@ -275,6 +275,14 @@ export default {
     height: 18vw;
 }
 } */
+@media (max-width:1441px) {
+.widget1141 {
+  height: 15rem;
+  position: absolute;
+  left: 0;
+  transform: translate(5rem, 10rem);
+}
+}
 @media (max-width:1023px) {
   .maincentered {
     height: 40vw;

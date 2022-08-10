@@ -1,8 +1,10 @@
 <template>
-  <div class="w-full px-4 sm:px-12 lg:px-16 xl:px-28 3xl:px-32 z-20">
+  <div class="w-full px-4 sm:px-12 lg:px-16 xl:px-28 3xl:px-32 z-20 relative">
     <div class="w-full flex flex-col mt-0 sm:mt-4 lg:mt-0 lg:flex-row justify-between items-start lg:items-center">
       <div class="w-full lg:w-1/2 lg:mr-8 xl:mr-0 pr-0 lg:pr-20 xl:pr-32">
+        <img src="~/static/images/IMG_03ingredients/CANABLISS@2x.png" class="widget">
         <h1 class="text-4xl sm:text-5xl mt-4 sm:mt-0 text-primary">Ingredients</h1>
+        <img src="~/static/images/IMG_03ingredients/Group1053@2x.png" class="widget1053">
         <div class="flex items-center mt-4">
           <!-- <div class="w-0.5 h-24 2xl:h-12 bg-primary mr-4 flex"></div> -->
           <span class="text-quaternary font-normal text-2xl border-l-2 border-primary pl-2 sm:pl-4 thai">ผสานพลัง 2
@@ -61,6 +63,19 @@ export default {
 </script>
 
 <style scoped>
+.widget {
+  height: 7.5rem;
+  position: absolute;
+  transform: translate(4.2rem, -4.7rem);
+}
+
+.widget1053 {
+  height: 40rem;
+  left: 0;
+  position: absolute;
+  transform: translate(-15rem, -4.5rem);
+}
+
 .vl {
   width: 1px;
 }
@@ -73,6 +88,22 @@ export default {
 .vl-3 {
   height: 320px;
   width: 2px;
+}
+
+@media (max-width:1441px) {
+  .widget1053 {
+    height: 35rem;
+    left: 0;
+    position: absolute;
+    transform: translate(-15rem, -4.5rem);
+  }
+
+  .widget {
+    height: 6.5rem;
+    position: absolute;
+    transform: translate(4.2rem, -4rem);
+  }
+
 }
 
 @media (min-width:1024px) {

@@ -161,11 +161,11 @@
                 <p @click="isOpen = false" class="w-full">Contacts</p>
               </nuxt-link>
             </li>
-            <li>
+            <!-- <li>
               <nuxt-link to="/favorite" class="ml-2 w-full text-white text-lg font-medium my-4 inline-block">
                 <p @click="isOpen = false" class="w-full">Favorites</p>
               </nuxt-link>
-            </li>
+            </li> -->
             <!-- Checked login for V-show -->
             <!-- <div class="text-lg text-white px-2" v-for="(item, i) in $menus.menu_users"
             :key="`menu-user-${i}`">
@@ -181,15 +181,21 @@
             <li>
               <div class="py-3">
                 <div to="/favorite"
-                  class="flex items-center justify-center space-x-3 text-white text-lg font-medium my-4 hidden">
-                  <div class="notification">
+                  class="flex items-center justify-center space-x-3 text-white text-lg font-medium my-4">
+                  <!-- <div class="notification">
                     <nuxt-link to="/favorite">
                       <p @click="isOpen = false" class="w-full">Favorite</p>
-                      <!-- <base-icon icon="heart" viewBox="0 0 30 41" size="40" class="text-white mx-2" /> -->
+                      <base-icon icon="heart" viewBox="0 0 30 41" size="40" class="text-white mx-2" />
+                    </nuxt-link>
+                  </div> -->
+                  <div class="snotification">
+                    <nuxt-link to="/favorite">
+                      <base-icon icon="heart" viewBox="0 0 30 41" size="45" class="text-secondary" />
+                      <!-- <div class="bg-primary w-5 h-5 rounded-full"></div> -->
+                      <span class="badge bg-secondary">{{ fake_islike != null ? fake_islike : count_islike }}</span>
                     </nuxt-link>
                   </div>
-
-                  <div class="vl mx-4 bg-white hidden"></div>
+                  <div class="vl mx-4 bg-primary "></div>
                   <div
                     class="w-28 relative flex justify-evenly bg-secondary text-lg rounded-full cursor-pointer drop-shadow-md"
                     @click="chlang">
@@ -281,6 +287,9 @@ export default {
     drawer() {
       this.isOpen = !this.isOpen;
     },
+    drawer2(params) {
+      this.isOpen = params
+    },
     checkDataOpen(p) {
       this.dropdowm_data = p
     },
@@ -364,6 +373,27 @@ export default {
   padding: 0px 7px;
   border-radius: 50%;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snotification {
+  text-decoration: none;
+  padding: 0px;
+  position: relative;
+  display: inline-block;
+}
+
+.snotification .badge {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  padding: 0px 7px;
+  border-radius: 50%;
+  color: #78A695;
   display: flex;
   justify-content: center;
   align-items: center;
