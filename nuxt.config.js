@@ -1,40 +1,41 @@
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
+
 export default {
-  mode: 'static',
+  mode: "static",
   ssr: false,
   server: {
-    host: '0.0.0.0',
-    post: process.env.PORT || 3000
+    host: "0.0.0.0",
+    post: process.env.PORT,
   },
   router: {
-    base: '/'
+    base: "/",
   },
   // Nuxt loading
-  loading: '@/components/loading/loading.vue',
+  loading: "@/components/loading/loading.vue",
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Canabliss Cosmetic',
+    title: "Canabliss Cosmetic",
     htmlAttrs: {
-      lang: 'en'
+      lang: "en",
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'format-detection', content: 'telephone=no' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", href: "/images/logo.svg" }],
     link: [
-      { rel: 'icon', href: '/logo/Logo-CANABLISS.png' },
-      { rel: "stylesheet", href: "https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css" },
+      { rel: "icon", href: "/logo/Logo-CANABLISS.png" },
+      {
+        rel: "stylesheet",
+        href: "https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css",
+      },
     ],
-    script: [
-      { src: 'https://unpkg.com/flowbite@1.4.5/dist/flowbite.js' }
-    ]
+    script: [{ src: "https://unpkg.com/flowbite@1.4.5/dist/flowbite.js" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/style/main.css',
-  ],
+  css: ["@/assets/style/main.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -45,7 +46,7 @@ export default {
     "@/plugins/vue-tailwind",
     "@/plugins/vue-scrollto",
     "@/plugins/notification",
-    '@/plugins/model',
+    "@/plugins/model",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -53,8 +54,9 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxt/postcss8',
+    "@nuxt/postcss8",
     "@nuxtjs/tailwindcss",
+    ["@nuxtjs/dotenv", { filename: `.env.${process.env.NODE_ENV}` }],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -62,10 +64,15 @@ export default {
     "@nuxtjs/axios",
     "@nuxtjs/recaptcha",
     // Simple usage
-    'nuxt-leaflet',
+    "nuxt-leaflet",
 
     // With options
-    ['nuxt-leaflet', { /* module options */ }],
+    [
+      "nuxt-leaflet",
+      {
+        /* module options */
+      },
+    ],
   ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -101,4 +108,4 @@ export default {
     version: 2, // Version
     size: "normal", // Size: 'compact', 'normal', 'invisible' (v2)
   },
-}
+};
