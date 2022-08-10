@@ -4,7 +4,7 @@
     <!-- Categories -->
     <div class="w-full lg:w-3/12 flex flex-col items-start">
       <!-- List Categories -->
-      <div class="w-full lg:w-80 mt-10">
+      <div class="w-full lg:w-80 mt-10 z-20">
         <!-- <img src="~/static/images/IMG_03ingredients/Group1053@2x.png" class="widget1053"></img> -->
         <h1 class="text-xl font-normal text-primary">Categories</h1>
         <!-- <hr class="w-full lg:w-8/12 xl:w-10/12 3xl:w-11/12 my-6 border-b-px border-primary flex flex-col justify-center items-center"> -->

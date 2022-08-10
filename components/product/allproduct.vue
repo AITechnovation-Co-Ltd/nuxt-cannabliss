@@ -17,9 +17,9 @@
         </div>
 
         <div class="w-full flex flex-col lg:flex-row items-start">
-            <img src="~/static/images/IMG_02products/Group1053@2x.png" class="widget1053">
+            <img src="~/static/images/IMG_02products/Group1053@2x.png" class="widget1053 z-10">
             <!-- List Categories -->
-            <div class="w-full lg:w-3/12 mt-3 sm:mt-10 hidden lg:block">
+            <div class="w-full lg:w-3/12 mt-3 sm:mt-10 hidden lg:block z-50">
                 <h1 class="text-xl text-primary">Categories</h1>
                 <!-- <hr class="w-5/6 my-3 sm:my-6 border-b border-gold flex flex-col justify-center items-center" /> -->
                 <div class="w-5/6 my-3 sm:my-6 bg-gold hrr"></div>
@@ -56,10 +56,10 @@
                 </div>
             </div>
             <!-- Product cards -->
-            <div class="w-full lg:w-9/12 lg:ml-10">
+            <div class="w-full lg:w-9/12 lg:ml-10 z-20">
                 <!-- Sort by -->
                 <div
-                    class="w-full py-3 mt-3 sm:mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
+                    class="w-full py-3 mt-3 sm:mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end z-20">
                     <div class="flex flex-col sm:flex-row items-start sm:items-center mx-2 hidden lg:flex">
                         <p class="text-xs text-white">Items per page</p>
                         <select class="h-8 w-16 text-xs text-quaternary rounded-xl mr-1 sm:mx-4"
@@ -315,6 +315,7 @@ export default {
         left: 0;
         position: absolute;
         transform: translate(-15rem, -9rem);
+        z-index: 0;
     }
 }
 

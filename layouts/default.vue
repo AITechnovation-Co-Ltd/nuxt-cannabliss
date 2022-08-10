@@ -37,8 +37,8 @@
         <button class="to-top hide" id="totop" @click="toTop">
             <base-icon icon="angle-up" viewBox="0 0 24 24" size="30" class="text-white" />
         </button>
-        <img src="~/static/images/IMG_01home/pages_01home/Group831@2x.png" class="footleft z-50">
-        <img src="~/static/images/IMG_01home/pages_01home/Group388@2x.png" class="footright z-50">
+        <img src="~/static/images/IMG_01home/pages_01home/Group831@2x.png" class="footleft z-10">
+        <img src="~/static/images/IMG_01home/pages_01home/Group388@2x.png" class="footright z-10">
         <Foot class="mt-10 sm:mt-20 z-20" />
     </div>
 </template>

@@ -5,7 +5,7 @@
     <div class="w-full flex flex-col items-center">
       <!-- Card -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 sm:gap-y-0 sm:gap-x-24 text-quaternary z-50">
-        <div class="w-full flex flex-col" v-for="(data, i) in blogcard" :key="`blog-${i}`">
+        <div class="w-full flex flex-col" v-for="(data, i) in blogs" :key="`blog-${i}`">
           <div v-if="!load_more ? i < 4 : i >= 0">
             <img :src="url" class="rounded-3xl" :class="{ 'sm:mt-16 xl:mt-36': i % 2 != 0 }">
             <p class="my-4 text-lg font-normal">{{ data.title }}</p>
