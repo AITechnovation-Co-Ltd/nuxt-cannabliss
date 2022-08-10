@@ -1,6 +1,7 @@
 <template>
   <div
-    class="w-full text-quaternary flex flex-col justify-center items-center mt-12 px-8 sm:px-12 lg:px-16 xl:px-20 3xl:px-32 z-20">
+    class="relative w-full text-quaternary flex flex-col justify-center items-center mt-12 px-8 sm:px-12 lg:px-16 xl:px-20 3xl:px-32 z-20">
+    <img src="~/static/images/IMG_03ingredients/Group1147@2x.png" class="widget1147">
     <h1 class="text-3xl sm:text-5xl text-primary font-normal text-center">What Is CBD?</h1>
     <p class="w-full xl:w-9/12 mt-10 text-center text-sm font-extralight">Sed ut perspiciatis unde omnis iste natus
       error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
@@ -35,6 +36,7 @@
     </div>
 
     <div class="w-full mt-4 sm:mt-12 flex flex-col lg:flex-row justify-between items-center">
+       <img src="~/static/images/IMG_03ingredients/Group1148@2x.png" class="widget1148">
       <div class="w-full lg:w-1/2 xl:w-2/5 ml-0 lg:mr-12 xl:mr-0">
         <div class="hidden sm:block">
           <h1 class="text-2xl sm:text-5xl text-primary font-medium">What Is</h1>
@@ -75,4 +77,18 @@ export default {
 </script>
 
 <style scoped>
+.widget1147 {
+  height: 12rem;
+  position: absolute;
+  left: 3rem;
+  top: 0;
+  /* transform: translate(2.5rem, 0rem); */
+}
+.widget1148 {
+  height: 8rem;
+  position: absolute;
+  left: 3rem;
+  bottom: 32rem;
+  /* transform: translate(2.5rem, 0rem); */
+}
 </style>

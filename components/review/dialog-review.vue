@@ -1,11 +1,12 @@
 <template>
   <base-modal v-model="isShow">
-    <div class="px-2 py-12 bg-secondary rounded-3xl flex flex-col items-center">
+    <div class="px-2 py-12 bg-secondary rounded-3xl flex flex-col items-center relative overflow-hidden">
+      <img src="~/static/images/IMG_03blogs_details/Group803@2x.png" class="widget803">
+      <img src="~/static/images/IMG_04review_popup/Group1161@2x.png" class="widget1161">
       <!-- Title -->
       <div class="w-full text-4xl xl:text-6xl font-extralight text-primary text-center mb-4">
         Write a review
       </div>
-
       <!-- Star -->
       <div class="w-full flex mt-3 items-center justify-center">
         <svg @click="test(1)" class="w-12 h-12 text-gray-300" :class="{ 'text-blue-400': s1 }" fill="currentColor"
@@ -155,3 +156,18 @@ export default {
   },
 };
 </script>
+<style scoped>
+.widget803 {
+  height: 50rem;
+  position: absolute;
+  right: -10rem;
+  top: -2rem;
+}
+
+.widget1161 {
+  height: 15rem;
+  position: absolute;
+  left: 5rem;
+  top: 3rem;
+}
+</style>

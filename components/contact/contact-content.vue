@@ -1,15 +1,16 @@
 <template>
-  <div class="w-full flex flex-col justify-center text-3xl mt-10 sm:mt-2 px-4 lg:px-12 xl:px-20 2xl:px-32">
-
+  <div class="w-full flex flex-col justify-center text-3xl mt-10 sm:mt-2 px-4 lg:px-12 xl:px-20 2xl:px-32 relative ">
+    <img src="~/static/images/IMG_03blogs_details/Group803@2x.png" class="widget803"></img>
     <div class="flex flex-col lg:flex-row">
       <!-- Details Contract -->
       <div class="w-full lg:w-1/2 flex flex-col">
         <a class="flex items-center " href="https://goo.gl/maps/ndXssawVBm4sNwf96" target="_blank">
           <img src="~static/images/IMG_05contacts/Group1164@2x.png" alt="" class="w-20 h-20 mr-4">
           <p class="text-sm text-quaternary font-light">2922 / 209-214, Charn Issara Tower 2,12A
-            <br class="hidden lg:block"/>
-            Floor, New Petchburi Road, Bang Kapi <br class="hidden lg:block"/>
-            Subdistrict, Huai Khwang Distric Bangkok</p>
+            <br class="hidden lg:block" />
+            Floor, New Petchburi Road, Bang Kapi <br class="hidden lg:block" />
+            Subdistrict, Huai Khwang Distric Bangkok
+          </p>
         </a>
 
         <div class="flex items-center my-4">
@@ -29,7 +30,8 @@
         <a href="https://lin.ee/i5MkM6w" target="_blank">
           <img src="~/static/images/IMG_05contacts/qrline.png" alt="" class="rounded-2xl drop-shadow-md w-60">
         </a>
-        <p class="mt-4 text-xl">Or click <a href="https://lin.ee/i5MkM6w" target="_blank" class="text-primary hover:underline">this</a> to add line</p>
+        <p class="mt-4 text-xl">Or click <a href="https://lin.ee/i5MkM6w" target="_blank"
+            class="text-primary hover:underline">this</a> to add line</p>
       </div>
     </div>
   </div>
@@ -47,6 +49,22 @@ export default {
 </script>
 
 <style scoped>
+.widget803 {
+  height: 40rem;
+  position: absolute;
+  right: -5rem;
+  top: -11rem;
+}
+
+@media (max-width:1441px) {
+  .widget803 {
+    height: 30rem;
+    position: absolute;
+    right: -5rem;
+    top: -8rem;
+  }
+}
+
 .vl {
   height: 15px;
   width: 1px;

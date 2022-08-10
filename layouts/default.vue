@@ -1,8 +1,8 @@
 <template>
-    <div class="w-full bg-secondary scroll-smooth">
+    <div class="w-full bg-secondary scroll-smooth relative overflow-hidden">
         <Navbar />
         <div class="w-full relative" v-for="(item, i) in menus" :key="`banner-${i}`">
-            <img v-if="route_name == item.route || route_name == item.sub_routes" class="w-full bg mb-10 sm:mb-20 z-10"
+            <img v-if="route_name == item.route || route_name == item.sub_routes" class="w-full bg z-10"
                 :src="item.src">
             <div v-if="route_name == item.route || route_name == item.sub_routes" class="content flex z-20">
                 <h1 class="text-6xl text-primary font-medium">{{ item.label }}</h1>
@@ -21,13 +21,25 @@
                     class="font-normal line-clamp-1">&nbsp;|&nbsp;&nbsp;{{ breadcrumb }}</p>
             </div>
         </div>
+        <img v-if="route_name == 'blogs'" src="~/static/images/IMG_03blogs/Group1151@2x.png" class="widget1151">
+        <img v-if="route_name == 'review'" src="~/static/images/IMG_03ingredients/Group1053@2x.png"
+            class="reviewwidget1053">
+        <img v-if="route_name == 'product-details-id'" src="~/static/images/IMG_02products_detail/Group1053@2x.png"
+            class="widget1053">
+        <!-- <div v-for="(item, i) in menus" :key="`banner-${i}`"> -->
+
+        <!-- <img v-show="route_name == 'blog'" src="~/static/images/IMG_03blogs/Group1151@2x.png" class="widget1151"> -->
+
+        <!-- </div> -->
         <div class="w-full">
             <nuxt />
         </div>
         <button class="to-top hide" id="totop" @click="toTop">
             <base-icon icon="angle-up" viewBox="0 0 24 24" size="30" class="text-white" />
         </button>
-        <Foot class="mt-10 sm:mt-20" />
+        <img src="~/static/images/IMG_01home/pages_01home/Group831@2x.png" class="footleft z-50">
+        <img src="~/static/images/IMG_01home/pages_01home/Group388@2x.png" class="footright z-50">
+        <Foot class="mt-10 sm:mt-20 z-20" />
     </div>
 </template>
 
@@ -107,6 +119,54 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.widget1151 {
+    height: 12rem;
+    position: absolute;
+    right: 16rem;
+    top: 630px;
+    z-index: 200;
+    transform: translateY(-6rem);
+}
+
+.reviewwidget1053 {
+    height: 40rem;
+    top: 30rem;
+    left: -20rem;
+    position: absolute;
+}
+
+.widget1053 {
+    height: 40rem;
+    position: absolute;
+    right: 0;
+    transform: translate(23rem, -9rem);
+}
+
+@media (max-width:1441px) {
+    .widget1053 {
+        height: 35rem;
+        position: absolute;
+        right: 0;
+        transform: translate(20rem, -8rem);
+    }
+
+    .reviewwidget1053 {
+        height: 30rem;
+        top: 24rem;
+        left: -15rem;
+        position: absolute;
+    }
+
+    .widget1151 {
+        height: 10rem;
+        position: absolute;
+        right: 4rem;
+        top: 530px;
+        z-index: 200;
+        transform: translateY(-6rem);
+    }
 }
 
 @media (max-width:1024px) {

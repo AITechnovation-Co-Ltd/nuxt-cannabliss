@@ -13,8 +13,10 @@
         <p class="my-4 text-4xl text-primary thai font-bold">ต้านการอักเสบของสิว</p>
         <p class="my-4 text-4xl text-primary thai font-extrabold">ต้านการอักเสบของสิว</p>
         <p class="my-4 text-4xl text-primary thai font-black">ต้านการอักเสบของสิว</p> -->
+        <img src="~/static/images/IMG_03ingredients/CANABLISS@2x.png" class="widget">
         <p class="my-4 text-5xl sm:text-7xl text-primary thai">ต้านการอักเสบของสิว</p>
-        <p class="pl-2 font-medium text-quaternary border-l-2 sm:border-l-4 border-primary text-2xl leading-7 thai">การทาครีม CBD
+        <p class="pl-2 font-medium text-quaternary border-l-2 sm:border-l-4 border-primary text-2xl leading-7 thai">
+          การทาครีม CBD
           โดยไม่มีส่วนผสมของ THC
           เป็นทางเลือกที่
           ปลอดภัยและมีประสิทธิภาพ ไม่มีผลข้างเคียง พัฒนาคุณภาพชีวิต
@@ -34,8 +36,7 @@
       <!-- Picture -->
       <div class="w-full sm:w-11/12 xl:w-1/2 mt-8 xl:mt-0 h-full relative">
         <div class="w-full h-full flex items-start justify-start sm:justify-center">
-          <img src="@/static/images/IMG_03blogs_details/shutterstock.jpg" class="rounded-3xl w-11/12 mt-8 z-20"
-            alt="">
+          <img src="@/static/images/IMG_03blogs_details/shutterstock.jpg" class="rounded-3xl w-11/12 mt-8 z-20" alt="">
         </div>
         <img src="~/static/images/IMG_03ingredients/bg-blue2.png" alt=""
           class="w-11/12 rounded-3xl absolute top-0 right-0">
@@ -49,6 +50,7 @@
       </div>
       <!-- Details -->
       <div class="w-full sm:w-11/12 xl:w-2/5">
+        <img src="~/static/images/IMG_03blogs_details/Group803@2x.png" class="widget803">
         <p class="mb-4 text-5xl sm:text-7xl text-primary thai">กลไกการทำงาน</p>
         <p class="text-quaternary text-lg 3xl:text-xl leading-6 thai">
           ระบบเอ็นแคนนาบินอยด์ในผิวหนังจะควบคุมความผิดปกติทุกด้านที่เกิดขึ้นในสิว
@@ -72,29 +74,37 @@
           <p class="ml-2 font-normal">{{ data.benefits }}</p>
         </div> -->
         <div class="flex items-center">
+          <img src="~/static/images/IMG_03blogs_details/01@2x.png" class="widget01">
           <img src="@/static/images/IMG_03blogs_details/reduce.png" alt="" class="w-20 sm:w-24 mr-4">
           <p class="ml-2 font-normal">Reduce redness <br> & inflammation</p>
         </div>
         <div class="flex items-center">
+          <img src="~/static/images/IMG_03blogs_details/02@2x.png" class="widget02">
           <img src="@/static/images/IMG_03blogs_details/regulates.png" alt="" class="w-20 sm:w-24 mr-4">
           <p class="ml-2 font-normal">Regulates oil <br> Production in the skin</p>
         </div>
         <div class="flex items-center">
+          <img src="~/static/images/IMG_03blogs_details/03@2x.png" class="widget03">
           <img src="@/static/images/IMG_03blogs_details/sebum.png" alt="" class="w-20 sm:w-24 mr-4">
           <p class="ml-2 font-normal">Make sebum less-viscous <br> preventing clogging</p>
         </div>
+        <img src="~/static/images/IMG_03blogs_details/Group1154@2x.png" class="widgetline">
         <div class="flex items-center">
+          <img src="~/static/images/IMG_03blogs_details/04@2x.png" class="widget04">
           <img src="@/static/images/IMG_03blogs_details/inhibits.png" alt="" class="w-20 sm:w-24 mr-4">
           <p class="ml-2 font-normal">Inhibits bacterial <br> Growth in the pores</p>
         </div>
         <div class="flex items-center">
+          <img src="~/static/images/IMG_03blogs_details/05@2x.png" class="widget05">
           <img src="@/static/images/IMG_03blogs_details/promotes.png" alt="" class="w-20 sm:w-24 mr-4">
           <p class="ml-2 font-normal">Promotes the regeneration <br> of new skin cells</p>
         </div>
         <div class="flex items-center">
+          <img src="~/static/images/IMG_03blogs_details/06@2x.png" class="widget06">
           <img src="@/static/images/IMG_03blogs_details/suppressed.png" alt="" class="w-20 sm:w-24 mr-4">
           <p class="ml-2 font-normal">Suppressed cell prolifera</p>
         </div>
+        <img src="~/static/images/IMG_03blogs_details/Group1154@2x.png" class="widgetline2">
       </div>
     </div>
   </div>
@@ -134,15 +144,89 @@ export default {
     }
   },
   mounted() {
-    this.$store.dispatch('me/setBreadcrumb','ต้านการอักเสบของสิว')
+    this.$store.dispatch('me/setBreadcrumb', 'ต้านการอักเสบของสิว')
     // console.log(this.products_name[0].name)
   }
 }
 </script>
 
 <style scoped>
-.vl {
-  height: 15px;
-  width: 1px;
+.widget01 {
+  height: 5rem;
+  position: absolute;
+  transform: translate(6rem, -1.5rem);
 }
+
+.widget02 {
+  height: 5rem;
+  position: absolute;
+  transform: translate(6rem, -1.5rem);
+}
+
+.widget03 {
+  height: 5rem;
+  position: absolute;
+  transform: translate(6rem, -1.5rem);
+}
+
+.widget04 {
+  height: 5rem;
+  position: absolute;
+  transform: translate(6rem, -1.5rem);
+}
+
+.widget05 {
+  height: 5rem;
+  position: absolute;
+  transform: translate(6rem, -1.5rem);
+}
+
+.widget06 {
+  height: 5rem;
+  position: absolute;
+  transform: translate(6rem, -1.5rem);
+}
+
+.widgetline {
+  height: 4rem;
+  position: absolute;
+  transform: translate(17.5rem, 5rem);
+}
+
+.widgetline2 {
+  height: 4rem;
+  position: absolute;
+  transform: translate(43rem, 5rem);
+}
+
+.widget {
+  height: 7.5rem;
+  position: absolute;
+  transform: translate(4.5rem, -3rem);
+}
+
+.widget803 {
+  height: 70rem;
+  position: absolute;
+  transform: translate(-18rem, -26rem);
+}
+
+@media (max-width:1441px) {
+  .widget {
+    height: 6.5rem;
+    position: absolute;
+    transform: translate(4.5rem, -2.3rem);
+  }
+
+  .widget803 {
+    height: 50rem;
+    position: absolute;
+    transform: translate(-13rem, -16rem);
+
+  }
+}
+  .vl {
+    height: 15px;
+    width: 1px;
+  }
 </style>

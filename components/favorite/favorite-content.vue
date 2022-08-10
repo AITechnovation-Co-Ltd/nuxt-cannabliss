@@ -1,10 +1,11 @@
 <template>
-    <div class="w-full flex flex-col justify-center px-4 md:px-8 lg:px-12 xl:px-24 3xl:px-36">
+    <div class="w-full flex flex-col justify-center pt-10 sm:pt-20 px-4 md:px-8 lg:px-12 xl:px-24 3xl:px-36">
         <div class="w-full flex flex-col lg:flex-row items-center">
             <div class="w-full lg:w-2/12 flex font-extralight text-sm text-quaternary">
                 <base-icon icon="angle-left" viewBox="0 0 24 24" size="18" />&nbsp;
                 <nuxt-link to="/" class="hover:underline">Home</nuxt-link>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
+                <img src="~/static/images/IMG_02products/Group1132@2x.png" class="widget1132">
                 <p class="font-normal">Favorite</p>
             </div>
             <div class="w-full lg:w-10/12">
@@ -15,6 +16,7 @@
         <div class="w-full flex justify-end">
             <!-- Product cards -->
             <div class="w-full lg:w-10/12 mr-0 ml-auto">
+                <img src="~/static/images/IMG_06fav/Group389@2x.png" class="widget389">
                 <!-- Sort by -->
                 <div
                     class="w-full py-3 mt-3 sm:mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
@@ -186,6 +188,26 @@ export default {
 </script>
 
 <style scoped>
+.widget1132 {
+    height: 6rem;
+    position: absolute;
+    transform: translate(35rem, -3.5rem);
+}
+
+.widget389 {
+    height: 40rem;
+    position: absolute;
+    left: -10.5rem;
+}
+
+@media (max-width:1441px) {
+    .widget389 {
+        height: 33rem;
+        position: absolute;
+        left: -8.5rem;
+    }
+}
+
 .vl {
     height: 15px;
     width: 1px;
@@ -207,14 +229,16 @@ export default {
     left: 50%;
     transform: translate(-50%, -35%);
 }
+
 @media (max-width:1419px) {
     .centered {
-    height: 18vw;
+        height: 18vw;
+    }
 }
-}
+
 @media (max-width:1023px) {
     .centered {
-    height: 25vw;
-}
+        height: 25vw;
+    }
 }
 </style>

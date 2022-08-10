@@ -1,5 +1,6 @@
 <template>
-  <div class="w-full">
+  <div class="w-full relative overflow-hidden">
+    <img src="~/static/images/IMG_02products_detail/Group1141@2x.png" class="widget1141">
     <div v-if="no_product" class="w-full columns-1 mt-8 px-4 lg:px-12 xl:px-28 3xl:px-32">
       <div class="w-full py-12 mt-12 bg-white text-center text-4xl text-primary">No Product<br>
         <span class="text-red-500 text-xl">{{ productname }}</span>
@@ -25,14 +26,14 @@
           <div class="mt-4 grid grid-cols-4 gapx-4 w-full relative overflow-x-auto">
             <div v-for="(item, i) in picture " :key="i" class="relative w-full h-auto" @click="current = i">
               <!-- <img src="@/static/images/IMG_02products_detail/Rectangle199@2x.png" class="" alt="" :class="{ 'border-4 border-primary': i == current }"> -->
-              <div class="backgroundp mx-auto w-full h-auto rounded-xl sm:rounded-3xl" :class="{ 'border-4 border-primary': i == current }"></div>
+              <div class="backgroundp mx-auto w-full h-auto rounded-xl sm:rounded-3xl"
+                :class="{ 'border-4 border-primary': i == current }"></div>
               <img :src="require(`~/static/images/products${picture[i]}`)" class="centered w-full">
             </div>
           </div>
         </div>
 
         <div class="w-full lg:w-1/2 mt-8 lg:mt-0 lg:ml-8" v-for="(products_id, i) in products_detail" :key="i">
-          <p class="text-sm font-extralight capitalize">{{ products_id.type }}</p>
           <div class="flex flex-col sm:flex-row justify-between items-start">
             <h1 class="text-2xl xl:text-3xl font-light">{{ products_id.name }}</h1>
             <p class="text-sm font-extralight mt-2">{{ products_id.quantity }}</p>
@@ -46,9 +47,8 @@
           <p v-else class="my-2 font-light text-quaternary text-md">{{ products_id.subtitle }}</p>
           <p class="my-2 font-extralight text-quaternary text-sm">{{ products_id.detail }}</p>
           <div class="w-full flex-col text-2xl text-primary">
-
             <!-- FAQ 1 -->
-            <base-dropdown class="my-2" dropdownClass="mt-2" @opened="checkDataOpen">
+            <base-dropdown class="my-2 z-10" dropdownClass="mt-2" @opened="checkDataOpen">
               <div slot="toggle" class="w-full flex items-center justify-between">
                 <p class="text-lg font-normal text-primary my-2">How to use</p>
                 <p>{{ !dropdown_data ? '+' : '-' }}</p>
@@ -245,6 +245,13 @@ export default {
 </script>
 
 <style scoped>
+.widget1141 {
+  height: 20rem;
+  position: absolute;
+  left: 0;
+  transform: translate(5rem, 15rem);
+}
+
 .vl {
   width: 1px;
 }
@@ -276,30 +283,41 @@ export default {
     height: 18vw;
 }
 } */
+@media (max-width:1441px) {
+.widget1141 {
+  height: 15rem;
+  position: absolute;
+  left: 0;
+  transform: translate(5rem, 10rem);
+}
+}
 @media (max-width:1023px) {
   .maincentered {
-  height: 40vw;
-}
-    .centered {
+    height: 40vw;
+  }
+
+  .centered {
     height: 12vw;
+  }
 }
-}
+
 @media (max-width:640px) {
   .maincentered {
-  height: 50vw;
+    height: 50vw;
+  }
 }
-}
+
 .backgroundp {
   background: #f2f5e2;
   height: 9vw;
   width: 9vw;
 }
 
-@media (max-width:1023px){
+@media (max-width:1023px) {
   .backgroundp {
-  height: 20vw;
-  width: 20vw;
-}
+    height: 20vw;
+    width: 20vw;
+  }
 }
 
 @media (min-width:1024px) {
