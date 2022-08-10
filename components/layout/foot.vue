@@ -5,7 +5,7 @@
 
         <!-- logo -->
         <div @click="gotoHome()"
-          class="w-full lg:w-1/4 flex justify-center sm:justify-start lg:justify-center mb-6 md:mb-0">
+          class="w-full lg:w-1/4 flex justify-center sm:justify-start lg:justify-center mb-6 md:mb-0 hover:cursor-pointer">
           <img class="h-32" src="~/static/logo/Logo-CANABLISS.png" alt="">
         </div>
         <div class="w-full lg:w-3/4 px-4 sm:px-0 grid text-sm grid-cols-2 sm:flex justify-around content">

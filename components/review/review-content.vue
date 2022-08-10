@@ -41,11 +41,13 @@
       </div>
       <!-- Review card -->
       <div v-if="list_reviews.length != 0" class="w-full flex flex-col justify-center divide-y divide-primary47">
-        <div v-for="(review, index) in list_reviews.slice(0, count)" :key="index">
+        <div v-for="(review, index) in list_reviews" :key="index">
           <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
             <!-- Image Product-->
             <div class="w-full xl:w-2/5 columns-1 items-start xl:flex">
-              <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-auto h-24 mr-0 md:mr-6">
+              <div class="productimg">
+                <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-auto h-24">
+              </div>
               <p class="mt-3 xl:mt-0 text-sm font-extralight">{{ review.product_name }}</p>
             </div>
             <!-- Details review -->
@@ -125,5 +127,9 @@ export default {
 .hrr {
   height: .5px;
   opacity: .71;
+}
+.productimg{
+  min-width: 100px;
+  max-height: 100px;
 }
 </style>

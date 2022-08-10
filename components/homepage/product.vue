@@ -62,7 +62,7 @@
               </div>
               <div class="my-4 mx-2 text-quaternary text-xl">
                 <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type }}</p>
-                <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.genre + ': ' }}{{ product.name
+                <p class="truncated-2-lines text-base sm:text-lg font-medium capitalize">{{ product.genre + ': ' }}{{ product.name
                 }}
                 </p>
                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{ product.detail_th }}</p>

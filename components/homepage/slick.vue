@@ -20,9 +20,14 @@
                             </div>
                             <p class="my-6 text-center">{{ review.review }}.</p>
                             <div class="w-full flex justify-between items-end">
-                                <div class="w-full flex flex-col 3xl:flex-row  justify-center">
-                                    <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-20">
-                                    <p>{{ review.product_name }}</p>
+                                <div class="w-full flex flex-row items-center justify-start mr-8">
+                                    <div>
+                                        <img :src="require(`~/static/images/products${review.imgUrl}`)" class="h-20 w-auto mr-4">
+                                    </div>
+                                    <div>
+                                        <p>{{review.genre}} :</p>
+                                        <p>{{ review.product_name }}</p>
+                                    </div>
                                 </div>
                                 <p class="whitespace-nowrap">{{ review.name }}</p>
                             </div>
@@ -93,7 +98,7 @@ export default {
                 infinite: true,
                 slidesToShow: 3,
                 slidesToScroll: 1,
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed: 6000,
                 pauseOnDotsHover: false,
                 pauseOnFocus: false,

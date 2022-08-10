@@ -37,7 +37,9 @@
               <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
                 <!-- Image Product-->
                 <div class="w-full xl:w-2/5 columns-1 items-start lg:flex">
-                  <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-auto h-24 mr-0 md:mr-6" />
+                  <div class="productimg">
+                    <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-auto h-24" />
+                  </div>
                   <p class="mt-3 lg:mt-0 text-sm font-extralight">
                     {{ review.product_name }}
                   </p>
@@ -180,5 +182,9 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -40%);
+}
+.productimg{
+  min-width: 100px;
+  max-height: 100px;
 }
 </style>
