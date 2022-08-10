@@ -13,6 +13,7 @@
         <p class="my-4 text-4xl text-primary thai font-bold">ต้านการอักเสบของสิว</p>
         <p class="my-4 text-4xl text-primary thai font-extrabold">ต้านการอักเสบของสิว</p>
         <p class="my-4 text-4xl text-primary thai font-black">ต้านการอักเสบของสิว</p> -->
+        <img src="~/static/images/IMG_03ingredients/CANABLISS@2x.png" class="widget">
         <p class="my-4 text-5xl sm:text-7xl text-primary thai">{{ blogs.title }}</p>
         <p class="pl-2 font-medium text-quaternary border-l-2 sm:border-l-4 border-primary text-2xl leading-7 thai">
           {{ blogs.subtitle }}</p>
@@ -38,6 +39,7 @@
         <img src="@/static/images/IMG_03blogs_details/cbd.png" class="w-full sm:w-6/12 xl:w-9/12 ">
       </div>
       <!-- Details -->
+      <img src="~/static/images/IMG_03blogs_details/Group803@2x.png" class="widget803">
       <div class="w-full sm:w-11/12 xl:w-2/5">
         <p class="mb-4 text-5xl sm:text-7xl text-primary thai">{{ blogs.second_header }}</p>
         <p v-html="blogs.second_detail" class="text-quaternary text-lg 3xl:text-xl leading-6 thai"></p>
@@ -216,8 +218,9 @@ export default {
 
   }
 }
-  .vl {
-    height: 15px;
-    width: 1px;
-  }
+
+.vl {
+  height: 15px;
+  width: 1px;
+}
 </style>
