@@ -287,6 +287,9 @@ export default {
     drawer() {
       this.isOpen = !this.isOpen;
     },
+    drawer2(params) {
+      this.isOpen = params
+    },
     checkDataOpen(p) {
       this.dropdowm_data = p
     },

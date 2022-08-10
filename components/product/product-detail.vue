@@ -10,7 +10,6 @@
       <div
         class="w-full flex mt-8 px-4 lg:px-12 xl:px-28 3xl:px-32 flex-col lg:flex-row justify-between items-center xl:items-start"
         v-for="(products_id, i) in products_img" :key="i">
-
         <!-- Picture -->
         <div class="w-full overflow-hidden lg:w-1/2">
           <div class="flex items-center relative">
@@ -180,9 +179,7 @@ export default {
           self.products_detail = products_test
           self.picture = self.products_img[0].imgUrl
         }
-
       }
-
     },
     checkDataOpen(toggle) {
       this.dropdown_data = toggle

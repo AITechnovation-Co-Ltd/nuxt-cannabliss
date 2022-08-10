@@ -85,7 +85,7 @@ export default {
     async liked(n) {
       let list = await this.products.findIndex((e => e.no == n))
       this.products[list].islike = !this.products[list].islike
-      this.$store.dispatch('me/setProducts', this.products)
+      this.$store.dispatch('me/setProducts', this.data)
     },
     async list_products() {
       const self = this

@@ -243,7 +243,9 @@ export default {
             });
         },
         filterType(type) {
+            this.sort_by = ''
             this.type = type
+            
         },
         async getProducts() {
             const self = this
