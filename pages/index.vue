@@ -136,4 +136,12 @@ export default {
     transform: translate(12rem, 1.5rem);
   }
 }
+
+@media (max-width:500px) {
+  .widget330 {
+    height: 13rem;
+    position: absolute;
+    transform: translate(-4rem, -11rem);
+  }
+}
 </style>
