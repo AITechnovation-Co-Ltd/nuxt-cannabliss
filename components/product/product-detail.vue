@@ -15,7 +15,7 @@
             <div @click="arrow_left" class="absolute left-0 top-1/2">
               <base-icon icon='dropdown' viewBox="0 0 24 24" class="transform rotate-90" size="32" />
             </div>
-            <img v-if="picture[current] & picture[current] !=''" class="maincentered"
+            <img v-if="picture[current] && picture[current] !=''" class="maincentered"
               :src="require(`~/static/images/products${picture[current]}`)" />
             <div v-else class="h-96 w-full"></div>
             <div @click="arrow_right" class="absolute right-0 top-1/2">
