@@ -15,8 +15,9 @@
             <div @click="arrow_left" class="absolute left-0 top-1/2">
               <base-icon icon='dropdown' viewBox="0 0 24 24" class="transform rotate-90" size="32" />
             </div>
-            <img v-if="picture[current]" class="maincentered"
+            <img v-if="picture[current] & picture[current] !=''" class="maincentered"
               :src="require(`~/static/images/products${picture[current]}`)" />
+            <div v-else class="h-96 w-full"></div>
             <div @click="arrow_right" class="absolute right-0 top-1/2">
               <base-icon icon='dropdown' viewBox="0 0 24 24" class="transform -rotate-90" size="32" />
             </div>
@@ -25,7 +26,7 @@
             <div v-for="(item, i) in picture " :key="i" class="relative w-full h-auto" @click="current = i">
               <div class="backgroundp mx-auto w-full h-auto rounded-xl sm:rounded-3xl"
                 :class="{ 'border-4 border-primary': i == current }"></div>
-              <img :src="require(`~/static/images/products${picture[i]}`)" class="centered w-full">
+              <img v-if="picture[1] != ''" :src="require(`~/static/images/products${picture[i]}`)" class="centered w-full">
             </div>
           </div>
         </div>

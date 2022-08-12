@@ -102,7 +102,7 @@
                         <template v-if="index < item_per_page * page && index >= item_per_page * (page - 1)">
                             <div class="relative mx-2">
                                 <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
-                                <img class="centered w-full"
+                                <img class="centered w-full" v-if="product.imgUrl[0] != ''"
                                     :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
                                 <span v-if="$day.getDatetoNow(product.release) <= 7"
                                     class="px-3 sm:px-9 py-0.5 sm:py-2 text-white text-sm sm:text-base absolute top-3 left-3 sm:top-4 sm:left-4 3xl:top-8 3xl:left-8 bg-primary rounded-full">New</span>
