@@ -26,7 +26,7 @@
       <!-- Picture -->
       <div class="w-full sm:w-11/12 xl:w-1/2 mt-8 xl:mt-0 h-full relative">
         <div class="w-full h-full flex items-start justify-start sm:justify-center">
-          <img src="@/static/images/IMG_03blogs_details/shutterstock.jpg" class="rounded-3xl w-11/12 mt-8 z-20" alt="">
+          <img :src="require(`~/static/images/blogs${blogs.img[0]}`)" class="rounded-3xl w-11/12 mt-8 z-20" alt="">
         </div>
         <img src="~/static/images/IMG_03ingredients/bg-blue2.png" alt=""
           class="w-11/12 rounded-3xl absolute top-0 right-0">

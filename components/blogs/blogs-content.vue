@@ -7,7 +7,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 sm:gap-y-0 sm:gap-x-24 text-quaternary z-50">
         <div class="w-full flex flex-col" v-for="(data, i) in blogs" :key="`blog-${i}`">
           <div v-if="!load_more ? i < 4 : i >= 0">
-            <img :src="url" class="rounded-3xl" :class="{ 'sm:mt-16 xl:mt-36': i % 2 != 0 }">
+            <img :src="require(`~/static/images/blogs${data.img[0]}`)" class="rounded-3xl" :class="{ 'sm:mt-16 xl:mt-36': i % 2 != 0 }">
             <p class="my-4 text-lg font-normal">{{ data.title }}</p>
             <p class="text-sm font-light">{{ data.subtitle }}</p>
             <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="mt-8 border-quaternary">View
