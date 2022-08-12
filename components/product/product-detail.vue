@@ -7,24 +7,22 @@
       </div>
     </div>
     <div v-else class="w-full">
-      <!-- Content -->
       <div
-        class="w-full flex mt-8 px-4 lg:px-12 xl:px-28 3xl:px-32 flex-col lg:flex-row justify-between items-center xl:items-start"
-        v-for="(products_id, i) in products_img" :key="i">
+        class="w-full flex mt-8 px-4 lg:px-12 xl:px-28 3xl:px-32 flex-col lg:flex-row justify-between items-center xl:items-start">
         <!-- Picture -->
         <div class="w-full overflow-hidden lg:w-1/2">
           <div class="flex items-center relative">
             <div @click="arrow_left" class="absolute left-0 top-1/2">
               <base-icon icon='dropdown' viewBox="0 0 24 24" class="transform rotate-90" size="32" />
             </div>
-            <img class="maincentered" :src="require(`~/static/images/products${products_id.imgUrl[current]}`)">
+            <img v-if="picture[current]" class="maincentered"
+              :src="require(`~/static/images/products${picture[current]}`)" />
             <div @click="arrow_right" class="absolute right-0 top-1/2">
               <base-icon icon='dropdown' viewBox="0 0 24 24" class="transform -rotate-90" size="32" />
             </div>
           </div>
           <div class="mt-4 grid grid-cols-4 gapx-4 w-full relative overflow-x-auto">
             <div v-for="(item, i) in picture " :key="i" class="relative w-full h-auto" @click="current = i">
-              <!-- <img src="@/static/images/IMG_02products_detail/Rectangle199@2x.png" class="" alt="" :class="{ 'border-4 border-primary': i == current }"> -->
               <div class="backgroundp mx-auto w-full h-auto rounded-xl sm:rounded-3xl"
                 :class="{ 'border-4 border-primary': i == current }"></div>
               <img :src="require(`~/static/images/products${picture[i]}`)" class="centered w-full">
@@ -32,22 +30,22 @@
           </div>
         </div>
 
-        <div class="w-full lg:w-1/2 mt-8 lg:mt-0 lg:ml-8" v-for="(products_id, i) in products_detail" :key="i">
-          <p class="text-sm font-extralight capitalize">{{ products_id.type }}</p>
+        <div class="w-full lg:w-1/2 mt-8 lg:mt-0 lg:ml-8">
+          <p class="text-sm font-extralight capitalize">{{ products_detail.type }}</p>
           <div class="flex flex-col lg:flex-row justify-between items-start">
             <div class="columns-1">
-              <p class="text-2xl xl:text-3xl font-light">{{ products_id.genre }}</p>
-              <p class="text-2xl text-primary xl:text-3xl font-light">{{ products_id.name }}</p>
+              <p class="text-2xl xl:text-3xl font-light">{{ products_detail.genre }}</p>
+              <p class="text-2xl text-primary xl:text-3xl font-light">{{ products_detail.name }}</p>
             </div>
-            <p class="text-sm font-extralight mt-2">{{ products_id.quantity }}</p>
+            <p class="text-sm font-extralight mt-2">{{ products_detail.quantity }}</p>
           </div>
           <div class="flex my-4 items-center">
             <base-icon icon="five-star" viewBox="0 0 980 166" width="100" class="text-tertiary mr-4" />
             <p class="text-quaternary text-sm">(55)</p>
           </div>
-          <div v-if="products_id.subtitle == ''" class="w-full h-6"></div>
-          <p v-else class="my-2 font-light text-quaternary text-md">{{ products_id.subtitle_th }}</p>
-          <p v-html="products_id.detail_th" class="my-2 font-extralight text-quaternary text-sm"></p>
+          <div v-if="products_detail.subtitle == ''" class="w-full h-6"></div>
+          <p v-else class="my-2 font-light text-quaternary text-md">{{ products_detail.subtitle_th }}</p>
+          <p v-html="products_detail.detail_th" class="my-2 font-extralight text-quaternary text-sm"></p>
           <div class="w-full flex-col text-2xl text-primary">
             <!-- FAQ 1 -->
             <base-dropdown class="my-2 z-10" dropdownClass="mt-2" @opened="checkDataOpen">
@@ -57,7 +55,7 @@
               </div>
               <!-- Details -->
               <base-dropdown-item>
-                <p class="w-11/12 text-sm text-quaternary ">{{products_id.how2use}}</p>
+                <p class="w-11/12 text-sm text-quaternary ">{{ products_detail.how2use }}</p>
               </base-dropdown-item>
             </base-dropdown>
             <div class="hrr bg-primary"></div>
@@ -69,7 +67,7 @@
               </div>
               <!-- Details -->
               <base-dropdown-item>
-                <p class="w-11/12 text-sm text-quaternary ">{{ products_id.ingredients }}</p>
+                <p class="w-11/12 text-sm text-quaternary ">{{ products_detail.ingredients }}</p>
               </base-dropdown-item>
             </base-dropdown>
             <div class="w-full mt-10 flex items-center text-quaternary">
@@ -77,15 +75,15 @@
               <p class="text-lg">Available</p>
             </div>
             <div class="w-full flex mt-6">
-              <a class="flex items-center justify-center" :href="products_id.link"><button
+              <a class="flex items-center justify-center" :href="products_detail.link"><button
                   class="px-4 h-10 text-lg  text-quaternary border border-quaternary rounded-full mr-4">Go
                   to
                   shopping</button></a>
-              <div @click="liked(products_id.no)"
+              <div @click="liked()"
                 class="h-10 w-10 flex items-center justify-center border border-primary rounded-full cursor-pointer"
-                :class="{ 'bg-primary': products_id.islike }">
+                :class="{ 'bg-primary': products_detail.islike }">
                 <base-icon icon="heart" viewBox="0 0 30 41" size="25" class="text-primary"
-                  :color="products_id.islike ? '#ffffff' : '#78A695'" />
+                  :color="products_detail.islike ? '#ffffff' : '#78A695'" />
               </div>
             </div>
           </div>
@@ -109,7 +107,8 @@
               <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
               <h1 class="text-lg sm:text-xl text-center font-normal">Leucojum Aestivum Bulb Extract <br
                   class="block sm:hidden"> (Ibr - Snowflake®)</h1>
-              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">Anti Aging To Make Skin Younger And Brighter</p>
+              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">Anti Aging To Make Skin Younger And
+                Brighter</p>
             </div>
           </div>
         </div>
@@ -124,14 +123,12 @@ import products from "@/static/json/products.json"
 export default {
   data() {
     return {
-      fav: false,
       no_product: false,
       current: 0,
       products,
       productname: '',
-      products_img: [],
+      products_name: '',
       products_detail: [],
-      products_name: [],
       picture: [],
       dropdown_data: false,
       dropdown_data2: false,
@@ -153,10 +150,9 @@ export default {
           self.no_product = true
         }
         else {
-          self.products_img = products_test
-          self.products_name = products_test
-          self.products_detail = products_test
-          self.picture = self.products_img[0].imgUrl
+          self.picture = products_test[0].imgUrl
+          self.products_name = products_test[0].name
+          self.products_detail = products_test[0]
         }
       }
       else {
@@ -167,17 +163,15 @@ export default {
             self.no_product = true
           }
           else {
-            self.products_img = products_test
-            self.products_name = products_test
-            self.products_detail = products_test
-            self.picture = self.products_img[0].imgUrl
+            self.picture = products_test[0].imgUrl
+            self.products_name = products_test[0].name
+            self.products_detail = products_test[0]
           }
         }
         else {
-          self.products_img = products_test
-          self.products_name = products_test
-          self.products_detail = products_test
-          self.picture = self.products_img[0].imgUrl
+          self.picture = products_test[0].imgUrl
+          self.products_name = products_test[0].name
+          self.products_detail = products_test[0]
         }
       }
     },
@@ -210,17 +204,16 @@ export default {
       if (this.current <= 0) { this.current = this.current = 0 }
       else if (this.current != 0) { this.current-- }
     },
-    async liked(n) {
-      let list = await this.products_detail.findIndex((e => e.no == n))
-      this.products_detail[list].islike = !this.products_detail[list].islike
+    async liked() {
+      this.products_detail.islike = !this.products_detail.islike
       this.$store.dispatch('me/setProducts', this.products)
     },
     setBreadcrumb() {
       if (this.productname !== '' && this.no_product != true) {
         this.$store.dispatch('me/setBreadcrumb', this.productname)
       }
-      else if (this.products_name.length != 0) {
-        this.$store.dispatch('me/setBreadcrumb', this.products_name[0].name)
+      else if (this.products_name != '') {
+        this.$store.dispatch('me/setBreadcrumb', this.products_name)
       }
       else {
         this.$store.dispatch('me/setBreadcrumb', 'No Product')
@@ -276,13 +269,14 @@ export default {
 }
 } */
 @media (max-width:1441px) {
-.widget1141 {
-  height: 15rem;
-  position: absolute;
-  left: 0;
-  transform: translate(5rem, 10rem);
+  .widget1141 {
+    height: 15rem;
+    position: absolute;
+    left: 0;
+    transform: translate(5rem, 10rem);
+  }
 }
-}
+
 @media (max-width:1023px) {
   .maincentered {
     height: 40vw;

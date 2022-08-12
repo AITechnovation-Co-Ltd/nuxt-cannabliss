@@ -188,7 +188,7 @@
                       <base-icon icon="heart" viewBox="0 0 30 41" size="40" class="text-white mx-2" />
                     </nuxt-link>
                   </div> -->
-                  <div class="snotification">
+                  <div class="snotification" @click="isOpen = false">
                     <nuxt-link to="/favorite">
                       <base-icon icon="heart" viewBox="0 0 30 41" size="45" class="text-secondary" />
                       <!-- <div class="bg-primary w-5 h-5 rounded-full"></div> -->
