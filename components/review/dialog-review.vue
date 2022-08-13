@@ -1,14 +1,14 @@
 <template>
   <base-modal v-model="isShow">
     <div class="px-2 py-12 bg-secondary rounded-3xl flex flex-col items-center relative overflow-hidden">
-      <img src="~/static/images/IMG_03blogs_details/Group803@2x.png" class="widget803">
-      <img src="~/static/images/IMG_04review_popup/Group1161@2x.png" class="widget1161">
+      <img src="~/static/images/IMG_03blogs_details/Group803@2x.png" class="widget803 z-10">
+      <img src="~/static/images/IMG_04review_popup/Group1161@2x.png" class="widget1161 z-10">
       <!-- Title -->
       <div class="w-full text-4xl xl:text-6xl font-extralight text-primary text-center mb-4">
         Write a review
       </div>
       <!-- Star -->
-      <div class="w-full flex mt-3 items-center justify-center">
+      <div class="w-full flex mt-3 items-center justify-center z-20">
         <svg @click="test(1)" class="w-12 h-12 text-gray-300" :class="{ 'text-blue-400': s1 }" fill="currentColor"
           viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -42,7 +42,7 @@
       </div>
 
       <!-- Form Review -->
-      <div class="w-full xl:w-2/3 mt-4 px-8 sm:px-24 flex flex-col text-gray-300">
+      <div class="w-full xl:w-2/3 mt-4 px-8 sm:px-24 flex flex-col text-gray-300 z-20">
         <select v-if="product_name" disabled
           class="block py-2.5 pl-0 pr-8 w-full text-sm text-primary font-light bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer">
           <option selected>{{ product_name }}</option>
@@ -56,8 +56,8 @@
         <base-input-review label='E-mail' class="text-quaternary my-2" />
         <base-input-review label='Please write your comment' class="text-quaternary my-2" />
       </div>
-      <div class="mt-10 flex justify-center space-x-4">
-        <base-button @click="isShow = false" class="border-quaternary">Write a review</base-button>
+      <div class="mt-10 flex justify-center space-x-4 ">
+        <base-button @click="isShow = false" class="border-quaternary z-20">Write a review</base-button>
       </div>
     </div>
   </base-modal>

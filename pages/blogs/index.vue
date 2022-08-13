@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-secondary relative overflow-x-hidden z-20">
+  <div class="bg-secondary relative">
     <!-- <img src="~/static/images/IMG_03blogs/Group1151@2x.png" class="widget1151"> -->
     <img src="~/static/images/IMG_03ingredients/CANABLISS_01@2x.png" class="widget01">
     <BlogsContent class="my-6" />

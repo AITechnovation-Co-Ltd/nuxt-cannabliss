@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-auto mt-0 sm:mt-6 relative xl:flex flex-col justify-center items-center z-10">
+  <div class="w-full h-auto mt-0 sm:mt-6 relative xl:flex flex-col justify-center items-center z-20">
     <div class="content  w-full flex flex-col 2xl:flex-row py-8 px-4 lg:px-12 xl:px-20 3xl:px-32 z-20">
       <div class="w-full 2xl:w-1/3 text-xl text-quaternary font-light z-20">
         <p class="text-sm">{{products[0].type}}</p>
@@ -9,7 +9,7 @@
           <p class="text-sm font-extralight pl-2 sm:pl-3 border-l-2 border-primary">{{products[0].subtitle_th}}</p>
         </div>
         <p class="mt-6 text-sm font-extralight">{{products[0].detail_th}}</p>
-        <base-button class="mt-8 hidden sm:block" @click="$router.push(`/product/details/1`)">View more</base-button>
+        <base-button class="mt-8 hidden sm:block z-20" @click="$router.push(`/product/details/1`)">View more</base-button>
       </div>
 
       <!-- image -->
@@ -25,7 +25,7 @@
             </div>
           </div>
         </div>
-    <base-button class=" mr-1 ml-auto block sm:hidden" @click="$router.push(`/product/details/3`)">View more</base-button>
+    <base-button class=" mr-1 ml-auto block sm:hidden z=20" @click="$router.push(`/product/details/3`)">View more</base-button>
       </div>
     </div>
     <img class="bg w-full z-10" src="~/static/images/IMG_01home/pages_01home/Group1136@2x.png" alt="">

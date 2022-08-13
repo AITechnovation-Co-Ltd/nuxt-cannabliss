@@ -1,9 +1,9 @@
 <template>
     <div class="w-full flex flex-col justify-center px-4 pt-10 sm:pt-20 md:px-8 lg:px-12 xl:px-24 3xl:px-36 relative">
-        <div class="w-full flex flex-col lg:flex-row justify-end ">
+        <div class="w-full flex flex-col lg:flex-row justify-end z-20">
             <div class="w-full lg:w-3/12 flex font-extralight text-sm text-quaternary items-center">
                 <base-icon icon="angle-left" viewBox="0 0 24 24" size="18" />&nbsp;
-                <nuxt-link to="/" class="hover:underline">Home</nuxt-link>
+                <nuxt-link to="/" class="hover:underline z-20">Home</nuxt-link>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
                 <p>Products</p>
                 &nbsp;&nbsp;|&nbsp;&nbsp;

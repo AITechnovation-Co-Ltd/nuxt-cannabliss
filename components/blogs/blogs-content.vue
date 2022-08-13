@@ -18,7 +18,7 @@
       </div>
 
       <!-- Button -->
-      <base-button v-show="!load_more" @click="load_more = true" class="px-6 -mt-20 sm:mt-20 border-quaternary">Load
+      <base-button v-show="!load_more" @click="load_more = true" class="px-6 -mt-20 sm:mt-20 border-quaternary z-50">Load
         more
       </base-button>
       <!-- <base-button v-show="load_more" @click="load_more = false" class="px-6 -mt-20 sm:mt-0 border-quaternary"

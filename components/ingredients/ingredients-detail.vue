@@ -106,6 +106,15 @@ export default {
 
 }
 
+@media (max-width:580px) {
+  .widget {
+    height: 4rem;
+    position: absolute;
+    transform: translate(3.5rem, -1rem);
+  }
+
+}
+
 @media (min-width:1024px) {
   .content {
     position: absolute;

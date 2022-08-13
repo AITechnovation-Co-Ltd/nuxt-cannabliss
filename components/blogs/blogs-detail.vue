@@ -191,6 +191,14 @@ export default {
   }
 }
 
+@media (max-width:580px) {
+  .widget {
+    height: 4rem;
+    position: absolute;
+    transform: translate(2rem, -0.9rem);
+  }
+}
+
 .vl {
   height: 15px;
   width: 1px;
