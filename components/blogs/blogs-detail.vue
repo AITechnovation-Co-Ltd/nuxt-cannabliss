@@ -26,10 +26,9 @@
       <!-- Picture -->
       <div class="w-full sm:w-11/12 xl:w-1/2 mt-8 xl:mt-0 h-full relative">
         <div class="w-full h-full flex items-start justify-start sm:justify-center">
-          <img src="@/static/images/IMG_03blogs_details/shutterstock.jpg" class="rounded-3xl w-11/12 mt-8 z-20" alt="">
+          <img v-if="img[1]" :src="require(`~/static/images/blogs${img[1]}`)" class="rounded-3xl w-11/12 mt-8 z-20">
         </div>
-        <img src="~/static/images/IMG_03ingredients/bg-blue2.png" alt=""
-          class="w-11/12 rounded-3xl absolute top-0 right-0">
+        <img src="~/static/images/IMG_03ingredients/bg-blue2.png" class="w-11/12 rounded-3xl absolute top-0 right-0">
       </div>
     </div>
     <!-- -->
@@ -52,33 +51,33 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         <div class="flex items-center">
           <img src="~/static/images/IMG_03blogs_details/01@2x.png" class="widget01">
-          <img src="@/static/images/IMG_03blogs_details/reduce.png" alt="" class="w-20 sm:w-24 mr-4">
+          <img src="@/static/images/IMG_03blogs_details/reduce.png" class="w-20 sm:w-24 mr-4">
           <p class="ml-2 font-normal">Reduce redness <br> & inflammation</p>
         </div>
         <div class="flex items-center">
           <img src="~/static/images/IMG_03blogs_details/02@2x.png" class="widget02">
-          <img src="@/static/images/IMG_03blogs_details/regulates.png" alt="" class="w-20 sm:w-24 mr-4">
+          <img src="@/static/images/IMG_03blogs_details/regulates.png" class="w-20 sm:w-24 mr-4">
           <p class="ml-2 font-normal">Regulates oil <br> Production in the skin</p>
         </div>
         <div class="flex items-center">
           <img src="~/static/images/IMG_03blogs_details/03@2x.png" class="widget03">
-          <img src="@/static/images/IMG_03blogs_details/sebum.png" alt="" class="w-20 sm:w-24 mr-4">
+          <img src="@/static/images/IMG_03blogs_details/sebum.png" class="w-20 sm:w-24 mr-4">
           <p class="ml-2 font-normal">Make sebum less-viscous <br> preventing clogging</p>
         </div>
         <img src="~/static/images/IMG_03blogs_details/Group1154@2x.png" class="widgetline">
         <div class="flex items-center">
           <img src="~/static/images/IMG_03blogs_details/04@2x.png" class="widget04">
-          <img src="@/static/images/IMG_03blogs_details/inhibits.png" alt="" class="w-20 sm:w-24 mr-4">
+          <img src="@/static/images/IMG_03blogs_details/inhibits.png" class="w-20 sm:w-24 mr-4">
           <p class="ml-2 font-normal">Inhibits bacterial <br> Growth in the pores</p>
         </div>
         <div class="flex items-center">
           <img src="~/static/images/IMG_03blogs_details/05@2x.png" class="widget05">
-          <img src="@/static/images/IMG_03blogs_details/promotes.png" alt="" class="w-20 sm:w-24 mr-4">
+          <img src="@/static/images/IMG_03blogs_details/promotes.png" class="w-20 sm:w-24 mr-4">
           <p class="ml-2 font-normal">Promotes the regeneration <br> of new skin cells</p>
         </div>
         <div class="flex items-center">
           <img src="~/static/images/IMG_03blogs_details/06@2x.png" class="widget06">
-          <img src="@/static/images/IMG_03blogs_details/suppressed.png" alt="" class="w-20 sm:w-24 mr-4">
+          <img src="@/static/images/IMG_03blogs_details/suppressed.png" class="w-20 sm:w-24 mr-4">
           <p class="ml-2 font-normal">Suppressed cell prolifera</p>
         </div>
         <img src="~/static/images/IMG_03blogs_details/Group1154@2x.png" class="widgetline2">
@@ -93,34 +92,7 @@ export default {
   data() {
     return {
       blogs,
-      cbd: [{
-        id: 1,
-        url: require('@/static/images/IMG_03blogs_details/reduce.png'),
-        benefits: 'Reduce redness & inflammation',
-      }, {
-        id: 2,
-        url: require('@/static/images/IMG_03blogs_details/regulates.png'),
-        benefits: 'Regulates oil Production in the skin',
-      },
-      {
-        id: 3,
-        url: require('@/static/images/IMG_03blogs_details/sebum.png'),
-        benefits: 'Make sebum less-viscous preventing clogging',
-      },
-      {
-        id: 4,
-        url: require('@/static/images/IMG_03blogs_details/inhibits.png'),
-        benefits: 'Inhibits bacterial Growth in the pores',
-      }, {
-        id: 5,
-        url: require('@/static/images/IMG_03blogs_details/promotes.png'),
-        benefits: 'Promotes the regeneration of new skin cells',
-      }, {
-        id: 6,
-        url: require('@/static/images/IMG_03blogs_details/suppressed.png'),
-        benefits: 'Suppressed cell prolifera',
-      },],
-
+      img: [],
     }
   },
   async mounted() {
@@ -130,9 +102,9 @@ export default {
   methods: {
     async fetch() {
       let list = await this.blogs.filter((e) => e.id == this.params)
+      this.img = list[0].img
       this.blogs = list[0]
-      console.log(this.blogs)
-    }
+    },
   },
   props: {
     params: {
@@ -216,6 +188,14 @@ export default {
     position: absolute;
     transform: translate(-13rem, -16rem);
 
+  }
+}
+
+@media (max-width:580px) {
+  .widget {
+    height: 4rem;
+    position: absolute;
+    transform: translate(2rem, -0.9rem);
   }
 }
 

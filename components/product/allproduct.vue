@@ -1,9 +1,9 @@
 <template>
     <div class="w-full flex flex-col justify-center px-4 pt-10 sm:pt-20 md:px-8 lg:px-12 xl:px-24 3xl:px-36 relative">
-        <div class="w-full flex flex-col lg:flex-row justify-end ">
+        <div class="w-full flex flex-col lg:flex-row justify-end z-20">
             <div class="w-full lg:w-3/12 flex font-extralight text-sm text-quaternary items-center">
                 <base-icon icon="angle-left" viewBox="0 0 24 24" size="18" />&nbsp;
-                <nuxt-link to="/" class="hover:underline">Home</nuxt-link>
+                <nuxt-link to="/" class="hover:underline z-20">Home</nuxt-link>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
                 <p>Products</p>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -102,7 +102,7 @@
                         <template v-if="index < item_per_page * page && index >= item_per_page * (page - 1)">
                             <div class="relative mx-2">
                                 <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
-                                <img class="centered w-full"
+                                <img class="centered w-full" v-if="product.imgUrl[0] != ''"
                                     :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
                                 <span v-if="$day.getDatetoNow(product.release) <= 7"
                                     class="px-3 sm:px-9 py-0.5 sm:py-2 text-white text-sm sm:text-base absolute top-3 left-3 sm:top-4 sm:left-4 3xl:top-8 3xl:left-8 bg-primary rounded-full">New</span>

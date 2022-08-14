@@ -13,13 +13,13 @@
     <Ingredients class="relative z-20" />
 
     <!-- Face -->
-    <Face class="relative z-10" />
+    <Face class="relative z-20" />
 
     <!-- Video Review -->
     <VideoReview class="z-10" />
-    <img src="~/static/images/IMG_03ingredients/CANABLISS_01@2x.png" class="widget01">
+    <img src="~/static/images/IMG_03ingredients/CANABLISS_01@2x.png" class="widget01 z-10">
     <img src="~/static/images/IMG_01home/pages_01home/Group1115@2x.png" class="widget1115">
-    <img src="~/static/images/IMG_01home/pages_01home/Group1053@2x.png" class="widget1053">
+    <img src="~/static/images/IMG_01home/pages_01home/Group1053@2x.png" class="widget1053 z-10">
     <!-- Blogs -->
     <Blogs class="z-10" />
     <img src="~/static/images/IMG_01home/pages_01home/Path330@2x.png" class="widget330">
@@ -29,7 +29,7 @@
 
     <!-- FAQ -->
     <img src="~/static/images/IMG_01home/pages_01home/Group1110@2x.png" class="widget1110">
-    <img src="~/static/images/IMG_01home/pages_01home/Group1094@2x.png" class="widget1094">
+    <img src="~/static/images/IMG_01home/pages_01home/Group1094@2x.png" class="widget1094 z-10">
     <Faq class="z-10" />
 
     <Subscribe class="z-10 hidden" />
@@ -134,6 +134,14 @@ export default {
     height: 7rem;
     position: absolute;
     transform: translate(12rem, 1.5rem);
+  }
+}
+
+@media (max-width:500px) {
+  .widget330 {
+    height: 13rem;
+    position: absolute;
+    transform: translate(-4rem, -11rem);
   }
 }
 </style>

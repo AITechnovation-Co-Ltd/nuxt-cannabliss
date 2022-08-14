@@ -34,10 +34,10 @@
     </div>
 
     <!-- All Review -->
-    <div class="w-full lg:w-9/12">
+    <div class="w-full lg:w-9/12 z-20">
       <!-- Write a review -->
-      <div class="w-full flex justify-start py-2 px-4 mt-6 sm:mt-8 bg-tertiary ">
-        <base-button @click="$refs.uploadReviewRef.show()" color="white">
+      <div class="w-full flex justify-start py-2 px-4 mt-6 sm:mt-8 bg-tertiary z-20">
+        <base-button @click="$refs.uploadReviewRef.show()" color="white" class="z-20">
           Write a review</base-button>
       </div>
       <!-- Review card -->

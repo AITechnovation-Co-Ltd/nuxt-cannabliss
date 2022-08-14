@@ -7,23 +7,23 @@
     <!-- Content -->
     <div class="w-full flex flex-col items-center">
       <!-- Card -->
-      <div class="grid grid-col-1 md:grid-cols-2 gap-y-8 sm:gap-y-0 sm:gap-x-16 text-quaternary">
+      <div class="grid grid-col-1 md:grid-cols-2 gap-y-8 sm:gap-y-0 sm:gap-x-16 text-quaternary z-20">
         <div class="hidden md:block w-full flex items-start flex-col" v-for="(data, i) in blogs.slice(0, 4)"
           :key="`blog-${i}`">
-          <img :src="url" class="rounded-3xl" :class="{ 'mt-16 xl:mt-24': i % 2 != 0 }">
+          <img :src="require(`~/static/images/blogs${data.img[0]}`)" class="rounded-3xl" :class="{ 'mt-16 xl:mt-24': i % 2 != 0 }">
           <p class="my-4 text-lg font-normal">{{ data.title }}</p>
           <p class="text-sm font-light">{{ data.subtitle }}</p>
           <base-button @click="$router.push(`/blogs/details/${data.id}`)"
-            class="mt-4 mr-0 sm:mr-auto ml-auto sm:ml-0 border-quaternary">View more
+            class="mt-4 mr-0 sm:mr-auto ml-auto sm:ml-0 border-quaternary z-20">View more
           </base-button>
         </div>
         <div class="block md:hidden w-full flex items-start justify-start flex-col"
           v-for="(data, i) in blogs.slice(0, 2)" :key="i">
-          <img :src="url" class="rounded-3xl">
+          <img :src="require(`~/static/images/blogs${data.img[0]}`)" class="rounded-3xl">
           <p class="my-4 text-lg font-normal">{{ data.title }}</p>
           <p class="text-sm font-light">{{ data.subtitle }}</p>
           <base-button @click="$router.push(`/blogs/details/${data.id}`)"
-            class="mt-4 mr-0 sm:mr-auto ml-auto sm:ml-0 border-quaternary">View more
+            class="mt-4 mr-0 sm:mr-auto ml-auto sm:ml-0 border-quaternary z-20">View more
           </base-button>
         </div>
       </div>

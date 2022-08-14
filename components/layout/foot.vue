@@ -48,7 +48,7 @@
           </div>
 
           <!-- contacts -->
-          <div class="contact col-span-2 sm:col-span-1">
+          <div class="contact col-span-2 sm:col-span-1 z-20">
             <h2 class="mb-3 mt-6 text-lg font-normal">Let's talk</h2>
             <ul>
               <li class="mb-4">

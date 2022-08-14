@@ -1,7 +1,7 @@
 <template>
     <div class="w-full flex flex-col justify-center pt-10 sm:pt-20 px-4 md:px-8 lg:px-12 xl:px-24 3xl:px-36">
-        <div class="w-full flex flex-col lg:flex-row items-center">
-            <div class="w-full lg:w-2/12 flex font-extralight text-sm text-quaternary">
+        <div class="w-full flex flex-col lg:flex-row items-center z-20">
+            <div class="w-full lg:w-2/12 flex font-extralight text-sm text-quaternary z-20">
                 <base-icon icon="angle-left" viewBox="0 0 24 24" size="18" />&nbsp;
                 <nuxt-link to="/" class="hover:underline">Home</nuxt-link>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -15,12 +15,12 @@
         <!-- Categories -->
         <div class="w-full flex justify-end">
             <!-- Product cards -->
-            <div class="w-full lg:w-10/12 mr-0 ml-auto">
-                <img src="~/static/images/IMG_06fav/Group389@2x.png" class="widget389">
+            <img src="~/static/images/IMG_06fav/Group389@2x.png" class="widget389 z-10">
+            <div class="w-full lg:w-10/12 mr-0 ml-auto z-20">
                 <!-- Sort by -->
                 <div
                     class="w-full py-3 mt-3 sm:mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center mx-2">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center mx-2 z-20">
                         <p class="text-xs text-white">Items per page</p>
                         <select class="h-8 w-16 text-xs text-quaternary rounded-xl mr-1 sm:mx-4" v-model="item_per_page"
                             @change="pagegiantion">
@@ -30,7 +30,7 @@
                             <option value=24>24</option>
                         </select>
                     </div>
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center ml-2 sm:ml-0 mx-2">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center ml-2 sm:ml-0 mx-2 z-20">
                         <p class="text-xs text-white">Sort by</p>
                         <select v-model="sort_by" @change="sortby()"
                             class="h-8 w-32 py-px text-xs text-quaternary rounded-xl mr-1 sm:mx-2">
@@ -45,7 +45,8 @@
                 </div>
 
                 <!-- Product card -->
-                <div v-if="products_liked.length != 0" class="w-full mt-12 grid grid-cols-2 2xl:grid-cols-3 gap-x-4">
+                <div v-if="products_liked.length != 0"
+                    class="w-full mt-12 grid grid-cols-2 2xl:grid-cols-3 gap-x-4 z-20">
                     <div class="w-full" v-for="(product, index) in products_liked" :key="index">
                         <template v-if="index < item_per_page * page && index >= item_per_page * (page - 1)">
                             <div class="relative mx-2">
@@ -71,9 +72,8 @@
                             <div class="my-4 mx-2 text-quaternary text-xl">
                                 <p class="mt-2 text-xs sm:text-sm capitalize">{{ product.type }}</p>
                                 <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.genre + ': '
-                                }}{{
-        product.name
-}}</p>
+                                }}
+                                    {{ product.name }}</p>
                                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
                                         product.detail_th
                                 }}</p>
@@ -85,7 +85,8 @@
                         </template>
                     </div>
                 </div>
-                <div v-else class="w-full py-12 mt-12 bg-white text-center font-light text-2xl text-primary">No Products
+                <div v-else class="w-full py-12 mt-12 bg-white text-center font-light text-2xl text-primary z-20">No
+                    Products
                 </div>
                 <base-pages v-if="products_liked.length != 0" class="mt-12" @change="change" :page="page"
                     :total_pages="total_p" :limit="7"></base-pages>

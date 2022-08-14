@@ -9,11 +9,11 @@
             </div>
         </div>
         <div v-if="!no_breadcrumb.includes(route_name)"
-            class="flex items-center px-3 mt-10 sm:mt-20 text-quaternary font-extralight text-sm px-4 sm:px-12 lg:px-16 xl:px-28 3xl:px-32">
+            class="z-20 flex items-center px-3 mt-10 sm:mt-20 text-quaternary font-extralight text-sm px-4 sm:px-12 lg:px-16 xl:px-28 3xl:px-32">
             <base-icon icon="angle-left" viewBox="0 0 24 24" size="15" />&nbsp;&nbsp;
-            <nuxt-link to="/" class="hover:underline mr-2 ">Home&nbsp;&nbsp;|&nbsp;
+            <nuxt-link to="/" class="hover:underline mr-2 z-20">Home&nbsp;&nbsp;|&nbsp;
             </nuxt-link>
-            <div v-for="(item, i) in menus" :key="`menus-${i}`" class="flex">
+            <div v-for="(item, i) in menus" :key="`menus-${i}`" class="flex z-20">
                 <p v-if="route_name == item.route || route_name == item.sub_routes"
                     @click="$router.push(`${item.path}`)" class="mr-2 cursor-pointer hover:underline"
                     :class="{ 'font-normal ': route_name == item.route }">{{ item.label }}</p>
@@ -23,9 +23,9 @@
         </div>
         <img v-if="route_name == 'blogs'" src="~/static/images/IMG_03blogs/Group1151@2x.png" class="widget1151">
         <img v-if="route_name == 'review'" src="~/static/images/IMG_03ingredients/Group1053@2x.png"
-            class="reviewwidget1053">
+            class="reviewwidget1053 z-10">
         <img v-if="route_name == 'product-details-id'" src="~/static/images/IMG_02products_detail/Group1053@2x.png"
-            class="widget1053">
+            class="widget1053 z-10">
         <!-- <div v-for="(item, i) in menus" :key="`banner-${i}`"> -->
 
         <!-- <img v-show="route_name == 'blog'" src="~/static/images/IMG_03blogs/Group1151@2x.png" class="widget1151"> -->
