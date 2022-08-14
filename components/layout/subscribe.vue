@@ -1,11 +1,11 @@
 <template>
-  <div class="relative bg w-full">
-    <img class="w-full" src="~/static/images/IMG_01home/pages_01home/Group1134@2x.png">
+  <div class="my-12 relative w-full">
+    <img class="bg w-full" src="~/static/images/IMG_01home/pages_01home/Group1134@2x.png">
     <div class="centered flex flex-col">
-      <p class="text-quaternary text-5xl">Subscribe to receive grape News & Promotion</p>
+      <p class="text-quaternary text-sm sm:text-xl md:text-3xl">Subscribe to receive grape News & Promotion</p>
       <div class="form-control">
         <input type="value" required="">
-        <label>
+        <label class="font-extralight">
           <span style="transition-delay:0ms">Y</span>
           <span style="transition-delay:50ms">o</span>
           <span style="transition-delay:100ms">u</span>
@@ -34,6 +34,14 @@ export default {
 .bg {
   height: auto;
 }
+@media (max-width:1024px) {
+    img.bg {
+        object-fit: cover;
+        width: auto;
+        height: 220px;
+    }
+}
+
 
 .centered {
   position: absolute;
@@ -46,13 +54,18 @@ export default {
 .form-control {
   position: relative;
   margin: 20px 0 40px;
-  width: 928.16px;
+  width: 690px;
+}
+@media (max-width:760px){
+  .form-control{
+    width: 80vw;
+  }
 }
 
 .form-control input {
   background-color: transparent;
   border: 0;
-  border-bottom: 1px #5E5F5F solid;
+  border-bottom: .5px #5E5F5F solid;
   display: block;
   width: 100%;
   padding: 10px 0 5px;
@@ -68,14 +81,14 @@ export default {
 
 .form-control label {
   position: absolute;
-  top: 5px;
+  top: 10px;
   left: 0;
   pointer-events: none;
 }
 
 .form-control label span {
   display: inline-block;
-  font-size: 18px;
+  font-size: 14px;
   min-width: 5px;
   color: #5E5F5F;
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -85,5 +98,20 @@ export default {
 .form-control input:valid+label span {
   color: #5E5F5F;
   transform: translateY(-20px);
+}
+@media (max-width:640px){
+  .form-control{
+    width: 90vw;
+  }
+  .form-control label span{
+    font-size: 8px;
+  }
+  img.bg {
+        height: 150px;
+    }
+    .form-control {
+
+  margin-top: 0px;
+}
 }
 </style>
