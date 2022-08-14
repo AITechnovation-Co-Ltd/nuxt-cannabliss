@@ -6,7 +6,7 @@
     <ProductOther :params="$route.params.id" />
     <img src="~/static/images/IMG_02products_detail/Group1143@2x.png" class="widget21143">
     <ProductReview :params="$route.params.id" />
-    <Subscribe class="hidden" />
+    <Subscribe class="" />
   </div>
 </template>
 
