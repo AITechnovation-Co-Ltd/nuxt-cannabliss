@@ -113,21 +113,21 @@
       </div>
     </div>
     <img src="~/static/images/IMG_03blogs/Path364@2x.png" class="widget364 z-10">
-    <img src="~/static/images/IMG_03ingredients/CANABLISS@2x.png" class="widget z-10">
+    <img src="~/static/images/IMG_03ingredients/CANABLISS@2x.png" class="widgetc z-10">
 
     <div class="w-full my-0 mb-0 mt-12 sm:my-20 flex flex-wrap justify-evenly text-quaternary">
       <div class="flex flex-col mx-4 sm:mx-0 items-center ">
-        <base-icon icon="heart" viewBox="0 0 24 24" size="60" class="mb-4" />
+        <img src="~/static/images/IMG_01home/24.png" class="mb-4">
         <p class="text-lg font-normal">24 Services</p>
         <p class="text-sm font-extralight">Consultations via email</p>
       </div>
       <div class="mt-8 sm:mt-0 flex flex-col mx-4 sm:mx-0 items-center ">
-        <base-icon icon="heart" viewBox="0 0 24 24" size="60" class="mb-4" />
+        <img src="~/static/images/IMG_01home/30D.png" class="mb-4">
         <p class="text-lg font-normal">30 Days Return</p>
         <p class="text-sm font-extralight">You have to 30 days to return</p>
       </div>
       <div class="mt-8 md:mt-0 flex flex-col mx-4 sm:mx-0 items-center ">
-        <base-icon icon="heart" viewBox="0 0 24 24" size="60" class="mb-4" />
+        <img src="~/static/images/IMG_01home/FD.png" class="mb-4">
         <p class="text-lg font-normal">Fast Delivery</p>
         <p class="text-sm font-extralight">On order above $ 50</p>
       </div>
@@ -164,11 +164,11 @@ export default {
 </script>
 
 <style scoped>
-.widget {
+.widgetc {
   height: 7.5rem;
   position: absolute;
   right: 2.5rem;
-  transform: translate(0rem, 6rem);
+  transform: translate(0rem, 3.5rem);
 }
 
 .widget364 {
