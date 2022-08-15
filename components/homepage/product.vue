@@ -35,7 +35,7 @@
         </ul>
       </div>
       <div class="w-full lg:w-5/6">
-
+        <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337">
         <!-- Product card -->
         <div v-if="list_products.length != 0"
           class="w-full mt-6 sm:mt-12 lg:mt-0 grid grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 ">
@@ -160,6 +160,13 @@ export default {
 </script>
 
 <style scoped>
+.widget337 {
+  height: 20rem;
+  position: absolute;
+  top: 79rem;
+  left: 9.2rem;
+}
+
 .hr {
   height: 3px;
   width: 40%;

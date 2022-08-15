@@ -10,7 +10,8 @@
           <div slot="toggle" class="w-full flex items-center justify-between">
             <p align="start" class="text-base sm:text-lg font-normal text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data }">
-              Sed Ut Perspiciatis Unde Omnis Iste Natus <br class="hidden sm:block"> Error Sit Voluptatem Accusantium</p>
+              Sed Ut Perspiciatis Unde Omnis Iste Natus <br class="hidden sm:block"> Error Sit Voluptatem Accusantium
+            </p>
 
             <base-icon icon="dropdown" :class="{
               'transform rotate-180 duration-200': dropdown_data,
@@ -20,7 +21,8 @@
           </div>
           <!-- Details -->
           <base-dropdown-item>
-            <p class="w-11/12 text-sm font-extralight text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing
+            <p class="w-11/12 text-sm font-extralight text-quaternary ">Lorem ipsum dolor sit amet consectetur
+              adipisicing
               elit. Harum sequi
               provident optio magnam, commodi
               corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
@@ -34,7 +36,8 @@
           <div slot="toggle" class="w-full flex items-center justify-between">
             <p align="start" class="text-base sm:text-lg font-normal text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data2 }">
-              Sed Ut Perspiciatis Unde Omnis Iste Natus <br class="hidden sm:block"> Error Sit Voluptatem Accusantium</p>
+              Sed Ut Perspiciatis Unde Omnis Iste Natus <br class="hidden sm:block"> Error Sit Voluptatem Accusantium
+            </p>
 
             <base-icon icon="dropdown" :class="{
               'transform rotate-180 duration-200': dropdown_data2,
@@ -44,7 +47,8 @@
           </div>
           <!-- Details -->
           <base-dropdown-item>
-            <p class="w-11/12 text-sm font-extralight text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing
+            <p class="w-11/12 text-sm font-extralight text-quaternary ">Lorem ipsum dolor sit amet consectetur
+              adipisicing
               elit. Harum sequi
               provident optio magnam, commodi
               corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
@@ -58,7 +62,8 @@
           <div slot="toggle" class="w-full flex items-center justify-between">
             <p align="start" class="text-base sm:text-lg font-normal text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data3 }">
-              Sed Ut Perspiciatis Unde Omnis Iste Natus <br class="hidden sm:block"> Error Sit Voluptatem Accusantium</p>
+              Sed Ut Perspiciatis Unde Omnis Iste Natus <br class="hidden sm:block"> Error Sit Voluptatem Accusantium
+            </p>
 
             <base-icon icon="dropdown" :class="{
               'transform rotate-180 duration-200': dropdown_data3,
@@ -68,7 +73,8 @@
           </div>
           <!-- Details -->
           <base-dropdown-item>
-            <p class="w-11/12 text-sm font-extralight text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing
+            <p class="w-11/12 text-sm font-extralight text-quaternary ">Lorem ipsum dolor sit amet consectetur
+              adipisicing
               elit. Harum sequi
               provident optio magnam, commodi
               corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
@@ -82,7 +88,8 @@
           <div slot="toggle" class="w-full flex items-center justify-between">
             <p align="start" class="text-base sm:text-lg font-normal text-quaternary my-2"
               :class="{ 'text-primary': dropdown_data4 }">
-              Sed Ut Perspiciatis Unde Omnis Iste Natus <br class="hidden sm:block"> Error Sit Voluptatem Accusantium</p>
+              Sed Ut Perspiciatis Unde Omnis Iste Natus <br class="hidden sm:block"> Error Sit Voluptatem Accusantium
+            </p>
             <base-icon icon="dropdown" :class="{
               'transform rotate-180 duration-200': dropdown_data4,
               'transform rotate-0 duration-200': !dropdown_data4,
@@ -90,7 +97,8 @@
           </div>
           <!-- Details -->
           <base-dropdown-item>
-            <p class="w-11/12 text-sm font-extralight text-quaternary ">Lorem ipsum dolor sit amet consectetur adipisicing
+            <p class="w-11/12 text-sm font-extralight text-quaternary ">Lorem ipsum dolor sit amet consectetur
+              adipisicing
               elit. Harum sequi
               provident optio magnam, commodi
               corporis, delectus ut praesentium ipsam quia soluta iusto obcaecati est voluptatum eaque ad vitae
@@ -100,24 +108,26 @@
       </div>
 
       <!-- Picture-->
-      <div class="w-full md:w-11/12 lg:w-1/2 mt-8 xl:mt-10">
+      <div class="w-full md:w-11/12 lg:w-1/2 mt-8 xl:mt-10 z-20">
         <img src="@/static/images/IMG_01home/pages_01home/enecta.jpg" class="rounded-3xl">
       </div>
     </div>
+    <img src="~/static/images/IMG_03blogs/Path364@2x.png" class="widget364 z-10">
+    <img src="~/static/images/IMG_03ingredients/CANABLISS@2x.png" class="widgetc z-10">
 
     <div class="w-full my-0 mb-0 mt-12 sm:my-20 flex flex-wrap justify-evenly text-quaternary">
       <div class="flex flex-col mx-4 sm:mx-0 items-center ">
-        <base-icon icon="heart" viewBox="0 0 24 24" size="60" class="mb-4" />
+        <img src="~/static/images/IMG_01home/24.png" class="mb-4">
         <p class="text-lg font-normal">24 Services</p>
         <p class="text-sm font-extralight">Consultations via email</p>
       </div>
       <div class="mt-8 sm:mt-0 flex flex-col mx-4 sm:mx-0 items-center ">
-        <base-icon icon="heart" viewBox="0 0 24 24" size="60" class="mb-4" />
+        <img src="~/static/images/IMG_01home/30D.png" class="mb-4">
         <p class="text-lg font-normal">30 Days Return</p>
         <p class="text-sm font-extralight">You have to 30 days to return</p>
       </div>
       <div class="mt-8 md:mt-0 flex flex-col mx-4 sm:mx-0 items-center ">
-        <base-icon icon="heart" viewBox="0 0 24 24" size="60" class="mb-4" />
+        <img src="~/static/images/IMG_01home/FD.png" class="mb-4">
         <p class="text-lg font-normal">Fast Delivery</p>
         <p class="text-sm font-extralight">On order above $ 50</p>
       </div>
@@ -154,4 +164,17 @@ export default {
 </script>
 
 <style scoped>
+.widgetc {
+  height: 7.5rem;
+  position: absolute;
+  right: 2.5rem;
+  transform: translate(0rem, 3.5rem);
+}
+
+.widget364 {
+  height: 20rem;
+  position: absolute;
+  right: 0;
+  transform: translate(2.5rem, -17rem);
+}
 </style>

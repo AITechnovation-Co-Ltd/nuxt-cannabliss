@@ -24,6 +24,7 @@
       </div>
 
       <!-- Picture -->
+      <img src="~/static/images/IMG_03blogs/Path364@2x.png" class="widget364">
       <div class="w-full sm:w-11/12 xl:w-1/2 mt-8 xl:mt-0 h-full relative">
         <div class="w-full h-full flex items-start justify-start sm:justify-center">
           <img v-if="img[1]" :src="require(`~/static/images/blogs${img[1]}`)" class="rounded-3xl w-11/12 mt-8 z-20">
@@ -116,6 +117,12 @@ export default {
 </script>
 
 <style scoped>
+.widget364 {
+  height: 20rem;
+  position: absolute;
+  transform: translate(37rem, -13rem);
+}
+
 .widget01 {
   height: 5rem;
   position: absolute;
