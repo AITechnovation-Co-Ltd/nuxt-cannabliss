@@ -1,5 +1,7 @@
 <template>
   <div class="w-full px-4 lg:px-12 xl:px-28 3xl:px-32">
+    <img src="~/static/images/IMG_03ingredients/CANABLISS_01@2x.png" class="widget01">
+    <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337">
     <h1 class="text-4xl sm:text-5xl text-primary text-center font-medium my-12">You may also like</h1>
     <div class="w-full grid grid-cols-2 xl:grid-cols-4 ">
       <div class="w-full " v-for="(product, index) in products" :key="index">
@@ -122,6 +124,18 @@ export default {
 </script>
 
 <style scoped>
+.widget01 {
+  height: 40rem;
+  position: absolute;
+  right: -2rem;
+}
+
+.widget337 {
+  height: 20rem;
+  position: absolute;
+  transform: translate(-10.5rem, 13rem);
+}
+
 .truncated-2-lines {
   width: 100%;
   overflow: hidden;
