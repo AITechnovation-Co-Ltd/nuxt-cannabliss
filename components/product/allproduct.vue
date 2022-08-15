@@ -103,7 +103,8 @@
                     <div class="w-full" v-for="(product, index) in list_products" :key="index">
                         <template v-if="index < item_per_page * page && index >= item_per_page * (page - 1)">
                             <div class="relative mx-2">
-                                <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
+                                <img src="~/static/images/IMG_02products_detail/Path357@2x.png"
+                                    :class="{ 'ring-6 ring-tertiary ring-offset rounded-3xl': hover==`hover+${index}`}" />
                                 <img class="centered w-full" v-if="product.imgUrl[0] != ''"
                                     :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
                                 <span v-if="$day.getDatetoNow(product.release) <= 7"
@@ -126,16 +127,16 @@
                                 <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type
                                 }}</p>
                                 <p class="truncated-2-lines text-base sm:text-lg font-medium "
-                                    :class="{ 'thai sm:text-2xl': getLanguage }">{{ getLanguage ? product.genre_th + ': ' :product.genre + ': ' }}{{
-        getLanguage ? product.name_th : product.name
-}}</p>
+                                    :class="{ 'thai sm:text-2xl': getLanguage }">{{ getLanguage ? product.genre_th + ': ' :product.genre + ': ' }}{{getLanguage ? product.name_th : product.name}}</p>
                                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
                                         product.detail_th
                                 }}</p>
-                                <base-button @click="$router.push(`/product/details/${product.no}`)"
+                                <div class="max-w-fit h-auto" v-on:mouseover="hover = `hover+${index}`" v-on:mouseout="hover = ''">
+                                    <base-button @click="$router.push(`/product/details/${product.no}`)" 
                                     class="border-quaternary">
                                     View more
-                                </base-button>
+                                    </base-button>
+                                </div>
                             </div>
                         </template>
                     </div>
@@ -155,6 +156,7 @@ import products from "@/static/json/products.json"
 export default {
     data() {
         return {
+            hover: '',
             page: 1,
             total_p: 1,
             products,
@@ -250,7 +252,7 @@ export default {
         filterType(type) {
             this.sort_by = ''
             this.type = type
-            
+
         },
         async getProducts() {
             const self = this
