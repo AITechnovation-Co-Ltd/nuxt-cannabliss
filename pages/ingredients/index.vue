@@ -1,5 +1,5 @@
 <template>
-  <div class="relative overflow-x-hidden">
+  <div class="relative">
     <IngredientsDetail />
     <img src="~/static/images/IMG_03ingredients/CANABLISS_01@2x.png" class="widget01">
     <IngredientsKnowledge />

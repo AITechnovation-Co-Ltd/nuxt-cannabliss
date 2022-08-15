@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-secondary relative overflow-hidden">
+  <div class="bg-secondary relative ">
     <img src="~/static/images/IMG_03ingredients/CANABLISS_01@2x.png" class="widget01">
     <BlogsDetail class="my-6" :params="$route.params.id" />
   </div>
