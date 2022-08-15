@@ -76,7 +76,7 @@ export default {
   .widget {
     height: 6.5rem;
     position: absolute;
-    transform: translate(2.5rem, -11.5rem);
+    transform: translate(2.5rem, -10.5rem);
   }
 }
 

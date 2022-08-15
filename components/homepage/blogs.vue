@@ -6,11 +6,14 @@
     <p class="text-5xl text-primary mb-8 lg:mb-16 font-medium">Blogs</p>
     <!-- Content -->
     <div class="w-full flex flex-col items-center">
+      <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337">
+      <img src="~/static/images/IMG_03blogs/Path364@2x.png" class="widget364">
       <!-- Card -->
       <div class="grid grid-col-1 md:grid-cols-2 gap-y-8 sm:gap-y-0 sm:gap-x-16 text-quaternary z-20">
         <div class="hidden md:block w-full flex items-start flex-col" v-for="(data, i) in blogs.slice(0, 4)"
           :key="`blog-${i}`">
-          <img :src="require(`~/static/images/blogs${data.img[0]}`)" class="rounded-3xl" :class="{ 'mt-16 xl:mt-24': i % 2 != 0 }">
+          <img :src="require(`~/static/images/blogs${data.img[0]}`)" class="rounded-3xl"
+            :class="{ 'mt-16 xl:mt-24': i % 2 != 0 }">
           <p class="my-4 text-lg font-normal">{{ data.title }}</p>
           <p class="text-sm font-light">{{ data.subtitle }}</p>
           <base-button @click="$router.push(`/blogs/details/${data.id}`)"
@@ -46,4 +49,14 @@ export default
 </script>
 
 <style scoped>
+.widget337 {
+  height: 20rem;
+  position: absolute;
+  transform: translate(-5rem, 31rem);
+}
+.widget364 {
+  height: 20rem;
+  position: absolute;
+  transform: translate(38rem, -2rem);
+}
 </style>
