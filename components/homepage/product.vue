@@ -166,8 +166,8 @@ export default {
 .widget337 {
   height: 20rem;
   position: absolute;
-  top: 79rem;
-  left: 9.2rem;
+  top: 74rem;
+  left: 7.2rem;
 }
 
 .hr {
