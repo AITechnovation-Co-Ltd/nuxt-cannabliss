@@ -1,7 +1,6 @@
-
 <template>
   <div
-    class="w-full flex flex-col justify-center items-center pb-10 sm:pb-20 mt-12 lg:mt-20 px-4 lg:px-12 xl:px-20 3xl:px-32">
+    class="w-full flex flex-col relative justify-center items-center pb-10 sm:pb-20 mt-12 lg:mt-20 px-4 lg:px-12 xl:px-20 3xl:px-32 z-20">
     <!-- Title -->
     <p class="text-5xl text-primary mb-8 lg:mb-16 font-medium">Blogs</p>
     <!-- Content -->
@@ -33,6 +32,7 @@
       <!-- Button -->
       <base-button @click="$router.push(`/blogs`)" class="px-6 mt-12 border-quaternary">View all</base-button>
     </div>
+    <img src="~/static/images/IMG_01home/pages_01home/Group1135@2x.png" class="absolute bottom-0 z-10">
   </div>
 </template>
 <script>

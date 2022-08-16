@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-4 lg:px-12 xl:px-28 3xl:px-32">
+  <div class="w-full px-4 lg:px-12 xl:px-28 3xl:px-32 relative z-20">
     <img src="~/static/images/IMG_03ingredients/CANABLISS_01@2x.png" class="widget01">
     <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337">
     <h1 class="text-4xl sm:text-5xl text-primary text-center font-medium my-12">You may also like</h1>

@@ -3,9 +3,9 @@
     <!-- <img src="~/static/images/IMG_02products_detail/Group1053@2x.png" class="widget1053"> -->
     <ProductDetail class="mt-12 sm:mt-20" :params="$route.params.id" />
     <img src="~/static/images/IMG_02products_detail/Group1143@2x.png" class="widget1143">
-    <ProductOther :params="$route.params.id" />
+    <ProductOther :params="$route.params.id" class="static z-20"/>
     <img src="~/static/images/IMG_02products_detail/Group1143@2x.png" class="widget21143">
-    <ProductReview :params="$route.params.id" />
+    <ProductReview :params="$route.params.id" class="static z-10"/>
     <Subscribe class="" />
   </div>
 </template>
