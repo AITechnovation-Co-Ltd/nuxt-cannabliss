@@ -13,7 +13,7 @@
     <Ingredients class="relative z-20" />
 
     <!-- Face -->
-    <Face class="relative z-20" />
+    <Face class="relative z-10" />
 
     <!-- Video Review -->
     <VideoReview class="z-10" />
