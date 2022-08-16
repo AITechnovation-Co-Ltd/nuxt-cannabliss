@@ -1,11 +1,11 @@
 <template>
-    <div class="mt-2 flex items-center justify-center text-center px-4 text-md text-quaternary font-light tracking-wide ">
+    <div class="mt-2 flex items-center justify-center text-center px-4 text-md text-quaternary font-light tracking-wide">
         <div class="flex items-center sm:mr-1 sm:ml-auto">
             <p class="hidden sm:block"> <span class="font-medium">{{ page + ' ' }}</span>from<span class="font-medium">{{ ' ' + total_pages + ' '
             }} </span>pages</p>
         </div>
         <!-- Pagination -->
-        <t-pagination :total-items="total_pages" :per-page="size" :limit="limit" @change="pageChange" :value="page" />
+        <t-pagination :total-items="total_pages" :per-page="size" :limit="limit" @change="pageChange" :value="page" class="z-20"/>
     </div>
 </template>
 

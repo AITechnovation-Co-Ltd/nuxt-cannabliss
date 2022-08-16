@@ -25,7 +25,7 @@
             </div>
           </div>
         </div>
-    <base-button class=" mr-1 ml-auto block sm:hidden z=20" @click="$router.push(`/product/details/3`)">View more</base-button>
+    <base-button class=" mr-1 md:ml-auto block sm:hidden z=20" @click="$router.push(`/product/details/3`)">View more</base-button>
       </div>
     </div>
     <img class="bg w-full z-10" src="~/static/images/IMG_01home/pages_01home/Group1136@2x.png" alt="">

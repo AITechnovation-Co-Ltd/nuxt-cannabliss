@@ -97,10 +97,10 @@
                 </div>
 
                 <!-- Product card -->
-                <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337">
-                <img src="~/static/images/IMG_02products/Path351@2x.png" class="widget351">
+                <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337 z-10">
+                <img src="~/static/images/IMG_02products/Path351@2x.png" class="widget351 z-10">
                 <div v-if="list_products.length != 0" class="w-full mt-12 grid grid-cols-2 2xl:grid-cols-3 gap-x-4">
-                    <div class="w-full" v-for="(product, index) in list_products" :key="index">
+                    <div class="w-full z-20" v-for="(product, index) in list_products" :key="index">
                         <template v-if="index < item_per_page * page && index >= item_per_page * (page - 1)">
                             <div class="relative mx-2">
                                 <img src="~/static/images/IMG_02products_detail/Path357@2x.png"
