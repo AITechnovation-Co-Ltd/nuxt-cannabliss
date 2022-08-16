@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full">
-    <div class="w-full relative mt-20 px-4 lg:px-12 xl:px-28 3xl:px-32">
+  <div class="w-full relative">
+    <div class="w-full relative mt-20 px-4 pb-16 sm:pb-24 lg:px-12 xl:px-28 3xl:px-32 z-20">
       <h1 class="w-full text-5xl text-center font-normal text-primary">
         Review
       </h1>
@@ -83,7 +83,7 @@
       </div>
       <dialog-review ref="DialogReviewRefs" :product_name="product_name" />
     </div>
-    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1135@2x.png" alt=""> -->
+    <img src="~/static/images/IMG_01home/pages_01home/Group1135@2x.png" class="absolute bottom-0 z-10">
   </div>
 </template>
 

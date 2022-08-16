@@ -32,23 +32,24 @@
         <div class="w-full text-quaternary flex flex-col md:flex-row justify-evenly items-center z-20">
           <div class="w-full md:w-2/5 flex flex-col items-center text-sm font-extralight justify-center">
             <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
-            <h1 class="text-lg font-normal">Canabinoid (Cbd)</h1>
-            <p class="mt-2 text-center">Anti inflammatory to make skin stronger</p>
-            <p class="mt-2 2xl:mt-4 text-center">Lorem ipsur dolor sit amet, consectetur adipiscing elit, sed do
+            <h1 class="text-lg font-normal">CDB</h1>
+            <p class="mt-2 text-center">สารสกัด CBD จากกัญชงที่มีส่วนช่วยในการลดการอักเสบ ปรับสภาพ และ
+              คืนความชุ่มชื้นให้กับผิว</p>
+            <!-- <p class="mt-2 2xl:mt-4 text-center">Lorem ipsur dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut Iabore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-              ut aliquip ex ea commnodo</p>
+              ut aliquip ex ea commnodo</p> -->
           </div>
           <div class="vl h-60 xl:h-64 bg-primary hidden md:block"></div>
           <div class="w-full md:w-2/5 flex flex-col text-sm font-extralight items-center justify-center">
             <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
-            <h1 class="text-lg text-center font-normal">Leucojum Aestivum Bulb Extract <br class="block sm:hidden"> (
-              Ibr - Snowflake®)</h1>
-            <p class="mt-2 text-center">Anti Aging To Make Skin Younger And Brighter</p>
-            <p class="mt-2 2xl:mt-4 text-center">Lorem ipsur dolor sit amet, consectetur adipiscing elit, sed do
+            <h1 class="text-lg text-center font-normal">Snow Bell Extract</h1>
+            <p class="mt-2 text-center">จากประเทศเกาหลี ที่มีสารต้านอนุมูลอิสระ และทำให้ผิวแลดูขาว กระจ่างใสขึ้น
+            </p>
+            <!-- <p class="mt-2 2xl:mt-4 text-center">Lorem ipsur dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut Iabore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-              ut aliquip ex ea commnodo</p>
+              ut aliquip ex ea commnodo</p> -->
           </div>
         </div>
       </div>

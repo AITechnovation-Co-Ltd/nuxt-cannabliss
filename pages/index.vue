@@ -13,7 +13,7 @@
     <Ingredients class="relative z-20" />
 
     <!-- Face -->
-    <Face class="relative z-20" />
+    <Face class="relative z-10" />
 
     <!-- Video Review -->
     <VideoReview class="z-10" />
@@ -32,7 +32,7 @@
     <img src="~/static/images/IMG_01home/pages_01home/Group1094@2x.png" class="widget1094 z-10">
     <Faq class="z-10" />
 
-    <Subscribe class="z-10" />
+    <Subscribe class="my-12 z-10" />
 
     <!-- Partner -->
     <Partner class="z-10" />

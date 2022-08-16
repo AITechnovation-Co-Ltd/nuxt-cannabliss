@@ -65,7 +65,7 @@
           <img src="@/static/images/IMG_03blogs_details/sebum.png" class="w-20 sm:w-24 mr-4">
           <p class="ml-2 font-normal">Make sebum less-viscous <br> preventing clogging</p>
         </div>
-        <img src="~/static/images/IMG_03blogs_details/Group1154@2x.png" class="widgetline">
+        <!-- <img src="~/static/images/IMG_03blogs_details/Group1154@2x.png" class="widgetline"> -->
         <div class="flex items-center">
           <img src="~/static/images/IMG_03blogs_details/04@2x.png" class="widget04">
           <img src="@/static/images/IMG_03blogs_details/inhibits.png" class="w-20 sm:w-24 mr-4">
@@ -81,7 +81,7 @@
           <img src="@/static/images/IMG_03blogs_details/suppressed.png" class="w-20 sm:w-24 mr-4">
           <p class="ml-2 font-normal">Suppressed cell prolifera</p>
         </div>
-        <img src="~/static/images/IMG_03blogs_details/Group1154@2x.png" class="widgetline2">
+        <!-- <img src="~/static/images/IMG_03blogs_details/Group1154@2x.png" class="widgetline2"> -->
       </div>
     </div>
   </div>
