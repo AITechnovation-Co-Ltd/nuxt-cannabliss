@@ -33,7 +33,7 @@
           <div class="w-full md:w-2/5 flex flex-col items-center text-sm font-extralight justify-center">
             <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
             <h1 class="text-lg font-normal">CDB</h1>
-            <p class="mt-2 text-center">สารสกัด CBD จากกัญชงที่มีส่วนช่วยในการลดการอักเสบ ปรับสภาพ และ
+            <p class="mt-2 text-center">สารสกัด CBD จากกัญชงที่มีส่วนช่วยในการลดการอักเสบ <br class="block sm:hidden"> ปรับสภาพ และ
               คืนความชุ่มชื้นให้กับผิว</p>
             <!-- <p class="mt-2 2xl:mt-4 text-center">Lorem ipsur dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut Iabore et dolore magna aliqua. Ut
@@ -44,7 +44,7 @@
           <div class="w-full md:w-2/5 flex flex-col text-sm font-extralight items-center justify-center">
             <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
             <h1 class="text-lg text-center font-normal">Snow Bell Extract</h1>
-            <p class="mt-2 text-center">จากประเทศเกาหลี ที่มีสารต้านอนุมูลอิสระ และทำให้ผิวแลดูขาว กระจ่างใสขึ้น
+            <p class="mt-2 text-center">จากประเทศเกาหลี ที่มีสารต้านอนุมูลอิสระ <br class="block sm:hidden">  และทำให้ผิวแลดูขาว กระจ่างใสขึ้น
             </p>
             <!-- <p class="mt-2 2xl:mt-4 text-center">Lorem ipsur dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut Iabore et dolore magna aliqua. Ut

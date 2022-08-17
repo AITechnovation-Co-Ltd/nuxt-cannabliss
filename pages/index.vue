@@ -36,7 +36,7 @@
     <Subscribe class="my-12 z-10" />
 
     <!-- Partner -->
-    <Partner class="z-10" />
+    <Partner class="relative z-10" />
     <!-- background -->
   </div>
 </template>

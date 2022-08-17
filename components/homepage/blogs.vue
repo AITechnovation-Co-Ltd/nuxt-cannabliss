@@ -16,7 +16,7 @@
           <p class="my-4 text-lg font-normal">{{ data.title }}</p>
           <p class="text-sm font-light">{{ data.subtitle }}</p>
           <base-button @click="$router.push(`/blogs/details/${data.id}`)"
-            class="mt-4 mr-0 sm:mr-auto ml-auto sm:ml-0 border-quaternary z-30">View more
+            class="mt-4 mr-auto ml-auto sm:mr-auto sm:ml-0 border-quaternary z-30">View more
           </base-button>
         </div>
         <div class="block md:hidden w-full flex items-start justify-start flex-col"
@@ -25,7 +25,7 @@
           <p class="my-4 text-lg font-normal">{{ data.title }}</p>
           <p class="text-sm font-light">{{ data.subtitle }}</p>
           <base-button @click="$router.push(`/blogs/details/${data.id}`)"
-            class="mt-4 mr-0 sm:mr-auto ml-auto sm:ml-0 border-quaternary z-30">View more
+            class="mt-4 mr-auto ml-auto sm:mr-auto sm:ml-0 border-quaternary z-30">View more
           </base-button>
         </div>
       </div>
