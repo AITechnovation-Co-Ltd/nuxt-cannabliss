@@ -82,7 +82,7 @@
         <base-pages v-if="list_products.length != 0" @change="change" :page="page" :total_pages="total_p" :limit="7">
         </base-pages>
       </div>
-      <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337 z-10">
+      <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337 z-10 hidden lg:block">
     </div>
   </div>
 </template>

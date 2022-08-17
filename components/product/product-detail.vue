@@ -320,6 +320,9 @@ export default {
   .bg {
     position: absolute;
     bottom: 0;
+    object-fit: cover;
+    width: auto;
+    height: 360px;
   }
 }
 </style>
