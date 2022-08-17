@@ -76,7 +76,7 @@
             </div>
             <!-- Load More -->
           </div>
-          <base-button @click="$router.push(`/review`)" class="mt-6">View more</base-button>
+          <base-button @click="$router.push(`/review`)" class="mt-6 mx-auto sm:mx-0">View more</base-button>
         </div>
         <div v-else class="w-full py-12 mt-12 bg-white text-center font-light text-2xl text-primary">No Review
         </div>

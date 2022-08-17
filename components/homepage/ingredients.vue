@@ -21,7 +21,7 @@
         <img class="mt-12 lg:mt-28 rounded-l-3xl" src="~/static/images/IMG_01home/Ingredients/Ingredients_02.jpg" alt="">
       </div>
     </div>
-    <base-button class="mt-6 mr-0 ml-auto lg:mt-8 block sm:hidden z-20" @click="$router.push(`/ingredients`)">View more
+    <base-button class="mt-6 mr-auto ml-auto lg:mt-8 block sm:hidden z-20" @click="$router.push(`/ingredients`)">View more
     </base-button>
     <!-- <div class="w-2/5">
       <h1 class="text-3xl xl:text-4xl 2xl:text-7xl text-primary">Ingredients</h1>

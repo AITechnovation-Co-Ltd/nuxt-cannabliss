@@ -13,7 +13,7 @@
               :class="{ 'sm:mt-16 xl:mt-36': i % 2 != 0 }">
             <p class="my-4 text-lg font-normal">{{ data.title }}</p>
             <p class="text-sm font-light">{{ data.subtitle }}</p>
-            <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="mt-8 border-quaternary">View
+            <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="mx-auto sm:mx-0 mt-8 border-quaternary">View
               more
             </base-button>
           </div>
@@ -80,6 +80,10 @@ export default
     left: 8rem;
     z-index: 10;
   }
-
+}
+@media (max-width: 640px){
+  .widget337 {
+  transform: translate(6rem, 29rem);
+}
 }
 </style>
