@@ -32,7 +32,8 @@
       <!-- Button -->
       <base-button @click="$router.push(`/blogs`)" class="px-6 mt-12 border-quaternary z-20">View all</base-button>
     </div>
-    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1135@2x.png" class="absolute bottom-0 z-10"> -->
+    <img src="~/static/images/IMG_01home/pages_01home/Group1135@2x.png" class="absolute bottom-0 z-10">
+    <img src="~/static/images/IMG_01home/pages_01home/Path330@2x.png" class="widget330 absolute z-20">
   </div>
 </template>
 <script>
@@ -58,5 +59,15 @@ export default
   height: 20rem;
   position: absolute;
   transform: translate(38rem, -2rem);
+}
+.widget330 {
+  height: 36rem;
+  bottom: -300px;
+  left: -150px;
+}
+@media (max-width:640px){
+  .widget337 {
+  transform: translate(4rem, 31rem);
+}
 }
 </style>

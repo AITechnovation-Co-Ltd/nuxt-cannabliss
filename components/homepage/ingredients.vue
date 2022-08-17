@@ -74,9 +74,9 @@ export default {
 
 @media (max-width:1441px) {
   .widget {
-    height: 6.5rem;
+    height: 5.5rem;
     position: absolute;
-    transform: translate(2.5rem, -10.5rem);
+    transform: translate(0rem, -3rem);
   }
 }
 

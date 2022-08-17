@@ -22,8 +22,8 @@
     <img src="~/static/images/IMG_01home/pages_01home/Group1053@2x.png" class="widget1053 z-10">
     <!-- Blogs -->
     <Blogs class="z-10" />
-    <img src="~/static/images/IMG_01home/pages_01home/Group1135@2x.png" class="absolute bg z-10">
-    <img src="~/static/images/IMG_01home/pages_01home/Path330@2x.png" class="widget330 z-20">
+    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1135@2x.png" class="absolute bg z-10"> -->
+    <!-- <img src="~/static/images/IMG_01home/pages_01home/Path330@2x.png" class="widget330 z-20"> -->
     <!-- Review -->
     <slick class="z-10" />
     <!-- <Review class="z-10" /> -->
