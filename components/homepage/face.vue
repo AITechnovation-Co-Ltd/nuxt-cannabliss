@@ -17,11 +17,11 @@
       <div class="w-full 2xl:w-2/3 flex flex-col md:flex-row items-center justify-around z-20">
         <div class="w-full sm:w-2/3 md:w-1/2"><img class="h-96 mr-auto ml-auto" :src="require(`~/static/images/products${products[0].imgUrl[0]}`)"></div>
         <div class="w-full md:w-1/2 my-4 sm:my-0 flex flex-col justify-center items-center text-quaternary ">
-          <div class="flex justify-center items-center my-0 md:my-4" v-for="index in 3" :key="index">
+          <div class="flex justify-center items-center my-0 md:my-4" v-for="(indication,index) in indications" :key="index">
             <base-icon icon="heart" viewBox="0 0 30 41" size="70" />
             <div class="text-xl flex flex-col justify-center ml-6">
-              <h1 class="text-lg font-normal">Lorem Ipsum Dolor Sit</h1>
-              <p class="text-sm font-extralight">Lorem ipsum dolor sit amet , <br> consectetur adipiscing elit , sed do</p>
+              <h1 class="text-lg font-normal">{{indication.title}}</h1>
+              <p class="text-sm font-extralight w-60">{{indication.detail}}</p>
             </div>
           </div>
         </div>
@@ -39,6 +39,11 @@ export default {
   data() {
     return {
       products,
+      indications:[
+        {title:"สารสกัด CBD",detail:"ช่วยต้านการอักเสบของผิวหน้า"},
+        {title:"สารสกัด Snowbell",detail:"ทำความสะอาด และ ปรับผิวขาวกระจ่างใส"},
+        {title:"Amino Acids",detail:"เติมอาหารให้ผิว เผยผิวเนียนนุ่ม เปล่งปลั่ง"}
+      ]
     }
   }
 }

@@ -26,10 +26,10 @@
       </div>
     </div>
 
-    <div class="w-full mt-16 lg:mt-28 relative px-0 sm:px-12 lg:px-16 xl:px-28 3xl:px-32">
+    <div class="w-full mt-16 lg:mt-28 relative px-0 lg:px-16 xl:px-28 3xl:px-32">
       <img class="bg w-full z-10" src="~/static/images/IMG_03ingredients/Group1149@2x.png" alt="">
       <div class="content w-full flex pb-4 lg:pb-0 z-20 px-4">
-        <div class="w-full text-quaternary flex flex-col md:flex-row justify-evenly items-center z-20">
+        <div class="w-full text-quaternary flex flex-col md:flex-row justify-evenly items-center z-20 px-0 lg:px-24">
           <div class="w-full md:w-2/5 flex flex-col items-center text-sm font-extralight justify-center">
             <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
             <h1 class="text-lg font-normal">CDB</h1>

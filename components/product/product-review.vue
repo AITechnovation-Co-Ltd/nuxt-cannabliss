@@ -4,7 +4,7 @@
       <h1 class="w-full text-5xl text-center font-normal text-primary">
         Review
       </h1>
-      <div class="w-full flex flex-col xl:flex-row mt-12">
+      <div class="w-full flex flex-col xl:flex-row mt-12 static z-10">
         <div class="
             w-full
             flex flex-col
@@ -81,7 +81,7 @@
         <div v-else class="w-full py-12 mt-12 bg-white text-center font-light text-2xl text-primary">No Review
         </div>
       </div>
-      <dialog-review ref="DialogReviewRefs" :product_name="product_name" />
+      <dialog-review ref="DialogReviewRefs" class="static z-20" :product_name="product_name" />
     </div>
     <img src="~/static/images/IMG_01home/pages_01home/Group1135@2x.png" class="absolute bottom-0 z-10">
   </div>
