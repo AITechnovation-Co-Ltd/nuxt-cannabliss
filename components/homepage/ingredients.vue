@@ -54,9 +54,9 @@ export default {
 
 <style scoped>
 .widget {
-  height: 7.5rem;
+  height: 6.5rem;
   position: absolute;
-  transform: translate(2.5rem, -10.7rem);
+  transform: translate(3.5rem, -9.7rem);
 }
 
 .vl {
@@ -72,7 +72,7 @@ export default {
   width: 470px;
 }
 
-@media (max-width:1441px) {
+@media (max-width:1420px) {
   .widget {
     height: 5.5rem;
     position: absolute;
