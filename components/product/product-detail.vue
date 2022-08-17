@@ -10,7 +10,7 @@
       <div
         class="w-full flex mt-8 px-4 lg:px-12 xl:px-28 3xl:px-32 flex-col lg:flex-row justify-between items-center xl:items-start">
         <!-- Picture -->
-        <div class="w-full overflow-hidden lg:w-1/2">
+        <div class="w-full overflow-hidden lg:w-1/2 z-20">
           <div class="flex items-center relative">
             <div @click="arrow_left" class="absolute left-0 top-1/2">
               <base-icon icon='dropdown' viewBox="0 0 24 24" class="transform rotate-90" size="32" />
