@@ -100,14 +100,14 @@
             <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
               <h1 class="text-lg 3xl:text-2xl font-normal">CDB</h1>
-              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">สารสกัด CBD จากกัญชงที่มีส่วนช่วยในการลดการอักเสบ ปรับสภาพ และ คืนความชุ่มชื้นให้กับผิว
+              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">สารสกัด CBD จากกัญชงที่มีส่วนช่วยในการลดการอักเสบ <br class="block sm:hidden"> ปรับสภาพ และ คืนความชุ่มชื้นให้กับผิว
               </p>
             </div>
             <div class="vl h-60 bg-primary hidden md:block"></div>
             <div class="w-full mt-4 sm:mt-0 md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
               <h1 class="text-lg sm:text-xl text-center font-normal">Snow Bell Extract</h1>
-              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">จากประเทศเกาหลี ที่มีสารต้านอนุมูลอิสระ และทำให้ผิวแลดูขาว กระจ่างใสขึ้น</p>
+              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">จากประเทศเกาหลี ที่มีสารต้านอนุมูลอิสระ <br class="block sm:hidden">และทำให้ผิวแลดูขาว กระจ่างใสขึ้น</p>
             </div>
           </div>
         </div>
