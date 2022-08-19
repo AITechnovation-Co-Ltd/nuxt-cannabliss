@@ -35,14 +35,15 @@
         </ul>
       </div>
       <div class="w-full lg:w-5/6">
-        <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337">
+        <!-- <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337 z-10"> -->
         <!-- Product card -->
         <div v-if="list_products.length != 0"
-          class="w-full mt-6 sm:mt-12 lg:mt-0 grid grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 ">
-          <div class="w-full" v-for="(product, index) in list_products" :key="index">
+          class="w-full mt-6 sm:mt-12 lg:mt-0 grid grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 z-20">
+          <div class="w-full z-20" v-for="(product, index) in list_products" :key="index">
             <template v-if="index < page_screen * page && index >= page_screen * (page - 1)">
               <div class="relative mx-2">
-                <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
+                <img src="~/static/images/IMG_02products_detail/Path357@2x.png"
+                  :class="{ 'ring-6 ring-tertiary ring-offset rounded-3xl': hover == `hover+${index}` }" />
                 <img v-if="product.imgUrl[0] != ''" class="centered w-full"
                   :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
                 <span v-if="$day.getDatetoNow(product.release) <= 7"
@@ -68,9 +69,11 @@
                 }}
                 </p>
                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{ product.detail_th }}</p>
-                <base-button @click="$router.push(`/product/details/${product.no}`)" class="border-quaternary">
-                  View more
-                </base-button>
+                <div class="max-w-fit h-auto" v-on:mouseover="hover = `hover+${index}`" v-on:mouseout="hover = ''">
+                  <base-button @click="$router.push(`/product/details/${product.no}`)" class="border-quaternary z-20">
+                    View more
+                  </base-button>
+                </div>
               </div>
             </template>
           </div>
@@ -79,6 +82,7 @@
         <base-pages v-if="list_products.length != 0" @change="change" :page="page" :total_pages="total_p" :limit="7">
         </base-pages>
       </div>
+      <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337 z-10 hidden lg:block">
     </div>
   </div>
 </template>
@@ -90,6 +94,7 @@ export default {
   components: { BaseButton },
   data() {
     return {
+      hover: false,
       page: 1,
       total_p: 1,
       products,
@@ -161,8 +166,8 @@ export default {
 .widget337 {
   height: 20rem;
   position: absolute;
-  top: 79rem;
-  left: 9.2rem;
+  top: 74rem;
+  left: 7.2rem;
 }
 
 .hr {

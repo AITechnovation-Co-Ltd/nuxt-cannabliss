@@ -115,7 +115,7 @@
     <img src="~/static/images/IMG_03blogs/Path364@2x.png" class="widget364 z-10">
     <img src="~/static/images/IMG_03ingredients/CANABLISS@2x.png" class="widgetc z-10">
 
-    <div class="w-full my-0 mb-0 mt-12 sm:my-20 flex flex-wrap justify-evenly text-quaternary">
+    <div class="w-full my-0 mb-0 mt-24 md:mt-12 sm:my-20 flex flex-wrap justify-evenly text-quaternary">
       <div class="flex flex-col mx-4 sm:mx-0 items-center ">
         <img src="~/static/images/IMG_01home/24.png" class="mb-4">
         <p class="text-lg font-normal">24 Services</p>
@@ -176,5 +176,14 @@ export default {
   position: absolute;
   right: 0;
   transform: translate(2.5rem, -17rem);
+}
+
+@media (max-width:600px) {
+  .widgetc {
+    height: 6rem;
+    position: absolute;
+    right: 2.5rem;
+    transform: translate(1rem, 0rem);
+  }
 }
 </style>

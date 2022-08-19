@@ -1,45 +1,47 @@
 <template>
-    <div class="w-full bg-secondary scroll-smooth relative overflow-hidden">
-        <Navbar />
-        <div class="w-full relative" v-for="(item, i) in menus" :key="`banner-${i}`">
-            <img v-if="route_name == item.route || route_name == item.sub_routes" class="w-full bg z-10"
-                :src="item.src">
-            <div v-if="route_name == item.route || route_name == item.sub_routes" class="content flex z-20">
-                <h1 class="text-6xl text-primary font-normal">{{ item.label }}</h1>
+    <div class="w-full h-full">
+        <Navbar/>
+        <div class="w-full bg-secondary scroll-smooth relative overflow-hidden">
+            <div class="w-full relative" v-for="(item, i) in menus" :key="`banner-${i}`">
+                <img v-if="route_name == item.route || route_name == item.sub_routes" class="w-full bg z-10"
+                    :src="item.src">
+                <div v-if="route_name == item.route || route_name == item.sub_routes" class="content flex z-20">
+                    <h1 class="text-6xl text-primary font-normal">{{ item.label }}</h1>
+                </div>
             </div>
-        </div>
-        <div v-if="!no_breadcrumb.includes(route_name)"
-            class="z-20 flex items-center px-3 mt-10 sm:mt-20 text-quaternary font-extralight text-sm px-4 sm:px-12 lg:px-16 xl:px-28 3xl:px-32">
-            <base-icon icon="angle-left" viewBox="0 0 24 24" size="15" />&nbsp;&nbsp;
-            <nuxt-link to="/" class="hover:underline mr-2 z-20">Home&nbsp;&nbsp;|&nbsp;
-            </nuxt-link>
-            <div v-for="(item, i) in menus" :key="`menus-${i}`" class="flex z-20">
-                <p v-if="route_name == item.route || route_name == item.sub_routes"
-                    @click="$router.push(`${item.path}`)" class="mr-2 cursor-pointer hover:underline"
-                    :class="{ 'font-normal ': route_name == item.route }">{{ item.label }}</p>
-                <p v-if="route_name == item.sub_routes" @click="$router.push(`${item.path}`)"
-                    class="font-normal line-clamp-1">&nbsp;|&nbsp;&nbsp;{{ breadcrumb }}</p>
+            <div v-if="!no_breadcrumb.includes(route_name)"
+                class="z-20 flex items-center px-3 mt-10 sm:mt-20 text-quaternary font-extralight text-sm px-4 sm:px-12 lg:px-16 xl:px-28 3xl:px-32">
+                <base-icon icon="angle-left" viewBox="0 0 24 24" size="15" />&nbsp;&nbsp;
+                <nuxt-link to="/" class="hover:underline mr-2 z-20">Home&nbsp;&nbsp;|&nbsp;
+                </nuxt-link>
+                <div v-for="(item, i) in menus" :key="`menus-${i}`" class="flex z-20">
+                    <p v-if="route_name == item.route || route_name == item.sub_routes"
+                        @click="$router.push(`${item.path}`)" class="mr-2 cursor-pointer hover:underline"
+                        :class="{ 'font-normal ': route_name == item.route }">{{ item.label }}</p>
+                    <p v-if="route_name == item.sub_routes" @click="$router.push(`${item.path}`)"
+                        class="font-normal line-clamp-1">&nbsp;|&nbsp;&nbsp;{{ breadcrumb }}</p>
+                </div>
             </div>
-        </div>
-        <img v-if="route_name == 'blogs'" src="~/static/images/IMG_03blogs/Group1151@2x.png" class="widget1151">
-        <img v-if="route_name == 'review'" src="~/static/images/IMG_03ingredients/Group1053@2x.png"
-            class="reviewwidget1053 z-10">
-        <img v-if="route_name == 'product-details-id'" src="~/static/images/IMG_02products_detail/Group1053@2x.png"
-            class="widget1053 z-10">
-        <!-- <div v-for="(item, i) in menus" :key="`banner-${i}`"> -->
+            <img v-if="route_name == 'blogs'" src="~/static/images/IMG_03blogs/Group1151@2x.png" class="widget1151">
+            <img v-if="route_name == 'review'" src="~/static/images/IMG_03ingredients/Group1053@2x.png"
+                class="reviewwidget1053 z-10">
+            <img v-if="route_name == 'product-details-id'" src="~/static/images/IMG_02products_detail/Group1053@2x.png"
+                class="widget1053 z-10">
+            <!-- <div v-for="(item, i) in menus" :key="`banner-${i}`"> -->
 
-        <!-- <img v-show="route_name == 'blog'" src="~/static/images/IMG_03blogs/Group1151@2x.png" class="widget1151"> -->
+            <!-- <img v-show="route_name == 'blog'" src="~/static/images/IMG_03blogs/Group1151@2x.png" class="widget1151"> -->
 
-        <!-- </div> -->
-        <div class="w-full">
-            <nuxt />
+            <!-- </div> -->
+            <div class="w-full">
+                <nuxt />
+            </div>
+            <button class="to-top hide" id="totop" @click="toTop">
+                <base-icon icon="angle-up" viewBox="0 0 24 24" size="30" class="text-white" />
+            </button>
+            <img src="~/static/images/IMG_01home/pages_01home/Group831@2x.png" class="footleft z-10">
+            <img src="~/static/images/IMG_01home/pages_01home/Group388@2x.png" class="footright z-10">
+            <Foot class="mt-10 sm:mt-20 z-20" />
         </div>
-        <button class="to-top hide" id="totop" @click="toTop">
-            <base-icon icon="angle-up" viewBox="0 0 24 24" size="30" class="text-white" />
-        </button>
-        <img src="~/static/images/IMG_01home/pages_01home/Group831@2x.png" class="footleft z-10">
-        <img src="~/static/images/IMG_01home/pages_01home/Group388@2x.png" class="footright z-10">
-        <Foot class="mt-10 sm:mt-20 z-20" />
     </div>
 </template>
 

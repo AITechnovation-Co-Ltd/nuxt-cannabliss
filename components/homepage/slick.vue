@@ -44,7 +44,7 @@
         </div>
         <div class="w-full mt-12">
             <div class="w-full mt-8 sm:mt-0 text-xl flex justify-between">
-                <h1 class="text-3xl md:text-5xl text-primary">#Cannabliss</h1>
+                <h1 class="text-3xl md:text-5xl text-primary">#Canabliss</h1>
                 <a href="" class="text-quaternary hidden md:block">
                     <div class="flex items-center">
                         <img class="w-8 mr-2" src="~/static/images/IMG_footer/icons8-instagram@2x.png" alt="">

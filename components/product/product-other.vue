@@ -1,14 +1,14 @@
 <template>
-  <div class="w-full px-4 lg:px-12 xl:px-28 3xl:px-32">
-    <img src="~/static/images/IMG_03ingredients/CANABLISS_01@2x.png" class="widget01">
-    <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337">
+  <div class="w-full px-4 lg:px-12 xl:px-28 3xl:px-32 relative z-20">
+    <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337 hidden sm:block">
     <h1 class="text-4xl sm:text-5xl text-primary text-center font-medium my-12">You may also like</h1>
-    <div class="w-full grid grid-cols-2 xl:grid-cols-4 ">
-      <div class="w-full " v-for="(product, index) in products" :key="index">
+    <div class="w-full grid grid-cols-2 xl:grid-cols-4 relative">
+      <img src="~/static/images/IMG_03ingredients/CANABLISS_01@2x.png" class="widget01 z-10">
+      <div class="w-full z-20" v-for="(product, index) in products" :key="index">
         <template v-if="index < page_screen * page && index >= page_screen * (page - 1)">
           <div class="relative mx-2">
-            <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
-            <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
+            <img src="~/static/images/IMG_02products_detail/Path357@2x.png" :class="{ 'ring-6 ring-tertiary ring-offset rounded-3xl': hover==`hover+${index}`}" />
+            <img v-if="product.imgUrl[0]" class="centered w-full" :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
             <span v-if="$day.getDatetoNow(product.release) <= 7"
               class="px-3 sm:px-9 py-0.5 sm:py-2 text-white text-sm sm:text-base absolute top-3 left-3 sm:top-4 sm:left-4 3xl:top-8 3xl:left-8 bg-primary rounded-full">New</span>
             <div @click="liked(product.no)"
@@ -29,9 +29,11 @@
             <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.genre + ': ' }}{{ product.name }}
             </p>
             <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{ product.detail_th }}</p>
-            <base-button @click="$router.push(`/product/details/${product.no}`)" class="border-quaternary">
-              View more
-            </base-button>
+            <div class="max-w-fit h-auto" v-on:mouseover="hover = `hover+${index}`" v-on:mouseout="hover = ''">
+              <base-button @click="$router.push(`/product/details/${product.no}`)" class="border-quaternary">
+                View more
+              </base-button>
+            </div>
           </div>
         </template>
       </div>
@@ -45,6 +47,7 @@ import data from "@/static/json/products.json"
 export default {
   data() {
     return {
+      hover:false,
       data,
       page: 1,
       total_p: 1,
@@ -127,7 +130,7 @@ export default {
 .widget01 {
   height: 40rem;
   position: absolute;
-  right: -2rem;
+  right: -9.5rem;
 }
 
 .widget337 {
@@ -157,5 +160,17 @@ export default {
   .centered {
     height: 30vw;
   }
+  .widget01 {
+  height: 30rem;
+  right: -1.5rem;
+}
+}
+@media (max-width:640px) {
+  .centered {
+    height: 30vw;
+  }
+  .widget01 {
+  right: -2.5rem;
+}
 }
 </style>

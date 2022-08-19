@@ -13,7 +13,7 @@
     <Ingredients class="relative z-20" />
 
     <!-- Face -->
-    <Face class="relative z-20" />
+    <Face class="relative z-10" />
 
     <!-- Video Review -->
     <VideoReview class="z-10" />
@@ -22,7 +22,8 @@
     <img src="~/static/images/IMG_01home/pages_01home/Group1053@2x.png" class="widget1053 z-10">
     <!-- Blogs -->
     <Blogs class="z-10" />
-    <img src="~/static/images/IMG_01home/pages_01home/Path330@2x.png" class="widget330">
+    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1135@2x.png" class="absolute bg z-10"> -->
+    <!-- <img src="~/static/images/IMG_01home/pages_01home/Path330@2x.png" class="widget330 z-20"> -->
     <!-- Review -->
     <slick class="z-10" />
     <!-- <Review class="z-10" /> -->
@@ -32,10 +33,10 @@
     <img src="~/static/images/IMG_01home/pages_01home/Group1094@2x.png" class="widget1094 z-10">
     <Faq class="z-10" />
 
-    <Subscribe class="z-10" />
+    <Subscribe class="my-12 z-10" />
 
     <!-- Partner -->
-    <Partner class="z-10" />
+    <Partner class="relative z-10" />
     <!-- background -->
   </div>
 </template>
@@ -60,6 +61,9 @@ export default {
 }
 </script>
 <style scoped>
+.bg{
+  bottom: 34.5%;
+}
 .widgetmini1094 {
   height: 8rem;
   position: absolute;

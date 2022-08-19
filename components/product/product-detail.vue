@@ -10,7 +10,7 @@
       <div
         class="w-full flex mt-8 px-4 lg:px-12 xl:px-28 3xl:px-32 flex-col lg:flex-row justify-between items-center xl:items-start">
         <!-- Picture -->
-        <div class="w-full overflow-hidden lg:w-1/2">
+        <div class="w-full overflow-hidden lg:w-1/2 z-20">
           <div class="flex items-center relative">
             <div @click="arrow_left" class="absolute left-0 top-1/2">
               <base-icon icon='dropdown' viewBox="0 0 24 24" class="transform rotate-90" size="32" />
@@ -99,17 +99,15 @@
             class="w-full flex flex-col md:flex-row justify-evenly items-center z-20 px-4 lg:px-12 xl:px-28 3xl:px-32">
             <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
-              <h1 class="text-lg 3xl:text-2xl font-normal">Canabinoid (Cbd)</h1>
-              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">Anti inflammatory to make skin stronger
+              <h1 class="text-lg 3xl:text-2xl font-normal">CDB</h1>
+              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">สารสกัด CBD จากกัญชงที่มีส่วนช่วยในการลดการอักเสบ <br class="block sm:hidden"> ปรับสภาพ และ คืนความชุ่มชื้นให้กับผิว
               </p>
             </div>
             <div class="vl h-60 bg-primary hidden md:block"></div>
             <div class="w-full mt-4 sm:mt-0 md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
-              <h1 class="text-lg sm:text-xl text-center font-normal">Leucojum Aestivum Bulb Extract <br
-                  class="block sm:hidden"> (Ibr - Snowflake®)</h1>
-              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">Anti Aging To Make Skin Younger And
-                Brighter</p>
+              <h1 class="text-lg sm:text-xl text-center font-normal">Snow Bell Extract</h1>
+              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">จากประเทศเกาหลี ที่มีสารต้านอนุมูลอิสระ <br class="block sm:hidden">และทำให้ผิวแลดูขาว กระจ่างใสขึ้น</p>
             </div>
           </div>
         </div>
@@ -320,6 +318,9 @@ export default {
   .bg {
     position: absolute;
     bottom: 0;
+    object-fit: cover;
+    width: auto;
+    height: 360px;
   }
 }
 </style>

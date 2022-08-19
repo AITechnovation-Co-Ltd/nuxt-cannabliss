@@ -6,7 +6,7 @@
       <div class="centered h-20 w-20 bg-tertiary rounded-full flex items-center justify-center">
         <base-icon icon="play" viewBox="0 0 30 41" size="35" class="text-white" />
       </div>
-      <base-button class="mt-6 mr-0 ml-auto xl:mt-12 block sm:hidden" @click="$router.push(`/product/details/3`)">View more</base-button>
+      <base-button class="mt-6 mr-auto ml-auto xl:mt-12 block sm:hidden" @click="$router.push(`/product/details/3`)">View more</base-button>
     </div>
     <div class="w-full sm:w-11/12 md:w-1/2 xl:w-2/5 ml-0 md:ml-8 2xl:ml-20 text-xl text-quaternary font-light z-20">
       <p class="text-xs sm:text-sm">Video Review</p>
