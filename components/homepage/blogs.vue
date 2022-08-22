@@ -70,6 +70,7 @@ export default
   transform: translate(4rem, 31rem);
 }
 .widget330 {
+  display: none;
   height: 22rem;
   bottom: -170px;
   left: -150px;
