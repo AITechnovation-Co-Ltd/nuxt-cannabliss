@@ -42,7 +42,7 @@
       </div>
       <!-- Review card -->
       <img src="~/static/images/IMG_03blogs_details/Group803@2x.png" class="widget803">
-      <div v-if="list_reviews.length != 0" class="w-full flex flex-col justify-center divide-y divide-primary47">
+      <div v-if="list_reviews.length != 0 && list_reviews[0].product_id !=100" class="w-full flex flex-col justify-center divide-y divide-primary47">
         <div v-for="(review, index) in list_reviews.slice(0, count)" :key="index">
           <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
             <!-- Image Product-->
