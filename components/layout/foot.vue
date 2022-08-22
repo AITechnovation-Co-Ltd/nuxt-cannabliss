@@ -52,22 +52,22 @@
             <h2 class="mb-3 mt-6 text-lg font-normal">Let's talk</h2>
             <ul>
               <li class="mb-4">
-                <p>T: +66 (0) 2712-0333</p>
+                <p>T: +391 (0)35 2568 4593</p>
               </li>
               <li class="mb-4">
-                <p>E: info@panacee.com</p>
+                <p>E: info@worldmedicalalliance.com</p>
               </li>
               <li class="flex flex-row">
-                <a href="#" class=" mr-1 hover dark:hover:text-white">
+                <a href="#" class=" mr-1 hover dark:hover:text-white hidden">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-facebook(1)@2x.png" alt="">
                 </a>
-                <a href="#" class=" mx-1 hover dark:hover:text-white">
+                <a href="#" class=" mx-1 hover dark:hover:text-white hidden">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-instagram@2x.png" alt="">
                 </a>
                 <a href="https://lin.ee/i5MkM6w" target="_blank" class=" mx-1 hover dark:hover:text-white">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-line(1)@2x.png" alt="">
                 </a>
-                <a href="#" class=" mx-1 hover dark:hover:text-white">
+                <a href="#" class=" mx-1 hover dark:hover:text-white hidden">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-twitter(1)@2x.png" alt="">
                 </a>
                 <a href="#" class=" ml-1 hover dark:hover:text-white hidden">
