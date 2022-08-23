@@ -25,13 +25,14 @@
     <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1135@2x.png" class="absolute bg z-10"> -->
     <!-- <img src="~/static/images/IMG_01home/pages_01home/Path330@2x.png" class="widget330 z-20"> -->
     <!-- Review -->
-    <slick class="z-10" />
+    <slick class="z-10 hidden" />
     <!-- <Review class="z-10" /> -->
 
     <!-- FAQ -->
     <img src="~/static/images/IMG_01home/pages_01home/Group1110@2x.png" class="widget1110">
     <img src="~/static/images/IMG_01home/pages_01home/Group1094@2x.png" class="widget1094 z-10">
-    <Faq class="z-10" />
+    <Faq class="z-10 hidden" />
+    <ItemContent/>
 
     <Subscribe class="my-12 z-10" />
 
@@ -54,9 +55,10 @@ import Review from '~/components/homepage/review'
 import Partner from '~/components/homepage/partner.vue'
 import VideoReview from '../components/homepage/video-review.vue'
 import Face from '~/components/homepage/face.vue'
+import ItemContent from '~/components/homepage/item-content.vue'
 
 export default {
-  components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick, Carouselphone },
+  components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick, Carouselphone, ItemContent },
   layout: 'home',
 }
 </script>

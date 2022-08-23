@@ -11,12 +11,12 @@
 
         <div class="flex items-center my-4">
           <base-icon viewBox="0 0 153 178" icon="phone" class="w-20 h-20 ml-4" />
-          <p class="text-primary text-lg border-primary">+391 (0)35 2568 4593</p>
+          <p class="text-primary text-lg border-primary">1608</p>
         </div>
 
         <div class="flex items-center">
           <base-icon viewBox="0 0 157 156" icon="email" class="w-20 h-20 mr-4" />
-          <p class="text-primary text-base border-primary">info@worldmedicalalliance.com</p>
+          <p class="text-primary text-base border-primary">info@panacee.com</p>
         </div>
       </div>
 

@@ -68,12 +68,12 @@
     </hooper>
     <div class="social justify-center sm:absolute right-8 xl:right-24 2xl:right-36">
       <div class="flex space-x-6 sm:space-x-8">
-        <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
-        <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
+        <img class="w-8 sm:w-6 lg:w-8 hidden" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
+        <img class="w-8 sm:w-6 lg:w-8 hidden" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
         <a href="https://lin.ee/i5MkM6w" target="_blank">
-          <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
+          <img class="w-8 sm:w-6 lg:w-8 hidden" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
         </a>
-        <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt="">
+        <img class="w-8 sm:w-6 lg:w-8 hidden" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt="">
       </div>
     </div>
   </div>
@@ -100,7 +100,7 @@ export default {
         itemsToShow: 1,
         itemsToSlide: 1,
         centerMode: true,
-        autoPlay: false,
+        autoPlay: true,
         playSpeed: 6000,
         wheelControl: false,
       },

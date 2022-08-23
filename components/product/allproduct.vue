@@ -185,6 +185,11 @@ export default {
                     list = self.products.filter((e) => e.type === self.type)
                 }
             }
+            list?.sort((a, b) => {
+            let noA = a.no;
+            let noB = b.no;
+            return (noA > noB) ? -1 : 1;
+            })
             self.page = 1;
             self.total_p = Math.ceil(list.length / self.item_per_page)
             return list
