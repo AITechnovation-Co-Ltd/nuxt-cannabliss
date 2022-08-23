@@ -52,7 +52,7 @@
             <h2 class="mb-3 mt-6 text-lg font-normal">Let's talk</h2>
             <ul>
               <li class="mb-4">
-                <p>T: 1608</p>
+                <p>T: 1608 ต่อ 8</p>
               </li>
               <li class="mb-4">
                 <p>E: info@panacee.com</p>
