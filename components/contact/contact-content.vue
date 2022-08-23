@@ -11,7 +11,7 @@
 
         <div class="flex items-center my-4">
           <base-icon viewBox="0 0 153 178" icon="phone" class="w-20 h-20 ml-4" />
-          <p class="text-primary text-lg border-primary">1608</p>
+          <p class="text-primary text-lg border-primary">1608 ต่อ 8</p>
         </div>
 
         <div class="flex items-center">
