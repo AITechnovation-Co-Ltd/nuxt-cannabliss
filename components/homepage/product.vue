@@ -112,6 +112,11 @@ export default {
       } else {
         list = this.products.filter((e) => e.type === this.type)
       }
+      list?.sort((a, b) => {
+        let noA = a.no;
+        let noB = b.no;
+        return (noA > noB) ? -1 : 1;
+      })
       this.page = 1;
       this.total_p = Math.ceil(list.length / this.page_screen)
       return list

@@ -100,7 +100,7 @@ export default {
         itemsToShow: 1,
         itemsToSlide: 1,
         centerMode: true,
-        autoPlay: false,
+        autoPlay: true,
         playSpeed: 6000,
         wheelControl: false,
       },
