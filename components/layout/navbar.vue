@@ -5,7 +5,7 @@
 
         <!-- Logo -->
         <nuxt-link to="/" class="flex items-center">
-          <img class="h-16" src="~/static/logo/Logo-CANABLISS.png" alt="">
+          <img class="h-16" src="~/static/logo/LOGO_PANACEE_COSMETIC-02.png" alt="">
         </nuxt-link>
 
         <div class="xl:hidden">

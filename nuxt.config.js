@@ -25,7 +25,7 @@ export default {
     ],
     link: [{ rel: "icon", href: "/images/logo.svg" }],
     link: [
-      { rel: "icon", href: "/logo/Logo-CANABLISS.png" },
+      { rel: "icon", href: "/logo/LOGO_PANACEE_COSMETIC-02.png" },
       {
         rel: "stylesheet",
         href: "https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css",
