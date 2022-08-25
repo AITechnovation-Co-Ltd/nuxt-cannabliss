@@ -5,7 +5,7 @@
         <!-- logo -->
         <div @click="gotoHome()"
           class="w-full lg:w-1/4 flex justify-center sm:justify-start lg:justify-center mb-6 md:mb-0 hover:cursor-pointer z-20">
-          <img class="h-32" src="~/static/logo/Logo-CANABLISS.png" alt="">
+          <img class="h-32" src="~/static/logo/LOGO_PANACEE_COSMETIC-02.png" alt="">
         </div>
         <div class="w-full lg:w-3/4 px-4 sm:px-0 grid text-sm grid-cols-2 sm:flex justify-around content">
           <!-- product -->

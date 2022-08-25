@@ -171,10 +171,10 @@
   {
     "no": 8,
     "imgUrl": [
-      "/Ultra-mind.jpg",
-      "/Ultra-mind.jpg",
-      "/Ultra-mind.jpg",
-      "/Ultra-mind.jpg"
+      "/Ultra-mind.png",
+      "/Ultra-mind2.jpg",
+      "/Ultra-mind.png",
+      "/Ultra-mind2.jpg"
     ],
     "genre": "CANABLISS CLEAR",
     "genre_th": "คานาบลิส เคลียร์",
@@ -346,10 +346,10 @@
   {
     "no": 15,
     "imgUrl": [
-      "/super-berry.png",
+      "/Super-berry.png",
       "/Super-berry2.jpg",
-      "/super-berry.png",
-      "/Super-berry2.jpg"
+      "/Super-berry3.jpg",
+      "/Super-berry.png"
     ],
     "genre": "CANABLISS OASIZ",
     "genre_th": "คานาบลีส โอเอซีส",
@@ -371,10 +371,10 @@
   {
     "no": 16,
     "imgUrl": [
-      "/Spf50-pa-tinted-hybrid-block.jpg",
-      "/Spf50-pa-tinted-hybrid-block.jpg",
-      "/Spf50-pa-tinted-hybrid-block.jpg",
-      "/Spf50-pa-tinted-hybrid-block.jpg"
+      "/Spf50-pa-tinted-hybrid-block.png",
+      "/Spf50-pa-tinted-hybrid-block2.jpg",
+      "/Spf50-pa-tinted-hybrid-block.png",
+      "/Spf50-pa-tinted-hybrid-block2.jpg"
     ],
     "genre": "CANABLISS GUARDIAN",
     "genre_th": "คานาบลิส การ์เดี้ยน",
@@ -387,7 +387,7 @@
     "link": "https://morhelloclinic.com/product/canabliss-guardian-tinted-hybrid-block-spf50-pa-20-ml/",
     "type": "Face",
     "quantity": "",
-    "price": 0,
+    "price": 950.0,
     "sales": 3,
     "release": "2022-08-22",
     "islike": false,
@@ -396,23 +396,23 @@
   {
     "no": 17,
     "imgUrl": [
-      "/cannabliss-leaf-serum.jpg",
-      "/cannabliss-leaf-serum.jpg",
-      "/cannabliss-leaf-serum.jpg",
-      "/cannabliss-leaf-serum.jpg"
+      "/cannabliss-leaf-serum.png",
+      "/cannabliss-leaf-serum2.jpg",
+      "/cannabliss-leaf-serum.png",
+      "/cannabliss-leaf-serum2.jpg"
     ],
     "genre": "CANABLISS CROWN",
     "genre_th": "คานาบลิส คราวน์",
     "name": "CANNABLISS LEAF SERUM THE BLISSFUL SKIN FROM PANACEE",
     "name_th": "",
-    "subtitle_th": "เซรั่มชะลอวัย คงผิวหน้าให้อ่อนเยาว์อยู่เสมอ",
-    "detail_th": "ปลอบประโลมผิวที่ระคายเคือง ลดการอักเสบ สารแอนตี้ออกซิแดนท์ที่ได้จากสารสกัดธรรมชาติ ช่วยปกป้องเซลล์ผิวจากรังสียูวี ชะลอการเกิดริ้วรอย กระตุ้นการสร้างคอลลาเจนให้แก้ผิว เพิ่มความยืดหยุ่น ช่วยให้ผิวตึงกระชับ ยับยั้งการสร้างเม็ดสี ช่วยให้ฝ้ากระจางลง",
-    "how2use": "",
-    "ingredients": "",
-    "link": "",
+    "subtitle_th": "",
+    "detail_th": "เซรั่มชะลอวัยให้ผิวคงความอ่อนเยาว์ด้วยคุณค่าทองคำบริสุทธิ์ ผสาน CBD ที่ช่วยปลอบประโลมผิวบอบบาง ระคายเคืองง่าย ให้แข็งแรง พร้อมเติมเต็มความชุ่มชื้นให้กับผิวได้อย่างยาวนาน",
+    "how2use": "โดยบีบเซรั่มจากหลอด ให้มีขนาดเท่าเมล็ดถั่ว เพียง 2-3 หยด หลังจากนั้นใช้ปลายนิ้วเกลี่ยให้ทั่วใบหน้า เริ่มจากจุดกลางหน้าผาก จมูก ปลายคาง และแก้มทั้ง 2 ข้าง นวดเบาๆ ให้เนื้อเซรั่มกระจายทั่วใบหน้าและลำคอ",
+    "ingredients": "CBD สารสกัดจากกัญชา ช่วยเติมความชุ่มชื้นให้กับผิว ลดการอักเสบและปรับสมดุลการผลิตน้ำมันในผิวให้เหมาะสม ทองคำบริสุทธิ์ ช่วยชะลอการเกิดริ้วรอย เร่งการเผยผิวใหม่ที่เปล่งปลั่งมากขึ้น สารสกัดจากดอกเอลเดอร์ ช่วยปลอบประโลมผิวที่แพ้/แดง/ระคายเคือง สารสกัดจากส้มและ AHA ช่วยกระตุ้นการผลัดเซลล์ผิวตามธรรมชาติ เผยผิวดูสุขภาพดี วิตามิน C ช่วยต้านอนุมูลอิสระ และกระตุ้นการสร้างคอลลาเจน ให้ผิวดูอิ่มฟู ไม่หย่อนคล้อย",
+    "link": "https://morhelloclinic.com/product/panacee-cannabis-leaf-serum-1-%e0%b8%82%e0%b8%a7%e0%b8%94/",
     "type": "Face",
-    "quantity": "",
-    "price": 0,
+    "quantity": "30 ML",
+    "price": 990.0,
     "sales": 3,
     "release": "2022-08-22",
     "islike": false,
