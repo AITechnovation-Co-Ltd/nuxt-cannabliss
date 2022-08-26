@@ -87,7 +87,7 @@
 
 <script>
 import banners from '@/static/json/bannerscom.json'
-import Model from "@/components/homepage/model.vue"
+import Model from "~/components/homepage/modal.vue"
 import '@/components/homepage/css/hooper.css'
 import {
   Hooper,
