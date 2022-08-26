@@ -73,10 +73,10 @@ export default {
       if (this.screen > 1439) {
         item_per_page = 4
       }
-      else if (this.screen <= 1439 && this.screen > 1280) {
+      else if (this.screen <= 1439 && this.screen >= 1280) {
         item_per_page = 3
       }
-      else if (this.screen <= 1280) {
+      else if (this.screen < 1280) {
         item_per_page = 2
       }
       return item_per_page
