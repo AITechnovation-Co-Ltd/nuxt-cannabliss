@@ -58,10 +58,10 @@
                 <p>E: info@panacee.com</p>
               </li>
               <li class="flex flex-row">
-                <a href="#" class=" mr-1 hover dark:hover:text-white hidden">
+                <a href="https://www.facebook.com/CanablissCosmetic" target="_blank" class=" mr-1 hover dark:hover:text-white">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-facebook(1)@2x.png" alt="">
                 </a>
-                <a href="#" class=" mx-1 hover dark:hover:text-white hidden">
+                <a href="https://www.instagram.com/canablisscosmetic/" target="_blank" class=" mx-1 hover dark:hover:text-white">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-instagram@2x.png" alt="">
                 </a>
                 <a href="https://lin.ee/i5MkM6w" target="_blank" class=" mx-1 hover dark:hover:text-white">
