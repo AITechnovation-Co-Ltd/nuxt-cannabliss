@@ -13,7 +13,7 @@
               <div class="w-full flex items-center mt-2">
                 <div
                   class="h-16 w-16 sm:h-20 sm:w-20 mr-2 border-2 border-tertiary rounded-full flex items-center justify-center">
-                  <div
+                  <div @click="$refs.alertPopup.show()"
                     class="h-12 w-12 sm:h-16 sm:w-16 bg-tertiary rounded-full flex items-center justify-center cursor-pointer">
                     <base-icon icon="play" viewBox="0 0 30 41" size="18" class="text-white" />
                   </div>
@@ -26,11 +26,13 @@
         </div>
       </slide>
     </hooper>
+    <Model ref="alertPopup" />
   </div>
 </template>
 
 <script>
 import banners from '@/static/json/banners.json'
+import Model from "~/components/homepage/modal.vue"
 import '@/components/homepage/css/hooper.css'
 import {
   Hooper,
@@ -41,6 +43,7 @@ export default {
   components: {
     Hooper,
     Slide,
+    Model,
     HooperPagination
   },
   data() {
