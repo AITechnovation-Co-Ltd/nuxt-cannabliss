@@ -1,81 +1,87 @@
-[  {
-  "no": 1,
-  "imgUrl": [
-    "/First-step.png",
-    "/First-step2.jpg",
-    "/First-step.png",
-    "/First-step2.jpg"
-  ],
-  "genre": "Canabliss Oasiz",
-  "genre_th": "",
-  "name": "First Step Amino Essence",
-  "name_th": "",
-  "subtitle_th": "ผสานสารสกัดจากพืชด้วยเทคนิคการสกัดพิเศษ",
-  "detail_th": "อ่อนโยนต่อผิวแพ้ง่าย ช่วยเติมน้ำให้แก่ผิว กักเก็บความชุ่มชื้นได้ยาวนาน ช่วยลดการอักเสบได้อย่างตรงจุด มี Amino acids ช่วยเติมอาหารให้แก่ผิว ผิวนุ่ม อิ่มน้ำ และดูเปล่งปลั่ง",
-  "how2use": "ทำความสะอาดผิวหน้าเสร็จ ให้ใช้ น้ำตบ ทันที เพราะหลังล้างหน้ารูขุมขนกำลังเปิดอยู่ เหมาะแก่การบำรุงผิวขั้นแรก  จะใช้หยดบนสำลีแล้วเช็ดผิว หรือ หยดบนฝ่ามือแล้วตบเบาๆให้ทั่วใบหน้าก็ได้",
-  "ingredients": "Aqua, Glycerin, Glycereth-26, Methyl gluceth-20, 1,2-Hexanediol, Propanediol, Peg-40 Hydrogenated castor oil, Butylene glycol, Hydroxyacetophenone, Sodium polyacryloyldimethyl taurate, Centella asiatica extract, Disodium edta, Styrax japonicus branch/fruit/leaf extract, Peucedanum Graveolens extract, Xanthan gum, Cannabis SPP. extract (cannabidiol), Glycine, Eruca sativa leaf extract, Caprylyl glycol, Serine, Glutamic acid, Aspartic acid, Leucine, Alanine, Lysine, Arginine, Tyrosine, Phenylalanine, Proline, Threonine, Valine, Myristoyl hexapeptide-5, Isoleucine, Histidine, Glucose, Sodium hyaluronate, Chondrus crispus extract, Hydroxypropyltrimonium hyaluronate, Hydrolyzed hyaluronic acid, Sodium acetylated hyaluronate, Hyaluronic acid, Hydrolyzed sodium hyaluronate, Sodium hyaluronate crosspolymer, Potassium hyaluronate ",
-  "link": "https://morhelloclinic.com/product/canabliss-oasiz-first-step-amino-essence-100-ml/",
-  "type": "Face",
-  "quantity": "100 ML",
-  "price": 1550.0,
-  "sales": 4,
-  "release": "2022-07-12",
-  "islike": false,
-  "best": true
-},
-{
-  "no": 2,
-  "imgUrl": [
-    "/probiotic.png",
-    "/probiotic2.jpg",
-    "/probiotic.png",
-    "/probiotic2.jpg"
-  ],
-  "genre": "Canabliss Guardian",
-  "genre_th": "",
-  "name": "Pre&Pro Biotic Balancing Essence",
-  "name_th": "",
-  "subtitle_th": "ช่วยคืนสมดุลให้แก่ผิวที่ขาดน้ำและผิวแข็งแรง ด้วย Probiotics",
-  "detail_th": "น้ำตบสูตรอ่อนโยน เนื้อบางเบา ไม่เหนียวเหนอะหนะ ช่วยคืนสมดุลให้แก่ผิวที่ขาดน้ำ ด้วย Probiotics ให้ผิวแข็งแรง พร้อมมอบความชุ่มชื้น เนียนนุ่มจากกรดไฮยาลูโรนิค แบบ 3D ที่ครอบคลุมตั้งแต่ขนาดใหญ่ เพื่อคลุมผิวด้านนอก ขนาดกลางเพื่อช่วยดึงน้ำให้แก่ผิว และขนาดเล็กที่ซึมลึก เพิ่มความชุ่มชื้นยาวนาน ผสานการเสริมเกราะป้องกัน ด้วยนาโนเซราไมด์เข้าฟื้นอย่างล้ำลึก",
-  "how2use": "ทำความสะอาดผิวหน้าเสร็จ ให้ใช้ น้ำตบ ทันที เพราะหลังล้างหน้ารูขุมขนกำลังเปิดอยู่ เหมาะแก่การบำรุงผิวขั้นแรก  จะใช้หยดบนสำลีแล้วเช็ดผิว หรือ หยดบนฝ่ามือแล้วตบเบาๆให้ทั่วใบหน้าก็ได้",
-  "ingredients": "Aqua, Propylene glycol, Peg-40 hydrogenated castor oil, Butylene glycol, 1,2-Hexanediol, Lactobacillus ferment lysate, Propanediol, Phenoxyethanol, Bifida ferment lysate, Glycerin, Alpha-glucan Oligosaccharide, Spirulina maxima extract, Saccharomyces/viscum album ferment extract, Disodium edta, Lactobacillus /soybean ferment extract, Ethylhexylglycerin, Saccharomyces/imperata cylindrica root ferment extract, Sodium hyaluronate, Styrax japonicus branch/fruit/leaf extract, Lecithin, Aloe barbadensis leaf extract, Cannabis SPP. extract (cannabidiol), Hydrolyzed hyaluronic acid, Hydrolyzed sodium hyaluronate",
-  "link": "https://morhelloclinic.com/product/canabliss-preprobiotic-balancing-essence-100-ml/",
-  "type": "Face",
-  "quantity": "100 ML",
-  "price": 1550.0,
-  "sales": 4,
-  "release": "2022-07-12",
-  "islike": false,
-  "best": true
-},
-{
-  "no": 3,
-  "imgUrl": [
-    "/Rose-petal.png",
-    "/Rose-petal2.jpg",
-    "/Rose-petal.png",
-    "/Rose-petal2.jpg"
-  ],
-  "genre": "Canabliss Guardian",
-  "genre_th": "",
-  "name": "Rose Petal Anti-Pollution Toner",
-  "name_th": "",
-  "subtitle_th": "ด้วยคุณค่าสารสกัดจากกุหลาบ และ Whitening",
-  "detail_th": "ช่วยลดเลือนริ้วรอยบนผิวอย่างตรงจุด ปลอบประโลมผิว ให้แลดูเปล่งปลั่งกระจ่างใส ทําความสะอาดสิ่งสกปรกที่ตกค้างบนใบหน้า จากมลภาวะและฝุ่น PM 2.5 ช่วยให้ผิวสะอาดนุ่มชุ่มชื้น อ่อนโยนแม้ผิวแพ้ง่าย",
-  "how2use": "ใช้เช็ดทำความสะอาดทั่วใบหน้า หลังการล้งหน้า อาจจะนำมาเช็ดทีละครึ่งหน้าตามแนวโพรงขน หรือ เช็ดย้อนรูขุมขนเพื่อทำความสะอาดได้อย่างล้ำลึกมากขึ้น",
-  "ingredients": "Aqua, Rosa damascena flower water, Rosa alba flower water, Glycereth-26, 1,2-Hexanediol, Methyl gluceth-20, Peg-40 hydrogeated castor oil, Hydroxyacetophenone, Hamamelis virginiana leaf extract, Ectoin, Glycerin, Propylene glycol, Rosa centifolia flower, Trisodium citrate, Disodium edta, Styrax japonicus brach/fruit/leaf extract, Sodium hyaluronate, Biosaccharide gum-4, Sodium benzoate, Canabis SPP. extract (cannabidiol), Rosa cetifolia flower extract, Rosa hybrid flower extract, Potassium sorbate ",
-  "link": "https://morhelloclinic.com/product/canabliss-rose-petal-anti-pollution-toner-100-ml/",
-  "type": "Face",
-  "quantity": "100 ML",
-  "price": 1550.0,
-  "sales": 4,
-  "release": "2022-07-12",
-  "islike": false,
-  "best": true
-},
+[
+  {
+    "no": 1,
+    "imgUrl": [
+      "/First-step.png",
+      "/fisrt-step-f.jpg",
+      "/fisrt-step-B.jpg",
+      "/First-step2.jpg"
+    ],
+    "genre": "Canabliss Oasiz",
+    "genre_th": "",
+    "name": "First Step Amino Essence",
+    "name_th": "",
+    "subtitle_th": "ผสานสารสกัดจากพืชด้วยเทคนิคการสกัดพิเศษ",
+    "detail_th": "อ่อนโยนต่อผิวแพ้ง่าย ช่วยเติมน้ำให้แก่ผิว กักเก็บความชุ่มชื้นได้ยาวนาน ช่วยลดการอักเสบได้อย่างตรงจุด มี Amino acids ช่วยเติมอาหารให้แก่ผิว ผิวนุ่ม อิ่มน้ำ และดูเปล่งปลั่ง",
+    "how2use": "ทำความสะอาดผิวหน้าเสร็จ ให้ใช้ น้ำตบ ทันที เพราะหลังล้างหน้ารูขุมขนกำลังเปิดอยู่ เหมาะแก่การบำรุงผิวขั้นแรก  จะใช้หยดบนสำลีแล้วเช็ดผิว หรือ หยดบนฝ่ามือแล้วตบเบาๆให้ทั่วใบหน้าก็ได้",
+    "ingredients": "Aqua, Glycerin, Glycereth-26, Methyl gluceth-20, 1,2-Hexanediol, Propanediol, Peg-40 Hydrogenated castor oil, Butylene glycol, Hydroxyacetophenone, Sodium polyacryloyldimethyl taurate, Centella asiatica extract, Disodium edta, Styrax japonicus branch/fruit/leaf extract, Peucedanum Graveolens extract, Xanthan gum, Cannabis SPP. extract (cannabidiol), Glycine, Eruca sativa leaf extract, Caprylyl glycol, Serine, Glutamic acid, Aspartic acid, Leucine, Alanine, Lysine, Arginine, Tyrosine, Phenylalanine, Proline, Threonine, Valine, Myristoyl hexapeptide-5, Isoleucine, Histidine, Glucose, Sodium hyaluronate, Chondrus crispus extract, Hydroxypropyltrimonium hyaluronate, Hydrolyzed hyaluronic acid, Sodium acetylated hyaluronate, Hyaluronic acid, Hydrolyzed sodium hyaluronate, Sodium hyaluronate crosspolymer, Potassium hyaluronate ",
+    "link": "https://morhelloclinic.com/product/canabliss-oasiz-first-step-amino-essence-100-ml/",
+    "type": "Face",
+    "quantity": "100 ML",
+    "price": 1550.0,
+    "sales": 4,
+    "release": "2022-07-12",
+    "islike": false,
+    "best": true
+  },
+  {
+    "no": 2,
+    "imgUrl": [
+      "/probiotic.png",
+      "/Pre&Pro-biotic-f.jpg",
+      "/Pre&Pro-biotic-b.jpg",
+      "/probiotic2.jpg"
+    ],
+    "genre": "Canabliss Guardian",
+    "genre_th": "",
+    "name": "Pre&Pro Biotic Balancing Essence",
+    "name_th": "",
+    "subtitle_th": "ช่วยคืนสมดุลให้แก่ผิวที่ขาดน้ำและผิวแข็งแรง ด้วย Probiotics",
+    "detail_th": "น้ำตบสูตรอ่อนโยน เนื้อบางเบา ไม่เหนียวเหนอะหนะ ช่วยคืนสมดุลให้แก่ผิวที่ขาดน้ำ ด้วย Probiotics ให้ผิวแข็งแรง พร้อมมอบความชุ่มชื้น เนียนนุ่มจากกรดไฮยาลูโรนิค แบบ 3D ที่ครอบคลุมตั้งแต่ขนาดใหญ่ เพื่อคลุมผิวด้านนอก ขนาดกลางเพื่อช่วยดึงน้ำให้แก่ผิว และขนาดเล็กที่ซึมลึก เพิ่มความชุ่มชื้นยาวนาน ผสานการเสริมเกราะป้องกัน ด้วยนาโนเซราไมด์เข้าฟื้นอย่างล้ำลึก",
+    "how2use": "ทำความสะอาดผิวหน้าเสร็จ ให้ใช้ น้ำตบ ทันที เพราะหลังล้างหน้ารูขุมขนกำลังเปิดอยู่ เหมาะแก่การบำรุงผิวขั้นแรก  จะใช้หยดบนสำลีแล้วเช็ดผิว หรือ หยดบนฝ่ามือแล้วตบเบาๆให้ทั่วใบหน้าก็ได้",
+    "ingredients": "Aqua, Propylene glycol, Peg-40 hydrogenated castor oil, Butylene glycol, 1,2-Hexanediol, Lactobacillus ferment lysate, Propanediol, Phenoxyethanol, Bifida ferment lysate, Glycerin, Alpha-glucan Oligosaccharide, Spirulina maxima extract, Saccharomyces/viscum album ferment extract, Disodium edta, Lactobacillus /soybean ferment extract, Ethylhexylglycerin, Saccharomyces/imperata cylindrica root ferment extract, Sodium hyaluronate, Styrax japonicus branch/fruit/leaf extract, Lecithin, Aloe barbadensis leaf extract, Cannabis SPP. extract (cannabidiol), Hydrolyzed hyaluronic acid, Hydrolyzed sodium hyaluronate",
+    "link": "https://morhelloclinic.com/product/canabliss-preprobiotic-balancing-essence-100-ml/",
+    "type": "Face",
+    "quantity": "100 ML",
+    "price": 1550.0,
+    "sales": 4,
+    "release": "2022-07-12",
+    "islike": false,
+    "best": true
+  },
+  {
+    "no": 3,
+    "imgUrl": [
+      "/Rose-petal.png",
+      "/Rose-Petal-f.jpg",
+      "/Rose-Petal_b.jpg",
+      "/Rose-petal2.jpg"
+    ],
+    "genre": "Canabliss Guardian",
+    "genre_th": "",
+    "name": "Rose Petal Anti-Pollution Toner",
+    "name_th": "",
+    "subtitle_th": "ด้วยคุณค่าสารสกัดจากกุหลาบ และ Whitening",
+    "detail_th": "ช่วยลดเลือนริ้วรอยบนผิวอย่างตรงจุด ปลอบประโลมผิว ให้แลดูเปล่งปลั่งกระจ่างใส ทําความสะอาดสิ่งสกปรกที่ตกค้างบนใบหน้า จากมลภาวะและฝุ่น PM 2.5 ช่วยให้ผิวสะอาดนุ่มชุ่มชื้น อ่อนโยนแม้ผิวแพ้ง่าย",
+    "how2use": "ใช้เช็ดทำความสะอาดทั่วใบหน้า หลังการล้งหน้า อาจจะนำมาเช็ดทีละครึ่งหน้าตามแนวโพรงขน หรือ เช็ดย้อนรูขุมขนเพื่อทำความสะอาดได้อย่างล้ำลึกมากขึ้น",
+    "ingredients": "Aqua, Rosa damascena flower water, Rosa alba flower water, Glycereth-26, 1,2-Hexanediol, Methyl gluceth-20, Peg-40 hydrogeated castor oil, Hydroxyacetophenone, Hamamelis virginiana leaf extract, Ectoin, Glycerin, Propylene glycol, Rosa centifolia flower, Trisodium citrate, Disodium edta, Styrax japonicus brach/fruit/leaf extract, Sodium hyaluronate, Biosaccharide gum-4, Sodium benzoate, Canabis SPP. extract (cannabidiol), Rosa cetifolia flower extract, Rosa hybrid flower extract, Potassium sorbate ",
+    "link": "https://morhelloclinic.com/product/canabliss-rose-petal-anti-pollution-toner-100-ml/",
+    "type": "Face",
+    "quantity": "100 ML",
+    "price": 1550.0,
+    "sales": 4,
+    "release": "2022-07-12",
+    "islike": false,
+    "best": true
+  },
   {
     "no": 4,
-    "imgUrl": ["/spf-50.png", "/spf-502.jpg", "/spf-50.png", "/spf-502.jpg"],
+    "imgUrl": [
+      "/spf-50.png",
+      "/Spf50Pa+++body-lotion-f.jpg",
+      "/Spf50Pa+++body-lotion-b.jpg",
+      "/spf-502.jpg"
+    ],
     "genre": "CANABLISS GUARDIAN",
     "genre_th": "คานาบลิส การ์เดี้ยน",
     "name": "BODY LOTION SKIN PROTECTING SPF50 PA+++",
@@ -97,8 +103,8 @@
     "no": 5,
     "imgUrl": [
       "/Anti-hair.png",
-      "/Anti-hair2.jpg",
-      "/Anti-hair.png",
+      "/anti-hair-fall-f.jpg",
+      "/anti-hair-fall-back.jpg",
       "/Anti-hair2.jpg"
     ],
     "genre": "CANABLISS CROWN",
@@ -122,8 +128,8 @@
     "no": 6,
     "imgUrl": [
       "/Red-fruit.png",
-      "/Red-fruit2.jpg",
-      "/Red-fruit.png",
+      "/RED-FRUIT-OVERNIGHT-MASK_f.jpg",
+      "/RED-FRUIT-OVERNIGHT-MASK_b.jpg",
       "/Red-fruit2.jpg"
     ],
     "genre": "CANABLISS OASIZ",
@@ -147,8 +153,8 @@
     "no": 7,
     "imgUrl": [
       "/thai-herbal.png",
-      "/thai-herbal2.jpg",
-      "/thai-herbal.png",
+      "/Thai-Herbal-f.jpg",
+      "/Thai-Herbal-b.jpg",
       "/thai-herbal2.jpg"
     ],
     "genre": "CANABLISS CLEAR",
@@ -172,8 +178,8 @@
     "no": 8,
     "imgUrl": [
       "/Ultra-mind.png",
-      "/Ultra-mind2.jpg",
-      "/Ultra-mind.png",
+      "/Untra-mild-front.jpg",
+      "/Untra-mild-back.jpg",
       "/Ultra-mind2.jpg"
     ],
     "genre": "CANABLISS CLEAR",
@@ -197,8 +203,8 @@
     "no": 9,
     "imgUrl": [
       "/Multi-care.png",
-      "/Multi-care2.jpg",
-      "/Multi-care.png",
+      "/MULTI-CARE_f.jpg",
+      "/MULTI-CARE_b.jpg",
       "/Multi-care2.jpg"
     ],
     "genre": "CANABLISS CROWN",
@@ -209,7 +215,7 @@
     "detail_th": "ทรีทเม้นท์บำรุงเส้นผม สูตรผสานสารสกัดที่มีสารแคนนาบิไดออล (CBD) จากกัญชง และสารสกัดจากธรรมชาติมากมาย อาทิ น้ำมันเมล็ดทานตะวัน, น้ำมันแมคคาเดเมีย, น้ำมันอาร์แกน และน้ำมันมะพร้าว ช่วยบำรุงดูแลเส้นผม ช่วยให้ผมดูเงางาม นุ่ม สลวย",
     "how2use": "ล้างศีรษะให้สะอาดจนเปียกชุ่ม<br>ชะโลมบริเวณหนังศรีษะให้ทั่ว และล้างออกให้สะอาด",
     "ingredients": "AQUA, PROPYLENE GLYCOL, STEARYL ALCOHOL, CETYL ALCOHOL, GLYCERIN, BEHENTRIMONIUM CHLORIDE, DIMETHICONE, AMODIMETHICONE, GLYCERYL MONOSTEARATE, FRAGRANCE, HELIANTHUS ANNUUS SEED OIL, PHENOXYETHANOL, OCTYLDODECANOL, BETAINE, CANNABIS SPP. EXTRACT (CANNABIDIOL), SILICONE QUATERNIUM-22, DISODIUM EDTA, GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE, OCTYLDODECYL XYLOSIDE, PEG-30 DIPOLYHYDROXYSTEARATE, DIPROPYLENE GLYCOL, HYDROLYZED KERATIN, POLYGLYCERYL-3 CAPRATE, PROPANEDIOL, STYRAX JAPONICUS BRANCH/FRUIT/LEAF EXTRACT, DIMETHICONOL, COCAMIDOPROPYL BETAINE, ARGANIA SPINOSA KERNEL OIL, COCOS NUCIFERA OIL, ELAEIS GUINEENSIS OIL, MACADAMIA TERNIFOLIA SEED OIL, OLEA EUROPAEA FRUIT OIL, PALMITAMIDOPROPYLTRIMONIUM CHLORIDE, AMARANTHUS CAUDATUS SEED EXTRACT, 1,2-HEXANEDIOL, COMMIPHORA MYRRHA RESIN EXTRACT, ZEA MAYS STARCH, PHYLLANTHUS EMBLICA FRUIT EXTRACT, ROSMARINUS OFFICINALIS LEAF EXTRACT, GARDENIA TAITENSIS FLOWER EXTRACT, ALOE BARBADENSIS LEAF EXTRACT, XYLOSE, HYALURONIC ACID, HYDROLYZED GLYCOSAMINOGLYCANS, HYDROLYZED HYALURONIC ACID, HYDROLYZED SODIUM HYALURONATE, POTASSIUM HYALURONATE, SODIUM HYALURONATE, SODIUM HYALURONATE CROSSPOLYMER, TOCOPHEROL",
-    "link": "https://morhelloclinic.com/product/panacee-canabliss-oasiz-swiss-snow-overnight-mask/",
+    "link": "https://morhelloclinic.com/product/panacee-canabliss-crown-multi-care-natural-hair-treatment/",
     "type": "Hair",
     "quantity": "100 ML 3.5fl.oz.",
     "price": 590.0,
@@ -222,8 +228,8 @@
     "no": 10,
     "imgUrl": [
       "/Swiss-snow.png",
-      "/Swiss-snow2.jpg",
-      "/Swiss-snow.png",
+      "/swiss-snow-f.jpg",
+      "/swiss-snow-b.jpg",
       "/Swiss-snow2.jpg"
     ],
     "genre": "CANABLISS OASIZ",
@@ -297,8 +303,8 @@
     "no": 13,
     "imgUrl": [
       "/Micellar-cleansing.png",
-      "/Micellar-cleansing2.jpg",
-      "/Micellar-cleansing.png",
+      "/MICELLA-CLEANSING-GEL_f.jpg",
+      "/MICELLA-CLEANSING-GEL_b.jpg",
       "/Micellar-cleansing2.jpg"
     ],
     "genre": "CANABLISS CLEAR",
@@ -322,8 +328,8 @@
     "no": 14,
     "imgUrl": [
       "/Eye-cream.png",
-      "/Eye-cream2.jpg",
-      "/Eye-cream.png",
+      "/Advance-eye-cream-f.jpg",
+      "/Advance-eye-cream-b.jpg",
       "/Eye-cream2.jpg"
     ],
     "genre": "CANABLISS GUARDIAN",
@@ -347,9 +353,9 @@
     "no": 15,
     "imgUrl": [
       "/super-berry.png",
-      "/Super-berry2.jpg",
-      "/Super-berry3.jpg",
-      "/super-berry.png"
+      "Super-berry-f.jpg",
+      "Super-berry-b.jpg",
+      "/Super-berry3.jpg"
     ],
     "genre": "CANABLISS OASIZ",
     "genre_th": "คานาบลีส โอเอซีส",
@@ -372,8 +378,8 @@
     "no": 16,
     "imgUrl": [
       "/Spf50-pa-tinted-hybrid-block.png",
-      "/Spf50-pa-tinted-hybrid-block2.jpg",
-      "/Spf50-pa-tinted-hybrid-block.png",
+      "/Tinted-Hybrid-block-SPF50PA_f.jpg",
+      "/Tinted-Hybrid-block-SPF50PA_b.jpg",
       "/Spf50-pa-tinted-hybrid-block2.jpg"
     ],
     "genre": "CANABLISS GUARDIAN",
@@ -397,8 +403,8 @@
     "no": 17,
     "imgUrl": [
       "/cannabliss-leaf-serum.png",
+      "/serum-front.jpg",
       "/cannabliss-leaf-serum2.jpg",
-      "/cannabliss-leaf-serum.png",
       "/cannabliss-leaf-serum2.jpg"
     ],
     "genre": "CANABLISS CROWN",
