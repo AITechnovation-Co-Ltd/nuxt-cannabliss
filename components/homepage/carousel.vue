@@ -41,7 +41,7 @@
                 </p>
               </div>
               <div class="w-full flex items-center mt-8">
-                <div
+                <div @click="$refs.alertPopup.show()"
                   class="lg:hidden h-16 w-16 mr-4 border-2 border-tertiary rounded-full flex items-center justify-center">
                   <div
                     class="lg:hidden h-12 w-12 bg-tertiary rounded-full flex items-center justify-center cursor-pointer">
