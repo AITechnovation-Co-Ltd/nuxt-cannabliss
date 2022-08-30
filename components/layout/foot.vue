@@ -67,8 +67,8 @@
                 <a href="https://lin.ee/i5MkM6w" target="_blank" class=" mx-1 hover dark:hover:text-white">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-line(1)@2x.png" alt="">
                 </a>
-                <a href="#" class=" mx-1 hover dark:hover:text-white hidden">
-                  <img class="w-6" src="~/static/images/IMG_footer/icons8-twitter(1)@2x.png" alt="">
+                <a href="https://www.youtube.com/channel/UCdKSDogq_7bUzWwY_U8zerA" target="_blank" class=" mx-1 hover dark:hover:text-white">
+                  <img class="mt-px h-5" src="~/static/images/IMG_footer/play-video(1).png" alt="">
                 </a>
                 <a href="#" class=" ml-1 hover dark:hover:text-white hidden">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-pinterest@2x.png" alt="">
