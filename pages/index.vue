@@ -1,10 +1,10 @@
 <template>
   <div class="bg-secondary relative overflow-hidden">
     <!-- Carousel -->
-    <Carousel class="z-10 md:block hidden" />
+    <Carousel class="z-30 md:block hidden" />
 
     <!-- CarouselPhone -->
-    <Carouselphone class="z-10 md:hidden block" />
+    <Carouselphone class="z-30 md:hidden block" />
     <img src="~/static/images/IMG_01home/pages_01home/Group1094@2x.png" class="widgetmini1094">
     <!-- Products -->
     <Product class="z-10" />

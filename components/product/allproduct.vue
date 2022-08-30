@@ -19,7 +19,7 @@
         <div class="w-full flex flex-col lg:flex-row items-start">
             <img src="~/static/images/IMG_02products/Group1053@2x.png" class="widget1053 z-10">
             <!-- List Categories -->
-            <div class="w-full lg:w-3/12 mt-3 sm:mt-10 hidden lg:block z-50">
+            <div class="w-full lg:w-3/12 mt-3 sm:mt-10 hidden lg:block z-40">
                 <h1 class="text-xl text-primary">Categories</h1>
                 <!-- <hr class="w-5/6 my-3 sm:my-6 border-b border-gold flex flex-col justify-center items-center" /> -->
                 <div class="w-5/6 my-3 sm:my-6 bg-gold hrr"></div>

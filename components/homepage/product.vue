@@ -126,10 +126,10 @@ export default {
       if (this.screen <= 1536 && this.screen > 1440) {
         item_per_page = 4
       }
-      else if (this.screen <= 1440 && this.screen > 1280) {
+      else if (this.screen <= 1440 && this.screen >= 1280) {
         item_per_page = 3
       }
-      else if (this.screen <= 1280) {
+      else if (this.screen < 1280) {
         item_per_page = 2
       }
       return item_per_page
@@ -137,7 +137,6 @@ export default {
   },
   mounted() {
     this.total_p = Math.ceil(this.products.length / this.page_screen)
-    // console.log(this.total_p)
   },
   methods: {
     change(p) {
