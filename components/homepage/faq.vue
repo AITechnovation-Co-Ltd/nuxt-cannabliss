@@ -260,7 +260,7 @@ export default {
   },
   methods: {
     checkDataOpen(toggle) {
-      console.log(toggle)
+      // console.log(toggle)
       this.dropdown_data = toggle
     },
     checkDataOpen2(toggle) {
