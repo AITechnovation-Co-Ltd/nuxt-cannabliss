@@ -1437,14 +1437,6 @@
     defu "^6.0.0"
     eslint-webpack-plugin "^2.6.0"
 
-"@nuxtjs/gtm@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/gtm/-/gtm-2.4.0.tgz#d7f5bb05b0306c564674831eab17b4e25cfdc1f6"
-  integrity sha512-Of5KuBBFwRjyJ6AuRrIQsh8J6ksIN2UegJDE8nBiTAanbwQBsAJ0hZibV9SjhKdGvGvWpbShQ4yR2bmQgY6XKA==
-  dependencies:
-    chalk "^4.1.0"
-    semver "^7.3.2"
-
 "@nuxtjs/proxy@^2.1.0":
   version "2.1.0"
   resolved "https://registry.npmjs.org/@nuxtjs/proxy/-/proxy-2.1.0.tgz"
@@ -1488,11 +1480,6 @@
   version "1.0.0-next.21"
   resolved "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.21.tgz"
   integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
-
-"@popperjs/core@^2.9.3":
-  version "2.11.5"
-  resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.5.tgz"
-  integrity sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw==
 
 "@tailwindcss/custom-forms@^0.2.1":
   version "0.2.1"
@@ -4438,14 +4425,6 @@ flatten@^1.0.2:
   resolved "https://registry.npmjs.org/flatten/-/flatten-1.0.3.tgz"
   integrity sha512-dVsPA/UwQ8+2uoFe5GHtiBMu48dWLTdsuEd7CKGlZlD78r1TTWBvDuFaFGKCo/ZfEr95Uk56vZoX86OsHkUeIg==
 
-flowbite@^1.4.7:
-  version "1.5.2"
-  resolved "https://registry.npmjs.org/flowbite/-/flowbite-1.5.2.tgz"
-  integrity sha512-oSKhPkg0bYb4dZG4ypSh++dPrFM3IOSER6HOwJHYRFPW5u9PXL4AQFMQh7Kytgws2xrDQyl/zqefZmymeWt2IA==
-  dependencies:
-    "@popperjs/core" "^2.9.3"
-    mini-svg-data-uri "^1.4.3"
-
 flush-write-stream@^1.0.0:
   version "1.1.1"
   resolved "https://registry.npmjs.org/flush-write-stream/-/flush-write-stream-1.1.1.tgz"
@@ -6269,7 +6248,7 @@ min-indent@^1.0.0:
   resolved "https://registry.npmjs.org/min-indent/-/min-indent-1.0.1.tgz"
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
-mini-svg-data-uri@^1.0.3, mini-svg-data-uri@^1.2.3, mini-svg-data-uri@^1.4.3:
+mini-svg-data-uri@^1.0.3, mini-svg-data-uri@^1.2.3:
   version "1.4.4"
   resolved "https://registry.npmjs.org/mini-svg-data-uri/-/mini-svg-data-uri-1.4.4.tgz"
   integrity sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==

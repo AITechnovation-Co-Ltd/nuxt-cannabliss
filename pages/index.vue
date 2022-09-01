@@ -61,7 +61,7 @@ export default {
   components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick, Carouselphone, ItemContent },
   layout: 'home',
   mounted() {
-    this.gtm()
+    // this.gtm()
   },
   methods: {
     gtm() {
