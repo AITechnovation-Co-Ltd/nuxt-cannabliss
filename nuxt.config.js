@@ -27,7 +27,7 @@ export default {
     link: [
       { rel: "icon", href: "/logo/LOGO_PANACEE_COSMETIC-02.png" },
     ],
-    script: [ { src: "https://www.googletagmanager.com/gtag/js?id=G-KFH4XF0BHL" },{src:"js/index.js"}],
+    script: [ { src: "https://www.googletagmanager.com/gtag/js?id=G-S36S2VD6RG" },{src:"js/index.js"}],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

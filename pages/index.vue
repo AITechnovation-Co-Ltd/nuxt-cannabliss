@@ -69,7 +69,7 @@ export default {
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
 
-      gtag('config', 'G-KFH4XF0BHL');
+      gtag('config', 'G-S36S2VD6RG');
       console.log("ize")
       console.log("ize1")
       console.log("ize2")
