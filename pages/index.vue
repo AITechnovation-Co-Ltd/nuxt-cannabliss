@@ -32,7 +32,7 @@
     <img src="~/static/images/IMG_01home/pages_01home/Group1110@2x.png" class="widget1110">
     <img src="~/static/images/IMG_01home/pages_01home/Group1094@2x.png" class="widget1094 z-10">
     <Faq class="z-10 hidden" />
-    <ItemContent/>
+    <ItemContent />
 
     <Subscribe class="my-12 z-10" />
 
@@ -60,12 +60,28 @@ import ItemContent from '~/components/homepage/item-content.vue'
 export default {
   components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick, Carouselphone, ItemContent },
   layout: 'home',
+  mounted() {
+    this.gtm()
+  },
+  methods: {
+    gtm() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-KFH4XF0BHL');
+      console.log("ize")
+      console.log("ize1")
+      console.log("ize2")
+    }
+  },
 }
 </script>
 <style scoped>
-.bg{
+.bg {
   bottom: 34.5%;
 }
+
 .widgetmini1094 {
   height: 8rem;
   position: absolute;
