@@ -8,13 +8,13 @@
       <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337 z-20">
       <img src="~/static/images/IMG_03blogs/Path364@2x.png" class="widget364 z-20">
       <!-- Card -->
-      <div class="grid grid-col-1 md:grid-cols-2 gap-y-8 sm:gap-y-0 sm:gap-x-16 text-quaternary z-30">
+      <div class="grid grid-col-1 md:grid-cols-2 gap-y-8 sm:gap-y-1 sm:gap-x-16 text-quaternary z-30">
         <div class="hidden md:block w-full flex items-start flex-col z-30" v-for="(data, i) in blogs.slice(0, 4)"
           :key="`blog-${i}`">
           <img :src="require(`~/static/images/blogs${data.img[0]}`)" class="rounded-3xl"
             :class="{ 'mt-16 xl:mt-24': i % 2 != 0 }">
           <p class="my-4 text-lg font-normal">{{ data.title }}</p>
-          <p class="text-sm font-light">{{ data.subtitle }}</p>
+          <p class="text-sm font-light truncated-2-lines">{{ data.subtitle }}</p>
           <base-button @click="$router.push(`/blogs/details/${data.id}`)"
             class="mt-4 mr-auto ml-auto sm:mr-auto sm:ml-0 border-quaternary z-30">View more
           </base-button>
@@ -50,30 +50,42 @@ export default
 </script>
 
 <style scoped>
+.truncated-2-lines {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
 .widget337 {
   height: 20rem;
   position: absolute;
   transform: translate(-5rem, 31rem);
 }
+
 .widget364 {
   height: 20rem;
   position: absolute;
   transform: translate(38rem, -2rem);
 }
+
 .widget330 {
   height: 36rem;
   bottom: -300px;
   left: -150px;
 }
-@media (max-width:640px){
+
+@media (max-width:640px) {
   .widget337 {
-  transform: translate(4rem, 31rem);
-}
-.widget330 {
-  display: none;
-  height: 22rem;
-  bottom: -170px;
-  left: -150px;
-}
+    transform: translate(4rem, 31rem);
+  }
+
+  .widget330 {
+    display: none;
+    height: 22rem;
+    bottom: -170px;
+    left: -150px;
+  }
 }
 </style>

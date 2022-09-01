@@ -14,7 +14,7 @@
         <p class="my-4 text-4xl text-primary thai font-extrabold">ต้านการอักเสบของสิว</p>
         <p class="my-4 text-4xl text-primary thai font-black">ต้านการอักเสบของสิว</p> -->
         <img src="~/static/images/IMG_03ingredients/CANABLISS@2x.png" class="widget">
-        <p class="my-4 text-5xl sm:text-7xl text-primary thai" :class="{ 'text-3xl sm:text-3xl': blogs.id == 3 }">{{ blogs.title }}</p>
+        <p class="my-4 text-5xl sm:text-7xl text-primary thai" :class="{ 'text-3xl sm:text-3xl': blogs.id == 1 }">{{ blogs.title }}</p>
         <p class="pl-2 font-medium text-quaternary border-l-2 sm:border-l-4 border-primary text-2xl leading-7 thai">
           {{ blogs.subtitle }}</p>
         <p class="my-4 text-quaternary text-lg 3xl:text-xl leading-6 thai">{{ blogs.detail_title }}</p>
@@ -52,11 +52,11 @@
       <p class="text-quaternary text-lg 3xl:text-xl leading-6 thai">{{blogs.more_detail2}}</p><br>
       <!-- <p class="text-quaternary text-lg 3xl:text-xl leading-6 thai">{{blogs.more_detail3}}</p><br> -->
     </div>
-    <div class="w-full" v-show="blogs.id == 3">
+    <div class="w-full" v-show="blogs.id == 1">
       <p class="text-quaternary text-lg 3xl:text-xl leading-6 thai">ทั้งนี้ ผู้สนใจสามารถดูรายละเอียดผลิตภัณฑ์ น้ำตบ Canabliss Essence ได้ที่ <a href='www.morhelloclinic.com' target='_blank' class='text-primary hover:underline'> www.morhelloclinic.com </a> และสามารถพิสูจน์ความเด้งของน้ำตบ Canabliss Essence ได้แล้วตั้งแต่วันนี้ ณ ร้าน BEAUTRIUM ทุกสาขา</p>
     </div>
     <!-- Benefis of cbd -->
-    <div v-show="blogs.id == 1" class="w-full flex flex-col items-center">
+    <div v-show="blogs.id == 3" class="w-full flex flex-col items-center">
       <p class="my-10 text-2xl sm:text-4xl text-primary font-medium">Benefits Of CBD For Acne</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         <div class="flex items-center">

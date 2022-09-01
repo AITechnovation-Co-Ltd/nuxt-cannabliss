@@ -31,8 +31,8 @@
     <!-- FAQ -->
     <img src="~/static/images/IMG_01home/pages_01home/Group1110@2x.png" class="widget1110">
     <img src="~/static/images/IMG_01home/pages_01home/Group1094@2x.png" class="widget1094 z-10">
-    <Faq class="z-10 hidden" />
-    <ItemContent />
+    <Faq class="z-10" />
+    <!-- <ItemContent /> -->
 
     <Subscribe class="my-12 z-10" />
 
@@ -60,21 +60,18 @@ import ItemContent from '~/components/homepage/item-content.vue'
 export default {
   components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick, Carouselphone, ItemContent },
   layout: 'home',
-  mounted() {
-    this.gtm()
-  },
-  methods: {
-    gtm() {
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
+  // mounted() {
+  //   this.gtm()
+  // },
+  // methods: {
+  //   gtm() {
+  //     window.dataLayer = window.dataLayer || [];
+  //     function gtag() { dataLayer.push(arguments); }
+  //     gtag('js', new Date());
 
-      gtag('config', 'G-S36S2VD6RG');
-      console.log("ize")
-      console.log("ize1")
-      console.log("ize2")
-    }
-  },
+  //     gtag('config', 'G-KFH4XF0BHL');
+  //   }
+  // },
 }
 </script>
 <style scoped>
