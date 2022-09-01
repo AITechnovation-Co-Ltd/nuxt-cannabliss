@@ -12,8 +12,9 @@
             <img :src="require(`~/static/images/blogs${data.img[0]}`)" class="rounded-3xl"
               :class="{ 'sm:mt-16 xl:mt-36': i % 2 != 0 }">
             <p class="my-4 text-lg font-normal">{{ data.title }}</p>
-            <p class="text-sm font-light">{{ data.subtitle }}</p>
-            <base-button @click="$router.push(`/blogs/details/${data.id}`)" class="mx-auto sm:mx-0 mt-8 border-quaternary">View
+            <p class="text-sm font-light truncated-2-lines">{{ data.subtitle }}</p>
+            <base-button @click="$router.push(`/blogs/details/${data.id}`)"
+              class="mx-auto sm:mx-0 mt-8 border-quaternary">View
               more
             </base-button>
           </div>
@@ -47,6 +48,14 @@ export default
 </script>
 
 <style scoped>
+.truncated-2-lines {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
 .widget337 {
   height: 20rem;
   position: absolute;
@@ -81,9 +90,10 @@ export default
     z-index: 10;
   }
 }
-@media (max-width: 640px){
+
+@media (max-width: 640px) {
   .widget337 {
-  transform: translate(6rem, 29rem);
-}
+    transform: translate(6rem, 29rem);
+  }
 }
 </style>
