@@ -27,7 +27,7 @@ export default {
     link: [
       { rel: "icon", href: "/logo/LOGO_PANACEE_COSMETIC-02.png" },
     ],
-    // script: [ { src: "https://www.googletagmanager.com/gtag/js?id=G-S36S2VD6RG" }],
+    script: [ { src: "https://www.googletagmanager.com/gtag/js?id=G-S36S2VD6RG" },{src:"js/index.js"}],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -59,7 +59,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     "@nuxtjs/axios",
-    "@nuxtjs/gtm",
+    // "@nuxtjs/gtm",
     "@nuxtjs/recaptcha",
     // Simple usage
     "nuxt-leaflet",
