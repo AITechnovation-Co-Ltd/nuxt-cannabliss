@@ -7,7 +7,7 @@
     <div class="w-full columns-1 lg:flex mt-0 sm:mt-16">
       <div class="hidden sm:flex w-full lg:w-1/6 mr-6">
         <ul
-          class="w-full flex justify-around lg:justify-start lg:flex-col decorate-none text-lg lg:text-xl text-primary font-extralight">
+          class="w-full flex justify-around lg:justify-start lg:flex-col decorate-none text-lg lg:text-xl text-primary font-extralight z-20">
           <li @click="filterType('All')">
             <span class="flex items-center lg:my-4 hover:cursor-pointer" :class="{ 'font-normal': type == 'All' }">All
               <div v-if="type == 'All'" class="w-16 ml-2 h-0.5 bg-primary hidden lg:block" :class="{ 'hidden': xl }">

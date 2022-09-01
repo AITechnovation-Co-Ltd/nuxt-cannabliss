@@ -55,7 +55,7 @@ export default {
                 phone: '',
                 password: '',
             },
-            confirmpassword:''
+            confirmpassword: ''
         }
     },
     methods: {
