@@ -59,7 +59,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     "@nuxtjs/axios",
-    "@nuxtjs/gtm",
+    // "@nuxtjs/gtm",
     "@nuxtjs/recaptcha",
     // Simple usage
     "nuxt-leaflet",
