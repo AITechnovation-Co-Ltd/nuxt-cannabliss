@@ -69,7 +69,7 @@
       <hooper-pagination slot="hooper-addons"></hooper-pagination>
     </hooper>
     <div class="social justify-center sm:absolute right-8 xl:right-24 2xl:right-36">
-      <div class="flex space-x-6 sm:space-x-8">
+      <div class="flex space-x-6 sm:space-x-6">
         <a href="https://www.facebook.com/CanablissCosmetic" target="_blank">
           <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
         </a>
@@ -81,6 +81,12 @@
         </a>
         <a href="https://www.youtube.com/channel/UCdKSDogq_7bUzWwY_U8zerA" target="_blank">
           <img class="mt-px h-7 sm:h-5 lg:h-7" src="~/static/images/IMG_01home/pages_01home/play-video(1).png" alt="">
+        </a>
+        <a href="https://twitter.com/CanablissC" target="_blank">
+          <img class="h-8 sm:h-6 lg:h-8" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt="">
+        </a>
+        <a href="https://www.tiktok.com/@canablisscosmetic?_t=8VL26drxAa9&_r=1" target="_blank">
+          <img class="h-8 sm:h-6 lg:h-8" src="~/static/images/IMG_01home/pages_01home/logo-tiktok-svgrepo-com.png" alt="">
         </a>
       </div>
     </div>

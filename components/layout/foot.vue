@@ -58,20 +58,31 @@
                 <p>E: info@panacee.com</p>
               </li>
               <li class="flex flex-row">
-                <a href="https://www.facebook.com/CanablissCosmetic" target="_blank" class=" mr-1 hover dark:hover:text-white">
+                <a href="https://www.facebook.com/CanablissCosmetic" target="_blank"
+                  class=" mr-1 hover dark:hover:text-white">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-facebook(1)@2x.png" alt="">
                 </a>
-                <a href="https://www.instagram.com/canablisscosmetic/" target="_blank" class=" mx-1 hover dark:hover:text-white">
+                <a href="https://www.instagram.com/canablisscosmetic/" target="_blank"
+                  class=" mx-1 hover dark:hover:text-white">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-instagram@2x.png" alt="">
                 </a>
                 <a href="https://lin.ee/i5MkM6w" target="_blank" class=" mx-1 hover dark:hover:text-white">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-line(1)@2x.png" alt="">
                 </a>
-                <a href="https://www.youtube.com/channel/UCdKSDogq_7bUzWwY_U8zerA" target="_blank" class=" mx-1 hover dark:hover:text-white">
+                <a href="https://www.youtube.com/channel/UCdKSDogq_7bUzWwY_U8zerA" target="_blank"
+                  class=" mx-1 hover dark:hover:text-white">
                   <img class="mt-px h-5" src="~/static/images/IMG_footer/play-video(1).png" alt="">
                 </a>
                 <a href="#" class=" ml-1 hover dark:hover:text-white hidden">
                   <img class="w-6" src="~/static/images/IMG_footer/icons8-pinterest@2x.png" alt="">
+                </a>
+                <a href="https://twitter.com/CanablissC" target="_blank" class="mx-1">
+                  <img class="w-6" src="~/static/images/IMG_footer/icons8-twitter(1)@2x.png"
+                    alt="">
+                </a>
+                <a href="https://www.tiktok.com/@canablisscosmetic?_t=8VL26drxAa9&_r=1" target="_blank" class="mx-1">
+                  <img class="h-5"
+                    src="~/static/images/IMG_footer/logo-tiktok-svgrepo-com_0.png" alt="">
                 </a>
               </li>
             </ul>
