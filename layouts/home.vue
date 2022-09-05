@@ -1,5 +1,7 @@
 <template>
   <div class="w-full h-full">
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB78TMS" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
     <Navbar />
     <div class="w-full bg-secondary scroll-smooth relative overflow-hidden">
       <div class="w-full flex">
