@@ -1,24 +1,24 @@
 [
   {
     "no": 1,
-    "genre": "CANABLISS CLEAR",
-    "genre_th": "คานาบลิส เคลียร์",
-    "name": "MICELLA CLEANSING GEL",
-    "name_th": "ไมเซลล่าร์ คลีนซิ่ง เจล"
+    "genre": "Canabliss Oasiz",
+    "genre_th": "",
+    "name": "First Step Amino Essence",
+    "name_th": ""
   },
   {
     "no": 2,
-    "genre": "CANABLISS GUARDIAN",
-    "genre_th": "คานาบลิส การ์เดี้ยน",
-    "name": "ADVANCE EYE CREAM BROWN ALGAE PLUS CAFFEINE",
-    "name_th": "แอดวานซ์ อาย ครีม บราวน์ แอลจี้ พลัส คาเฟอีน"
+    "genre": "Canabliss Guardian",
+    "genre_th": "",
+    "name": "PRE&PROBIOTIC BALANCING ESSENCE",
+    "name_th": ""
   },
   {
     "no": 3,
-    "genre": "CANABLISS OASIZ",
-    "genre_th": "คานาบลีส โอเอซีส",
-    "name": "SUPER BERRY HYDRATING MASK",
-    "name_th": "ซุปเปอร์ เบอร์รี่ ไฮเดรตติ้ง มาส์ก"
+    "genre": "Canabliss Guardian",
+    "genre_th": "",
+    "name": "Rose Petal Anti-Pollution Toner",
+    "name_th": ""
   },
   {
     "no": 4,
@@ -31,7 +31,7 @@
     "no": 5,
     "genre": "CANABLISS CROWN",
     "genre_th": "คานาบลิส คราวน์",
-    "name": "ANTI-FALL NOURISHING SHAMPOO",
+    "name": "ANTI HAIR FALL NOURISHING SHAMPOO",
     "name_th": "แอนตี้-ฟอล นอริชชิ่ง แชมพู"
   },
   {
@@ -83,25 +83,40 @@
     "name": "CBD WHITENING FACIAL SHEET MASK",
     "name_th": "ซีบีดี ไวท์เทนนิ่ง แฟเชียล ชีท แมสก์"
   },
+  
   {
     "no": 13,
-    "genre": "CANABLISS OASIZ",
-    "genre_th": "",
-    "name": "FIRST STEP AMINO ESSENCE",
-    "name_th": ""
+    "genre": "CANABLISS CLEAR",
+    "genre_th": "คานาบลิส เคลียร์",
+    "name": "MICELLA CLEANSING GEL",
+    "name_th": "ไมเซลล่าร์ คลีนซิ่ง เจล"
   },
   {
     "no": 14,
-    "genre": "CANABLISS",
-    "genre_th": "",
-    "name": "PRE&PROBIOTIC BALANCING ESSENCE",
-    "name_th": ""
+    "genre": "CANABLISS GUARDIAN",
+    "genre_th": "คานาบลิส การ์เดี้ยน",
+    "name": "ADVANCE EYE CREAM BROWN ALGAE PLUS CAFFEINE",
+    "name_th": "แอดวานซ์ อาย ครีม บราวน์ แอลจี้ พลัส คาเฟอีน"
   },
   {
     "no": 15,
-    "genre": "CANABLISS",
-    "genre_th": "",
-    "name": "ROSE PETAL ANTI-POLLUTION TONER",
+    "genre": "CANABLISS OASIZ",
+    "genre_th": "คานาบลีส โอเอซีส",
+    "name": "SUPER BERRY HYDRATING MASK",
+    "name_th": "ซุปเปอร์ เบอร์รี่ ไฮเดรตติ้ง มาส์ก"
+  },
+  {
+    "no": 16,
+    "genre": "CANABLISS GUARDIAN",
+    "genre_th": "คานาบลิส การ์เดี้ยน",
+    "name": "SPF50 PA+++ TINTED HYBRID BLOCK",
+    "name_th": ""
+  },
+  {
+    "no": 17,
+    "genre": "CANABLISS CROWN",
+    "genre_th": "คานาบลิส คราวน์",
+    "name": "CANNABLISS LEAF SERUM THE BLISSFUL SKIN FROM PANACEE",
     "name_th": ""
   }
 ]

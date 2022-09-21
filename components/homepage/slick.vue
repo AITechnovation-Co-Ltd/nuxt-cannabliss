@@ -19,10 +19,10 @@
                                 </div>
                             </div>
                             <p class="my-6 text-center">{{ review.review }}.</p>
-                            <div class="w-full flex justify-between items-end">
-                                <div class="w-full flex flex-row items-center justify-start mr-8">
-                                    <div>
-                                        <img :src="require(`~/static/images/products${review.imgUrl}`)" class="h-20 w-auto mr-4">
+                            <div class="w-full flex flex-col justify-between items-end">
+                                <div class="w-full flex flex-row items-center justify-start mr-2">
+                                    <div class="productimg">
+                                        <img :src="require(`~/static/images/products${review.imgUrl}`)" class="h-20 w-auto mr-auto ml-auto">
                                     </div>
                                     <div>
                                         <p>{{review.genre}} :</p>
@@ -44,7 +44,7 @@
         </div>
         <div class="w-full mt-12">
             <div class="w-full mt-8 sm:mt-0 text-xl flex justify-between">
-                <h1 class="text-3xl md:text-5xl text-primary">#Cannabliss</h1>
+                <h1 class="text-3xl md:text-5xl text-primary">#Canabliss</h1>
                 <a href="" class="text-quaternary hidden md:block">
                     <div class="flex items-center">
                         <img class="w-8 mr-2" src="~/static/images/IMG_footer/icons8-instagram@2x.png" alt="">
@@ -98,7 +98,7 @@ export default {
                 infinite: true,
                 slidesToShow: 3,
                 slidesToScroll: 1,
-                autoplay: false,
+                autoplay: true,
                 autoplaySpeed: 6000,
                 pauseOnDotsHover: false,
                 pauseOnFocus: false,
@@ -136,6 +136,12 @@ export default {
     height: 20vw;
     border-radius: 10%;
 }
+
+.productimg {
+  min-width: 80px;
+  max-height: 80px;
+}
+
 @media (max-width:640px){
     .ig img {
     object-fit: cover;

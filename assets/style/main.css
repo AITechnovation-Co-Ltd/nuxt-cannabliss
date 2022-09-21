@@ -121,3 +121,38 @@
   height: .5px;
   opacity: .5;
 }
+.footleft {
+  height: 30rem;
+  position: absolute;
+  left: 0;
+  transform: translate(-8rem, -20rem);
+}
+.vm--modal {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.footright {
+  height: 50rem;
+  position: absolute;
+  right: 0;
+  transform: translate(11rem, -14rem);
+}
+
+@media (max-width:1441px){
+  .footleft {
+    height: 25rem;
+    position: absolute;
+    left: 1rem;
+    bottom: -5rem;
+    /* transform: translate(-8rem, -20rem); */
+  }
+  
+  .footright {
+    height: 40rem;
+    position: absolute;
+    right: 2rem;
+    bottom: -25rem;
+    /* transform: translate(11rem, -14rem); */
+  }
+}

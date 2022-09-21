@@ -23,6 +23,12 @@ module.exports = {
       '7xl': '4rem',
       '8xl': '5rem',
     },
+    extend: {
+      ringWidth: {
+        '6': '6px',
+        '10': '10px',
+      }
+    },
     variants: {
       extend: {
         opacity: ['disabled'],
@@ -43,7 +49,7 @@ module.exports = {
       white: '#ffffff',
       black: '#000000',
       primary: '#78A695',
-      primary47:'#78a69578',
+      primary47: '#78a69578',
       secondary: '#F6F8EC',
       tertiary: '#83B9DF',
       quaternary: '#5E5F5F',
@@ -191,7 +197,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    require('flowbite/plugin'),
     require('@tailwindcss/line-clamp'),
   ]
 }

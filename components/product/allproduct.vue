@@ -1,22 +1,25 @@
 <template>
-    <div class="w-full flex flex-col justify-center px-4 md:px-8 lg:px-12 xl:px-24 3xl:px-36">
-        <div class="w-full flex flex-col lg:flex-row justify-end ">
+    <div class="w-full flex flex-col justify-center px-4 pt-10 sm:pt-20 md:px-8 lg:px-12 xl:px-24 3xl:px-36 relative">
+        <div class="w-full flex flex-col lg:flex-row justify-end z-20">
             <div class="w-full lg:w-3/12 flex font-extralight text-sm text-quaternary items-center">
                 <base-icon icon="angle-left" viewBox="0 0 24 24" size="18" />&nbsp;
-                <nuxt-link to="/" class="hover:underline">Home</nuxt-link>
+                <nuxt-link to="/" class="hover:underline z-20">Home</nuxt-link>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
                 <p>Products</p>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
                 <p class="font-normal">{{ get_type != '' ? get_type : type }}</p>
             </div>
             <div class="w-full lg:ml-10 lg:w-9/12">
+                <!-- edfghjkfghjyuiewqeuiqyieyuirwteriuqetyurtwryuieqwtritrqwtryuiw -->
+                <img src="~/static/images/IMG_02products/Group1132@2x.png" class="widget1132">
                 <h1 class="w-full text-2xl mt-6 lg:mt-0 sm:text-4xl font-extralight text-primary">{{ type }}</h1>
             </div>
         </div>
 
         <div class="w-full flex flex-col lg:flex-row items-start">
+            <img src="~/static/images/IMG_02products/Group1053@2x.png" class="widget1053 z-10">
             <!-- List Categories -->
-            <div class="w-full lg:w-3/12 mt-3 sm:mt-10 hidden lg:block">
+            <div class="w-full lg:w-3/12 mt-3 sm:mt-10 hidden lg:block z-40">
                 <h1 class="text-xl text-primary">Categories</h1>
                 <!-- <hr class="w-5/6 my-3 sm:my-6 border-b border-gold flex flex-col justify-center items-center" /> -->
                 <div class="w-5/6 my-3 sm:my-6 bg-gold hrr"></div>
@@ -53,10 +56,10 @@
                 </div>
             </div>
             <!-- Product cards -->
-            <div class="w-full lg:w-9/12 lg:ml-10">
+            <div class="w-full lg:w-9/12 lg:ml-10 z-20">
                 <!-- Sort by -->
                 <div
-                    class="w-full py-3 mt-3 sm:mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
+                    class="w-full py-3 mt-3 sm:mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end z-20">
                     <div class="flex flex-col sm:flex-row items-start sm:items-center mx-2 hidden lg:flex">
                         <p class="text-xs text-white">Items per page</p>
                         <select class="h-8 w-16 text-xs text-quaternary rounded-xl mr-1 sm:mx-4"
@@ -94,22 +97,25 @@
                 </div>
 
                 <!-- Product card -->
+                <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337 z-10">
+                <img src="~/static/images/IMG_02products/Path351@2x.png" class="widget351 z-10">
                 <div v-if="list_products.length != 0" class="w-full mt-12 grid grid-cols-2 2xl:grid-cols-3 gap-x-4">
-                    <div class="w-full" v-for="(product, index) in list_products" :key="index">
+                    <div class="w-full z-20" v-for="(product, index) in list_products" :key="index">
                         <template v-if="index < item_per_page * page && index >= item_per_page * (page - 1)">
                             <div class="relative mx-2">
-                                <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
-                                <img class="centered w-full"
+                                <img src="~/static/images/IMG_02products_detail/Path357@2x.png"
+                                    :class="{ 'ring-6 ring-tertiary ring-offset rounded-3xl': hover==`hover+${index}`}" />
+                                <img class="centered w-full" v-if="product.imgUrl[0] != ''"
                                     :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
-                                <span v-if="product.isNew"
-                                    class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
+                                <span v-if="$day.getDatetoNow(product.release) <= 7"
+                                    class="px-3 sm:px-9 py-0.5 sm:py-2 text-white text-sm sm:text-base absolute top-3 left-3 sm:top-4 sm:left-4 3xl:top-8 3xl:left-8 bg-primary rounded-full">New</span>
                                 <div @click="liked(product.no)"
-                                    class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer block sm:hidden">
+                                    class="absolute top-1 right-1 sm:top-4 sm:right-4 3xl:top-8 3xl:right-8 cursor-pointer block sm:hidden">
                                     <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="40"
                                         :color="product.islike ? '#f05252' : '#d5d6d7'" />
                                 </div>
                                 <div @click="liked(product.no)"
-                                    class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer hidden sm:block">
+                                    class="absolute top-1 right-1 sm:top-4 sm:right-4 3xl:top-8 3xl:right-8 cursor-pointer hidden sm:block">
                                     <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="50"
                                         :color="product.islike ? '#f05252' : '#d5d6d7'" />
                                 </div>
@@ -121,18 +127,16 @@
                                 <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type
                                 }}</p>
                                 <p class="truncated-2-lines text-base sm:text-lg font-medium "
-                                    :class="{ 'thai sm:text-2xl': getLanguage }">{{ getLanguage ? product.genre_th + ': ' :
-                                            product.genre + ': '
-                                    }}{{
-        getLanguage ? product.name_th : product.name
-}}</p>
+                                    :class="{ 'thai sm:text-2xl': getLanguage }">{{ getLanguage ? product.genre_th + ': ' :product.genre + ': ' }}{{getLanguage ? product.name_th : product.name}}</p>
                                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
                                         product.detail_th
                                 }}</p>
-                                <base-button @click="$router.push(`/product/details/${product.no}`)"
+                                <div class="max-w-fit h-auto" v-on:mouseover="hover = `hover+${index}`" v-on:mouseout="hover = ''">
+                                    <base-button @click="$router.push(`/product/details/${product.no}`)" 
                                     class="border-quaternary">
                                     View more
-                                </base-button>
+                                    </base-button>
+                                </div>
                             </div>
                         </template>
                     </div>
@@ -152,6 +156,7 @@ import products from "@/static/json/products.json"
 export default {
     data() {
         return {
+            hover: '',
             page: 1,
             total_p: 1,
             products,
@@ -171,19 +176,20 @@ export default {
             }
             else {
                 if (self.type == 'Best Seller') {
-                    console.log(self.type)
-                    list = self.products
-                    list?.sort((a, b) => {
-                        let salesA = a.sales;
-                        let salesB = b.sales;
-                        return (salesA > salesB) ? -1 : 1;
-                    })
-                    console.log(list)
+                    list = self.products.filter((e) => e.best === true)
+                }
+                else if (self.type == 'New In') {
+                    list = self.products.filter((e) => self.$day.getDatetoNow(e.release) <= 7)
                 }
                 else {
                     list = self.products.filter((e) => e.type === self.type)
                 }
             }
+            list?.sort((a, b) => {
+            let noA = a.no;
+            let noB = b.no;
+            return (noA > noB) ? -1 : 1;
+            })
             self.page = 1;
             self.total_p = Math.ceil(list.length / self.item_per_page)
             return list
@@ -233,9 +239,9 @@ export default {
             }
             else if (this.sort_by === 'date') {
                 this.list_products?.sort((a, b) => {
-                    let releaseA = a.release;
-                    let releaseB = b.release;
-                    return new Date(releaseB) - new Date(releaseA);
+                    let noA = a.no;
+                    let noB = b.no;
+                    return (noA > noB) ? -1 : 1;
                 })
             }
             this.page = 1
@@ -249,7 +255,9 @@ export default {
             });
         },
         filterType(type) {
+            this.sort_by = ''
             this.type = type
+
         },
         async getProducts() {
             const self = this
@@ -272,6 +280,33 @@ export default {
 </script>
 
 <style scoped>
+.widget1053 {
+    height: 40rem;
+    left: 0;
+    position: absolute;
+    transform: translate(-20rem, -9rem);
+}
+
+.widget1132 {
+    height: 6rem;
+    position: absolute;
+    transform: translate(15rem, -3.5rem);
+}
+
+.widget337 {
+  height: 20rem;
+  position: absolute;
+  top: 22rem;
+  left: 17rem;
+}
+
+.widget351 {
+  height: 20rem;
+  position: absolute;
+  bottom: 15rem;
+  left: 20rem;
+}
+
 .vl {
     height: 15px;
     width: 1px;
@@ -297,6 +332,16 @@ export default {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -35%);
+}
+
+@media (max-width:1441px) {
+    .widget1053 {
+        height: 30rem;
+        left: 0;
+        position: absolute;
+        transform: translate(-15rem, -9rem);
+        z-index: 0;
+    }
 }
 
 @media (max-width:1419px) {

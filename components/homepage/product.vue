@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full mt-8 sm:mt-20 px-4 lg:px-12 xl:px-20 3xl:px-36">
+  <div class="w-full mt-8 sm:mt-20 px-4 lg:px-12 xl:px-20 3xl:px-36 z-20">
     <div class="flex flex-row justify-between items-center">
       <h1 class="text-3xl md:text-5xl text-primary">Products</h1>
       <BaseButton @click="$router.push(`/product`)">View all</BaseButton>
@@ -7,7 +7,7 @@
     <div class="w-full columns-1 lg:flex mt-0 sm:mt-16">
       <div class="hidden sm:flex w-full lg:w-1/6 mr-6">
         <ul
-          class="w-full flex justify-around lg:justify-start lg:flex-col decorate-none text-lg lg:text-xl text-primary font-extralight">
+          class="w-full flex justify-around lg:justify-start lg:flex-col decorate-none text-lg lg:text-xl text-primary font-extralight z-20">
           <li @click="filterType('All')">
             <span class="flex items-center lg:my-4 hover:cursor-pointer" :class="{ 'font-normal': type == 'All' }">All
               <div v-if="type == 'All'" class="w-16 ml-2 h-0.5 bg-primary hidden lg:block" :class="{ 'hidden': xl }">
@@ -35,24 +35,26 @@
         </ul>
       </div>
       <div class="w-full lg:w-5/6">
-
+        <!-- <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337 z-10"> -->
         <!-- Product card -->
         <div v-if="list_products.length != 0"
-          class="w-full mt-6 sm:mt-12 lg:mt-0 grid grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 ">
-          <div class="w-full" v-for="(product, index) in list_products" :key="index">
+          class="w-full mt-6 sm:mt-12 lg:mt-0 grid grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 z-20">
+          <div class="w-full z-20" v-for="(product, index) in list_products" :key="index">
             <template v-if="index < page_screen * page && index >= page_screen * (page - 1)">
               <div class="relative mx-2">
-                <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
-                <img class="centered w-full" :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
-                <span v-if="product.isNew"
-                  class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
+                <img src="~/static/images/IMG_02products_detail/Path357@2x.png"
+                  :class="{ 'ring-6 ring-tertiary ring-offset rounded-3xl': hover == `hover+${index}` }" />
+                <img v-if="product.imgUrl[0] != ''" class="centered w-full"
+                  :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
+                <span v-if="$day.getDatetoNow(product.release) <= 7"
+                  class="px-3 sm:px-9 py-0.5 sm:py-2 3xl:px-6 3xl:py-1.5 text-white text-sm sm:text-base absolute top-3 left-3 sm:top-4 sm:left-4 3xl:top-4 3xl:left-4 bg-primary rounded-full">New</span>
                 <div @click="liked(product.no)"
-                  class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer block sm:hidden">
+                  class="absolute top-1 right-1 sm:top-4 sm:right-4 3xl:top-2 3xl:right-2 cursor-pointer block sm:hidden">
                   <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="40"
                     :color="product.islike ? '#f05252' : '#d5d6d7'" />
                 </div>
                 <div @click="liked(product.no)"
-                  class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer hidden sm:block">
+                  class="absolute top-1 right-1 sm:top-4 sm:right-4 3xl:top-2 3xl:right-2 cursor-pointer hidden sm:block">
                   <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="50"
                     :color="product.islike ? '#f05252' : '#d5d6d7'" />
                 </div>
@@ -62,13 +64,16 @@
               </div>
               <div class="my-4 mx-2 text-quaternary text-xl">
                 <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type }}</p>
-                <p class="truncated-2-lines text-base sm:text-lg font-medium capitalize">{{ product.genre + ': ' }}{{ product.name
+                <p class="truncated-2-lines text-base sm:text-lg font-medium capitalize">{{ product.genre + ': ' }}{{
+                    product.name
                 }}
                 </p>
                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{ product.detail_th }}</p>
-                <base-button @click="$router.push(`/product/details/${product.no}`)" class="border-quaternary">
-                  View more
-                </base-button>
+                <div class="max-w-fit h-auto" v-on:mouseover="hover = `hover+${index}`" v-on:mouseout="hover = ''">
+                  <base-button @click="$router.push(`/product/details/${product.no}`)" class="border-quaternary z-20">
+                    View more
+                  </base-button>
+                </div>
               </div>
             </template>
           </div>
@@ -77,6 +82,7 @@
         <base-pages v-if="list_products.length != 0" @change="change" :page="page" :total_pages="total_p" :limit="7">
         </base-pages>
       </div>
+      <img src="~/static/images/IMG_02products/Path337@2x.png" class="widget337 z-10 hidden lg:block">
     </div>
   </div>
 </template>
@@ -88,6 +94,7 @@ export default {
   components: { BaseButton },
   data() {
     return {
+      hover: false,
       page: 1,
       total_p: 1,
       products,
@@ -105,6 +112,11 @@ export default {
       } else {
         list = this.products.filter((e) => e.type === this.type)
       }
+      list?.sort((a, b) => {
+        let noA = a.no;
+        let noB = b.no;
+        return (noA > noB) ? -1 : 1;
+      })
       this.page = 1;
       this.total_p = Math.ceil(list.length / this.page_screen)
       return list
@@ -114,10 +126,10 @@ export default {
       if (this.screen <= 1536 && this.screen > 1440) {
         item_per_page = 4
       }
-      else if (this.screen <= 1440 && this.screen > 1280) {
+      else if (this.screen <= 1440 && this.screen >= 1280) {
         item_per_page = 3
       }
-      else if (this.screen <= 1280) {
+      else if (this.screen < 1280) {
         item_per_page = 2
       }
       return item_per_page
@@ -125,7 +137,6 @@ export default {
   },
   mounted() {
     this.total_p = Math.ceil(this.products.length / this.page_screen)
-    // console.log(this.total_p)
   },
   methods: {
     change(p) {
@@ -156,6 +167,13 @@ export default {
 </script>
 
 <style scoped>
+.widget337 {
+  height: 20rem;
+  position: absolute;
+  top: 74rem;
+  left: 7.2rem;
+}
+
 .hr {
   height: 3px;
   width: 40%;

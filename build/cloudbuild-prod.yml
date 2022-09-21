@@ -5,7 +5,7 @@ steps:
       [
         "build",
         "-f",
-        "Dockerfile",
+        "Dockerfile.prod",
         "-t",
         "asia.gcr.io/$PROJECT_ID/nuxt-cnb:master",
         ".",

@@ -1,10 +1,11 @@
 <template>
-    <div class="w-full flex flex-col justify-center px-4 md:px-8 lg:px-12 xl:px-24 3xl:px-36">
-        <div class="w-full flex flex-col lg:flex-row items-center">
-            <div class="w-full lg:w-2/12 flex font-extralight text-sm text-quaternary">
+    <div class="w-full flex flex-col justify-center pt-10 sm:pt-20 px-4 md:px-8 lg:px-12 xl:px-24 3xl:px-36">
+        <div class="w-full flex flex-col lg:flex-row items-center z-20">
+            <div class="w-full lg:w-2/12 flex font-extralight text-sm text-quaternary z-20">
                 <base-icon icon="angle-left" viewBox="0 0 24 24" size="18" />&nbsp;
                 <nuxt-link to="/" class="hover:underline">Home</nuxt-link>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
+                <img src="~/static/images/IMG_02products/Group1132@2x.png" class="widget1132">
                 <p class="font-normal">Favorite</p>
             </div>
             <div class="w-full lg:w-10/12">
@@ -14,11 +15,12 @@
         <!-- Categories -->
         <div class="w-full flex justify-end">
             <!-- Product cards -->
-            <div class="w-full lg:w-10/12 mr-0 ml-auto">
+            <img src="~/static/images/IMG_06fav/Group389@2x.png" class="widget389 z-10">
+            <div class="w-full lg:w-10/12 mr-0 ml-auto z-20">
                 <!-- Sort by -->
                 <div
                     class="w-full py-3 mt-3 sm:mt-8 bg-tertiary flex flex-row items-center justify-between sm:justify-end">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center mx-2">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center mx-2 z-20">
                         <p class="text-xs text-white">Items per page</p>
                         <select class="h-8 w-16 text-xs text-quaternary rounded-xl mr-1 sm:mx-4" v-model="item_per_page"
                             @change="pagegiantion">
@@ -28,7 +30,7 @@
                             <option value=24>24</option>
                         </select>
                     </div>
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center ml-2 sm:ml-0 mx-2">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center ml-2 sm:ml-0 mx-2 z-20">
                         <p class="text-xs text-white">Sort by</p>
                         <select v-model="sort_by" @change="sortby()"
                             class="h-8 w-32 py-px text-xs text-quaternary rounded-xl mr-1 sm:mx-2">
@@ -36,7 +38,6 @@
                             <option value="a-z">A-Z</option>
                             <option value="z-a">Z-A</option>
                             <option value="date">Newest</option>
-                            <option value="best">Best Seller</option>
                             <option value="low-hight">Price(Low to hight)</option>
                             <option value="hight-low">Price(Hight to low)</option>
                         </select>
@@ -44,22 +45,23 @@
                 </div>
 
                 <!-- Product card -->
-                <div v-if="products_liked.length != 0" class="w-full mt-12 grid grid-cols-2 2xl:grid-cols-3 gap-x-4">
+                <div v-if="products_liked.length != 0"
+                    class="w-full mt-12 grid grid-cols-2 2xl:grid-cols-3 gap-x-4 z-20">
                     <div class="w-full" v-for="(product, index) in products_liked" :key="index">
                         <template v-if="index < item_per_page * page && index >= item_per_page * (page - 1)">
                             <div class="relative mx-2">
-                                <img src="~/static/images/IMG_02products_detail/Path357@2x.png" class="" />
+                                <img src="~/static/images/IMG_02products_detail/Path357@2x.png" :class="{ 'ring-6 ring-tertiary ring-offset rounded-3xl': hover==`hover+${index}`}"/>
                                 <img class="centered w-full"
                                     :src="require(`~/static/images/products${product.imgUrl[0]}`)" />
-                                <span v-if="product.isNew"
-                                    class="px-10 py-2 text-white absolute top-5 left-5 bg-primary rounded-full">New</span>
+                                <span v-if="$day.getDatetoNow(product.release) <= 7"
+                                    class="px-3 sm:px-9 py-0.5 sm:py-2 text-white text-sm sm:text-base absolute top-3 left-3 sm:top-4 sm:left-4 3xl:top-8 3xl:left-8 bg-primary rounded-full">New</span>
                                 <div @click="liked(product.no)"
-                                    class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer block sm:hidden">
+                                    class="absolute top-1 right-1 sm:top-4 sm:right-4 3xl:top-8 3xl:right-8 cursor-pointer block sm:hidden">
                                     <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="40"
                                         :color="product.islike ? '#f05252' : '#d5d6d7'" />
                                 </div>
                                 <div @click="liked(product.no)"
-                                    class="absolute top-2 right-2 sm:top-8 sm:right-8 cursor-pointer hidden sm:block">
+                                    class="absolute top-1 right-1 sm:top-4 sm:right-4 3xl:top-8 3xl:right-8 cursor-pointer hidden sm:block">
                                     <base-icon class="hidden sm:block" icon='heartactive' viewBox="0 0 30 41" size="50"
                                         :color="product.islike ? '#f05252' : '#d5d6d7'" />
                                 </div>
@@ -70,21 +72,23 @@
                             <div class="my-4 mx-2 text-quaternary text-xl">
                                 <p class="mt-2 text-xs sm:text-sm capitalize">{{ product.type }}</p>
                                 <p class="truncated-2-lines text-base sm:text-lg font-medium ">{{ product.genre + ': '
-                                }}{{
-        product.name
-}}</p>
+                                }}
+                                    {{ product.name }}</p>
                                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{
                                         product.detail_th
                                 }}</p>
+                                <div class="max-w-fit h-auto" v-on:mouseover="hover = `hover+${index}`" v-on:mouseout="hover = ''">
                                 <base-button @click="$router.push(`/product/details/${product.no}`)"
                                     class="border-quaternary">
                                     View more
                                 </base-button>
+                                </div>
                             </div>
                         </template>
                     </div>
                 </div>
-                <div v-else class="w-full py-12 mt-12 bg-white text-center font-light text-2xl text-primary">No Products
+                <div v-else class="w-full py-12 mt-12 bg-white text-center font-light text-2xl text-primary z-20">No
+                    Products
                 </div>
                 <base-pages v-if="products_liked.length != 0" class="mt-12" @change="change" :page="page"
                     :total_pages="total_p" :limit="7"></base-pages>
@@ -99,6 +103,7 @@ import products from "@/static/json/products.json"
 export default {
     data() {
         return {
+            hover:false,
             page: 1,
             total_p: 1,
             products,
@@ -152,18 +157,11 @@ export default {
                     return (priceA > priceB) ? -1 : 1;
                 })
             }
-            else if (this.sort_by === 'best') {
-                this.products_liked?.sort((a, b) => {
-                    let salesA = a.sales;
-                    let salesB = b.sales;
-                    return (salesA > salesB) ? -1 : 1;
-                })
-            }
             else if (this.sort_by === 'date') {
                 this.products_liked?.sort((a, b) => {
-                    let releaseA = a.release;
-                    let releaseB = b.release;
-                    return new Date(releaseB) - new Date(releaseA);
+                    let noA = a.no;
+                    let noB = b.no;
+                    return (noA > noB) ? -1 : 1;
                 })
             }
             this.page = 1
@@ -197,6 +195,26 @@ export default {
 </script>
 
 <style scoped>
+.widget1132 {
+    height: 6rem;
+    position: absolute;
+    transform: translate(35rem, -3.5rem);
+}
+
+.widget389 {
+    height: 40rem;
+    position: absolute;
+    left: -10.5rem;
+}
+
+@media (max-width:1441px) {
+    .widget389 {
+        height: 33rem;
+        position: absolute;
+        left: -8.5rem;
+    }
+}
+
 .vl {
     height: 15px;
     width: 1px;

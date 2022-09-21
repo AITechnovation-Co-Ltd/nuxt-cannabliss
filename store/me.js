@@ -199,6 +199,7 @@ export const actions = {
         name_th: p.name_th,
         subtitle_th: p.subtitle_th,
         detail_th: p.detail_th,
+        how2use: p.how2use,
         ingredients: p.ingredients,
         link: p.link,
         type: p.type,
@@ -207,6 +208,7 @@ export const actions = {
         sales: p.sales,
         release: p.release,
         islike: p.islike,
+        best: p.best,
       })
     })
     commit('SET_PRODUCTS', product)

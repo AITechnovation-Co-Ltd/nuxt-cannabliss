@@ -1,10 +1,10 @@
 <template>
-  <div v-if="!no_product" class="w-full">
-    <div class="w-full relative mt-20 px-4 lg:px-12 xl:px-28 3xl:px-32">
+  <div class="w-full relative">
+    <div class="w-full relative mt-20 px-4 pb-16 sm:pb-24 lg:px-12 xl:px-28 3xl:px-32 z-20">
       <h1 class="w-full text-5xl text-center font-normal text-primary">
         Review
       </h1>
-      <div class="w-full flex flex-col xl:flex-row mt-12">
+      <div class="w-full flex flex-col xl:flex-row mt-12 static z-10">
         <div class="
             w-full
             flex flex-col
@@ -26,7 +26,7 @@
           <p class="ml-2 mt-2 text-quaternary text-sm">Based on reviews</p>
           <base-button @click="$refs.DialogReviewRefs.show()" class="mt-4 sm:mt-6">Write a review</base-button>
         </div>
-        <div class="w-full mt-8 lg:mt-0 xl:w-3/4">
+        <div v-if="!no_product" class="w-full mt-8 lg:mt-0 xl:w-3/4">
           <div v-if="products_reviews.length != 0" class="
               w-full
               flex flex-col
@@ -76,12 +76,14 @@
             </div>
             <!-- Load More -->
           </div>
-          <base-button @click="$router.push(`/review`)" class="mt-6">View more</base-button>
+          <base-button @click="$router.push(`/review`)" class="mt-6 mx-auto sm:mx-0">View more</base-button>
+        </div>
+        <div v-else class="w-full py-12 mt-12 bg-white text-center font-light text-2xl text-primary">No Review
         </div>
       </div>
-      <dialog-review ref="DialogReviewRefs" :product_name="product_name" />
+      <dialog-review ref="DialogReviewRefs" class="static z-20" :product_name="product_name" />
     </div>
-    <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1135@2x.png" alt=""> -->
+    <img src="~/static/images/IMG_01home/pages_01home/Group1135@2x.png" class="absolute bottom-0 z-10">
   </div>
 </template>
 
@@ -183,7 +185,8 @@ export default {
   left: 50%;
   transform: translate(-50%, -40%);
 }
-.productimg{
+
+.productimg {
   min-width: 100px;
   max-height: 100px;
 }

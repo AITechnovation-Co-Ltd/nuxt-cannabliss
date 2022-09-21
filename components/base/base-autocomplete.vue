@@ -1,13 +1,13 @@
 <template>
     <label class="block text-sm relative">
         <span class="">{{ label }}</span><span v-if="required" class="text-red-500">*</span>
-        <input class="py-2 w-full rounded-xl border-primary focus:ring-0 focus:border-primary focus:border-2"
-            type="search" :placeholder="placeholder" :disabled="disabled" @focus="onChange" @input="onChange"
-            v-model="search" @keyup.enter="onEnter" />
+        <input id="myInput"
+            class="py-2 w-full rounded-xl border-primary focus:ring-0 focus:border-primary focus:border-2" type="search"
+            :placeholder="placeholder" :disabled="disabled" @focus="onChange" @input="onChange" v-model="search" />
         <ul id="autocomplete-results" v-show="isOpen" class="bg-white rounded-md shadow-lg overflow-y-auto absolute"
             style="max-height: 400px">
             <li class="loading" v-if="isLoading">Loading results...</li>
-            <li v-else v-for="(result, i) in results" :key="i" @click="setResult(result)"
+            <li v-else v-for="(result, i) in results" :key="i" @click="keypressEnter(result)" id="myBtn"
                 class="px-4 py-2 text-sm bg-white hover:bg-primary hover:bg-opacity-20 cursor-pointer"
                 :class="{ 'bg-primary text-white': i === arrowCounter }">
                 {{ result.name }}
@@ -79,32 +79,54 @@ export default {
                 return e.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1
             })
         },
-        setResult(result) {
+        // setResult(result) {
+        //     this.search = result.name
+        //     this.isOpen = false
+        // },
+        async keypressEnter(result) {
             this.search = result.name
-            this.isOpen = false
-        },
-        // onArrowDown(evt) {
-        //     if (this.arrowCounter < this.results.length) {
-        //         this.arrowCounter = this.arrowCounter + 1
-        //     }
-        // },
-        // onArrowUp() {
-        //     if (this.arrowCounter > 0) {
-        //         this.arrowCounter = this.arrowCounter - 1
-        //     }
-        // },
-        async onEnter() {
-            // this.search = this.arrowCounter
-            //     ? this.results[this.arrowCounter].name
-            //     : ''
-            // this.isOpen = false
-            // this.arrowCounter = -1
             if (this.search != '') {
                 await this.$store.dispatch('me/setProductName', this.search)
                 this.$router.push(`/product/details/${this.search}`)
             }
+            // let input = document.getElementById("myInput");
+            // input.addEventListener("keypress", function (event) {
+            //     if (event.key === "Enter") {
+            //         event.preventDefault();
+            //         document.getElementById("myBtn").click();
+
+            //     }
+            // });
+            this.$parent.drawer2(false);
+            this.isOpen = false
+            setTimeout(() => {
+                this.search = ''
+                this.isOpen = false
+            }, "300")
 
         },
+        onArrowDown(evt) {
+            if (this.arrowCounter < this.results.length) {
+                this.arrowCounter = this.arrowCounter + 1
+            }
+        },
+        onArrowUp() {
+            if (this.arrowCounter > 0) {
+                this.arrowCounter = this.arrowCounter - 1
+            }
+        },
+        // async onEnter() {
+        //     this.search = this.arrowCounter
+        //         ? this.results[this.arrowCounter].name
+        //         : ''
+        //     this.isOpen = false
+        //     this.arrowCounter = -1
+        //     if (this.search != '') {
+        //         await this.$store.dispatch('me/setProductName', this.search)
+        //         this.$router.push(`/product/details/${this.search}`)
+        //     }
+
+        // },
         handleClickOutside(evt) {
             if (!this.$el.contains(evt.target)) {
                 this.isOpen = false

@@ -25,13 +25,9 @@ export default {
     ],
     link: [{ rel: "icon", href: "/images/logo.svg" }],
     link: [
-      { rel: "icon", href: "/logo/Logo-CANABLISS.png" },
-      {
-        rel: "stylesheet",
-        href: "https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css",
-      },
+      { rel: "icon", href: "/logo/LOGO_PANACEE_COSMETIC-02.png" },
     ],
-    script: [{ src: "https://unpkg.com/flowbite@1.4.5/dist/flowbite.js" }],
+    script: [ { src: "https://www.googletagmanager.com/gtag/js?id=G-KFH4XF0BHL" },{src:"js/index.js"}],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -46,7 +42,8 @@ export default {
     "@/plugins/vue-tailwind",
     "@/plugins/vue-scrollto",
     "@/plugins/notification",
-    "@/plugins/model",
+    '@/plugins/model',
+    '@/plugins/day',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -62,6 +59,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     "@nuxtjs/axios",
+    // "@nuxtjs/gtm",
     "@nuxtjs/recaptcha",
     // Simple usage
     "nuxt-leaflet",
@@ -74,6 +72,9 @@ export default {
       },
     ],
   ],
+  // gtm: {
+  //   id: 'G-KFH4XF0BHL'
+  // },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
