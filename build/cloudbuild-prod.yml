@@ -34,7 +34,7 @@ steps:
       - "3000"
       - "--allow-unauthenticated"
     env:
-      - "CLOUDSDK_CORE_PROJECT=ai-technovation"
+      - "CLOUDSDK_CORE_PROJECT=canabliss-cosmetic"
       - "CLOUDSDK_COMPUTE_ZONE=asia-southeast1-a"
 images:
   - "asia.gcr.io/$PROJECT_ID/nuxt-cnb:master"
