@@ -4,12 +4,12 @@
       <div class="flex flex-col lg:flex-row lg:justify-around">
         <!-- logo -->
         <div @click="gotoHome()"
-          class="w-full lg:w-1/4 flex justify-center sm:justify-start lg:justify-center mb-6 md:mb-0 hover:cursor-pointer z-20">
+          class="w-full lg:w-1/4 flex justify-center sm:justify-start lg:justify-center mb-6 md:mb-0 hover:cursor-pointer z-10">
           <img class="h-32" src="~/static/logo/LOGO_PANACEE_COSMETIC-02.png" alt="">
         </div>
         <div class="w-full lg:w-3/4 px-4 sm:px-0 grid text-sm grid-cols-2 sm:flex justify-around content">
           <!-- product -->
-          <div class="font-light relative z-20">
+          <div class="font-light relative z-10">
             <ul>
               <li class="mb-4 mt-8">
                 <p @click="filter('All Products')" class="hover:underline hover:cursor-pointer">Product</p>
@@ -27,7 +27,7 @@
           </div>
 
           <!-- home -->
-          <div class="z-20">
+          <div class="z-10">
             <ul>
               <li class="mb-4 mt-8">
                 <div @click="gotoHome()" class="hover:underline hover:cursor-pointer">Home</div>
@@ -48,7 +48,7 @@
           </div>
 
           <!-- contacts -->
-          <div class="contact col-span-2 sm:col-span-1 z-20">
+          <div class="contact col-span-2 sm:col-span-1 z-10">
             <h2 class="mb-3 mt-6 text-lg font-normal">Let's talk</h2>
             <ul>
               <li class="mb-4">
