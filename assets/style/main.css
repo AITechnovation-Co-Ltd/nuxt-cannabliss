@@ -188,5 +188,11 @@
   /* transform: translateY(10px) !important; */
   display: flex !important;
   padding: 5px 10px !important;
+}
+
+.a .hooper-pagination {
   transform: translate(5rem, 5rem) !important;
+}
+.b .hooper-pagination {
+  transform: translate(2.5rem, 5rem) !important;
 }

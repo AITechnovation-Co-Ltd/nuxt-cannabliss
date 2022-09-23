@@ -1,45 +1,10 @@
 <template>
   <div class="bg w-full flex relative flex-col items-center px-4 lg:px-12 xl:px-20 3xl:px-32">
     <h1 class="text-3xl md:text-5xl text-primary">Review</h1>
-    <hooper :settings="hooperSettings" class="flex justify-center items-center crv">
-      <slide>
+    <hooper :settings="hooperSettings" class="flex justify-center items-center crv a">
+      <slide v-for="(review, index) in reviewall" :key="index">
         <div class="relative flex w-full">
-          <div class="h-full w-full flex" v-for="(review, index) in review1" :key="index">
-            <img :src="require(`~/static/images/review${review.url}`)" class="w-full" />
-          </div>
-        </div>
-      </slide>
-      <slide>
-        <div class="relative flex w-full">
-          <div class="h-full w-full flex" v-for="(review, index) in review2" :key="index">
-            <img :src="require(`~/static/images/review${review.url}`)" class="w-full" />
-          </div>
-        </div>
-      </slide>
-      <slide>
-        <div class="relative flex w-full">
-          <div class="h-full w-full flex" v-for="(review, index) in review3" :key="index">
-            <img :src="require(`~/static/images/review${review.url}`)" class="w-full" />
-          </div>
-        </div>
-      </slide>
-      <slide>
-        <div class="relative flex w-full">
-          <div class="h-full w-full flex" v-for="(review, index) in review4" :key="index">
-            <img :src="require(`~/static/images/review${review.url}`)" class="w-full" />
-          </div>
-        </div>
-      </slide>
-      <slide>
-        <div class="relative flex w-full">
-          <div class="h-full w-full flex" v-for="(review, index) in review5" :key="index">
-            <img :src="require(`~/static/images/review${review.url}`)" class="w-full" />
-          </div>
-        </div>
-      </slide>
-      <slide>
-        <div class="relative flex w-full">
-          <div class="h-full w-full flex" v-for="(review, index) in review6" :key="index">
+          <div class="h-full w-full flex" v-for="(review, index) in review" :key="index">
             <img :src="require(`~/static/images/review${review.url}`)" class="w-full" />
           </div>
         </div>
@@ -89,6 +54,7 @@ export default {
         mouseDrag: false,
         autoPlay: true,
         playSpeed: 6000,
+        infiniteScroll: true,
         // transition: 2000,
       },
       review: [
@@ -119,42 +85,44 @@ export default {
         { url: '/review25.png' },
         { url: '/review26.png' },
       ],
-      review1: [
-        { url: '/review1.png' },
-        { url: '/review2.png' },
-        { url: '/review3.png' },
-        { url: '/review4.png' },
-      ],
-      review2: [
-        { url: '/review5.png' },
-        { url: '/review6.png' },
-        { url: '/review7.png' },
-        { url: '/review8.png' },
-      ],
-      review3: [
-        { url: '/review9.png' },
-        { url: '/review10.png' },
-        { url: '/review11.png' },
-        { url: '/review12.png' },
-      ],
-      review4: [
-        { url: '/review13.png' },
-        { url: '/review14.png' },
-        { url: '/review15.png' },
-        { url: '/review16.png' },
-      ],
-      review5: [
-        { url: '/review17.png' },
-        { url: '/review18.png' },
-        { url: '/review19.png' },
-        { url: '/review20.png' },
-      ],
-      review6: [
-        { url: '/review21.png' },
-        { url: '/review22.png' },
-        { url: '/review23.png' },
-        { url: '/review24.png' },
-      ],
+      reviewall: {
+        review1: [
+          { url: '/review1.png' },
+          { url: '/review2.png' },
+          { url: '/review3.png' },
+          { url: '/review4.png' },
+        ],
+        review2: [
+          { url: '/review5.png' },
+          { url: '/review6.png' },
+          { url: '/review7.png' },
+          { url: '/review8.png' },
+        ],
+        review3: [
+          { url: '/review9.png' },
+          { url: '/review10.png' },
+          { url: '/review11.png' },
+          { url: '/review12.png' },
+        ],
+        review4: [
+          { url: '/review13.png' },
+          { url: '/review14.png' },
+          { url: '/review15.png' },
+          { url: '/review16.png' },
+        ],
+        review5: [
+          { url: '/review17.png' },
+          { url: '/review18.png' },
+          { url: '/review19.png' },
+          { url: '/review20.png' },
+        ],
+        review6: [
+          { url: '/review21.png' },
+          { url: '/review22.png' },
+          { url: '/review23.png' },
+          { url: '/review24.png' },
+        ],
+      },
       review7: [
         { url: '/review25.png' },
         { url: '/review26.png' },

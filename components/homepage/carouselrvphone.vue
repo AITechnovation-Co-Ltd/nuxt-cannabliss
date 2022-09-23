@@ -1,28 +1,17 @@
 <template>
   <div class="bg w-full flex relative flex-col items-center px-4 lg:px-12 xl:px-20 3xl:px-32">
-    <h1 class="text-3xl md:text-5xl text-primary">Video Review</h1>
-    <hooper :settings="hooperSettings" class="flex justify-center items-center crv b">
-      <slide class="z-20" v-for="(review, index) in review12" :key="index">
+    <h1 class="text-3xl md:text-5xl text-primary">Review</h1>
+    <hooper :settings="hooperSettings" class="flex justify-center items-center crv a">
+      <slide v-for="(review, index) in reviewall" :key="index">
         <div class="relative flex w-full">
-          <div class="h-full w-full flex p-4" v-for="(review, index) in review" :key="index">
-            <a :href="`${review.link}`" target="_blank"><img :src="require(`~/static/images/videoreview${review.url}`)"
-                class="w-full h-full" /></a>
+          <div class="h-full w-full flex" v-for="(review, index) in review" :key="index">
+            <img :src="require(`~/static/images/review${review.url}`)" class="w-full" />
           </div>
         </div>
       </slide>
-      <slide class="z-20">
-        <div class="relative flex w-3/4">
-          <div class="h-full w-full flex p-4" v-for="(review, index) in review3" :key="index">
-            <a :href="`${review.link}`" target="_blank"><img :src="require(`~/static/images/videoreview${review.url}`)"
-                class="w-full h-full" /></a>
-          </div>
-        </div>
-      </slide>
-      <hooper-pagination slot="hooper-addons"></hooper-pagination>
+      <!-- <hooper-pagination slot="hooper-addons"></hooper-pagination> -->
     </hooper>
-    <base-button class="mt-6 mr-auto ml-auto lg:mt-8 z-20" @click="$router.push(`/review`)">View
-      all
-    </base-button>
+
   </div>
 </template>
 
@@ -61,20 +50,6 @@ export default {
         infiniteScroll: true,
         // transition: 2000,
       },
-      review12: {
-        review1: [
-          { url: '/review1.png', link: 'https://vt.tiktok.com/ZSR9JH2JK/' },
-          { url: '/review2.png', link: 'https://vt.tiktok.com/ZSR917gCP/' },
-          { url: '/review3.png', link: 'https://vt.tiktok.com/ZSR919sfs/' },
-          { url: '/review4.png', link: '/' },
-        ],
-        review2: [
-          { url: '/review5.png', link: 'https://vt.tiktok.com/ZSRHofC2E/' },
-          { url: '/review6.png', link: 'https://vt.tiktok.com/ZSR9JsmBo/' },
-          { url: '/review7.png', link: 'https://vt.tiktok.com/ZSR919GTv/' },
-          { url: '/review8.png', link: 'https://vt.tiktok.com/ZSR9eJnbw/' },
-        ],
-      },
       review: [
         { url: '/review1.png' },
         { url: '/review2.png' },
@@ -87,12 +62,76 @@ export default {
         { url: '/review9.png' },
         { url: '/review10.png' },
         { url: '/review11.png' },
+        { url: '/review12.png' },
+        { url: '/review13.png' },
+        { url: '/review14.png' },
+        { url: '/review15.png' },
+        { url: '/review16.png' },
+        { url: '/review17.png' },
+        { url: '/review18.png' },
+        { url: '/review19.png' },
+        { url: '/review20.png' },
+        { url: '/review21.png' },
+        { url: '/review22.png' },
+        { url: '/review23.png' },
+        { url: '/review24.png' },
+        { url: '/review25.png' },
+        { url: '/review26.png' },
       ],
-      review3: [
-        { url: '/review9.png', link: 'https://vt.tiktok.com/ZSR91oHDD/' },
-        { url: '/review10.png', link: 'https://vt.tiktok.com/ZSR9eJc2D/' },
-        { url: '/review11.png', link: 'https://vt.tiktok.com/ZSRHEnhW3/' },
-      ],
+      reviewall: {
+        review1: [
+          { url: '/review1.png' },
+          { url: '/review2.png' },
+        ],
+        review2: [
+          { url: '/review3.png' },
+          { url: '/review4.png' },
+        ],
+        review3: [
+          { url: '/review5.png' },
+          { url: '/review6.png' },
+        ],
+        review4: [
+          { url: '/review7.png' },
+          { url: '/review8.png' },
+        ],
+        review5: [
+          { url: '/review9.png' },
+          { url: '/review10.png' },
+        ],
+        review6: [
+          { url: '/review11.png' },
+          { url: '/review12.png' },
+        ],
+        review7: [
+          { url: '/review13.png' },
+          { url: '/review14.png' },
+        ],
+        review8: [
+          { url: '/review15.png' },
+          { url: '/review16.png' },
+        ],
+        review9: [
+          { url: '/review17.png' },
+          { url: '/review18.png' },
+        ],
+        review10: [
+          { url: '/review19.png' },
+          { url: '/review20.png' },
+        ],
+        review11: [
+          { url: '/review21.png' },
+          { url: '/review22.png' },
+        ],
+        review12: [
+          { url: '/review23.png' },
+          { url: '/review24.png' },
+        ],
+        review13: [
+          { url: '/review25.png' },
+          { url: '/review26.png' },
+        ],
+      }
     };
   }
 }
