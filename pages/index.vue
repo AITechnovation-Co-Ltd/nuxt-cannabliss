@@ -12,6 +12,9 @@
     <!-- Ingredients -->
     <Ingredients class="relative z-20" />
 
+    <!-- Carousel Review -->
+    <carouselreview class="relative z-20" />
+
     <!-- Face -->
     <Face class="relative z-10" />
 
@@ -56,9 +59,10 @@ import Partner from '~/components/homepage/partner.vue'
 import VideoReview from '../components/homepage/video-review.vue'
 import Face from '~/components/homepage/face.vue'
 import ItemContent from '~/components/homepage/item-content.vue'
+import Carouselreview from '~/components/homepage/carouselrv.vue'
 
 export default {
-  components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick, Carouselphone, ItemContent },
+  components: { Carouselreview, Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick, Carouselphone, ItemContent },
   layout: 'home',
   // mounted() {
   //   this.gtm()

@@ -156,3 +156,37 @@
     /* transform: translate(11rem, -14rem); */
   }
 }
+/* Carousel Review */
+
+/* .crv .hooper-indicator.is-active {
+  height: 12.5% !important;
+  border-radius: 4px !important;
+  background-color: red !important;
+} */
+
+/* .crv .hooper-indicator:hover, */
+.crv .hooper-indicator.is-active {
+  background-color: #82A284 !important;
+  width: 18px !important;
+  height: 18px !important;
+}
+.crv .hooper-indicator {
+  margin: 0 2px !important;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 100% !important;
+  padding: 0 !important;
+  background-color: lightgray !important;
+  cursor: pointer !important;
+}
+
+.crv .hooper-pagination {
+  position: absolute !important;
+  /* bottom: 0 !important; */
+  right: 50% !important;
+  transform: translateX(50%) !important;
+  /* transform: translateY(10px) !important; */
+  display: flex !important;
+  padding: 5px 10px !important;
+  transform: translate(5rem, 5rem) !important;
+}
