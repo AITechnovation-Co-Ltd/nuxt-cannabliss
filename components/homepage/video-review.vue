@@ -38,9 +38,6 @@ export default {
   components: {
     Model
   },
-  mounted(){
-    console.log(this.products)
-  }
 }
 </script>
 
