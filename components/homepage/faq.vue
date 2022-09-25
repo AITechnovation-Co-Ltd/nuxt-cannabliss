@@ -208,23 +208,27 @@
               Canabliss Crown : Cannabis Leaf Serum <br>
               เซรั่มชะลอวัย <br>
               ผสานคุณค่าจากทองคำบริสุทธิ์และ CBD ที่ช่วยชะลอการเกิดริ้วรอย <br>
-              กระตุ้นการสร้างคอลลาเจนและเพิ่มความชั่มชื้นให้ผิวตึง กระชับ ยับยั้งการสร้างเม็ดสี ช่วยให้ฝ้า กระ จางลง <br><br>
+              กระตุ้นการสร้างคอลลาเจนและเพิ่มความชั่มชื้นให้ผิวตึง กระชับ ยับยั้งการสร้างเม็ดสี ช่วยให้ฝ้า กระ จางลง
+              <br><br>
 
               ขั้นตอนที่ 5 <br>
               Canabliss Guardian : Adnance Eye Cream Brown Algae Plus Caffeine <br>
-              ครีมบำรุงผิวรอบดวงตา ผสานคุณค่าเปปไทด์ ที่ออกฤทธิ์คล้าย Botox ช่วยลดเลือนริ้วรอยใต้ตา ฟื้นบำรุงรอยคล้ำ <br>
-              ด้วยคุณค่าจากสาหร่ายสีน้ำตาล และแคปซูลคาเฟอีน ช่วยเติมความชุ่มชื้นให้ผิวรอบดวงตา ด้วยคุณค่าจากไฮยาลูรอน <br>
+              ครีมบำรุงผิวรอบดวงตา ผสานคุณค่าเปปไทด์ ที่ออกฤทธิ์คล้าย Botox ช่วยลดเลือนริ้วรอยใต้ตา ฟื้นบำรุงรอยคล้ำ
+              <br>
+              ด้วยคุณค่าจากสาหร่ายสีน้ำตาล และแคปซูลคาเฟอีน ช่วยเติมความชุ่มชื้นให้ผิวรอบดวงตา ด้วยคุณค่าจากไฮยาลูรอน
+              <br>
               เซราไมด์และ CBD สารสกัดจากกัญ</p>
           </base-dropdown-item>
         </base-dropdown>
       </div>
 
       <!-- Picture-->
+      <img src="~/static/images/IMG_03blogs/Path364@2x.png" class="widget364 z-10">
       <div class="w-full md:w-11/12 lg:w-1/2 mt-8 xl:mt-10 z-20">
         <img src="@/static/images/IMG_01home/pages_01home/enecta.jpg" class="rounded-3xl">
       </div>
     </div>
-    <img src="~/static/images/IMG_03blogs/Path364@2x.png" class="widget364 z-10">
+    <!-- <img src="~/static/images/IMG_03blogs/Path364@2x.png" class="widget364 z-10"> -->
     <img src="~/static/images/IMG_03ingredients/CANABLISS@2x.png" class="widgetc z-10">
 
     <div class="w-full my-0 mb-0 mt-24 md:mt-12 sm:my-20 flex flex-wrap justify-evenly text-quaternary">
@@ -291,7 +295,7 @@ export default {
   height: 20rem;
   position: absolute;
   right: 0;
-  transform: translate(2.5rem, -17rem);
+  transform: translate(2.5rem, -5rem);
 }
 
 @media (max-width:600px) {

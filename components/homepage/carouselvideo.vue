@@ -1,6 +1,6 @@
 <template>
-  <div class="bg w-full flex relative flex-col items-center px-4 lg:px-12 xl:px-20 3xl:px-32">
-    <h1 class="text-3xl md:text-5xl text-primary">Video Review</h1>
+  <div class="bg w-full flex relative flex-col items-center px-4 lg:px-12 xl:px-20 3xl:px-32 mt-4 lg:mt-12 xl:mt-20 3xl:mt-32">
+    <h1 class="text-3xl md:text-5xl text-center text-primary">Video Review</h1>
     <hooper :settings="hooperSettings" class="flex justify-center items-center crv b">
       <slide class="z-20" v-for="(review, index) in review12" :key="index">
         <div class="relative flex w-full">
@@ -20,7 +20,7 @@
       </slide>
       <hooper-pagination slot="hooper-addons"></hooper-pagination>
     </hooper>
-    <base-button class="mt-6 mr-auto ml-auto lg:mt-8 z-20" @click="$router.push(`/review`)">View
+    <base-button class="mt-8 mr-auto ml-auto lg:mt-10 z-20" @click="$router.push(`/review`)">View
       all
     </base-button>
   </div>

@@ -191,8 +191,8 @@
 }
 
 .a .hooper-pagination {
-  transform: translate(5rem, 5rem) !important;
+  transform: translate(5rem, 6rem) !important;
 }
 .b .hooper-pagination {
-  transform: translate(2.5rem, 5rem) !important;
+  transform: translate(2.5rem, 6rem) !important;
 }

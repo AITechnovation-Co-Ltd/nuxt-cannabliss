@@ -1,17 +1,17 @@
 <template>
   <div class="bg w-full flex relative flex-col items-center px-4 lg:px-12 xl:px-20 3xl:px-32">
-    <h1 class="text-3xl md:text-5xl text-primary">Review</h1>
+    <h1 class="text-3xl md:text-5xl text-center text-primary">Review</h1>
     <hooper :settings="hooperSettings" class="flex justify-center items-center crv a">
       <slide v-for="(review, index) in reviewall" :key="index">
         <div class="relative flex w-full">
-          <div class="h-full w-full flex" v-for="(review, index) in review" :key="index">
+          <div class="h-full w-full flex p-4" v-for="(review, index) in review" :key="index">
             <img :src="require(`~/static/images/review${review.url}`)" class="w-full" />
           </div>
         </div>
       </slide>
       <slide>
         <div class="relative flex w-1/2">
-          <div class="h-full w-full flex" v-for="(review, index) in review7" :key="index">
+          <div class="h-full w-full flex p-4" v-for="(review, index) in review7" :key="index">
             <img :src="require(`~/static/images/review${review.url}`)" class="w-full" />
           </div>
         </div>
