@@ -1,8 +1,9 @@
 <template>
-  <div class="bg w-full flex relative flex-col items-center px-4 lg:px-12 xl:px-20 3xl:px-32 mt-4 lg:mt-12 xl:mt-20 3xl:mt-32">
+  <div
+    class="bg w-full flex relative flex-col items-center px-4 lg:px-12 xl:px-20 3xl:px-32 mt-4 lg:mt-12 xl:mt-20 3xl:mt-32">
     <h1 class="text-3xl md:text-5xl text-center text-primary">Video Review</h1>
     <hooper :settings="hooperSettings" class="flex justify-center items-center crv b">
-      <slide class="z-20" v-for="(review, index) in review12" :key="index">
+      <slide class="z-20" v-for="(review, index) in review123" :key="index">
         <div class="relative flex w-full">
           <div class="h-full w-full flex p-4" v-for="(review, index) in review" :key="index">
             <a :href="`${review.link}`" target="_blank"><img :src="require(`~/static/images/videoreview${review.url}`)"
@@ -10,14 +11,14 @@
           </div>
         </div>
       </slide>
-      <slide class="z-20">
+      <!-- <slide class="z-20">
         <div class="relative flex w-3/4">
           <div class="h-full w-full flex p-4" v-for="(review, index) in review3" :key="index">
             <a :href="`${review.link}`" target="_blank"><img :src="require(`~/static/images/videoreview${review.url}`)"
                 class="w-full h-full" /></a>
           </div>
         </div>
-      </slide>
+      </slide> -->
       <hooper-pagination slot="hooper-addons"></hooper-pagination>
     </hooper>
     <base-button class="mt-8 mr-auto ml-auto lg:mt-10 z-20" @click="$router.push(`/review`)">View
@@ -61,18 +62,24 @@ export default {
         infiniteScroll: true,
         // transition: 2000,
       },
-      review12: {
+      review123: {
         review1: [
           { url: '/review1.png', link: 'https://vt.tiktok.com/ZSR9JH2JK/' },
           { url: '/review2.png', link: 'https://vt.tiktok.com/ZSR917gCP/' },
           { url: '/review3.png', link: 'https://vt.tiktok.com/ZSR919sfs/' },
-          { url: '/review4.png', link: '/' },
+          { url: '/review4.png', link: 'https://vt.tiktok.com/ZSRHofC2E/' },
         ],
         review2: [
           { url: '/review5.png', link: 'https://vt.tiktok.com/ZSRHofC2E/' },
           { url: '/review6.png', link: 'https://vt.tiktok.com/ZSR9JsmBo/' },
           { url: '/review7.png', link: 'https://vt.tiktok.com/ZSR919GTv/' },
           { url: '/review8.png', link: 'https://vt.tiktok.com/ZSR9eJnbw/' },
+        ],
+        review3: [
+          { url: '/review9.png', link: 'https://vt.tiktok.com/ZSR91oHDD/' },
+          { url: '/review10.png', link: 'https://vt.tiktok.com/ZSR9eJc2D/' },
+          { url: '/review11.png', link: 'https://vt.tiktok.com/ZSRHEnhW3/' },
+          { url: '/review12.png', link: 'https://vt.tiktok.com/ZSR9eJnbw/' },
         ],
       },
       review: [
@@ -87,11 +94,6 @@ export default {
         { url: '/review9.png' },
         { url: '/review10.png' },
         { url: '/review11.png' },
-      ],
-      review3: [
-        { url: '/review9.png', link: 'https://vt.tiktok.com/ZSR91oHDD/' },
-        { url: '/review10.png', link: 'https://vt.tiktok.com/ZSR9eJc2D/' },
-        { url: '/review11.png', link: 'https://vt.tiktok.com/ZSRHEnhW3/' },
       ],
     };
   }

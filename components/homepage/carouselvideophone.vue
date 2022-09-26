@@ -1,6 +1,6 @@
 <template>
   <div class="bg w-full flex relative flex-col items-center px-4 lg:px-12 xl:px-20 3xl:px-32">
-    <h1 class="text-3xl md:text-5xl text-primary">Video Review Phone</h1>
+    <h1 class="text-3xl md:text-5xl text-primary">Video Review</h1>
     <hooper :settings="hooperSettings" class="flex justify-center items-center crv">
       <slide v-for="(review, index) in reviewall" :key="index">
         <div class="relative flex w-full">
@@ -10,14 +10,14 @@
           </div>
         </div>
       </slide>
-      <slide>
+      <!-- <slide>
         <div class="relative flex w-1/2">
           <div class="h-full w-full flex p-4" v-for="(review, index) in review6" :key="index">
             <a :href="`${review.link}`" target="_blank"><img :src="require(`~/static/images/videoreview${review.url}`)"
                 class="w-full" /></a>
           </div>
         </div>
-      </slide>
+      </slide> -->
       <!-- <hooper-pagination slot="hooper-addons"></hooper-pagination> -->
     </hooper>
     <base-button class="mt-6 mr-auto ml-auto lg:mt-8 z-20" @click="$router.push(`/review`)">View
@@ -68,7 +68,7 @@ export default {
         ],
         review2: [
           { url: '/review3.png', link: 'https://vt.tiktok.com/ZSR919sfs/' },
-          { url: '/review4.png', link: '/' },
+          { url: '/review4.png', link: 'https://vt.tiktok.com/ZSRHofC2E/' },
         ],
         review3: [
           { url: '/review5.png', link: 'https://vt.tiktok.com/ZSRHofC2E/' },
@@ -82,10 +82,11 @@ export default {
           { url: '/review9.png', link: 'https://vt.tiktok.com/ZSR91oHDD/' },
           { url: '/review10.png', link: 'https://vt.tiktok.com/ZSR9eJc2D/' },
         ],
+        review6: [
+          { url: '/review11.png', link: 'https://vt.tiktok.com/ZSRHEnhW3/' },
+          { url: '/review12.png', link: 'https://vt.tiktok.com/ZSR9eJnbw/' },
+        ],
       },
-      review6: [
-        { url: '/review11.png', link: 'https://vt.tiktok.com/ZSRHEnhW3/' },
-      ],
     };
   }
 }

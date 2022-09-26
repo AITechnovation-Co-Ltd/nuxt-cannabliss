@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-full">
     <!-- <Carouselreviewphone /> -->
-    <Carouselvideo />
+    <Carouselvideophone />
   </div>
 
 </template>
