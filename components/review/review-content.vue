@@ -36,21 +36,21 @@
     <!-- All Review -->
     <div class="w-full lg:w-9/12 z-20">
       <!-- Write a review -->
-      <div class="w-full flex justify-start py-2 px-4 mt-6 sm:mt-8 bg-tertiary z-20">
-        <base-button @click="$refs.uploadReviewRef.show()" color="white" class="z-20">
-          Write a review</base-button>
+      <div class="w-full flex justify-start h-16 mt-6 sm:mt-8 bg-tertiary z-20">
+        <!-- <base-button @click="$refs.uploadReviewRef.show()" color="white" class="z-20">
+          Write a review</base-button> -->
       </div>
       <!-- Review card -->
       <img src="~/static/images/IMG_03blogs_details/Group803@2x.png" class="widget803">
-      <div v-if="list_reviews.length != 0 && list_reviews[0].product_id !=100" class="w-full flex flex-col justify-center divide-y divide-primary47">
+      <div v-if="list_reviews.length != 0" class="w-full flex flex-col justify-center divide-y divide-primary47">
         <div v-for="(review, index) in list_reviews.slice(0, count)" :key="index">
           <div class="w-full columns-1 xl:flex px-4 py-8 text-quaternary">
             <!-- Image Product-->
-            <div class="w-full xl:w-2/5 columns-1 items-start xl:flex">
-              <div class="productimg">
+            <div class="w-full xl:w-2/5 columns-1 items-start xl:flex xl:flex-col">
+              <!-- <div class="productimg">
                 <img :src="require(`~/static/images/products${review.imgUrl}`)" class="w-auto h-24">
-              </div>
-              <p class="mt-3 xl:mt-0 text-sm font-extralight">{{ review.product_name }}</p>
+              </div> -->
+              <p class="mt-3 xl:mt-0 text-sm font-light">{{ review.product_name }}</p>
             </div>
             <!-- Details review -->
             <div class="w-full xl:w-3/5 flex flex-col ml-0 xl:ml-4 mt-4 xl:mt-0 ">
@@ -66,9 +66,9 @@
                 </div>
               </div>
               <!-- Comment -->
-              <p class="my-4 text-sm font-extralight">{{ review.review }}</p>
+              <p v-html="review.review" class="my-4 text-sm font-light"></p>
               <!-- Date -->
-              <p class="text-sm font-extralight">{{ review.date }}</p>
+              <!-- <p class="text-sm font-extralight">{{ review.date }}</p> -->
             </div>
           </div>
         </div>
