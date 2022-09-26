@@ -12,6 +12,18 @@
     <!-- Ingredients -->
     <Ingredients class="relative z-20" />
 
+    <!-- Carousel Review -->
+    <carouselreview class="relative z-20 md:block hidden" />
+
+    <!-- Carousel Review Phone -->
+    <Carouselreviewphone class="z-20 md:hidden block" />
+
+    <!-- Carousel Video Review -->
+    <Carouselvideo class="relative z-20 md:block hidden" />
+
+    <!-- Carousel Video Review Phone -->
+    <Carouselvideophone class="z-30 md:hidden block" />
+
     <!-- Face -->
     <Face class="relative z-10" />
 
@@ -20,10 +32,12 @@
     <img src="~/static/images/IMG_03ingredients/CANABLISS_01@2x.png" class="widget01 z-10">
     <img src="~/static/images/IMG_01home/pages_01home/Group1115@2x.png" class="widget1115">
     <img src="~/static/images/IMG_01home/pages_01home/Group1053@2x.png" class="widget1053 z-10">
+
     <!-- Blogs -->
     <Blogs class="z-10" />
     <!-- <img src="~/static/images/IMG_01home/pages_01home/Group1135@2x.png" class="absolute bg z-10"> -->
     <!-- <img src="~/static/images/IMG_01home/pages_01home/Path330@2x.png" class="widget330 z-20"> -->
+
     <!-- Review -->
     <slick class="z-10 hidden" />
     <!-- <Review class="z-10" /> -->
@@ -56,9 +70,13 @@ import Partner from '~/components/homepage/partner.vue'
 import VideoReview from '../components/homepage/video-review.vue'
 import Face from '~/components/homepage/face.vue'
 import ItemContent from '~/components/homepage/item-content.vue'
+import Carouselreview from '~/components/homepage/carouselrv.vue'
+import Carouselvideo from '~/components/homepage/carouselvideo.vue';
+import Carouselvideophone from '~/components/homepage/carouselvideophone.vue';
+import Carouselreviewphone from '~/components/homepage/carouselrvphone.vue'
 
 export default {
-  components: { Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick, Carouselphone, ItemContent },
+  components: { Carouselreviewphone, Carouselvideophone, Carouselvideo, Carouselreview, Subscribe, Carousel, Product, Ingredients, Blogs, Faq, Review, Partner, VideoReview, Face, slick, Carouselphone, ItemContent },
   layout: 'home',
   // mounted() {
   //   this.gtm()

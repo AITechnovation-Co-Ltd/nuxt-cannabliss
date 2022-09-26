@@ -1,6 +1,6 @@
 <template>
   <base-modal v-model="isShow">
-    <div class="px-2 py-12 bg-secondary rounded-3xl flex flex-col items-center relative overflow-hidden">
+    <div class="px-2 py-12 bg-secondary rounded-3xl flex flex-col items-center relative overflow-hidden z-30">
       <img src="~/static/images/IMG_03blogs_details/Group803@2x.png" class="widget803 z-10">
       <img src="~/static/images/IMG_04review_popup/Group1161@2x.png" class="widget1161 z-10">
       <!-- Title -->
@@ -9,31 +9,31 @@
       </div>
       <!-- Star -->
       <div class="w-full flex mt-3 items-center justify-center z-20">
-        <svg @click="test(1)" class="w-12 h-12 text-gray-300" :class="{ 'text-blue-400': s1 }" fill="currentColor"
+        <svg @click="test(1)" class="w-12 h-12 text-gray-300 cursor-pointer" :class="{ 'text-blue-400': s1 }" fill="currentColor"
           viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
           </path>
         </svg>
-        <svg @click="test(2)" class="w-12 h-12 text-gray-300" :class="{ 'text-blue-400': s2 }" fill="currentColor"
+        <svg @click="test(2)" class="w-12 h-12 text-gray-300 cursor-pointer" :class="{ 'text-blue-400': s2 }" fill="currentColor"
           viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
           </path>
         </svg>
-        <svg @click="test(3)" class="w-12 h-12 text-gray-300" :class="{ 'text-blue-400': s3 }" fill="currentColor"
+        <svg @click="test(3)" class="w-12 h-12 text-gray-300 cursor-pointer" :class="{ 'text-blue-400': s3 }" fill="currentColor"
           viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
           </path>
         </svg>
-        <svg @click="test(4)" class="w-12 h-12 text-gray-300" :class="{ 'text-blue-400': s4 }" fill="currentColor"
+        <svg @click="test(4)" class="w-12 h-12 text-gray-300 cursor-pointer" :class="{ 'text-blue-400': s4 }" fill="currentColor"
           viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
           </path>
         </svg>
-        <svg @click="test(5)" class="w-12 h-12 text-gray-300" :class="{ 'text-blue-400': s5 }" fill="currentColor"
+        <svg @click="test(5)" class="w-12 h-12 text-gray-300 cursor-pointer" :class="{ 'text-blue-400': s5 }" fill="currentColor"
           viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
