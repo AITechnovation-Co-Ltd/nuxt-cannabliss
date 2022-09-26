@@ -84,7 +84,7 @@ export default {
         ],
         review6: [
           { url: '/review11.png', link: 'https://vt.tiktok.com/ZSRHEnhW3/' },
-          { url: '/review12.png', link: 'https://vt.tiktok.com/ZSR9eJnbw/' },
+          { url: '/review13.png', link: 'https://vt.tiktok.com/ZSR9eJnbw/' },
         ],
       },
     };
