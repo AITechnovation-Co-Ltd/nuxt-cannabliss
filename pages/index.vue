@@ -39,7 +39,7 @@
     <!-- <img src="~/static/images/IMG_01home/pages_01home/Path330@2x.png" class="widget330 z-20"> -->
 
     <!-- Review -->
-    <slick class="z-10 hidden" />
+    <!-- <slick class="z-10 hidden" /> -->
     <!-- <Review class="z-10" /> -->
 
     <!-- FAQ -->
