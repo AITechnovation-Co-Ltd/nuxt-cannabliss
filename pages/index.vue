@@ -188,5 +188,12 @@ export default {
     position: absolute;
     transform: translate(-4rem, -11rem);
   }
+
+  .widget364 {
+    height: 10rem;
+    position: absolute;
+    right: 0;
+    transform: translate(2.5rem, -1rem);
+  }
 }
 </style>
