@@ -95,7 +95,8 @@ export default {
         review2: [
           { url: '/review5.png' },
           { url: '/review6.png' },
-          { url: '/review7.png' },
+          // { url: '/review7.png' },
+          { url: '/review27.png' },
           { url: '/review8.png' },
         ],
         review3: [
@@ -114,7 +115,8 @@ export default {
           { url: '/review17.png' },
           { url: '/review18.png' },
           { url: '/review19.png' },
-          { url: '/review20.png' },
+          // { url: '/review20.png' },
+          { url: '/review28.png' },
         ],
         review6: [
           { url: '/review21.png' },
