@@ -4,7 +4,7 @@
     <hooper :settings="hooperSettings" class="flex justify-center items-center crv a">
       <slide v-for="(review, index) in reviewall" :key="index">
         <div class="relative flex w-full">
-          <div class="h-full w-full flex" v-for="(review, index) in review" :key="index">
+          <div class="h-full w-full flex p-4" v-for="(review, index) in review" :key="index">
             <img :src="require(`~/static/images/review${review.url}`)" class="w-full" />
           </div>
         </div>
@@ -92,7 +92,8 @@ export default {
           { url: '/review6.png' },
         ],
         review4: [
-          { url: '/review7.png' },
+          // { url: '/review7.png' },
+          { url: '/review27.png' },
           { url: '/review8.png' },
         ],
         review5: [
@@ -117,7 +118,8 @@ export default {
         ],
         review10: [
           { url: '/review19.png' },
-          { url: '/review20.png' },
+          // { url: '/review20.png' },
+          { url: '/review28.png' },
         ],
         review11: [
           { url: '/review21.png' },
