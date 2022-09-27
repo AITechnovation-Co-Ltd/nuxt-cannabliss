@@ -19,6 +19,7 @@
     <Carouselreviewphone class="z-20 md:hidden block" />
 
     <!-- Carousel Video Review -->
+    <img src="~/static/images/IMG_03blogs/Path364@2x.png" class="widget364 z-10">
     <Carouselvideo class="relative z-20 md:block hidden" />
 
     <!-- Carousel Video Review Phone -->
@@ -39,7 +40,7 @@
     <!-- <img src="~/static/images/IMG_01home/pages_01home/Path330@2x.png" class="widget330 z-20"> -->
 
     <!-- Review -->
-    <slick class="z-10 hidden" />
+    <!-- <slick class="z-10 hidden" /> -->
     <!-- <Review class="z-10" /> -->
 
     <!-- FAQ -->
@@ -139,6 +140,13 @@ export default {
   height: 80rem;
   position: absolute;
   left: -96.5rem;
+}
+
+.widget364 {
+  height: 20rem;
+  position: absolute;
+  right: 0;
+  transform: translate(1.5rem, -3rem);
 }
 
 @media (max-width:1441px) {
