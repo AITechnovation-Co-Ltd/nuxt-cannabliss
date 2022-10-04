@@ -34,10 +34,10 @@
           <div
             class="absolute h-full w-full md:w-2/3 lg:w-3/4 flex items-center justify-center z-10 pl-10 lg:pl-20 pr-32 lg:pr-60">
             <div class="w-full lg:-mt-48 flex flex-col items-start justify-center sm:-mt-12">
-              <h1 class="text-2xl lg:text-3xl sm:text-2xl font-light text-quaternary">{{  banner.tag  }}</h1>
-              <h2 class="mt-0 sm:mt-2 text-2xl lg:text-5xl sm:text-3xl text-primary font-medium">{{  banner.head  }}</h2>
+              <h1 class="text-2xl lg:text-3xl sm:text-2xl font-light text-quaternary">{{ banner.tag }}</h1>
+              <h2 class="mt-0 sm:mt-2 text-2xl lg:text-5xl sm:text-3xl text-primary font-medium">{{ banner.head }}</h2>
               <div class="mt-4 xl:mt-8 w-full flex items-center border-l-2 border-primary pl-2 lg:pl-4">
-                <p class="content text-2xl font-normal text-quaternary thai leading-6 lg:leading-8">{{  banner.detail  }}
+                <p class="content text-2xl font-normal text-quaternary thai leading-6 lg:leading-8">{{ banner.detail }}
                 </p>
               </div>
               <div class="w-full flex items-center mt-8">
@@ -68,25 +68,26 @@
 
       <hooper-pagination slot="hooper-addons"></hooper-pagination>
     </hooper>
-    <div class="social justify-center sm:absolute right-8 xl:right-24 2xl:right-36">
-      <div class="flex space-x-6 sm:space-x-6">
+    <div class="social justify-center sm:absolute right-3 xl:right-5 2xl:right-5">
+      <div class="flex flex-col space-y-6 sm:space-y-6">
+        <a href="https://lin.ee/i5MkM6w" target="_blank">
+          <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
+        </a>
         <a href="https://www.facebook.com/CanablissCosmetic" target="_blank">
           <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
         </a>
         <a href="https://www.instagram.com/canablisscosmetic/" target="_blank">
           <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
         </a>
-        <a href="https://lin.ee/i5MkM6w" target="_blank">
-          <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
+        <a href="https://twitter.com/CanablissC" target="_blank">
+          <img class="h-8 sm:h-6 lg:h-8" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt="">
         </a>
         <a href="https://www.youtube.com/channel/UCdKSDogq_7bUzWwY_U8zerA" target="_blank">
           <img class="mt-px h-7 sm:h-5 lg:h-7" src="~/static/images/IMG_01home/pages_01home/play-video(1).png" alt="">
         </a>
-        <a href="https://twitter.com/CanablissC" target="_blank">
-          <img class="h-8 sm:h-6 lg:h-8" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt="">
-        </a>
         <a href="https://www.tiktok.com/@canablisscosmetic?_t=8VL26drxAa9&_r=1" target="_blank">
-          <img class="h-8 sm:h-6 lg:h-8" src="~/static/images/IMG_01home/pages_01home/logo-tiktok-svgrepo-com.png" alt="">
+          <img class="h-8 sm:h-6 lg:h-8" src="~/static/images/IMG_01home/pages_01home/logo-tiktok-svgrepo-com.png"
+            alt="">
         </a>
       </div>
     </div>
@@ -120,6 +121,7 @@ export default {
         autoPlay: true,
         playSpeed: 6000,
         wheelControl: false,
+        infiniteScroll: true,
       },
     };
   }
@@ -134,7 +136,13 @@ export default {
 }
 
 .social {
-  top: 80%;
+  top: 58%;
+}
+
+@media (max-width:1441px) {
+  .social {
+    top: 52%;
+  }
 }
 
 @media (max-width:1024px) {
