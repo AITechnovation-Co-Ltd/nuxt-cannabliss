@@ -202,6 +202,7 @@ export const actions = {
         how2use: p.how2use,
         ingredients: p.ingredients,
         link: p.link,
+        line: p.line,
         type: p.type,
         quantity: p.quantity,
         price: p.price,
