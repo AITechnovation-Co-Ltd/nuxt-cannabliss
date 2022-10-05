@@ -81,7 +81,7 @@
                   class="px-4 h-10 text-lg  text-quaternary border border-quaternary rounded-full mr-4">Go
                   to
                   shopping</button></a>
-              <a class="flex items-center justify-center" :href="products_detail.line">
+              <a class="flex items-center justify-center" :href="products_detail.line" target="_blank">
                 <button class="flex items-center px-6 h-10 space-x-2 bg-primary rounded-full mr-4">
                   <base-icon icon="line" viewBox="0 0 24 24" color="#ffffff" />
                   <p class="text-lg text-white ">Line shopping</p>
