@@ -177,7 +177,7 @@ export default {
             const self = this;
             let error = self.validateForm();
             if (self.pprefix != "other") self.prefix = self.pprefix;
-            console.log(error);
+            // console.log(error);
 
             if (error) {
                 self.$toast.open({
@@ -235,7 +235,7 @@ export default {
                 email: self.email,
                 password: self.password,
             };
-            console.log(form)
+            // console.log(form)
             await self.$api
                 .userRegister(form)
                 .then(async () => {

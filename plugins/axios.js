@@ -79,7 +79,7 @@ export default function ({ $axios, store, redirect, req, res }) {
               await localStorage.setItem('token', data.token)
               await store.commit('me/SET_REFRESH_TOKEN', data.refresh_token)
               await localStorage.setItem('refresh_token', data.refresh_token)
-              console.log('renew token success')
+              // console.log('renew token success')
 
               PENDING_REQUESTS = Math.max(0, PENDING_REQUESTS - 1)
 
@@ -89,7 +89,7 @@ export default function ({ $axios, store, redirect, req, res }) {
               return resolve($axios(err.config))
             })
             .catch(async (err) => {
-              console.log('renew token error:', err)
+              // console.log('renew token error:', err)
 
               PENDING_REQUESTS = Math.max(0, PENDING_REQUESTS - 1)
 

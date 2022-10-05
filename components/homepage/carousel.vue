@@ -65,32 +65,8 @@
           <!-- <img :src="require(`~/static/images/banner/1440x480.jpeg`)" class="w-full h-full top-0 z-1 absolute" /> -->
         </div>
       </slide>
-
       <hooper-pagination slot="hooper-addons"></hooper-pagination>
     </hooper>
-    <div class="social justify-center sm:absolute right-3 xl:right-5 2xl:right-5">
-      <div class="flex flex-col space-y-6 sm:space-y-6">
-        <a href="https://lin.ee/i5MkM6w" target="_blank">
-          <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
-        </a>
-        <a href="https://www.facebook.com/CanablissCosmetic" target="_blank">
-          <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-facebook@2x.png" alt="">
-        </a>
-        <a href="https://www.instagram.com/canablisscosmetic/" target="_blank">
-          <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-instagram@2x.png" alt="">
-        </a>
-        <a href="https://twitter.com/CanablissC" target="_blank">
-          <img class="h-8 sm:h-6 lg:h-8" src="~/static/images/IMG_01home/pages_01home/icons8-twitter@2x.png" alt="">
-        </a>
-        <a href="https://www.youtube.com/channel/UCdKSDogq_7bUzWwY_U8zerA" target="_blank">
-          <img class="mt-px h-7 sm:h-5 lg:h-7" src="~/static/images/IMG_01home/pages_01home/play-video(1).png" alt="">
-        </a>
-        <a href="https://www.tiktok.com/@canablisscosmetic?_t=8VL26drxAa9&_r=1" target="_blank">
-          <img class="h-8 sm:h-6 lg:h-8" src="~/static/images/IMG_01home/pages_01home/logo-tiktok-svgrepo-com.png"
-            alt="">
-        </a>
-      </div>
-    </div>
     <Model ref="alertPopup" />
   </div>
 </template>

@@ -26,7 +26,8 @@
             <div v-for="(item, i) in picture " :key="i" class="relative w-full h-auto" @click="current = i">
               <div class="backgroundp mx-auto w-full h-auto rounded-xl sm:rounded-3xl"
                 :class="{ 'border-4 border-primary': i == current }"></div>
-              <img v-if="picture[1] != ''" :src="require(`~/static/images/products${picture[i]}`)" class="centered w-full">
+              <img v-if="picture[1] != ''" :src="require(`~/static/images/products${picture[i]}`)"
+                class="centered w-full">
             </div>
           </div>
         </div>
@@ -80,6 +81,11 @@
                   class="px-4 h-10 text-lg  text-quaternary border border-quaternary rounded-full mr-4">Go
                   to
                   shopping</button></a>
+              <a class="flex items-center justify-center" :href="products_detail.line" target="_blank">
+                <button class="flex items-center px-6 h-10 space-x-2 bg-primary rounded-full mr-4">
+                  <base-icon icon="line" viewBox="0 0 24 24" color="#ffffff" />
+                  <p class="text-lg text-white ">Line shopping</p>
+                </button></a>
               <div @click="liked()"
                 class="h-10 w-10 flex items-center justify-center border border-primary rounded-full cursor-pointer"
                 :class="{ 'bg-primary': products_detail.islike }">
@@ -100,14 +106,17 @@
             <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group622@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
               <h1 class="text-lg 3xl:text-2xl font-normal">CDB</h1>
-              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">สารสกัด CBD จากกัญชงที่มีส่วนช่วยในการลดการอักเสบ <br class="block sm:hidden"> ปรับสภาพ และ คืนความชุ่มชื้นให้กับผิว
+              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">สารสกัด CBD
+                จากกัญชงที่มีส่วนช่วยในการลดการอักเสบ <br class="block sm:hidden"> ปรับสภาพ และ คืนความชุ่มชื้นให้กับผิว
               </p>
             </div>
             <div class="vl h-60 bg-primary hidden md:block"></div>
             <div class="w-full mt-4 sm:mt-0 md:w-2/5 flex flex-col items-center justify-center">
               <img src="~/static/images/IMG_03ingredients/Group623@2x.png" class="h-24 xl:h-32 2xl:h-40" alt="">
               <h1 class="text-lg sm:text-xl text-center font-normal">Snow Bell Extract</h1>
-              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">จากประเทศเกาหลี ที่มีสารต้านอนุมูลอิสระ <br class="block sm:hidden">และทำให้ผิวแลดูขาว กระจ่างใสขึ้น</p>
+              <p class="mt-2 text-center text-sm 3xl:text-lg font-extralight">จากประเทศเกาหลี ที่มีสารต้านอนุมูลอิสระ
+                <br class="block sm:hidden">และทำให้ผิวแลดูขาว กระจ่างใสขึ้น
+              </p>
             </div>
           </div>
         </div>
@@ -119,7 +128,9 @@
 
 <script>
 import products from "@/static/json/products.json"
+import baseIcon from '../base/base-icon.vue'
 export default {
+  components: { baseIcon },
   data() {
     return {
       no_product: false,
@@ -196,7 +207,7 @@ export default {
           self.products = products
         }
       } catch (err) {
-        console.log('error', err);
+        // console.log('error', err);
       }
     },
     arrow_left() {
