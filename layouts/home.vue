@@ -10,7 +10,7 @@
         </div>
       </div>
 
-      <div class="social-bar">
+      <div class="social-bar" id="gotop">
         <div class="flex flex-col space-y-6 sm:space-y-6 items-center">
           <a href="https://lin.ee/i5MkM6w" target="_blank">
             <img class="w-8 sm:w-6 lg:w-8" src="~/static/images/IMG_01home/pages_01home/icons8-line@2x.png" alt="">
@@ -50,13 +50,16 @@ export default {
   components: { Navbar, Foot },
   mounted() {
     const myID = document.getElementById("totop");
+    const myID2 = document.getElementById("gotop");
 
     var myScrollFunc = function () {
       var y = window.scrollY;
       if (y >= 100) {
         myID.className = "to-top show"
+        myID2.className = "social-bar -translate-y-20"
       } else {
         myID.className = "to-top hide"
+        myID2.className = "social-bar"
       }
     };
 
@@ -90,7 +93,7 @@ export default {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: auto;
+  width: 60px;
   height: auto;
   z-index: 50;
   transition: all 1s;
