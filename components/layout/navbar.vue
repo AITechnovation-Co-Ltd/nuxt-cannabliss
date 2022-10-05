@@ -270,12 +270,12 @@ export default {
     },
     count_islike() {
       let count = this.$store.getters['me/getCount']
-      console.log(count)
+      // console.log(count)
       return count
     },
     fake_islike() {
       let count = this.$store.getters['me/getFakeCount']
-      console.log(count)
+      // console.log(count)
       return count
     },
   },

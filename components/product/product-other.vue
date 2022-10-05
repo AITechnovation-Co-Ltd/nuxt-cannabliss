@@ -136,7 +136,7 @@ export default {
           self.data = products
         }
       } catch (err) {
-        console.log('error', err);
+        // console.log('error', err);
       }
     },
   },

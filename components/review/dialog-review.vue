@@ -95,7 +95,7 @@ export default {
     };
   },
   mounted() {
-    console.log(this.product_name)
+    // console.log(this.product_name)
   },
   methods: {
     show(title, callback) {

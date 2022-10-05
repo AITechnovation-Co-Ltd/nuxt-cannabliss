@@ -77,7 +77,7 @@ export default {
             self.$store.dispatch('loading/setLoading', true)
             const res = await self.$store.dispatch('me/userLogin', self.form)
             if (res instanceof Error) {
-                console.log(res)
+                // console.log(res)
                 self.$toast.open({
                     message: res.response.data.message,
                     type: 'error',

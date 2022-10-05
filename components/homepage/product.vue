@@ -140,7 +140,7 @@ export default {
   },
   methods: {
     change(p) {
-      console.log(p)
+      // console.log(p)
       this.page = p
     },
     filterType(type) {
@@ -154,7 +154,7 @@ export default {
           self.products = products
         }
       } catch (err) {
-        console.log('error', err);
+        // console.log('error', err);
       }
     },
     async liked(n) {

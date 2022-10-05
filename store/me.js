@@ -65,7 +65,7 @@ export const getters = {
     return type
   },
   getSome: (state) => {
-    console.log(state.liked)
+    // console.log(state.liked)
     const liked = localStorage.getItem('liked') || state.liked
     return liked
   },
@@ -134,7 +134,7 @@ export const mutations = {
     state.fake_count = state.fake_count + count
   },
   SET_TYPE(state, type) {
-    console.log(type)
+    // console.log(type)
     state.type = type
   },
   SET_LANGUAGE(state, isthai) {
@@ -143,7 +143,7 @@ export const mutations = {
   SET_SOME(state, data) {
     state.liked[data.index] = { index: data.index, liked: data.islike }
     localStorage.setItem('liked', state.liked)
-    console.log(state.liked)
+    // console.log(state.liked)
   },
 }
 export const actions = {
