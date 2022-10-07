@@ -59,13 +59,13 @@
                     :color="product.islike ? '#f05252' : '#d5d6d7'" />
                 </div>
                 <p class="absolute bottom-2 right-2 sm:bottom-8 sm:right-8 text-sm font-thin text-quaternary">{{
-                    product.quantity
+                product.quantity
                 }}</p>
               </div>
               <div class="my-4 mx-2 text-quaternary text-xl">
                 <p class="mt-2 text-sm text-detail font-extralight capitalize">{{ product.type }}</p>
                 <p class="truncated-2-lines text-base sm:text-lg font-medium capitalize">{{ product.genre + ': ' }}{{
-                    product.name
+                product.name
                 }}
                 </p>
                 <p class="truncated-2-lines mb-4 mt-2 text-xl text-detail font-bold thai">{{ product.detail_th }}</p>
@@ -170,8 +170,8 @@ export default {
 .widget337 {
   height: 20rem;
   position: absolute;
-  top: 74rem;
-  left: 7.2rem;
+  top: 92rem;
+  left: 15.2rem;
 }
 
 .hr {
@@ -194,6 +194,15 @@ export default {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -35%);
+}
+
+@media (max-width:1440px) {
+  .widget337 {
+    height: 20rem;
+    position: absolute;
+    top: 81rem;
+    left: 9.2rem;
+  }
 }
 
 @media (max-width:1419px) {
